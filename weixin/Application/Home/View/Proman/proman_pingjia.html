@@ -1,0 +1,26 @@
+<include file="Public/header" />
+		<div class="container">
+			<div class="row">
+					<div class="col-xs-12 col-sm-12 height-50 text-center bg-red">
+					<img src="__PUBLIC__/home/img/logo2.png" alt="" class="width-112"/>
+					<a href="{:U('Index/index')}" class="pull-right height-50"><img src="__PUBLIC__/home/img/center.png" alt="" class="icon-25" /></a>
+				</div>
+				<div class="col-xs-12 col-sm-12 margin-top-30">
+					<p class="text-center font-lg2"><b>评价</b></p>
+				</div>
+				<div class="col-xs-12 col-sm-12 margin-top-30 text-center">
+					<img src="__PUBLIC__/home/img/person.jpg"  alt="" class="head-portrait" />
+					<p class="padding-top-10 gray">工号：{$apply.proman_id}</p>
+				</div>
+				<div class="col-xs-12 col-sm-12 text-center">
+					<div class="box-center">
+						<a href="__MODULE__/Proman/proman_pingjia_do/apply_id/{$apply.apply_id}/pingjia/1" type="button" class="white-link btn btn-yellow margin-right-40">满意</a>
+						<a href="__MODULE__/Proman/proman_pingjia_do/apply_id/{$apply.apply_id}/pingjia/0" type="button" class="white-link btn btn-yellow" >不满意</a>
+					</div>
+				</div>
+				<!--<div class="col-xs-12 col-sm-12 margin-top-50 text-center">
+					<a href="#" type="button" class="btn btn-red white-link">提交</a>
+				</div>-->
+			</div>
+		</div>
+<include file="Public/footer" />

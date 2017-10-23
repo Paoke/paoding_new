@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+<title>-</title>
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/aui.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/common.css" />
+<script type="text/javascript" src="__STATIC__/user/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/api.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/aui-tab.js"></script>
+
+<style type="text/css">
+.aui-pull-left{position: absolute !important;top:0;left:0;}
+.aui-pull-left .aui-iconfont{font-size: 1rem !important;}
+
+li{position: relative;transition:all 0.3s;}
+li.left{transform:translate(2rem,0) !important;transition:all 0.3s;}
+h4{line-height: 2rem;font-size: 0.8rem;color:#333;background: #fff;padding:0.1rem 0.5rem;position: relative;overflow: hidden;}
+h4 label{white-space: nowrap;  text-overflow: ellipsis;overflow: hidden;font-size: 0.7rem;color:#999;}
+h4:after{content: "";height:1px;background:#ebebeb; position: absolute;left:0;right:0;bottom:0;margin:0 0.2rem;}
+h4 span{color:#666;float: right;}
+.info_box{overflow: hidden;position: relative;padding:0.75rem 0.5rem;background:#fff;}
+.pay{position: absolute;bottom:0.8rem;right:0.5rem;font-size: 0.8rem;color:#00BCD4;}
+.pay.end{color:#ccc;}
+.pic_box{height:4rem;width: 30%;max-width: 4rem;;overflow: hidden;float: left;}
+.pic_box img{width: 100%;}
+.txt_right{width: 70%;float: left;padding:0.25rem 1rem 0 0.5rem;box-sizing: border-box;}
+.txt_right h5{font-size:0.8rem;color:#333;-webkit-line-clamp: 1; -webkit-box-orient: vertical; display: -webkit-box;overflow: hidden;font-weight: bold;margin-bottom: 0.25rem;}
+.txt_right div{font-size: 0.7rem;color:#aaa;}
+.norms{position: absolute;left:5rem;bottom:0.5rem;}
+.norms span{font-size: 0.26rem;color:#888;}
+
+.portrait{width:1.5rem;float: left;margin-right:0.5rem;margin-top:0.25rem;border-radius: 50%;overflow: hidden;}
+input.aui-radio{position: absolute;left:-1.25rem;top:0;bottom:0;margin:auto;display:block;}
+</style>
+
+</head>
+
+<body>
+
+<header class="aui-bar aui-bar-nav">
+    <a href="javascript:history.go(-1);" class="aui-pull-left">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+   <div class="aui-title">我的收藏</div>
+   <a class="aui-pull-right">
+        <span>编辑</span>
+    </a>
+</header>
+<!-- 1 -->
+<section class="aui-content">
+    <ul>
+        <li class="aui-padded-10">
+          <input class="aui-radio" type="radio">
+           <h4><div class="portrait"><img src="__STATIC__/user/image/portrait.jpg"/></div><label style="max-width:80%;float:left;">举办方</label><span></span></h4>
+            <div class="info_box">
+               <div class="pic_box fl"><img src="__STATIC__/user/image/portrait.jpg"/></div>
+               <div class="txt_right">
+                   <h5>活动标题</h5>
+                   <div>03-25 12:00 开始</div>
+                   <div>白云区</div>
+               </div>
+               <div class="pay">未开始</div>
+           </div>
+        </li>
+
+        <li class="aui-padded-10">
+        <input class="aui-radio" type="radio">
+           <h4><div class="portrait"><img src="__STATIC__/user/image/portrait.jpg"/></div><label style="max-width:80%;float:left;">举办方</label><span></span></h4>
+            <div class="info_box">
+               <div class="pic_box fl"><img src="__STATIC__/user/image/portrait.jpg"/></div>
+               <div class="txt_right">
+                   <h5>活动标题</h5>
+                   <div>03-25 12:00 开始</div>
+                   <div>白云区</div>
+               </div>
+               <div class="pay end">已结束</div>
+           </div>
+        </li>
+    </ul>
+
+     <div style="position:fixed;left:0;bottom:-1.8rem;border-radius:0;" class="aui-btn aui-btn-info aui-btn-block aui-btn-sm" id="aui_del">删除收藏</div>
+</section>
+
+</body>
+</html>
+
+<script type="text/javascript">
+// 编辑
+$('.aui-pull-right').click(function(event) {
+  $(this).toggleClass('cur')
+  if ($(this).hasClass('cur')) {
+      $('li').addClass('left');
+      $(this).html("取消")
+      $('input.aui-radio').show(50);
+      $('#aui_del').animate({'left': 0, 'bottom': 0}, 100)
+  } else {
+      $('li').removeClass('left');
+      $(this).html("编辑")
+      $('input.aui-radio').hide(50).attr("checked" , false);
+      $('input.aui-radio').removeClass('active')
+      $('#aui_del').animate({'left': 0, 'bottom': -1.8 + 'rem'}, 100)
+  };
+});
+
+// checked
+ $('li .aui-radio').click(function(event) {
+        $(this).toggleClass('active');
+        if ($(this).hasClass('active')) {
+            $(this).attr("checked" , true);
+        } else {
+            $(this).attr("checked" , false);
+        };
+
+    });
+
+ // del
+ $('#aui_del').click(function(event) {
+      $('.aui-radio.active').parent().remove();
+    });
+
+
+</script>

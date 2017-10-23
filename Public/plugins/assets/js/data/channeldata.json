@@ -1,0 +1,43 @@
+[
+  {
+    "title": "channeldata1",
+    "fields": {
+      "id": {
+        "label": "ID / Name",
+        "type": "input",
+        "value": "channeldata1"
+      },
+      "link1": {
+        "label": "链接1",
+        "type": "input",
+        "value": ""
+      },
+      "img1": {
+        "label": "图标1",
+        "type": "image",
+        "value": "/Public/images/channel_config/portrait.jpg"
+      },
+      "title1": {
+        "label": "标题1",
+        "type": "input",
+        "value": "进行中"
+      },
+      "title2": {
+        "label": "标题2",
+        "type": "input",
+        "value": "标题标题标题"
+      },
+      "title3": {
+        "label": "标题3",
+        "type": "input",
+        "value": "2016-12-12"
+      },
+      "title4": {
+        "label": "标题4",
+        "type": "input",
+        "value": "如果谈及中国在技术领域的短板，那么大家可能想到的是发动机，其实还有一样高级电子芯片！"
+      }
+    }
+
+  }
+]

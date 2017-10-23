@@ -1,0 +1,34 @@
+<include file="Public/header" />
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 height-50 text-center bg-red">
+					<img src="__PUBLIC__/home/img/logo2.png" alt="" class="width-112"/>
+					<a href="{:U('Index/index')}" class="pull-right height-50"><img src="__PUBLIC__/home/img/center.png" alt="" class="icon-25" /></a>
+				</div>
+				<div class="col-xs-12 col-sm-12 margin-top-47">
+					<p class="text-center font-lg2"><b>查收文档</b></p>
+				</div>
+				<div class="col-xs-12 col-sm-12 margin-top-47">
+					<div class="checkbox text-center gray">
+						<label>
+						  <input type="checkbox" class="padding-right-7 gray" > 我已收到相关文件和文档
+						</label>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 margin-top-55 text-center">
+					<a href="__MODULE__/Proman/finished/apply_id/{$apply_id}"   id="Next" class="btn btn-blue5 white-link">确认</a>
+				</div>
+			</div>
+		</div>
+			<script>
+
+	$(":checkbox").on('change',function(){
+		if($(this).prop('checked')==true){
+			$('#Next').removeClass('disabled');
+		}else{
+			$('#Next').addClass('disabled');
+		}
+	});
+	
+</script>
+<include file="Public/footer" />

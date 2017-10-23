@@ -1,0 +1,468 @@
+[ 2017-07-24T23:30:44+08:00 ] 112.124.127.224 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000517s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000605s ]
+NOTIC: [2048] Declaration of Pc\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.008098s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008150s ]
+NOTIC: [8] Undefined index: code /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 21 行.
+NOTIC: [8] Undefined index: ifWeChatLogin /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000097s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000138s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000188s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000234s ]
+NOTIC: [8] Use of undefined constant Activity - assumed 'Activity' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 21 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Undefined variable: fatherId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 391 行.
+NOTIC: [8] Undefined variable: sonId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 392 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 400 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011796s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011831s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000508s ]
+INFO: 
+INFO: 
+INFO: 
+
+[ 2017-07-24T23:34:47+08:00 ] 117.34.28.13 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+NOTIC: [2048] Declaration of Pc\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.008117s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008174s ]
+NOTIC: [8] Undefined index: code /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 21 行.
+NOTIC: [8] Undefined index: ifWeChatLogin /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000120s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000160s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000172s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000234s ]
+NOTIC: [8] Use of undefined constant Activity - assumed 'Activity' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 21 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Undefined variable: fatherId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 391 行.
+NOTIC: [8] Undefined variable: sonId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 392 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 400 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012416s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012453s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000307s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000480s ]
+INFO: 
+INFO: 
+INFO: 
+
+[ 2017-07-24T23:36:58+08:00 ] 182.92.1.233 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+NOTIC: [2048] Declaration of Pc\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007760s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007803s ]
+NOTIC: [8] Undefined index: code /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 21 行.
+NOTIC: [8] Undefined index: ifWeChatLogin /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000095s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000177s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+NOTIC: [8] Use of undefined constant Activity - assumed 'Activity' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 21 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Undefined variable: fatherId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 391 行.
+NOTIC: [8] Undefined variable: sonId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 392 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 400 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011817s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011855s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: 
+INFO: 
+INFO: 
+
+[ 2017-07-24T23:40:04+08:00 ] 115.28.203.70 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+NOTIC: [2048] Declaration of Pc\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007636s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007678s ]
+NOTIC: [8] Undefined index: code /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 21 行.
+NOTIC: [8] Undefined index: ifWeChatLogin /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000092s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000174s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+NOTIC: [8] Use of undefined constant Activity - assumed 'Activity' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 21 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Undefined variable: fatherId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 391 行.
+NOTIC: [8] Undefined variable: sonId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 392 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 400 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011465s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000345s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000511s ]
+INFO: 
+INFO: 
+INFO: 
+
+[ 2017-07-24T23:44:43+08:00 ] 203.208.60.205 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+NOTIC: [2048] Declaration of Pc\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.008128s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008173s ]
+NOTIC: [8] Undefined index: code /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 21 行.
+NOTIC: [8] Undefined index: ifWeChatLogin /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000101s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000140s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000188s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+NOTIC: [8] Use of undefined constant Activity - assumed 'Activity' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 21 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Undefined variable: fatherId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 391 行.
+NOTIC: [8] Undefined variable: sonId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 392 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 400 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011816s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011852s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000373s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000398s ]
+
+[ 2017-07-24T23:44:47+08:00 ] 117.34.28.13 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000435s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+NOTIC: [2048] Declaration of Pc\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.013716s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.013767s ]
+NOTIC: [8] Undefined index: code /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 21 行.
+NOTIC: [8] Undefined index: ifWeChatLogin /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000098s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000138s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+NOTIC: [8] Use of undefined constant Activity - assumed 'Activity' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 21 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Undefined variable: fatherId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 391 行.
+NOTIC: [8] Undefined variable: sonId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 392 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 400 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022954s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022992s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001423s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001596s ]
+INFO: 
+INFO: 
+INFO: 
+
+[ 2017-07-24T23:44:47+08:00 ] 61.182.137.6 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+NOTIC: [2048] Declaration of Pc\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.012042s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.012090s ]
+NOTIC: [8] Undefined index: code /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 21 行.
+NOTIC: [8] Undefined index: ifWeChatLogin /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000097s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000137s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000164s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+NOTIC: [8] Use of undefined constant Activity - assumed 'Activity' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 21 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Undefined variable: fatherId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 391 行.
+NOTIC: [8] Undefined variable: sonId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 392 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 400 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011964s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000384s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000551s ]
+INFO: 
+INFO: 
+INFO: 
+
+[ 2017-07-24T23:45:44+08:00 ] 112.124.127.224 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000410s ]
+NOTIC: [2048] Declaration of Pc\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007788s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007830s ]
+NOTIC: [8] Undefined index: code /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 21 行.
+NOTIC: [8] Undefined index: ifWeChatLogin /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000094s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000133s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000162s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000205s ]
+NOTIC: [8] Use of undefined constant Activity - assumed 'Activity' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 21 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Undefined variable: fatherId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 391 行.
+NOTIC: [8] Undefined variable: sonId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 392 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 400 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012113s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012149s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000509s ]
+INFO: 
+INFO: 
+INFO: 
+
+[ 2017-07-24T23:46:18+08:00 ] 186.208.65.170 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000410s ]
+NOTIC: [2048] Declaration of Pc\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007772s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007815s ]
+NOTIC: [8] Undefined index: code /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 21 行.
+NOTIC: [8] Undefined index: ifWeChatLogin /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000094s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000133s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000159s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+NOTIC: [8] Use of undefined constant Activity - assumed 'Activity' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 21 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Undefined variable: fatherId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 391 行.
+NOTIC: [8] Undefined variable: sonId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 392 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 400 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011465s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011505s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000300s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000470s ]
+INFO: 
+INFO: 
+INFO: 
+
+[ 2017-07-24T23:51:58+08:00 ] 182.92.1.233 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+NOTIC: [2048] Declaration of Pc\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.008146s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008190s ]
+NOTIC: [8] Undefined index: code /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 21 行.
+NOTIC: [8] Undefined index: ifWeChatLogin /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000128s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000171s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000181s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000226s ]
+NOTIC: [8] Use of undefined constant Activity - assumed 'Activity' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 21 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Undefined variable: fatherId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 391 行.
+NOTIC: [8] Undefined variable: sonId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 392 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 400 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011644s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011681s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000474s ]
+INFO: 
+INFO: 
+INFO: 
+
+[ 2017-07-24T23:54:47+08:00 ] 117.34.28.13 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+NOTIC: [2048] Declaration of Pc\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007786s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007828s ]
+NOTIC: [8] Undefined index: code /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 21 行.
+NOTIC: [8] Undefined index: ifWeChatLogin /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000094s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000134s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000160s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+NOTIC: [8] Use of undefined constant Activity - assumed 'Activity' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 21 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Undefined variable: fatherId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 391 行.
+NOTIC: [8] Undefined variable: sonId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 392 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 400 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011507s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011543s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000300s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: 
+INFO: 
+INFO: 
+
+[ 2017-07-24T23:55:06+08:00 ] 115.28.203.70 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+NOTIC: [2048] Declaration of Pc\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007710s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007753s ]
+NOTIC: [8] Undefined index: code /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 21 行.
+NOTIC: [8] Undefined index: ifWeChatLogin /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000092s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000131s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000165s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+NOTIC: [8] Use of undefined constant Activity - assumed 'Activity' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 21 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Undefined variable: fatherId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 391 行.
+NOTIC: [8] Undefined variable: sonId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 392 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 400 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011542s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011580s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000389s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000556s ]
+INFO: 
+INFO: 
+INFO: 
+
+[ 2017-07-24T23:55:58+08:00 ] 84.94.90.197 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000567s ]
+NOTIC: [2048] Declaration of Pc\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.008385s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008433s ]
+NOTIC: [8] Undefined index: code /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 21 行.
+NOTIC: [8] Undefined index: ifWeChatLogin /var/www/html/paoding_gemmap/Application/Pc/Controller/IndexController.class.php 第 23 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000095s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000135s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000180s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+NOTIC: [8] Use of undefined constant Activity - assumed 'Activity' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 21 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 24 行.
+NOTIC: [8] Undefined variable: fatherId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 391 行.
+NOTIC: [8] Undefined variable: sonId /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 392 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Pc/93c49ad67facdb6f997f1649493c88cf.php 第 400 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012050s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012087s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000356s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000390s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000437s ]
+

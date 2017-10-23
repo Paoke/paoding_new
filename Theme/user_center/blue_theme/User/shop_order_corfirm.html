@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+<title>-</title>
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/aui.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/common.css" />
+<script type="text/javascript" src="__STATIC__/user/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/api.js"></script>
+<style type="text/css">
+.sec_a h4{background: #fff url(__STATIC__/user/image/place.png)no-repeat 0rem center;background-size: 1rem;padding-left:1.25rem !important;}
+.sec_t h4{background: #fff url(__STATIC__/user/image/spxx.png)no-repeat 0.5rem center;background-size: 0.85rem;padding-left:1.75rem !important;}
+
+.fl{float: left;}
+.fr{float: right;}
+/*订单详情*/
+h2{background: #fd5a75;text-align: center;position: fixed;bottom:0;left:0;width: 100%;}
+h2 p{font-size: 0.9rem;color:#fff;line-height: 2rem;}
+h2 div{font-size: 0.7rem;color:#fff;padding-bottom: 0.5rem;opacity: 0.9;}
+.sec_a{font-size: 0.75rem;color:#333;padding:0 0.5rem;background-color:#fff;}
+.sec_a>div{padding:0.5rem 0 0;line-height: 1rem;}
+.sec_a h4{line-height:2rem;font-size: 0.8rem;color:#666;position: relative;}
+.sec_a h4:after{content: "";height:1px;background:#ebebeb; position: absolute;left:0;right:0;bottom:0;}
+.sec_t{margin-top:0.5rem;}
+.sec_t h4{line-height: 2rem;font-size: 0.8rem;color:#666;position: relative;padding:0 0.2rem;}
+.sec_t h4:after{content: "";height:1px;background:#ebebeb; position: absolute;left:0;right:0;bottom:0;margin:0 0.2rem;}
+.sec_t .info_box{overflow: hidden;position: relative;padding:0.75rem 0.5rem;background:#fff;}
+.sec_t .pic_box{height:4rem;width: 30%;max-width: 4rem;;overflow: hidden;}
+.sec_t .pic_box img{width: 100%;}
+.sec_t .txt_right{width: 70%;float: left;color:#333;padding:0.25rem 1.5rem 0 0.5rem;box-sizing: border-box;}
+.sec_t .txt_right h5{-webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box;overflow: hidden;font-size: 0.8rem;}
+.sec_t .count{position: absolute;right:0.5rem;bottom:0.3rem;font-weight: bold;}
+.sec_t .count p{font-size: 0.7rem;color:#333;text-align: right;}
+.sec_t .norms{position: absolute;left:5rem;bottom:0.4rem;}
+.sec_t .norms span{font-size: 0.7rem;color:#888;}
+.sec_t .bot_box{line-height: 2rem;background:#fff;padding:0 0.5rem;font-size: 0.8rem;color:#333;}
+.sec_t .bot_box p:nth-of-type(1){border-top:1px dashed #DEDEDE;}
+.sec_t .bot_box p:nth-of-type(2){border-top:1px solid #ebebeb;}
+.sec_t .bot_box p:nth-of-type(2) span{color:#fd5a75;font-weight: bold;}
+.sec_t .pro{background:#fff;padding:0.5rem;margin-top:0.75rem;}
+.sec_t .pro div{font-size: 0.7rem;color:#555;line-height: 2rem;}
+
+.say{background:#fff;height:2.25rem;line-height: 2.25rem;font-size: 0.8rem;margin-top: 0.5rem;margin-bottom: 4.5rem;padding:0 0.5rem;}
+.yhq{background:#fff url(__STATIC__/user/image/arrows_r.png)no-repeat right center;background-size:1.5rem;height:2.25rem;line-height: 2.25rem;font-size: 0.8rem;margin-top:0.75rem;padding:0 0.5rem;color:#333;}
+</style>
+</head>
+
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a href="javascript:history.go(-1);" class="aui-pull-left aui-btn">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">确认订单</div>
+</header>
+
+<section class="aui-content">
+<h2>
+        <p>立即付款</p>
+        <div>共2件 实付款￥99.00 <span>(含运费￥0.00)</span></div>
+      </h2>
+      <section class="sec_a">
+        <h4>收货地址</h4>
+        <div style="overflow:hidden;">
+            <p class="fl" style="font-size:0.8rem">萨达萨达</p>
+            <p class="fr" style="font-size:0.8rem">13365656565</p>
+        </div>
+        <div style="padding-bottom:0.5rem;">广东省广州市某区某路某街道-广东省广州市某区某路某街道</div>
+      </section>
+      <section class="sec_t">
+      <div>
+        <h4>商品信息</h4>
+        <div class="info_box">
+               <div class="pic_box fl"><img src="__STATIC__/user/image/a.jpg"/></div>
+               <div class="txt_right">
+                   <h5>探险家伊泽瑞尔未来战士皮肤最新</h5>
+               </div>
+               <div class="count">
+                   <p>$ 12</p>
+                   <p>X 1件</p>
+               </div>
+               <div class="norms">
+                    <span>尺码:M ;</span>
+                    <span>颜色:白</span>
+                </div>
+           </div>
+        </div>
+
+            <div class="bot_box">
+              <p>运费 <span class="fr">$ 10.00</span></p>
+              <p>需要支付 <span class="fr">$ 920.00</span></p>
+            </div>
+            <div class="yhq">
+                <div>优惠券 <span style="float:right;padding-right:1rem;color:#666;">无可用</span></div>
+            </div>
+            <div class="pro">
+              <div>订单编号<span class="fr">351618161381</span></div>
+              <div>下单时间<span class="fr">2016-5-5 14:26</span></div>
+            </div>
+
+            <div class="say">
+                <div><input type="text" placeholder="(选填)给商家留言" /></div>
+            </div>
+      </section>
+</section>
+
+</body>
+</html>
+
+<script type="text/javascript">
+    // 购物车
+$(function(){
+    $('li i').click(function(event) {
+        $(this).parent().parent().find('i').toggleClass('cur');
+        if ($(this).hasClass('cur')) {$(this).parent().parent().find('.bot').css('display','block')}else{$(this).parent().parent().find('.bot').css('display','none')};
+    });
+
+});
+// all
+$(function(){
+    $('.all').click(function(event) {
+        $(this).toggleClass('cur')
+        if ($('.all').hasClass('cur')) {$('li i').addClass('cur')}else{$('li i').removeClass('cur')};
+        if ($('li i').hasClass('cur')) {$('.bot').css('display','block')}else{$('.bot').css('display','none')};
+    });
+
+});
+</script>

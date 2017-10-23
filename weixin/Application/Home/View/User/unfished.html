@@ -1,0 +1,40 @@
+<include file="Public/header" />
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 height-50 text-center bg-red">
+					<img src="__PUBLIC__/home/img/logo2.png" alt="" class="width-112"/>
+					<a href="{:U('Index/index')}" class="pull-right height-50"><img src="__PUBLIC__/home/img/center.png" alt="" class="icon-25" /></a>
+				</div>
+				
+				<div class="col-xs-12 col-sm-12 padding-0">
+					<div class="height-39 white-bg box-center">
+						<ul class="nav nav-tabs tabs-list">
+							<li class="active"><a href="{:U('User/unfished')}" >未完成订单</a></li>
+							<li><a href="{:U('User/fished')}" >已完成订单</a></li>
+							<li><a href="{:U('User/editor')}" >编辑个人资料</a></li>
+						</ul>
+					</div>
+							<volist name="unfished" id="vo">
+							<div class="col-xs-12 col-sm-12 margin-top-20">
+								<div class="box-289 box-center gray">
+									<div class="float-left ">
+										<p><a href="__MODULE__/User/order_detail/apply_id/{$vo.apply_id}">需求编号:{$vo.apply_id}</a></p>
+										<p>2015.09.22</p>
+										<span style="white-space:break-word">{$vo.message}</span>
+									</div>
+									<div class="pull-right">
+										<a href="#"><img src="__PUBLIC__/home/img/manager.jpg" alt="" class="head-portrait"/></a>
+										<a href="#" class=" gray-link margin-top-11 display-block">产品经理</a>
+									</div>
+								</div>
+							</div>
+							</volist>
+						</div>
+						
+				
+				<div class="col-xs-12 col-sm-12  text-center">
+								<a href="{:U('User/index')}" type="button" class="btn btn-return white-link text-center margin-top-42 margin-bottom-30">返回</a>
+				</div>	
+			</div>
+		</div>
+<include file="Public/footer" />

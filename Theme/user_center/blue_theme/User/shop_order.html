@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+<title>-</title>
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/aui.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/common.css" />
+<script type="text/javascript" src="__STATIC__/user/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/api.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/aui-tab.js"></script>
+
+<style type="text/css">
+.aui-pull-left{position: absolute !important;top:0;left:0;}
+.aui-pull-left .aui-iconfont{font-size: 1rem !important;}
+
+.aui-content{display:none;}
+.aui-content.active{display:block;}
+
+h4{line-height: 2.5rem;font-size: 0.8rem;color:#333;background: #fff;padding:0 0.5rem;position: relative;}
+h4:after{content: "";height:1px;background:#ebebeb; position: absolute;left:0;right:0;bottom:0;margin:0 0.2rem;}
+h4 span{color:#eeb949;float: right;}
+.info_box{overflow: hidden;position: relative;padding:1rem 0.5rem;background:#fff;}
+.pic_box{height:4rem;width: 30%;max-width: 4rem;;overflow: hidden;float: left;}
+.pic_box img{width: 100%;}
+.txt_right{width: 70%;float: left;padding:0.25rem 1.25rem 0 0.5rem;box-sizing: border-box;}
+.txt_right h5{font-size: 0.8rem;color:#333;-webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box;overflow: hidden;}
+.count{position: absolute;right:0.2rem;top:0.3rem;}
+.count p{font-size: 0.7rem;color:#333;text-align: right;}
+.norms{position: absolute;left:5rem;bottom:1rem;}
+.norms span{font-size: 0.7rem;color:#888;}
+.bot_box{background:#fff;}
+.bot_box>div{line-height: 2.5rem;text-align: center;font-size: 0.8rem;color:#333;position: relative;}
+.bot_box>div:after{content: "";height:1px;background:#ebebeb;position: absolute;left:0;right:0;top:0;margin:0 0.2rem;}
+.bot_box>div i{font-size: 0.26rem;color:#ccc;}
+.bot_box>div button{width: 4.5rem;height:1.5rem;line-height: 1.5rem;border: 1px solid #555;text-align: center;font-size: 0.7rem;background:none;color:#555;border-radius: 1px;padding:0;}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="aui-bar aui-bar-nav">
+    <a href="javascript:history.go(-1);" class="aui-pull-left">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+   <div class="aui-title">我的活动</div>
+</header>
+
+<div class="aui-tab" id="tab">
+    <div class="aui-tab-item aui-active">待付款</div>
+    <div class="aui-tab-item">待收货</div>
+    <div class="aui-tab-item">待评价</div>
+    <div class="aui-tab-item">已结束</div>
+    <div class="aui-tab-item">全部</div>
+</div>
+<!-- 1 -->
+<section class="aui-content active">
+    <ul>
+        <li class="aui-padded-10">
+            <h4>订单编号 139531351313131<!-- <span>待付款</span> --></h4>
+           <div class="info_box">
+               <div class="pic_box fl"><img src="__STATIC__/user/image/portrait.jpg"/></div>
+               <div class="txt_right">
+                   <h5>探险家伊泽瑞尔未来战士皮肤最新</h5>
+               </div>
+               <div class="count">
+                   <p>$ 12</p>
+                   <p>X 1件</p>
+               </div>
+               <div class="norms">
+                    <span>尺码:M ;</span>
+                    <span>颜色:白</span>
+                </div>
+           </div>
+           <div class="bot_box">
+               <div>共一件商品，实付：<span style="color:#ff3456;">$ 99</span><i>(含运费:￥0)</i></div>
+               <div>
+                   <button>取消订单</button>
+                   <button style="color:#ff3456;border-color:#ff3456;margin-left:0.2rem;">付款</button>
+               </div>
+           </div>
+        </li>
+    </ul>
+</section>
+
+<!-- 2 -->
+<section class="aui-content">
+    <ul>
+        <li class="aui-padded-10">
+             <h4>订单编号 139531351313131<!-- <span>待收货</span> --></h4>
+           <div class="info_box">
+               <div class="pic_box fl"><img src="__STATIC__/user/image/portrait.jpg"/></div>
+               <div class="txt_right">
+                   <h5>探险家伊泽瑞尔未来战士皮肤最新</h5>
+               </div>
+               <div class="count">
+                   <p>$ 12</p>
+                   <p>X 1件</p>
+               </div>
+               <div class="norms">
+                    <span>尺码:M ;</span>
+                    <span>颜色:白</span>
+                </div>
+           </div>
+           <div class="bot_box">
+               <div>共一件商品，实付：<span style="color:#ff3456;">$ 99</span><i>(含运费:￥0)</i></div>
+               <div>
+                   <button>我要退货</button>
+                   <button style="color:#ff3456;border-color:#ff3456;margin-left:0.2rem;">确认收货</button>
+               </div>
+           </div>
+        </li>
+    </ul>
+</section>
+
+<!-- 3 -->
+<section class="aui-content">
+    <ul>
+        <li class="aui-padded-10">
+            <h4>订单编号 139531351313131<!-- <span>待评价</span> --></h4>
+           <div class="info_box">
+               <div class="pic_box fl"><img src="__STATIC__/user/image/portrait.jpg"/></div>
+               <div class="txt_right">
+                   <h5>探险家伊泽瑞尔未来战士皮肤最新</h5>
+               </div>
+               <div class="count">
+                   <p>$ 12</p>
+                   <p>X 1件</p>
+               </div>
+               <div class="norms">
+                    <span>尺码:M ;</span>
+                    <span>颜色:白</span>
+                </div>
+           </div>
+           <div class="bot_box">
+               <div>共一件商品，实付：<span style="color:#ff3456;">$ 99</span><i>(含运费:￥0)</i></div>
+               <div>
+                   <button>马上评价</button>
+               </div>
+           </div>
+        </li>
+    </ul>
+</section>
+
+<!-- 4 -->
+<section class="aui-content">
+    <ul>
+        <li class="aui-padded-10">
+            <h4>订单编号 139531351313131<!-- <span>待评价</span> --></h4>
+           <div class="info_box">
+               <div class="pic_box fl"><img src="__STATIC__/user/image/portrait.jpg"/></div>
+               <div class="txt_right">
+                   <h5>探险家伊泽瑞尔未来战士皮肤最新</h5>
+               </div>
+               <div class="count">
+                   <p>$ 12</p>
+                   <p>X 1件</p>
+               </div>
+               <div class="norms">
+                    <span>尺码:M ;</span>
+                    <span>颜色:白</span>
+                </div>
+           </div>
+           <div class="bot_box">
+               <div>共一件商品，实付：<span style="color:#ff3456;">$ 99</span><i>(含运费:￥0)</i></div>
+               <div>
+                   <button>申请售后</button>
+               </div>
+           </div>
+        </li>
+    </ul>
+</section>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    }
+    var tab = new auiTab({
+        element:document.getElementById("tab"),
+    },function(ret){
+         if(ret.index==1) {
+                    $('.aui-content:eq(0)').addClass('active').siblings('.aui-content').removeClass('active');
+                    };
+                    if(ret.index==2) {
+                        $('.aui-content:eq(1)').addClass('active').siblings('.aui-content').removeClass('active');
+                    };
+                    if(ret.index==3) {
+                        $('.aui-content:eq(2)').addClass('active').siblings('.aui-content').removeClass('active');
+                    };
+                    if(ret.index==4) {
+                        $('.aui-content:eq(3)').addClass('active').siblings('.aui-content').removeClass('active');
+                    };
+                     if(ret.index==5) {
+                        $('.aui-content').addClass('active')
+                    };
+    });
+
+</script>

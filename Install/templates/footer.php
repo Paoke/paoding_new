@@ -1,0 +1,1 @@
+<div class="footer"> &copy; 2014-2016 <a href="http://www.gemmap.cn" target="_blank">www.gemmap.cn</a> 广州京墨医疗科技有限公司</div>

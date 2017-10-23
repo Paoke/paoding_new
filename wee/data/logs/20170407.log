@@ -1,0 +1,651 @@
+2017-04-07 15:36:15 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491550575</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[吗]]></Content>
+<MsgId>6406160940534207081</MsgId>
+</xml>
+
+2017-04-07 15:36:15 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491550575',
+    'msgtype' => 'text',
+    'content' => '吗',
+    'msgid' => '6406160940534207081',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491550575',
+    'type' => 'text',
+    'event' => NULL,
+    'redirection' => false,
+    'source' => NULL,
+  ),
+)
+
+2017-04-07 15:36:15 response :
+------------
+
+2017-04-07 15:36:25 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491550584</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[你好]]></Content>
+<MsgId>6406160979188912799</MsgId>
+</xml>
+
+2017-04-07 15:36:25 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491550584',
+    'msgtype' => 'text',
+    'content' => '你好',
+    'msgid' => '6406160979188912799',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491550584',
+    'type' => 'text',
+    'event' => NULL,
+    'redirection' => false,
+    'source' => NULL,
+  ),
+  'module' => 'basic',
+  'rule' => '9',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '13',
+    'rid' => '9',
+    'uniacid' => '2',
+    'module' => 'basic',
+    'content' => '你好',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+  ),
+)
+
+2017-04-07 15:36:25 response :
+------------
+Array:
+FromUserName : gh_5618c4bf4095 ;
+ToUserName : old9W1sk78AaU7xxPEYYKUyxZq6Q ;
+MsgType : text ;
+Content : 大家好才是真的好！😆 ;
+
+2017-04-07 15:36:29 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491550589</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[地表最能b]]></EventKey>
+</xml>
+
+2017-04-07 15:36:29 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491550589',
+    'msgtype' => 'event',
+    'event' => 'CLICK',
+    'eventkey' => '地表最能b',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491550589',
+    'type' => 'text',
+    'content' => '地表最能b',
+    'redirection' => true,
+    'source' => 'click',
+  ),
+  'module' => 'custom',
+  'rule' => '15',
+  'priority' => '255',
+  'keyword' => 
+  array (
+    'id' => '28',
+    'rid' => '15',
+    'uniacid' => '2',
+    'module' => 'custom',
+    'content' => '地表最能b',
+    'type' => '1',
+    'displayorder' => '255',
+    'status' => '1',
+  ),
+)
+
+2017-04-07 15:36:29 response :
+------------
+Array:
+FromUserName : gh_5618c4bf4095 ;
+ToUserName : old9W1sk78AaU7xxPEYYKUyxZq6Q ;
+MsgType : transfer_customer_service ;
+
+2017-04-07 15:36:42 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491550602</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.ax-technology.com]]></EventKey>
+<MenuId>579203069</MenuId>
+</xml>
+
+2017-04-07 15:36:42 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491550602',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.ax-technology.com',
+    'menuid' => '579203069',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491550602',
+    'type' => 'text',
+    'content' => 'http://www.ax-technology.com',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-07 15:36:42 response :
+------------
+
+2017-04-07 15:37:06 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491550626</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html]]></EventKey>
+<MenuId>579203069</MenuId>
+</xml>
+
+2017-04-07 15:37:06 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491550626',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html',
+    'menuid' => '579203069',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491550626',
+    'type' => 'text',
+    'content' => 'http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-07 15:37:06 response :
+------------
+
+2017-04-07 15:39:38 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491550778</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html]]></EventKey>
+<MenuId>579203069</MenuId>
+</xml>
+
+2017-04-07 15:39:38 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491550778',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html',
+    'menuid' => '579203069',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491550778',
+    'type' => 'text',
+    'content' => 'http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-07 15:39:38 response :
+------------
+
+2017-04-07 15:39:48 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491550788</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2017-04-07 15:40:42 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491550842</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2017-04-07 15:40:42 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491550842',
+    'msgtype' => 'event',
+    'event' => 'subscribe',
+    'eventkey' => '',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491550842',
+    'type' => 'text',
+    'redirection' => true,
+    'source' => 'subscribe',
+    'content' => '关注回复',
+  ),
+  'module' => 'basic',
+  'rule' => '12',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '24',
+    'rid' => '12',
+    'uniacid' => '2',
+    'module' => 'basic',
+    'content' => '关注回复',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+  ),
+)
+
+2017-04-07 15:40:42 response :
+------------
+Array:
+FromUserName : gh_5618c4bf4095 ;
+ToUserName : old9W1sk78AaU7xxPEYYKUyxZq6Q ;
+MsgType : text ;
+Content : 你终于来了，先点下面菜单了解下吧😏 ;
+
+2017-04-07 15:40:46 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491550846</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html]]></EventKey>
+<MenuId>579203069</MenuId>
+</xml>
+
+2017-04-07 15:40:46 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491550846',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html',
+    'menuid' => '579203069',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491550846',
+    'type' => 'text',
+    'content' => 'http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-07 15:40:46 response :
+------------
+
+2017-04-07 16:44:13 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491554653</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.ax-technology.com/tec/index.php?s=/Home/index/caselist.html]]></EventKey>
+<MenuId>579212859</MenuId>
+</xml>
+
+2017-04-07 16:44:13 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491554653',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.ax-technology.com/tec/index.php?s=/Home/index/caselist.html',
+    'menuid' => '579212859',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491554653',
+    'type' => 'text',
+    'content' => 'http://www.ax-technology.com/tec/index.php?s=/Home/index/caselist.html',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-07 16:44:13 response :
+------------
+
+2017-04-07 16:44:25 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491554665</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[http://www.ax-technology.com/tec/index.php?s=/Home/index/caselist.html]]></Content>
+<MsgId>6406178506950474306</MsgId>
+</xml>
+
+2017-04-07 16:44:25 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491554665',
+    'msgtype' => 'text',
+    'content' => 'http://www.ax-technology.com/tec/index.php?s=/Home/index/caselist.html',
+    'msgid' => '6406178506950474306',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491554665',
+    'type' => 'text',
+    'event' => NULL,
+    'redirection' => false,
+    'source' => NULL,
+  ),
+)
+
+2017-04-07 16:44:25 response :
+------------
+
+2017-04-07 16:44:51 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491554690</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.ax-technology.com/tec/index.php?s=/Home/index/caselist.html]]></EventKey>
+<MenuId>579212859</MenuId>
+</xml>
+
+2017-04-07 16:44:51 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491554690',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.ax-technology.com/tec/index.php?s=/Home/index/caselist.html',
+    'menuid' => '579212859',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491554690',
+    'type' => 'text',
+    'content' => 'http://www.ax-technology.com/tec/index.php?s=/Home/index/caselist.html',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-07 16:44:51 response :
+------------
+
+2017-04-07 16:44:53 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491554693</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.ax-technology.com/tec/index.php?s=/Home/index/caselist.html]]></EventKey>
+<MenuId>579212859</MenuId>
+</xml>
+
+2017-04-07 16:44:53 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491554693',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.ax-technology.com/tec/index.php?s=/Home/index/caselist.html',
+    'menuid' => '579212859',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491554693',
+    'type' => 'text',
+    'content' => 'http://www.ax-technology.com/tec/index.php?s=/Home/index/caselist.html',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-07 16:44:53 response :
+------------
+
+2017-04-07 16:45:02 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491554702</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.ax-technology.com/tec/index.php?s=/Home/index/caselist.html]]></EventKey>
+<MenuId>579212859</MenuId>
+</xml>
+
+2017-04-07 16:45:02 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491554702',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.ax-technology.com/tec/index.php?s=/Home/index/caselist.html',
+    'menuid' => '579212859',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491554702',
+    'type' => 'text',
+    'content' => 'http://www.ax-technology.com/tec/index.php?s=/Home/index/caselist.html',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-07 16:45:02 response :
+------------
+
+2017-04-07 16:45:07 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491554707</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.ax-technology.com]]></EventKey>
+<MenuId>579212859</MenuId>
+</xml>
+
+2017-04-07 16:45:07 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491554707',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.ax-technology.com',
+    'menuid' => '579212859',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491554707',
+    'type' => 'text',
+    'content' => 'http://www.ax-technology.com',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-07 16:45:07 response :
+------------
+
+2017-04-07 16:45:12 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491554712</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://www.ax-technology.com/tec/index.php?s=/Home/index/caselist.html]]></EventKey>
+<MenuId>579212859</MenuId>
+</xml>
+
+2017-04-07 16:45:12 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491554712',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://www.ax-technology.com/tec/index.php?s=/Home/index/caselist.html',
+    'menuid' => '579212859',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491554712',
+    'type' => 'text',
+    'content' => 'http://www.ax-technology.com/tec/index.php?s=/Home/index/caselist.html',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-07 16:45:12 response :
+------------
+

@@ -1,0 +1,399 @@
+<!DOCTYPE >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>{$gemmap_config['shop_info_store_title']}</title>
+    <link rel="shortcut icon" href="{$gemmap_config['shop_info_title_logo']}" type="image/png">
+
+    <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}"/>
+    <meta name="description" content="{$gemmap_config['shop_info_store_desc']}"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="-1"/>
+
+    <link rel="stylesheet" href="{$Think.const.LOGIN}/css/base.css"/>
+    <link rel="stylesheet" href="{$Think.const.LOGIN}/css/0a1f98351c244e53a14890f5c1ff14f3.css"/>
+    <link rel="stylesheet" href="{$Think.const.LOGIN}/css/account_common.css"/>
+    <link rel="stylesheet" href="{$Think.const.LOGIN}/css/login.css"/>
+    <link rel="stylesheet" href="{$Think.const.LOGIN}/css/style.css"/>
+    <script type="text/javascript" src="{$Think.const.LOGIN}/js/jquery-1.11.2-min.js"></script>
+    <script src="__PUBLIC__/js/myAjax.js"></script>
+    <style>
+        body {
+            font-family: "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans GB", tahoma, arial, "\5B8B\4F53" !important;
+        }
+        .position{margin-left: 50px;}
+        .content{position: absolute;top:50%;left:0;right:0;margin:auto;transform:translate(0,-50%);}
+        .copyright-100{position: fixed;bottom:20px;width: 100%;}
+    </style>
+    <script>
+        function detectBrowser() {
+            var browser = navigator.appName;
+
+            if (navigator.userAgent.indexOf("MSIE") > 0) {
+                var b_version = navigator.appVersion
+                var version = b_version.split(";");
+                var trim_Version = version[1].replace(/[ ]/g, "");
+                if ((browser == "Netscape" || browser == "Microsoft Internet Explorer")) {
+                    if (trim_Version == 'MSIE8.0' || trim_Version == 'MSIE7.0' || trim_Version == 'MSIE6.0') {
+                        window.location.href = "__MODULE__/Ieupdate";
+                    }
+                }
+            }
+        }
+        detectBrowser();
+    </script>
+</head>
+
+<body class="aliyun">
+<div id="header" data-spm="1">
+    <div class="header-layout y-row">
+        <h1 class="logo" id="logo" style="width: 180px;background-image: url('{$login_leftlogo}')"><a
+                href="{$website}" target="_blank"> 京墨科技 </a></h1>
+        <!--<ul class="header-nav">
+            <li class="nav-first"><a href="http://www.gemmap.cn" target="_blank"> 京墨首页 </a></li>
+        </ul>-->
+    </div>
+</div>
+
+<div class="content y-row" data-spm="2">
+    <div style="margin-left: 100px;float: left;width:450px;height:350px; ">
+        <!-- banner -->
+        <section class="banner">
+            <div class="banner02">
+                <ul>
+                    <foreach name="adList" item="vo" key="k">
+                        <li>
+                            <a data-id="{$vo.ad_id}"
+                            <if condition="$vo.target eq 1">
+                                target="_Blank"
+                                <else/>
+                                target="_Self"
+                            </if>
+                            href="{$vo.ad_link}"
+                            >
+                            <img src="{$vo.ad_code}"/>
+                            </a>
+                        </li>
+                    </foreach>
+                </ul>
+                <ol>
+                    <foreach name="adList" item="vo" key="k">
+                        <li></li>
+                    </foreach>
+                </ol>
+            </div>
+        </section>
+        <!-- end -->
+    </div>
+
+    <!-- login -->
+    <div class="register-box">
+        <div class="hd ">
+            <if condition="$wx_scanning eq 1">
+                <h2 class="quick cur">快速登录</h2>
+                <h2 class="static">账密登录</h2>
+                <div class="login-tip on">
+                    <div class="poptip">
+                        <div class="poptip-content">
+                            扫码登录更安全
+                        </div>
+                    </div>
+                </div>
+                <div class="login-tip">
+                    <div class="poptip">
+                        <div class="poptip-content">
+                            密码登录在这里
+                        </div>
+                    </div>
+                </div>
+            </if>
+        </div>
+
+        <form class="form-signin" action="#">
+            <input type="hidden" id="account_time" value="{$Think.session.account_time}"/>
+            <div class="form">
+                <div class="tab1 active">
+                    <div class="login-title">
+                        请使用用户账号密码登录
+                    </div>
+                    <div class="login-content">
+                        <p>登录名：<!--<span><a href="javascript:;">忘记登录名？</a></span>--></p>
+                        <input id="username" class="fm-text" name="username" tabindex="1" placeholder="登录名"
+                               onkeyup="value=value.replace(/[\W]/g,'')">
+                    </div>
+                    <div class="login-content">
+                        <p>登录密码<!--<span><a href="javascript:;">忘记登录密码？</a></span>--></p>
+                        <input id="password" class="fm-text" type="password" name="password" tabindex="2"
+                               onkeyup="value=value.replace(/[\W]/g,'')" placeholder="登录密码">
+                    </div>
+
+                    <if condition="$login_code eq 1">
+                        <div class="login-content row" style="display: none;">
+                            <p>验证码</p>
+                            <input id="vertify" class="fm-text codecheck" type="text" name="vertify" tabindex=""
+                                   placeholder="验证码"><img id="imgVerify" class="logincode" style="cursor:pointer;"
+                                                          src="{:U('Admin/vertify')}" onclick="fleshVerify();"/>
+                        </div>
+                    </if>
+
+                    <div class="login-submit" style="margin-bottom: 10px;">
+                        <input id="submit_btn" type="button" value="登录" onclick="checknull()" class="fm-button"
+                               tabindex="4" name="submit-btn">
+                    </div>
+                    <span id="msgdemo2"
+                          style="display: none;color:red;padding-left: 17px;margin:0 0 0 60px;background:url('__PUBLIC__/images/cancel_s.png') no-repeat left center;"></span>
+                    <div class="login-other" style="display:none">
+                        <div class="login-login-links">
+                            <a href="javascript:;">快捷登录</a> <br/>
+                        </div>
+                        <div class="register">
+                            <a href="javascript:;">免费注册</a>
+                        </div>
+                    </div>
+                    <!--<div class="agreement">
+                        <input type="checkbox" />
+                        <label >
+                            我已同意并阅读<a href="javascript:;"> 《京墨网站服务协议》 </a>
+                        </label>
+                    </div>-->
+                </div>
+                <div class="qrcode-login tab2">
+                    <div class="qrcode-mod ">扫码登录</div>
+                    <div class="qrcode-main">
+                        <div class="qrcode-img">
+                            <img src="{$Think.const.LOGIN}/images/daerma.png" height="115" width="115" alt=""/>
+                        </div>
+                        <div class="qrcode-desc">
+                            <i class="iconfont"></i>
+                            <p>打开<a href="javascript:;">手机微信</a>，扫一扫登录</p>
+                            <strong>更安全的登录方式</strong>
+                        </div>
+                    </div>
+
+                    <div class="qrcode-msg " style="display:none">
+                        <div class="msg-err">
+                            <p><i class="cuo"></i></p>
+                            <h6 class="error-expired">二维码已过期</h6>
+                            <p>请刷新二维码后重新扫码</p>
+                            <p><a href="javascript:;" class="fm-button refresh ">刷新二维码</a></p>
+                        </div>
+                    </div>
+                    <!-- <div class="agreement">
+                        <input type="checkbox" />
+                        <label >
+                            我已同意并阅读<a href="javascript:;"> 《京墨网站服务协议》 </a>
+                        </label>
+                    </div>-->
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="copyright-100" data-spm="999">
+    <div class="y-row copyright">
+        <p class="big">
+            <span><a href="{$website}"> 关于我们 </a></span>
+            <!--<span><a href="http://www.aliyun.com/law">法律声明</a></span>-->
+            <!--<span><a href="{$friend_link}">友情链接</a></span>-->
+        </p>
+        <!--友情链接-->
+
+        <p>Copyright &copy; 2016　{$store_name} 版权所有 ICP证：{$record_no} </p>
+    </div>
+</div>
+<script type="text/javascript">
+
+    var account_time = $('#account_time').val();
+    var code = {$login_code};
+    var account;
+    var flag = 1;
+    var username;
+    var password;
+    var vertify;
+    $(document).ready(function () {
+        if (account_time >= 3) {
+            $('.row').show();
+        }
+    });
+
+    $('#submit_btn').click(function () {
+        /* if (flag == 0) {
+         $("#submit_btn").css('color', '#fff');
+         $("#submit_btn").css('background', '#00a2ca');
+         $("#submit_btn").val('登录');
+         }*/
+        flag = 1;
+    });
+
+    function fleshVerify() {
+        //重载验证码
+        $('#imgVerify').attr('src', '/index.php?m=Admin&c=Admin&a=vertify&r=' + Math.floor(Math.random() * 100));
+    }
+
+    function checknull() {
+        username = $('#username').val();
+        password = $('#password').val();
+        vertify = $('input[name="vertify"]').val();
+
+        if (username == '') {
+            $('#msgdemo2').show();
+            $('#msgdemo2').html('请输入你的登录名！');
+            return;
+        } else if (username.length > 15) {
+            $('#msgdemo2').show();
+            $('#msgdemo2').html('登录名不能超过15位！');
+            return;
+        } else if (password == '') {
+            $('#msgdemo2').show();
+            $('#msgdemo2').html('请输入你的密码！');
+            return;
+        } else if (password.length > 15 || password.length < 6) {
+            $('#msgdemo2').show();
+            $('#msgdemo2').html('密码是6位到15位！');
+            return;
+        } else {
+            $('#msgdemo2').hide();
+        }
+
+        if (account >= 3 && code == 1) {
+            if (vertify == '') {
+                $('#msgdemo2').show();
+                $('#msgdemo2').html('请输入验证码！');
+                return;
+            } else if (vertify.length != 4) {
+                $('#msgdemo2').show();
+                $('#msgdemo2').html('验证码格式不正确！');
+                fleshVerify();
+                return;
+            } else {
+                $('#msgdemo2').hide();
+            }
+        }
+
+
+        if (flag == 1) {
+            $.ajax({
+                url: '/index.php?m=Admin&c=Admin&a=login&t=' + Math.random(),
+                type: 'post',
+                dataType: 'json',
+                data: {username: username, password: password, vertify: vertify},
+                success: function (res) {
+                    if (res.status == 1) {
+                        top.location.href = res.url;
+                        $("#submit_btn").css('color', '#fff');
+                        $("#submit_btn").css('background', '#00a2ca');
+                        $("#submit_btn").val('正在登录...');
+                    } else if (res.status == 2) {
+                        $('.row').show();
+                        account = res.status;
+                        $("#submit_btn").css('color', '#fff');
+                        $('.fm-button').css('background', '#F00');
+                        /*  $("#submit_btn").val(res.msg);*/
+                        $("#submit_btn").val('登录失败');
+                        $('#msgdemo2').show();
+                        $('#msgdemo2').html(res.msg);
+                        flag = 0;
+                        /*  fleshVerify();*/
+                    } else {
+                        $('.row').hide();
+                        $("#submit_btn").css('color', '#fff');
+                        $('.fm-button').css('background', '#F00');
+                        $("#submit_btn").val('登录失败');
+                        $('#msgdemo2').show();
+                        $('#msgdemo2').html(res.msg);
+                        flag = 0;
+                    }
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+                    $('#msgdemo2').show();
+                    $("#msgdemo2").html(errorThrown);
+                    //$("#msgdemo2").html('网络繁忙，请重试');
+                }
+            })
+
+        }
+    }
+
+</script>
+<script>
+    $(function (e) {
+        var myzIndex = 1;
+        var num = 4;
+        var timer = null;
+        var timer02 = null;
+        $('.banner02 ol li:last').addClass('current');
+        $('.banner02 ol li').mouseenter(function (e) {
+            var self = $(this)
+
+            timer02 = setTimeout(function () {
+                if (!self.hasClass('current')) {
+                    //如果没有这个类
+                    myzIndex++;
+                    self.addClass('current').siblings().removeClass('current')
+
+                    $('.banner02 ul li').eq(self.index()).css({
+                        'left': 650,
+                        'z-index': myzIndex
+                    }).animate({'left': 0}, 300)
+                    num = self.index()
+                }
+            }, 200)
+
+        }).mouseleave(function () {
+            clearTimeout(timer02)
+        });
+
+        function autoplay() {
+            num++;
+            myzIndex++;
+            if (num > 4) {
+                num = 0;
+            }
+
+            $('.banner02 ul li').eq(num).css({'left': 650, 'z-index': myzIndex}).animate({'left': 0}, 300)
+            $('.banner02 ol li').eq(num).addClass('current').siblings().removeClass('current')
+
+        }
+
+        timer = setInterval(autoplay, 3000)
+
+
+        $('.banner02').mouseenter(function (e) {
+            clearInterval(timer)
+        }).mouseleave(function (e) {
+            timer = setInterval(autoplay, 3000)
+        });
+
+        $('.banner02 ul li a').click(function () {
+            var id = $(this).attr('data-id');
+            updateClick('ad', 'ad_id', id, 'click_count');
+        });
+
+    });
+
+    // <table>
+    $(function () {
+        $('.quick ').click(function () {
+            $(this).removeClass('cur')
+            $('.login-tip:eq(0)').removeClass('on')
+            $('.login-tip:eq(1)').addClass('on')
+            $('.static').addClass('cur')
+            $('.tab1').removeClass('active')
+            $('.tab2').addClass('active')
+        });
+        $('.static ').click(function () {
+            $(this).removeClass('cur')
+            $('.login-tip:eq(1)').removeClass('on')
+            $('.login-tip:eq(0)').addClass('on')
+            $('.quick').addClass('cur')
+            $('.tab2').removeClass('active')
+            $('.tab1').addClass('active')
+        });
+    })
+</script>
+
+</body>
+</html>

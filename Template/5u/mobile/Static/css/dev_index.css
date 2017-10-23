@@ -1,0 +1,230 @@
+*{margin: 0;padding: 0;list-style: none;text-decoration: none;}
+a{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+input{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+html,body{
+	background: #f6f6f8;
+}
+.web{
+	width: 100%;
+	height: 100%;
+	background: #f6f6f8;
+}
+.index_section img{
+	width: 100%;
+	border: 1px solid #EEEEEE;
+	box-shadow: 1px 1px 6px #e5e5e5;
+}
+.index_send{
+	width: 60px;
+	height: 60px;
+	background: #469eea;
+	border-radius: 50%;
+	position: fixed;
+	right: 15px;
+	bottom: 80px;
+	box-shadow: 2px 2px 10px #4678ea;
+	z-index: 1;
+	-webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+.index_send p{
+	color: #FFFFFF;
+	font-size: 12px;
+	width: 25px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.index_footK{
+	height: 60px;
+	width: 100%;
+}
+.index_foot{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}
+.weui-cell:before{
+	border: none;
+}
+.personal_head{
+	width: 100%;
+	height: 125px;
+	background: #FFFFFF;
+	position: relative;
+	font-size: 10px;
+	color: #dddddd;
+	border-bottom: 1px solid #eee;
+}
+.personal_head .personal_head_tou{
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	position: absolute;
+	left: 15px;
+	top: 30px;
+	overflow: hidden;
+}
+.personal_head .personal_head_tou img{
+	width: 65px;
+	height: 65px;
+}
+.personal_head .personal_head_name{
+	font-size: 14px;
+	color: #000000;
+	position: absolute;
+	left: 95px;
+	top: 41px;
+}
+.personal_head .personal_head_zhang{
+	font-size: 14px;
+	color: #000000;
+	position: absolute;
+	left: 95px;
+	top: 70px;
+}
+.personal_head .personal_head_hao{
+	font-size: 14px;
+	color: #469eea;
+	position: absolute;
+	left: 137px;
+	top: 71px;
+}
+.chevron-right{
+	color: #c8c8cd;
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.supply_foot{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}
+.service_dev_head{
+	color: #333333;
+	font-size: 19px;
+	text-align: center;
+	line-height: 55px;
+	background: url(../img/dev/service_yuanjiao.png) bottom no-repeat;
+	background-size: 15px 5px;
+}
+.service_dev_head2{
+	font-family: "perpetua titling mt";
+	color: #bbbbbb;
+	font-size: 13px;
+	text-align: center;
+	padding: 15px 0px;
+}
+.service_dev_img{
+	width: 105px;
+	height: 55px;
+}
+.service_ux_img{
+	width: 115px;
+	height: 50px;
+}
+.service_ui_img{
+	width: 110px;
+	height: 80px;
+}
+.weui-grids:after,.weui-grids:before,.weui-grid:after, .weui-grid:before{
+	border: none;
+}
+.weui-grid{
+	padding: 0px 10px;
+}
+.service_foot{
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background: #FFFFFF;
+}
+.service_foot_left{
+	border-top: 1px solid #d9d9d9;
+	width: 30%;
+}
+.service_foot_left span{
+	width: 40%;
+	height: 49.5px;
+	line-height: 60px;
+	text-align: center;
+	display: inline-block;
+	
+}
+.service_foot_bt{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 16px;
+	background: #4598e1;
+	height: 50px;
+	line-height: 50px;
+	height: 100%;
+	display: inline-block;
+	width: 70%;
+}
+.service_share{
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	opacity: .8;
+	display: none;
+}
+.service_share img{
+	width: 202px;
+	position: absolute;
+	top: 20px;
+	right: 15px;
+}
+.search_body{
+	height: 100%;
+	background: #FFFFFF;
+}
+
+.search_body h1{
+	font-weight: bolder;
+}
+.search2{
+	display: none;
+	font-size: 15px;
+}
+.search1{
+	color: #469eea;
+	-webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+.weui-article p{
+	color: #666666;
+}
+.index_sectionB{
+	width: 94%;
+	height: 32px;
+	margin-left: 3%;
+}
+.index_sectionB p{
+	color: #666666;
+	font-size: 10px;
+	line-height: 32px;
+}
+.index_sectionB1{
+	float: left;
+}
+.index_sectionB3{
+	float: right;
+}
+.index_sectionB5{
+	margin-left: 20px;
+	float: right;
+}
+.index_section{
+	padding: 10px;
+	padding-top: 0px;
+}

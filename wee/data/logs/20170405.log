@@ -1,0 +1,502 @@
+2017-04-05 15:47:17 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1491378432</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[测试内容]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2017-04-05 15:47:17 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'toUser',
+    'fromusername' => 'fromUser',
+    'createtime' => '1491378432',
+    'msgtype' => 'text',
+    'content' => '测试内容',
+    'msgid' => '1234567890123456',
+    'from' => 'fromUser',
+    'to' => 'toUser',
+    'time' => '1491378432',
+    'type' => 'text',
+    'event' => NULL,
+    'redirection' => false,
+    'source' => NULL,
+  ),
+)
+
+2017-04-05 15:47:17 response :
+------------
+
+2017-04-05 15:50:10 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491378610</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[你好]]></Content>
+<MsgId>6405422356482446135</MsgId>
+</xml>
+
+2017-04-05 15:50:10 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491378610',
+    'msgtype' => 'text',
+    'content' => '你好',
+    'msgid' => '6405422356482446135',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491378610',
+    'type' => 'text',
+    'event' => NULL,
+    'redirection' => false,
+    'source' => NULL,
+  ),
+  'module' => 'basic',
+  'rule' => '9',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '13',
+    'rid' => '9',
+    'uniacid' => '2',
+    'module' => 'basic',
+    'content' => '你好',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+  ),
+)
+
+2017-04-05 15:50:10 response :
+------------
+Array:
+FromUserName : gh_5618c4bf4095 ;
+ToUserName : old9W1sk78AaU7xxPEYYKUyxZq6Q ;
+MsgType : text ;
+Content : 大家好才是真的好！😆 ;
+
+2017-04-05 16:30:47 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491381047</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://ad.ttpv.cn/ai/]]></EventKey>
+<MenuId>578523810</MenuId>
+</xml>
+
+2017-04-05 16:30:47 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491381047',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://ad.ttpv.cn/ai/',
+    'menuid' => '578523810',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491381047',
+    'type' => 'text',
+    'content' => 'http://ad.ttpv.cn/ai/',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-05 16:30:47 response :
+------------
+
+2017-04-05 16:31:00 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491381060</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://ad.ttpv.cn/ai/]]></EventKey>
+<MenuId>578523810</MenuId>
+</xml>
+
+2017-04-05 16:31:00 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491381060',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://ad.ttpv.cn/ai/',
+    'menuid' => '578523810',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491381060',
+    'type' => 'text',
+    'content' => 'http://ad.ttpv.cn/ai/',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-05 16:31:00 response :
+------------
+
+2017-04-05 17:09:56 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491383396</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://ad.ttpv.cn/ai/]]></EventKey>
+<MenuId>578523810</MenuId>
+</xml>
+
+2017-04-05 17:09:56 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491383396',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://ad.ttpv.cn/ai/',
+    'menuid' => '578523810',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491383396',
+    'type' => 'text',
+    'content' => 'http://ad.ttpv.cn/ai/',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-05 17:09:56 response :
+------------
+
+2017-04-05 17:28:41 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491384521</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html]]></EventKey>
+<MenuId>578546479</MenuId>
+</xml>
+
+2017-04-05 17:28:41 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491384521',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html',
+    'menuid' => '578546479',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491384521',
+    'type' => 'text',
+    'content' => 'http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-05 17:28:41 response :
+------------
+
+2017-04-05 18:42:26 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491388946</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[你好]]></Content>
+<MsgId>6405466749264484580</MsgId>
+</xml>
+
+2017-04-05 18:42:26 params :
+------------
+String:
+array (
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491388946',
+    'msgtype' => 'text',
+    'content' => '你好',
+    'msgid' => '6405466749264484580',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491388946',
+    'type' => 'text',
+    'event' => NULL,
+    'redirection' => false,
+    'source' => NULL,
+  ),
+  'module' => 'basic',
+  'rule' => '9',
+  'priority' => '0',
+  'keyword' => 
+  array (
+    'id' => '13',
+    'rid' => '9',
+    'uniacid' => '2',
+    'module' => 'basic',
+    'content' => '你好',
+    'type' => '1',
+    'displayorder' => '0',
+    'status' => '1',
+  ),
+)
+
+2017-04-05 18:42:26 response :
+------------
+Array:
+FromUserName : gh_5618c4bf4095 ;
+ToUserName : old9W1sk78AaU7xxPEYYKUyxZq6Q ;
+MsgType : text ;
+Content : 大家好才是真的好！😆 ;
+
+2017-04-05 18:42:35 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491388954</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://ad.ttpv.cn/ai/]]></EventKey>
+<MenuId>578546479</MenuId>
+</xml>
+
+2017-04-05 18:42:35 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491388954',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://ad.ttpv.cn/ai/',
+    'menuid' => '578546479',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491388954',
+    'type' => 'text',
+    'content' => 'http://ad.ttpv.cn/ai/',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-05 18:42:35 response :
+------------
+
+2017-04-05 18:42:38 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491388957</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html]]></EventKey>
+<MenuId>578546479</MenuId>
+</xml>
+
+2017-04-05 18:42:38 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491388957',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html',
+    'menuid' => '578546479',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491388957',
+    'type' => 'text',
+    'content' => 'http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-05 18:42:38 response :
+------------
+
+2017-04-05 22:51:09 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491403869</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://ad.ttpv.cn/ai/]]></EventKey>
+<MenuId>578546479</MenuId>
+</xml>
+
+2017-04-05 22:51:09 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491403869',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://ad.ttpv.cn/ai/',
+    'menuid' => '578546479',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491403869',
+    'type' => 'text',
+    'content' => 'http://ad.ttpv.cn/ai/',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-05 22:51:09 response :
+------------
+
+2017-04-05 22:51:27 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491403887</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://ad.ttpv.cn/ai/]]></EventKey>
+<MenuId>578546479</MenuId>
+</xml>
+
+2017-04-05 22:51:27 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491403887',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://ad.ttpv.cn/ai/',
+    'menuid' => '578546479',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491403887',
+    'type' => 'text',
+    'content' => 'http://ad.ttpv.cn/ai/',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-05 22:51:27 response :
+------------
+
+2017-04-05 22:51:59 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_5618c4bf4095]]></ToUserName>
+<FromUserName><![CDATA[old9W1sk78AaU7xxPEYYKUyxZq6Q]]></FromUserName>
+<CreateTime>1491403919</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html]]></EventKey>
+<MenuId>578546479</MenuId>
+</xml>
+
+2017-04-05 22:51:59 params :
+------------
+String:
+array (
+  'rule' => -2,
+  'module' => '',
+  'message' => 
+  array (
+    'tousername' => 'gh_5618c4bf4095',
+    'fromusername' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'createtime' => '1491403919',
+    'msgtype' => 'event',
+    'event' => 'VIEW',
+    'eventkey' => 'http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html',
+    'menuid' => '578546479',
+    'from' => 'old9W1sk78AaU7xxPEYYKUyxZq6Q',
+    'to' => 'gh_5618c4bf4095',
+    'time' => '1491403919',
+    'type' => 'text',
+    'content' => 'http://ad.ttpv.cn/tec/index.php?s=/Home/index/caselist.html',
+    'redirection' => true,
+    'source' => 'VIEW',
+  ),
+)
+
+2017-04-05 22:51:59 response :
+------------
+

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>{$gemmap_config['shop_info_store_title']}</title>    <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}" />     <meta name="description" content="{$gemmap_config['shop_info_store_desc']}" />
+
+    <!--dynamic table-->
+    <link href="{$Think.const.JS}/advanced-datatable/css/demo_page.css" rel="stylesheet" />
+    <link href="{$Think.const.JS}/advanced-datatable/css/demo_table.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{$Think.const.JS}/data-tables/DT_bootstrap.css" />
+    <link href="{$Think.const.CSS}/style.css" rel="stylesheet">
+    <link href="{$Think.const.CSS}/style-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+    .navbar-default{background-color: #f8f8f8;border: 1px solid #e7e7e7;}
+    .panel-body{padding:5px;}
+    .formadd {padding:0px;}
+    .bg-color {
+        background: #f1f1f1;
+        text-align: left;}
+</style>
+
+<body class="sticky-header" >
+
+<section>
+
+    <!-- main content start-->
+    <div class="main-content" width="100%" style="margin:0px;">
+
+
+
+        <!--body wrapper start-->
+        <div class="wrapper" style="padding:5px">
+            <div class="row">
+                <div class="col-sm-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            账户资金记录列表
+                            <div class="pull-right">
+                                <a style="margin-top:-8px" data-original-title="资金调节" class="btn btn-info" title="" data-toggle="tooltip" href="{:U('Admin/User/account_edit',array('id'=>$user_id))}"><i class="fa fa-pencil"></i></a>
+                                <a style="margin-top:-8px" href="javascript:history.go(-1)" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="返回管理员列表"><i class="fa fa-reply"></i></a>
+                                <!-- <a href="javascript:;" class="btn btn-default" data-url="http://www.gemmap.cn/Doc/Index/article/id/1001/developer/user.html" onclick="get_help(this)"><i class="fa fa-question-circle"></i> 帮助</a> -->
+                            </div>
+                        </header>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                    <tr>
+
+                                        <th class="bg-color">变动时间</th>
+                                        <th class="bg-color">描述</th>
+                                        <th class="bg-color">用户资金</th>
+                                        <th class="bg-color">冻结资金</th>
+                                        <th class="bg-color">用户积分</th>
+
+
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <volist name="lists" id="list">
+                                        <tr>
+                                            <td class="text-left">{$list.change_time|date="Y-m-d H:i",###}</td>
+
+                                            <td class="text-left">{$list.desc}</td>
+                                            <td class="text-left">
+                                                <if condition="$list[user_money] gt 0">+</if>
+                                                {$list.user_money}
+                                            </td>
+                                            <td class="text-left">
+                                                <if condition="$list[frozen_money] gt 0">+</if>
+                                                {$list.frozen_money}
+                                            </td>
+                                            <td class="text-left">
+                                                <if condition="$list[pay_points] gt 0">+</if>
+                                                {$list.pay_points}
+                                            </td>
+                                        </tr>
+                                    </volist>
+                                    </tbody>
+                                </table>
+                                <div class="pull-right">
+                                    {$page}
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!--body wrapper end-->
+    </div>
+    <!-- main content end-->
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="{$Think.const.JS}/jquery-1.10.2.min.js"></script>
+<script src="{$Think.const.JS}/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="{$Think.const.JS}/jquery-migrate-1.2.1.min.js"></script>
+<script src="{$Think.const.JS}/bootstrap.min.js"></script>
+<script src="{$Think.const.JS}/modernizr.min.js"></script>
+<script src="{$Think.const.JS}/jquery.nicescroll.js"></script>
+<script>
+    $(document).ready(function(){
+        ajax_get_table('search-form2',1);
+
+    });
+
+
+    // ajax 抓取页面
+    function ajax_get_table(tab,page){
+        cur_page = page; //当前页面 保存为全局变量
+        $.ajax({
+            type : "POST",
+            url:"/index.php/Admin/user/ajaxindex/p/"+page,//+tab,
+            data : $('#'+tab).serialize(),// 你的formid
+            success: function(data){
+                $("#ajax_return").html('');
+                $("#ajax_return").append(data);
+            }
+        });
+    }
+
+</script>
+
+<!--common scripts for all pages-->
+<script src="{$Think.const.JS}/scripts.js"></script>
+</body>
+</html>

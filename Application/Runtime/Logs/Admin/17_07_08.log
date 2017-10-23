@@ -1,0 +1,1795 @@
+[ 2017-07-08T10:41:21+08:00 ] 120.197.53.211 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000407s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000171s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000219s ]
+
+[ 2017-07-08T10:41:21+08:00 ] 120.197.53.211 /index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000386s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000156s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000201s ]
+NOTIC: [8] Undefined index: action /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 48 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000097s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000160s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+NOTIC: [8] Undefined index: ad_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/52273aaaf1d17bbbe82a83b662c7ff40.php 第 64 行.
+NOTIC: [8] Undefined variable: friend_link /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/52273aaaf1d17bbbe82a83b662c7ff40.php 第 188 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009872s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009917s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000326s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000402s ]
+
+[ 2017-07-08T10:41:22+08:00 ] 120.197.53.211 /index.php?m=Admin&c=Admin&a=login&t=0.1870160724888834
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000187s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000252s ]
+NOTIC: [8] Undefined index: action /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 48 行.
+NOTIC: [8] Undefined variable: role /var/www/html/paoding_gemmap/Application/Admin/Controller/AdminController.class.php 第 846 行.
+NOTIC: [2] array_unique() expects parameter 1 to be array, null given /var/www/html/paoding_gemmap/Application/Admin/Controller/AdminController.class.php 第 846 行.
+NOTIC: [2] implode(): Invalid arguments passed /var/www/html/paoding_gemmap/Application/Admin/Controller/AdminController.class.php 第 847 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 158 行.
+
+[ 2017-07-08T10:41:22+08:00 ] 120.197.53.211 /index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000156s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000202s ]
+NOTIC: [8] Undefined index: action /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 48 行.
+NOTIC: [8] Undefined variable: ee /var/www/html/paoding_gemmap/Application/Admin/Controller/IndexController.class.php 第 213 行.
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/html/paoding_gemmap/Application/Admin/Controller/IndexController.class.php 第 213 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000133s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000185s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009877s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009916s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000332s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000403s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000457s ]
+
+[ 2017-07-08T10:41:23+08:00 ] 120.197.53.211 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001492s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000221s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000269s ]
+NOTIC: [8] Undefined index: action /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 48 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000115s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000167s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009653s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009695s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000352s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000412s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000454s ]
+
+[ 2017-07-08T11:09:22+08:00 ] 120.197.53.211 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000169s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000216s ]
+
+[ 2017-07-08T11:09:22+08:00 ] 120.197.53.211 /index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000167s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000214s ]
+NOTIC: [8] Undefined index: action /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 48 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000161s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000245s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+NOTIC: [8] Undefined index: ad_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/52273aaaf1d17bbbe82a83b662c7ff40.php 第 64 行.
+NOTIC: [8] Undefined variable: friend_link /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/52273aaaf1d17bbbe82a83b662c7ff40.php 第 188 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009560s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009601s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000299s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000427s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000481s ]
+
+[ 2017-07-08T11:09:23+08:00 ] 120.197.53.211 /index.php?m=Admin&c=Admin&a=login&t=0.4909353055961416
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000184s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000233s ]
+NOTIC: [8] Undefined index: action /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 48 行.
+
+[ 2017-07-08T11:09:47+08:00 ] 120.197.53.211 /index.php?m=Admin&c=Admin&a=login&t=0.6617145766356245
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000370s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000184s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000234s ]
+NOTIC: [8] Undefined index: action /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 48 行.
+
+[ 2017-07-08T11:09:47+08:00 ] 120.197.53.211 /index.php?m=Admin&c=Admin&a=login&t=0.2937759011266845
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000237s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000280s ]
+NOTIC: [8] Undefined index: action /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 48 行.
+
+[ 2017-07-08T11:09:51+08:00 ] 120.197.53.211 /index.php?m=Admin&c=Admin&a=login&t=0.7238152164537424
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000172s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000214s ]
+NOTIC: [8] Undefined index: action /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 48 行.
+NOTIC: [8] Undefined variable: role /var/www/html/paoding_gemmap/Application/Admin/Controller/AdminController.class.php 第 846 行.
+NOTIC: [2] array_unique() expects parameter 1 to be array, null given /var/www/html/paoding_gemmap/Application/Admin/Controller/AdminController.class.php 第 846 行.
+NOTIC: [2] implode(): Invalid arguments passed /var/www/html/paoding_gemmap/Application/Admin/Controller/AdminController.class.php 第 847 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 158 行.
+
+[ 2017-07-08T11:09:51+08:00 ] 120.197.53.211 /index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000165s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000212s ]
+NOTIC: [8] Undefined index: action /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 48 行.
+NOTIC: [8] Undefined variable: ee /var/www/html/paoding_gemmap/Application/Admin/Controller/IndexController.class.php 第 213 行.
+NOTIC: [2] Invalid argument supplied for foreach() /var/www/html/paoding_gemmap/Application/Admin/Controller/IndexController.class.php 第 213 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000102s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000151s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000119s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009446s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009527s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000384s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000557s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000367s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000423s ]
+
+[ 2017-07-08T11:09:53+08:00 ] 120.197.53.211 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000365s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001232s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001280s ]
+NOTIC: [8] Undefined index: action /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 48 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000156s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000213s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000098s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009217s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009256s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000288s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000372s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000433s ]
+
+[ 2017-07-08T11:09:59+08:00 ] 120.197.53.211 /index.php/Admin/Article/article/action/page_list/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000174s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000221s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 38 行.
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 43 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 69 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 96 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined variable: categoryName /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 143 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000134s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000179s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000319s ]
+NOTIC: [8] Undefined variable: tpshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 70 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 71 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 83 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Undefined index: gotPage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 271 行.
+NOTIC: [8] Undefined variable: data /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 319 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033730s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000146s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000475s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000684s ]
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 731 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000467s ]
+
+[ 2017-07-08T11:10:07+08:00 ] 120.197.53.211 /index.php/Admin/Article/article/action/page_list/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000160s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 38 行.
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 43 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 69 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined variable: categoryName /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 143 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000150s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000199s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000216s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000259s ]
+NOTIC: [8] Undefined variable: tpshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 70 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 71 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Undefined index: gotPage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 271 行.
+NOTIC: [8] Undefined variable: data /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 319 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022317s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022357s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000117s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000520s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000699s ]
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 731 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000420s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000461s ]
+
+[ 2017-07-08T11:10:09+08:00 ] 120.197.53.211 /index.php/Admin/Article/category/action/list/channel/js/type/2?cat_name=&page_num=8&page_now=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000173s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000216s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 889 行.
+
+[ 2017-07-08T11:10:11+08:00 ] 120.197.53.211 /index.php/Admin/Article/article/action/page_list/channel/js/type/1/category_id/1/keyword/%E5%BE%97%E5%88%B0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000182s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000251s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 38 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 96 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000131s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000198s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+NOTIC: [8] Undefined variable: tpshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 70 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 71 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 83 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Undefined index: gotPage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 271 行.
+NOTIC: [8] Undefined variable: data /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 319 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023336s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023402s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000126s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000526s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000711s ]
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 731 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000415s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000458s ]
+
+[ 2017-07-08T11:10:15+08:00 ] 120.197.53.211 /index.php/Admin/Article/article/action/page_list/channel/js/type/1/page_now/2/page_num/25/category_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000379s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000431s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000201s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000274s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 38 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 69 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 96 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000147s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000204s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+NOTIC: [8] Undefined variable: tpshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 70 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 71 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 83 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Undefined index: gotPage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 271 行.
+NOTIC: [8] Undefined variable: data /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 319 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022917s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022989s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000705s ]
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 731 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000403s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000445s ]
+
+[ 2017-07-08T11:10:24+08:00 ] 120.197.53.211 /index.php/Admin/Article/article/action/page_list/channel/js/type/1/page_now/2/page_num/25/category_id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000204s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000251s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 38 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 69 行.
+NOTIC: [8] Undefined variable: pageListDataTypeShow /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 147 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000117s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000161s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+NOTIC: [8] Undefined variable: tpshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 70 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 71 行.
+NOTIC: [8] Undefined index: gotPage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 271 行.
+NOTIC: [8] Undefined variable: data /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 319 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021271s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021307s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000276s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000456s ]
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 731 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000435s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000479s ]
+
+[ 2017-07-08T11:10:27+08:00 ] 120.197.53.211 /index.php/Admin/Article/category/action/list/channel/js/type/2?cat_name=&page_num=8&page_now=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000162s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000204s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 889 行.
+
+[ 2017-07-08T11:10:30+08:00 ] 120.197.53.211 /index.php/Admin/Article/article/action/page_list/channel/js/type/1/category_id/1/keyword/DELL
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000407s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000164s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000211s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 38 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 96 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 8 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+NOTIC: [8] Undefined offset: 10 /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 128 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000200s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000257s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+NOTIC: [8] Undefined variable: tpshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 70 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 71 行.
+NOTIC: [8] Undefined index: keyword /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 83 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Array to string conversion /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 109 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 117 行.
+NOTIC: [8] Undefined index: gotPage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 271 行.
+NOTIC: [8] Undefined variable: data /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/f68c5a1a42542d9b876352dd3eb66abd.php 第 319 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022595s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022638s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000114s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000521s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000695s ]
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/ArticleController.class.php 第 731 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000466s ]
+
+[ 2017-07-08T11:16:40+08:00 ] 120.197.53.211 /index.php/Admin/Admin/log/action/page_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000213s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000260s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/AdminController.class.php 第 604 行.
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/AdminController.class.php 第 605 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000199s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000266s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+NOTIC: [8] Undefined index: keyword /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/ed33550872ef39344dab470033817b10.php 第 64 行.
+NOTIC: [8] Undefined index: start1 /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/ed33550872ef39344dab470033817b10.php 第 70 行.
+NOTIC: [8] Undefined index: start2 /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/ed33550872ef39344dab470033817b10.php 第 73 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013357s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013396s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000159s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000335s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000554s ]
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/AdminController.class.php 第 644 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000405s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000458s ]
+
+[ 2017-07-08T11:16:51+08:00 ] 120.197.53.211 /index.php/Admin/Admin/log/action/page_list/page_now/2/page_num/25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000190s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000242s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/AdminController.class.php 第 604 行.
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/AdminController.class.php 第 605 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000110s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000165s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+NOTIC: [8] Undefined index: keyword /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/ed33550872ef39344dab470033817b10.php 第 64 行.
+NOTIC: [8] Undefined index: start1 /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/ed33550872ef39344dab470033817b10.php 第 70 行.
+NOTIC: [8] Undefined index: start2 /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/ed33550872ef39344dab470033817b10.php 第 73 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012622s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012664s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000318s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000535s ]
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/AdminController.class.php 第 644 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000390s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000429s ]
+
+[ 2017-07-08T11:23:13+08:00 ] 120.197.53.211 /index.php/Admin/System/setting/action/page_edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000182s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000244s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/SystemController.class.php 第 33 行.
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/SystemController.class.php 第 34 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000098s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000145s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000163s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+NOTIC: [8] Undefined index: 
+        file_size
+         /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/95bbf589575f436308e204ba042d5e21.php 第 686 行.
+NOTIC: [8] Undefined index: 
+        pattern
+         /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/95bbf589575f436308e204ba042d5e21.php 第 692 行.
+NOTIC: [8] Undefined index: 
+        sms_time_out
+         /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/95bbf589575f436308e204ba042d5e21.php 第 702 行.
+NOTIC: [8] Undefined index: 
+        auto_confirm_date
+         /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/95bbf589575f436308e204ba042d5e21.php 第 710 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013663s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013716s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000410s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000629s ]
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/SystemController.class.php 第 92 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000396s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000444s ]
+
+[ 2017-07-08T11:23:13+08:00 ] 120.197.53.211 /index.php/Admin/System/introduction/action/page_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000455s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000172s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000219s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/SystemController.class.php 第 649 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000152s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000207s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+NOTIC: [8] Undefined variable: tpshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/6ebb23b48cb11df8a6c9d6de0fad5eda.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/6ebb23b48cb11df8a6c9d6de0fad5eda.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/6ebb23b48cb11df8a6c9d6de0fad5eda.php 第 10 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022243s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022284s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000246s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000408s ]
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/SystemController.class.php 第 730 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000387s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000424s ]
+
+[ 2017-07-08T11:23:14+08:00 ] 120.197.53.211 /index.php/Admin/System/qa/action/page_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000165s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000211s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/SystemController.class.php 第 562 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000098s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000154s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+NOTIC: [8] Undefined variable: tpshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/98da1e333adfb5ccd7d51d4db17921ea.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/98da1e333adfb5ccd7d51d4db17921ea.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/98da1e333adfb5ccd7d51d4db17921ea.php 第 10 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012443s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000415s ]
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/SystemController.class.php 第 643 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000398s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000454s ]
+
+[ 2017-07-08T11:23:14+08:00 ] 120.197.53.211 /index.php/Admin/System/terms/action/page_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000162s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000208s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000141s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000217s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006092s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006151s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000460s ]
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/SystemController.class.php 第 124 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000341s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000384s ]
+
+[ 2017-07-08T11:23:14+08:00 ] 120.197.53.211 /index.php/Admin/System/service/action/page_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000177s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000223s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000097s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000146s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005874s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005917s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000103s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000245s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000402s ]
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/SystemController.class.php 第 185 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000399s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000441s ]
+
+[ 2017-07-08T11:23:14+08:00 ] 120.197.53.211 /index.php/Admin/System/about/action/page_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000172s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000219s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000102s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000152s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006217s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006272s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000330s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000499s ]
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/SystemController.class.php 第 155 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000352s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000391s ]
+
+[ 2017-07-08T11:23:18+08:00 ] 120.197.53.211 /index.php/Admin/User/user/action/page_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000357s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000168s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000217s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/UserController.class.php 第 32 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Admin/Controller/UserController.class.php 第 41 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Admin/Controller/UserController.class.php 第 46 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000122s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000171s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+NOTIC: [8] Undefined index: keyword /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 120 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 185 行.
+NOTIC: [8] Use of undefined constant is_lock - assumed 'is_lock' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 187 行.
+NOTIC: [8] Undefined variable: mod_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/efa67221bbcab2db2e4125c81f354bba.php 第 188 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017489s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017528s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000120s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000915s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001097s ]
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/UserController.class.php 第 325 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000560s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000631s ]
+
+[ 2017-07-08T11:23:18+08:00 ] 120.197.53.211 /index.php/Admin/User/level/action/page_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000177s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000231s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/UserController.class.php 第 334 行.
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/UserController.class.php 第 335 行.
+NOTIC: [8] Undefined variable: list /var/www/html/paoding_gemmap/Application/Admin/Controller/UserController.class.php 第 355 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000140s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000187s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013207s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013251s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000251s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000414s ]
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/UserController.class.php 第 404 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000375s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000414s ]
+
+[ 2017-07-08T11:23:19+08:00 ] 120.197.53.211 /index.php/Admin/User/message/action/page_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000160s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000206s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/UserController.class.php 第 733 行.
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/UserController.class.php 第 734 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000090s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000136s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026823s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026865s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000255s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000463s ]
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/UserController.class.php 第 783 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000343s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000381s ]
+
+[ 2017-07-08T11:23:19+08:00 ] 120.197.53.211 /index.php/Admin/User/feedback/action/page_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000382s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000205s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000276s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/UserController.class.php 第 600 行.
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/UserController.class.php 第 601 行.
+NOTIC: [8] Undefined index: msg_status /var/www/html/paoding_gemmap/Application/Admin/Controller/UserController.class.php 第 650 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000098s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000141s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021938s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021980s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000311s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000478s ]
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/UserController.class.php 第 724 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000348s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000386s ]
+
+[ 2017-07-08T11:23:20+08:00 ] 120.197.53.211 /index.php/Admin/Ad/adPosition/action/page_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000361s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000160s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000205s ]
+NOTIC: [8] Undefined index: page_num /var/www/html/paoding_gemmap/Application/Admin/Logic/AdPositionLogic.class.php 第 42 行.
+NOTIC: [8] Undefined index: page_now /var/www/html/paoding_gemmap/Application/Admin/Logic/AdPositionLogic.class.php 第 42 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000091s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000143s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017490s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017530s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000244s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000376s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000415s ]
+
+[ 2017-07-08T11:23:21+08:00 ] 120.197.53.211 /index.php/Admin/Ad/ad/action/page_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000247s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000319s ]
+NOTIC: [8] Undefined index: id /var/www/html/paoding_gemmap/Application/Admin/Controller/AdController.class.php 第 31 行.
+NOTIC: [8] Undefined index: pid /var/www/html/paoding_gemmap/Application/Admin/Logic/AdLogic.class.php 第 36 行.
+NOTIC: [8] Undefined index: keywords /var/www/html/paoding_gemmap/Application/Admin/Logic/AdLogic.class.php 第 40 行.
+NOTIC: [8] Undefined index: page_num /var/www/html/paoding_gemmap/Application/Admin/Logic/AdLogic.class.php 第 47 行.
+NOTIC: [8] Undefined index: page_now /var/www/html/paoding_gemmap/Application/Admin/Logic/AdLogic.class.php 第 47 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000094s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000141s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000231s ]
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/b89dfc4fc4feee34c08439a039786e58.php 第 128 行.
+NOTIC: [8] Use of undefined constant position_name - assumed 'position_name' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/b89dfc4fc4feee34c08439a039786e58.php 第 128 行.
+NOTIC: [8] Use of undefined constant target - assumed 'target' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/b89dfc4fc4feee34c08439a039786e58.php 第 133 行.
+NOTIC: [8] Use of undefined constant enabled - assumed 'enabled' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/b89dfc4fc4feee34c08439a039786e58.php 第 141 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/b89dfc4fc4feee34c08439a039786e58.php 第 128 行.
+NOTIC: [8] Use of undefined constant position_name - assumed 'position_name' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/b89dfc4fc4feee34c08439a039786e58.php 第 128 行.
+NOTIC: [8] Use of undefined constant target - assumed 'target' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/b89dfc4fc4feee34c08439a039786e58.php 第 133 行.
+NOTIC: [8] Use of undefined constant enabled - assumed 'enabled' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/b89dfc4fc4feee34c08439a039786e58.php 第 141 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/b89dfc4fc4feee34c08439a039786e58.php 第 128 行.
+NOTIC: [8] Use of undefined constant position_name - assumed 'position_name' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/b89dfc4fc4feee34c08439a039786e58.php 第 128 行.
+NOTIC: [8] Use of undefined constant target - assumed 'target' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/b89dfc4fc4feee34c08439a039786e58.php 第 133 行.
+NOTIC: [8] Use of undefined constant enabled - assumed 'enabled' /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/b89dfc4fc4feee34c08439a039786e58.php 第 141 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022129s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022209s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+NOTIC: [8] Undefined variable: returnArr /var/www/html/paoding_gemmap/Application/Admin/Controller/AdController.class.php 第 118 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/View.class.php:95) /var/www/html/paoding_gemmap/Application/Common/Common/common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000397s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000447s ]
+
+[ 2017-07-08T11:46:03+08:00 ] 42.236.91.84 /index.php?m=admin&c=index&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007823s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007874s ]
+ERR: 非法操作:login
+
+[ 2017-07-08T11:46:03+08:00 ] 42.236.91.84 /admin/login.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+ERR: 无法加载控制器:Login
+
+[ 2017-07-08T11:46:04+08:00 ] 42.236.91.84 /admin/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007966s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008032s ]
+
+[ 2017-07-08T11:46:04+08:00 ] 42.236.91.84 /index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007789s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007845s ]
+NOTIC: [8] Undefined index: action /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 48 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000126s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000172s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+NOTIC: [8] Undefined index: ad_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/52273aaaf1d17bbbe82a83b662c7ff40.php 第 64 行.
+NOTIC: [8] Undefined variable: friend_link /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/52273aaaf1d17bbbe82a83b662c7ff40.php 第 188 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009235s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009271s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000285s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000400s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000488s ]
+
+[ 2017-07-08T11:46:04+08:00 ] 42.236.91.84 /admin/public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+ERR: 无法加载控制器:Public
+
+[ 2017-07-08T11:46:04+08:00 ] 42.236.91.84 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000419s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.023593s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.023666s ]
+
+[ 2017-07-08T11:46:04+08:00 ] 42.236.91.84 /index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007868s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007933s ]
+NOTIC: [8] Undefined index: action /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 48 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000114s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000166s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+NOTIC: [8] Undefined index: ad_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/52273aaaf1d17bbbe82a83b662c7ff40.php 第 64 行.
+NOTIC: [8] Undefined variable: friend_link /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/52273aaaf1d17bbbe82a83b662c7ff40.php 第 188 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009617s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009657s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000284s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000473s ]
+
+[ 2017-07-08T11:46:04+08:00 ] 42.236.91.84 /admin/admin_login.php?act=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+ERR: 无法加载控制器:Admin_login
+
+[ 2017-07-08T11:46:04+08:00 ] 42.236.91.84 /admin/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.009065s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.009182s ]
+
+[ 2017-07-08T11:46:04+08:00 ] 42.236.91.84 /index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000408s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.008643s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008717s ]
+NOTIC: [8] Undefined index: action /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 48 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000104s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000157s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+NOTIC: [8] Undefined index: ad_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/52273aaaf1d17bbbe82a83b662c7ff40.php 第 64 行.
+NOTIC: [8] Undefined variable: friend_link /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/52273aaaf1d17bbbe82a83b662c7ff40.php 第 188 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010088s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010171s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000129s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000475s ]
+
+[ 2017-07-08T13:35:24+08:00 ] 120.197.53.211 /index.php/Admin/Ad/ad/action/page_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000407s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.008428s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008493s ]
+
+[ 2017-07-08T13:35:24+08:00 ] 120.197.53.211 /index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000470s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000544s ]
+NOTIC: [8] Undefined index: action /var/www/html/paoding_gemmap/Application/Admin/Controller/BaseController.class.php 第 48 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000099s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000146s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+NOTIC: [8] Undefined index: ad_id /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/52273aaaf1d17bbbe82a83b662c7ff40.php 第 64 行.
+NOTIC: [8] Undefined variable: friend_link /var/www/html/paoding_gemmap/Application/Runtime/Cache/Admin/52273aaaf1d17bbbe82a83b662c7ff40.php 第 188 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009181s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009217s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000277s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000356s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000397s ]
+

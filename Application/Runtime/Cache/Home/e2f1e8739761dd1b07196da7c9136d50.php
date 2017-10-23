@@ -1,0 +1,325 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>5U</title>
+<meta name="keywords" content="京墨5U">
+<meta name="description" content="京墨5U">
+<link type="text/css" href="/Public/home/css/css.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="/Public/home/css/style.css" />
+
+<script type="text/javascript" src="/Public/home/js/jquery-1.8.2.min.js"></script>
+
+
+<script type="text/javascript" src="/Public/home/js/register.js"></script>
+
+
+
+<style type="text/css">
+input{ outline: none; border:none; }
+.container{padding-top: 120px;;}
+.register{ width: 400px; margin: 0 auto; padding-top:40px; position: relative; }
+/*包裹表单项和对应的提示信息的容器的样式设置*/
+.register-box{ width:100%; height: 52px; padding-bottom: 30px; }
+/*表单项样式设置*/
+.register-box .box{ width:100%; height:100%; line-height: 52px; padding-left: 10px; border: 1px solid #ccc; position: relative; font-size: 14px;}
+.register-box .box.error{ border:1px solid red; }
+.register-box .box input{ width:200px; font-size:16px; padding-left: 20px; }
+/*验证通过*/
+.register-box .box.right i{ width:20px; height: 20px; background: url(/Public/home/images/right.png) no-repeat center center; position: absolute; top:50%; margin-top: -10px; right: 10px; }
+/*提示信息样式设置*/
+.register-box .tip { width:100%; line-height: 30px; font-size: 12px; }
+.register-box .tip i{ width: 20px; height: 20px; display: inline-block; vertical-align: middle; }
+.register-box .tip span{ color: #CCCCCC; }
+/*提示信息隐藏样式*/
+.register-box .tip.hide{ display: none; }
+/*提示信息默认样式*/
+.register-box .tip.default i { background: url(/Public/home/images/default.png) no-repeat center center; }
+.register-box .tip.default span{ color: #ccc; }
+/*提示信息错误样式*/
+.register-box .tip.error i { background: url(/Public/home/images/error.png) no-repeat center center; }
+.register-box .tip.error span{ color: red; }
+/*提示信息密码弱*/
+.register-box .tip.ruo i { background: url(/Public/home/images/ruo.png) no-repeat center center; }
+/*提示信息密码中*/
+.register-box .tip.zhong i { background: url(/Public/home/images/zhong.png) no-repeat center center; }
+/*提示信息密码中*/
+.register-box .tip.qiang i { background: url(/Public/home/images/qiang.png) no-repeat center center; }
+/*京东用户注册协议*/
+.register-box.xieyi{ width:100%; height: 20px; padding-bottom: 30px; /*  background-color: #ccc; */}
+.register-box.xieyi .box{ line-height: normal; padding: 0; border: none; }
+.register-box.xieyi .box.error{ line-height: normal; padding: 0; border: 1px solid red; }
+.register-box.xieyi .box input{ width: auto; }
+/*注册*/
+.register button{ width: 100%; height: 50px; color: #f0f0f0; background-color: #21a2dd; line-height: 50px;font-size: 16px;border:none;padding:0;}
+.register button:hover{ background-color: #0c83fa;color:#fff;}
+
+.code{width: 80px;height:30px;border-radius:50px;border: 1px solid #238efa;color:#fff;position: absolute;right:5px;top:0;;bottom:0;background-color:#238efa;margin:auto;line-height: 30px;text-align: center;}
+.code1{background-color: #E6E6E6;color:#818080;border:1px solid #CCCCCC;}
+
+
+.infoBox{ width: 700px; height:500px; position: fixed; left: 0; bottom:0; top: 0; right: 0; background: #bdbdbd; margin: auto; z-index: 9999; display:none;}
+.back_2{position: fixed;left:0;top:0;right:0;bottom:0;margin:auto;background:#000;opacity:0.6;z-index: 99;display:none;}
+.infoBox h2{text-align: center; padding:5px;}
+textarea{padding:5px;line-height:25px;font-size: 16px; padding-bottom: 10px;;}
+</style>
+</head>
+<body>
+<!-- nav -->
+<div class="nav_content" style="top:0;">
+    <div class="nav_box">
+        <nav>
+            <div class="logo">
+                <a class="" href="/index.php/Home/Index/index"><i></i>京墨5U<span>创建应用 不在烦恼</span></a>
+            </div>
+            <ul>
+                <li><a href="/index.php/Home/Index/index">首页</a></li>
+                <li><a href="javascript:;">产品</a></li>
+                <li><a href="/index.php/Home/Trial/trialshow">试用</a></li>
+                <li><a href="/index.php/Home/Consulting/consultingshow">咨询</a></li>
+                <li><a href="/index.php/Home/Case/caseshow">案例</a></li>
+                <li><a href="/index.php/Home/Help/helpshow">帮助</a></li>
+            </ul>
+            <div class="login">
+                <a href="/index.php/Home/Index/login">登录</a>
+                <a href="/index.php/Home/Index/register">注册</a>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- nav_end -->
+
+ <!--版心-->
+    <div class="container">
+        <!--京东注册模块-->
+        <div class="register">
+            <!--用户名-->
+            <div class="register-box">
+                <!--表单项-->
+                <div class="box default">
+                    <label for="userName">登录账号</label>
+                    <input type="text" id="userName" placeholder="设置登录账号" />
+                    <i></i>
+                </div>
+                <!--提示信息-->
+                <div class="tip">
+                    <i></i>
+                    <span></span>
+                </div>
+            </div>
+            <!--设置密码-->
+            <div class="register-box">
+                <!--表单项-->
+                <div class="box default">
+                    <label for="pwd">设置密码</label>
+                    <input type="password" id="pwd" placeholder="设置密码" />
+                    <i></i>
+                </div>
+                <!--提示信息-->
+                <div class="tip">
+                    <i></i>
+                    <span></span>
+                </div>
+            </div>
+            <!--确认密码-->
+            <div class="register-box">
+                <!--表单项-->
+                <div class="box default">
+                    <label for="pwd2">确认密码</label>
+                    <input type="password" id="pwd2" placeholder="请再次输入密码" />
+                    <i></i>
+                </div>
+                <!--提示信息-->
+                <div class="tip">
+                    <i></i>
+                    <span></span>
+                </div>
+            </div>
+            <!--设置密码-->
+       
+            <!--手机验证-->
+            <div class="register-box">
+                <!--表单项-->
+                <div class="box default">
+                    <label for="mobile">手机号码</label>
+                    <input type="text" id="mobile" placeholder="请输入手机号" />
+                    <i></i>
+                </div>
+                <!--提示信息-->
+                <div class="tip">
+                    <i></i>
+                    <span></span>
+                </div>
+            </div>
+            <!--手机验证-->
+            <div class="register-box">
+                <!--表单项-->
+                <div class="box " style="position:relative;">
+                    <label for="mobile">输 入 验 证 码</label>
+                    <input type="text" placeholder="验证码"  autocomplete="off">
+                    <span class="code">获取验证码</span>
+                </div>
+            </div>
+             <!--注册协议-->
+            <div class="register-box xieyi">
+                <!--表单项-->
+                <div class="box default">
+                    <input type="checkbox" id="ck" />
+                    <span>我已阅读并同意<a href="##" class="btn-de">《京墨5U用户注册协议》</a></span>
+                </div>
+                <!--提示信息-->
+                <div class="tip">
+                    <i></i>
+                    <span></span>
+                </div>
+            </div>
+            <!--注册-->
+            <button id="btn">注册</button>
+        </div>
+    </div>
+    <section class="secondBanner">
+        <div class="back_2"></div>
+        <div class="infoBox">
+                <h2>用户服务协议</h2>
+            <textarea name="" id=""  style="width: 700px; height: 500px; " >
+                    协议须知：
+请务必认真阅读和理解本《用户服务协议》（以下简称《协议》）中规定的所有权利和限制。除非您接受本《协议》条款，否则您无权登录或使用本协议所涉及的相关服务。您一旦登录、使用或以任何方式使用本《协议》所涉及的相关服务的行为将视为对本《协议》的接受，即表示您同意接受本《协议》各项条款的约束。如果您不同意本《协议》中的条款，请不要登录或使用本《协议》相关服务。本《协议》是用户与广州京墨医疗科技有限公司（以下简称《京墨科技》）之间的法律协议。本平台的通知、公告、声明或其他类似内容是本协议的一部分。
+1. 服务内容
+1.1京墨科技是互联网技术与软件服务提供商，主要内容包括软件定制开发及服务等功能服务。
+1.2 您一旦登录成功成为用户，您需要对自己在帐户中的所有活动和事件负全责。如果由于您的过失导致您的帐号和密码脱离您的控制，则由此导致的针对您、或任何第三方造成的损害，您将承担全部责任。
+1.3 用户理解并接受，京墨科技仅提供相关的网络服务和产品销售服务，除此之外与相关网络服务有关的设备（如个人电脑、手机、及其他与接入互联网或移动互联网有关的装置）及所需的费用（如为接入互联网而支付的电话费及上网费、为使用移动网而支付的手机费）均应由用户自行负担。
+2. 用户使用规则
+2.1 用户在申请使用京墨科技网络服务时，必须向京墨科技提供准确的个人资料，如个人资料有任何变动，必须及时更新。因用户提供个人资料不准确、不真实而引发的一切后果由用户承担。
+2.2 用户应妥善保存自己的帐号、密码，避免以任何脱离用户控制的形式交由他人使用。如用户发现其帐号遭他人非法使用，应立即通知京墨科技。因黑客行为或用户的保管疏忽导致帐号、密码遭他人非法使用，京墨科技不承担任何责任。
+2.3 用户应当为自身帐户下的一切行为负责，因用户行为而导致的用户自身或其他任何第三方的任何损失或损害，京墨科技不承担责任。
+2.4 用户理解并接受京墨科技提供的服务中可能包括产品介绍、广告等，用户同意在使用过程中显示京墨科技和第三方供应商、合作伙伴提供的广告。
+2.5 用户在使用京墨科技网络服务过程中，必须遵循以下原则：
+2.5.1 遵守中国有关的法律和法规；
+2.5.2 遵守所有与网络服务有关的网络协议、规定和程序；
+2.5.3 不得为任何非法目的而使用网络服务系统；
+2.5.4 不得利用京墨科技网络服务系统进行任何可能对互联网或移动网正常运转造成不利影响的行为；
+2.5.5 不得利用京墨科技提供的网络服务上传、展示或传播任何虚假的、骚扰性的、中伤他人的、辱骂性的、恐吓性的、庸俗淫秽的或其他任何非法的信息资料；
+2.5.6 不得侵犯京墨科技和其他任何第三方的专利权、著作权、商标权、名誉权或其他任何合法权益；
+2.5.7 不得利用京墨科技网络服务系统进行任何不利于京墨科技的行为；
+2.5.8 如发现任何非法使用用户帐号或帐号出现安全漏洞的情况，应立即告知京墨科技。
+2.6用户对其自行发表、上传或传送的内容负全部责任，所有用户不得在本平台任何页面发布、转载、传送含有下列内容之一的信息，否则京墨科技有权自行处理并不通知用户：
+(1)违反宪法确定的基本原则的； 
+(2)危害国家安全，泄漏国家机密，颠覆国家政权，破坏国家统一的； 
+(3)损害国家荣誉和利益的； 
+(4)煽动民族仇恨、民族歧视，破坏民族团结的； 
+(5)破坏国家宗教政策，宣扬邪教和封建迷信的； 
+(6)散布谣言，扰乱社会秩序，破坏社会稳定的；
+(7)散布淫秽、色情、赌博、暴力、恐怖或者教唆犯罪的； 
+(8)侮辱或者诽谤他人，侵害他人合法权益的； 
+(9)煽动非法集会、结社、游行、示威、聚众扰乱社会秩序的； 
+(10)以非法民间组织名义活动的；
+(11)含有法律、行政法规禁止的其他内容的。
+2.7 用户承诺对其发表或者上传于本平台的所有信息(即属于《中华人民共和国著作权法》规定的作品，包括但不限于文字、图片、音乐、电影、表演和录音录像制品和电脑程序等)均享有完整的知识产权，或者已经得到相关权利人的合法授权；如用户违反本条规定造成本平台被第三人索赔的，用户应全额补偿本平台一切费用(包括但不限于各种赔偿费、诉讼代理费及为此支出的其它合理费用)。
+2.8当第三方认为用户发表或者上传于本平台的信息侵犯其权利，并根据《信息网络传播权保护条例》或者相关法律规定向本平台发送权利通知书时，用户同意京墨科技可以自行判断决定删除涉嫌侵权信息，除非用户提交书面证据材料排除侵权的可能性，京墨科技将不会自动恢复上述删除的信息。
+2.9 如用户在使用网络服务时违反任何上述规定，京墨科技或其授权的人有权要求用户改正或直接采取一切必要的措施（包括但不限于更改或删除用户收藏的内容等、暂停或终止用户使用网络服务的权利）以减轻用户不当行为造成的影响。
+3. 服务变更、中断或终止
+3.1 鉴于网络服务的特殊性，用户同意京墨科技有权根据业务发展情况随时变更、中断或终止部分或全部的网络服务而无需通知用户，也无需对任何用户或任何第三方承担任何责任；
+3.2 用户理解，京墨科技需要定期或不定期地对提供网络服务的平台（如互联网网站、移动网络等）或相关的设备进行检修或者维护，如因此类情况而造成网络服务在合理时间内的中断，京墨科技无需为此承担任何责任，但京墨科技会尽可能事先进行通告。
+3.3 如发生下列任何一种情形，京墨科技有权随时中断或终止向用户提供本《协议》项下的网络服务（包括收费网络服务）而无需对用户或任何第三方承担任何责任：
+3.3.1 用户提供的个人资料不真实；
+3.3.2 用户违反本《协议》中规定的使用规则。
+4. 知识产权声明
+4.1 本平台的文字、图片、音频、视频等版权均归京墨科技享有或与作者共同享有，未经本平台许可，不得任意转载。 
+4.2 本平台特有的标识、版面设计、编排方式等版权均属京墨科技享有，未经本平台许可，不得任意复制或转载。 
+4.3 使用本平台的任何内容均应注明“来源于篮子网”及署上作者姓名，按法律规定需要支付稿酬的，应当通知本平台及作者及支付稿酬，并独立承担一切法律责任。
+4.4 本平台享有所有作品用于其它用途的优先权，包括但不限于网站、电子杂志、平面出版等，但在使用前会通知作者，并按同行业的标准支付稿酬。
+4.5 恶意转载本平台内容的，京墨科技保留将其诉诸法律的权利。
+5. 隐私保护
+5.1 保护用户隐私是京墨科技的一项基本政策，京墨科技保证不对外公开或向第三方提供单个用户的登录资料及用户在使用网络服务时存储在本平台的非公开内容，但下列情况除外：
+5.1.1 事先获得用户的明确授权；
+5.1.2 根据有关的法律法规要求；
+5.1.3 按照相关政府主管部门的要求；
+5.1.4 为维护社会公众的利益；
+5.1.5 为维护京墨科技的合法权益。
+5.2 京墨科技可能会与第三方合作向用户提供相关的网络服务，在此情况下，如该第三方同意承担与京墨科技同等的保护用户隐私的责任，则京墨科技有权将用户的登录资料等提供给该第三方。
+5.3 在不透露单个用户隐私资料的前提下，京墨科技有权对整个用户数据库进行分析并对用户数据库进行商业上的利用。
+5.4 京墨科技制定了以下四项隐私权保护原则，指导我们如何来处理产品中涉及到用户隐私权和用户信息等方面的问题：
+（1） 利用我们收集的信息为用户提供有价值的产品和服务。
+（2） 开发符合隐私权标准和隐私权惯例的产品。
+（3） 尽最大的努力保护我们掌握的信息。
+6. 责任声明
+6.1 京墨科技不担保网络服务一定能满足用户的要求，也不担保网络服务不会中断，对网络服务的及时性、安全性、准确性也都不作担保。
+6.2 京墨科技不保证为向用户提供便利而设置的外部链接的准确性和完整性，同时，对于该等外部链接指向的不由京墨科技实际控制的任何网页上的内容，京墨科技不承担任何责任。
+6.3 对于因电信系统或互联网网络故障、计算机故障或病毒、信息损坏或丢失、计算机系统等问题或其它任何不可抗力原因而产生损失，京墨科技不承担任何责任，但将尽力减少因此而给用户造成的损失和影响。
+6.4对于京墨科技向用户提供的下列产品或者服务的质量缺陷本身及其引发的任何损失，京墨科技无需承担任何责任：
+(1)京墨科技向用户免费提供的各项网络服务； 
+(2)京墨科技向用户赠送的任何产品或者服务。
+6.5除本协议另有规定外，在任何情况下，京墨科技对本协议所承担的违约赔偿责任总额不超过向用户收取的最后一笔订单的费用总额。
+6.6 京墨科技有权于任何时间暂时或永久修改或终止本服务(或其任何部分)，而无论其通知与否，京墨科技对用户和任何第三人均无需承担任何责任。
+7. 法律及争议解决
+7.1 本协议适用中华人民共和国法律。
+7.2 因本协议引起的或与本协议有关的任何争议，各方应友好协商解决；协商不成的，任何一方均可将有关争议提交至广州市仲裁委员会并按照其届时有效的仲裁规则仲裁；仲裁裁决是终局的，对各方均有约束力。
+8. 其他条款
+8.1 如果本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，或违反任何适用的法律，则该条款被视为删除，但本协议的其余条款仍应有效并且有约束力。
+8.2 京墨科技有权随时根据有关法律、法规的变化以及公司经营状况和经营策略的调整等修改本协议，而无需另行单独通知用户。用户可随时通过本平台浏览最新服务协议条款。当发生有关争议时，以最新的协议文本为准。如果不同意京墨科技对本协议相关条款所做的修改，用户有权停止使用网络服务。如果用户继续使用网络服务，则视为用户接受京墨科技对本协议相关条款所做的修改。
+8.3 京墨科技在法律允许最大范围对本协议拥有解释权与修改权。
+                                      广州京墨医疗科技有限公司
+            </textarea>
+         </div>
+    </section>
+
+
+<!-- 滚动条JS就放此处 -->
+<script type="text/javascript" src="/Public/home/js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="/Public/home/js/nicescroll.js"></script>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+jQuery.noConflict(); //将变量$的控制权让渡给prototype.js
+(function($){ //定义匿名函数并设置形参为$
+
+$(function(){ //匿名函数内部的$均为jQuery
+    var validCode=true;
+$(".code").click(function(){ //继续使用 $ 方法
+    var time=60;
+        var code=$(this);
+        if (validCode) {
+            validCode=false;
+            code.addClass("code1");
+        var t=setInterval(function () {
+            time--;
+            code.html(time+"秒");
+            if (time==0) {
+                clearInterval(t);
+            code.html("重新获取");
+                validCode=true;
+            code.removeClass("code1");
+            }
+        },1000)
+        }
+    });
+});
+
+// ------
+  $(function(){
+        $('.btn-de').click(function(event){
+            $('.infoBox').show();
+            $('.back_2').show();
+        });
+
+        $('.x').click(function(event){
+            $('.infoBox').hide();
+            $('.back_2').hide();
+        });
+         $('.back_2').click(function(event){
+            $('.infoBox').hide();
+            $('.back_2').hide();
+        });
+    })
+
+})(jQuery); //执行匿名函数且传递实参jQuery
+
+
+ 
+  
+
+
+</script>

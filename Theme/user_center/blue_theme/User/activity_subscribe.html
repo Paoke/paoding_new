@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+<title>-</title>
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/aui.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/common.css" />
+<script type="text/javascript" src="__STATIC__/user/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/api.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/aui-tab.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/layer.js"></script>
+<style type="text/css">
+.aui-pull-left{position: absolute !important;top:0;left:0;}
+.aui-pull-left .aui-iconfont{font-size: 1rem !important;}
+
+
+.content {padding-top:0.5rem;}
+ul{padding:0 0.5rem;}
+.hit{padding:0.5rem 0 0.25rem 0.75rem;font-size: 0.8rem;color:#666; }
+.num{padding-left:1rem;font-size:0.7rem;color:#aaa;padding-bottom: 0.5rem;}
+.num span{font-weight: bold;font-size: 0.7rem;color:#666;}
+ul>li{background:#fff;border-radius: 10px;padding:1rem 0.5rem;box-shadow:0 1.2px 0 rgba(0, 0, 0, 0.07);margin-bottom:0.5rem;position: relative;padding-bottom:0;}
+ul>li a {display:block;position: relative;}
+ul>li a .pic{display:block;position: absolute;left:0;top:0;width: 2.5rem;height:2.5rem;border-radius: 1000px;overflow: hidden;}
+ul>li a .pic img{width: 100%;}
+ul>li a .info{padding-left:3rem;font-size: 0.7rem;color:#6c6c6c;line-height: 1.5rem;margin-bottom: 0.5rem;;}
+ul>li a .info div{color:#666;  -webkit-line-clamp: 3; -webkit-box-orient: vertical; display: -webkit-box;overflow: hidden;line-height: 1rem;}
+ul>li a .info h3{font-size: 0.8rem;font-weight: bold;}
+ul>li a ol{overflow: hidden;border-top:1px solid #ebebeb;position: relative;padding-top:0.15rem;}
+ul>li a ol:after {content: "";position: absolute;left:0;right:0;top:0;bottom:0;margin:auto;width:1px;height:56%;background:#ebebeb;}
+ul>li a ol li{width: 50%;float: left;line-height:2rem;font-size: 0.7rem;color:#666;text-align:center;position: relative;padding-top:1rem;}
+ul>li a ol li:after{content: "";position: absolute;left:0;right:0;top:0.25rem;margin:auto;width: 1rem;height:1rem;}
+ul>li a ol li:nth-of-type(1):after{background:url(__STATIC__/user/image/ac_icon1.png)no-repeat center center;background-size: 1rem;}
+ul>li a ol li:nth-of-type(2):after{background:url(__STATIC__/user/image/ac_icon2.png)no-repeat center center;background-size: 1rem;}
+ul>li>span{position: absolute;right:0.5rem;top:0.75rem;font-size: 0.7rem;color:#fff;font-weight:100;height: 1.25rem;line-height: 1.25rem;border: 1px solid #03a9f4;padding:0 0.5rem;border-radius: 3px;background:#03a9f4;box-sizing:border-box;letter-spacing:1px;}
+ul>li>span.active{border-color:#aaa;color:#aaa;background:rgba(0,0,0,0);}
+
+
+</style>
+
+</head>
+
+<body>
+
+<header class="aui-bar aui-bar-nav">
+    <a href="javascript:history.go(-1);" class="aui-pull-left">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+   <div class="aui-title">关注的主办方</div>
+  <!--  <a class="aui-pull-right">
+        <span>-</span>
+    </a> -->
+</header>
+<!-- 1 -->
+<section class="aui-content">
+  <div class="content">
+      <p class="num">关注了<span>4</span>个主办方</p>
+          <ul>
+            <li>
+              <a href="__URL__/activity_company">
+                <div class="pic"><img src="__STATIC__/user/image/a.jpg" /></div>
+                <div class="info">
+                  <h3>微微靠近</h3>
+                  <div>你的旅行小伙伴-你的旅行小伙伴-你的旅行小伙伴-你的旅行小伙伴-你的旅行小伙伴-v你的旅行小伙伴-你的旅行小伙伴-你的旅行小伙伴-你的旅行小伙伴-</div>
+                </div>
+                <ol>
+                  <li>487 场活动</li>
+                  <li>20812 人报名</li>
+                </ol>
+              </a>
+              <span onclick="stClick(this)">加关注</span>
+            </li>
+            <li>
+              <a href="__URL__/activity_company">
+                <div class="pic"><img src="__STATIC__/user/image/a.jpg" /></div>
+                <div class="info">
+                  <h3>啊飒飒大</h3>
+                  <div>---</div>
+                </div>
+                <ol>
+                  <li>487 场活动</li>
+                  <li>20812 人报名</li>
+                </ol>
+              </a>
+              <span class="active" onclick="stClick(this)">已关注</span>
+            </li>
+          </ul>
+    </div>
+</section>
+
+</body>
+</html>
+
+<script type="text/javascript">
+    function stClick(obj) {
+      var $this = $(obj);
+      var text = $this.html();
+     if(text === "加关注") {
+          $this.addClass("active");
+          $this.html("已关注");
+
+          layer.open({
+              content: '关注成功'
+              ,skin: 'msg'
+              ,time: 2 //2秒后自动关闭
+            });
+
+     } else if(text === "已关注"){
+          $this.removeClass("active");
+          $this.html("加关注");
+
+          layer.open({
+              content: '取消关注'
+              ,skin: 'msg'
+              ,time: 2 //2秒后自动关闭
+            });
+     }
+  }
+</script>

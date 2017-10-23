@@ -1,0 +1,59 @@
+<include file="Public/header" />
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 height-50 text-center bg-red">
+					<img src="__PUBLIC__/home/img/logo2.png" alt="" class="width-112"/>
+					<a href="{:U('Index/index')}" class="pull-right height-50"><img src="__PUBLIC__/home/img/center.png" alt="" class="icon-25" /></a>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 margin-top-30 text-center">
+					<h4>快速发布你的需求</h4><br>
+				</div>
+			<div class="row">
+				
+				<div class="col-xs-12 col-sm-12 ">
+					<form class="form-horizontal" action="{:U('Task/fastTask_do')}" method="post">
+						<div class="form-group">
+							<div class="col-sm-12">
+								<input type="text" class="form-control" placeholder="真实姓名" name="name" required="required">
+							</div>
+						</div>						
+						<div class="form-group">	
+							<div class="col-sm-12">
+								<input type="text" class="form-control" placeholder="手机号码" name="phone" required="required">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-xs-6">
+								<select class="form-control" name="city">									
+									<option>广州</option>									
+								</select>
+							</div>
+							<div class="col-xs-6">
+								<select class="form-control" name="province">
+									<option>越秀区</option>
+									<option>海珠区</option>
+									<option>白云区</option>
+									<option>天河区</option>
+									<option>黄埔区</option>
+									<option>增城区</option>
+									<option>从化区</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">   
+							<div class="col-sm-12">
+								<textarea class="form-control" rows="3" placeholder="一句话描述" name="message"  required="required"></textarea>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<div class=" col-xs-12 text-center">
+								<button type="submit" class="btn btn-red white-link">提交</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+<include file="Public/footer" />

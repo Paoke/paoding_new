@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="application/xhtml+xml;charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/site/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/site/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/site/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/js/layer/skin/layer.css"/>
+    <script type="text/javascript" src="__PUBLIC__/site/js/jquery.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/layer/layer.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <!--header-->
+    <header class="header">
+        <div class="center pa">
+            <a class="back_in" href="javascript:history.back(-1)"></a>
+        </div>
+        <h1>马上支付</h1>
+    </header>
+    <!--header-->
+    <form id="buyform" name="buy" method="post" action="__URL__/buy">
+        <input name="cost" type="hidden" value="{$vo.cost}">
+        <input name="template_id" type="hidden" value="{$vo.id}">
+        <input name="cat_id" type="hidden" value="{$vo.cat_id}">
+        <input name="buy_type" type="hidden" value="{$vo.buy_type}">
+    <div class="content">
+        <div class="ant-spin">
+            <p>系统名称</p>
+            <input id="site_name" type="text" name="site_name" value="" placeholder="请输入5-16位英文或者数字" />
+        </div>
+        <span class="duanluo">系统名称用于访问系统时的网页路径，如输入：abc，访问路径位为abc.gammap.cn,申请通后无法修改</span>
+        <div class="ant-spin">
+            <p>公司名称</p>
+            <input type="text" name="company" value="" placeholder="请输入公司名称" />
+        </div>
+        <div class="ant-spin">
+            <p>联系人姓名</p>
+            <input type="text" name="user" value="" placeholder="请输入联系人姓名" />
+        </div>
+        <div class="ant-spin">
+            <p>手机号</p>
+            <input id="mobile" type="text" name="mobile" value="" placeholder="请输入手机号，审核我们将会进行联系" />
+        </div>
+    </div>
+    </form>
+    <div class="box_bottom">
+        <div class="total">
+            合计: <span>￥{$vo.cost}</span>
+        </div>
+        <div class="pay">
+            <a id="submit" href="javascript:;">去支付</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    $(function(){
+        $("#site_name").bind('blur', function(){
+
+            var site_name = $("#site_name").val();
+            if(site_name == ''){
+                return;
+            }
+            var data = {'site_name': site_name};
+            $.ajax({
+                type: "POST",
+                url: "__URL__/checkSite",
+                data: data,
+                dataType:'JSON',
+                beforeSend:function(){
+                },
+                success: function(result){
+                    //alert(JSON.stringify(result));
+                    if(result == 1){
+                        $("#site_name").val('');
+                        //alert('系统名称已被使用，请重新输入!');
+                        layer.msg('系统名称已被使用，请重新输入!', {time: 2000});
+                    }
+                }
+            });
+        })
+
+        $("#submit").bind('click', function(){
+
+            if(checkFrom()){
+                $("#buyform").submit();
+            }
+
+        });
+
+    });
+
+    function checkFrom(){
+        var site_name = $("#site_name").val();
+        var mobile = $("#mobile").val();
+        if(site_name == null || site_name == ''){
+            //alert("请先填写系统名称!");
+            layer.msg('请先填写系统名称!', {time: 2000});
+            return false;
+        }
+        if(mobile == null || mobile == ''){
+            //alert("请先填写手机号码!");
+            layer.msg('请先填写手机号码!', {time: 2000});
+            return false;
+        }
+        return true;
+    }
+</script>

@@ -1,0 +1,28 @@
+﻿<include file="Public/header" />
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 height-50 text-center bg-red">
+					<img src="__PUBLIC__/home/img/logo2.png" alt="" class="width-112"/>
+					<a href="{:U('Index/index')}" class="pull-right height-50"><img src="__PUBLIC__/home/img/center.png" alt="" class="icon-25" /></a>
+				</div>
+				<div class="col-xs-12 col-sm-12  text-center margin-top-17">
+					<img src="__PUBLIC__/home/img/person.jpg"  alt="" class="head-portrait2 img-circle" />
+				</div>
+<form action="{:U('Member/binding_do')}" method="post">
+				<div class="col-xs-12 col-sm-12">
+					
+						<div class="form-group  box-input  width-272 box-center"><!--  height-74 -->
+							<p class="display-hidden"><i class="glyphicon glyphicon-minus-sign font-sixteen red padding-10"></i><span class="tip">用户名为2~15位字母数字及汉子</span></p>
+							<input type="text" class="form-control" name="username" placeholder="用户名" required="required" min="3" max="20" value="{$username}">
+							<input type="password" class="form-control" name="password" placeholder="密码" required="required" min="3" max="50">
+							<p class="display-hidden"><i class="glyphicon glyphicon-minus-sign font-sixteen red padding-10"></i><span class="tip">请输入6位数字、字母、符号组合</span></p>
+						</div>
+					
+				</div>
+				<div class="col-xs-12 col-sm-12  text-center"><!-- margin-top-34 -->
+					<a href="#" type="button" class="btn btn-red white-link">绑定并登录</a>
+				</div>
+</form>
+			</div>
+		</div>
+<include file="Public/footer" />

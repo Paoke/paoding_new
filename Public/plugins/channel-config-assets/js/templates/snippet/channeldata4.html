@@ -1,0 +1,25 @@
+<div class="channel-tab1">
+  <ul class="aui-list aui-media-list" id="start4">
+    <li class="aui-list-item aui-border-b aui-padded-15 aui-padded-b-5">
+      <div id='title1' class=" aui-font-size-18" v-text="item['<%- title1 %>']">(内容1)广州京墨医疗科技为您提供专业软件定制一体化服务</div>
+      <div class="aui-media-list-item-inner">
+        <div class="aui-list-item-media" style="width:6rem">
+          <img src="/Public/images/channel_config/jingmo.png" v-bind:src="item['cover_url']" alt="封面图片">
+        </div>
+        <div class="aui-list-item-inner">
+          <div class="aui-list-item-text">
+            <div id='title2' style="color:#9E9E9E;" class="aui-list-item-title aui-font-size-14" v-text="item['<%- title2 %>']">
+              (内容2)广州京墨医疗科技是中国医疗产业联盟理事单位、广东医谷旗下荣誉软件服务提供商、专注“移动互联网+大健康”领域。公司专业承接软件开发、软件定制、手机app开发、微信应用开发、企业管理系统开发等业务，可根据企业的业务实际情况进行软件定制开发，提供系统软件开发服务及手机app软件定制开发服务，欢迎有各类开发需求的公司或单位联系我们。
+            </div>
+          </div>
+          <div class="aui-info" style="color: #ccc;position: absolute;left: 0;bottom: 0;width: 90%;">
+            <div class="aui-info-item aui-font-size-12">
+              <span id='title3' class="aui-margin-l-5"  v-text="item['<%- title3 %>']">(内容3)京墨科技有限公司</span>
+            </div>
+            <div class="aui-info-item aui-font-size-12" v-text="item['commentsNum']+'条评论'">评论量</div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

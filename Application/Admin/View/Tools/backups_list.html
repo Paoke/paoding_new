@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>{$gemmap_config['shop_info_store_title']}</title>
+    <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}"/>
+    <meta name="description" content="{$gemmap_config['shop_info_store_desc']}"/>
+
+    <!--dynamic table-->
+    <link href="{$Think.const.JS}/advanced-datatable/css/demo_page.css" rel="stylesheet"/>
+    <link href="{$Think.const.JS}/advanced-datatable/css/demo_table.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{$Think.const.JS}/data-tables/DT_bootstrap.css"/>
+    <link href="{$Think.const.CSS}/style.css" rel="stylesheet">
+    <link href="{$Think.const.CSS}/style-responsive.css" rel="stylesheet">
+    <link href="__PUBLIC__/bootstrap/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+    .navbar-default {
+        background-color: #fff;
+        border: 1px solid #e7e7e7;
+    }
+
+    .panel {
+        border: 1px solid #ddd;
+    }
+
+    p.total {
+        padding-top: 10px;
+        float: left;
+    }
+    .panel-heading {
+    border-bottom: 0px solid #ddd;
+   
+}
+</style>
+
+<body class="sticky-header">
+
+<section>
+
+    <!-- main content start-->
+    <div class="main-content" width="100%" style="margin:0px;">
+
+        <form action="{:U('Tools/index')}" id="search" role="search" method="post">
+
+            <!--body wrapper start-->
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <section class="panel">
+                            <header class="panel-heading panel-body">
+                                <div class="pull-left">
+                                    数据备份
+                                </div>
+                                <div class="collapse navbar-collapse pull-right ">
+                                    <div class=" nav-button col-md-12 ">
+                                        <div class="panel-body">
+                                            <a href="javascript:void(0)" onclick="gobackup(this)" class="btn btn-default pull-right"><i
+                                                    class="fa fa-eject"></i>备份</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+
+                            <div class="collapse navbar-collapse navbar-default">
+                                <div class=" nav-button col-md-12 ">
+                                    <p class="total">数据库中共有{$tableNum}张表，共计{$total}</p>
+                                </div>
+                            </div>
+
+                            <div class="">
+                                <div class="adv-table">
+                                    <table class="display table table-bordered table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th class="text-center" style="width: 2px;"><input type="checkbox"
+                                                                                               onclick="javascript:$('input[name*=backs]').prop('checked',this.checked);">
+                                            </th>
+                                            <th class="sorting" tabindex="0">数据库表</th>
+                                            <th class="sorting" tabindex="0">记录条数</th>
+                                            <th class="sorting" tabindex="0">占用空间</th>
+                                            <th class="sorting" tabindex="0">编码</th>
+                                            <th class="sorting" tabindex="0">创建时间</th>
+                                            <th class="sorting" tabindex="0">说明</th>
+                                            <th class="sorting" tabindex="0">操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <foreach name="list" item="vo" key="k">
+                                            <tr role="row" align="center" style="background:#FFFFFF;">
+                                                <td>
+                                                    <input type="checkbox" name="backs[]" value="{$vo.name}"></td>
+                                                <td>{$vo.name}</td>
+                                                <td>{$vo.rows}</td>
+                                                <td>{$vo.data_length|format_bytes}</td>
+                                                <td>{$vo.collation}</td>
+                                                <td>{$vo.create_time}</td>
+                                                <td>{$vo.comment}</td>
+                                                <td>
+                                                    <div class="btn-group">
+                                                        <a class="btn btn-default"
+                                                           href="__MODULE__/Tools/backups/action/optimize/tablename/{$vo.name}">优化</a>
+                                                        <a class="btn btn-default"
+                                                           href="__MODULE__/Tools/backups/action/repair/tablename/{$vo.name}"
+                                                           data-url="">修复</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </foreach>
+                                        </tbody>
+                                    </table>
+                                    <div class="row-fluid panel-body">
+                                        <div class="span6">
+                                            <div class="dataTables_info" id="dynamic-table_info">
+                                                <label style="float:left">
+                                                    <select class="form-control" size="1" id="page_num" name="page_num"
+                                                            aria-controls="dynamic-table" onchange="search()">
+                                                        <option value="25">25</option>
+                                                        <option value="50">50</option>
+                                                        <option value="100">100</option>
+                                                    </select>
+                                                </label>
+                                                <label style="float:left;margin-left:10px;margin-top:7px">
+                                                    <span class=" wenzi" style="float:left">条每页，总共 {$count} 条</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="span6">
+                                            <div class="dataTables_paginate paging_bootstrap pagination">
+                                                <ul>
+                                                    <if condition="$page_now eq 1">    <!-- 上一页 -->
+                                                        <li class="prev disabled">
+                                                            <a href="#">
+                                                                上一页
+                                                            </a>
+                                                        </li>
+                                                        <else/>
+                                                        <li class="prev">
+                                                            <a href="{:U('Admin/Tools/index/page_now')}/{$page_now-1}/page_num/{$page_num}">
+                                                                上一页
+                                                            </a>
+                                                        </li>
+                                                    </if>   <!-- 上一页 end -->
+
+                                                    <if condition="$page lt 5">    <!-- 页码条 -->
+                                                        <for start="1" end="$page+1">   <!-- 循环四条以内 -->
+                                                            <if condition="$i eq $page_now ">
+                                                                <li class="active"><a href="#">{$i}</a></li>
+                                                                <elseif condition="$i lt $page_now "/>
+                                                                <li>
+                                                                    <a href="{:U('Admin/Tools/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                                <else/>
+                                                                <li>
+                                                                    <a href="{:U('Admin/Tools/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                            </if>
+                                                        </for>
+                                                        <elseif condition="$page_now lt 3"/>
+                                                        <for start="1" end="6">   <!-- 循环1-5 -->
+
+                                                            <if condition="$i eq $page_now ">
+                                                                <li class="active"><a href="#">{$page_now}</a></li>
+                                                                <elseif condition="$i lt $page_now "/>
+                                                                <li>
+                                                                    <a href="{:U('Admin/Tools/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                                <else/>
+                                                                <li>
+                                                                    <a href="{:U('Admin/Tools/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                            </if>
+                                                        </for>
+                                                        <elseif condition="$page_now eq $page-1"/>
+                                                        <for start="$page_now-3" end="$page+1">   <!-- 循环当前页为倒数第二页时 -->
+                                                            <if condition="$i eq $page_now ">
+                                                                <li class="active"><a href="#">{$page_now}</a></li>
+                                                                <elseif condition="$i lt $page "/>
+                                                                <li>
+                                                                    <a href="{:U('Admin/Tools/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                                <else/>
+                                                                <li>
+                                                                    <a href="{:U('Admin/Tools/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                            </if>
+                                                        </for>
+                                                        <elseif condition="$page_now eq $page"/>
+                                                        <for start="$page_now-4" end="$page+1">   <!-- 循环当前页为最后一页时 -->
+                                                            <if condition="$i eq $page_now ">
+                                                                <li class="active"><a href="#">{$page_now}</a></li>
+                                                                <elseif condition="$i lt $page "/>
+                                                                <li>
+                                                                    <a href="{:U('Admin/Tools/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                                <else/>
+                                                                <li>
+                                                                    <a href="{:U('Admin/Tools/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                            </if>
+                                                        </for>
+                                                        <else/>
+                                                        <for start="$page_now-2" end="$page_now+3">   <!-- 循环除了前五条 和后五条 -->
+
+                                                            <if condition="$i eq $page_now ">
+                                                                <li class="active"><a href="#">{$page_now}</a></li>
+                                                                <elseif condition="$i lt $page "/>
+                                                                <li>
+                                                                    <a href="{:U('Admin/Tools/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                                <else/>
+                                                                <li>
+                                                                    <a href="{:U('Admin/Tools/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                            </if>
+                                                        </for>
+                                                    </if>   <!-- 页码条 end -->
+
+                                                     <if condition="($page_now neq $page) AND ($page neq 0)"> <!-- 下一页 -->
+                                                        <li class="next ">
+                                                            <a href="{:U('Admin/Tools/index/page_now/')}/{$page_now+1}/page_num/{$page_num}">
+                                                                下一页
+                                                            </a>
+                                                        </li>
+                                                        <else/>
+                                                        <li class="next disabled">
+                                                            <a href="#">
+                                                                下一页
+                                                            </a>
+                                                        </li>
+                                                    </if><!-- 下一页 end-->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!--body wrapper end-->
+
+        </form>
+
+
+    </div>
+    <!-- main content end-->
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="{$Think.const.JS}/jquery-1.10.2.min.js"></script>
+<script src="{$Think.const.JS}/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="{$Think.const.JS}/jquery-migrate-1.2.1.min.js"></script>
+<script src="{$Think.const.JS}/bootstrap.min.js"></script>
+<script src="{$Think.const.JS}/modernizr.min.js"></script>
+<script src="{$Think.const.JS}/jquery.nicescroll.js"></script>
+<script src="__PUBLIC__/js/layer/layer-min.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+<!--dynamic table-->
+<script type="text/javascript" language="javascript" src="{$Think.const.JS}/advanced-datatable/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="{$Think.const.JS}/data-tables/DT_bootstrap.js"></script>
+<!--dynamic table initialization -->
+<script src="{$Think.const.JS}/dynamic_table_init.js"></script>
+
+<!--common scripts for all pages-->
+<script src="{$Think.const.JS}/scripts.js"></script>
+<script type="text/javascript">
+    function delfun(obj) {
+        if (confirm('确认删除')) {
+            $.ajax({
+                type: 'post',
+                url: $(obj).attr('data-url'),
+                data: {act: 'del', role_id: $(obj).attr('data-id')},
+                dataType: 'json',
+                success: function (data) {
+                    if (data == 1) {
+                        $(obj).parent().parent().remove();
+                    } else {
+                        layer.alert(data, {icon: 2});   //alert('用户名或密码不能为空');// alert(data);
+                    }
+                }
+            })
+        }
+        function search() {
+            $('#search').submit();
+        }
+
+        $(document).ready(function () {
+            //默认选中
+            $("#page_num").val({$page_num});
+        });
+        return false;
+    }
+    function gobackup(obj) {
+        var a = [];
+        $('input[name*=backs]').each(function (i, o) {
+            if ($(o).is(':checked')) {
+                a.push($(o).val());
+            }
+        });
+        if (a.length == 0) {
+            layer.alert('请选择要备份的数据表', {icon: 2});  //alert('请选择要备份的数据表');
+            return;
+        } else {
+            $(obj).addClass('disabled');
+            $(obj).html('备份进行中...');
+            $.ajax({
+                type: 'post',
+                url: "{:U('Admin/Tools/backup')}",
+                datatype: 'json',
+                data: {tables: a},
+                success: function (data) {
+                    if (data.info) {
+                        $(obj).removeClass('disabled');
+                        $(obj).html('备份');
+                        layer.alert(data.info);
+                    }
+                    else {
+                        data = eval('(' + data + ')');
+                        if (data.stat == 'ok') {
+                            $(obj).removeClass('disabled');
+                            $(obj).html('备份');
+                            layer.alert(data.msg, {icon: 2});  //alert(data.msg);
+                        } else {
+                            layer.alert(data.msg, {icon: 2});  //alert(data.msg);
+                        }
+                    }
+                }
+            })
+        }
+    }
+    function search() {
+        $('#search').submit();
+    }
+    $(document).ready(function () {
+        //默认选中
+        $("#page_num").val({$page_num});
+    });
+</script>
+</body>
+</html>

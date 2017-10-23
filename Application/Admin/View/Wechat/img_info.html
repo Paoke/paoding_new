@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>{$gemmap_config['shop_info_store_title']}</title>
+    <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}"/>
+    <meta name="description" content="{$gemmap_config['shop_info_store_desc']}"/>
+
+    <link href="{$Think.const.CSS}/style.css" rel="stylesheet">
+    <link href="{$Think.const.CSS}/style-responsive.css" rel="stylesheet">
+
+    <script src="__PUBLIC__/js/global.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+</style>
+
+<body class="sticky-header">
+<section>
+
+    <!-- main content start-->
+    <div class="main-content" width="100%" style="margin:0px;">
+
+        <!--body wrapper start-->
+        <section class="wrapper">
+            <!-- page start-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            <if condition="$keyword">
+                                编辑图本信息
+                                <else/>
+                                添加图本信息
+                            </if>
+
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="button" id="postbutton" class="btn btn-default "
+                                            onclick="ajax_submit_form('form_id_name')"><i class="fa fa-save"></i>保存
+                                    </button>
+                                    <a href="javascript:history.go(-1)" data-toggle="tooltip" title=""
+                                       class="btn btn-default"><i class="fa fa-reply"></i>返回</a>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="panel-body ">
+                            <!--表单数据-->
+                            <form class="form-horizontal adminex-form" id="form_id_name" method="post">
+                            <!--<if condition="$keyword">-->
+                                <!--action="{:U('Wechat/edit_img')}"-->
+                                <!--<else/>-->
+                                <!--action="{:U('Wechat/add_img')}"-->
+                            <!--</if>-->
+
+
+                            <input type="hidden" value="{$info.id}" name="id" id="id">
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">关键词：</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control form-input" datatype="*" nullmsg="关键字不得为空"
+                                           name="keyword" id="keyword" value="{$info.keyword}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">标题：</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control form-input" datatype="*" nullmsg="标题不得为空"
+                                           name="title" id="title" value="{$info.title}"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">URL：</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control form-input" datatype="url" nullmsg="url不得为空"
+                                           name="url" id="url" value="{$info.url}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">封面图片：</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control form-input"
+                                           style="float: left;margin-right:15px;" readonly="readonly" datatype="*"
+                                           nullmsg="封面图片不得为空" name="pic" id="pic" value="{$info.pic}">
+                                    <button class="btn btn-info " type="button"
+                                            onclick="GetUploadify(1,'pic','weixin');">上传图片
+                                    </button>
+                                    <button class="btn btn-info " type="button" onclick="preview('pic')">预览</button>
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">简介：</label>
+                                <div class="col-sm-6">
+                                    <textarea class="form-control form-input" datatype="*" nullmsg="简介不得为空" rows="4"
+                                              name="desc" id="desc" placeholder="简介">{$info.desc}</textarea>
+                                </div>
+
+                            </div>
+
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section><!--表单数据-->
+
+
+    </div>
+    </div>
+
+
+    </div>
+    <!-- main content end-->
+</section>
+<script type="text/javascript" src="{$Think.const.JS}/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$Think.const.JS}/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript">
+    $('.adminex-form').Validform({
+        tiptype: 3
+    });
+
+</script>
+<script>
+    function  ajax_submit_form(form_id){
+        var id=$("#id").val();
+        var action = "";
+        if(id==''){
+            action = "__MODULE__/Wechat/img/action/add";
+        }else {
+            action = "__MODULE__/Wechat/img/action/edit";
+        }
+
+        $.ajax({
+            type: "post",
+            url: action,
+            data: $('#' + form_id).serialize(),
+            dataType: 'json',
+            success: function (res) {
+                if (res.result == 1) {
+                    layer.msg(res.msg);
+                    setTimeout(function () {
+                        window.location.href = "__MODULE__/Wechat/img/action/page_list";
+                    }, 1000);
+                }
+                if (res.result == 0) {
+                    layer.msg(res.msg);
+                }
+            }
+        })
+
+    }
+
+    function preview(id) {
+        var src = $('#' + id).val();
+        var content;
+        if (src == "") {
+            content = '没有图片可供预览';
+            layer.msg(content);
+        }
+        else {
+            content = "<img width='300' height='300' src='" + src + "'>";
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: false,
+                area: ['300px', '300px'],
+                skin: 'layui-layer-nobg', //没有背景色
+                shadeClose: true,
+                content: content
+            });
+        }
+    }
+
+    function selected(img, url) {
+        $('#url').val(url);
+        $('#pic').val(img);
+        layer.closeAll();
+    }
+
+</script>
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="{$Think.const.JS}/jquery-1.10.2.min.js"></script>
+<script src="{$Think.const.JS}/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="{$Think.const.JS}/jquery-migrate-1.2.1.min.js"></script>
+<script src="{$Think.const.JS}/bootstrap.min.js"></script>
+<script src="{$Think.const.JS}/modernizr.min.js"></script>
+<script src="{$Think.const.JS}/jquery.nicescroll.js"></script>
+<script src="__PUBLIC__/js/layer/layer-min.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+<!--common scripts for all pages-->
+<script src="{$Think.const.JS}/scripts.js"></script>
+</body>
+</html>

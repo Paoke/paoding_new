@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>个人中心</title>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/user/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/user/css/common.css" />
+    <script type="text/javascript" src="__STATIC__/user/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/user/js/api.js"></script>
+    <script type="text/javascript" src="__STATIC__/user/js/layer.js"></script>
+
+    <style type="text/css">
+        header{position: fixed !important;background:none !important;}
+        a{color:black}
+        .top_plate{background:url(__STATIC__/user/image/pc.jpg)no-repeat center center;background-size:cover;padding-top:3rem;padding-bottom:0.5rem;position: relative;;}
+        .user_portrait{position: relative;width:3.5rem;height:3.5rem;margin:auto;}
+        .user_portrait i{display:block;width: 1rem;height: 1rem;background:url(__STATIC__/user/image/na.png)no-repeat center center;background-size:90%;position: absolute;right:0;bottom:0;}
+        .user_portrait>div{border-radius: 50%;overflow: hidden;box-shadow:0px 3px 6px rgba(255,255,255,0.1);}
+        h2{font-size: 0.8rem;text-align: center;color:#fff;padding: 0.5rem 0;}
+        .top_plate .advices{position: absolute;bottom:0.75rem;left:0.75rem;}
+        .top_plate .advices i{color:#fff;font-size: 1rem;}
+
+        .aui-list{border-top:1px solid #ebebeb !important;border-bottom:1px solid #ebebeb !important;}
+        .li_list:before{content:"";position: absolute;height:1px;background: #ebebeb;left:0;right:0;bottom:0;margin:auto;margin-left:0.5rem;}
+        .border-t-b{border-top:1px solid #ebebeb;border-bottom:1px solid #ebebeb;}
+
+        .line_box{text-align: center;padding:0.6rem 0;background:#fff;}
+        .line_box>div{border-right:1px dashed #e5e5e5;}
+        .line_box>div:last-of-type{border:none;}
+        .line_box span{font-size: 0.8rem;}
+
+        .tit_t{margin-left:0.5rem;font-size: 0.7rem;color:#999;padding-bottom: 0.15rem;display:block;padding-top: 0.5rem;}
+
+        .icon_re>div i:before{content:"";height:1.25rem;width:1.25rem;display:block;margin:auto;}
+        .icon_re>div:nth-of-type(1) i:before{background:url(__STATIC__/user/image/order_ico1.png)no-repeat center center;background-size:cover;}
+        .icon_re>div:nth-of-type(2) i:before{background:url(__STATIC__/user/image/order_ico2.png)no-repeat center center;background-size:cover;}
+        .icon_re>div:nth-of-type(3) i:before{background:url(__STATIC__/user/image/order_ico3.png)no-repeat center center;background-size:cover;}
+        .icon_re>div:nth-of-type(4) i:before{background:url(__STATIC__/user/image/order_ico4.png)no-repeat center center;background-size:cover;}
+
+        .icon_re_a>div i:before{content:"";height:1.25rem;width:1.25rem;display:block;margin:auto;}
+        .icon_re_a>div:nth-of-type(1) i:before{background:url(__STATIC__/user/image/a_order_ico1.png)no-repeat center center;background-size:cover;}
+        .icon_re_a>div:nth-of-type(2) i:before{background:url(__STATIC__/user/image/a_order_ico2.png)no-repeat center center;background-size:cover;}
+        .icon_re_a>div:nth-of-type(3) i:before{background:url(__STATIC__/user/image/a_order_ico3.png)no-repeat center center;background-size:cover;}
+        .icon_re_a>div:nth-of-type(4) i:before{background:url(__STATIC__/user/image/a_order_ico4.png)no-repeat center center;background-size:cover;}
+
+        .icon_re_b>a div.aui-list-item-label-icon i:before{content:"";height:1rem;width:1rem;display:block;margin:auto;}
+        .icon_re_b>a:nth-of-type(1) div.aui-list-item-label-icon i:before{background:url(__STATIC__/user/image/b_order_ico1.png)no-repeat center center;background-size:cover;}
+        .icon_re_b>a:nth-of-type(2) div.aui-list-item-label-icon i:before{background:url(__STATIC__/user/image/b_order_ico2.png)no-repeat center center;background-size:cover;}
+        .icon_re_b>a:nth-of-type(3) div.aui-list-item-label-icon i:before{background:url(__STATIC__/user/image/b_order_ico3.png)no-repeat center center;background-size:cover;}
+        .icon_re_b>a:nth-of-type(4) div.aui-list-item-label-icon i:before{background:url(__STATIC__/user/image/b_order_ico4.png)no-repeat center center;background-size:cover;}
+        .icon_re_b>a:nth-of-type(5) div.aui-list-item-label-icon i:before{background:url(__STATIC__/user/image/b_order_ico5.png)no-repeat center center;background-size:cover;}
+    </style>
+
+</head>
+
+<body>
+
+<header class="aui-bar aui-bar-nav">
+    <a href="__URL__/setting" class="aui-pull-right aui-btn">
+        <span class="aui-iconfont aui-icon-gear"></span>
+    </a>
+</header>
+
+<section class="aui-content">
+    <div class="top_plate">
+        <a href="__URL__/user_info">
+        <div class="user_portrait">
+            <div>
+                <img id="head_img" src="__PUBLIC__/images/m_pic.png"/>
+            </div>
+            <i></i>
+        </div>
+        </a>
+        <h2 id="nickname">昵称</h2>
+        <a href="__URL__/msg_sys_list">
+        <div class="advices"><i class="aui-iconfont aui-icon-mail"></i><div class="aui-badge">1</div></div>
+        </a>
+    </div>
+</section>
+
+
+<section>
+    <label class="tit_t">我的活动</label>
+    <div class="aui-row line_box border-t-b">
+        <div class="aui-col-xs-4">
+            <a href="__URL__/activity_publish">
+                <div>0</div>
+                <span>发布</span>
+            </a>
+        </div>
+        <div class="aui-col-xs-4">
+            <a href="__URL__/activity_subscribe">
+                <div>0</div>
+                <span>关注</span>
+            </a>
+        </div>
+        <div class="aui-col-xs-4">
+            <a href="javascript:;">
+                <div>0</div>
+                <span>报名</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="aui-row">
+        <label class="tit_t">参与的活动</label>
+        <a href="__URL__/activity_order">
+        <div class="aui-grid border-t-b icon_re">
+            <div class="aui-col-xs-3" style="padding: 0.6rem 0;">
+                <i style="font-size:1rem;" class="aui-iconfont aui-icon-image"></i>
+                <div class="aui-grid-label">待付款</div>
+            </div>
+            <div class="aui-col-xs-3"  style="padding: 0.6rem 0;">
+                <i style="font-size:1rem;" class="aui-iconfont aui-icon-camera"></i>
+                <div class="aui-grid-label">待参与</div>
+            </div>
+            <div class="aui-col-xs-3"  style="padding: 0.6rem 0;">
+                <div class="aui-badge">2</div>
+                <i style="font-size:1rem;" class="aui-iconfont aui-icon-pencil"></i>
+                <div class="aui-grid-label">已完成</div>
+            </div>
+            <div class="aui-col-xs-3"  style="padding: 0.6rem 0;">
+                <i style="font-size:1rem;" class="aui-iconfont aui-icon-date"></i>
+                <div class="aui-grid-label">退款/售后</div>
+            </div>
+        </div>
+        </a>
+    </div>
+</section>
+
+
+<section>
+    <label class="tit_t">我的账户</label>
+    <div class="aui-row line_box border-t-b">
+        <div class="aui-col-xs-4">
+            <a href="__URL__/user_coupon">
+                <div>0</div>
+                <span>优惠券</span>
+            </a>
+        </div>
+        <div class="aui-col-xs-4">
+            <a href="__URL__/user_point">
+                <div>0</div>
+                <span>积分</span>
+            </a>
+        </div>
+        <div class="aui-col-xs-4">
+            <a href="__URL__/finance_balance">
+                <div>0</div>
+                <span>余额</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <label class="tit_t">我的社交</label>
+    <div class="aui-row line_box border-t-b">
+        <div class="aui-col-xs-3">
+            <a href="javascript:;">
+                <div>0</div>
+                <span>发表</span>
+            </a>
+        </div>
+        <div class="aui-col-xs-3">
+            <a href="__URL__/social_subscribe">
+                <div>0</div>
+                <span>关注</span>
+            </a>
+        </div>
+        <div class="aui-col-xs-3">
+            <a href="__URL__/social_fans">
+                <div>0</div>
+                <span>粉丝</span>
+            </a>
+        </div>
+        <div class="aui-col-xs-3">
+            <a href="__URL__/social_blacklist">
+                <div>0</div>
+                <span>黑名单</span>
+            </a>
+        </div>
+    </div>
+</section>
+<section>
+    <label class="tit_t">商城订单</label>
+    <div class="aui-row aui-margin-b-10">
+        <a href="__URL__/shop_order">
+        <div class="aui-grid border-t-b icon_re_a">
+            <div class="aui-col-xs-3"  style="padding: 0.6rem 0;">
+                <i style="font-size:1rem;" class="aui-iconfont aui-icon-image"></i>
+                <div class="aui-grid-label">待收货</div>
+            </div>
+            <div class="aui-col-xs-3"  style="padding: 0.6rem 0;">
+                <i style="font-size:1rem;" class="aui-iconfont aui-icon-camera"></i>
+                <div class="aui-grid-label">待付款</div>
+            </div>
+            <div class="aui-col-xs-3"  style="padding: 0.6rem 0;">
+                <div class="aui-badge">2</div>
+                <i style="font-size:1rem;" class="aui-iconfont aui-icon-pencil"></i>
+                <div class="aui-grid-label">待评价</div>
+            </div>
+            <div class="aui-col-xs-3"  style="padding: 0.6rem 0;">
+                <i style="font-size:1rem;" class="aui-iconfont aui-icon-date"></i>
+                <div class="aui-grid-label">退款/售后</div>
+            </div>
+        </div>
+        </a>
+    </div>
+</section>
+
+<section class="aui-content">
+    <div class="aui-list aui-margin-b-15 icon_re_b">
+        <a href="__URL__/activity_collect" class="aui-list-item li_list">
+            <div class="aui-list-item-label-icon">
+                <i class="aui-iconfont aui-icon-info"></i>
+            </div>
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                <div class="aui-list-item-title">收藏活动</div>
+            </div>
+        </a>
+        <a href="__URL__/article_collect" class="aui-list-item li_list">
+            <div class="aui-list-item-label-icon">
+                <i class="aui-iconfont aui-icon-info"></i>
+            </div>
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                <div class="aui-list-item-title">收藏文章</div>
+            </div>
+        </a>
+        <a href="__URL__/shop_collect" class="aui-list-item li_list">
+            <div class="aui-list-item-label-icon">
+                <i class="aui-iconfont aui-icon-info"></i>
+            </div>
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                <div class="aui-list-item-title">收藏商品</div>
+            </div>
+        </a>
+        <a href="__URL__/finance_balance" class="aui-list-item">
+            <div class="aui-list-item-label-icon">
+                <i class="aui-iconfont aui-icon-info"></i>
+            </div>
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                <div class="aui-list-item-title">我的钱包</div>
+            </div>
+        </a>
+        <a href="__URL__/msg_user" class="aui-list-item">
+            <div class="aui-list-item-label-icon">
+                <i class="aui-iconfont aui-icon-info"></i>
+            </div>
+            <div class="aui-list-item-inner aui-list-item-arrow">
+                <div class="aui-list-item-title">我的消息</div>
+            </div>
+        </a>
+    </div>
+
+</section>
+
+</body>
+</html>
+<script type="text/javascript" src="__STATIC__/js/jquery.cookie.js"></script>
+<script>
+
+    $(function(){
+        getUserInfo();
+    });
+
+    function getUserInfo(){
+        var userId = $.cookie('user_id');
+
+        var url = "__ROOT__/{$Think.const.API_PATH}/User/user_info/action/detail/id/"+userId;
+        $.get(url, function(ret){
+
+            if(ret.result == 1){
+                var user = ret.data;
+                var name = user.nickname;
+                var pic = user.head_pic;
+                $("#nickname").html(name);
+                if (pic) {
+                    $("#head_img").attr("src", pic);
+                } else {
+                    $("#head_img").attr("src", "__PUBLIC__/images/m_pic.png");
+                }
+
+            }else{
+                layer_msg("获取数据失败!");
+            }
+
+        },'json');
+
+    }
+
+
+
+</script>

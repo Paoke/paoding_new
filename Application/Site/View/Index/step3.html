@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="application/xhtml+xml;charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/site/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/site/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/site/css/style.css" />
+    <script type="text/javascript" src="__PUBLIC__/site/js/jquery.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+    <!--header-->
+    <header class="header">
+        <div class="center pa">
+            <a class="back_in" href="__URL__/index"></a>
+        </div>
+        <h1>选择模板</h1>
+    </header>
+    <!--header-->
+    <div class="listft content_boxa tab_show">
+        <nav class="nav_tab">
+            <volist name="cat_list" id="vo">
+                <div id="{$vo.cat_id}" <if condition="$vo.cat_id eq $current">class="current"</if>>{$vo.cat_name}</div>
+            </volist>
+        </nav>
+        <!-- 电子商务 -->
+        <div class="tab_user tab_show ">
+            <div class="active">
+                <ul id="tmpl_list">
+                    <volist name="tmpl_list" id="vo">
+                    <li>
+                        <a href="{:U('Index/step4', array('tmpl_id'=>$vo['id']))}">
+                            <div class="pricerr">
+                                <p>{$vo.title}<span class="price-real">￥{$vo.real_price}</span></p>
+                            </div>
+                            <div class="intro">
+                                <div class="pic">
+                                    <img src="{$vo.image}"  alt="" title="DISSONA "/>
+                                </div>
+                                <div class="promotion">
+                                    <p>{$vo.description}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    </volist>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    // tab
+    $('h1').on('click','div',function(ev){
+        $('h1 div').removeClass('cur');
+        $(this).addClass('cur');
+        $('.content').removeClass('tab_show');
+        $('.content').eq($(this).index()).addClass('tab_show');
+    });
+
+    $('.content_boxa .nav_tab').on('click','div',function(ev){
+        $('.content_boxa .nav_tab div').removeClass('current');
+        $(this).addClass('current');
+        //$('.content_boxa .tab_user').removeClass('tab_show');
+        //$('.content_boxa .tab_user').eq($(this).index()).addClass('tab_show');
+
+        var id = $(this).attr('id');
+        getTemplateList(id);
+    });
+
+    function getTemplateList(catid){
+        var data = {'catid': catid};
+        $.ajax({
+            type: "POST",
+            url: "__URL__/step3",
+            data: data,
+            dataType:'JSON',
+            beforeSend:function(){
+            },
+            success: function(result){
+                $("#tmpl_list").empty();
+                if(result != null){
+
+                    $(result).each(function(i, item){
+
+                        var url = "{:U('Index/step4')}";
+                        url = url.replace('.html', '/tmpl_id/'+item.id+".html");
+
+                        var html = '<li><a href="' + url + '">' +
+                                '<div class="pricerr"><p>'+item.title+'<span class="price-real">￥'+item.real_price+'</span></p></div>' +
+                                '<div class="intro"><div class="pic"><img src="'+item.image+'"  alt="" title="DISSONA "/></div>' +
+                                '<div class="promotion"> <p>'+item.description+'</p></div></div></a></li>';
+
+                        $("#tmpl_list").append(html);
+                    });
+                }
+
+            }
+        });
+    }
+
+</script>

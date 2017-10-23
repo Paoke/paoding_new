@@ -1,0 +1,140 @@
+<include file="Public/header" />
+
+
+<?php 
+ini_set('date.timezone','Asia/Shanghai');
+//error_reporting(E_ERROR);
+
+
+require_once "../lib/WxPay.Api.php";
+require_once "WxPay.JsApiPay.php";
+require_once 'log.php';
+
+
+
+
+?>
+
+
+
+
+
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 height-50 text-center bg-red">
+					<img src="__PUBLIC__/home/img/logo2.png" alt="" class="width-112"/>
+					<a href="{:U('Index/index')}" class="pull-right height-50"><img src="__PUBLIC__/home/img/center.png" alt="" class="icon-25" /></a>
+				</div>
+				<div class="col-xs-12 col-sm-12 margin-top-48 text-center">
+					<h4>预约产品经理订单</h4>
+				</div>
+			</div>
+
+
+			<div class="row margin-top-30">
+					<div class="col-xs-5 col-sm-5 text-right">
+
+						<p>您的姓名:</p>
+						<p>您的手机:</p>
+						<p>访谈方式:</p>
+						<p>访谈时间:</p>
+						<p>您的需求:</p>
+						<p>支付金额:</p>
+						
+					</div>
+					<div class="col-xs-7 col-sm-7 text-left">
+						<p>{$apply.name}</p>
+						<p>{$apply.phone}</p>
+						<p>{$apply.proman_fangshi}</p>
+						<p>{$apply.proman_time}</p>
+						<p> 500元(人民币)</p>
+						
+					</div>
+
+
+<!-------->
+<script type="text/javascript">
+	//调用微信JS api 支付
+	function jsApiCall()
+	{
+		WeixinJSBridge.invoke(
+			'getBrandWCPayRequest',
+			<?php echo $jsApiParameters; ?>,
+			function(res){
+				WeixinJSBridge.log(res.err_msg);
+				alert(res.err_code+res.err_desc+res.err_msg);
+				 if(res.err_msg == "get_brand_wcpay_request:ok"){
+                   //alert(res.err_code+res.err_desc+res.err_msg);
+                       window.location.href="http://www.paoding.cc/weixin/index.php/Home/User/select.html";
+                   }else{
+                       //返回跳转到订单详情页面
+                       alert(支付失败);
+                       window.location.href="http://www.paoding.cc/weixin/index.php/Home/Proman/order.html";
+                         
+                   }
+			}
+		);
+	}
+
+	function callpay()
+	{
+		if (typeof WeixinJSBridge == "undefined"){
+		    if( document.addEventListener ){
+		        document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+		    }else if (document.attachEvent){
+		        document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+		        document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+		    }
+		}else{
+		    jsApiCall();
+		}
+	}
+	</script>
+	<script type="text/javascript">
+	//获取共享地址
+	function editAddress()
+	{
+		WeixinJSBridge.invoke(
+			'editAddress',
+			<?php echo $editAddress; ?>,
+			function(res){
+				var value1 = res.proviceFirstStageName;
+				var value2 = res.addressCitySecondStageName;
+				var value3 = res.addressCountiesThirdStageName;
+				var value4 = res.addressDetailInfo;
+				var tel = res.telNumber;
+				
+				alert(value1 + value2 + value3 + value4 + ":" + tel);
+			}
+		);
+	}
+	
+	window.onload = function(){
+		if (typeof WeixinJSBridge == "undefined"){
+		    if( document.addEventListener ){
+		        document.addEventListener('WeixinJSBridgeReady', editAddress, false);
+		    }else if (document.attachEvent){
+		        document.attachEvent('WeixinJSBridgeReady', editAddress); 
+		        document.attachEvent('onWeixinJSBridgeReady', editAddress);
+		    }
+		}else{
+			editAddress();
+		}
+	};
+	
+	</script>
+<!-------->
+					
+<!--
+				<div class="col-xs-12 col-sm-12  margin-top-30 text-center">					
+						<a href="http://www.paoding.cc/weixin/weixinpaytest/example/jsapi.php?name={$apply.name}&phone={$apply.phone}" class="btn btn-red white-link">现在去付款</a>
+						
+				</div>-->
+				<div align="center">
+		<button style="width:210px; height:50px; border-radius: 15px;background-color:#FE6714; border:0px #FE6714 solid; cursor: pointer;  color:white;  font-size:16px;" type="button" onclick="callpay()" >立即支付</button>
+	</div>
+					
+			</div>
+		</div>
+<include file="Public/footer" />

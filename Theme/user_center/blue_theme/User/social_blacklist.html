@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+<title>-</title>
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/aui.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/common.css" />
+<script type="text/javascript" src="__STATIC__/user/js/api.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/jquery-1.8.2.min.js"></script>
+
+<style type="text/css">
+.ul_list{}
+li{background:#f7f7f2;color:#5e1a17;border-bottom: 1px solid #cfcfcf;overflow: hidden;position: relative;line-height: 3rem;}
+li .recommend_pic{width: 2rem;height:2rem;border-radius: 50%;overflow: hidden;position: absolute;top:0;bottom:0;left:0.5rem;margin:auto;}
+li .recommend_pic img{height: 100%;display:block;}
+li .datum{padding-left: 3rem;}
+li .datum p{font-size: 0.8rem;}
+li i{position: absolute;width: 4.5rem;height: 1.75rem;border:2px solid #a9c033;border-radius: 4px;right:0.2rem;top:0;bottom:0;margin:auto;font-size: 0.7rem;line-height: 1.65rem;text-align: center;color:#a9c033;font-style: normal;}
+li i.current{border-color:#999;color:#999;}
+</style>
+
+</head>
+
+<body>
+
+<header class="aui-bar aui-bar-nav">
+    <a href="javascript:history.go(-1);" class="aui-pull-left aui-btn">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">黑名单</div>
+</header>
+
+<section class="aui-content">
+    <ul class="aui-list aui-margin-b-15 ul_list">
+        <li>
+            <a href="javascript:;" class="recommend_pic">
+                <img src="__STATIC__/user/image/portrait.jpg" />
+            </a>
+            <div class="datum">
+                <p>sasuke</p>
+            </div>
+            <i onclick="fhClick(this)">解除黑名单</i>
+            </li>
+            <li>
+                <a href="javascript:;" class="recommend_pic">
+                    <img src="__STATIC__/user/image/portrait.jpg" />
+                </a>
+                <div class="datum">
+                    <p>sasuke</p>
+                </div>
+                <i onclick="fhClick(this)">解除黑名单</i>
+            </li>
+    </ul>
+</section>
+
+</body>
+</html>
+
+<script type="text/javascript">
+   //解除
+    function fhClick(obj) {
+        var $this = $(obj);
+        var text = $this.html();
+       if(text === "解除黑名单") {
+            $this.addClass("current");
+            $this.html("加入黑名单");
+       } else if(text === "加入黑名单"){
+            $this.removeClass("current");
+            $this.html("解除黑名单");
+       }
+    }
+</script>

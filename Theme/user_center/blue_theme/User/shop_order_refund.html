@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+<title>-</title>
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/aui.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/common.css" />
+<script type="text/javascript" src="__STATIC__/user/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/api.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/aui-tab.js"></script>
+
+<style type="text/css">
+header{position: fixed !important;}
+.aui-pull-left{position: absolute !important;top:0;left:0;}
+.aui-pull-left .aui-iconfont{font-size: 1rem !important;}
+
+.aui-content{padding-bottom:2.5rem;;padding-top: 2.25rem !important;display:none;}
+.aui-content.active{display:block;}
+
+h4{line-height: 2.5rem;font-size: 0.8rem;color:#333;background: #fff;padding:0 0.5rem;position: relative;overflow: hidden;}
+h4 label{white-space: nowrap;  text-overflow: ellipsis;overflow: hidden;}
+h4:after{content: "";height:1px;background:#ebebeb; position: absolute;left:0;right:0;bottom:0;margin:0 0.2rem;}
+.info_box{overflow: hidden;position: relative;padding:0.5rem;background:#fff;}
+.pay{position: absolute;bottom:0.5rem;right:0.5rem;font-size: 0.8rem;color:#ff3456;}
+.pic_box{height:4rem;width: 30%;max-width: 4rem;;overflow: hidden;float: left;}
+.pic_box img{width: 100%;}
+.txt_right{width: 70%;float: left;padding:0.25rem 1rem 0 0.5rem;box-sizing: border-box;}
+.txt_right h5{font-size:0.7rem;color:#333;-webkit-line-clamp: 2; -webkit-box-orient: vertical; display: -webkit-box;overflow: hidden;}
+.norms{position: absolute;left:5rem;bottom:0.5rem;}
+.norms span{font-size: 0.26rem;color:#888;}
+.bot_box{background:#fff;overflow: hidden;width: 100%;padding:0 0.25rem;border-top:1px solid #ebebeb;}
+.bot_box>div{line-height: 2.5rem;text-align: center;font-size: 0.8rem;color:#333;position: relative;float: left;;}
+.bot_box>div:nth-of-type(2){float: right !important;}
+.bot_box>div i{font-size: 0.26rem;color:#ccc;}
+.bot_box>div button{width: 4rem;height:1.5rem;line-height:1.5rem;border: 1px solid #555;text-align: center;font-size: 0.7rem;background:none;color:#555;border-radius: 3px;padding:0;}
+
+
+</style>
+
+</head>
+
+<body>
+
+<header class="aui-bar aui-bar-nav">
+    <a href="javascript:history.go(-1);" class="aui-pull-left">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-bar aui-bar-btn" style="width:65%;">
+        <div class="aui-bar-btn-item aui-active">处理中</div>
+        <div class="aui-bar-btn-item">已退款</div>
+    </div>
+    
+</header>
+
+<!-- 1 -->
+<section class="aui-content active">
+    <ul>
+        <li class="aui-padded-10">
+            <h4><label style="max-width:80%;float:left;">订单编号 139531351313131</label></h4>
+            <div class="info_box">
+               <div class="pic_box fl"><img src="__STATIC__/user/image/portrait.jpg"/></div>
+               <div class="txt_right">
+                   <h5>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</h5>
+               </div>
+           </div>
+           <div class="bot_box">
+               <div>退款金额：<span style="color:#ff3456;">¥ 99</span><i><!-- (含运费:￥0) --></i></div>
+               <div>
+                   <button>退款中</button>
+               </div>
+           </div>
+        </li>
+    </ul>
+</section>
+
+<!-- 2 -->
+<section class="aui-content">
+   <ul>
+        <li class="aui-padded-10">
+            <h4><label style="max-width:80%;float:left;">订单编号 139531351313131</label><span>退款</span></h4>
+            <div class="info_box">
+               <div class="pic_box fl"><img src="__STATIC__/user/image/portrait.jpg"/></div>
+               <div class="txt_right">
+                   <h5>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</h5>
+               </div>
+           </div>
+           <div class="bot_box">
+               <div>退款金额：<span style="color:#ff3456;">¥ 99</span><i><!-- (含运费:￥0) --></i></div>
+               <div>
+                   <button>已退款</button>
+               </div>
+           </div>
+        </li>
+    </ul>
+</section>
+
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+    apiready = function(){
+        api.parseTapmode();
+    }
+    var bar = document.querySelectorAll(".aui-bar-btn");
+    if(bar){
+        for(var i=0; i<bar.length;i++){
+            var d = bar[i];
+            var tab = new auiTab({
+                element:bar[i],
+                repeatClick:true
+            },function(ret){
+                    if(ret.index==1) {
+                        $('.aui-content:eq(0)').addClass('active').siblings('.aui-content').removeClass('active');
+                    };
+                    if(ret.index==2) {
+                        $('.aui-content:eq(1)').addClass('active').siblings('.aui-content').removeClass('active');
+                    };
+                    if(ret.index==3) {
+                        $('.aui-content:eq(2)').addClass('active').siblings('.aui-content').removeClass('active');
+                    };
+            });
+
+        }
+    }
+
+
+</script>

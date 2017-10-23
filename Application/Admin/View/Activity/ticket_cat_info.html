@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>{$gemmap_config['shop_info_store_title']}</title>
+    <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}"/>
+    <meta name="description" content="{$gemmap_config['shop_info_store_desc']}"/>
+
+    <link href="{$Think.const.CSS}/style.css" rel="stylesheet">
+    <link href="{$Think.const.CSS}/style-responsive.css" rel="stylesheet">
+
+    <script src="__PUBLIC__/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="__PUBLIC__/js/global.js"></script>
+    <script src="__PUBLIC__/js/myFormValidate.js"></script>
+    <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/js/layer/layer-min.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+    <script src="__PUBLIC__/js/myAjax.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="sticky-header">
+<section>
+    <div class="main-content" width="100%" style="margin:0px;">
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            票价类别
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="reset" class="btn btn-default">重填
+                                    </button>
+                                    <button type="button" id="postbutton" class="btn btn-default "
+                                            onclick="ajax_submit_form('form_id_name')">提交
+                                    </button>
+                                    <a href="javascript:history.go(-1)" data-toggle="tooltip" title=""
+                                       class="btn btn-default">返回</a>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="panel-body">
+                            <!--表单数据-->
+                            <form class="form-horizontal adminex-form" method="post" id="form_id_name">
+                                <input type="hidden" id="id" name="id" value="{$id}">
+                                <input type="hidden" id="data_id" name="data_id" value="{$data_id}">
+                                <input type="hidden" id="channel" name="channel" value="{$channel}">
+                                <div id="extends_div" class="extends_group">
+
+                                </div>
+                            </form><!--表单数据-->
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="{$Think.const.JS}/jquery-1.10.2.min.js"></script>
+<script src="{$Think.const.JS}/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="{$Think.const.JS}/jquery-migrate-1.2.1.min.js"></script>
+<script src="{$Think.const.JS}/bootstrap.min.js"></script>
+<script src="{$Think.const.JS}/modernizr.min.js"></script>
+<script src="{$Think.const.JS}/extends.js"></script>
+<script src="{$Think.const.JS}/jquery.nicescroll.js"></script>
+<script src="__PUBLIC__/js/layer/layer-min.js"></script>
+<script src="{$Think.const.JS}/laydate/laydate.js"></script>
+<!--common scripts for all pages-->
+<script src="{$Think.const.JS}/scripts.js"></script>
+<script src="{$Think.const.JS}/Validform_v5.3.2_min.js"></script>
+<script src="__PUBLIC__/js/pinyin.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var url = "__URL__/ticket_cat/action/extends/channel/{$channel}/type/{$type}/id/{$id}";
+        var id = $("#id").val();
+        var site = "{:session('site_name')}";
+        loadExtends(site, url, id, 'extends_div');
+
+        $("#sort_num").bind('keyup',function(){
+
+            var value = $(this).val();
+
+            value=value.replace(/[^\d{1,}\.\d{1,}|\d{1,}]/g,'');
+
+            $(this).val(value);
+        });
+
+        $('#form_id_name').Validform({
+            tiptype: 3,
+            postonce: true
+        });
+    });
+    function preview(id) {
+        var src = $('#' + id).val();
+        var content;
+        if (src == "") {
+            content = '没有图片可供预览';
+            layer.msg(content);
+        }
+        else {
+            content = "<img width='300' height='300' src='" + src + "'>";
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: false,
+                area: ['300px', '300px'],
+                skin: 'layui-layer-nobg', //没有背景色
+                shadeClose: true,
+                content: content
+            });
+        }
+    }
+    $(function () {
+        $("#sort_num").val("99");
+    })
+
+
+    //表单提交判断，id为空则URL表示添加，否则表示编辑
+    function ajax_submit_form(form_id) {
+        //判断id值是否存在
+        var id = $("#id").val();
+        var cat_name=$("#cat_name").val();
+        if(cat_name==''){
+            layer.msg("类别名称不能为空");
+            return false;
+        }
+        var channel = $("#channel").val();
+        var action = '';
+        if (id == '') {
+            //不存在，表示添加
+            action = "__MODULE__/Activity/ticket_cat/action/add/channel/{$channel}/type/{$type}";
+        } else {
+            //存在，表示编辑
+            action = "__MODULE__/Activity/ticket_cat/action/edit/channel/{$channel}/type/{$type}/id/{$id}";
+        }
+        //异步提交表单数据
+        $.ajax({
+            type: "post",
+            url: action,
+            data: $('#' + form_id).serialize(),
+            dataType: 'json',
+            success: function (res) {
+                if (res.result == 1) {
+                    layer.msg(res.msg);
+                    setTimeout(function () {
+                        window.location.href = "__MODULE__/Activity/ticket_cat/action/page_list/channel/{$channel}/type/{$type}/data_id/{$data_id}";
+                    }, 1000);
+                }
+                if (res.result == 0) {
+                    layer.msg(res.msg);
+                }
+            }
+        })
+    }
+</script>
+
+</body>
+</html>

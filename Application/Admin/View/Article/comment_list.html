@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>{$gemmap_config['shop_info_store_title']}</title>
+   <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}" />
+    <meta name="description" content="{$gemmap_config['shop_info_store_desc']}" />
+
+    <!-- Placed js at the end of the document so the pages load faster -->
+    <script src="{$Think.const.JS}/jquery-1.10.2.min.js"></script>
+    <script src="{$Think.const.JS}/jquery-ui-1.9.2.custom.min.js"></script>
+    <script src="{$Think.const.JS}/jquery-migrate-1.2.1.min.js"></script>
+    <script src="{$Think.const.JS}/bootstrap.min.js"></script>
+    <script src="{$Think.const.JS}/modernizr.min.js"></script>
+    <script src="{$Think.const.JS}/jquery.nicescroll.js"></script>
+
+    <!--pickers plugins-->
+    <script type="text/javascript" src="{$Think.const.JS}/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="{$Think.const.JS}/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="{$Think.const.JS}/bootstrap-daterangepicker/moment.min.js"></script>
+    <script type="text/javascript" src="{$Think.const.JS}/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script type="text/javascript" src="{$Think.const.JS}/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+    <script type="text/javascript" src="{$Think.const.JS}/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+
+    <!--pickers initialization-->
+    <script src="{$Think.const.JS}/pickers-init.js"></script>
+
+    <!--dynamic table-->
+    <link href="{$Think.const.JS}/advanced-datatable/css/demo_page.css" rel="stylesheet" />
+    <link href="{$Think.const.JS}/advanced-datatable/css/demo_table.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{$Think.const.JS}/data-tables/DT_bootstrap.css" />
+    <link href="{$Think.const.CSS}/style.css" rel="stylesheet">
+    <link href="{$Think.const.CSS}/style-responsive.css" rel="stylesheet">
+    <!--GEMMAP自带的矢量图标库 font-awesome.min.css-->
+    <link href="__PUBLIC__/bootstrap/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="__PUBLIC__/js/myAjax.js"></script>
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+    .navbar-default{background-color: #fff;border-bottom: 1px solid #e7e7e7;}
+    .panel{
+        border: 1px solid #ddd;
+    }
+    body{background:#f1f1f1;}
+
+    .thumbnail img{width: 460px;height: 270px;}
+    .caption {
+        padding: 9px;
+        color: #333;
+    }
+    .caption h2{font-size: 24px;line-height: 18px;font-weight: 700;}
+    .option {height: 26px;}
+
+    .panel-border {
+        padding: 10px;
+        border: 1px solid #e6e8eb;
+        margin-top: -1px;
+    }
+    .modal-dialog {
+        width: 450px;
+        height: 75%;
+        overflow-y: auto;
+        margin: 5% auto;
+    }
+    input[type=date] {
+        line-height: 15px;
+    }
+    /*.borderno{border-top:none;border-bottom:none;}*/
+    .panel-body .form-group select{margin-right:10px;}
+    .form-group a{margin-left: 10px;}
+    .panel-body .form-group:last-of-type select{margin-right:7px;}
+    .panel-heading {
+    border-bottom: 0px solid #ddd;
+}
+</style>
+
+<body class="sticky-header html" id="html">
+<section >
+    <!-- main content start-->
+    <div class="main-content" width="100%" style="margin:0px;">
+        <form action="{:U('Comment/index')}" id="search"  role="search" method="post">
+            <!--body wrapper start-->
+            <div class="wrapper" >
+                <!-- <include file="Public/breadcrumb"/> -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                评论管理
+                                <div class="pull-right">
+                                    <div class="collapse navbar-collapse navbar-default">
+                                        <div class="navbar-form row">
+                                            <a href="javascript:void(0);" id="btnclick" class="btn btn-default pull-right" style="margin-right:10px;"><i class="fa fa-refresh"></i> 重新排序</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+
+                                <div class="adv-table" >
+                                    <!-- <div class="adv-table" id="ajax_return"> -->
+                                    <table  class="display table table-bordered table-striped" >
+                                        <thead>
+                                        <tr>
+                                            <th class="text-center" width="12%">评论ID</th>
+                                            <th class="text-center" width="10%">被评文章ID</th>
+                                            <th class="text-center" width="12%">评论人账号</th>
+                                            <th class="text-center" width="12%">评论时间</th>
+                                            <th class="text-center">评论内容</th>
+                                            <th class="text-center" width="10%">回复人账号</th>
+                                            <th class="text-center" width="10%">回复时间</th>
+                                            <th class="text-center" width="10%">状态</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                       <!-- <volist name="comment_list" id="list">
+                                            <tr role="row" align="center" style ="background:#FFFFFF;">
+                                            </tr>
+                                        </volist>
+-->
+                                       <foreach name="info" item="vo" key="vokey">
+                                           <tr role="row" align="center" id="{$vo.id}">
+                                               <td>{$vo.id}</td>
+                                               <td>{$vo.data_id}</td>
+                                               <td>{$vo.comment_user_name}</td>
+                                               <td>{$vo.comment_time}</td>
+                                               <td>{$vo.content}</td>
+                                               <td>{$vo.feedback_user_name}</td>
+                                               <td>{$vo.feedback_time}</td>
+                                               <td>{$vo.status}</td>
+                                           </tr>
+                                       </foreach>
+                                        </tbody>
+                                    </table>
+
+
+                                    <!-- Modal -->
+                                    <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                                    <h4 class="modal-title">信息</h4>
+                                                </div>
+                                                <div class="modal-body" id="del_info">
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="del();"> 确定</button>
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal"> 取消</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- modal -->
+                                 <div class="panel-body">
+                                    <div class="row-fluid">
+                                        <div class="span6">
+                                            <div class="dataTables_info" id="dynamic-table_info">
+                                                <label style="float:left">
+                                                    <select class="form-control" size="1" id="page_num" name="page_num" aria-controls="dynamic-table" onchange="search()">
+                                                        <option value="25">25</option>
+                                                        <option value="50">50</option>
+                                                        <option value="100">100</option>
+                                                    </select>
+                                                </label>
+                                                <label style="float:left;margin-left:10px;margin-top:7px">
+                                                    <span class=" wenzi" style="float:left">条每页，总共 {$count} 条</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="span6">
+                                            <div class="dataTables_paginate paging_bootstrap pagination">
+                                                <ul>
+                                                    <if condition="$page_now eq 1" >    <!-- 上一页 -->
+                                                        <li class="prev disabled">
+                                                            <a href="#">
+                                                                上一页
+                                                            </a>
+                                                        </li>
+                                                        <else />
+                                                        <li class="prev">
+                                                            <a href="{:U('Admin/Comment/index/page_now')}/{$page_now-1}/page_num/{$page_num}">
+                                                                上一页
+                                                            </a>
+                                                        </li>
+                                                    </if>   <!-- 上一页 end -->
+                                                    <if condition="$page lt 5" >    <!-- 页码条 -->
+                                                        <for start="1" end="$page+1">   <!-- 循环四条以内 -->
+                                                            <if condition="$i eq $page_now ">
+                                                                <li class="active"> <a href="#">{$i}</a></li>
+                                                                <elseif condition="$i lt $page_now "/>
+                                                                <li > <a href="{:U('Admin/Comment/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a></li>
+                                                                <else />
+                                                                <li > <a href="{:U('Admin/Comment/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a></li>
+                                                            </if>
+                                                        </for>
+                                                        <elseif  condition="$page_now lt 3"/>
+                                                        <for start="1" end="6">   <!-- 循环1-5 -->
+
+                                                            <if condition="$i eq $page_now ">
+                                                                <li class="active"> <a href="#">{$page_now}</a></li>
+                                                                <elseif condition="$i lt $page_now "/>
+                                                                <li > <a href="{:U('Admin/Comment/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a></li>
+                                                                <else />
+                                                                <li > <a href="{:U('Admin/Comment/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a></li>
+                                                            </if>
+                                                        </for>
+                                                        <elseif condition="$page_now eq $page-1"/>
+                                                        <for start="$page_now-3" end="$page+1">   <!-- 循环当前页为倒数第二页时 -->
+                                                            <if condition="$i eq $page_now ">
+                                                                <li class="active"> <a href="#">{$page_now}</a></li>
+                                                                <elseif condition="$i lt $page "/>
+                                                                <li > <a href="{:U('Admin/Comment/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a></li>
+                                                                <else />
+                                                                <li > <a href="{:U('Admin/Comment/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a></li>
+                                                            </if>
+                                                        </for>
+                                                        <elseif condition="$page_now eq $page"/>
+                                                        <for start="$page_now-4" end="$page+1">   <!-- 循环当前页为最后一页时 -->
+                                                            <if condition="$i eq $page_now ">
+                                                                <li class="active"> <a href="#">{$page_now}</a></li>
+                                                                <elseif condition="$i lt $page "/>
+                                                                <li > <a href="{:U('Admin/Comment/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a></li>
+                                                                <else />
+                                                                <li > <a href="{:U('Admin/Comment/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a></li>
+                                                            </if>
+                                                        </for>
+                                                        <else />
+                                                        <for start="$page_now-2" end="$page_now+3">   <!-- 循环除了前五条 和后五条 -->
+
+                                                            <if condition="$i eq $page_now ">
+                                                                <li class="active"> <a href="#">{$page_now}</a></li>
+                                                                <elseif condition="$i lt $page "/>
+                                                                <li > <a href="{:U('Admin/Comment/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a></li>
+                                                                <else />
+                                                                <li > <a href="{:U('Admin/Comment/index/page_now')}/{$i}/page_num/{$page_num}">{$i}</a></li>
+                                                            </if>
+                                                        </for>
+                                                    </if>   <!-- 页码条 end -->
+
+                                                     <if condition="($page_now neq $page) AND ($page neq 0)"> <!-- 下一页 -->
+                                                        <li class="next ">
+                                                            <a href="{:U('Admin/Comment/index/page_now/')}/{$page_now+1}/page_num/{$page_num}">
+                                                                下一页
+                                                            </a>
+                                                        </li>
+                                                        <else />
+                                                        <li class="next disabled">
+                                                            <a href="#">
+                                                                下一页
+                                                            </a>
+                                                        </li>
+                                                    </if><!-- 下一页 end-->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                             </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!--body wrapper end-->
+        </form>
+
+
+
+    </div>
+    <!-- main content end-->
+</section>
+
+<!--dynamic table-->
+<script type="text/javascript" language="javascript" src="{$Think.const.JS}/advanced-datatable/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="{$Think.const.JS}/data-tables/DT_bootstrap.js"></script>
+<!--dynamic table initialization -->
+<script src="{$Think.const.JS}/dynamic_table_init.js"></script>
+<!--common scripts for all pages-->
+<script src="{$Think.const.JS}/scripts.js"></script>
+
+<script>
+
+    $(function(e) {
+        $('#add').click(function(e) {
+            var myAdd = $('<div class="form-group">' +
+                    '<select class="check option fl" name="searchfor[]" onchange="selectValue(this);">' +
+                    '<option value="username" searchtype="1">用户</option>'+
+                    '<option value="content" searchtype="1">评论内容</option>'+
+                    '<option value="goods_name" searchtype="1">商品名称</option>'+
+                    '<option value="add_time" searchtype="7" propname="recentActivityRecordTime">选择时间</option>'+
+
+                    '</select>' +
+                    '<select name="select[]" id="" class="option fl">' +
+                    '<option value="1">等于</option>'+
+                    '<option value="2">不等于</option>'+
+                    '<option value="3">小于</option>'+
+                    '<option value="4">大于</option>'+
+                    '<option value="5">小于等于</option>'+
+                    '<option value="6">大于等于</option>'+
+                    '<option value="7">包含</option>'+
+                    '<option value="8">不包含</option>'+
+                    '</select>' +
+                    '<input type="text" name="content[]"/>' +
+                    '<span><a style="margin-left:16px" class="del" href="javascript:;">' +
+                    '<img src="{$Think.const.IMG}/details_close.png" alt="" /></a></span></div>')
+
+            $('#qwe').prepend(myAdd);
+        });
+
+        $(document).on('click','.del',function(){
+            var self = $(this)
+
+            setTimeout(function(){
+                self.parent().parent().remove();
+            },300)
+        })
+
+    });
+    var searchtype;
+
+    function selectValue(_this){
+        searchtype=$(_this).find("option:selected").attr('searchtype');
+        console.log(searchtype)
+        if(searchtype==7){
+            $(_this).siblings('input')[0].type='date';
+        }else{
+            $(_this).siblings('input')[0].type='text'
+        }
+    }
+
+
+    //    $(document).ready(function(){
+    //        //选中附件大小
+    //        var leng = $("select[name='select[]']").val().length;
+    //       alert(leng);
+    //
+    //    });
+
+
+</script>
+
+<script type="text/javascript">
+    // 删除操作
+
+
+    var url;
+    var comment_id;
+
+    $('.del-comment').click(function(){
+        url = $(this).attr('data-url');
+        comment_id = $(this).attr('data-id');
+        $("#del_info").html("是否确认删除【 "+$(this).attr('data-name')+" 】的评论内容： "+ $("#comment-"+comment_id).html()+" ?");
+    });
+    function del()
+    {
+        location.href = url;
+    }
+    function search(){
+        $('#search').submit();
+    }
+    $(document).ready(function(){
+        //默认选中
+        $("#page_num").val({$page_num});
+    });
+</script>
+</body>
+</html>

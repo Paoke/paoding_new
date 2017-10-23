@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+    <title>{$gemmap_config['shop_info_store_title']}</title>
+    <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}" />
+    <meta name="description" content="{$gemmap_config['shop_info_store_desc']}" />
+    <link href="{$Think.const.CSS}/style.css" rel="stylesheet">
+    <link href="{$Think.const.CSS}/style-responsive.css" rel="stylesheet">
+    <script src="__PUBLIC__/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="__PUBLIC__/js/layer/layer-min.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+    <script src="__PUBLIC__/js/global.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+    body{background:#f1f1f1;}
+    .thumbnail{
+        display: block;
+        padding: 4px;
+        margin-bottom: 20px;
+        line-height: 1.42857143;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        -webkit-transition: border .2s ease-in-out;
+        -o-transition: border .2s ease-in-out;
+    }
+    .thumbnail img{width: 460px;height: 270px;}
+    .caption {
+        padding: 9px;
+        color: #333;
+    }
+    .caption h2{font-size: 24px;line-height: 18px;font-weight: 700;}
+    .option {height: 27px;width: 145px;}
+
+    .panel-body {
+        padding: 15px 5px;
+        border: 1px solid #e6e8eb;
+        margin-top: -1px;
+    }
+    .ordertop{margin-top: 15px}
+    /*.borderno{border-top:none;border-bottom:none;}*/
+
+    .modal-dialog {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .wrapperrow {
+        margin-top: 15px;
+        border-top: 1px solid #e6e8eb;
+        padding: 0px;
+    }
+    .wrapper::after {
+        margin-bottom:0px;
+    }
+    .modal-header {
+        padding: 5px 20px;
+    }
+    .modal-footer {
+        margin-top: 0px;
+        padding: 0px 20px;
+    }
+    .dataTables_paginate {
+        padding: 0px 0px 0px 15px;
+        width:90%;
+    }
+    .paneltop {
+        border: none;
+        border-top: 1px solid #e6e8eb;
+        padding:0px;
+    }
+    .margintop {margin-top:-1px;
+        padding-left:15px;
+    }
+    .formbottom {
+        margin-bottom:5px;
+    }
+</style>
+
+<body class="sticky-header">
+
+<section>
+    <!-- main content start-->
+    <div class="main-content" width="100%" style="margin:0px;">
+        <div   class="postform"  >
+            <!--body wrapper start-->
+            <div class="wrapper" style="padding:5px">
+                <!-- <include file="Public/breadcrumb"/> -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                发送消息
+                                <div class="pull-right">
+                                    <div class="btn-group">
+                                        <button type="button" id="postbutton" class="btn btn-default "
+                                                onclick="ajax_submit_form('message_add')"><i class="fa fa-save"></i>发送
+                                        </button>
+                                        <a href="javascript:history.go(-1)" data-toggle="tooltip" title=""
+                                           class="btn btn-default" data-original-title="返回"><i class="fa fa-reply"></i>返回</a>
+                                    </div>
+                                </div>
+                            </header>
+                            <form method="post" action="" class="postform" id="message_add">
+                                <div class="panel-body">
+                                    <div class="nav-button col-md-12">
+                                        <span  class="col-md-1">收件人：</span>
+                                        <input name="user_name" class="form-control form-option" style="float: left;" id="user_name" value="" placeholder="用户名/昵称/手机/邮箱搜索" />&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <select name="user_id" style="height: 34px;" id="user_id" class="option"  errormsg="收件人不得为空" datatype="n">
+                                            <option value="a">--请搜索后选择--</option>
+                                        </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <button class="btn btn-info" type="button" onclick="search_user();"/>搜索
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="nav-button col-md-12">
+                                        <span style="float: left;">消息内容：</span>&nbsp;&nbsp;  <br /><textarea datatype="*" nullmsg="消息内容不得为空" name="content" style="margin-left: 90px;" class="form-control form-input" rows="5"></textarea>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </div>
+                                </div>
+
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
+    </div>
+            <!--body wrapper end-->
+    </div>
+    <!-- main content end-->
+</section>
+<script type="text/javascript" src="{$Think.const.JS}/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$Think.const.JS}/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript">
+    $('#message_add').Validform({
+        tiptype:3
+    });
+    $('#savebtn').click(function () {
+    });
+</script>
+<script src="{$Think.const.JS}/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="{$Think.const.JS}/jquery-migrate-1.2.1.min.js"></script>
+<script src="{$Think.const.JS}/bootstrap.min.js"></script>
+<script src="{$Think.const.JS}/modernizr.min.js"></script>
+<script src="{$Think.const.JS}/jquery.nicescroll.js"></script>
+
+
+<!--common scripts for all pages-->
+<script src="{$Think.const.JS}/scripts.js"></script>
+
+<script>
+    function ajax_submit_form(form_id) {
+        //判断id值是否存在
+        var id = $("#id").val();
+        var action = '';
+        action = "__MODULE__/User/message/action/add/";
+        //异步提交表单数据
+        $.ajax({
+            type: "post",
+            url: action,
+            data: $('#' + form_id).serialize(),
+            dataType: 'json',
+            success: function (res) {
+                if (res.result == 1) {
+                    layer.msg(res.msg);
+                    setTimeout(function () {
+                        window.location.href = "__MODULE__/User/message/action/page_list";
+                    }, 1000);
+                }
+                if (res.result == 0) {
+                    layer.msg(res.msg);
+                    setTimeout(function () {
+                        window.location.href = "__MODULE__/User/message/action/page_add";
+                    }, 1000);
+                }
+            }
+        })
+    }
+
+    // 搜索用户
+    function search_user()
+    {
+        var user_name = $('#user_name').val();
+        if($.trim(user_name) == '')
+            return false;
+
+        $.ajax({
+            type : "POST",
+            url:"/index.php?m=Admin&c=User&a=search_user",//+tab,
+            data :{search_key:$('#user_name').val()},// 你的formid
+            success: function(data){
+                if(!data)
+                    data= '<option value="n">--没有搜索结果--</option>';
+                $('#user_id').html(data);
+            }
+        });
+    }
+</script>
+
+
+</body>
+</html>
+
+

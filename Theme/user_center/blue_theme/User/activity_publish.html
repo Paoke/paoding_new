@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>-</title>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/user/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/user/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/user/css/cityPicker.css" />
+    <script type="text/javascript" src="__STATIC__/user/js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/user/js/api.js"></script>
+    <script type="text/javascript" src="__STATIC__/user/js/aui-tab.js"></script>
+    <script type="text/javascript" src="__STATIC__/user/js/cityPicker.js"></script>
+    <!-- pic -->
+    <script type="text/javascript" src="__STATIC__/user/js/exif.js"></script>
+    <script type="text/javascript" src="__STATIC__/user/js/uploadImage.js"></script>
+
+    <!-- time -->
+    <link rel="stylesheet" type="text/css" href="__STATIC__/user/js/mobiscroll/mobiscroll_002.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/user/js/mobiscroll/mobiscroll.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/user/js/mobiscroll/mobiscroll_003.css" />
+
+    <script type="text/javascript" charset="utf-8" src="__STATIC__/user/js/mobiscroll/mobiscroll_002.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__STATIC__/user/js/mobiscroll/mobiscroll_004.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__STATIC__/user/js/mobiscroll/mobiscroll_003.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__STATIC__/user/js/mobiscroll/mobiscroll.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__STATIC__/user/js/mobiscroll/mobiscroll_005.js"></script>
+
+    <style type="text/css">
+        body{background-color:#efeff4;}
+        .aui-pull-left{position: absolute !important;top:0;left:0;}
+        .aui-pull-left .aui-iconfont{font-size: 1rem !important;}
+        /*城市地区*/
+        .pro-picker, .city-picker{top:2.25rem;z-index: 99;}
+        .city{font-size: 0.7rem !important;padding-left:0 !important;text-align: left !important;}
+
+        .fl{float: left;}
+        .fr{float: right;}
+        .mt{margin-top:0.5rem;}
+        .write{margin-top: 0.5rem;padding:0rem 0.5rem 1rem;}
+        .write .time{padding:0.25rem 0 0.25rem 1.75rem;width: 100%;height:2rem;box-sizing:border-box;background:url(__STATIC__/user/image/pen.png)no-repeat 6px center;background-size: 1rem;background-color:#fff;}
+        .write .time input{font-size: 0.7rem;height:100%;width: 100%;}
+        textarea { width: 100%; resize: none; font-size: 0.75rem; color: #666; line-height:1rem; text-indent: 1em;  margin-top: 0.75rem;padding:0.5rem 0.25rem;box-sizing: border-box;border-radius: 4px;background:#fff;height:auto;}
+        .place a{background:url(__STATIC__/user/image/place.png)no-repeat 6px center;background-size: 1rem;background-color:#fff;padding:0 0.2rem 0 1.75rem;box-sizing:border-box;font-size: 0.7rem;display:block;line-height:2rem;color:#333;overflow: hidden; white-space: nowrap;text-overflow: ellipsis;margin-top:0.5rem;}
+        .place input{background-color:#fff;padding:0 0.5rem 0 1.75rem;box-sizing:border-box;font-size: 0.7rem;display:block;line-height:2rem;color:#333;width: 100%;border-top:1px solid #ebebeb;}
+        .time_box{overflow: hidden;}
+        .Date{padding:0.1rem 0 0.1rem 0.7rem;width: 100%;height:0.88rem;box-sizing:border-box;background-size: 0.4rem;background-color:#fff;}
+        .time_box .left,.time_box .right{ width: 48%; height:2rem; line-height:2rem; background: #fff; box-sizing: border-box; padding-left: 0.5rem; }
+        .time_box input{line-height:2rem;font-size: 0.7rem;}
+        .people{padding:0.25rem 0 0.25rem 1.7rem;width: 100%;height:2rem;box-sizing:border-box;background:url(__STATIC__/user/image/people.png)no-repeat 6px center;background-size: 1rem;background-color:#fff;}
+        .people input{font-size: 0.7rem;height:100%;width: 100%;}
+        .cost{overflow: hidden;}
+        .cost a { display: block; width: 45%; height: 2rem; line-height:2rem; background: #e79460; text-align: center; font-size: 0.7rem; color: #fff; border: 2px solid #eec3a6; opacity: 0.6; }
+        .cost a.cur { opacity: 1; }
+        .sum{ padding: 0.1rem 0 0.1rem 1.7rem; width: 100%; height: 2rem; box-sizing: border-box; background: url(__STATIC__/user/image/sum.png)no-repeat 6px center; background-size: 1rem; background-color: #fff; }
+        .sum input{font-size: 0.7rem;width: 100%;height: 100%;}
+
+        .add_pic {margin-top:0.75rem;background:#fff;padding:0.5rem;position: relative;padding-top: 1.5rem;}
+        .add_pic .box_in{position: relative;border:1px solid #03a9f4 ;height:5rem;width:5rem;margin:auto;}
+        .add_pic .box_in:after{position: absolute;content:"";width: 50%;height: 50%;background:url(__STATIC__/user/image/add.png)no-repeat center center;background-size:cover;left:0;right:0;top:0.5rem;;margin:auto;}
+        .add_pic .box_in:before{position: absolute;content:"上传图片";bottom: 0.5rem;text-align: center;width: 100%;font-size: 0.7rem;color:#03a9f4 ;}
+        .add_pic input{ position: absolute; width: 100%;height: 100%; right: 0; top: 0; opacity: 0; filter: alpha(opacity=0); cursor: pointer;z-index: 999;}
+    </style>
+
+</head>
+
+<body>
+
+<header class="aui-bar aui-bar-nav">
+    <a href="javascript:history.go(-1);" class="aui-pull-left">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">发布活动</div>
+    <!--  <a class="aui-pull-right">
+          <span>编辑</span>
+      </a> -->
+</header>
+
+<section class="aui-content">
+    <div class="content write">
+        <div class="time">
+            <input type="text" placeholder="活动主题"/>
+        </div>
+        <div class="place mt">
+            <a href="javascript:;"><input style="border:none;" value="选择位置" class="city" type="text" /></a>
+            <input type="text" placeholder="输入详细地址"/>
+        </div>
+        <div class="time_box mt">
+            <div class="left fl">
+                <input placeholder="开始时间" name="txtStartTime" id="txtStartTime" type="text" readonly="readonly">
+            </div>
+            <div class="right fr">
+                <input placeholder="结束时间" name="txtEndTime" id="txtEndTime" type="text" readonly="readonly">
+            </div>
+        </div>
+        <div class="people mt">
+            <input type="text" placeholder="人数限制 (0为不限制人数)"/>
+        </div>
+        <div class="cost mt">
+            <a href="javascript:;" class="fl cur">免费</a>
+            <a href="javascript:;" class="fr" id="want">付费</a>
+        </div>
+        <div class="mt sum" id="sum" style="display:none">
+            <input type="number"  placeholder="输入金额" />
+        </div>
+
+        <div class="add_pic">
+            <div class="box_in">
+                <input type="file" accept="image/*" id="uploadImage" capture="camera" onchange="selectFileImage(this);"/>
+            </div>
+            <div class="aui-padded-t-15 aui-padded-b-15">
+                <img alt="" src="" id="myImage"/>
+            </div>
+        </div>
+
+        <form>
+            <textarea id="txtContent" name="txtContent"  rows="5" placeholder="活动详情描述!" datatype="*" nullmsg="请填写留言内容" sucmsg=" "></textarea>
+        </form>
+    </div>
+
+    <div style="width:90%;margin:auto;margin-top:0.5rem;margin-bottom:1.5rem;" class="aui-btn aui-btn-info aui-btn-block aui-btn-sm">发布</div>
+</section>
+
+</body>
+
+</html>
+
+<script type="text/javascript">
+
+    // 地区选择
+    $(".city").CityPicker();
+
+
+    //时间
+    $(function () {
+        var currYear = (new Date()).getFullYear();
+        var opt = {};
+        opt.date = { preset: 'date' };
+        opt.datetime = { preset: 'datetime' };
+        opt.time = { preset: 'time' };
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式
+            mode: 'scroller', //日期选择模式
+            dateFormat: 'yyyy-mm-dd',
+            lang: 'zh',
+            showNow: true,
+            nowText: "今天",
+            startYear: currYear - 10, //开始年份
+            endYear: currYear + 10 //结束年份
+        };
+        var optDateTime = $.extend(opt['datetime'], opt['default']);
+        var optTime = $.extend(opt['time'], opt['default']);
+        $("#txtStartTime,#txtEndTime").mobiscroll(optDateTime).datetime(optDateTime);
+    });
+
+
+    // 收费
+    $('.cost').on('click', 'a', function (ev) {
+        $('.cost a').removeClass('cur');
+        $(this).addClass('cur');
+        if ($('#want').hasClass('cur')) {
+            $('#sum').css('display', 'block');
+            isFree = false;
+        } else {
+            $('#sum').css('display', 'none');
+            isFree = true;
+        }
+    });
+
+</script>

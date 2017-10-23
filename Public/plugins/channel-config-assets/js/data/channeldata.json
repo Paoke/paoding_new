@@ -1,0 +1,1025 @@
+[
+  {
+    "title": "channeldata1",
+    "fields": {
+      "title1": {
+        "label": "内容1",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      },
+      "title2": {
+        "label": "内容2",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      },
+      "title3": {
+        "label": "内容3",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "title": "channeldata2",
+    "fields": {
+      "title1": {
+        "label": "内容1",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      },
+      "title2": {
+        "label": "内容2",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "title": "channeldata3",
+    "fields": {
+      "title1": {
+        "label": "内容1",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      },
+      "title2": {
+        "label": "内容2",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "title": "channeldata4",
+    "fields": {
+      "title1": {
+        "label": "内容1",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      },
+      "title2": {
+        "label": "内容2",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      },
+      "title3": {
+        "label": "内容3",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "title": "channeldata5",
+    "fields": {
+      "title1": {
+        "label": "内容1",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      },
+      "title2": {
+        "label": "内容2",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      },
+      "title3": {
+        "label": "内容3",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "title": "channeldata6",
+    "fields": {
+      "title1": {
+        "label": "内容1",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      },
+      "title2": {
+        "label": "内容2",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      },
+      "title3": {
+        "label": "内容3",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      },
+      "title4": {
+        "label": "内容4",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      },
+      "title5": {
+        "label": "内容5",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "title": "channeldata7",
+    "fields": {
+      "title1": {
+        "label": "内容1",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      },
+      "title2": {
+        "label": "内容2",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      },
+      "title3": {
+        "label": "内容3",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "title": "channeldata8",
+    "fields": {
+      "title1": {
+        "label": "内容1",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "title": "channeldata9",
+    "fields": {
+      "title1": {
+        "label": "内容1",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      },
+      "title2": {
+        "label": "内容2",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      }
+
+    }
+  },
+  {
+    "title": "channeldata10",
+    "fields": {
+      "title1": {
+        "label": "内容1",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      },
+      "title2": {
+        "label": "内容2",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      },
+      "title3": {
+        "label": "内容3",
+        "type": "select",
+        "value": [
+          {
+            "value": "title",
+            "label": "标题",
+            "selected": false
+          },
+          {
+            "value": "desc",
+            "label": "摘要",
+            "selected": false
+          },
+          {
+            "value": "content",
+            "label": "内容",
+            "selected": false
+          },
+          {
+            "value": "clicks",
+            "label": "浏览量",
+            "selected": false
+          },
+          {
+            "value": "create_time",
+            "label": "创建时间",
+            "selected": true
+          },
+          {
+            "value": "create_user",
+            "label": "发布人",
+            "selected": false
+          }
+        ]
+      }
+    }
+  }
+]

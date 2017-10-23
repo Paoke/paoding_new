@@ -1,0 +1,497 @@
+[
+  {
+    "title": "Component1",
+    "fields": {
+      "id": {
+        "label": "ID / Name",
+        "type": "input",
+        "value": "component1"
+      },
+      "link1": {
+        "label": "链接1",
+        "type": "input",
+        "value": ""
+      },
+      "img1": {
+        "label": "图标1",
+        "type": "image",
+        "value": "/Public/images/component/tongxun.png"
+      },
+      "title1": {
+        "label": "标题1",
+        "type": "input",
+        "value": "班级通讯"
+      },
+      "link2": {
+        "label": "链接2",
+        "type": "input",
+        "value": ""
+      },
+      "img2": {
+        "label": "图标2",
+        "type": "image",
+        "value": "/Public/images/component/zuoye.png"
+      },
+      "title2": {
+        "label": "标题2",
+        "type": "input",
+        "value": "家庭作业"
+      },
+      "link3": {
+        "label": "链接3",
+        "type": "input",
+        "value": ""
+      },
+      "img3": {
+        "label": "图标3",
+        "type": "image",
+        "value": "/Public/images/component/chenji.png"
+      },
+      "title3": {
+        "label": "标题3",
+        "type": "input",
+        "value": "成绩查询"
+      },
+      "link4": {
+        "label": "链接4",
+        "type": "input",
+        "value": ""
+      },
+      "img4": {
+        "label": "图标4",
+        "type": "image",
+        "value": "/Public/images/component/kecheng.png"
+      },
+      "title4": {
+        "label": "标题4",
+        "type": "input",
+        "value": "课程表"
+      },
+      "link5": {
+        "label": "链接5",
+        "type": "input",
+        "value": ""
+      },
+      "img5": {
+        "label": "图标5",
+        "type": "image",
+        "value": "/Public/images/component/kuaixun.png"
+      },
+      "title5": {
+        "label": "标题5",
+        "type": "input",
+        "value": "实时快讯"
+      }
+    }
+  },
+  {
+    "title": "Component2",
+    "fields": {
+      "id": {
+        "label": "ID / Name",
+        "type": "input",
+        "value": "component2"
+      },
+      "link1": {
+        "label": "链接1",
+        "type": "input",
+        "value": ""
+      },
+      "img1": {
+        "label": "图标1",
+        "type": "image",
+        "value": "/Public/images/component/one11.png"
+      },
+      "title1": {
+        "label": "标题1",
+        "type": "input",
+        "value": "信用贷款"
+      },
+      "desc1": {
+        "label": "描述1",
+        "type": "input",
+        "value": "无担保 无抵押"
+      },
+      "link2": {
+        "label": "链接2",
+        "type": "input",
+        "value": ""
+      },
+      "img2": {
+        "label": "图标2",
+        "type": "image",
+        "value": "/Public/images/component/daikuai20.png"
+      },
+      "title2": {
+        "label": "标题2",
+        "type": "input",
+        "value": "保障贷款"
+      },
+      "desc2": {
+        "label": "描述2",
+        "type": "input",
+        "value": "全程代办 安全担保"
+      },
+      "link3": {
+        "label": "链接3",
+        "type": "input",
+        "value": ""
+      },
+      "img3": {
+        "label": "图标3",
+        "type": "image",
+        "value": "/Public/images/component/daikuai10.png"
+      },
+      "title3": {
+        "label": "标题3",
+        "type": "input",
+        "value": "保障贷款"
+      },
+      "desc3": {
+        "label": "描述3",
+        "type": "input",
+        "value": "全程代办 安全担保"
+      },
+      "link4": {
+        "label": "链接4",
+        "type": "input",
+        "value": ""
+      },
+      "img4": {
+        "label": "图标4",
+        "type": "image",
+        "value": "/Public/images/component/daikuai20.png"
+      },
+      "title4": {
+        "label": "标题4",
+        "type": "input",
+        "value": "保障贷款"
+      },
+      "desc4": {
+        "label": "描述4",
+        "type": "input",
+        "value": "全程代办 安全担保"
+      },
+      "link5": {
+        "label": "链接5",
+        "type": "input",
+        "value": ""
+      },
+      "img5": {
+        "label": "图标5",
+        "type": "image",
+        "value": "/Public/images/component/daikuai10.png"
+      },
+      "title5": {
+        "label": "标题5",
+        "type": "input",
+        "value": "保障贷款"
+      },
+      "desc5": {
+        "label": "描述5",
+        "type": "input",
+        "value": "全程代办 安全担保"
+      }
+    }
+  },
+  {
+    "title": "Component3",
+    "fields": {
+      "id": {
+        "label": "ID / Name",
+        "type": "input",
+        "value": "component3"
+      },
+      "link1": {
+        "label": "链接1",
+        "type": "input",
+        "value": ""
+      },
+      "img1": {
+        "label": "图标1",
+        "type": "image",
+        "value": "/Public/images/component/Biscuit.png"
+      },
+      "title1": {
+        "label": "标题1",
+        "type": "input",
+        "value": "休闲零食"
+      },
+      "desc1": {
+        "label": "描述1",
+        "type": "input",
+        "value": "snacks"
+      },
+      "link2": {
+        "label": "链接2",
+        "type": "input",
+        "value": ""
+      },
+      "img2": {
+        "label": "图标2",
+        "type": "image",
+        "value": "/Public/images/component/bbt01.png"
+      },
+      "title2": {
+        "label": "标题2",
+        "type": "input",
+        "value": "休闲零食"
+      },
+      "desc2": {
+        "label": "描述2",
+        "type": "input",
+        "value": "snacks"
+      },
+      "link3": {
+        "label": "链接3",
+        "type": "input",
+        "value": ""
+      },
+      "img3": {
+        "label": "图标3",
+        "type": "image",
+        "value": "/Public/images/component/binggan02.png"
+      },
+      "title3": {
+        "label": "标题3",
+        "type": "input",
+        "value": "休闲零食"
+      },
+      "desc3": {
+        "label": "描述3",
+        "type": "input",
+        "value": "snacks"
+      },
+      "link4": {
+        "label": "链接4",
+        "type": "input",
+        "value": ""
+      },
+      "img4": {
+        "label": "图标4",
+        "type": "image",
+        "value": "/Public/images/component/lingshi01.png"
+      },
+      "title4": {
+        "label": "标题4",
+        "type": "input",
+        "value": "休闲零食"
+      },
+      "desc4": {
+        "label": "描述4",
+        "type": "input",
+        "value": "snacks"
+      }
+    }
+  },
+  {
+    "title": "Component4",
+    "fields": {
+      "id": {
+        "label": "ID / Name",
+        "type": "input",
+        "value": "component4"
+      },
+      "link1": {
+        "label": "链接1",
+        "type": "input",
+        "value": ""
+      },
+      "img1": {
+        "label": "图标1",
+        "type": "image",
+        "value": "/Public/images/component/toutiao.png"
+      },
+      "link2": {
+        "label": "链接2",
+        "type": "input",
+        "value": ""
+      },
+      "img2": {
+        "label": "图标2",
+        "type": "image",
+        "value": "/Public/images/component/yifu.jpg"
+      },
+      "link3": {
+        "label": "链接3",
+        "type": "input",
+        "value": ""
+      },
+      "img3": {
+        "label": "图标3",
+        "type": "image",
+        "value": "/Public/images/component/yifu.jpg"
+      },
+      "link4": {
+        "label": "链接4",
+        "type": "input",
+        "value": ""
+      },
+      "img4": {
+        "label": "图标4",
+        "type": "image",
+        "value": "/Public/images/component/yifu.jpg"
+      },
+      "link5": {
+        "label": "链接5",
+        "type": "input",
+        "value": ""
+      },
+      "img5": {
+        "label": "图标5",
+        "type": "image",
+        "value": "/Public/images/component/yifu.jpg"
+      }
+    }
+  },
+  {
+    "title": "Component5",
+    "fields": {
+      "id": {
+        "label": "ID / Name",
+        "type": "input",
+        "value": "component5"
+      },
+      "link11": {
+        "label": "链接11",
+        "type": "input",
+        "value": ""
+      },
+      "title11": {
+        "label": "标题11",
+        "type": "input",
+        "value": "page title"
+      },
+      "link12": {
+        "label": "链接12",
+        "type": "input",
+        "value": ""
+      },
+      "title12": {
+        "label": "标题12",
+        "type": "input",
+        "value": "个性 App"
+      },
+      "link13": {
+        "label": "链接13",
+        "type": "input",
+        "value": ""
+      },
+      "title13": {
+        "label": "标题13",
+        "type": "input",
+        "value": "电商 APP"
+      },
+      "link14": {
+        "label": "链接14",
+        "type": "input",
+        "value": ""
+      },
+      "title14": {
+        "label": "标题14",
+        "type": "input",
+        "value": "唯美 APP"
+      },
+      "link": {
+        "label": "大图链接",
+        "type": "input",
+        "value": ""
+      },
+      "img": {
+        "label": "大图",
+        "type": "image",
+        "value": "/Public/images/component/nianqing.jpg"
+      },
+      "link21": {
+        "label": "链接21",
+        "type": "input",
+        "value": ""
+      },
+      "title21": {
+        "label": "标题21",
+        "type": "input",
+        "value": "急速 飞驰"
+      },
+      "link22": {
+        "label": "链接22",
+        "type": "input",
+        "value": ""
+      },
+      "title22": {
+        "label": "标题22",
+        "type": "input",
+        "value": "时尚 酷炫"
+      },
+      "link23": {
+        "label": "链接23",
+        "type": "input",
+        "value": ""
+      },
+      "title23": {
+        "label": "标题23",
+        "type": "input",
+        "value": "旅行 App"
+      },
+      "link24": {
+        "label": "链接24",
+        "type": "input",
+        "value": ""
+      },
+      "title24": {
+        "label": "标题24",
+        "type": "input",
+        "value": "简约 App"
+      }
+    }
+  },
+  {
+    "title": "Component6",
+    "fields": {
+      "id": {
+        "label": "ID / Name",
+        "type": "input",
+        "value": "component6"
+      },
+      "link1": {
+        "label": "链接1",
+        "type": "input",
+        "value": ""
+      },
+      "title1": {
+        "label": "标题1",
+        "type": "input",
+        "value": "商品1"
+      },
+      "link2": {
+        "label": "链接2",
+        "type": "input",
+        "value": ""
+      },
+      "title2": {
+        "label": "标题2",
+        "type": "input",
+        "value": "商品2"
+      },
+      "link3": {
+        "label": "链接3",
+        "type": "input",
+        "value": ""
+      },
+      "title3": {
+        "label": "标题3",
+        "type": "input",
+        "value": "商品3"
+      },
+      "link4": {
+        "label": "链接4",
+        "type": "input",
+        "value": ""
+      },
+      "title4": {
+        "label": "标题4",
+        "type": "input",
+        "value": "商品4"
+      }
+    }
+  }
+]

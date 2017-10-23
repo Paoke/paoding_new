@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+<title>-</title>
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/aui.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/common.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/cityPicker.css" />
+<script type="text/javascript" src="__STATIC__/user/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/api.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/cityPicker.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/layer.js"></script>
+
+<style type="text/css">
+.pro-picker, .city-picker{top:2.25rem;}
+
+.aui-list{border-top:1px solid #ebebeb !important;border-bottom:1px solid #ebebeb !important;}
+.li_list:before{content:"";position: absolute;height:1px;background: #ebebeb;left:0;right:0;bottom:0;margin:auto;margin-left:0.5rem;}
+.border-t-b{border-top:1px solid #ebebeb;border-bottom:1px solid #ebebeb;}
+
+</style>
+
+</head>
+
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a href="javascript:history.go(-1);" class="aui-pull-left aui-btn">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">编辑</div>
+    <a class="aui-pull-right">
+        <span>保存</span>
+    </a>
+</header>
+
+<section class="aui-content">
+    <ul class="aui-list aui-margin-b-15">
+        <li class="aui-list-item li_list">
+            <div class="aui-list-item-label-icon">
+                <i class="aui-iconfont aui-icon-my"></i>
+            </div>
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title"><input type="text" placeholder="收货人" /></div>
+            </div>
+        </li>
+        <li class="aui-list-item li_list">
+            <div class="aui-list-item-label-icon">
+                <i class="aui-iconfont aui-icon-mobile"></i>
+            </div>
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title"><input type="text" placeholder="手机号" /></div>
+            </div>
+        </li>
+        <li class="aui-list-item li_list">
+            <div class="aui-list-item-label-icon">
+                <i class="aui-iconfont aui-icon-location"></i>
+            </div>
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title"><input style="text-align:left;" value="广州" type="text" class="city" /></div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-label-icon">
+                <i class="aui-iconfont aui-icon-date"></i>
+            </div>
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title"><input type="text" placeholder="详细地址" /></div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+</body>
+</html>
+
+<script type="text/javascript">
+    // 地区
+ $(".city").CityPicker();
+
+// --------------------
+
+ $('.aui-pull-right').click(function(event) {
+    layer.open({
+            content: '保存成功'
+            ,skin: 'msg'
+            ,time: 2 //2秒后自动关闭
+          });
+    });
+</script>

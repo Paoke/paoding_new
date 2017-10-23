@@ -1,0 +1,149 @@
+[ 2017-07-18T05:53:06+08:00 ] 101.226.102.59 /index.php/Wechat/Wechat/index/action/redirect?code=021yZQ6d1VA4Zu0gpf6d1A257d1yZQ6u&state=1500328382
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+NOTIC: [8] Undefined index: userArr /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 87 行.
+NOTIC: [8] Undefined index: sex /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 97 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 115 行.
+NOTIC: [8] Undefined index: province /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 117 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 118 行.
+NOTIC: [8] Undefined index: headimgurl /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 119 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 122 行.
+
+[ 2017-07-18T05:53:12+08:00 ] 140.207.124.105 /index.php/Wechat/Wechat/index/action/redirect
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000588s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000686s ]
+
+[ 2017-07-18T09:21:26+08:00 ] 223.104.63.24 /index.php/Wechat/Wechat/index/action/redirect?code=0814AHPK17NUC70p36NK1wUYPK14AHPM&state=1500340882
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+NOTIC: [8] Undefined index: userArr /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 87 行.
+NOTIC: [8] Undefined index: sex /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 97 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 115 行.
+NOTIC: [8] Undefined index: province /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 117 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 118 行.
+NOTIC: [8] Undefined index: headimgurl /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 119 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 122 行.
+
+[ 2017-07-18T10:51:35+08:00 ] 223.93.172.26 /index.php/Wechat/Wechat/index/action/redirect?code=051CQAuH1Qwxg60QPjvH1HumuH1CQAug&state=1500346291
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+NOTIC: [8] Undefined index: userArr /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 87 行.
+NOTIC: [8] Undefined index: sex /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 97 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 115 行.
+NOTIC: [8] Undefined index: province /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 117 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 118 行.
+NOTIC: [8] Undefined index: headimgurl /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 119 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 122 行.
+
+[ 2017-07-18T12:06:27+08:00 ] 219.133.40.16 /index.php/Wechat/Wechat/index/action/redirect?code=0310Dw9u0ZcZ4f1clV8u0DAo9u00Dw9W&state=1500350784
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000367s ]
+NOTIC: [8] Undefined index: userArr /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 87 行.
+NOTIC: [8] Undefined index: sex /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 97 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 115 行.
+NOTIC: [8] Undefined index: province /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 117 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 118 行.
+NOTIC: [8] Undefined index: headimgurl /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 119 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 122 行.
+NOTIC: [8] Undefined variable: unionidUserId /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 132 行.
+
+[ 2017-07-18T13:11:40+08:00 ] 113.27.234.104 /index.php/Wechat/Wechat/index/action/redirect?code=08132NTW12zp0W0LpLUW1oqMTW132NTS&state=1500354695
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000362s ]
+NOTIC: [8] Undefined index: userArr /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 87 行.
+NOTIC: [8] Undefined index: sex /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 97 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 115 行.
+NOTIC: [8] Undefined index: province /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 117 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 118 行.
+NOTIC: [8] Undefined index: headimgurl /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 119 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 122 行.
+
+[ 2017-07-18T13:12:43+08:00 ] 101.226.125.121 /index.php/Wechat/Wechat/index/action/redirect?code=00189td4221A7L0Jgjb42dSDd4289tdo&state=1500354759
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000408s ]
+NOTIC: [8] Undefined index: userArr /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 87 行.
+NOTIC: [8] Undefined index: sex /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 97 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 115 行.
+NOTIC: [8] Undefined index: province /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 117 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 118 行.
+NOTIC: [8] Undefined index: headimgurl /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 119 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 122 行.
+NOTIC: [8] Undefined variable: unionidUserId /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 132 行.
+
+[ 2017-07-18T13:26:44+08:00 ] 114.230.249.105 /index.php/Wechat/Wechat/index/action/redirect?code=0517vBNj0WQFSj1O9hRj0GxUNj07vBNI&state=1500355599
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+NOTIC: [8] Undefined index: userArr /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 87 行.
+NOTIC: [8] Undefined index: sex /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 97 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 115 行.
+NOTIC: [8] Undefined index: province /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 117 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 118 行.
+NOTIC: [8] Undefined index: headimgurl /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 119 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 122 行.
+
+[ 2017-07-18T17:28:06+08:00 ] 118.73.56.170 /index.php/Wechat/Wechat/index/action/redirect?code=051QiOjS0yMXNa2lsEjS0JAPjS0QiOjQ&state=1500370083
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+NOTIC: [8] Undefined index: userArr /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 87 行.
+NOTIC: [8] Undefined index: sex /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 97 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 115 行.
+NOTIC: [8] Undefined index: province /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 117 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 118 行.
+NOTIC: [8] Undefined index: headimgurl /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 119 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 122 行.
+NOTIC: [8] Undefined variable: unionidUserId /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 132 行.
+
+[ 2017-07-18T20:33:12+08:00 ] 183.61.52.70 /index.php/Wechat/Wechat/index/action/redirect?code=051ueMw72JMEvM0De9y72JIww72ueMwJ&state=1500381188
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+NOTIC: [8] Undefined index: userArr /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 87 行.
+NOTIC: [8] Undefined index: sex /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 97 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 115 行.
+NOTIC: [8] Undefined index: province /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 117 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 118 行.
+NOTIC: [8] Undefined index: headimgurl /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 119 行.
+NOTIC: [8] Undefined index: nickname /var/www/html/paoding_gemmap/Application/Wechat/Controller/WechatController.class.php 第 122 行.
+

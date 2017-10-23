@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>{$gemmap_config['shop_info_store_title']}</title>
+    <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}"/>
+    <meta name="description" content="{$gemmap_config['shop_info_store_desc']}"/>
+
+    <link href="{$Think.const.CSS}/style.css" rel="stylesheet">
+    <link href="{$Think.const.CSS}/style-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{$Think.const.CSS}/bootstrap.min.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="{$Think.const.CSS}/bootstrap-reset.css" media="all"/>
+
+    <!-- <script src="__PUBLIC__/js/layer/layer-min.js"></script> -->
+    <script src="__PUBLIC__/js/myAjax.js"></script>
+    <script src="__PUBLIC__/js/echarts.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="__PUBLIC__/js/html5shiv.js"></script>
+    <script src="__PUBLIC__/js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+
+        .panel-body {
+            padding: 15px;
+            margin-top: -1px;
+        }
+
+        .edit_list {
+            background: #fff;
+            border-bottom: 1px solid #d5d5d5;
+            overflow: hidden;
+            padding: 0px 30px 10px 30px;
+            line-height: 34px;
+            width: 100%;
+            color: #C8C8C8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .bn-headnav li {
+            display: inline;
+            float: left;;
+            font-size: 14px;
+            font-family: 微软雅黑;
+            cursor: pointer;
+            width: 100px;
+            text-align: center;
+            line-height: 35px;
+            border: 1px solid #d5d5d5;
+        }
+
+        .bn-headnav li.curr {
+            color: #65CEA7;
+            line-height: 35px;
+            border: 1px solid #65CEA7;
+        }
+
+        .bn-headnav li.curr a {
+            color: #65CEA7;
+            text-decoration: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #969696;
+            font-family: Microsoft YaHei, Tahoma, Arial, sans-serif;
+        }
+
+        .img_box img {
+            height: 200px;
+            width: 400px;
+        }
+        .warn_msg{
+            padding-left: 20px;
+            color: red;
+        }
+
+        .state-overview .panel {
+            padding: 10px 20px;
+        }
+        h4, .h4 {
+            font-size: 18px;
+            color: #0c0c0c;
+        }
+        .thumbnail {
+            display: block;
+            padding: 4px;
+            margin-bottom: 15px;
+            line-height: 1.42857143;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            -webkit-transition: border .2s ease-in-out;
+            -o-transition: border .2s ease-in-out;
+        }
+
+        .thumbnail img {
+            width: 300px;
+            height: 150px;
+        }
+
+        .caption {
+            padding: 9px;
+            color: #333;
+        }
+
+        .caption span {
+            font-size: 15px;
+            line-height: 30px;
+            font-weight: 500;
+            float: left;
+        }
+        .test-order{
+            display: block;
+            width: 20%;
+            height: 30px;
+            padding: 6px 12px;
+            margin-right: 10px;
+            margin-left: 10px;
+            font-size: 12px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+            -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+            box-shadow: none;
+        }
+        .msg-tips{
+            color: red;
+        }
+
+    </style>
+</head>
+
+<body class="sticky-header">
+<section>
+
+    <div class="main-content" width="100%" style="margin:0px;">
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <div class="panel-body">
+
+                                <div class="col-md-12 ">
+                                    <div class="form-group">
+                                        <ul id="module" class="nav nav-tabs">
+                                            <li class="active" data-module="base"><a href="#base" data-toggle="tab">企业编辑</a></li>
+                                            <li id="config_topic" data-module="config" style="display: none"><a href="#config" data-toggle="tab">配置题目</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="tab-content" >
+                                    <form class="form-horizontal " id="test_form">
+                                    <div id="base" class="tab-pane active">
+                                        <div class="edit_list no_edit ">
+                                            <span>1.请新增企业。</span>
+                                            <empty name="info">
+                                                <br/><span class="msg-tips">本企业调查问卷在开始使用后，则不允许再修改或删除</span>
+                                            </empty>
+                                            <notempty name="is_use">
+                                            <br/><span class="msg-tips">该企业调查问卷已经在使用，不允许再修改</span>
+                                            </notempty>
+                                            <div class="pull-right">
+                                                <div class="btn-group">
+                                                    <empty name="is_use">
+                                                    <a id="postbutton" class="btn btn-default"><i class="fa fa-save"></i>保存</a>
+                                                    </empty>
+                                                    <a href="javascript:history.go(-1)" data-toggle="tooltip" title=""
+                                                       class="btn btn-default"><i class="fa fa-reply"></i>返回</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <input type="hidden" id="id" name="id" value="{$info.id}">
+
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">企业名称：</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-input" id="title" name="title" value="{$info.title}" datatype="*" placeholder="企业名称" nullmsg="企业名称不能为空!">
+                                                <span class="Validform_checktip"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">企业简介：</label>
+                                            <div class="col-sm-9">
+                                                <textarea class="form-control form-input" rows="3" id="desc" name="desc" placeholder="企业简介">{$info.desc}</textarea>
+                                                <span class="Validform_checktip"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-2 control-label">企业图标：</label>
+                                            <div class="col-sm-9 btn-group">
+                                                <input type="text" placeholder="" class=" form-control" id="icon" name="icon" value="{$info.icon}" style="width:400px;float: left;" readonly="">
+                                                <div class="col-sm-3">
+                                                    <input class="btn btn-info" style="float: left;" type="button" value="上传图片" onclick="GetUploadify(1,'icon','weifan','');">&nbsp;&nbsp;
+                                                    <button class="btn btn-info " type="button" onclick="preview('icon')">预览</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    </form>
+                                    <!-- 分配题目 -->
+                                    <form class="form-horizontal " id="config_form">
+                                    <div id="config" class="tab-pane" style="display: none">
+                                        <div class="edit_list no_edit ">
+                                            <span>2.请为此企业调查问卷分配题目，并指定企业顺序。</span>
+                                            <notempty name="is_use">
+                                            <br/><span class="msg-tips">该企业调查问卷已经在使用，不允许再修改</span>
+                                            </notempty>
+                                            <div class="pull-right">
+                                                <div class="btn-group">
+                                                    <empty name="is_use">
+                                                        <a id="savebutton" class="btn btn-default save-btn" onclick="config_topic();"><i class="fa fa-save"></i>保存</a>
+                                                    </empty>
+                                                    <a href="javascript:history.go(-1)" data-toggle="tooltip" title=""
+                                                       class="btn btn-default"><i class="fa fa-reply"></i>返回</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="panel-body">
+                                            <div class="adv-table">
+                                                <notempty name="topic_list">
+                                                    <volist name="topic_list" id="vo">
+                                                        <div class="row col-lg-4 col-xs-6 col-md-4 col-sm-6"
+                                                             style="margin-left:10px;margin-top: 10px;width: 24%">
+                                                            <section class="thumbnail">
+                                                                <img class="lazy" data-original="{$vo.topic_img}" src="{$vo.topic_img}">
+                                                                <div class="caption" style="overflow: hidden;"><span>{$vo.title}</span>
+
+                                                                    <button type="button" id="{$vo.id}"
+                                                                    <if condition="$vo.check neq 0">class="btn btn-sm btn-success"
+                                                                        <else/>class="btn btn-sm btn-default"
+                                                                    </if>
+                                                                    style="float: right;" onclick="checkItem(this)">
+                                                                    <if condition="$vo.check neq 0">取消
+                                                                        <else/>选中
+                                                                    </if>
+                                                                    </button>
+
+                                                                    <input id="test_order_{$vo.id}" type="text" class="test-order" placeholder="排序" style="float: right;" value="{$vo.test_order}"
+                                                                           onkeyup='this.value=this.value.replace(/\D/gi,"")' />
+                                                                </div>
+                                                            </section>
+                                                        </div>
+                                                    </volist>
+                                                </notempty>
+                                                <empty name="topic_list">
+                                                    <div class="form-group">
+                                                        <span style="font-weight: bold;color: red">没有题目，请先在题目管理里新增题目!</span>
+                                                    </div>
+                                                </empty>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    </form>
+                                </div>
+
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+        </section><!--表单数据-->
+
+    </div>
+    <!-- main content end-->
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="{$Think.const.JS}/jquery-1.10.2.min.js"></script>
+<script src="{$Think.const.JS}/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="{$Think.const.JS}/jquery-migrate-1.2.1.min.js"></script>
+<script src="{$Think.const.JS}/bootstrap.min.js"></script>
+<script src="{$Think.const.JS}/modernizr.min.js"></script>
+<script src="{$Think.const.JS}/jquery.nicescroll.js"></script>
+<!-- <script src="__PUBLIC__/js/layer/layer-min.js"></script> -->
+<script src="__PUBLIC__/js/layer/layer.js"></script>
+<!--common scripts for all pages-->
+<script src="{$Think.const.JS}/scripts.js"></script>
+<!-- ueditor start-->
+<script src="{$Think.const.JS}/ueditor/ueditor.config.js"></script>
+<script src="{$Think.const.JS}/ueditor/ueditor.all.min.js"></script>
+<script src="{$Think.const.JS}/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script src="{$Think.const.JS}/extends.js"></script>
+<script src="{$Think.const.JS}/laydate/laydate.js"></script>
+<script src="{$Think.const.JS}/Validform_v5.3.2_min.js"></script>
+<script src="__PUBLIC__/js/global.js"></script>
+<script src="__PUBLIC__/js/jquery.lazyload.min.js"></script>
+<!-- ueditor end-->
+<script type="text/javascript">
+    $(function(){
+        $("img.lazy").lazyload();
+    });
+
+    function preview(id) {
+        var src = $('#' + id).val();
+        var content;
+        if (src == "") {
+            content = '没有图片可供预览';
+            layer.msg(content);
+        }
+        else {
+            content = "<img width='300' height='300' src='" + src + "'>";
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: false,
+                area: ['300px', '300px'],
+                skin: 'layui-layer-nobg', //没有背景色
+                shadeClose: true,
+                content: content
+            });
+        }
+    }
+
+
+
+    function showImg(img_path) {
+        $("#cover_url").val(img_path);
+        $(".img_box").empty();
+        $(".img_box").append('<img src="' + img_path + '">');
+    }
+
+    $("#postbutton").click(function(){
+
+        var id = $("#id").val();
+
+        var url = "__URL__/test/action/add/channel/{$channel}/activity_id/{$activity_id}";
+        if(id.length > 0){
+            url = "__URL__/test/action/edit/id/"+id;
+        }
+        var data = $("#test_form").serialize();
+
+        $.post(url, data, function(ret){
+
+            if(ret.result == 1){
+
+                if(ret.data != null){
+                    $("#module li").removeClass('active');
+                    $("#config_topic").addClass('active');
+                    $("#config_topic").css('display', 'block');
+                    $("#base").hide();
+                    $("#config").show();
+                    $("#id").val(ret.data);
+                }else{
+                    layer.msg(ret.msg);
+                }
+
+            }else{
+                layer.msg(ret.msg);
+            }
+
+        }, 'json');
+
+    });
+
+    $("#module li").click(function(){
+
+        $("#module li").removeClass('active');
+        $(this).addClass('active');
+        var module_id = $(this).attr('data-module');
+        $(".tab-pane").each(function(i, el){
+            $(el).hide();
+        });
+        $("#"+module_id).show();
+
+    });
+
+    $(function(){
+        if($("#id").val() != ''){
+            $("#config_topic").css('display', 'block');
+
+        }
+
+    });
+
+    function checkItem(obj) {
+
+        if($(obj).hasClass("btn-default")){
+            $(obj).removeClass('btn-default');
+            $(obj).addClass('btn-success');
+            $(obj).text("取消");
+        }else{
+            $(obj).removeClass('btn-success');
+            $(obj).addClass('btn-default');
+            $(obj).text("选中");
+        }
+
+    }
+
+    function config_topic(){
+
+        var num = $(".btn-success").size();
+        if(num < 1){
+            layer.msg("请选择题目，再提交!");
+            return;
+        }
+
+        var items = '[';
+        $(".btn-success").each(function(i, el){
+            var id = $(this).attr("id");
+            var sort = $("#test_order_"+id).val()=='' ? 99 : $("#test_order_"+id).val();
+
+            items += '{"id":'+id+',"sort":'+sort+'},';
+
+        });
+        items = items.substring(0, items.length-1);
+        items += ']';
+        items = encodeURI(items);
+
+        var url = "__URL__/test_topics/action/save/channel/{$channel}/activity_id/{$activity_id}";
+        var data = {'test_id': $("#id").val(), 'items': items};
+
+        $.post(url, data, function(ret){
+            if(ret.result == 1){
+                layer.msg("企业配置题目成功!");
+                setTimeout(function () {
+                    window.location.href = "__URL__/test/action/page_list/channel/{$channel}/type/{$type}/activity_id/{$activity_id}";
+                }, 1500);
+            }else{
+                layer.msg(ret.msg);
+            }
+
+        },'json');
+    }
+</script>
+</body>
+</html>

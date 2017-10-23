@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>模块类别管理</title>
+    <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}"/>
+    <meta name="description" content="{$gemmap_config['shop_info_store_desc']}"/>
+
+    <!--dynamic table-->
+
+    <link href="{$Think.const.CSS}/style.css" rel="stylesheet">
+    <link href="{$Think.const.CSS}/style-responsive.css" rel="stylesheet">
+    <link href="{$Think.const.CSS}/channel-type.css" rel="stylesheet">
+    <!--GEMMAP自带的矢量图标库 font-awesome.min.css-->
+    <link href="__PUBLIC__/bootstrap/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <!--<link href="__PUBLIC__/css/channel-type.css"/>-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery 2.1.4 -->
+    <script src="__PUBLIC__/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="__PUBLIC__/js/global.js"></script>
+    <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/js/layer/layer-min.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+
+</head>
+<style type="text/css">
+
+    a {
+        text-decoration: none;
+        color: #969696;
+        font-family: Microsoft YaHei,Tahoma,Arial,sans-serif;
+    }
+
+    a:hover {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .banner {
+        width: 335px;
+        height: 534px;
+        position: relative;
+        margin-left: 20px;
+        float: left;
+    }
+
+    .scroll {
+        width: 330px;
+        height: 534px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .banner ul {
+        width: 9999px;
+        position: absolute;
+    }
+
+    .banner ul li {
+        float: left;
+    }
+
+    .banner span {
+        width: 52px;
+        height: 52px;
+        background: url(images/arr.png);
+        position: absolute;
+        left: -15px;
+        top: 80%;
+        margin-top: -26px;
+    }
+
+    .banner span.rightBtn {
+        left: auto;
+        right: -9px;
+        background-position: right top;
+    }
+
+    .lang h6 {
+        text-align: center;
+        margin: 5px;
+    }
+
+    .size {
+        height: 100px;
+        width: 25%;
+        background: #e8e6e6;
+        margin: 10px;
+        line-height: 100px;
+        text-align: center;
+        float: left;
+        position: relative;
+    }
+
+    .size img {
+        margin-top: 10px;
+    }
+
+</style>
+
+<body class="sticky-header">
+
+<section>
+
+    <!-- main content start-->
+    <div class="main-content" width="100%" style="margin:0px;">
+
+
+            <!--body wrapper start-->
+            <div class="wrapper">
+                <!-- <include file="Public/breadcrumb"/> -->
+                <div class="panel">
+                    <header class="panel-body panel-heading ">
+                        <div class="pull-left ">
+                            引导页设置
+
+                        </div>
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button class="btn btn-default "
+                                        onclick="ajax_submit_form()"><i class="fa fa-floppy-o"></i>确定
+                                </button>
+                                <a href="javascript:;" class="btn btn-default"><i
+                                        class="fa fa-plus"></i>取消</a>
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- 选择模块 -->
+
+                    <div class="panel-body">
+                        <div class="banner">
+                            <form id="form_id" method="post" action="__MODULE__/AppConfig/guide_page/action/add">
+                            <div class="scroll">
+                                <ul>
+                                    <volist name="data" id="id">
+                                    <li><a href="javascript:void(0);">
+                                        <img id="{$id.title}"   src="{$id.path}"  width="330" height="534" /></a></li>
+                                    </volist>
+                                    <!--<li><a href="javascript:void(0);">-->
+                                        <!--<img id="image_2" name="image_2" src="{$vo.path}"   width="330" height="534" /></a></li>-->
+                                    <!--<li><a href="javascript:void(0);">-->
+                                        <!--<img id="image_3" name="image_3" src="{$vo.path}"  width="330" height="534" /></a></li>-->
+                                    <!--<li><a href="javascript:void(0);">-->
+                                        <!--<img id="image_4" name="image_4" src="{$vo.path}"   width="330" height="534" /></a></li>-->
+                                    <!--<li><a href="javascript:void(0);">-->
+                                        <!--<img  id="image_5" name="image_5" src="{$vo.path}"  width="330" height="534" /></a></li>-->
+                                    <!--<li><a href="javascript:void(0);">-->
+                                        <!--<img id="image_6" name="image_6" src="{$vo.path}"  width="330" height="534" /></a></li>-->
+
+                                </ul>
+                            </div>
+                            </form>
+                            <span class="leftBtn"></span>
+                            <span class="rightBtn"></span>
+                        </div>
+
+                        <div class="panel-body col-sm-8">
+
+                            <div class="nav-button col-sm-12">
+                                <input type="hidden" id="id" name="id" value="{$user.id}">
+                                <span class="col-md-3 ">上传精确尺寸:</span><br />
+                                <span class="col-md-6 ">最多6张 限使用PNG 1080*1920</span><br />
+                                <div class=" col-md-8  lang">
+                                    <ul>
+                                        <li class="size">
+                                            <a href="javascript:;">
+                                                <img  width="80" height="80" src="__PUBLIC__/images/channel_list/tainjia.png" onclick="GetUploadifyImage(1,'image_1','images','');"/></td>
+                                            </a>
+                                            <h6>1</h6>
+                                        </li>
+                                        <li class="size">
+                                            <a href="javascript:;" >
+                                                <img  width="80" height="80" src="__PUBLIC__/images/channel_list/tainjia.png" onclick="GetUploadifyImage(1,'image_2','images','');"/></td>
+                                            </a>
+                                            <h6>2</h6>
+                                        </li>
+                                        <li class="size">
+                                            <a href="javascript:;" >
+                                                <img   width="80" height="80" src="__PUBLIC__/images/channel_list/tainjia.png" onclick="GetUploadifyImage(1,'image_3','images','');"/></td>
+                                            </a>
+                                            <h6>3</h6>
+                                        </li>
+                                        <li class="size">
+                                            <a href="javascript:;">
+                                                <img  width="80" height="80" src="__PUBLIC__/images/channel_list/tainjia.png" onclick="GetUploadifyImage(1,'image_4','images','');"/></td>
+                                            </a>
+                                            <h6>4</h6>
+                                        </li>
+                                        <li class="size">
+                                            <a href="javascript:;" >
+                                                <img  width="80" height="80" src="__PUBLIC__/images/channel_list/tainjia.png" onclick="GetUploadifyImage(1,'image_5','images','');"/></td>
+                                            </a>
+                                            <h6>5</h6>
+                                        </li>
+                                        <li class="size">
+                                            <a href="javascript:;">
+                                                <img   width="80" height="80" src="__PUBLIC__/images/channel_list/tainjia.png" onclick="GetUploadifyImage(1,'image_6','images','');"/></td>
+                                            </a>
+                                            <h6>6</h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--body wrapper end-->
+
+
+
+    </div>
+    <!-- main content end-->
+</section>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="{$Think.const.JS}/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="{$Think.const.JS}/jquery-migrate-1.2.1.min.js"></script>
+<script src="{$Think.const.JS}/bootstrap.min.js"></script>
+<script src="{$Think.const.JS}/modernizr.min.js"></script>
+<script src="{$Think.const.JS}/jquery.nicescroll.js"></script>
+
+
+
+<!--common scripts for all pages-->
+<script src="{$Think.const.JS}/scripts.js"></script>
+
+</body>
+</html>
+<script type="text/javascript">
+
+    function ajax_submit_form() {
+
+       var datas = {};
+       for(var i=1; i<=6; i++){
+
+           var $img = $("#image_"+i);
+
+           var title = $img.attr('id');
+
+           var path = $img.attr('src');
+
+           var sort = i;
+
+           var item = {'title': title, 'path':path, 'sort': sort};
+
+           index = i-1;
+           datas[index] = item;
+       }
+
+        var json = encodeURI(JSON.stringify(datas));
+        var data = {'json': json};
+
+        var action  =  "__MODULE__/AppConfig/guide_page/action/add";
+
+        //异步提交表单数据
+        $.ajax({
+            type: "post",
+            url: action,
+            data: data,
+            dataType: 'json',
+            success: function (res) {
+                layer.msg(res.msg);
+            }
+        });
+    }
+
+
+    function preview(file){
+
+        var prevDiv = document.getElementById('preview');
+        if (file.files && file.files[0]){
+
+            var reader = new FileReader();
+
+            reader.onload = function(evt){
+
+                prevDiv.innerHTML = '<img src="' + evt.target.result + '" />';
+            }
+            reader.readAsDataURL(file.files[0]);
+        }else{
+            prevDiv.innerHTML = '<div class="img" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' + file.value + '\'"></div>';
+        }
+    }
+    $(function (e) {
+        var num = 0;
+        var timer = null;
+
+        //角标的工作
+        $('.banner li').click(function (e) {
+            var selfIndex = $(this).index()
+            $(this).addClass('current').siblings().removeClass('current');
+            $('.banner ul').animate({ 'left': -330 * selfIndex }, 400)
+            num = selfIndex;
+        });
+
+        //自动轮播
+        function autoplay() {
+            num++;
+            if (num > 5) {
+                num = 0;
+            }
+            $('.banner ul').animate({ 'left': -330 * num }, 400)
+        }
+        timer = setInterval(autoplay, 3000)
+
+        //鼠标移上关闭定时器
+        $('.banner').mouseenter(function (e) {
+            clearInterval(timer)
+        }).mouseleave(function (e) {
+            timer = setInterval(autoplay, 3000)
+        });
+
+        //按钮
+        $('.rightBtn').click(function (e) {
+            autoplay();
+        });
+        $('.leftBtn').click(function (e) {
+            num--;
+            if (num < 0) {
+                num = 5;
+            }
+
+            $('.banner ul').animate({ 'left': -330 * num }, 400)
+        });
+    });
+
+</script>
+

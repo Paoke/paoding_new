@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>{$gemmap_config['shop_info_store_title']}</title>    <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}" />     <meta name="description" content="{$gemmap_config['shop_info_store_desc']}" />
+
+    <link href="{$Think.const.CSS}/style.css" rel="stylesheet">
+    <link href="{$Think.const.CSS}/style-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+    .fr{float: right;}
+    .caption h2{font-size: 24px;line-height: 18px;font-weight: 700;}
+    .option {height: 27px;width: 145px;}
+
+    .panel-body {
+        padding: 15px;
+        border: 1px solid #e6e8eb;
+        margin-top: -1px;
+    }
+    .radio input[type=radio], .radio-inline input[type=radio], .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox] {
+        float: none;
+        margin-left: 10px;
+    }
+
+    .input-group-addon {
+        padding: 5px 20px;
+    }
+</style>
+
+<body class="sticky-header">
+<section>
+
+    <!-- main content start-->
+    <div class="main-content" width="100%" style="margin:0px;">
+
+        <!--body wrapper start-->
+        <section class="wrapper">
+            <!-- page start-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            管理资金
+                            <div class="pull-right">
+                                <a style="margin-top:-8px" href="javascript:history.go(-1)" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="返回管理员列表"><i class="fa fa-reply"></i></a>
+                                <!-- <a href="javascript:;" class="btn btn-default" data-url="http://www.gemmap.cn/Doc/Index/article/id/1001/developer/user.html" onclick="get_help(this)"><i class="fa fa-question-circle"></i> 帮助</a> -->
+                            </div>
+                        </header>
+                        <!--表单数据-->
+                        <form id="delivery-form" method="post" action="">
+                            <div class="panel-body ">
+                                <div class="panel-body">
+                                    <div class="nav-button ">
+                                        <span  class="col-md-2">金额:</span>
+                                        <select name="money_act_type" id="money_act_type" class="form-option" style="width: 150px;">
+                                            <option value="1">增加</option>
+                                            <option value="0">减少</option>
+                                        </select>
+                                        <input type="text" name="user_money" class="form-control form-input" value="{$_REQUEST['user_money']|default='0'}">
+                                    </div>
+                                </div>
+
+                                <div class="panel-body">
+                                    <div class="nav-button ">
+                                        <span  class="col-md-2">积分:</span>
+                                        <select name="point_act_type" id="point_act_type" style="width: 150px;" class="form-option">
+                                            <option value="1">增加</option>
+                                            <option value="0">减少</option>
+                                        </select>
+                                        <input type="text" name="pay_points" class="form-control form-input" value="0">
+                                    </div>
+
+                                </div>
+
+
+                                <div class="panel-body">
+                                    <div class="nav-button ">
+                                        <span  class="col-md-2">操作备注:</span>
+                                        <textarea name="desc" datatype="*" nullmsg="请填写操作说明" class="form-control form-input" placeholder="请输入操作备注" rows="3" cols="35">{$_REQUEST['desc']}</textarea>
+                                    </div>
+                                </div>
+
+
+                                <div class="panel-body">
+                                    <div class="nav-button col-md-12 text-right">
+                                        <button class="btn btn-info" type="submit" type="submit" id="disabled">提交</button>
+                                        <button class="btn btn-default" type="button" onclick="javascript:history.go(-1)">返回</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </section><!--表单数据-->
+
+
+    </div>
+    </div>
+
+
+    </div>
+    <!-- main content end-->
+</section>
+<script type="text/javascript" src="{$Think.const.JS}/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$Think.const.JS}/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript">
+    $('#delivery-form').Validform({
+        tiptype:3
+    });
+</script>
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="{$Think.const.JS}/jquery-1.10.2.min.js"></script>
+<script src="{$Think.const.JS}/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="{$Think.const.JS}/jquery-migrate-1.2.1.min.js"></script>
+<script src="{$Think.const.JS}/bootstrap.min.js"></script>
+<script src="{$Think.const.JS}/modernizr.min.js"></script>
+<script src="{$Think.const.JS}/jquery.nicescroll.js"></script>
+<script src="__PUBLIC__/js/layer/layer-min.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+<!--common scripts for all pages-->
+<script src="{$Think.const.JS}/scripts.js"></script>
+
+</body>
+</html>

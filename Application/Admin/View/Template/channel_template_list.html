@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>{$gemmap_config['shop_info_store_title']}</title>
+    <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}"/>
+    <meta name="description" content="{$gemmap_config['shop_info_store_desc']}"/>
+
+    <!--dynamic table-->
+    <link href="__PUBLIC__/bootstrap/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="{$Think.const.JS}/advanced-datatable/css/demo_page.css" rel="stylesheet"/>
+    <link href="{$Think.const.JS}/advanced-datatable/css/demo_table.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="{$Think.const.JS}/data-tables/DT_bootstrap.css"/>
+
+    <link href="{$Think.const.CSS}/style.css" rel="stylesheet">
+    <link href="{$Think.const.CSS}/style-responsive.css" rel="stylesheet">
+    <link href="__PUBLIC__/bootstrap/css/bootstrap.css.map" rel="stylesheet" type="text/css">
+
+    <script src="{$Think.const.JS}/jquery-1.10.2.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<style type="text/css">
+    body {
+        background: #f1f1f1;
+        overflow: scroll
+    }
+
+    .thumbnail {
+        width: 400px;
+        display: block;
+        padding: 4px;
+        margin-bottom: 20px;
+        line-height: 1.42857143;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        -webkit-transition: border .2s ease-in-out;
+        -o-transition: border .2s ease-in-out;
+    }
+
+    .thumbnail a img {
+        width: 380px;
+        height: 220px;
+    }
+
+    .caption {
+        padding: 9px;
+        color: #333;
+    }
+
+    .caption h2 {
+        font-size: 24px;
+        line-height: 18px;
+        font-weight: 700;
+    }
+
+    .panel {
+        border: 1px solid #ddd;
+    }
+    .table-bordered {
+     border-top: none ;
+}
+
+</style>
+
+<body class="sticky-header">
+
+<section>
+
+    <!-- main content start-->
+    <div class="main-content" width="100%" style="margin:0px;">
+
+
+        <!--body wrapper start-->
+        <div class="wrapper">
+            <!-- <include file="Public/breadcrumb"/> -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <section class="panel">
+                        <header class="panel-heading panel-body"  >
+                           频道主题模板列表
+                            <div class="panel-body formadd pull-right">
+                                <a href="__URL__/channelTemplate/action/page_add" class="btn btn-default pull-right"><i
+                                        class="fa fa-plus"></i> 新增频道模板</a>
+                                <div class="pull-right" style="vertical-align: middle"><strong style="font-size: 18px">选择模块:</strong>
+                                    <select style="width: 200px;height:33px;border-radius:5px;font-size: 18px;font-weight: normal" name="module_type" id="module_type">
+                                        <option value="0">所有</option>
+                                        <volist name="module" id="item">
+                                            <option value="{$item.module_type}">{$item.type_name}</option>
+                                        </volist>
+                                    </select>&nbsp;
+                                </div>
+                            </div>
+                        </header>
+                        <div class="panel-body">
+                            <div class="adv-table">
+
+                                <volist name="list" id="vo">
+                                    <div class="row col-lg-4 col-xs-6 col-md-4 col-sm-6" style="margin-left:10px;margin-top: 10px;">
+                                        <section class="thumbnail">
+                                            <a href="__URL__/channelTemplate/action/page_edit/id/{$vo.id}"><img src="{$vo.image}" height="98" width="253"/></a>
+                                            <div class="caption">
+                                                <h2>{$vo.theme_title}</h2>
+                                                <p>{$vo.description}</p>
+                                            </div>
+                                            <a href="__URL__/channelTemplate/action/page_edit/id/{$vo.id}"
+                                               role="button">
+                                                <button type="submit" class="btn btn-default">详情</button>
+                                            </a>
+                                        </section>
+                                    </div>
+                                </volist>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main content end-->
+</section>
+
+<!--dynamic table-->
+<script type="text/javascript" language="javascript" src="{$Think.const.JS}/advanced-datatable/js/jquery.dataTables.js"></script>
+<script type="text/javascript" src="{$Think.const.JS}/data-tables/DT_bootstrap.js"></script>
+<!--dynamic table initialization -->
+<script src="{$Think.const.JS}/dynamic_table_init.js"></script>
+
+<script src="{$Think.const.JS}/bootstrap.min.js"></script>
+
+<!--script for editable table-->
+<script src="{$Think.const.JS}/editable-table.js"></script>
+
+</body>
+</html>
+<script>
+    $("#module_type").bind('change', function () {
+        var module = $(this).val();
+        window.location.href = "__URL__/channelTemplate/action/page_list/module/" + module;
+    });
+
+</script>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta content="telephone=no, address=no" name="format-detection">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/site/css/base.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/site/css/common.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/site/css/swiper3.min.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/site/css/style.css" />
+<script type="text/javascript" src="__PUBLIC__/site/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/site/js/swiper3.jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("ant-btn").click(function(event){
+            window.location.href="{:U('Index/step2')}";
+        });
+    });
+</script>
+</head>
+
+<body>
+  <div class="wrap">
+      <!-- 轮播图开始 -->
+            <div class="swiper-container indexBanner">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a class="bannerBox" href="javascript:;">
+                            <img src="__PUBLIC__/site/image/error.jpg" alt="1" style="width:100%"/>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="bannerBox" href="javascript:;">
+                            <img src="__PUBLIC__/site/image/error.jpg" alt="2" style="width:100%"/>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a class="bannerBox" href="javascript:;">
+                            <img src="__PUBLIC__/site/image/error.jpg" alt="3" style="width:100%"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <script type="text/javascript">
+            $(function () {
+                    var swiper = new Swiper('.indexBanner', {
+                        loop: true,
+                        pagination: '.swiper-pagination',
+                        paginationClickable: true,
+                        autoplay: 2500
+                    });
+                })
+            </script>
+            <!-- 轮播图结束 -->
+        <section class="bg">
+            <p>提交数据有问题，请重新填写信息！</p>
+        </section>
+        <a href="__URL__/index">首页</a>
+  </div>  
+</body>
+</html>
+
+<script>
+
+</script>

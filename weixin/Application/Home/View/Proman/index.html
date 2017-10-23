@@ -1,0 +1,41 @@
+<include file="Public/header" />
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 height-50 text-center bg-red">
+					<img src="__PUBLIC__/home/img/logo2.png" alt="" class="width-112"/>
+					<a href="{:U('Index/index')}" class="pull-right height-50"><img src="__PUBLIC__/home/img/center.png" alt="" class="icon-25" /></a>
+				</div>
+				<div class="col-xs-12 col-sm-12 margin-top-33">
+					<p class="text-center font-lg2"><b>产品经理</b></p>
+				</div>
+
+
+<volist name="proman" id="vo">
+				<div class="col-xs-12 col-sm-12 margin-top-32">
+
+					
+					<div class="box-content2 box-center">
+
+						<div class="float-left text-center">
+							<a href="__MODULE__/Proman/proman/id/{$vo.id}"><img src="__PUBLIC__/home/img/person.jpg"  alt="" class="icon-head" /></a>
+							<p>{$vo.truename}</p>
+						</div>
+						<!--<p class="info">任务编号:  {$apply.apply_id}</p>
+						<p class="info">任务时间:  {$apply.reg_time|date="20y-m-d",###}</p>-->
+						<p class="info">产品经理工号:  {$vo.id}</p>
+						<p class="info2">{$vo.info}</p>
+
+					</div>
+					
+
+				</div>
+</volist>
+	
+<div class="col-xs-12 col-sm-12 margin-top-57 text-center">
+					<a href="{:U('Index/index')}" type="button" class="btn btn-blue  white-link text-center">返回</a>
+				</div>
+				
+
+			</div>
+		</div>
+<include file="Public/footer" />

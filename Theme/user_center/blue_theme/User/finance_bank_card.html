@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+<title>-</title>
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/aui.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/common.css" />
+<script type="text/javascript" src="__STATIC__/user/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/api.js"></script>
+<style type="text/css">
+
+.list_row {background:#fff;padding:0 0.5rem;overflow: hidden;position: relative;}
+.list_row.cur:before{content:"";position: absolute;height:1px;background: #EFEFEF;left:0;right:0;bottom:0;margin:auto;margin-left:0.5rem;}
+.list_row span{float: left;height:2.25rem;line-height: 2.25rem;min-width:4rem;}
+.list_row  input{float: left;width:70% !important;height:2.25rem;line-height: 2.25rem;}
+
+</style>
+
+</head>
+
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a href="javascript:history.go(-1);" class="aui-pull-left aui-btn">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">银行卡信息</div>
+</header>
+
+<section class="aui-content">
+ <div style="color:#999;font-size:0.7rem;padding:0.5rem;">信息加密处理,仅用于银行验证</div>
+ <div class="list_row aui-margin-b-15">
+  <span>卡类型</span>
+  <input type="text"  value="中国银行储蓄卡" readonly />
+</div>
+
+ <div class="list_row cur">
+  <span>姓名</span>
+  <input type="text"  value="赵日天" readonly />
+</div>
+<div class="list_row cur">
+  <span>证件号</span>
+  <input type="text"  placeholder="请输入身份号码"/>
+</div>
+<div class="list_row">
+  <span>手机号</span>
+  <input type="text"  placeholder="请输入银行卡预留手机"/>
+</div>
+<div style="color:#999;font-size:0.7rem;padding:0.5rem;">同意 <a href="javascript:;">《服务协议》</a></div>
+<div style="width:90%;margin:auto;margin-top:1.5rem;" class="aui-btn aui-btn-info aui-btn-block aui-btn-sm">下一步</div>
+</section>
+
+</body>
+</html>
+

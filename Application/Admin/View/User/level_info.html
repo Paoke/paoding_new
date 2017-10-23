@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>{$gemmap_config['shop_info_store_title']}</title>
+    <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}"/>
+    <meta name="description" content="{$gemmap_config['shop_info_store_desc']}"/>
+
+    <link href="{$Think.const.CSS}/style.css" rel="stylesheet">
+    <link href="{$Think.const.CSS}/style-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+</style>
+
+<body class="sticky-header">
+<section>
+
+    <!-- main content start-->
+    <div class="main-content" width="100%" style="margin:0px;">
+
+
+        <!--body wrapper start-->
+        <section class="wrapper">
+            <!-- page start-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            <if condition="$info">
+                                编辑会员等级
+                                <else/>
+                                添加会员等级
+                            </if>
+
+                            <div class="pull-right">
+                                <div class="btn-group">
+                                    <button type="button" id="postbutton" class="btn btn-default "
+                                            onclick="ajax_submit_form('extend_form')"><i class="fa fa-save"></i>保存
+                                    </button>
+                                    <a href="javascript:history.go(-1)" data-toggle="tooltip" title=""
+                                       class="btn btn-default" data-original-title="返回"><i class="fa fa-reply"></i>返回</a>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="panel-body ">
+                            <!--表单数据-->
+                            <form class="form-horizontal adminex-form" method="post" id="handleposition"
+
+
+                            <if condition="$info">
+                                action="__MODULE__/User/level/action/edit"
+                                <else/>
+                                action="__MODULE__/User/level/action/add"
+                            </if>
+
+                            >
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">等级名称：</label>
+                                <div class="col-sm-5 ">
+                                    <input type="text" datatype="*" nullmsg="等级名称不得为空！" class="form-control form-input"
+                                           name="level_name" id="level_name" value="{$info.level_name}">
+                                </div>
+                                设置会员等级名称
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">消费额度：</label>
+                                <div class="col-sm-5">
+                                    <input type="text" datatype="n" nullmsg="消费额度不能为空！" errormsg="请填写大于0的整数"
+                                           class="form-control form-input" name="amount" id="amount" value="{$info.amount}"> <span
+                                        id="err_url" style="color:#F00; display:none;"></span>
+                                </div>
+                                设置会员等级所需要的消费额度
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">折扣率：</label>
+                                <div class="col-sm-5">
+                                    <input type="text" datatype="/^[1-9][0-9]{0,1}$/" nullmsg="折扣率不得为空！" errormsg="请填写大于0小于100的整数"
+                                           class="form-control form-input" name="discount" id="discount" value="{$info.discount}">
+                                </div>
+                                折扣率单位为百分比，如输入90，表示该会员等级的用户可以以商品原价的90%购买
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 col-sm-2 control-label">等级描述：</label>
+                                <div class="col-sm-6">
+                                    <textarea rows="5" datatype="*" nullmsg="等级描述不得为空！" class="form-control form-input" name="describe"
+                                              id="describe">{$info.describe}</textarea>
+                                </div>
+
+                            </div>
+
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section><!--表单数据-->
+
+
+    </div>
+    </div>
+
+
+    </div>
+    <!-- main content end-->
+</section>
+<script type="text/javascript" src="{$Think.const.JS}/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$Think.const.JS}/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript">
+    $('.adminex-form').Validform({
+        tiptype: 3
+    });
+</script>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="{$Think.const.JS}/jquery-1.10.2.min.js"></script>
+<script src="{$Think.const.JS}/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="{$Think.const.JS}/jquery-migrate-1.2.1.min.js"></script>
+<script src="{$Think.const.JS}/bootstrap.min.js"></script>
+<script src="{$Think.const.JS}/modernizr.min.js"></script>
+<script src="{$Think.const.JS}/jquery.nicescroll.js"></script>
+<script src="__PUBLIC__/js/layer/layer-min.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+<!--common scripts for all pages-->
+<script src="{$Think.const.JS}/scripts.js"></script>
+
+</body>
+</html>

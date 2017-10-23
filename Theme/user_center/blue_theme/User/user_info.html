@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>个人资料</title>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/user/css/aui.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/user/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/user/css/mobiscroll.animation.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/user/css/mobiscroll.frame.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/user/css/mobiscroll.scroller.css" />
+    <link rel="stylesheet" type="text/css" href="__STATIC__/user/css/cityPicker.css" />
+
+    <style type="text/css">
+        .aui-list{border-bottom:1px solid #e5e5e5;border-top:1px solid #e5e5e5;}
+        .aui-list-item:before{content:"";position: absolute;height:1px;background: #ebebeb;left:0;right:0;bottom:0;margin:auto;margin-left:0.5rem;}
+        .aui-list-item:last-of-type:before{display:none;}
+
+        .basic{font-size: 0.7rem;color:#aaa;padding:0 0.5rem;line-height: 2rem;}
+
+        .right_txt{width:70%;}
+        .right_txt input{text-align: right;}
+        .mbsc-mobiscroll .dwb-c { float: left; }
+
+        .pro-picker, .city-picker{top:0;z-index: 999999999 !important;;}
+        .navbar{display:none;}
+        .head-img{
+            width: 3.2rem;
+            height: 3.2rem;
+            border-radius: 50%;
+            float: right;
+            position: relative;
+            margin-top: 0.2rem;
+            margin-bottom: 0.2rem;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header class="aui-bar aui-bar-nav">
+    <a href="javascript:history.go(-1);" class="aui-pull-left aui-btn">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">个人资料</div>
+    <a id="saveBtn" class="aui-pull-right">
+        <span>保存</span>
+    </a>
+</header>
+
+<section class="aui-content" id="user_info">
+    <div class="basic">基本资料</div>
+    <ul class="aui-list aui-margin-b-15">
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">头像</div>
+                <div><img id="head_pic" v-bind:src="item.head_pic" class="head-img"/></div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">昵称</div>
+                <div><input id="nickname" name="nickname" style="text-align:right;" placeholder="昵称" type="text" v-model="item.nickname"/></div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">性别</div>
+                <div class="right_txt">
+                    <input style="text-align:right;" id="sex_select" readonly placeholder="性别" value="保密" type="text"/>
+                    <input style="text-align:right;" id="sex" value="0" type="hidden"/>
+                </div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">手机号</div>
+                <div><input style="text-align:right;" v-model="item.mobile" placeholder="手机" type="text"/></div>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">地址</div>
+                <div><input style="text-align:right;" v-model="item.area" placeholder="地址" type="text" id="city" class="city" /></div>
+            </div>
+        </li>
+
+
+    </ul>
+    <ul class="aui-list aui-margin-b-15">
+        <a href="__URL__/user_update_pw">
+            <li class="aui-list-item">
+                <div class="aui-list-item-inner">
+                    <div class="aui-list-item-title">账号密码修改</div>
+                    <div><i class="aui-iconfont aui-icon-right"></i></div>
+                </div>
+            </li>
+        </a>
+        <li class="aui-list-item"  onclick="wait();">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">支付密码修改</div>
+                <div><i class="aui-iconfont aui-icon-right"></i></div>
+            </div>
+        </li>
+        <li class="aui-list-item" onclick="wait();">
+            <div class="aui-list-item-inner">
+                <div class="aui-list-item-title">银行卡</div>
+                <div><i class="aui-iconfont aui-icon-right"></i></div>
+            </div>
+        </li>
+    </ul>
+    <div id="logout" style="width:90%;margin:auto;margin-top:1.5rem;" class="aui-btn aui-btn-info aui-btn-block aui-btn-sm">退出登录</div>
+</section>
+
+
+</body>
+</html>
+<script type="text/javascript" src="__STATIC__/user/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/api.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/mobiscroll.2.13.2.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/cityPicker.js"></script>
+<script type="text/javascript" src="__STATIC__/js/layer.mobile.js"></script>
+<script type="text/javascript" src="__STATIC__/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/Jcrop/jquery.Jcrop.min.js"></script>
+<script src="__PUBLIC__/js/vue.js"></script>
+<script>
+    // ---------------------
+    $(function () {
+
+        getUserInfo();
+        // 地区
+        $(".city").CityPicker();
+
+    });
+
+    var vm = new Vue({
+        el: '#user_info',
+        data: {
+            item:[]
+        }
+    });
+
+    function getUserInfo(){
+        var userId = $.cookie('user_id');
+
+        var url = "__ROOT__/{$Think.const.API_PATH}/User/user_info/action/detail/id/"+userId;
+        $.get(url, function(ret){
+
+            if(ret.result == 1){
+                var sex = ret.data.sex;
+                chooseSex(sex);
+                $("#uplaod-img").attr('src', ret.data.head_pic);
+                vm.item = ret.data;
+            }else{
+                layer_msg("获取数据失败!");
+            }
+
+        },'json');
+
+    }
+
+    $("#saveBtn").click(function(){
+
+        var userId = $.cookie('user_id');
+        var url = "__ROOT__/{$Think.const.API_PATH}/User/user_info/action/edit/id/" + userId;
+
+        var sex = $("#sex").val();
+        var area = $("#city").val();
+        var arr = area.split('-');
+        var province = '';
+        var city = '';
+        if(arr.length == 2){
+            var province = arr[0];
+            var city = arr[1];
+        }
+
+        var data = {'nickname': vm.item.nickname, 'sex':sex, 'mobile':vm.item.mobile,'province':province,'city':city };
+       // alert(JSON.stringify(data));
+        $.post(url, data, function(ret){
+
+            if(ret.result == 1){
+                layer_msg("个人资料更新成功");
+            }else{
+                layer_msg("个人资料更新失败");
+            }
+
+        }, 'json');
+
+    });
+
+    $("#logout").click(function(){
+
+        var url = "__ROOT__/{$Think.const.API_PATH}/User/index/action/logout";
+        $.get(url, function(ret){
+
+            if(ret.result == 1){
+              window.location.href = "__MODULE__/Login/login";
+            }else{
+                layer_msg(ret.msg);
+            }
+
+        },'json');
+
+    });
+    var sexArr = ['保密', '男', '女'];
+    $("#sex_select").click(function(){
+
+        var sex = parseInt($("#sex").val());
+
+        if(sex == 2){
+            sex = 0;
+        }else{
+            sex += 1;
+        }
+        chooseSex(sex);
+
+    });
+
+    function chooseSex(sex){
+        $("#sex_select").val(sexArr[sex]);
+        $("#sex").val(sex);
+    }
+
+    function wait(){
+        layer.open({
+            content: "该功能即将开放"
+            ,skin: 'msg'
+            ,time: 2 //2秒后自动关闭
+        });
+    }
+    function layer_msg(msg){
+        layer.open({
+            content: msg
+            ,skin: 'msg'
+            ,time: 2 //2秒后自动关闭
+        });
+    }
+</script>
+
+<script>
+
+    $("#head_pic").click(function(){
+        window.location.href = "__URL__/user_upload";
+    });
+
+</script>
+

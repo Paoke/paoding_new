@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>{$gemmap_config['shop_info_store_title']}</title>
+    <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}"/>
+    <meta name="description" content="{$gemmap_config['shop_info_store_desc']}"/>
+    <link href="{$Think.const.CSS}/style.css" rel="stylesheet">
+    <link href="{$Think.const.CSS}/style-responsive.css" rel="stylesheet">
+
+    <!-- jQuery 2.1.4 -->
+    <script src="__PUBLIC__/js/global.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+    .navbar-default {
+        background-color: #fff;
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .panel {
+        border: 1px solid #ddd;
+    }
+
+    .panel-border {
+        padding: 10px;
+        border: 1px solid #e6e8eb;
+        margin-top: -1px;
+    }
+
+    .option {
+        height: 26px;
+    }
+
+    .modal-dialog {
+        width: 450px;
+        height: 75%;
+        overflow-y: auto;
+        margin: 5% auto;
+    }
+
+    input[type=date] {
+        line-height: 15px;
+    }
+
+    /*.borderno{border-top:none;border-bottom:none;}*/
+    .panel-body .form-group select {
+        margin-right: 10px;
+    }
+
+    .form-group a {
+        margin-left: 10px;
+    }
+
+    .panel-body .form-group:last-of-type select {
+        margin-right: 7px;
+    }
+
+    .navbar-default {
+        background-color: #fff;
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .panel {
+        border: 1px solid #e7e7e7;
+    }
+
+    .formadd {
+        padding: 0px;
+    }
+
+    .pagination {
+        margin: 0;
+    }
+
+    .dataTables_paginate {
+        padding: 0;
+    }
+
+    .panel-heading {
+        border-bottom: 0px solid #ddd;
+
+    }
+</style>
+
+<body class="sticky-header" >
+
+<section>
+    <!-- main content start-->
+    <div class="main-content" width="100%" style="margin:0px;">
+        <form action="__MODULE__/User/user/action/page_list" id="search" role="search" method="post">
+            <!--body wrapper start-->
+            <div class="wrapper">
+                <!-- <include file="Public/breadcrumb"/> -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <section class="panel">
+                            <header class="panel-heading panel-body">
+                                <div class="pull-left">
+                                    会员管理
+                                </div>
+                                <div class="collapse navbar-collapse pull-right">
+                                    <div class=" navbar-right">
+                                        <a href="__MODULE__/User/user/action/page_edit" class="btn btn-default"><i
+                                                class="fa fa-plus"></i>新增用户</a>
+                                    </div>
+                                </div>
+                                <div class="collapse navbar-collapse pull-right">
+                                    <div class="input-group search-form">
+                                        <input type="text" class="form-control" name="keyword" placeholder="用户名/昵称/手机/邮箱查询" value="{$Think.post.keyword}">
+                                                    <span class="input-group-btn">
+                                                <button type="submit" class="btn btn-default btn_re"><i class="fa fa-search"></i></button>
+                                              </span>
+                                    </div>
+
+                                </div>
+
+                            </header>
+
+
+                            <div class="">
+                                <div class="adv-table">
+                                    <!-- <div class="adv-table" id="ajax_return"> -->
+                                    <table class="display table table-bordered table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th class="text-center" width="10%">
+                                                类别
+                                            </th>
+                                            <th class="text-center" width="15%">
+                                                统一社会信用代码
+                                            </th>
+                                            <th class="text-center" width="15%">
+                                                技术领域
+                                            </th>
+                                            <th class="text-center" width="15%">
+                                                希望展示的技术
+                                            </th>
+                                            <th class="text-center" width="15%">
+                                                专利
+                                            </th>
+                                            <th class="text-center">
+                                                营业执照
+                                            </th>
+                                            <th class="text-center">
+                                                技术资料
+                                            </th>
+                                            <th class="text-center">
+                                                专利资料
+                                            </th>
+                                            <th class="text-center">
+                                                状态
+                                            </th>
+                                            <th class="text-center" width="10%">操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <volist name="data" id="list" >
+                                            <tr role="row" align="center" style="background:#FFFFFF;">
+                                                <td class="text-center">{$list.type}</td>
+                                                <td class="text-center">{$list.company_code}</td>
+                                                <td class="text-center">{$list.tech_field}</td>
+                                                <td class="text-center">{$list.desc}</td>
+                                                <td class="text-center">{$list.has_patent}</td>
+                                                <td class="text-center">
+                                                    <img width="40" height="40" src="{$list.company_pic}" id="company_pic"
+                                                         onclick="preview(this)"/></td>
+                                                <td class="text-center">{$list.tech_file}</td>
+                                                <td class="text-center">{$list.patent_file}</td>
+                                                <td class="text-center">{$list.status}</td>
+
+                                                <td class="text-center">
+                                                    <!--src="__PUBLIC__/images/<if condition='$list[is_lock] eq 1'>yes.png<else />cancel.png</if>"-->
+                                                            <img width="20" height="20"
+                                                             src="__PUBLIC__/images/<if condition='$list[is_lock] eq 0'>yes.png<else />cancel.png</if>"
+                                                             onclick="changeTableField('{$mod_id}','ManageUsers','user_id','{$list.user_id}','is_lock',this)"  />
+                                                </td>
+
+                                                <td class="text-center">
+                                                    <div class="btn-group">
+                                                        <a href="__MODULE__/User/user/action/page_edit/id/{$list.user_id}"
+                                                           data-toggle="tooltip" title="" class="btn btn-default"
+                                                           data-original-title="查看详情"><i class="fa fa-pencil"></i></a>
+                                                        <!--<a href="__MODULE__/User/user/action/address/id/{$list.user_id}"-->
+                                                           <!--data-toggle="tooltip" title="" class="btn btn-default"-->
+                                                           <!--data-original-title="收货地址"><i class="fa fa-home"></i></a>-->
+                                                        <!--<a href="__MODULE__/Order/order/action/page_list/user_id/{$list.user_id}"-->
+                                                           <!--data-toggle="tooltip" title="" class="btn btn-default"-->
+                                                           <!--data-original-title="订单查看"><i class="fa fa-shopping-cart"></i></a>-->
+                                                        <!--<a href="__MODULE__/User/user/action/account_log/id/{$list.user_id}"-->
+                                                           <!--data-toggle="tooltip" title="" class="btn btn-default"-->
+                                                           <!--data-original-title="账户"><i-->
+                                                                <!--class="fa fa-rmb"></i></a>-->
+                                                        <a href="#delModal"
+                                                           data-toggle="modal" class="btn btn-default del-user"
+
+                                                           data-url="__MODULE__/User/user/action/del/id/{$list.user_id}"
+                                                           data-name="{$list.nickname}"
+
+                                                            data-url="__MODULE__/User/user/action/del/id/{$list.user_id}"
+                                                           data-name="{$list.user_id}"
+
+                                                           onclick="delModal(this)"
+                                                           ><i class="fa fa-trash-o"></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </volist>
+
+                                        </tbody>
+                                    </table>
+                                    <!-- Modal -->
+                                    <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabajaxindex="-1" id="delModal"
+                                         class="modal fade ">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×
+                                                    </button>
+                                                    <h4 class="modal-title">信息</h4>
+                                                </div>
+                                                <div class="modal-body" id="del_info">
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                                            onclick="del_module();"> 确定
+                                                    </button>
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal"> 取消</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- modal -->
+                                    <div class="row-fluid panel-body">
+                                        <div class="span6">
+                                            <div class="dataTables_info" id="dynamic-table_info">
+                                                <label style="float:left">
+
+                                                    <select class="form-control" size="1" id="page_num" name="page_num"
+                                                            aria-controls="dynamic-table" onchange="search()">
+
+                                                        <option value="25">25</option>
+                                                       <option value="50">50</option>
+                                                        <option value="100">100</option>
+                                                    </select>
+
+                                                </label>
+                                                <label style="float:left;margin-left:10px;margin-top:7px">
+                                                    <span class=" wenzi" style="float:left">条每页，总共 {$count} 条</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="span6">
+                                            <div class="dataTables_paginate paging_bootstrap pagination">
+                                                <ul>
+                                                    <if condition="$page_now eq 1">    <!-- 上一页 -->
+                                                        <li class="prev disabled">
+                                                            <a href="#">
+                                                                上一页
+                                                            </a>
+                                                        </li>
+                                                        <else/>
+                                                        <li class="prev">
+                                                            <a href="__MODULE__/User/user/action/page_list/page_now/{$page_now-1}/page_num/{$page_num}">
+                                                                上一页
+                                                            </a>
+                                                        </li>
+                                                    </if>   <!-- 上一页 end -->
+
+                                                    <if condition="$page lt 5">    <!-- 页码条 -->
+                                                        <for start="1" end="$page+1">   <!-- 循环四条以内 -->
+                                                            <if condition="$i eq $page_now ">
+                                                                <li class="active"><a href="">{$i}</a></li>
+                                                                <elseif condition="$i lt $page_now "/>
+                                                                <li>
+                                                                    <a href="__MODULE__/User/user/action/page_list/page_now/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                                <else/>
+                                                                <li>
+                                                                    <a href="__MODULE__/User/user/action/page_list/page_now/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                            </if>
+                                                        </for>
+                                                        <elseif condition="$page_now lt 3"/>
+                                                        <for start="1" end="6">   <!-- 循环1-5 -->
+
+                                                            <if condition="$i eq $page_now ">
+                                                                <li class="active"><a href="#">{$page_now}</a></li>
+                                                                <elseif condition="$i lt $page_now "/>
+                                                                <li>
+                                                                    <a href="__MODULE__/User/user/action/page_list/page_now/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                                <else/>
+                                                                <li>
+                                                                    <a href="__MODULE__/User/user/action/page_list/page_now/{$i}/page_num/{$page_num}">{$i}</a>
+
+                                                                </li>
+                                                            </if>
+                                                        </for>
+                                                        <elseif condition="$page_now eq $page-1"/>
+                                                        <for start="$page_now-3" end="$page+1">   <!-- 循环当前页为倒数第二页时 -->
+                                                            <if condition="$i eq $page_now ">
+                                                                <li class="active"><a href="#">{$page_now}</a></li>
+                                                                <elseif condition="$i lt $page "/>
+                                                                <li>
+                                                                    <a href="__MODULE__/User/user/action/page_list/page_now/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                                <else/>
+                                                                <li>
+                                                                    <a href="__MODULE__/User/user/action/page_list/page_now/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                            </if>
+                                                        </for>
+                                                        <elseif condition="$page_now eq $page"/>
+                                                        <for start="$page_now-4" end="$page+1">   <!-- 循环当前页为最后一页时 -->
+                                                            <if condition="$i eq $page_now ">
+                                                                <li class="active"><a href="#">{$page_now}</a></li>
+                                                                <elseif condition="$i lt $page "/>
+                                                                <li>
+                                                                    <a href="__MODULE__/User/user/action/page_list/page_now/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                                <else/>
+                                                                <li>
+                                                                    <a href="__MODULE__/User/user/action/page_list/page_now/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                            </if>
+                                                        </for>
+                                                        <else/>
+                                                        <for start="$page_now-2" end="$page_now+3">   <!-- 循环除了前五条 和后五条 -->
+
+                                                            <if condition="$i eq $page_now ">
+                                                                <li class="active"><a href="#">{$page_now}</a></li>
+                                                                <elseif condition="$i lt $page "/>
+                                                                <li>
+                                                                    <a href="__MODULE__/User/user/action/page_list/page_now/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                                <else/>
+                                                                <li>
+                                                                    <a href="__MODULE__/User/user/action/page_list/page_now/{$i}/page_num/{$page_num}">{$i}</a>
+                                                                </li>
+                                                            </if>
+                                                        </for>
+                                                    </if>   <!-- 页码条 end -->
+
+                                                    <if condition="($page_now neq $page) AND ($page neq 0)"> <!-- 下一页 -->
+                                                        <li class="next ">
+                                                            <a href="__MODULE__/User/user/action/page_list/page_now/{$page_now+1}/page_num/{$page_num}">
+                                                                下一页
+                                                            </a>
+                                                        </li>
+                                                        <else/>
+                                                        <li class="next disabled">
+                                                            <a href="#">
+                                                                下一页
+                                                            </a>
+                                                        </li>
+                                                    </if><!-- 下一页 end-->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!--body wrapper end-->
+        </form>
+
+
+    </div>
+    <!-- main content end-->
+</section>
+
+<script type="text/javascript" src="{$Think.const.JS}/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$Think.const.JS}/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript">
+    $('.adminex-form').Validform({
+        tiptype: 3
+    });
+</script>
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="{$Think.const.JS}/jquery-1.10.2.min.js"></script>
+<script src="{$Think.const.JS}/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="{$Think.const.JS}/jquery-migrate-1.2.1.min.js"></script>
+<script src="{$Think.const.JS}/bootstrap.min.js"></script>
+<script src="{$Think.const.JS}/modernizr.min.js"></script>
+<script src="{$Think.const.JS}/jquery.nicescroll.js"></script>
+<script src="__PUBLIC__/js/layer/layer-min.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+<!--common scripts for all pages-->
+<script src="{$Think.const.JS}/scripts.js"></script>
+<script src="__PUBLIC__/js/myAjax.js"></script>
+<script>
+
+    $(function (e) {
+        $('#add').click(function (e) {
+            var myAdd = $('<div class="form-group">' +
+                    '<select class="check option fl" name="searchfor[]" onchange="selectValue(this);">' +
+                    '<option value="user_id" searchtype="1">ID</option>' +
+                    '<option value="mobile" searchtype="1">用户名</option>' +
+                    '<option value="nickname" searchtype="1">会员昵称</option>' +
+                    '<option value="user_money" searchtype="1">余额</option>' +
+                    '<option value="level" searchtype="1">会员等级</option>' +
+                    '<option value="pay_points" searchtype="1">积分</option>' +
+                    '<option value="reg_time" searchtype="7" propname="recentActivityRecordTime">注册日期</option>' +
+
+                    '</select>' +
+                    '<select name="select[]" id="" class="option fl">' +
+                    '<option value="1">等于</option>' +
+                    '<option value="2">不等于</option>' +
+                    '<option value="3">小于</option>' +
+                    '<option value="4">大于</option>' +
+                    '<option value="5">小于等于</option>' +
+                    '<option value="6">大于等于</option>' +
+                    '<option value="7">包含</option>' +
+                    '<option value="8">不包含</option>' +
+                    '</select>' +
+                    '<input type="text" name="content[]"/>' +
+                    '<span><a style="margin-left:16px" class="del" href="javascript:;">' +
+                    '<img src="{$Think.const.IMG}/details_close.png" alt="" /></a></span></div>')
+
+            $('#qwe').prepend(myAdd);
+        });
+
+        $(document).on('click', '.del', function () {
+            var self = $(this)
+
+            setTimeout(function () {
+                self.parent().parent().remove();
+            }, 300)
+        })
+
+    });
+    var searchtype;
+
+    function selectValue(_this) {
+        searchtype = $(_this).find("option:selected").attr('searchtype');
+        console.log(searchtype)
+        if (searchtype == 7) {
+            $(_this).siblings('input')[0].type = 'date';
+        } else {
+            $(_this).siblings('input')[0].type = 'text'
+        }
+    }
+    function preview(id) {
+        var src=$(id).attr("src");
+
+        var content;
+        if (src == "") {
+            content = '没有图片可供预览';
+            layer.msg(content);
+        }
+        else {
+            content = "<img width='300' height='300' src='" + src + "'>";
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: false,
+                area: ['300px', '300px'],
+                skin: 'layui-layer-nobg', //没有背景色
+                shadeClose: true,
+                content: content
+            });
+        }
+    }
+     //删除操作
+    function del(id, t) {
+        if (!confirm('确定要删除吗?'))
+            return false;
+        location.href = $(t).data('href');
+    }
+    function search() {
+        $('#search').submit();
+    }
+    $(document).ready(function () {
+        //默认选中
+        $("#page_num").val({$page_num});
+    });
+
+    var url;
+    var user_name;
+    var user_del;
+    //删除菜单
+    function delModal(obj) {
+        user_del = $(obj);
+        url = $(obj).attr('data-url');
+        user_name = $(obj).attr('data-name');
+        $("#del_info").html("确定删除用户： 【" + user_name + "】  ")
+    }
+    function del_module() {
+        $.get(url, function (res) {
+            if (res.result == 1) {
+                layer.msg(res.msg);
+                user_del.parent().parent().parent().remove();
+            } else if(res.result==0){
+                layer.msg(res.msg);
+            }
+            //location.href = "{:U('Admin/User/user')}" + "/id/" + user_id;
+        });
+    }
+//    function gettrue() {
+//            location.href = "{:U('Admin/User/user')}" + "/id/" + user_id;
+//    }
+
+
+    function search() {
+        $('#search').submit();
+    }
+    $(document).ready(function () {
+        //默认选中
+        $("#page_num").val({$page_num});
+    });
+</script>
+</body>
+</html>

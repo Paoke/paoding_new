@@ -1,0 +1,230 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+    <title></title>
+    <meta name="keywords" content="<?php echo ($gemmap_config['shop_info_store_keyword']); ?>"/>
+    <meta name="description" content="<?php echo ($gemmap_config['shop_info_store_desc']); ?>"/>
+
+    <link href="/Public/css/style.css" rel="stylesheet">
+    <link href="/Public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/Public/css/bootstrap-reset.css" rel="stylesheet">
+</head>
+<style type="text/css">
+    .sticky-header{background: #e7e7e7;}
+    a{text-decoration:none; color:#969696; font-family:Microsoft YaHei,Tahoma,Arial,sans-serif;}
+    a:hover{text-decoration:none;}
+    ul,li,ol{ list-style:none; padding:0; }
+    .main-content {  background: #eff0f4; min-height: 1000px; }
+    .panel-heading{font-size:20px;}
+    .line{ height: 35px; line-height: 35px; text-align: center; font-size: 14px; background: #24dabb; color: #fff; border-radius: 5px; }
+    .ibox-content {
+
+        color: inherit;
+        padding: 15px 20px 20px 20px;
+        border: solid 1px #E9E9E9;
+        margin-bottom: 20px;
+        background: #F8FAF9;
+    }
+
+    .ibox-title{
+        font-size:24px;
+        margin-bottom: 15px;
+    }
+    .ibox-remark{
+        font-size:16px;
+        margin-top: 15px;
+        text-align: left;
+        height: 80px;
+    }
+
+
+    .mail-search {
+        max-width: 300px;
+    }
+
+</style>
+<body class="sticky-header">
+<section>
+
+    <!-- main content start-->
+    <div class="main-content" width="100%" style="margin:0px;">
+
+
+        <!--body wrapper start-->
+        <div class="wrapper">
+            <!--  -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <section class="panel">
+                        <header class="panel-heading panel-body ">
+                            <div class="pull-left ">
+                                应用频道列表
+                            </div>
+
+
+                                <form method="get" action="index.html" class="pull-right mail-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control input" name="search" placeholder="输入关键字">
+                                        <div class="input-group-btn">
+                                            <button type="submit" class="btn  btn-primary">
+                                                查询
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+
+
+                        </header>
+
+
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="ibox float-e-margins">
+                                            <a href="javascript:void(0);" onclick="open_demo(1)">
+                                            <div class="ibox-content text-center p-md">
+
+                                                <div class="ibox-title">公司信息展示</div>
+                                                <div class="m-t-md">
+
+                                                    <div class="p-lg ">
+
+                                                            <img class="img-responsive img-shadow" src="/Public/images/channel_config/case_1.png" alt="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="ibox-remark">主要是固定资产管理，包括入库，维修，借出，报废等，全程跟踪你的固定资产状态。
+                                                    目前模板中心还没有类似的，想分享给其它企业或团队复制后使用</div>
+
+
+                                            </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="ibox float-e-margins">
+                                            <a onclick="open_demo(2)">
+                                            <div class="ibox-content text-center p-md">
+
+                                                <div class="ibox-title">增值税专用发票管理</div>
+                                                <div class="m-t-md">
+
+                                                    <div class="p-lg ">
+
+                                                            <img class="img-responsive img-shadow" src="/Public/images/channel_config/case_2.png" alt="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="ibox-remark">该模版主要帮助小微型企业管理增值税专用发票。以企业负责人的角度来监管增值税专用发票，尤其适合财务管理还不够健全的小微型企业。</div>
+
+
+                                            </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="ibox float-e-margins">
+                                            <a onclick="open_demo(3)">
+                                                <div class="ibox-content text-center p-md">
+
+                                                    <div class="ibox-title">公司信息展示</div>
+                                                    <div class="m-t-md">
+
+                                                        <div class="p-lg ">
+
+                                                            <img class="img-responsive img-shadow" src="/Public/images/channel_config/case_1.png" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="ibox-remark">主要是固定资产管理，包括入库，维修，借出，报废等，全程跟踪你的固定资产状态。
+                                                        目前模板中心还没有类似的，想分享给其它企业或团队复制后使用</div>
+
+
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="ibox float-e-margins">
+                                            <a onclick="open_demo(4)">
+                                                <div class="ibox-content text-center p-md">
+
+                                                    <div class="ibox-title">增值税专用发票管理</div>
+                                                    <div class="m-t-md">
+
+                                                        <div class="p-lg ">
+
+                                                            <img class="img-responsive img-shadow" src="/Public/images/channel_config/case_2.png" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="ibox-remark">该模版主要帮助小微型企业管理增值税专用发票。以企业负责人的角度来监管增值税专用发票，尤其适合财务管理还不够健全的小微型企业。</div>
+
+
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+
+                    </section>
+                </div>
+            </div>
+        </div>
+        <!--body wrapper end-->
+    </div>
+    <!-- main content end-->
+</section>
+</body>
+</html>
+
+<script src="/Public/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+<!--common scripts for all pages-->
+<script src="<?php echo (JS); ?>/jquery.nicescroll.js"></script>
+<script src="<?php echo (JS); ?>/scripts.js"></script>
+<script src="/Public/js/layer/layer-min.js"></script>
+
+<script>
+
+    function open_demo(id) {
+        //多窗口模式，层叠置顶
+        layer.open({
+            type: 2 //此处以iframe举例
+            , title: '频道效果预览'
+            , area: [$(window).width()+'px', ($(window).height()-40)+'px']
+            , shade: 0
+            , offset: [ //为了演示，随机坐标
+               40, 0
+            ],
+            scrollbar: false,
+            shade:0.5,
+            shift:2,
+            fixed:false,
+            resize:false,
+            scrollbar:true,
+            move:false
+            , maxmin: false
+            , content: '/index.php/Admin/Channel/app_Demo/channel_type/<?php echo ($channel_type); ?>/list_type_id/'+id
+            , zIndex: layer.zIndex //重点1
+            , success: function (layero) {
+                layer.setTop(layero); //重点2
+            }
+        });
+    }
+</script>

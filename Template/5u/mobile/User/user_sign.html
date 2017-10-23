@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+<title>签到</title>
+   <link rel="shortcut icon" href="__STATIC__/img/favicon.ico">
+<link rel="stylesheet" type="text/css" href="__STATIC__/css/aui.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/css/common.css" />
+<script type="text/javascript" src="__STATIC__/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/api.js"></script>
+<style type="text/css">
+body{background:#fafafa;}
+.aui-content{margin-top:4rem;}
+.bg-color{background:#3fb838 !important;}
+.div1{border-radius: 50%;width: 4.5rem;height:4.5rem;background:url(__STATIC__/image/gou.png)no-repeat center center;background-size: 60%;;margin:auto;background-color:#03a9f4 ;}
+.div1-cancel{border-radius: 50%;width: 4.5rem;height:4.5rem;background:url(__STATIC__/image/wrong.png)no-repeat center center;background-size: 60%;;margin:auto;background-color: #EF2216;}
+.div1-warn{border-radius: 50%;width: 4.5rem;height:4.5rem;background:url(__STATIC__/image/warnning.png)no-repeat center center;background-size: 60%;;margin:auto;background-color: #F5F423;}
+.div2{font-size: 0.9rem;color:#EF2216;text-align: center;padding-top:1rem;font-weight: bold;}
+.div3{font-size: 1.0rem;color:#666;text-align: center;padding-top: 1rem;}
+.div4{font-size: 0.8rem;font-weight: bold;color:#666;text-align: center;padding-top: 2rem;}
+</style>
+
+</head>
+
+<body>
+
+<section class="aui-content">
+   <div id="icon" class="div1-cancel"></div>
+      <div class="div2">签到失败</div>
+      <div class="div3"></div>
+      <div id="msg" class="div4">获取信息失败，请稍后再试!</div>
+</section>
+
+</body>
+</html>
+
+<script>
+   //var status = {$status};
+   var user_id = parseInt("{$user_id}");
+
+   $(function(){
+      /*if(status == -1){
+         $("#msg").text("获取信息失败，请稍后再试!");
+      }else if(status == -2){
+         $("#msg").text("您尚未在医信微平台注册!");
+      }*/
+      if(user_id > 0){
+         getApplyInfo();
+      }
+
+   });
+
+   function getApplyInfo(){
+
+      var url = "__ROOT__/{$Think.const.API_PATH}/ActivityOrder/order/action/sign/channel/{$channel}/type/{$type}";
+      var data_id = "{$data_id}";
+      var data = {
+         'user_id': user_id,
+         'data_id': data_id
+      };
+
+      $.post(url, data, function(res){
+        // alert(JSON.stringify(res));
+         if(res.result == 1){
+            var order = res.data;
+            $(".div3").text(order.activity_name);
+
+            var code = order.sign_status;
+            if(code == -1){
+               $("#msg").text("没找到您在参加会议的记录!");
+            }else if(code == -2){
+               $("#icon").removeClass('div1-cancel').addClass('div1-warn');
+               $(".div2").text("重复签到");
+               $("#msg").text("您已经进行过签到，不用重复签到!");
+            }else if(code == -3){
+               $("#msg").text("签到失败，请稍后重试!");
+            }else if(code == 1){
+               $(".div2").text("签到成功");
+               $(".div2").css('color', '#03a9f4');
+               $("#msg").text("恭喜您已成功签到!");
+               $("#icon").removeClass('div1-cancel').addClass('div1');
+            }
+         }
+
+      });
+   }
+
+</script>

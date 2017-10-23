@@ -1,0 +1,999 @@
+[ 2017-08-04T01:14:18+08:00 ] 123.125.67.220 /index.php/Mobile/Article/detail/channel/js/type/1/data_id/4109
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.008868s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008989s ]
+NOTIC: [8] Undefined index: userArr /var/www/html/paoding_gemmap/Application/Mobile/Controller/BaseController.class.php 第 68 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000153s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000201s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 7 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 9 行.
+NOTIC: [8] Undefined variable: info /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 79 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 176 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 177 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 178 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 179 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 203 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 204 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 205 行.
+NOTIC: [8] Undefined variable: area_name /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 206 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 206 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 226 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 227 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 228 行.
+NOTIC: [8] Undefined variable: area_name /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 229 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 229 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 249 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 250 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 251 行.
+NOTIC: [8] Undefined variable: area_name /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 252 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 252 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 272 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 273 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 274 行.
+NOTIC: [8] Undefined variable: area_name /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 275 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 275 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 295 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 296 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 297 行.
+NOTIC: [8] Undefined variable: area_name /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 298 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 298 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008052s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008100s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000237s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000481s ]
+
+[ 2017-08-04T04:06:08+08:00 ] 101.226.233.158 /index.php/mobile/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000467s ]
+NOTIC: [2048] Declaration of Mobile\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Mobile/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007983s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008030s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000149s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000192s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006464s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000360s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000403s ]
+
+[ 2017-08-04T04:06:08+08:00 ] 101.226.233.158 /index.php/mobile/Article/data_list/channel/xq
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007969s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008021s ]
+NOTIC: [8] Undefined index: userArr /var/www/html/paoding_gemmap/Application/Mobile/Controller/BaseController.class.php 第 68 行.
+NOTIC: [8] Undefined index: type /var/www/html/paoding_gemmap/Application/Mobile/Controller/ArticleController.class.php 第 21 行.
+NOTIC: [8] Undefined index: order_id /var/www/html/paoding_gemmap/Application/Mobile/Controller/ArticleController.class.php 第 24 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000143s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000182s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000152s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000227s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 105 行.
+NOTIC: [8] Undefined variable: others /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011113s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011151s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000133s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000265s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000482s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000551s ]
+
+[ 2017-08-04T08:46:52+08:00 ] 14.17.44.216 /index.php/mobile/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+NOTIC: [2048] Declaration of Mobile\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Mobile/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007957s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000120s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000164s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006817s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006851s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000268s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000462s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000504s ]
+
+[ 2017-08-04T12:21:05+08:00 ] 101.226.125.18 /index.php/mobile/Article/data_list/channel/xq
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000415s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007683s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007730s ]
+
+[ 2017-08-04T12:21:14+08:00 ] 101.226.33.240 /index.php/mobile/Article/data_list/channel/xq
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000055s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.009080s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.009153s ]
+
+[ 2017-08-04T12:21:14+08:00 ] 101.226.125.18 /index.php/mobile/Article/data_list/channel/xq
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000168s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000211s ]
+NOTIC: [8] Undefined index: type /var/www/html/paoding_gemmap/Application/Mobile/Controller/ArticleController.class.php 第 21 行.
+NOTIC: [8] Undefined index: order_id /var/www/html/paoding_gemmap/Application/Mobile/Controller/ArticleController.class.php 第 24 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000091s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000129s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 105 行.
+NOTIC: [8] Undefined variable: others /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010774s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010809s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000418s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000462s ]
+
+[ 2017-08-04T12:21:27+08:00 ] 101.226.125.18 /index.php/Mobile/Article/data_list/channel/xq
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000193s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000244s ]
+NOTIC: [8] Undefined index: type /var/www/html/paoding_gemmap/Application/Mobile/Controller/ArticleController.class.php 第 21 行.
+NOTIC: [8] Undefined index: order_id /var/www/html/paoding_gemmap/Application/Mobile/Controller/ArticleController.class.php 第 24 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000128s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000192s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 105 行.
+NOTIC: [8] Undefined variable: others /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011454s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011493s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000119s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000296s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000517s ]
+
+[ 2017-08-04T12:21:41+08:00 ] 101.226.125.18 /index.php/Mobile/Article/detail/channel/xq/type/1/data_id/68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000410s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000165s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000209s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000134s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000182s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 7 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 9 行.
+NOTIC: [8] Undefined variable: info /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 79 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 176 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 177 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 178 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 179 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 203 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 204 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 205 行.
+NOTIC: [8] Undefined variable: area_name /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 206 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 206 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 226 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 227 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 228 行.
+NOTIC: [8] Undefined variable: area_name /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 229 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 229 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 249 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 250 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 251 行.
+NOTIC: [8] Undefined variable: area_name /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 252 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 252 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 272 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 273 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 274 行.
+NOTIC: [8] Undefined variable: area_name /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 275 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 275 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 295 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 296 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 297 行.
+NOTIC: [8] Undefined variable: area_name /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 298 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/2e68ed16c4d3948aee73f12ea935ac3b.php 第 298 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016066s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016103s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000279s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000396s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000438s ]
+
+[ 2017-08-04T12:21:54+08:00 ] 101.226.125.18 /index.php/mobile/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+NOTIC: [2048] Declaration of Mobile\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Mobile/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000172s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000213s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000117s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000161s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006289s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006323s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000281s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000444s ]
+
+[ 2017-08-04T12:22:10+08:00 ] 101.226.125.18 /index.php/Mobile/Article/data_list/channel/js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000416s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000165s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000210s ]
+NOTIC: [8] Undefined index: type /var/www/html/paoding_gemmap/Application/Mobile/Controller/ArticleController.class.php 第 21 行.
+NOTIC: [8] Undefined index: order_id /var/www/html/paoding_gemmap/Application/Mobile/Controller/ArticleController.class.php 第 24 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000141s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000188s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/87fb9466112550b26094c6930b0d2671.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/87fb9466112550b26094c6930b0d2671.php 第 7 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/87fb9466112550b26094c6930b0d2671.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/87fb9466112550b26094c6930b0d2671.php 第 106 行.
+NOTIC: [8] Undefined variable: others /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/87fb9466112550b26094c6930b0d2671.php 第 127 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010044s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010081s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000161s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000264s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000384s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000426s ]
+
+[ 2017-08-04T12:22:20+08:00 ] 101.226.33.219 /index.php/Mobile/Article/data_list/channel/js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000419s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007668s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007716s ]
+
+[ 2017-08-04T12:36:39+08:00 ] 101.226.33.201 /index.php/Mobile/Article/detail/channel/xq/type/1/data_id/68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000394s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.008281s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008329s ]
+
+[ 2017-08-04T12:49:03+08:00 ] 218.0.237.207 /index.php/mobile/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+NOTIC: [2048] Declaration of Mobile\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Mobile/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007684s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007727s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000119s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000163s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006051s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006085s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000105s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000277s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000340s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000381s ]
+
+[ 2017-08-04T12:49:12+08:00 ] 101.226.33.240 /index.php/mobile/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+NOTIC: [2048] Declaration of Mobile\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Mobile/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007975s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008020s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000133s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000177s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000131s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006320s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006354s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000143s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000322s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000343s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000383s ]
+
+[ 2017-08-04T12:49:51+08:00 ] 218.0.237.207 /index.php/mobile/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+NOTIC: [2048] Declaration of Mobile\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Mobile/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000180s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000223s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000142s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000196s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007717s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007752s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000444s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000572s ]
+
+[ 2017-08-04T12:49:54+08:00 ] 218.0.237.207 /index.php/Mobile/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+NOTIC: [2048] Declaration of Mobile\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Mobile/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000170s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000211s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000197s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000283s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006436s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000370s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000412s ]
+
+[ 2017-08-04T12:50:12+08:00 ] 218.0.237.207 /index.php/Mobile/Article/data_list/channel/js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000164s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000209s ]
+
+[ 2017-08-04T15:29:45+08:00 ] 223.73.55.42 /index.php/mobile/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+NOTIC: [2048] Declaration of Mobile\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Mobile/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007816s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007866s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000122s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000166s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006238s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006273s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000108s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000245s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000351s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000410s ]
+
+[ 2017-08-04T15:30:30+08:00 ] 223.73.55.42 /index.php/Mobile/Article/data_list/channel/xq
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000215s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000260s ]
+
+[ 2017-08-04T15:30:39+08:00 ] 223.73.55.42 /index.php/Mobile/User/user_center
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000378s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000422s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000159s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000206s ]
+
+[ 2017-08-04T15:32:28+08:00 ] 223.73.55.42 /index.php/mobile/Article/data_list/channel/xq
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000158s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000205s ]
+
+[ 2017-08-04T15:32:57+08:00 ] 223.73.55.42 /index.php/mobile/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000410s ]
+NOTIC: [2048] Declaration of Mobile\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Mobile/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000179s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000260s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000125s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000185s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006242s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006276s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000271s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000435s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000395s ]
+
+[ 2017-08-04T15:33:05+08:00 ] 223.73.55.42 /index.php/Mobile/Article/data_list/channel/js/type/1/data_id/4115
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000179s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000223s ]
+
+[ 2017-08-04T15:33:16+08:00 ] 223.73.55.42 /index.php/Mobile/Article/data_list/channel/js/type/1/data_id/4115
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000179s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000224s ]
+NOTIC: [8] Undefined index: order_id /var/www/html/paoding_gemmap/Application/Mobile/Controller/ArticleController.class.php 第 24 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000104s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000193s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000168s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/87fb9466112550b26094c6930b0d2671.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/87fb9466112550b26094c6930b0d2671.php 第 7 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/87fb9466112550b26094c6930b0d2671.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/87fb9466112550b26094c6930b0d2671.php 第 106 行.
+NOTIC: [8] Undefined variable: others /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/87fb9466112550b26094c6930b0d2671.php 第 127 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010169s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010205s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000291s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000378s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000421s ]
+
+[ 2017-08-04T15:33:21+08:00 ] 223.73.55.42 /index.php/Mobile/Article/detail/channel/js/type/1/data_id/4115
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000207s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000253s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000134s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000198s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 7 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 9 行.
+NOTIC: [8] Undefined variable: info /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 79 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 176 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 177 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 178 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 179 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 203 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 204 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 205 行.
+NOTIC: [8] Undefined variable: area_name /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 206 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 206 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 226 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 227 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 228 行.
+NOTIC: [8] Undefined variable: area_name /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 229 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 229 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 249 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 250 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 251 行.
+NOTIC: [8] Undefined variable: area_name /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 252 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 252 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 272 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 273 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 274 行.
+NOTIC: [8] Undefined variable: area_name /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 275 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 275 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 295 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 296 行.
+NOTIC: [8] Undefined variable: signPackage /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 297 行.
+NOTIC: [8] Undefined variable: area_name /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 298 行.
+NOTIC: [8] Undefined variable: share /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/ed59a97ccb50d95fe1f9914625d564c5.php 第 298 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008020s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008057s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000112s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000239s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000355s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000397s ]
+
+[ 2017-08-04T15:33:31+08:00 ] 101.226.66.172 /index.php/Mobile/Article/detail/channel/js/type/1/data_id/4115
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007615s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007663s ]
+
+[ 2017-08-04T15:33:45+08:00 ] 223.73.55.42 /index.php/mobile/Article/data_list/channel/xq
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000226s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000279s ]
+NOTIC: [8] Undefined index: type /var/www/html/paoding_gemmap/Application/Mobile/Controller/ArticleController.class.php 第 21 行.
+NOTIC: [8] Undefined index: order_id /var/www/html/paoding_gemmap/Application/Mobile/Controller/ArticleController.class.php 第 24 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000105s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000145s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000177s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000244s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 105 行.
+NOTIC: [8] Undefined variable: others /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011718s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011754s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000111s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000265s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000361s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000418s ]
+
+[ 2017-08-04T15:34:02+08:00 ] 223.73.55.42 /index.php/Mobile/Article/data_list/channel/xq
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000207s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000252s ]
+NOTIC: [8] Undefined index: type /var/www/html/paoding_gemmap/Application/Mobile/Controller/ArticleController.class.php 第 21 行.
+NOTIC: [8] Undefined index: order_id /var/www/html/paoding_gemmap/Application/Mobile/Controller/ArticleController.class.php 第 24 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000090s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000133s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 105 行.
+NOTIC: [8] Undefined variable: others /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010163s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010199s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000107s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000241s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000320s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000429s ]
+
+[ 2017-08-04T15:34:04+08:00 ] 223.73.55.42 /index.php/Mobile/User/user_center
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000188s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000239s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000166s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000221s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/f080998a8e083aa14aa33f0e3c4bb333.php 第 7 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/f080998a8e083aa14aa33f0e3c4bb333.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/f080998a8e083aa14aa33f0e3c4bb333.php 第 10 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020075s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020120s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000109s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000244s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000416s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000459s ]
+
+[ 2017-08-04T15:34:05+08:00 ] 223.73.55.42 /index.php/Mobile/Article/data_list/channel/xq
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000468s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000167s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000212s ]
+NOTIC: [8] Undefined index: type /var/www/html/paoding_gemmap/Application/Mobile/Controller/ArticleController.class.php 第 21 行.
+NOTIC: [8] Undefined index: order_id /var/www/html/paoding_gemmap/Application/Mobile/Controller/ArticleController.class.php 第 24 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000161s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000207s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000162s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 105 行.
+NOTIC: [8] Undefined variable: others /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/1724b1f1b079b2a6a957bdf2135918fc.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010705s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010742s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000356s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000399s ]
+
+[ 2017-08-04T15:43:57+08:00 ] 101.226.66.192 /index.php/Mobile/User/user_center
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007635s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007683s ]
+
+[ 2017-08-04T15:51:42+08:00 ] 61.151.228.22 /index.php/Mobile/User/user_center
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007808s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007857s ]
+
+[ 2017-08-04T16:54:56+08:00 ] 115.239.138.179 /index.php/Mobile/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+NOTIC: [2048] Declaration of Mobile\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Mobile/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007705s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007748s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000118s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000162s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006168s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006204s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000233s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000394s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000435s ]
+
+[ 2017-08-04T17:47:56+08:00 ] 117.136.32.99 /index.php/mobile/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000396s ]
+NOTIC: [2048] Declaration of Mobile\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Mobile/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007955s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008003s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000099s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000143s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000134s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006469s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006503s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000110s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000239s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000512s ]
+
+[ 2017-08-04T21:04:46+08:00 ] 223.73.7.72 /index.php/mobile/Index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000372s ]
+NOTIC: [2048] Declaration of Mobile\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) /var/www/html/paoding_gemmap/Application/Mobile/Controller/IndexController.class.php 第 8 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.008433s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.008497s ]
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000126s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000170s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+NOTIC: [8] Undefined variable: seoTitle /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 6 行.
+NOTIC: [8] Undefined variable: seoKeywords /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 8 行.
+NOTIC: [8] Undefined variable: seoDescription /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 9 行.
+NOTIC: [8] Undefined variable: v /var/www/html/paoding_gemmap/Application/Runtime/Cache/Mobile/287a75ef6074c13750e3b2bdaccd2921.php 第 78 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006138s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006173s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000106s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000235s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000332s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000376s ]
+

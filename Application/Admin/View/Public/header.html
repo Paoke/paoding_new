@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>{$gemmap_config['shop_info_store_title']}</title>
+    <link rel="shortcut icon" href="{$gemmap_config['shop_info_title_logo']}" type="image/png">
+
+    <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}"/>
+    <meta name="description" content="{$gemmap_config['shop_info_store_desc']}"/>
+
+    <!--dashboard calendar-->
+    <link rel="stylesheet" href="{$Think.const.CSS}/clndr.css">
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="{$Think.const.JS}/morris-chart/morris.css">
+    <link rel="stylesheet" href="{$Think.const.P}/css/font-awesome.min.css">
+
+    <!--common-->
+    <link rel="stylesheet" href="{$Think.const.CSS}/style.css">
+    <link rel="stylesheet" href="{$Think.const.CSS}/style-responsive.css">
+
+    <!-- jQuery 2.1.4 -->
+    <script src="__PUBLIC__/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/js/layer/layer-min.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+
+    <style type="text/css">
+        /* 初始化 */
+        body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article,
+        aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        body {
+            font: normal 14px/1.5 Tahoma, "Lucida Grande", Verdana, "Microsoft Yahei", STXihei, hei;
+        }
+
+        em, i {
+            font-style: normal;
+        }
+
+        strong {
+            font-weight: normal;
+        }
+
+        a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-size: 100%;
+            font-family: Microsoft YaHei;
+        }
+
+        img {
+            border: none;
+        }
+
+        .nav-menu {
+            height: 50px;
+            padding-right: 10px;
+            float: left;
+        }
+
+        .bn-headnav li {
+            float: left;
+        }
+
+        .bn-headnav li a {
+            display: inline-block;
+            margin: 0 20px;
+            line-height: 50px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .bn-headnav li a:hover {
+            text-decoration: none;
+        }
+
+        .bn-headnav li.curr {
+            color: #65cea7;
+            height: 50px;
+            background: #65cea7;
+        }
+
+        .bn-headnav li.curr a {
+            color: #fff;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var menu = {$menu_list};
+        $(function () {
+            $('.bn-headnav ').on('click', 'li', function (ev) {
+                $('.bn-headnav  li').removeClass('curr');
+                $(this).addClass('curr');
+            });
+
+
+            var str = '';
+            var isMenu = $("#rightMenu").is(":empty");
+            //            var isRegular = /[该菜单暂无数据]/.test($("#menuRight").html());
+            $.each(menu, function (i, item) {
+                if (item.parent_id == {$first_menu.mod_id}
+                )
+                {
+                    str += '<li class="menu-list" id="' + item.mod_id + '" onclick="slideMenu(this,' + item.mod_id + ')">';
+                    str += '<a href="javascript:void(0)">';
+                    str += '<i class="fa ' + item.icon + '"></i><span>' + item.title + '</span>';
+                    str += '</a>';
+                    str += '<ul class="sub-menu-list">';
+                    $.each(item.submenu, function (ii, iitem) {
+                        str += '<li onclick="makecss(this,' + iitem.mod_id + ')" id="menu_' + iitem.mod_id + '">';
+                        str += '<a href="__MODULE__/' + iitem.url + '" target="rightContent"><i class="fa fa-circle-o"></i>' + iitem.title + '</a>';
+                        str += '</li>';
+                    });
+                    str += '</ul></li>';
+                }
+
+            });
+            if (!isMenu) {
+                $("#menuRight").html("");
+                $("#menuRight").append(str);
+                $("#{$first_menu.mod_id}").addClass("curr");
+            }
+
+            // come no
+            $('.menu-list').mouseenter(function (event) {
+                $('.menu-list').removeClass('nav-hover')
+                $(this).addClass('nav-hover')
+            });
+            $('.menu-list').mouseleave(function (event) {
+                $(this).removeClass('nav-hover')
+            });
+        });
+        function topMenu(id) {
+            var str = '';
+            var isMenu = $("#menuRight").is(":empty");
+            $.each(menu, function (i, item) {
+                if (item.parent_id == id) {
+                    str += '<li class="menu-list" id="' + item.mod_id + '" onclick="slideMenu(this,' + item.mod_id + ')">';
+                    str += '<a href="javascript:void(0)">';
+                    str += '<i class="fa ' + item.icon + '"></i><span>' + item.title + '</span></i>';
+                    str += '</a>';
+                    str += '<ul class="sub-menu-list">';
+                    $.each(item.submenu, function (ii, iitem) {
+                        str += '<li onclick="makecss(this,' + iitem.mod_id + ')" id="menu_' + iitem.mod_id + '">';
+                        str += '<a href="__MODULE__/' + iitem.url + '" target="rightContent"><i class="fa fa-circle-o"></i>' + iitem.title + '</a>';
+                        str += '</li>';
+                    });
+                    str += '</ul></li>';
+                }
+            })
+            $("#menuRight").html("");
+            $("#menuRight").append(str);
+
+            // come no
+            $('.menu-list').mouseenter(function (event) {
+                $('.menu-list').removeClass('nav-hover')
+                $(this).addClass('nav-hover')
+            });
+            $('.menu-list').mouseleave(function (event) {
+                $(this).removeClass('nav-hover')
+            });
+        }
+
+        function slideMenu(obj) {
+//            if($(obj).hasClass("nav-active")){
+//                $(obj).children("ul").slideUp(300);
+//                $(obj).removeClass("nav-active");
+//            }else if(!$(obj).hasClass("nav-active")){
+            $(obj).children("ul").slideDown(300);
+            $(obj).addClass("nav-active");
+//            }
+            $(obj).prevAll().children("ul").slideUp(300);
+            $(obj).prevAll("li").removeClass("nav-active");
+            $(obj).nextAll().children("ul").slideUp(300);
+            $(obj).nextAll("li").removeClass("nav-active");
+
+        }
+    </script>
+</head>
+
+<body class="sticky-div">
+<!-- header section start-->
+<div class="header-section">
+
+    <a class="toggle-btn"><i class="fa fa-bars"></i></a>
+    <div class="nav-menu">
+        <ul class="bn-headnav">
+            <if condition="$topmenu_list neq null">
+                <foreach name="topmenu_list" item="vo" key="k">
+                    <li onclick="topMenu('{$vo.mod_id}')" id="{$vo.mod_id}">
+                        <a href="javascript:;">{$vo.title}</a>
+                    </li>
+                </foreach>
+                <else/>
+                <div style="font-size: large;margin-top: 10%;margin-left: 10px;">无菜单数据</div>
+            </if>
+        </ul>
+
+
+    </div>
+    <!--notification menu start -->
+    <div class="menu-right">
+        <ul class="notification-menu">
+            <li>
+                <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <!--头像 -->
+                    <img src="{$user_info['head_pic']}" alt=""/>
+                    {$user_info['nickname']}
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-usermenu pull-right">
+                    <li><a href="__MODULE__/Admin/admin_update/action/page_list" target="rightContent"><i class="fa fa-user"></i> 修改信息</a></li>
+                    <li><a href="{:U('Admin/admin_alter')}" target="rightContent"><i class="fa fa-user"></i> 修改密码</a> </li>
+                    <li><a href="{:U('Admin/logout')}"><i class="fa fa-sign-out"></i> 退出登录</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<script>
+    function detectBrowser() {
+        var browser = navigator.appName;
+
+        if (navigator.userAgent.indexOf("MSIE") > 0) {
+            var b_version = navigator.appVersion
+            var version = b_version.split(";");
+            var trim_Version = version[1].replace(/[ ]/g, "");
+            if ((browser == "Netscape" || browser == "Microsoft Internet Explorer")) {
+                if (trim_Version == 'MSIE8.0' || trim_Version == 'MSIE7.0' || trim_Version == 'MSIE6.0') {
+                    window.location.href = "__MODULE__/Ieupdate";
+                }
+            }
+        }
+    }
+    detectBrowser();
+</script>
+

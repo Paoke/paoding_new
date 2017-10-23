@@ -1,0 +1,83 @@
+﻿html{font-family: 'Heiti SC', 'Microsoft YaHei';}
+/*public*/
+.wrap { min-width: 320px; margin: 0 auto; overflow: hidden;}
+footer{min-width: 320px; }
+
+/*箭头*/
+.arrow { position: absolute; width: 0.16rem; height: 0.25rem; background: url(../Images/more.png) center center no-repeat; background-size: contain; top: 50%; right: 0.2rem; margin-top: -0.125rem; }
+
+/*!*按钮*!
+.btn { display: block; border-radius: 4px; color: #fff; font-size: 0.34rem; text-align: center; width: 96%; background: #30c29d; height: 0.8rem; line-height: 0.8rem; margin: 0 auto; }
+
+.btn[disabled] { background: #faae62; color: #fce1cc; }*/
+
+/*上下间距(上间距)*/
+.mt { margin-top: 0.25rem; }
+
+   a:link{
+text-decoration:none;
+}
+a:visited{
+text-decoration:none;
+}
+a:hover{
+text-decoration:none;
+}
+a:active{
+text-decoration:none;
+}
+
+/*fonts*/
+@font-face {font-family: "iconfont";
+  src: url('fonts/iconfont.eot?t=1463709766'); /* IE9*/
+  src: url('fonts/iconfont.eot?t=1463709766#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/iconfont.woff?t=1463709766') format('woff'), /* chrome, firefox */
+  url('fonts/iconfont.ttf?t=1463709766') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('fonts/iconfont.svg?t=1463709766#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+@font-face {font-family: "iconfont_1";
+  src: url('fonts/iconfont_1.eot?t=1463709766'); /* IE9*/
+  src: url('fonts/iconfont_1.eot?t=1463709766#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/iconfont_1.woff?t=1463709766') format('woff'), /* chrome, firefox */
+  url('fonts/iconfont_1.ttf?t=1463709766') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('fonts/iconfont_1.svg?t=1463709766#iconfont') format('svg'); /* iOS 4.1- */
+}
+@font-face {font-family: "iconfont_2";
+  src: url('fonts/iconfont_2.eot?t=1463709766'); /* IE9*/
+  src: url('fonts/iconfont_2.eot?t=1463709766#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/iconfont_2.woff?t=1463709766') format('woff'), /* chrome, firefox */
+  url('fonts/iconfont_2.ttf?t=1463709766') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('fonts/iconfont_2.svg?t=1463709766#iconfont') format('svg'); /* iOS 4.1- */
+}
+@font-face {font-family: "iconfont_3";
+  src: url('fonts/iconfont_3.eot?t=1463709766'); /* IE9*/
+  src: url('fonts/iconfont_3.eot?t=1463709766#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/iconfont_3.woff?t=1463709766') format('woff'), /* chrome, firefox */
+  url('fonts/iconfont_3.ttf?t=1463709766') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('fonts/iconfont_3.svg?t=1463709766#iconfont') format('svg'); /* iOS 4.1- */
+}
+@font-face {font-family: "iconfont_4";
+  src: url('fonts/iconfont_4.eot?t=1463709766'); /* IE9*/
+  src: url('fonts/iconfont_4.eot?t=1463709766#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/iconfont_4.woff?t=1463709766') format('woff'), /* chrome, firefox */
+  url('fonts/iconfont_4.ttf?t=1463709766') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('fonts/iconfont_4.svg?t=1463709766#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+/*底部*/
+footer{position: fixed;left:0;bottom:0;width: 100%;border-top:1px solid #e5e5e5;overflow: hidden;z-index:9;background-color:rgba(250,250,250,0.96);}
+footer a{width: 25%;float: left;text-align: center;color:#999; height: 1.02rem;box-sizing: border-box;padding-top:0.1rem;}
+footer a div{ font-size:22px; font-style:normal; -webkit-font-smoothing: antialiased; -webkit-text-stroke-width: 0.2px; -moz-osx-font-smoothing: grayscale;}
+footer a:nth-of-type(1) div:before {font-family:"iconfont_1"!important;content: "\e72d"; }
+footer a:nth-of-type(2) div:before {font-family:"iconfont_2"!important;content: "\e607";}
+footer a:nth-of-type(3) div:before {font-family:"iconfont_3"!important;content: "\e612";}
+footer a:nth-of-type(4) div:before {font-family:"iconfont_4"!important;content: "\e606";}
+footer a span{display:block;font-size: 0.24rem;}
+footer a.current{color:#30c29d;}
+
+
+
+
+
+    

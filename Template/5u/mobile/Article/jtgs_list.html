@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="application/xhtml+xml;charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <link rel="shortcut icon" href="__STATIC__/img/favicon.ico">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>{$channelName}</title>
+    <meta name="keywords" content="{$5u_config['shop_info_store_keyword']}"/>
+    <meta name="description" content="{$5u_config['shop_info_store_desc']}"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/channel-config/channel-config-style.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/channel-config/aui.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/channel-config/common.css" />
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/channel-config/aui-pull-refresh.css" />
+    <link href="__PUBLIC__/plugins/channel-config-assets/css/custom.css" rel="stylesheet">
+    <link href="__PUBLIC__/css/define_page/Template-style.css" rel="stylesheet">
+    <script src="__PUBLIC__/js/vue.js"></script>
+    <script src="{$Think.const.JS}/jquery-1.10.2.min.js"></script>
+    <style type="text/css">
+        .content {
+            padding-top: 0.2rem;
+            padding-bottom: 1.3rem;
+        }
+
+        ul {
+        }
+
+        ul li {
+            background: #fff;
+            padding: 0.4rem 0.25rem 0.15rem;
+            position: relative;
+            border-bottom: 1px solid #ebebeb;
+        }
+
+        ul li a {
+            display: block;
+            position: relative;
+        }
+
+        ul li a .pic {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1.02rem;
+            height: 1.02rem;
+            border-radius: 1000px;
+            overflow: hidden;
+        }
+
+        ul li a .pic img {
+            width: 100%;
+        }
+
+        ul li a .info {
+            padding-left: 1.2rem;
+            color: #6c6c6c;
+            position: relative;;
+        }
+
+        ul li a .info h3 {
+            font-size: 0.32rem;
+            color: #333;
+            padding: 0.05rem 0 0.2rem;
+        }
+
+        ul li a .info .cont {
+            font-size: 0.36rem;
+            color: #333;
+            line-height: 0.54rem;;
+        }
+
+        ul li a .info .main_cont {
+            font-size: 0.3rem;
+            color: #999;
+            padding-top: 0.4rem;;
+        }
+
+        ul li a .info .fx_bottom {
+            color: #ccc;
+            font-size: 0.28rem;
+            margin-top: 0.4rem;
+            overflow: hidden;
+            padding-bottom: 0.2rem;
+        }
+
+        ul li a .info .fx_bottom .time {
+            float: left;
+        }
+
+        ul li a .info .fx_bottom .num {
+            float: right;
+            position: relative;
+        }
+
+        ul li a .info .fx_bottom .num:before {
+            content: "";
+            position: absolute;
+            left: -0.7rem;
+            top: 0.05rem;
+            background: url(__STATIC__/image/dark.png) no-repeat center center;
+            background-size: 0.38rem;
+            width: 0.6rem;
+            height: 100%;
+        }
+
+
+        .load_more {
+            padding: 0 15px;
+            width: 120px;
+            height: 30px;
+            background-color: #30c29d;
+            color: #fff;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 5px;
+            margin: 20px auto;
+            border: 0 none;
+            font-size: 16px;
+            /*默认不显示，ajax调用成功后才决定显示与否*/
+        }
+    </style>
+</head>
+<body>
+<section class="content">
+<div class="wrap">
+    <div class="content" id="data_list" style="display: none">
+        <div v-for="item in items" ><form class="form-horizontal" ><fieldset><div>  <ul class="ul_list_inner" id="start">    <li>      <a href="javascript:;">        <div class="paste">进行中</div>        <h2 v-text="item['title']"></h2>        <time v-text="item['create_time']"></time>        <div class="item_txt">          <div class="cover_pic"><img  v-bind:src="item['cover_url']"></div>          <div class="txt_info">            <p v-text="item['desc']"></p>          </div>        </div>      </a>    </li>  </ul></div></fieldset></form> </div>
+        <div id="morde_data" class="" v-show="bool" @click="next"></div>
+    </div>
+</div>
+</section>
+
+</body>
+<script>
+    $(window).scroll(function(){
+        var scrollTop = $(this).scrollTop();
+        var scrollHeight = $(document).height();
+        var windowHeight = $(this).height();
+        if(scrollTop + windowHeight == scrollHeight){
+            document.getElementById("morde_data").click();
+        }
+    });
+    $(function () {
+        var url = "__ROOT__/{$Think.const.API_PATH}/ChannelData/index/action/list/channel/{$channel}/limit_start/0/limit_end/10";
+        $.get(url, function (res) {
+            var dataAll = res.data;
+            var example1 = new Vue({
+                el: '#data_list',
+                data: {
+                    items: dataAll,
+                    bool : true,
+                    page :  '0',
+                    ifFollow : true,
+                    follow : '',
+                    panduan:true,
+                },
+                mounted: function () {
+                    this.$nextTick(function () {
+                        $("#data_list").css('display', 'block');
+                    })
+                },
+                methods:{
+                    next: function () {
+                        var pages = ++this.page;
+                        var pages = pages *10;
+                        var url = "__ROOT__/{$Think.const.API_PATH}/ChannelData/index/action/list/channel/{$channel}/limit_start/"+pages+"/limit_end/10";
+                        $.get(url, function (res) {
+                            var data = res.data;
+                            example1.items = example1.items.concat(data);
+                            if(data == null) {
+                                example1.bool = 'false';
+                            }
+                        });
+
+                    }
+                }
+            })
+
+        })
+    });
+</script>
+</html>

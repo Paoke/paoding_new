@@ -1,0 +1,70 @@
+@charset "utf-8";
+body{margin:0;font:12px/1.8 Tahoma,Geneva,'\5B8B\4F53';color:#333;background:white;}
+input,textarea,select{margin:0;padding:0;font-size:12px;outline:none;resize:none;}
+html:root body,html:root input,html:root button,html:root textarea,html:root select{font-family:Tahoma,Geneva,'\5fae\8f6f\96c5\9ed1','\5B8B\4F53';}
+form,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,p{margin:0;padding:0;list-style:none;}
+a{text-decoration:none;color:#224892;outline:none;}
+a:hover{text-decoration:underline;}
+a img{border:none;}
+i,em{font-style:normal;}
+b{color:#F63;}
+button{cursor:pointer;}
+/* wrap */
+.register-box{position:absolute;margin-top:30px; right:52px;width:345px;background:white;border-radius:3px; border: 1px solid #999;background:rgba(255, 255, 255, 0.95);}
+.banner{border: 8px solid rgba(255,255,255,0.4);}
+.banner02{ width: 100%;height: 420px; position:relative; overflow:hidden;}
+.banner02 ul{ position:relative; z-index:1;}
+.banner02 ul li{ position:absolute; left:0 ;top:0;width: 100%;}
+.banner02 ul li img{width: 100%;}
+
+.banner02 ol{ position:absolute; bottom:54px ;right:43%; z-index:2;}
+.banner02 ol li{ float: left; width: 10px;height: 10px; background-color: #fff;border: 2px solid #999; line-height: 20px;  text-align:center;  color:#99997F; font-weight:bold; margin-left: 8px; cursor:pointer; border-radius: 50%;}
+.banner02 ol li.current{ width: 10px;height: 10px;line-height: 30px; background:#00a2ca;border: 2px solid #00a2ca; }
+
+
+.login-quick .hd .quick, .hd .static, .login-quick{ display: none; }
+.hd { position: relative; height: 20px; }
+.hd h2 { display: block; cursor: pointer; width: 48px; height: 48px; position: absolute; top: 20px; right: 25px; }
+.hd .quick { background: url(../images/icom.png) no-repeat; text-indent: -99999px;  }
+.hd .static { background: url(../images/icom2.png) no-repeat; text-indent: -99999px;  }
+
+.login-tip2{ display:none; }
+.login-tip { position: absolute; top:20px; right: 76px;display:none;}
+.login-tip.on{display:block;}
+.poptip { border: 1px solid #f3d995; height: 16px; line-height: 16px; padding: 5px 20px 5px 15px; background: #fefcee; position: relative; z-index: 9999; }
+.poptip-content { color: #df9c1f; font-size: 12px; font-weight: 400; }
+
+.form{ margin-top: 10px; width: 250px; margin:30px auto; position: relative; display: block; }
+.login-title{ font-size: 14px; font-weight: 500; border-bottom: 1px solid #ccc; padding-bottom: 5px; margin-bottom: 10px; }
+.login-content{ margin-bottom:10px; margin-top:20px; }
+.login-content p{ font-size:14px; color:#333; }
+.login-content span{ float: right; }
+.fm-text{ border-radius: 3px; line-height: 16px; padding: 8px 5px; margin-top: 5px; font-size: 14px; background: transparent; width: 100%; border: 1px solid #ccc; }
+.fm-randCode{ border-radius: 3px; line-height: 16px; padding: 8px 5px; margin-top: 5px; font-size: 14px; background: transparent; width: 100%; border: 1px solid #ccc; }
+.fm-button { display: inline-block; width: 100%; height: 36px; padding: 0 30px 1px; background: #00a2ca; border: none; line-height: 32px; font-size: 14px; color: #fff; text-align: center; outline: none; cursor: pointer; border-radius: 4px; margin-top:10px; }
+
+.login-other{ overflow: hidden; zoom: 1; margin-top: 10px; }
+.login-login-links{ float: left; }
+.register{ float: right; }
+
+
+.qrcode-login { z-index: 1; padding-top: 20px; }
+.qrcode-mod{ font-weight: bold; font-size:14px; text-align: center; padding-bottom: 10px; overflow: hidden; }
+.qrcode-desc{ margin-top:20px; }
+.qrcode-main { position: relative; padding-bottom: 15px; min-height: 130px; }
+.qrcode-img { width: 115px; height: 115px; margin: 0 auto; padding: 7px; box-shadow: 0 0 8px #DDD; }
+.qrcode-desc { text-align: center; padding-bottom: 10px; overflow: hidden; }
+.iconfont{ background:url(../images/saoyisao.png)no-repeat; width: 34px; height: 34px; margin-right: 10px; background-size:34px; display:block; float: left; }
+
+.tab1,.tab2{ display:none; }
+.active{ display:block; }
+.hd h2{ display:none; }
+.hd h2.cur{ display:block; }
+
+
+.qrcode-msg{ margin-top:40px; }
+.qrcode-msg p { margin-top: 10px; text-align: center; }
+.cuo{ background:url(../images/cuo.png)no-repeat; margin:0 auto; background-size:40px; width: 40px; height: 40px; display:block; }
+.qrcode-msg h6 { font-size: 14px; color: #333; margin-top: 15px; font-weight: 700; text-align: center; }
+.qrcode-login .refresh { width: 250px; text-align: center; font-size: 16px; border-radius: 3px; cursor: pointer; zoom: 1; padding: 0; }
+a.fm-button { display: inline-block!important; height: 28px; line-height: 28px; text-align: center; text-decoration: none!important; color: #fff!important; }

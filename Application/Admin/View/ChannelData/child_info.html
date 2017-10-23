@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>{$gemmap_config['shop_info_store_title']}</title>
+    <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}"/>
+    <meta name="description" content="{$gemmap_config['shop_info_store_desc']}"/>
+
+    <link href="{$Think.const.CSS}/style.css" rel="stylesheet">
+    <link href="{$Think.const.CSS}/style-responsive.css" rel="stylesheet">
+
+    <script src="__PUBLIC__/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="__PUBLIC__/js/global.js"></script>
+    <script src="__PUBLIC__/js/myFormValidate.js"></script>
+    <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/js/myAjax.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        .btn-interval{
+            margin-left: 20px;
+        }
+
+        .pagination {
+            display: inline-block;
+            padding-left: 0px;
+            margin: 10px 0px;
+            border-radius: 4px;
+        }
+        .pagination > li > a{
+            background-color: #EFF2F7;
+            border: 1px solid #EFF2F7;
+            float: left;
+            line-height: 1.0;
+            margin-left: 1px;
+            padding: 6px 8px;
+            position: relative;
+            text-decoration: none;
+            color: #535351;
+        }
+        .bottom{
+            position:fixed;
+            bottom:0;
+        }
+        .search-header{
+            margin-top: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+    </style>
+</head>
+
+<body class="sticky-header">
+<section>
+    <div class="main-content" width="100%" style="margin:0px;">
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            {$child.title}
+                             <div class="pull-right">
+                                 <div class="btn-group">
+                                     <button type="button" id="postbutton" class="btn btn-default "
+                                             onclick="ajax_submit_form('child_form')"><i class="fa fa-floppy-o"></i>保存
+                                     </button>
+                                 </div>
+                             </div>
+                        </header>
+                        <div class="panel-body">
+                            <!--表单数据-->
+                            <form class="form-horizontal adminex-form" method="post" id="child_form">
+                                <input type="hidden" id="id" name="id" value="{$id}">
+                                <input type="hidden" id="data_id" name="data_id" value="{$data_id}">
+                                <input type="hidden" id="relation_data_id" name="relation_data_id" value="{$info.relation_data_id}">
+                                <input type="hidden" id="channel" name="channel" value="{$channel}">
+                                <div id="extends_div" class="extends_group">
+
+                                </div>
+                            </form><!--表单数据-->
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</section>
+<section id="child" class="panel">
+
+    <div aria-hidden="true" aria-labelledby="myModalLabel"
+         role="dialog" tabindex="-1" id="myModal2" class="modal fade">
+        <div class="modal-dialog">
+            <div class="clearfix">
+
+                <div class="modal-content">
+                    <div class="wrapper">
+
+                        <div class="col-sm-12">
+                            <div class="col-sm-12 search-header">
+                            <label style="float: left;margin-right: 15%">请点击行选择数据</label>
+                            <input type="text" class="form-control" name="search_keyword" id="search_keyword"
+                                           placeholder="搜索内容" style="width: 30%;float: left;height: 29px;border-bottom-left-radius: 5px;border-top-left-radius: 5px;" />
+                            <button id="search-btn" class="btn btn-primary btn-sm" style="border-bottom-left-radius: 0;border-top-left-radius: 0;"><i class="fa fa-search"></i></button>
+                            <button type="button" class="btn btn-default btn-sm pull-right" data-dismiss="modal">取消</button>
+                            </div>
+                            <div class="panel-body">
+                                <table id="child-list-data" class="table table-bordered  table-striped" role="grid"
+                                       aria-describedby="example1_info">
+                                    <thead>
+                                    <tr role="row" align="center">
+                                        <td style="font-weight:bold; padding: 6px;text-align: left;" v-for="item in titles">{{item}}</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="child_body">
+                                    <tr role="row" class="relation-tr" align="center" v-for="row in child_data" data-dismiss="modal" @click ="chooseRecord(row.id)">
+                                        <td style="padding: 6px; text-align: left;" v-for="item in row">{{item}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="col-md-12 text-center bottom">
+                                <ul class="pagination">
+                                    <li id="prev" class="prev disabled"><a>上一页</a></li>
+                                    <li id="next" class="next disabled"><a>下一页</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<form id="condition_form" name="condition_from">
+    <input type="hidden" id="condition" name="condition" value="">
+    <input type="hidden" id="item_num_field" name="item_num_field" value="">
+</form>
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="{$Think.const.JS}/jquery-1.10.2.min.js"></script>
+<script src="{$Think.const.JS}/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="{$Think.const.JS}/jquery-migrate-1.2.1.min.js"></script>
+<script src="{$Think.const.JS}/bootstrap.min.js"></script>
+<script src="{$Think.const.JS}/modernizr.min.js"></script>
+<script src="{$Think.const.JS}/ueditor/ueditor.config.js"></script>
+<script src="{$Think.const.JS}/ueditor/ueditor.all.min.js"></script>
+<script src="{$Think.const.JS}/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script src="{$Think.const.JS}/extends.js"></script>
+<script src="{$Think.const.JS}/jquery.nicescroll.js"></script>
+<script src="__PUBLIC__/js/layer/layer-min.js"></script>
+<script src="{$Think.const.JS}/laydate/laydate.js"></script>
+<!--common scripts for all pages-->
+<script src="{$Think.const.JS}/scripts.js"></script>
+<script src="{$Think.const.JS}/Validform_v5.3.2_min.js"></script>
+<script src="__PUBLIC__/js/vue.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var url = "__URL__/child_module/action/extends/channel/{$channel}/type/{$type}/id/{$id}";
+        var id = $("#id").val();
+
+        var site = "{:session('site_name')}";
+        loadExtends(site, url, id, 'extends_div');
+        getRelationChildData();
+
+        $('#child_form').Validform({
+            tiptype: 3,
+            postonce: true
+        });
+    });
+
+    function preview(id) {
+        var src = $('#' + id).val();
+        var content;
+        if (src == "") {
+            content = '没有图片可供预览';
+            layer.msg(content);
+        }
+        else {
+            content = "<img width='300' height='300' src='" + src + "'>";
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: false,
+                area: ['300px', '300px'],
+                skin: 'layui-layer-nobg', //没有背景色
+                shadeClose: true,
+                content: content
+            });
+        }
+    }
+
+    var vm = new Vue({
+        el: "#child",
+        data:{
+            init_btn:0,
+            titles: [],
+            fields:[],
+            child_data:[],
+            page_now:1,
+            page_num:10
+        },
+        filters: {
+        },
+        methods:{
+            findRecordById: function(id){
+                for(var k in vm.child_data){
+                    var item = vm.child_data[k];
+                    if(item.id == id){
+                        return item;
+                    }
+                }
+            },
+            chooseRecord: function(id){
+                var record = this.findRecordById(id);
+                for(var k in vm.fields){
+                    var field = vm.fields[k];
+                    if(field == 'id'){
+                        $("#relation_data_id").val(record[field]);
+                    }else{
+                        $("#"+field).val(record[field]);
+                    }
+                }
+                layer.closeAll();
+            }
+        }
+    });
+
+    function getRelationChildData(){
+        var data_id = "{$data_id}";
+        var url = "__MODULE__/ChannelData/child_module/action/relation_data/channel/{$child.channel_index}/type/{$child.type}/data_id/{$data_id}";
+        var data = {'page_num': vm.page_num, 'page_now': vm.page_now};
+        var keyword = $("#search_keyword").val();
+        if(keyword != null && keyword.length > 0){
+            data['keyword'] = keyword;
+        }
+        $.post(url, data, function(ret){
+            //alert(JSON.stringify(ret));
+
+            if(ret.result == 1){
+                vm.titles = ret.data.titles;
+                vm.child_data = ret.data.list;
+                vm.page_now = parseInt(ret.data.page.now);
+                init_page(ret.data.page);
+                vm.fields = ret.data.fields;
+
+                if(vm.init_btn == 0){
+                    for(var k in vm.fields){
+                        var field = vm.fields[k];
+                        if(field != 'id'){
+                            if($("#"+field) != undefined){
+                                $("#"+field).attr('readonly', true);
+                                var button = '<a href="#myModal2" data-toggle="modal" class="btn btn-default btn-sm btn-interval"><i class="fa fa-chain"></i>选择</a>';
+                                $("#"+field).after(button);
+                            }
+                        }
+                    }
+                    vm.init_btn = 1;
+                }
+            }
+        });
+    }
+
+    //表单提交判断，id为空则URL表示添加，否则表示编辑
+    function ajax_submit_form(form_id) {
+        //判断id值是否存在
+        var id = $("#id").val();
+        var channel = $("#channel").val();
+
+        var data = $('#' + form_id).serialize();
+        var action = '';
+        if (id == '') {
+            //不存在，表示添加
+            action = "__URL__/child_module/action/add/channel/{$channel}/type/{$type}";
+            var child_index = "{$child.child_index}";
+            if(child_index == 'jdfj' && channel == 'hygl'){
+                action += "/check/1";
+                $("#condition").val('fjmc,title,zsrq');
+                $("#item_num_field").val('kzrs');
+                var condition = $("#condition_form").serialize();
+                data = data + '&' + condition;
+            }
+        } else {
+            //存在，表示编辑
+            action = "__URL__/child_module/action/edit/channel/{$channel}/type/{$type}/id/{$id}";
+        }
+
+
+        //异步提交表单数据
+        $.ajax({
+            type: "post",
+            url: action,
+            data: data,
+            dataType: 'json',
+            success: function (res) {
+                if (res.result == 1) {
+                    layer.msg(res.msg);
+                    setTimeout(function(){
+                        window.parent.loadChannelChild('{$channel}', '{$type}');
+                    }, 1500);
+
+                }else{
+                    layer.msg(res.msg);
+                }
+            }
+        });
+    }
+
+    function init_page(page){
+        if(page.now > 0 && page.total > 0){
+
+            if(page.now == 1 && page.now != page.total){ //首页
+                page_active('prev', 0, -1);//上一页
+                page_active('next', 1, 1);//下一页
+            }else if(page.now != 1 && page.now == page.total){ //尾页
+                page_active('prev', 1, -1);//上一页
+                page_active('next', 0, 1);//下一页
+            }else if(page.now == 1 && page.now == page.total){
+                page_active('prev', 0, -1);//上一页
+                page_active('next', 0, 1);//下一页
+            }else if(page.total > 2){
+                page_active('prev', 1, -1);//上一页
+                page_active('next', 1, 1);//下一页
+            }
+        }else{
+            page_active('prev', 0, -1);//上一页
+            page_active('next', 0, 1);//下一页
+        }
+    }
+    /*
+     * 是否激活
+     * @param state 0:关闭，1：激活
+     * **/
+    function page_active(id, state, v){
+        if(state == 1){
+            $("#"+id).removeClass('disabled');
+            $("#"+id).click(function(){
+                go_page(v);
+            });
+        }else{
+            $("#"+id).addClass('disabled');
+            $("#"+id).unbind('click');
+        }
+    }
+
+    function go_page(v){
+        vm.page_now = parseInt(v) + vm.page_now;
+        getRelationChildData();
+    }
+
+    $("#search-btn").click(function(){
+        getRelationChildData();
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,964 @@
+[ 2017-08-15T19:11:29+08:00 ] 123.151.138.73 /api.php/ChannelIndex/index/action/dataList/channel/js/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000161s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000212s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000012s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.009642s ]
+
+[ 2017-08-15T19:11:29+08:00 ] 123.151.138.73 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+search>>>>>>>>: 
+[ 2017-08-15T19:11:29+08:00 ] 123.151.138.73 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+>>>>>>>>: null
+[ 2017-08-15T19:11:29+08:00 ] 123.151.138.73 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000342s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000174s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000219s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 242 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 245 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 248 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 249 行.
+
+[ 2017-08-15T19:11:29+08:00 ] 123.151.138.73 /api.php/ChannelIndex/index/action/dataList/channel/ztgl/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000359s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000203s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000249s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000012s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.008538s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: page /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 52 行.
+NOTIC: [8] Undefined index: order_field /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 56 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+NOTIC: [8] Undefined variable: page /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 80 行.
+NOTIC: [8] Undefined variable: page_num /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 80 行.
+NOTIC: [8] Undefined variable: orderBy /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 81 行.
+NOTIC: [8] Undefined index: limit /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/Db/Driver.class.php 第 950 行.
+NOTIC: [8] Undefined index: get_page /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 95 行.
+
+[ 2017-08-15T19:11:41+08:00 ] 123.151.138.73 /api.php/ChannelIndex/index/action/dataList/channel/js/type/1/category_id/0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002449s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002231s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002288s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000014s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.017814s ]
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+
+[ 2017-08-15T19:11:41+08:00 ] 123.151.138.73 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000162s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000214s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000014s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.015108s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: page /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 52 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+NOTIC: [8] Undefined variable: page /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 80 行.
+NOTIC: [8] Undefined variable: page_num /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 80 行.
+NOTIC: [8] Undefined index: limit /var/www/html/paoding_gemmap/ThinkPHP/Library/Think/Db/Driver.class.php 第 950 行.
+NOTIC: [8] Undefined index: get_page /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 95 行.
+
+[ 2017-08-15T19:11:41+08:00 ] 123.151.138.73 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/2?order_field=create_time&order_by=DESC&limit_start=0&limit_end=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000232s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001416s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000163s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000216s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000014s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.012135s ]
+
+[ 2017-08-15T19:11:41+08:00 ] 123.151.138.73 /api.php/ChannelIndex/index/action/count/channel/xq/type/1/
+search>>>>>>>>: 
+[ 2017-08-15T19:11:41+08:00 ] 123.151.138.73 /api.php/ChannelIndex/index/action/count/channel/xq/type/1/
+>>>>>>>>: null
+[ 2017-08-15T19:11:41+08:00 ] 123.151.138.73 /api.php/ChannelIndex/index/action/count/channel/xq/type/1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001464s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000204s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000265s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 242 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 245 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 248 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 249 行.
+
+[ 2017-08-15T19:11:46+08:00 ] 112.96.179.231 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007657s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007703s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000012s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.002155s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+
+[ 2017-08-15T19:12:15+08:00 ] 112.96.179.231 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007686s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007737s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000019s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.002636s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+
+[ 2017-08-15T21:15:41+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002356s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002409s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000014s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.024534s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+
+[ 2017-08-15T21:15:41+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/dataList/channel/zx/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003449s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000171s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000224s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000016s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.009908s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+
+[ 2017-08-15T21:15:42+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008397s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008449s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000174s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000241s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000013s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.010564s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Controller/ActivityController.class.php 第 23 行.
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Controller/ActivityController.class.php 第 25 行.
+NOTIC: [8] Undefined variable: search /var/www/html/paoding_gemmap/Application/Api/Controller/ActivityController.class.php 第 48 行.
+
+[ 2017-08-15T21:15:42+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/dataList/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003434s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000171s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000227s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000024s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.027055s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+
+[ 2017-08-15T21:15:42+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002413s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000175s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000231s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000014s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.010360s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: order_field /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 56 行.
+
+[ 2017-08-15T21:15:42+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+search>>>>>>>>: 
+[ 2017-08-15T21:15:42+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+>>>>>>>>: null
+[ 2017-08-15T21:15:42+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000201s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000253s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 242 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 245 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 248 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 249 行.
+
+[ 2017-08-15T21:15:42+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+search>>>>>>>>: 
+[ 2017-08-15T21:15:42+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+>>>>>>>>: null
+[ 2017-08-15T21:15:42+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000187s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000241s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 242 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 245 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 248 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 249 行.
+
+[ 2017-08-15T21:15:42+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+search>>>>>>>>: 
+[ 2017-08-15T21:15:42+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+>>>>>>>>: null
+[ 2017-08-15T21:15:42+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000962s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000163s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000217s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 242 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 245 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 248 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 249 行.
+
+[ 2017-08-15T21:15:42+08:00 ] 42.199.133.237 /api.php/Setting/settingAbout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000360s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000153s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000237s ]
+
+[ 2017-08-15T21:15:57+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/dataList/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000176s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000230s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000014s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.014308s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+
+[ 2017-08-15T21:15:57+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000173s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000229s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000016s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.010572s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: order_field /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 56 行.
+
+[ 2017-08-15T21:15:57+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/dataList/channel/zx/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000169s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000222s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000013s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.009892s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+
+[ 2017-08-15T21:15:57+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000255s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000325s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000013s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.010161s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Controller/ActivityController.class.php 第 23 行.
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Controller/ActivityController.class.php 第 25 行.
+NOTIC: [8] Undefined variable: search /var/www/html/paoding_gemmap/Application/Api/Controller/ActivityController.class.php 第 48 行.
+
+[ 2017-08-15T21:15:57+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000676s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000728s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000192s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000267s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000017s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.012571s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+
+[ 2017-08-15T21:15:58+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+search>>>>>>>>: 
+[ 2017-08-15T21:15:58+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+>>>>>>>>: null
+[ 2017-08-15T21:15:58+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000353s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000154s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000196s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 242 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 245 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 248 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 249 行.
+
+[ 2017-08-15T21:15:59+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+search>>>>>>>>: 
+[ 2017-08-15T21:15:59+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+>>>>>>>>: null
+[ 2017-08-15T21:15:59+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000378s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001266s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001332s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 242 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 245 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 248 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 249 行.
+
+[ 2017-08-15T21:15:59+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+search>>>>>>>>: 
+[ 2017-08-15T21:15:59+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+>>>>>>>>: null
+[ 2017-08-15T21:15:59+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000383s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000164s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000217s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 242 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 245 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 248 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 249 行.
+
+[ 2017-08-15T21:15:59+08:00 ] 42.199.133.237 /api.php/Setting/settingAbout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002302s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001473s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000165s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000216s ]
+
+[ 2017-08-15T21:17:59+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000170s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000221s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000016s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.040391s ]
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+NOTIC: [8] Undefined index: get_page /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 95 行.
+
+[ 2017-08-15T21:17:59+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000232s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000289s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000019s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.010919s ]
+
+[ 2017-08-15T21:17:59+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004336s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000174s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000247s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000013s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.010500s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+
+[ 2017-08-15T21:17:59+08:00 ] 42.199.133.237 /api.php/Setting/settingAbout/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005546s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000169s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000220s ]
+
+[ 2017-08-15T21:17:59+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/xq/type/1/
+search>>>>>>>>: 
+[ 2017-08-15T21:17:59+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/xq/type/1/
+>>>>>>>>: null
+[ 2017-08-15T21:17:59+08:00 ] 42.199.133.237 /api.php/ChannelIndex/index/action/count/channel/xq/type/1/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002195s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000167s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000222s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 242 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 245 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 248 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 249 行.
+
+[ 2017-08-15T23:06:50+08:00 ] 42.196.228.23 /api.php/Setting/settingAbout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000164s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000203s ]
+
+[ 2017-08-15T23:06:50+08:00 ] 42.196.228.23 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+search>>>>>>>>: 
+[ 2017-08-15T23:06:50+08:00 ] 42.196.228.23 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+>>>>>>>>: null
+[ 2017-08-15T23:06:50+08:00 ] 42.196.228.23 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000368s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000168s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000218s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 242 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 245 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 248 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 249 行.
+
+[ 2017-08-15T23:06:50+08:00 ] 42.196.228.23 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+search>>>>>>>>: 
+[ 2017-08-15T23:06:50+08:00 ] 42.196.228.23 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+>>>>>>>>: null
+[ 2017-08-15T23:06:50+08:00 ] 42.196.228.23 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000397s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000231s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000305s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 242 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 245 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 248 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 249 行.
+
+[ 2017-08-15T23:06:50+08:00 ] 42.196.228.23 /api.php/ChannelIndex/index/action/dataList/channel/zx/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000412s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000264s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000348s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000020s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.010479s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+
+[ 2017-08-15T23:06:50+08:00 ] 42.196.228.23 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.009360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000364s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000218s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000270s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000012s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.009896s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Controller/ActivityController.class.php 第 23 行.
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Controller/ActivityController.class.php 第 25 行.
+NOTIC: [8] Undefined variable: search /var/www/html/paoding_gemmap/Application/Api/Controller/ActivityController.class.php 第 48 行.
+
+[ 2017-08-15T23:06:50+08:00 ] 42.196.228.23 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006409s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000175s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000230s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000013s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.009924s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+
+[ 2017-08-15T23:06:50+08:00 ] 42.196.228.23 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+search>>>>>>>>: 
+[ 2017-08-15T23:06:50+08:00 ] 42.196.228.23 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+>>>>>>>>: null
+[ 2017-08-15T23:06:50+08:00 ] 42.196.228.23 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005700s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005751s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000304s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000407s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 242 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 245 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 248 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 249 行.
+
+[ 2017-08-15T23:06:50+08:00 ] 42.196.228.23 /api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003439s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000240s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000309s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000018s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.010646s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: order_field /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 56 行.
+
+[ 2017-08-15T23:06:50+08:00 ] 42.196.228.23 /api.php/ChannelIndex/index/action/dataList/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004523s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000169s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000221s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000019s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.010954s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+
+[ 2017-08-15T23:50:19+08:00 ] 111.206.221.41 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015837s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015888s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.046322s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.046379s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000014s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.005665s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+
+[ 2017-08-15T23:50:19+08:00 ] 111.206.221.49 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+search>>>>>>>>: 
+[ 2017-08-15T23:50:19+08:00 ] 111.206.221.49 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+>>>>>>>>: null
+[ 2017-08-15T23:50:19+08:00 ] 111.206.221.49 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005433s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.050372s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.050422s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 242 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 245 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 248 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 249 行.
+
+[ 2017-08-15T23:50:19+08:00 ] 111.206.221.85 /api.php/ChannelIndex/index/action/dataList/channel/zx/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.046119s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.046173s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000015s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.013224s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+
+[ 2017-08-15T23:50:19+08:00 ] 111.206.221.83 /api.php/ChannelIndex/index/action/dataList/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001902s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000409s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.049413s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.049494s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000015s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.004612s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+
+[ 2017-08-15T23:50:19+08:00 ] 111.206.221.106 /api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005442s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.050582s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.050644s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000014s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.011436s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: order_field /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 56 行.
+
+[ 2017-08-15T23:50:19+08:00 ] 111.206.221.87 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+search>>>>>>>>: 
+[ 2017-08-15T23:50:19+08:00 ] 111.206.221.87 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+>>>>>>>>: null
+[ 2017-08-15T23:50:19+08:00 ] 111.206.221.87 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001459s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.014767s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.014810s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 242 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 245 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 248 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 249 行.
+
+[ 2017-08-15T23:50:19+08:00 ] 111.206.221.109 /api.php/Setting/settingAbout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000350s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.014140s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.014185s ]
+
+[ 2017-08-15T23:50:19+08:00 ] 111.206.221.49 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+search>>>>>>>>: 
+[ 2017-08-15T23:50:19+08:00 ] 111.206.221.49 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+>>>>>>>>: null
+[ 2017-08-15T23:50:19+08:00 ] 111.206.221.49 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.007534s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.007577s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 242 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 245 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 248 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 249 行.
+
+[ 2017-08-15T23:50:19+08:00 ] 111.206.221.32 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.005063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000371s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.047151s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.047201s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000013s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.016145s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 59 行.
+NOTIC: [8] Undefined index: tag_id /var/www/html/paoding_gemmap/Application/Api/Controller/ActivityController.class.php 第 23 行.
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Controller/ActivityController.class.php 第 25 行.
+NOTIC: [8] Undefined variable: search /var/www/html/paoding_gemmap/Application/Api/Controller/ActivityController.class.php 第 48 行.
+
+[ 2017-08-15T23:52:08+08:00 ] 203.208.60.216 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+search>>>>>>>>: 
+[ 2017-08-15T23:52:08+08:00 ] 203.208.60.216 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+>>>>>>>>: null
+[ 2017-08-15T23:52:08+08:00 ] 203.208.60.216 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000358s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000158s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000199s ]
+NOTIC: [8] Undefined index: category_id /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 242 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 245 行.
+NOTIC: [8] Undefined index: search /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 248 行.
+NOTIC: [8] Undefined variable: where /var/www/html/paoding_gemmap/Application/Api/Logic/ChannelLogic.class.php 第 249 行.
+

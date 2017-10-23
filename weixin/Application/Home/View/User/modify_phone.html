@@ -1,0 +1,122 @@
+<include file="Public/header" />
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 height-50 text-center bg-red">
+					<img src="__PUBLIC__/home/img/logo2.png" alt="" class="width-112"/>
+					<a href="{:U('Index/index')}" class="pull-right height-50"><img src="__PUBLIC__/home/img/center.png" alt="" class="icon-25" /></a>
+				</div>
+				<div class="col-xs-12 col-sm-12 text-center">
+					<span class="height-66"><b>修改手机号码</b></span>
+				</div>
+<form class="box-center box-272" action="{:U('User/modify_phone_do')}" method="post">
+				<div class="col-xs-12 col-sm-12">					
+						<div class="form-group input-position border-bottom-none">
+							<label class="lable-absolute2">原手机号码</label>
+							<input type="text" class="form-control" value="{$mobile}" >
+						</div>
+						<div class="form-group input-position border-bottom-none">
+							<label class="lable-absolute2">新手机号码</label>
+							<input id="inputphone" type="text" class="form-control" name="newmobile" value="" >
+						</div>
+						<div class="form-group input-position">
+							<label class="lable-absolute2">验证码</label>
+							<input type="text" class="form-control" name="newcode" >							
+							
+						</div>
+						<button id="phoneverify" onclick="sendMessage()" type="button" class="pull-right btn-red2 white-link" >获取验证码</button>	
+						<p id="p_mobile" class="height-25" style="visibility:hidden"><i class="glyphicon glyphicon-minus-sign font-sixteen red padding-left-10"></i><span class="tip">请输入11位手机号码</span></p>
+					
+				</div>
+				<div class="col-xs-12 col-sm-12 margin-top-30 text-center">
+					<button id="submit" type="button" class="btn btn-red white-link" >提交</button>
+					<!--<p class="margin-top-20 red">新手机绑定成功！</p>-->
+					<p>&nbsp;</p>
+					<a href="{:U('User/index')}" class="btn btn-red white-link" >返回</a>
+				</div>
+</form>
+			</div>
+		</div>
+<script>
+var pstatus = 0;
+var error =0;
+$('#inputphone').on('blur',function(){
+	var mobile = $(this).val();
+	var reg = /^1[3|4|5|7|8][0-9]\d{8}$/;
+	var result = reg.exec(mobile);
+	if(result == null){
+		pstatus = 0;
+	}else{
+		pstatus = 1;
+	}	
+});
+$('#inputphone').focus(function(){
+	$('#p_mobile').attr('style',"visibility:hidden").html('<i class="glyphicon glyphicon-minus-sign font-sixteen red padding-left-10"></i><span class="tip">请输入11位手机号码</span>');
+});
+//短信验证倒计时
+var InterValObj; //timer变量，控制时间
+var count = 60; //间隔函数，1秒执行
+var curCount;//当前剩余秒数
+function sendMessage() {
+	$('#inputphone').blur();
+	var phone = $('#inputphone').val();
+	$('#p_mobile').attr('style',"visibility:hidden").html('<i class="glyphicon glyphicon-minus-sign font-sixteen red padding-left-10"></i><span class="tip">请输入11位手机号码</span>');
+	if(pstatus==0){
+		$('#p_mobile').attr('style',"");	
+		return false;
+	}
+	 curCount = count;　
+	 $("#phoneverify").attr("disabled", "true").addClass('disabled');
+	 $("#phoneverify").html("(" + curCount + ")秒后可重发");
+	 InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器（可以使函数），1秒执行一次  
+　　  //向后台发送处理数据
+     $.ajax({
+     　　type: "POST", //用POST方式传输
+     　　//dataType: "json", //数据格式:JSON 
+     　　url: "{:U('User/sendsms')}", //目标地址
+    　　 data: {'phone':phone},
+    　　 error: function (XMLHttpRequest, textStatus, errorThrown) {alert("发送失败")},
+     　　success: function (msg){ 
+			//alert('发送成功');		//成功返回
+		}
+     });
+}
+//timer处理函数
+function SetRemainTime() {
+		if (curCount == 0) {                
+			window.clearInterval(InterValObj);//停止计时器
+			$("#phoneverify").removeAttr("disabled");//启用按钮
+			$("#phoneverify").html("重新发送验证码");
+		}
+		else {
+			curCount--;
+			$("#phoneverify").html("(" + curCount + ")秒后重新发送");
+		}
+}
+$('#submit').on('click',function(){
+	if(pstatus==0){
+		$('#p_mobile').attr('style',"");	
+		return false;
+	}
+	var mobile = $('#inputphone').val();
+	var code = $("input[name='newcode']").val();
+	$.post("{:U('User/sendsmsverify')}",{'code':code,'phone':mobile},function(data){
+		if(data.status==0){
+			$('#p_mobile').attr('style',"").html('<i class="glyphicon glyphicon-minus-sign font-sixteen red padding-left-10"></i><span class="tip">验证码错误</span>');
+			error = 0 ;
+		}else{
+			error = 1;
+		}
+		if(error ==0){
+			return false;
+		}else{
+			$.post("{:U('User/modify_phone_do')}",{'code':code,'newmobile':mobile},function(data){
+				window.location.href = "{:U('Index/index',array('cate_id' => 2))}";
+			},'json');		
+		}
+	},'json');
+	return false;
+});
+
+</script>
+		
+<include file="Public/footer" />

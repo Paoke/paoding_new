@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+<title>-</title>
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/aui.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/common.css" />
+<script type="text/javascript" src="__STATIC__/user/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/api.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/layer.js"></script>
+<style type="text/css">
+.li_list:before{content:"";position: absolute;height:1px;background: #EFEFEF;left:0;right:0;bottom:0;margin:auto;margin-left:0.5rem;}
+</style>
+</head>
+
+<body>
+
+<header class="aui-bar aui-bar-nav">
+    <a href="javascript:history.go(-1);" class="aui-pull-left aui-btn">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">修改密码</div>
+     <a class="aui-pull-right">
+        <span>保存</span>
+    </a>
+</header>
+
+<section class="aui-content">
+    <ul class="aui-list aui-margin-b-15 aui-margin-t-10" style="border-bottom:1px solid #ebebeb;border-top: 1px solid #ebebeb;">
+        <li class="aui-list-item li_list">
+            <div class="aui-list-item-inner">
+                <input id="old_password" type="password" placeholder="旧密码"/>
+            </div>
+        </li>
+        <li class="aui-list-item li_list">
+            <div class="aui-list-item-inner">
+                <input id="new_password" type="password" placeholder="新密码"/>
+            </div>
+        </li>
+        <li class="aui-list-item">
+            <div class="aui-list-item-inner">
+                <input id="re_password" type="password" placeholder="重复新密码"/>
+            </div>
+        </li>
+    </ul>
+</section>
+
+</body>
+</html>
+<script type="text/javascript">
+
+    $('.aui-pull-right').click(function(event) {
+        if ($('#old_password').val() == "") {
+            layer.open({
+                content: '请填写旧密码'
+                ,skin: 'msg'
+                ,time: 2 //2秒后自动关闭
+              });
+            return;
+        } else if ($('#new_password').val() == "") {
+            layer.open({
+                content: '请填写新密码'
+                ,skin: 'msg'
+                ,time: 2 //2秒后自动关闭
+              });
+            return;
+        } else if ($('#re_password').val() == "") {
+            layer.open({
+                content: '请重再次写新密码'
+                ,skin: 'msg'
+                ,time: 2 //2秒后自动关闭
+              });
+            return;
+        }
+
+        var old_pw = $('#old_password').val();
+        var new_pw = $('#new_password').val();
+        var re_pw = $('#re_password').val();
+
+        var data = {'old': old_pw, 'new': new_pw, 're_new':re_pw};
+
+        var url = "__ROOT__/{$Think.const.API_PATH}/User/user_info/action/update_pw";
+
+        $.post(url, data, function(ret){
+
+            layer.open({
+                content: ret.msg
+                ,skin: 'msg'
+                ,time: 2 //2秒后自动关闭
+            });
+        },'json');
+
+    });
+  
+       
+</script>

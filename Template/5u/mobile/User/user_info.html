@@ -1,0 +1,98 @@
+<include file="Public/header" />
+	<body>
+		<div class="web">
+			<div class="weui-cells weui-cells_form">
+				<div class="weui-cell" style="padding: 10px;">
+	                <div class="weui-cell__hd"><label class="weui-label">昵称</label></div>
+	                <div class="weui-cell__bd">
+	                    <input class="weui-input" type="text" readonly="true" value="{:session('nickname')}">
+	                </div>
+	            </div>
+	            <div class="weui-cell" style="padding: 10px;">
+	                <div class="weui-cell__hd"><label class="weui-label">手机号</label></div>
+	                <div class="weui-cell__bd">
+	                    <input class="weui-input" type="text" readonly="true" value="{:session('con_mobile')}">
+	                </div>
+	            </div>
+	        </div>
+	        <div class="weui-cells weui-cells_form">
+				<div class="weui-cell" style="padding: 10px;">
+	                <div class="weui-cell__hd"><label class="weui-label">姓名</label></div>
+	                <div class="weui-cell__bd">
+	                	<if condition="$username neq null">
+	                		<input class="weui-input" type="text" id="username" value="{$username}">
+						<else />
+							<input class="weui-input" type="text" id="username" value="" placeholder="未填写">
+						</if>
+	                </div>
+	            </div>
+	            <div class="weui-cell" style="padding: 10px;">
+	                <div class="weui-cell__hd"><label class="weui-label">公司</label></div>
+	                <div class="weui-cell__bd">
+	                    <input class="weui-input" type="text" id="company" placeholder="未填写" value="">
+	                </div>
+	            </div>
+	            <div class="weui-cell" style="padding: 10px;">
+	                <div class="weui-cell__hd"><label class="weui-label">邮箱</label></div>
+	                <div class="weui-cell__bd">
+	                	<if condition="$email neq null">
+	                		<input class="weui-input" type="text" id="email" value="{$email}">
+						<else />
+							<input class="weui-input" type="text" id="email" placeholder="未填写" value="">
+						</if>
+	                </div>
+	            </div>
+	        </div>
+	        
+	        <div class="supply_foot" id="next_foot">
+	        	<a style="background: #FF7800;" class="weui-btn weui-btn_primary">完成</a>
+	        </div>
+	        <div id="toast" class="toast" style="opacity: 1; display:none">
+		        <div class="weui-mask_transparent"></div>
+		        <div class="weui-toast">
+		            <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+		            <p class="weui-toast__content">已完成</p>
+		        </div>
+		    </div>
+			<div id="loadingToast" class="loadingToast" style="display:none;">
+		        <div class="weui-mask_transparent"></div>
+		        <div class="weui-toast">
+		            <i class="weui-loading weui-icon_toast"></i>
+		            <p class="weui-toast__content">正在提交</p>
+		        </div>
+		    </div>
+		</div>
+	</body>
+	<include file="Public/footer" />
+	<script type="text/javascript">
+		$(function(){
+			$('#next_foot').click(function(){
+				$("#loadingToast").css("display","block");
+				var email = $('#email').val();
+				var username = $('#username').val();
+				var company = $('#company').val();
+				$.ajax({
+					url:"{:U('User/user_info')}",
+					data:{
+						'email':email,
+						'username':username,
+						'company':company
+					},
+					type:'post',
+					dataType:'json',
+					success:function(msg){
+						errorReturn(msg);
+						if(msg.code == 200){
+							$("#loadingToast").css("display","none");
+							$("#toast").css("display","block");
+							setTimeout(function(){
+								$("#toast").css("display","none");
+								window.location.href = "{:U('User/personal')}";
+							},500) 
+						}
+					}
+				});
+			});
+		})
+	</script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache,no-store,must-revalidate">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta content="telephone=no, address=no" name="format-detection">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title></title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/site/css/base.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/site/css/common.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/site/css/style.css" />
+<script type="text/javascript" src="__PUBLIC__/site/js/jquery.js"></script>
+</head>
+<body>
+    <div class="wrap">
+         <!--header-->
+        <header class="header">
+            <div class="center pa">
+                <a class="back_in" href="__URL__/step3/catid/{$vo.cat_id}.html"></a>
+            </div>
+            <h1>{$vo.title}风格</h1>
+        </header>
+        <!--header-->
+
+        <!-- 模板详情 -->
+         <section class="cont-box">
+            <div class="pic">
+               <img src="{$vo.image}"  alt="" title="DISSONA "/>
+            </div>
+            <div id="tmpl_div" class="info-box">
+                <dl class="title-box">
+                    <dt>
+                        <b id="cat_name">{$vo.cat_name}</b>
+                    </dt>
+                    <dd id="tmpl_desc">
+                        {$vo.description}
+                    </dd>
+                </dl>
+                {$vo.content}
+
+            </div>
+        </section>
+
+        <div class="btn-box">
+            <a href="{:U('Index/step5', array('tmpl_id'=>$vo['id'],'type'=>'1'))}" class="btn-shopcart">
+                {$vo.real_price}/年
+            </a>
+            <a href="{:U('Index/step5', array('tmpl_id'=>$vo['id'],'type'=>'2'))}" class="btn-consult">
+                {$vo.trail_price}元试用一个月
+            </a>
+        </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+
+
+</script>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>{$gemmap_config['shop_info_store_title']}</title>
+    <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}"/>
+    <meta name="description" content="{$gemmap_config['shop_info_store_desc']}"/>
+
+    <link href="{$Think.const.CSS}/style.css" rel="stylesheet">
+    <link href="{$Think.const.CSS}/style-responsive.css" rel="stylesheet">
+
+    <script src="__PUBLIC__/js/global.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+</style>
+
+<body class="sticky-header">
+<section>
+
+    <!-- main content start-->
+    <div class="main-content" width="100%" style="margin:0px;">
+
+        <!--body wrapper start-->
+        <section class="wrapper">
+            <!-- page start-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            {$plugin.name}配置
+                           <div class="pull-right">
+                                <div class="btn-group">
+                                    <empty name="info">
+                                        <button type="reset" class="btn btn-default">重填</button>
+                                        <button type="button" id="postbutton" class="btn btn-default "
+                                                onclick="ajax_submit_form('spec_form')">提交
+                                        </button>
+                                    </empty>
+                                    <a href="javascript:history.go(-1)" data-toggle="tooltip" title=""
+                                       class="btn btn-default" data-original-title="返回">返回</a>
+                                </div>
+                            </div>
+                        </header>
+                        <div class="panel-body ">
+                            <!--表单数据-->
+                            <form class="form-horizontal adminex-form" method="post" id="addEditSpecForm"
+                            <if condition="$type eq payment">
+                                action="{:U('Admin/Plugin/paymentList/action/edit')}"
+                                <else/>
+                                action="{:U('Admin/Plugin/loginList/action/edit')}"
+                            </if>
+                            >
+                            <volist name="plugin.config" id="config">
+                                <div class="form-group">
+                                    <label class="col-sm-2 col-sm-2 control-label">{$config.label}：</label>
+                                    <div class="col-sm-6">
+                                        <if condition="$config['type'] eq 'select'">
+                                            <select name="config[{$config['name']}]" class="form-option">
+                                                <volist name="config.option" id="option" key="o">
+                                                    <option
+                                                    <if condition="$config_value[$config['name']] eq $o">selected</if>
+                                                    value="{$o}">{$option}</option>
+                                                </volist>
+                                            </select>
+                                            <elseif condition="$config['type'] eq 'textarea'"/>
+                                            <textarea rows="6" class="form-control form-input" datatype="*"
+                                                      name="config[{$config['name']}]">{$config_value[$config['name']]}</textarea>
+                                            <else/>
+                                            <input type="{$config['type']}" datatype="*" class="form-control form-input"
+                                                   value="{$config_value[$config['name']]}" name="config[{$config['name']}]"/>
+                                        </if>
+                                    </div>
+                                </div>
+                            </volist>
+
+                           <!--  <div class="form-group">
+                                <div class="col-sm-12 btn-group">
+                                    <input type="hidden" name="id" value="{$plugin.id}">
+                                    <button class="Preservation" type="submit" id="cancel">保存</button>
+                                </div><!-- /btn-group -->
+
+                            </div> 
+                            </form>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section><!--表单数据-->
+
+
+    </div>
+    <!-- main content end-->
+</section>
+<script type="text/javascript" src="{$Think.const.JS}/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{$Think.const.JS}/Validform_v5.3.2_min.js"></script>
+<script type="text/javascript">
+    $('.adminex-form').Validform({
+        tiptype: 3
+    });
+
+</script>
+<script>
+    function preview(id) {
+        var src = "";
+        if ($('#' + id).val()) {
+            src = $('#' + id).val();
+        } else {
+            src = $('#' + id).attr("src");
+        }
+        var content;
+        if (src == "") {
+            content = '没有图片可供预览';
+            layer.msg(content);
+        }
+        else {
+            content = "<img width='300' height='300' src='" + src + "'>";
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: false,
+                area: ['300px', '300px'],
+                skin: 'layui-layer-nobg', //没有背景色
+                shadeClose: true,
+                content: content
+            });
+        }
+    }
+    function selected(img, url) {
+        $('#url').val(url);
+        $('#pic').val(img);
+        layer.closeAll();
+    }
+</script>
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="{$Think.const.JS}/jquery-1.10.2.min.js"></script>
+<script src="{$Think.const.JS}/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="{$Think.const.JS}/jquery-migrate-1.2.1.min.js"></script>
+<script src="{$Think.const.JS}/bootstrap.min.js"></script>
+<script src="{$Think.const.JS}/modernizr.min.js"></script>
+<script src="{$Think.const.JS}/jquery.nicescroll.js"></script>
+<script src="__PUBLIC__/js/layer/layer-min.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+<!--common scripts for all pages-->
+<script src="{$Think.const.JS}/scripts.js"></script>
+</body>
+</html>

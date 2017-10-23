@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>{$gemmap_config['shop_info_store_title']}</title>
+   <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}" />
+    <meta name="description" content="{$gemmap_config['shop_info_store_desc']}" />
+
+    <link href="{$Think.const.CSS}/style.css" rel="stylesheet">
+    <link href="{$Think.const.CSS}/style-responsive.css" rel="stylesheet">
+
+    <!-- jQuery 2.1.4 -->
+    <script src="__PUBLIC__/js/global.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<style type="text/css">
+    body{background:#f1f1f1;}
+    .fr{float: right;}
+    .caption h2{font-size: 24px;line-height: 18px;font-weight: 700;}
+    .option {height: 27px;width: 145px;}
+
+    .panel-body {
+        padding: 15px;
+        border: 1px solid #e6e8eb;
+        margin-top: -1px;
+    }
+    .radio input[type=radio], .radio-inline input[type=radio], .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox] {
+        float: none;
+        margin-left: 10px;
+    }
+
+    .input-group-addon {
+        padding: 5px 20px;
+    }
+    .commen-ttitle {
+        font-weight:bold;
+        padding:5px;
+    }
+</style>
+
+<body class="sticky-header">
+<section>
+
+    <!-- main content start-->
+    <div class="main-content" width="100%" style="margin:0px;">
+
+        <!--body wrapper start-->
+        <section class="wrapper">
+            <!-- page start-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <section class="panel">
+                        <header class="panel-heading">
+                            评论回复
+                            <div class="pull-right">
+                                <a style="margin-top:-8px" href="/index.php/Admin/Comment/index" data-toggle="tooltip" title="" class="btn btn-default" data-original-title="返回管理员列表"><i class="fa fa-reply"></i></a>
+                                <!-- <a href="javascript:;" class="btn btn-default" data-url="http://www.gemmap.cn/Doc/Index/article/id/1001/developer/user.html" onclick="get_help(this)"><i class="fa fa-question-circle"></i> 帮助</a> -->
+                            </div>
+                        </header>
+                        <div class="panel-body">
+                            <ul class="chats cool-chat">
+                                <li class="in">
+                                    <img src="{$head_pic}" alt="{$comment.username}" class="avatar">
+                                    <div class="message">
+                                        <span class="arrow"></span>
+                                        <a class="name" href="#">{$comment.username}</a>
+                                        <span class="datetime">at {$comment.add_time|date="Y-m-d H:i",###}</span>
+                                        <span class="body">
+                                            {$comment.content}
+                                        </span>
+                                    </div>
+                                </li>
+                                
+                                <foreach name="reply" item="v" >                                    
+                                    <li class="out">
+                                        <img alt="{$comment.username}"  src="{$Think.const.IMG}/logo_icon.png" class="avatar">
+                                        <div class="message">
+                                            <span class="arrow"></span>
+                                            <a class="name" href="#">{$v.username}</a>
+                                            <span class="datetime">at {$v.add_time|date="Y-m-d H:i",###}</span>
+                                            <span class="body">
+                                                {$v.content}
+                                            </span>
+                                        </div>
+                                    </li>                                        
+                                </foreach>
+                            </ul>
+                            <div class="chat-form ">
+                                <form method="post" class="form-inline" id="postcontent"    action="{:U('Comment/reply')}">
+                                    <div class="form-group">
+                                        <input type="text" style="width: 100%" placeholder="请输入回复内容" name="content" class="form-control">
+                                        <input type="hidden"   name="comment_id" value="{$comment_id}">
+                                    </div>
+                                    <button class="btn btn-primary" type="button" onclick="saveinfo();">回复</button>
+                                </form>
+                            </div>
+                        </div>           
+                                </section>
+
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section><!--表单数据-->
+
+
+    </div>
+    </div>
+
+
+    </div>
+    <!-- main content end-->
+</section>
+
+<script>
+    function saveinfo() {
+        var info = $.trim($('input[name="content"]').val());
+        if(info == '') {
+            layer.msg('回复内容不得为空！',{time:1000,icon: 5});
+        }else {
+            $('#postcontent').submit();
+        }
+    }
+</script>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="{$Think.const.JS}/jquery-1.10.2.min.js"></script>
+<script src="{$Think.const.JS}/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="{$Think.const.JS}/jquery-migrate-1.2.1.min.js"></script>
+<script src="{$Think.const.JS}/bootstrap.min.js"></script>
+<script src="{$Think.const.JS}/modernizr.min.js"></script>
+<script src="{$Think.const.JS}/jquery.nicescroll.js"></script>
+<script src="__PUBLIC__/js/layer/layer-min.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+<!--common scripts for all pages-->
+<script src="{$Think.const.JS}/scripts.js"></script>
+
+</body>
+</html>

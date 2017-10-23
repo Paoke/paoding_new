@@ -1,0 +1,136 @@
+
+
+.edit-tip-pane {
+    margin: auto;
+    line-height: 36px;
+    text-align: center;
+}
+
+    .edit-tip-pane .edit-tip {
+        color: #0DB3A6;
+    }
+
+        .edit-tip-pane .edit-tip:hover {
+            text-decoration: underline;
+        }
+
+.edit-icon-pane {
+    margin: 10px auto 5px auto;
+    text-align: center;
+}
+
+    .edit-icon-pane .icon-wid {
+        display: inline-block;
+        vertical-align: middle;
+        width: 220px;
+        height: 230px;
+        cursor: pointer;
+        border: solid 1px #E9E9E9;
+        background: #F8FAF9;
+        margin: 10px;
+    }
+
+@media (max-width:1280px) {
+    .edit-icon-pane .icon-wid {
+        width: 225px;
+    }
+}
+
+.edit-icon-pane .icon-wid:hover {
+    -webkit-box-shadow: 0 2px 12px 0 rgba(199,199,199,.5);
+    box-shadow: 0 2px 12px 0 rgba(199,199,199,.5);
+    -webkit-transition: box-shadow 218ms;
+    -moz-transition: box-shadow 218ms;
+    -o-transition: box-shadow 218ms;
+    transition: box-shadow 218ms;
+}
+
+.edit-icon-pane .icon-wid .app-edit-icon {
+    margin: 30px auto 30px auto;
+    width: 68px;
+    height: 68px;
+
+
+}
+
+.edit-icon-pane .icon-wid .add {
+
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-image: url(../images/channel_type/add.png);
+    background-repeat: no-repeat;
+}
+
+.edit-icon-pane .icon-wid .news {
+
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-image: url(../images/channel_type/news.png);
+    background-repeat: no-repeat;
+}
+
+
+.edit-icon-pane .icon-wid .sns {
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-image: url(../images/channel_type/sns.png);
+    background-repeat: no-repeat;
+}
+
+.edit-icon-pane .icon-wid .activity {
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-image: url(../images/channel_type/activity.png);
+    background-repeat: no-repeat;
+}
+
+.edit-icon-pane .icon-wid .shop {
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-image: url(../images/channel_type/shop.png);
+    background-repeat: no-repeat;
+}
+
+.edit-icon-pane .icon-wid .form {
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-image: url(../images/channel_type/form.png);
+    background-repeat: no-repeat;
+}
+
+.edit-icon-pane .icon-wid .yu {
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-image: url(../images/channel_type/yu.png);
+    background-repeat: no-repeat;
+}
+
+.edit-icon-pane .icon-wid .question {
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-image: url(../images/channel_type/question.png);
+    background-repeat: no-repeat;
+}
+.edit-icon-pane .icon-wid .icon-title {
+    margin: 30px 0;
+    text-shadow: 0 1px 1px rgba(255,255,255,.9);
+    font-size: 24px;
+    color:#1296db;
+    font-weight: bold;
+}

@@ -1,0 +1,9 @@
+﻿html{font-family: 'Heiti SC', 'Microsoft YaHei';}
+
+*{ letter-spacing:0.02rem; }
+.temp{
+    font-size: 1.2rem;
+    color:#dddada;
+    text-align: center;
+    padding-top: 50%;
+}

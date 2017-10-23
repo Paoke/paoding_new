@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+<title>-</title>
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/aui.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/user/css/common.css" />
+<script type="text/javascript" src="__STATIC__/user/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="__STATIC__/user/js/api.js"></script>
+<style type="text/css">
+/*购物车*/
+li{background: #fff;margin-bottom:0.75rem;}
+li h3{line-height: 2.3rem;font-size: 0.8rem;color:#333;border-bottom:1px solid #eee;padding-left: 3.5rem;position: relative;background:url(__STATIC__/user/image/dp.png)no-repeat 2.25rem center;background-size: 1rem;}
+li a{display:block;overflow: hidden;padding:0.5rem 0.5rem 0.5rem 2rem;position: relative;}
+li a i,li h3 i{position: absolute;left:0.5rem;top:0;bottom:0;margin:auto;width: 1rem;height:1rem;background:url(__STATIC__/user/image/no.png)no-repeat center center;background-size:1rem;}
+i.cur{background:url(__STATIC__/user/image/ok.png)no-repeat center center;background-size:1rem;}
+li a .pic{overflow: hidden;float: left;width: 35%;height:5rem;text-align: center;}
+li a .pic img{height:100%;}
+.center_info{float: left;width: 62%;padding-top:0.5rem;padding-left: 0.5rem;box-sizing: border-box;}
+.center_info h4{ font-size: 0.7rem; color:#333; }
+.center_info p{ font-size: 0.7rem; color:#999;line-height: 1.5rem;}
+.rirht_num{  color:#ff3355; font-size: 0.8rem;position: absolute;bottom:1rem;right:0.3rem;}
+.add{ overflow: hidden; }
+.add span{ display: block; float: left; border: 1px solid #ddd; font-size: 0.8rem; line-height: 1.5rem; color: #353535; cursor: pointer; width: 1.5rem; height: 1.5rem;text-align: center; }
+.add input{ display: block; float: left; width: 1.75rem; font-size: 0.8rem; line-height: 1.5rem; text-align: center; background: none; height: 1.5rem; border: 1px solid #ddd; border-left: none; border-right: none; }
+.bot{font-size: 0.8rem;text-align: center;color:#404040;padding-bottom:0.5rem;display:none;}
+.bot span{font-size: 0.8rem;color:#ff3355;}
+.bot p{float: right;margin-right:0.5rem;width: 1rem;height:1rem;background:url(__STATIC__/user/image/del.png)no-repeat center center;background-size:1rem;}
+.box_bottom{height:2.5rem;border-top:1px solid #e9e1e1;width: 100%;position: fixed;left:0;bottom:0;padding:0 0.5rem;box-sizing: border-box;background:#fff;}
+.box_bottom .all{background:url(__STATIC__/user/image/no.png)no-repeat 0.1rem center;background-size:1rem;font-size: 0.8rem;color:#333;width:25%;line-height: 2.5rem;float: left;padding-left:1.5rem;box-sizing: border-box;}
+.box_bottom .all.cur{background:url(__STATIC__/user/image/ok.png)no-repeat 0.1rem center;background-size:1rem;}
+.total{width: 44%;font-size: 0.8rem;color:#333;float: left;line-height:2.5rem;text-align: center;}
+.total span{color:#ff3355;}
+.pay{width: 31%;float: right;text-align: right;}
+.pay a{font-size: 0.8rem;color:#fff;background:#30c29d;padding:0.25rem 0.5rem;line-height:2.5rem;border-radius: 2px;}
+</style>
+</head>
+
+<body>
+<header class="aui-bar aui-bar-nav">
+    <a href="javascript:history.go(-1);" class="aui-pull-left aui-btn">
+        <span class="aui-iconfont aui-icon-left"></span>
+    </a>
+    <div class="aui-title">购物车</div>
+</header>
+
+<section class="aui-content">
+<ul>
+            <li>
+                <h3>某某商品<i></i></h3>
+                <a href="javascript:;">
+                    <div class="pic"><img src="__STATIC__/user/image/a.jpg" /></div>
+                    <div class="center_info">
+                        <h4>XXX系列XX商品</h4>
+                        <p>黑色</p>
+                        <div class="add">
+                            <span>-</span>
+                            <input type="text" value="1"/>
+                            <span>+</span>
+                        </div>
+                    </div>
+                    <div class="rirht_num">￥99</div>
+                    <i></i>
+                </a>
+                 <div class="bot">已选1件商品 合计: <span>￥9.9</span><p></p></div>
+            </li>
+            <li>
+                <h3>某某商品<i></i></h3>
+                <a href="javascript:;">
+                    <div class="pic"><img src="__STATIC__/user/image/a.jpg" /></div>
+                    <div class="center_info">
+                        <h4>XXX系列XX商品</h4>
+                        <p>黑色</p>
+                        <div class="add">
+                            <span>-</span>
+                            <input type="text" value="1"/>
+                            <span>+</span>
+                        </div>
+                    </div>
+                    <div class="rirht_num">￥99</div>
+                    <i></i>
+                </a>
+                <div class="bot">已选1件商品 合计: <span>￥9.9</span><p></p></div>
+            </li>
+        </ul>
+</section>
+
+ <section class="box_bottom">
+        <div class="all">全选</div>
+        <div class="total">合计: <span>￥99.8</span></div>
+        <div class="pay">
+            <a href="javascript:;">去支付(<span>2</span>)</a>
+        </div>
+    </section>
+
+</body>
+</html>
+
+<script type="text/javascript">
+    // 购物车
+$(function(){
+    $('li i').click(function(event) {
+        $(this).parent().parent().find('i').toggleClass('cur');
+        if ($(this).hasClass('cur')) {$(this).parent().parent().find('.bot').css('display','block')}else{$(this).parent().parent().find('.bot').css('display','none')};
+    });
+
+});
+// all
+$(function(){
+    $('.all').click(function(event) {
+        $(this).toggleClass('cur')
+        if ($('.all').hasClass('cur')) {$('li i').addClass('cur')}else{$('li i').removeClass('cur')};
+        if ($('li i').hasClass('cur')) {$('.bot').css('display','block')}else{$('.bot').css('display','none')};
+    });
+
+});
+</script>
