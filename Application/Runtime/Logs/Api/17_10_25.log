@@ -1,0 +1,2175 @@
+[ 2017-10-25T15:15:53+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.132007s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+NOTIC: [8] A non well formed numeric value encountered D:\xampp\htdocs\paoding_new\Application\Common\Common\function.php 第 804 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 23 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 25 行.
+NOTIC: [8] Undefined variable: search D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 48 行.
+
+[ 2017-10-25T15:15:53+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.030002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T15:15:53+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.024002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T15:15:53+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/zx/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.032002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T15:15:53+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.033002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: order_field D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 56 行.
+
+[ 2017-10-25T15:15:53+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+search>>>>>>>>: 
+[ 2017-10-25T15:15:53+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+>>>>>>>>: null
+[ 2017-10-25T15:15:53+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T15:15:53+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+search>>>>>>>>: 
+[ 2017-10-25T15:15:53+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+>>>>>>>>: null
+[ 2017-10-25T15:15:53+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T15:15:54+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+search>>>>>>>>: 
+[ 2017-10-25T15:15:54+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+>>>>>>>>: null
+[ 2017-10-25T15:15:54+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.013001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.013001s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T15:15:54+08:00 ] 127.0.0.1 /api.php/Setting/settingAbout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-25T15:16:07+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-10-25T15:17:03+08:00 ] 127.0.0.1 /api.php/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-10-25T15:29:18+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.035002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T15:29:18+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/zx/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.051003s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T15:29:18+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.059003s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: order_field D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 56 行.
+
+[ 2017-10-25T15:29:18+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.043003s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+NOTIC: [8] A non well formed numeric value encountered D:\xampp\htdocs\paoding_new\Application\Common\Common\function.php 第 804 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 23 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 25 行.
+NOTIC: [8] Undefined variable: search D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 48 行.
+
+[ 2017-10-25T15:29:19+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+search>>>>>>>>: 
+[ 2017-10-25T15:29:19+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+>>>>>>>>: null
+[ 2017-10-25T15:29:19+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T15:29:19+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+search>>>>>>>>: 
+[ 2017-10-25T15:29:19+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+>>>>>>>>: null
+[ 2017-10-25T15:29:19+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T15:29:19+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+search>>>>>>>>: 
+[ 2017-10-25T15:29:19+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+>>>>>>>>: null
+[ 2017-10-25T15:29:19+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T15:29:19+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.092005s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T15:29:19+08:00 ] 127.0.0.1 /api.php/Setting/settingAbout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-10-25T15:29:25+08:00 ] 127.0.0.1 /api.php/Setting/settingAbout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-25T15:29:25+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/1?data_by=is_red+desc%2Ccreate_time+desc&page=1&page_num=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.004000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.046002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: order_field D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 56 行.
+NOTIC: [8] A non well formed numeric value encountered D:\xampp\htdocs\paoding_new\Application\Common\Common\function.php 第 804 行.
+NOTIC: [8] Undefined index: get_page D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 94 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 23 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 25 行.
+NOTIC: [8] Undefined variable: search D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 48 行.
+
+[ 2017-10-25T15:29:26+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.035002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T15:29:26+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/zx/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.070004s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T15:29:26+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.038002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+NOTIC: [8] A non well formed numeric value encountered D:\xampp\htdocs\paoding_new\Application\Common\Common\function.php 第 804 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 23 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 25 行.
+NOTIC: [8] Undefined variable: search D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 48 行.
+
+[ 2017-10-25T15:29:26+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.048003s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T15:29:26+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.072004s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: order_field D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 56 行.
+
+[ 2017-10-25T15:29:27+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+search>>>>>>>>: 
+[ 2017-10-25T15:29:27+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+>>>>>>>>: null
+[ 2017-10-25T15:29:27+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.004000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T15:29:27+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+search>>>>>>>>: 
+[ 2017-10-25T15:29:27+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+>>>>>>>>: null
+[ 2017-10-25T15:29:27+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T15:29:27+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+search>>>>>>>>: 
+[ 2017-10-25T15:29:27+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+>>>>>>>>: null
+[ 2017-10-25T15:29:27+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T15:29:27+08:00 ] 127.0.0.1 /api.php/Setting/settingAbout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-25T15:29:41+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.048003s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T15:29:41+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.041002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T15:29:41+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.040003s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+NOTIC: [8] A non well formed numeric value encountered D:\xampp\htdocs\paoding_new\Application\Common\Common\function.php 第 804 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 23 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 25 行.
+NOTIC: [8] Undefined variable: search D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 48 行.
+
+[ 2017-10-25T15:29:41+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.034002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: order_field D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 56 行.
+
+[ 2017-10-25T15:29:41+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/zx/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.014001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.014001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.046002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T15:29:42+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+search>>>>>>>>: 
+[ 2017-10-25T15:29:42+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+>>>>>>>>: null
+[ 2017-10-25T15:29:42+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T15:29:42+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+search>>>>>>>>: 
+[ 2017-10-25T15:29:42+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+>>>>>>>>: null
+[ 2017-10-25T15:29:42+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T15:29:42+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+search>>>>>>>>: 
+[ 2017-10-25T15:29:42+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+>>>>>>>>: null
+[ 2017-10-25T15:29:42+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T15:29:42+08:00 ] 127.0.0.1 /api.php/Setting/settingAbout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-25T15:33:12+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.026001s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+NOTIC: [8] Undefined index: get_page D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 94 行.
+
+[ 2017-10-25T15:33:12+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/js/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.028001s ]
+
+[ 2017-10-25T15:33:12+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+search>>>>>>>>: 
+[ 2017-10-25T15:33:12+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+>>>>>>>>: null
+[ 2017-10-25T15:33:12+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T15:33:12+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/ztgl/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.026002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: page D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 52 行.
+NOTIC: [8] Undefined index: order_field D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 56 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+NOTIC: [8] Undefined variable: page D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 80 行.
+NOTIC: [8] Undefined variable: page_num D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 80 行.
+NOTIC: [8] Undefined variable: orderBy D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 81 行.
+NOTIC: [8] Undefined index: limit D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\Db\Driver.class.php 第 950 行.
+NOTIC: [8] Undefined index: get_page D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 94 行.
+
+[ 2017-10-25T16:08:50+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-10-25T16:09:01+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 21 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 26 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 29 行.
+
+[ 2017-10-25T16:11:22+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-10-25T16:11:38+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-25T16:15:21+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 21 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 26 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 29 行.
+
+[ 2017-10-25T16:21:31+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 21 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 26 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 29 行.
+
+[ 2017-10-25T16:21:32+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 21 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 26 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 29 行.
+
+[ 2017-10-25T16:21:32+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 21 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 26 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 29 行.
+
+[ 2017-10-25T16:21:32+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 21 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 26 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 29 行.
+
+[ 2017-10-25T16:22:17+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 21 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 26 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 29 行.
+
+[ 2017-10-25T16:23:29+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 21 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 26 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 29 行.
+
+[ 2017-10-25T16:38:32+08:00 ] 127.0.0.1 /api.php/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-10-25T16:38:37+08:00 ] 127.0.0.1 /api.php/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 672 行.
+NOTIC: [8] Undefined index: paswd D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 673 行.
+NOTIC: [8] Undefined index: code D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 674 行.
+
+[ 2017-10-25T16:41:54+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 21 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 26 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 29 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-25T16:41:55+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 21 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 26 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 29 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-25T16:41:55+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 21 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 26 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 29 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-10-25T16:41:56+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 21 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 26 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 29 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-25T16:41:56+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 21 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 26 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 29 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-25T16:41:57+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 21 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 26 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 29 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-25T16:42:10+08:00 ] 127.0.0.1 /api.php/Sms/sendMessage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 21 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 26 行.
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\SmsController.class.php 第 29 行.
+
+[ 2017-10-25T16:49:21+08:00 ] 127.0.0.1 /api.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: form D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 28 行.
+NOTIC: [8] Undefined index: dataId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 29 行.
+NOTIC: [8] Undefined index: selfUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 30 行.
+NOTIC: [8] Undefined index: selfUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 31 行.
+NOTIC: [8] Undefined index: orderUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 32 行.
+NOTIC: [8] Undefined index: orderUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 33 行.
+NOTIC: [8] Undefined index: userType D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 34 行.
+NOTIC: [8] Undefined index: count D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 37 行.
+NOTIC: [8] Undefined index: channel D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 38 行.
+NOTIC: [8] Undefined index: channel_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: top D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 40 行.
+NOTIC: [8] Undefined index: keywords D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 41 行.
+NOTIC: [8] Undefined index: orderMode D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 42 行.
+NOTIC: [8] Undefined index: limitNum D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 43 行.
+NOTIC: [8] Undefined index: limitStart D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 44 行.
+
+[ 2017-10-25T16:49:22+08:00 ] 127.0.0.1 /api.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: username D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 471 行.
+NOTIC: [8] Undefined index: password D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 472 行.
+NOTIC: [8] Undefined index: form D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 28 行.
+NOTIC: [8] Undefined index: dataId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 29 行.
+NOTIC: [8] Undefined index: selfUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 30 行.
+NOTIC: [8] Undefined index: selfUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 31 行.
+NOTIC: [8] Undefined index: orderUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 32 行.
+NOTIC: [8] Undefined index: orderUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 33 行.
+NOTIC: [8] Undefined index: userType D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 34 行.
+NOTIC: [8] Undefined index: count D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 37 行.
+NOTIC: [8] Undefined index: channel D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 38 行.
+NOTIC: [8] Undefined index: channel_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: top D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 40 行.
+NOTIC: [8] Undefined index: keywords D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 41 行.
+NOTIC: [8] Undefined index: orderMode D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 42 行.
+NOTIC: [8] Undefined index: limitNum D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 43 行.
+NOTIC: [8] Undefined index: limitStart D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 44 行.
+
+[ 2017-10-25T16:50:27+08:00 ] 127.0.0.1 /api.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: form D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 28 行.
+NOTIC: [8] Undefined index: dataId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 29 行.
+NOTIC: [8] Undefined index: selfUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 30 行.
+NOTIC: [8] Undefined index: selfUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 31 行.
+NOTIC: [8] Undefined index: orderUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 32 行.
+NOTIC: [8] Undefined index: orderUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 33 行.
+NOTIC: [8] Undefined index: userType D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 34 行.
+NOTIC: [8] Undefined index: count D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 37 行.
+NOTIC: [8] Undefined index: channel D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 38 行.
+NOTIC: [8] Undefined index: channel_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: top D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 40 行.
+NOTIC: [8] Undefined index: keywords D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 41 行.
+NOTIC: [8] Undefined index: orderMode D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 42 行.
+NOTIC: [8] Undefined index: limitNum D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 43 行.
+NOTIC: [8] Undefined index: limitStart D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 44 行.
+
+[ 2017-10-25T16:50:34+08:00 ] 127.0.0.1 /api.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: form D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 28 行.
+NOTIC: [8] Undefined index: dataId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 29 行.
+NOTIC: [8] Undefined index: selfUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 30 行.
+NOTIC: [8] Undefined index: selfUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 31 行.
+NOTIC: [8] Undefined index: orderUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 32 行.
+NOTIC: [8] Undefined index: orderUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 33 行.
+NOTIC: [8] Undefined index: userType D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 34 行.
+NOTIC: [8] Undefined index: count D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 37 行.
+NOTIC: [8] Undefined index: channel D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 38 行.
+NOTIC: [8] Undefined index: channel_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: top D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 40 行.
+NOTIC: [8] Undefined index: keywords D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 41 行.
+NOTIC: [8] Undefined index: orderMode D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 42 行.
+NOTIC: [8] Undefined index: limitNum D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 43 行.
+NOTIC: [8] Undefined index: limitStart D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 44 行.
+
+[ 2017-10-25T16:50:45+08:00 ] 127.0.0.1 /api.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: form D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 28 行.
+NOTIC: [8] Undefined index: dataId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 29 行.
+NOTIC: [8] Undefined index: selfUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 30 行.
+NOTIC: [8] Undefined index: selfUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 31 行.
+NOTIC: [8] Undefined index: orderUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 32 行.
+NOTIC: [8] Undefined index: orderUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 33 行.
+NOTIC: [8] Undefined index: userType D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 34 行.
+NOTIC: [8] Undefined index: count D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 37 行.
+NOTIC: [8] Undefined index: channel D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 38 行.
+NOTIC: [8] Undefined index: channel_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: top D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 40 行.
+NOTIC: [8] Undefined index: keywords D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 41 行.
+NOTIC: [8] Undefined index: orderMode D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 42 行.
+NOTIC: [8] Undefined index: limitNum D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 43 行.
+NOTIC: [8] Undefined index: limitStart D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 44 行.
+
+[ 2017-10-25T16:50:51+08:00 ] 127.0.0.1 /api.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.003000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: form D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 28 行.
+NOTIC: [8] Undefined index: dataId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 29 行.
+NOTIC: [8] Undefined index: selfUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 30 行.
+NOTIC: [8] Undefined index: selfUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 31 行.
+NOTIC: [8] Undefined index: orderUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 32 行.
+NOTIC: [8] Undefined index: orderUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 33 行.
+NOTIC: [8] Undefined index: userType D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 34 行.
+NOTIC: [8] Undefined index: count D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 37 行.
+NOTIC: [8] Undefined index: channel D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 38 行.
+NOTIC: [8] Undefined index: channel_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: top D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 40 行.
+NOTIC: [8] Undefined index: keywords D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 41 行.
+NOTIC: [8] Undefined index: orderMode D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 42 行.
+NOTIC: [8] Undefined index: limitNum D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 43 行.
+NOTIC: [8] Undefined index: limitStart D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 44 行.
+
+[ 2017-10-25T16:51:27+08:00 ] 127.0.0.1 /api.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: form D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 28 行.
+NOTIC: [8] Undefined index: dataId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 29 行.
+NOTIC: [8] Undefined index: selfUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 30 行.
+NOTIC: [8] Undefined index: selfUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 31 行.
+NOTIC: [8] Undefined index: orderUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 32 行.
+NOTIC: [8] Undefined index: orderUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 33 行.
+NOTIC: [8] Undefined index: userType D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 34 行.
+NOTIC: [8] Undefined index: count D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 37 行.
+NOTIC: [8] Undefined index: channel D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 38 行.
+NOTIC: [8] Undefined index: channel_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: top D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 40 行.
+NOTIC: [8] Undefined index: keywords D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 41 行.
+NOTIC: [8] Undefined index: orderMode D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 42 行.
+NOTIC: [8] Undefined index: limitNum D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 43 行.
+NOTIC: [8] Undefined index: limitStart D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 44 行.
+
+[ 2017-10-25T16:51:28+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.034002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T16:51:28+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.005000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.005000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.061004s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+NOTIC: [8] A non well formed numeric value encountered D:\xampp\htdocs\paoding_new\Application\Common\Common\function.php 第 804 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 23 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 25 行.
+NOTIC: [8] Undefined variable: search D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 48 行.
+
+[ 2017-10-25T16:51:28+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.014001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.014001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.041002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T16:51:29+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/zx/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.060004s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T16:51:29+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.045003s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: order_field D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 56 行.
+
+[ 2017-10-25T16:51:29+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+search>>>>>>>>: 
+[ 2017-10-25T16:51:29+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+>>>>>>>>: null
+[ 2017-10-25T16:51:29+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.004000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.005000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T16:51:29+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+search>>>>>>>>: 
+[ 2017-10-25T16:51:29+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+>>>>>>>>: null
+[ 2017-10-25T16:51:29+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T16:51:29+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+search>>>>>>>>: 
+[ 2017-10-25T16:51:29+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+>>>>>>>>: null
+[ 2017-10-25T16:51:29+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.004000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T16:51:29+08:00 ] 127.0.0.1 /api.php/Setting/settingAbout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-10-25T16:51:31+08:00 ] 127.0.0.1 /api.php/Setting/settingAbout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-25T16:51:31+08:00 ] 127.0.0.1 /api.php/User/user_info/action/detail/id/6800
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-25T16:51:46+08:00 ] 127.0.0.1 /api.php/Setting/settingAbout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-10-25T16:51:46+08:00 ] 127.0.0.1 /api.php/User/user_info/action/detail/id/6800
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-10-25T17:04:12+08:00 ] 127.0.0.1 /api.php/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 672 行.
+NOTIC: [8] Undefined index: paswd D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 673 行.
+NOTIC: [8] Undefined index: code D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 674 行.
+NOTIC: [8] Undefined index: nickname D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 675 行.
+
+[ 2017-10-25T17:04:13+08:00 ] 127.0.0.1 /api.php/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 672 行.
+NOTIC: [8] Undefined index: paswd D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 673 行.
+NOTIC: [8] Undefined index: code D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 674 行.
+NOTIC: [8] Undefined index: nickname D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 675 行.
+
+[ 2017-10-25T17:04:13+08:00 ] 127.0.0.1 /api.php/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 672 行.
+NOTIC: [8] Undefined index: paswd D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 673 行.
+NOTIC: [8] Undefined index: code D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 674 行.
+NOTIC: [8] Undefined index: nickname D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 675 行.
+
+[ 2017-10-25T17:10:57+08:00 ] 127.0.0.1 /api.php/User/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-25T17:10:57+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.003001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.045002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T17:10:58+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.041003s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T17:10:58+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.027002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: order_field D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 56 行.
+
+[ 2017-10-25T17:10:58+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.042003s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+NOTIC: [8] A non well formed numeric value encountered D:\xampp\htdocs\paoding_new\Application\Common\Common\function.php 第 804 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 23 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 25 行.
+NOTIC: [8] Undefined variable: search D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 48 行.
+
+[ 2017-10-25T17:10:58+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+search>>>>>>>>: 
+[ 2017-10-25T17:10:58+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+>>>>>>>>: null
+[ 2017-10-25T17:10:58+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T17:10:58+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/zx/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.041002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T17:10:58+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+search>>>>>>>>: 
+[ 2017-10-25T17:10:58+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+>>>>>>>>: null
+[ 2017-10-25T17:10:58+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T17:10:58+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+search>>>>>>>>: 
+[ 2017-10-25T17:10:58+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+>>>>>>>>: null
+[ 2017-10-25T17:10:58+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T17:10:58+08:00 ] 127.0.0.1 /api.php/Setting/settingAbout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-25T17:11:03+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.037002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T17:11:03+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.056004s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T17:11:04+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/zx/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.042002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-10-25T17:11:04+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.030002s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+NOTIC: [8] A non well formed numeric value encountered D:\xampp\htdocs\paoding_new\Application\Common\Common\function.php 第 804 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 23 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 25 行.
+NOTIC: [8] Undefined variable: search D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 48 行.
+
+[ 2017-10-25T17:11:04+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.085004s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 16 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: tag_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 25 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: order_field D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 56 行.
+
+[ 2017-10-25T17:11:04+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+search>>>>>>>>: 
+[ 2017-10-25T17:11:04+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+>>>>>>>>: null
+[ 2017-10-25T17:11:04+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/js/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T17:11:04+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+search>>>>>>>>: 
+[ 2017-10-25T17:11:04+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+>>>>>>>>: null
+[ 2017-10-25T17:11:04+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T17:11:04+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+search>>>>>>>>: 
+[ 2017-10-25T17:11:04+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+>>>>>>>>: null
+[ 2017-10-25T17:11:04+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/count/channel/fwdj/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 241 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 244 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 247 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 248 行.
+
+[ 2017-10-25T17:11:04+08:00 ] 127.0.0.1 /api.php/Setting/settingAbout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-25T17:11:14+08:00 ] 127.0.0.1 /api.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: form D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 28 行.
+NOTIC: [8] Undefined index: dataId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 29 行.
+NOTIC: [8] Undefined index: selfUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 30 行.
+NOTIC: [8] Undefined index: selfUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 31 行.
+NOTIC: [8] Undefined index: orderUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 32 行.
+NOTIC: [8] Undefined index: orderUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 33 行.
+NOTIC: [8] Undefined index: userType D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 34 行.
+NOTIC: [8] Undefined index: count D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 37 行.
+NOTIC: [8] Undefined index: channel D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 38 行.
+NOTIC: [8] Undefined index: channel_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: top D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 40 行.
+NOTIC: [8] Undefined index: keywords D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 41 行.
+NOTIC: [8] Undefined index: orderMode D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 42 行.
+NOTIC: [8] Undefined index: limitNum D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 43 行.
+NOTIC: [8] Undefined index: limitStart D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 44 行.
+
+[ 2017-10-25T17:11:16+08:00 ] 127.0.0.1 /api.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: username D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 471 行.
+NOTIC: [8] Undefined index: password D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 472 行.
+NOTIC: [8] Undefined index: form D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 28 行.
+NOTIC: [8] Undefined index: dataId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 29 行.
+NOTIC: [8] Undefined index: selfUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 30 行.
+NOTIC: [8] Undefined index: selfUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 31 行.
+NOTIC: [8] Undefined index: orderUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 32 行.
+NOTIC: [8] Undefined index: orderUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 33 行.
+NOTIC: [8] Undefined index: userType D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 34 行.
+NOTIC: [8] Undefined index: count D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 37 行.
+NOTIC: [8] Undefined index: channel D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 38 行.
+NOTIC: [8] Undefined index: channel_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: top D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 40 行.
+NOTIC: [8] Undefined index: keywords D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 41 行.
+NOTIC: [8] Undefined index: orderMode D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 42 行.
+NOTIC: [8] Undefined index: limitNum D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 43 行.
+NOTIC: [8] Undefined index: limitStart D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 44 行.
+
+[ 2017-10-25T17:11:52+08:00 ] 127.0.0.1 /api.php/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 672 行.
+NOTIC: [8] Undefined index: paswd D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 673 行.
+NOTIC: [8] Undefined index: code D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 674 行.
+NOTIC: [8] Undefined index: nickname D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 675 行.
+
+[ 2017-10-25T17:11:54+08:00 ] 127.0.0.1 /api.php/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 672 行.
+NOTIC: [8] Undefined index: paswd D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 673 行.
+NOTIC: [8] Undefined index: code D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 674 行.
+NOTIC: [8] Undefined index: nickname D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 675 行.
+
+[ 2017-10-25T17:11:54+08:00 ] 127.0.0.1 /api.php/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 672 行.
+NOTIC: [8] Undefined index: paswd D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 673 行.
+NOTIC: [8] Undefined index: code D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 674 行.
+NOTIC: [8] Undefined index: nickname D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 675 行.
+
+[ 2017-10-25T17:11:54+08:00 ] 127.0.0.1 /api.php/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 672 行.
+NOTIC: [8] Undefined index: paswd D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 673 行.
+NOTIC: [8] Undefined index: code D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 674 行.
+NOTIC: [8] Undefined index: nickname D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 675 行.
+
+[ 2017-10-25T17:11:55+08:00 ] 127.0.0.1 /api.php/User/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 672 行.
+NOTIC: [8] Undefined index: paswd D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 673 行.
+NOTIC: [8] Undefined index: code D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 674 行.
+NOTIC: [8] Undefined index: nickname D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 675 行.
+
+[ 2017-10-25T17:20:59+08:00 ] 127.0.0.1 /api.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 471 行.
+NOTIC: [8] Undefined index: form D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 28 行.
+NOTIC: [8] Undefined index: dataId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 29 行.
+NOTIC: [8] Undefined index: selfUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 30 行.
+NOTIC: [8] Undefined index: selfUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 31 行.
+NOTIC: [8] Undefined index: orderUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 32 行.
+NOTIC: [8] Undefined index: orderUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 33 行.
+NOTIC: [8] Undefined index: userType D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 34 行.
+NOTIC: [8] Undefined index: count D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 37 行.
+NOTIC: [8] Undefined index: channel D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 38 行.
+NOTIC: [8] Undefined index: channel_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: top D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 40 行.
+NOTIC: [8] Undefined index: keywords D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 41 行.
+NOTIC: [8] Undefined index: orderMode D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 42 行.
+NOTIC: [8] Undefined index: limitNum D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 43 行.
+NOTIC: [8] Undefined index: limitStart D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 44 行.
+
+[ 2017-10-25T17:21:04+08:00 ] 127.0.0.1 /api.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 471 行.
+NOTIC: [8] Undefined index: form D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 28 行.
+NOTIC: [8] Undefined index: dataId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 29 行.
+NOTIC: [8] Undefined index: selfUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 30 行.
+NOTIC: [8] Undefined index: selfUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 31 行.
+NOTIC: [8] Undefined index: orderUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 32 行.
+NOTIC: [8] Undefined index: orderUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 33 行.
+NOTIC: [8] Undefined index: userType D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 34 行.
+NOTIC: [8] Undefined index: count D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 37 行.
+NOTIC: [8] Undefined index: channel D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 38 行.
+NOTIC: [8] Undefined index: channel_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: top D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 40 行.
+NOTIC: [8] Undefined index: keywords D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 41 行.
+NOTIC: [8] Undefined index: orderMode D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 42 行.
+NOTIC: [8] Undefined index: limitNum D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 43 行.
+NOTIC: [8] Undefined index: limitStart D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 44 行.
+
+[ 2017-10-25T17:21:11+08:00 ] 127.0.0.1 /api.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 471 行.
+NOTIC: [8] Undefined index: form D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 28 行.
+NOTIC: [8] Undefined index: dataId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 29 行.
+NOTIC: [8] Undefined index: selfUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 30 行.
+NOTIC: [8] Undefined index: selfUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 31 行.
+NOTIC: [8] Undefined index: orderUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 32 行.
+NOTIC: [8] Undefined index: orderUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 33 行.
+NOTIC: [8] Undefined index: userType D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 34 行.
+NOTIC: [8] Undefined index: count D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 37 行.
+NOTIC: [8] Undefined index: channel D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 38 行.
+NOTIC: [8] Undefined index: channel_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: top D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 40 行.
+NOTIC: [8] Undefined index: keywords D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 41 行.
+NOTIC: [8] Undefined index: orderMode D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 42 行.
+NOTIC: [8] Undefined index: limitNum D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 43 行.
+NOTIC: [8] Undefined index: limitStart D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 44 行.
+
+[ 2017-10-25T17:21:16+08:00 ] 127.0.0.1 /api.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobile D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 471 行.
+NOTIC: [8] Undefined index: form D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 28 行.
+NOTIC: [8] Undefined index: dataId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 29 行.
+NOTIC: [8] Undefined index: selfUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 30 行.
+NOTIC: [8] Undefined index: selfUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 31 行.
+NOTIC: [8] Undefined index: orderUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 32 行.
+NOTIC: [8] Undefined index: orderUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 33 行.
+NOTIC: [8] Undefined index: userType D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 34 行.
+NOTIC: [8] Undefined index: count D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 37 行.
+NOTIC: [8] Undefined index: channel D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 38 行.
+NOTIC: [8] Undefined index: channel_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: top D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 40 行.
+NOTIC: [8] Undefined index: keywords D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 41 行.
+NOTIC: [8] Undefined index: orderMode D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 42 行.
+NOTIC: [8] Undefined index: limitNum D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 43 行.
+NOTIC: [8] Undefined index: limitStart D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 44 行.
+
+[ 2017-10-25T18:00:18+08:00 ] 127.0.0.1 /api.php/User/reset_by_code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-10-25T18:00:22+08:00 ] 127.0.0.1 /api.php/User/reset_by_code
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: mobnum D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 745 行.
+NOTIC: [8] Undefined index: newpwd D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 746 行.
+NOTIC: [8] Undefined index: mobyzm D:\xampp\htdocs\paoding_new\Application\Api\Controller\UserController.class.php 第 750 行.
+

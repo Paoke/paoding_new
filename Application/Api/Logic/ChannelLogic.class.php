@@ -91,7 +91,6 @@ class ChannelLogic extends BaseRestLogic
             $info[$i]['cat_name']=$cat["cat_name"];
             $i++;
         }
-
         if($param['get_page']){
             $count = M($this->tableFormat)->where($where)->count();
             $pageTotal = ($count / $page_num) > intval($count / $page_num) ? intval($count / $page_num + 1) : intval($count / $page_num);

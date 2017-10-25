@@ -1,0 +1,744 @@
+/*
+* @description: 庖丁移动端我的
+* @author: huangxiang
+* @update: name (2017-10-11 10:25)
+*/
+.my_header{
+	width: 750px;
+	background-color: #23262e;
+	margin: 0 auto;
+}
+.my_head{
+	width: 120px;
+	height: 120px;
+	border: 10px solid #3a3f4c;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 46px 42px 0 76px;
+}
+.my_nameBox{
+	margin-top: 66px;
+	padding-bottom: 57px;
+}
+.my_name{
+	font-size: 46px;
+	color: #dfdfdf;
+}
+.my_apply{
+	display: block;
+	padding: 5px 0 5px 5px;
+	margin-top: 6px;
+	width: 150px;
+	height: 38px;
+	border-radius: 19px;
+	background-color: #42454b;
+}
+.my_circle{
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background-color: #b89f47;
+}
+.my_apply span{
+	float: right;
+	font-size: 20px;
+	color: #dfdfdf;
+	margin:3px 25px 0 0;
+}
+.my_header_jt{
+	float: right;
+	margin: 70px 30px 0 0;
+
+}
+.my_project{
+	width: 690px;
+	margin: 50px auto 0;
+	background-color: #f4f4f4;
+	
+}
+.my_project_left{
+	width: 516px;
+}
+.my_project a{
+	padding-top: 22px;
+	width: 258px;
+	height: 152px;
+	text-align: center;
+	border-right: 2px solid #fff;
+	border-bottom: 2px solid #fff;	
+}
+.my_project .a_project{
+	width: 174px;
+	height: 304px;
+	padding-top: 100px;
+}
+.my_project a p{
+	color: #666;
+	font-size: 28px;
+	margin-top: 12px;
+}
+.my_hot_intro{
+	display: block;
+	margin: 70px auto 50px;
+	width: 690px;
+	height: 126px;
+	text-align: center;
+	line-height: 126px;
+	background-color: #333;
+	color: #999;
+	font-size: 34px;
+	border-radius: 63px;
+}
+
+.my_secion{
+	display: block;
+	width: 690px;
+	margin:0 auto;
+	border-bottom: 1px solid #eee;
+	color: #333;
+	font-size: 32px;
+}
+.my_secion span{
+	height: 112px;
+	line-height: 112px;
+}
+.my_secion img{
+	margin-top: 41px;
+	margin-right: 20px;
+}
+
+
+/*my-helpCenter*/
+html,body{
+	width: 100%;
+}
+.apply_tit{
+	font-size: 58px;
+	color: #1e1e1e;
+	margin: 50px auto 20px;
+	width: 690px;
+}
+.apply_tip{
+	font-size: 28px;
+	color: #1e1e1e;
+	width: 690px;
+	margin: 0 auto 74px;
+}
+
+.apply_word{
+	display: inline-block;
+	height: 112px;
+	line-height: 112px;
+	font-size: 32px;
+	color: #1e1e1e;
+}
+
+.apply_content_box{
+	width: 690px;
+	height: 112px; 
+	margin:0 auto;
+	border-bottom: 1px solid #eee;
+}
+.apply_content_box img{
+	margin-top: 40px;
+	margin-right: 20px;
+}
+.apply_means{
+	display: inline-block;
+	height: 112px;
+	line-height: 112px;
+	font-size: 32px;
+	color: #ccc;
+	margin-right: 6px;
+	text-align: right;
+}
+.apply_form{
+	display: block;
+	width: 690px;
+	height: 90px;
+	margin: 90px auto 30px;
+	text-align: center;
+	line-height: 90px;
+	background-color: #1e1e1e;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 32px;
+}
+
+.mask{
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.3;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	/*display: none;*/
+}
+.identify_tip{
+	width: 420px;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -210px;
+	margin-top: -100px;
+	background-color: #fff;
+	z-index: 999;
+	border-radius: 4px;
+	display: none;
+}
+
+.identify_tip p{
+	font-size: 32px;
+	color: #1e1e1e;
+	text-align: center;
+	margin: 60px auto 20px;
+}
+.identify_tip a{
+	display: block;
+	text-align: center;
+	color: #333;
+	font-size: 22px;
+}
+
+/*my-helpCenter-term.html*/
+.service_term{
+	margin:50px auto 30px;
+	text-align: center;
+	font-size: 32px;
+	color: #1e1e1e;
+}
+.service_ct{
+	text-indent: 2em;
+	padding: 0 30px;
+	font-size: 24px;
+	color: #666;
+	line-height: 1.7;
+}
+.service_tit{
+	padding: 0 30px;
+	font-size: 24px;
+	color: #666;
+	margin: 30px auto 10px;
+}
+.service_main{
+	padding-bottom: 120px;
+}
+
+/*my-register/login.html*/
+
+.psw_reset{
+	width: 420px;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -210px;
+	margin-top: -100px;
+	background-color: #fff;
+	z-index: 999;
+	border-radius: 4px;
+}
+.psw_reset p{
+	font-size: 32px;
+	color: #1e1e1e;
+	text-align: center;
+	margin: 60px auto 20px;
+}
+.psw_reset a{
+	display: block;
+	text-align: center;
+	color: #999;
+	font-size: 22px;
+}
+
+.register_login{
+	margin: 60px auto 110px;
+	width: 300px;
+	height: 60px;
+	border: 1px solid #ff971d;
+	border-radius: 8px;
+	color: #ff971d;
+	overflow: hidden;
+
+}
+.reg_login{
+	float: left;
+	width: 149px;
+	text-align: center;
+	line-height: 60px;
+	font-size: 28px;
+	color: #ff971d;
+}
+.reg_active{
+	background-color: #ff971d;
+	color: #fff;
+}
+.regist_main{
+	margin: 0 auto;
+	width: 690px;
+	font-size: 28px;
+}
+.regist_input{
+	width: 690px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 60px;
+	color: #1e1e1e;
+}
+.getIdentify{
+	border-radius: 5px;
+	font-size: 28px;
+	background: #fff;
+}
+.regist_tip{
+	font-size: 22px;
+	color: #ff971d;
+}
+.regist_tip_icon{
+	width: 30px;
+	height: 30px;
+	background: url(../images/icon-zc-tishi.png);
+	background-size: 100%;
+}
+.regist_tip_icon2{
+	width: 30px;
+	height: 30px;
+	background: url(../images/icon-zc-gx.png);
+	background-size: 100%;
+	margin-left: 180px;
+}
+.regist_tip span{
+	margin-left: 10px;
+	margin-top: 2px;
+}
+.regist_tip p{
+	margin-top: 3px;
+}
+.register_btn{
+	display: block;
+	width: 690px;
+	height: 90px;
+	margin: 40px auto 30px;
+	text-align: center;
+	line-height: 90px;
+	background-color: #ccc;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 32px;
+}
+.register_logo{
+	width: 690px;
+	text-align: center;
+	margin: 220px auto 0;
+}
+
+/*my-applyIdentify.html*/
+.apply_tit{
+	font-size: 58px;
+	color: #1e1e1e;
+	margin: 50px auto 20px;
+	width: 690px;
+}
+.apply_tip{
+	font-size: 28px;
+	color: #1e1e1e;
+	width: 690px;
+	margin: 0 auto 74px;
+}
+
+.apply_word{
+	display: inline-block;
+	height: 112px;
+	line-height: 112px;
+	font-size: 32px;
+	color: #1e1e1e;
+}
+
+.apply_content_box{
+	width: 690px;
+	height: 112px; 
+	margin:0 auto;
+	border-bottom: 1px solid #eee;
+}
+.apply_content_box img{
+	margin-top: 40px;
+	margin-right: 20px;
+}
+.apply_means{
+	display: inline-block;
+	height: 112px;
+	line-height: 112px;
+	font-size: 32px;
+	color: #ccc;
+	margin-right: 6px;
+	text-align: right;
+}
+.apply_form{
+	display: block;
+	width: 690px;
+	height: 90px;
+	margin: 105px auto 30px;
+	text-align: center;
+	line-height: 90px;
+	background-color: #1e1e1e;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 32px;
+}
+
+.apply_choose{
+	width: 750px;
+	position: absolute;
+	bottom: -320px;
+	left: 50%;
+	margin-left: -375px;
+	transition:all 0.3s;
+	z-index: 9999;
+	display: none;
+}
+.apply_choice{
+	background: #fff; 
+	width: 750px;
+	border-radius: 16px;
+	border: 1px solid #bbb;
+
+}
+.apply_choice_company{
+	width: 750px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	color:#1e1e1e;
+	font-size: 32px;
+}
+.apply_choice_personal{
+	border-top: 1px solid #ddd; 
+	width: 750px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	color:#1e1e1e;
+	font-size: 32px; 
+}
+.apply_choice_cancle{
+	background: #fff; 
+	width: 750px;
+	height: 110px;
+	text-align: center;
+	line-height: 110px;
+	color:#1e1e1e;
+	font-size: 32px;
+	margin: 10px auto 0; 
+    border-radius: 16px;
+    border: 1px solid #ddd;
+}
+.identify_tip{
+	width: 420px;
+	height: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -210px;
+	margin-top: -100px;
+	background-color: #fff;
+	z-index: 999;
+	border-radius: 4px;
+}
+
+.identify_tip p{
+	font-size: 32px;
+	color: #1e1e1e;
+	text-align: center;
+	margin: 60px auto 20px;
+}
+.identify_tip a{
+	display: block;
+	text-align: center;
+	color: #999;
+	font-size: 22px;
+}
+
+/*my-information-changeName*/
+
+.change_name{
+	font-size: 58px;
+	color: #1e1e1e;
+	margin: 52px auto 40px;
+	width: 690px;
+}
+.change_name_tip{
+	font-size: 28px;
+	color: #1e1e1e;
+	width: 690px;
+	margin: 0 auto 180px;
+}
+.write_tip{
+	opacity: 0;
+	font-size: 24px;
+	color: #999;
+	width: 690px;
+	margin: 0 auto;
+}
+.new_name{
+	display: block;
+	width: 690px;
+	margin: 0 auto;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #eee;
+	padding-left: 0;
+	font-size: 32px;
+	margin-top: 30px;
+	color: #999;
+}
+.new_name::-webkit-input-placeholder{
+	font-size: 32px;
+}
+.change_name_save{
+	display: block;
+	margin: 60px auto 50px;
+	width: 690px;
+	height: 90px;
+	text-align: center;
+	line-height: 90px;
+	background-color: #ccc;
+	color: #fff;
+	font-size: 34px;
+	border-radius: 4px;
+}
+
+/*my-information.html*/
+.ifm_tit{
+	width: 690px;
+	margin: 50px auto 80px;
+	font-size: 58px;
+	color: #1e1e1e;
+}
+.ifm_head_wrap{
+	width: 690px;
+	margin: 0 auto;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #eee;
+}
+.ifm_head{
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+	position: relative;
+}
+.ifm_deafault{
+	width: 100%;
+}
+.ifm_camera{
+	position: absolute;
+	top: 74px;
+	left: 74px;
+}
+
+.ifm_input{
+	margin-right: 56px !important;
+}
+
+/*my-set-psw.html*/
+.set_psw{
+	display: block;
+	width: 690px;
+	height: 112px;
+	margin: 0 auto;
+	border-bottom: 1px solid #eee;
+}
+
+/*my-advice.html*/
+.advice_body{
+	background-color: #f4f4f4;
+}
+.advice_p{
+	width: 690px;
+	margin: 50px auto 20px;
+	color: #999;
+	font-size: 26px;
+}
+.advice_area{
+	width: 750px;
+	margin: 0 auto;
+	background-color: #fff;
+	position: relative;
+	padding: 20px 0 36px 30px;
+}
+.advice_area2{
+	display: block;
+	margin: 0 auto;
+	width: 750px;
+	height: 80px;
+	line-height: 80px;
+	color: #666;
+	font-size:26px;
+	background-color: #fff;
+	padding-left: 30px;
+}
+.advice_text{
+	display: block;
+	width: 690px;
+	height: 284px;
+	margin: 0 auto;
+	padding-left: 0;
+
+}
+.advice_text:focus{
+	outline: none;
+}
+.advice_numlim{
+	position: absolute;
+	bottom: 14px;
+	right: 30px;
+	color: #ccc;
+	font-size: 22px;
+}
+
+
+/*my-information-applyIdentify-areas.html*/
+.areas_main,.areas_click{
+	width: 750px;
+	margin: 0 auto;
+	padding-left: 30px;
+	overflow: hidden;
+	/*cursor: pointer;*/
+}
+.areas_click{
+	padding-bottom: 20px;	
+}
+
+.areas_line{
+	width: 690px;
+	margin:0 auto;
+	border-bottom: 1px solid #999;
+}
+
+.areas_class,.class_active{
+	cursor: pointer;
+	float: left;
+	width: 198px;
+	height: 70px;
+	text-align: center;
+	line-height: 70px;
+	border-radius: 4px;
+	margin-right: 40px;
+	margin-top: 44px;
+	font-size: 28px;
+}
+.areas_class{
+	color: #999;
+	border: 1px solid #999;
+}
+
+.class_active{
+	color: #1e1e1e;
+	border: 1px solid #1e1e1e;
+/*	display: none;*/
+}
+
+/*my-information-applyIdentify-Industry.html*/
+.tech_tit_box{
+	width: 750px;
+	height: 60px;
+	margin: 0 auto;
+	background-color: #f4f4f4;
+	padding-left: 30px;
+}
+.tech_icon{
+	width: 32px;
+	height: 32px;
+	background: url(../images/icon-zc-tishi.png)center center;
+	background-size: 100%;
+	margin-top: 14px;
+
+}
+.tech_tit{
+	font-size: 26px;
+	color: #666;
+	margin-top: 16px;
+	margin-left: 10px;
+}
+.tech_main{
+	width: 690px;
+	height: 72px;
+	margin: 0 auto;
+	background-color: #fff;
+	border-bottom:1px solid #eee;
+	font-size: 24px;
+	color: #1e1e1e;
+	position: relative;
+}
+.tech_main label{
+	display: block;
+	padding-top: 24px;
+}
+.tech_main input{
+	margin-right: 28px;
+	opacity: 0;
+}
+.tech_circle{
+	width: 28px;
+	height: 28px;
+	border: 1px solid #999;
+	border-radius: 50%;
+	position: absolute;
+	top: 24px;
+	left: 2px;
+	background-color: #fff;
+}
+.circle_active{
+	background-color: #1e1e1e;
+}
+
+/*my-information-applyIdentify-bindingPhone.html*/
+.apply_already{
+	width: 690px;
+	margin: 100px auto 200px;
+}
+.already_num{
+	margin-left: 18px;
+}
+
+.already_tip{
+	margin-top: 15px;
+	font-size: 28px;
+	color: #1e1e1e;
+}
+.already_number{
+	font-size: 36px;
+	color: #1e1e1e;
+	margin-top: 16px;
+}
+.apply_change_tip{
+	width: 690px;
+	margin: 20px auto 0;
+	font-size: 24px;
+	color: #999;
+}
+
+.apply_identifying{
+	position: relative;
+	margin-top: 228px;
+}
+.get_indentify{
+	position: absolute;
+	bottom: 12px;
+	right: 30px;
+	width: 234px;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	font-size: 24px;
+	color: #fff;
+	background: #1a191e;
+	border-radius: 4px;
+	padding-left: 0;
+
+}
+
+
+

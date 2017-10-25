@@ -468,7 +468,7 @@ class UserController extends BaseRestController
         $user = new UserLogic();
         //设置参数
         $options = array(
-            "username" => $postData["username"],
+            "username" => $postData["mobile"],
             "password" => encrypt($postData["password"]),
 //            "password2" => encrypt($postData["password2"]),
         );
@@ -670,8 +670,9 @@ class UserController extends BaseRestController
     public function register(){
         //获取表单内容
         $username=$_POST["mobile"];
-        $pwd=encrypt($_POST["paswd"]);
+        $pwd=encrypt($_POST["password"]);
         $code=$_POST["code"];
+        $nickname=$_POST['nickname'];
 
         //验证表单不能为空
         $returnArr = array("result" => 0, "msg" => "手机号不能为空", "code" => 402, "data" => null);
@@ -686,14 +687,14 @@ class UserController extends BaseRestController
         }
         //将注册用户注册信息进行封装
         $data = array(
-            "user_name" =>$username,  //用户名
+            "user_name" =>$username,  //用户名，默认为用户注册的手机
             "mobile" =>$username, //手机号码
             "password" => $pwd,  //用户密码
             "sex" => 1,  //性别，默认为男
             "desc" => "该用户未有简介",  //简介
             "reg_time" => date("Y-m-d H:i:s", time()),   //注册时间
             "head_pic" => "/Public/images/m_pic.png", //默认头像
-            "nickname" =>$username,  //用户名，默认为用户注册的手机
+            "nickname" =>$nickname,  //昵称
         );
         //用户注册信息添加;
         $user = new UserLogic();
@@ -741,12 +742,12 @@ class UserController extends BaseRestController
         $postData = $_POST;
         $user = new UserLogic();
         $options = array(
-            "username" => $postData["mobnum"],
-            "password" => encrypt($postData["newpwd"])
+            "username" => $postData["mobile"],
+            "password" => encrypt($postData["password"])
         );
 
         //校验验证码
-        $checkResult=check_mobile_code($options['username'],$postData["mobyzm"]);
+        $checkResult=check_mobile_code($options['username'],$postData["code"]);
         if($checkResult['result']!=1){
             json_return($checkResult);
         }

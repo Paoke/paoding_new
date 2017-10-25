@@ -179,6 +179,7 @@ class ActivityController extends BaseController
 
                         $infoField = $systemChannelFormField->field("title,name")->where("table_config_id='$tableConfigId'")->order('admin_sort')->select();
                         $channel_id = M("$tableName")->getField("channel_id");
+
                         $systemLog = M("SystemLog")->field("log_id,admin_id,admin_user_name,log_time,log_info,log_ip")->where("channel_id='$channel_id' AND data_id='$getId' AND operate_type!=4")->select();
                         foreach ($infoField as $item => $value) {
                             $pageListData[] = $value['name'];

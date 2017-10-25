@@ -22,6 +22,7 @@ class ArticleController extends BaseRestController
         $parameterGet = I('get.');
         $parameterPost = I('post.');
         $param = array_merge($parameterGet, $parameterPost);
+
        
         $channelLogic = new ChannelLogic();
         $bool = $channelLogic->setTable($param['channel'], $param['type']);

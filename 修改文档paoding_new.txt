@@ -1,0 +1,9 @@
+1.活动-标签管理
+添加三个活动分类标签
+活动数据表：5u_activity_hd
+
+标签数据表：5u_activity_tags_hd
+
+标签关联活动数据表：5u_activity_tags_relation_hd
+
+活动内容添加会议内容字段，
