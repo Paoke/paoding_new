@@ -15,32 +15,58 @@ class UserController extends BaseController
     }
 
 
-
+    /*
+     * 用户中心
+     */
     public function user_center()
     {
+        $this->checkReg();
         $userId = $_SESSION["userArr"]["user_id"];
         $this->assign("user_id",$userId);
         $this->display();
     }
 
-    /*
-     * 个人中心
-     */
-    public function user()
+//    /*
+//     * 个人中心
+//     */
+//    public function user()
+//    {
+//        $this->checkReg();
+//        $userId = $_SESSION["userArr"]["user_id"];
+//        $this->assign("user_id",$userId);
+////        $this->assign("channel",'jhjj');
+//        $this->display();
+//    }
+
+
+    //个人信息
+//    public function detail(){
+//        $this->checkReg();
+//        $userId = $_SESSION["userArr"]["user_id"];
+//        $this->assign("user_id",$userId);
+////        $this->assign("channel",'jhjj');
+//        $this->display();
+//    }
+
+    //修改头像
+    public function change_head()
     {
-        $userId = $_SESSION["userArr"]["user_id"];
-        $this->assign("user_id",$userId);
-//        $this->assign("channel",'jhjj');
+        $this->checkReg();
         $this->display();
     }
 
-
-    public function detail(){
-        $userId = $_SESSION["userArr"]["user_id"];
-        $this->assign("user_id",$userId);
-//        $this->assign("channel",'jhjj');
+    public function user_info()
+    {
+        $this->checkReg();
         $this->display();
     }
+
+    public function user_authen()
+    {
+        $this->checkReg();
+        $this->display();
+    }
+
 
     public function connect(){
         $userId = $_SESSION["userArr"]["user_id"];
@@ -174,12 +200,12 @@ class UserController extends BaseController
         $this->display();
     }
 
-    public function user_info()
-    {
-        $getSelfUserId = $_SESSION["userArr"]["user_id"];
-        $this->assign("userId", $getSelfUserId);
-        $this->display();
-    }
+//    public function user_info()
+//    {
+//        $getSelfUserId = $_SESSION["userArr"]["user_id"];
+//        $this->assign("userId", $getSelfUserId);
+//        $this->display();
+//    }
 
     public function msg_sys_list()
     {

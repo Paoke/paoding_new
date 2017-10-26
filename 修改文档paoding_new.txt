@@ -7,3 +7,7 @@
 标签关联活动数据表：5u_activity_tags_relation_hd
 
 活动内容添加会议内容字段，
+
+2.用户管理
+
+5u_manage_users数据表添加字段 status(认证状态)  gzly(关注领域) yyhy（应用行业）

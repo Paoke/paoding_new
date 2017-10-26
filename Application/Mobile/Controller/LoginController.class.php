@@ -13,10 +13,16 @@ class LoginController extends BaseController
     public function __construct()
     {
         parent::__construct();
-        //parent::checkUrl();
+        parent::checkUrl();
     }
 
     public function login()
+    {
+
+        $this->display();
+    }
+
+    public function find()
     {
         $this->display();
     }

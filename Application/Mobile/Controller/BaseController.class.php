@@ -29,6 +29,7 @@ class BaseController extends Controller
      */
     public function checkReg()
     {
+
         if (empty($_SESSION["userArr"])) {
             $this->display("Login/login");
             exit;

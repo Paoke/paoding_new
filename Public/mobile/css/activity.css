@@ -1,0 +1,284 @@
+/*
+* @description: 庖丁移动端活动页
+* @author: huangxiang
+* @update: name (2017-10-18 10:00)
+*/
+.activity_banner{
+	width: 750px;
+	height: 300px;
+	margin: 0 auto;
+}
+.activity_banner img{
+	width: 100%;
+}
+
+.activity_nav{
+	width: 750px;
+	height: 154px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+.activity_nav_part{
+	margin-left: 130px;	
+}
+.activity_nav_part_icon{
+	margin: 0 auto;
+	width: 54px;
+	height: 54px;	
+	background-size: 100%;
+}
+.activity_nav_part_theme{
+	font-size: 26px;
+	color: #999;
+	margin-top: 14px;
+}
+.activity_grey{
+	width: 750px;
+	height: 20px;
+	margin: 0 auto;
+	background: #f0f0f0;
+}
+.activity_lately{
+	width: 750px;
+	margin: 0 auto;
+}
+.activity_lately_tit{
+	width: 690px;
+	margin: 30px auto;
+}
+.activity_tit_icon{
+	margin: 0 auto;
+	width: 30px;
+	height: 30px;		
+	background-size: 100%;
+}
+.activity_lately_span{
+	font-size: 30px;
+	color: #1e1e1e;
+	margin-left: 10px;
+}
+.activity_main{
+	width: 690px;
+	margin: 0 auto 20px;	
+	border-bottom: 1px solid #e8e8e8;	
+}
+.activity_main_time{
+	margin: 20px auto;
+}
+.activity_main_img{
+	width: 690px;
+	margin: 0 auto;
+	display: block;
+}
+.activity_main_time p{
+	color: #ccc;
+	font-size: 24px;
+}
+
+.activity_lately_section{
+	width: 690px;
+	padding-bottom: 30px;
+	margin: 0 auto;
+	border-top: 1px solid #e8e8e8;
+}
+.activity_section_left{
+	width: 230px;
+	height: 120px;
+	border-radius: 4px;
+	margin-top: 30px;
+}
+.activity_section_right{
+	width: 420px;
+	margin-top: 32px;
+}
+.activity_right_tit{	
+	font-size: 26px;
+	color: #1e1e1e;
+	width: 420px;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	line-height: 1.4;
+}
+.activity_right_p{
+	margin-top: 22px;
+	font-size: 22px;
+	color: #999;
+}
+.activity_right_span{
+	margin-right: 34px;
+}
+
+
+/*activity-details.html*/
+.act_details_banner{
+	width: 750px;
+	height: 300px;
+	overflow: hidden;
+	margin:0 auto;
+}
+.act_details_banner img{
+	width: 100%;
+}
+.act_details_article{
+	width: 690px;
+	margin: 30px auto 0;
+	padding-bottom: 20px;
+	border-bottom:1px solid #e8e8e8;
+}
+.act_details_article_tit{
+	font-size: 30px;
+	color: #1e1e1e;
+	width: 690px;
+	display:block;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+.act_details_article_scan{
+	font-size: 22px;
+	color: #999;
+	margin-top: 30px;
+}
+.act_art_scan{
+	margin: 0 50px 0 10px;
+}
+.act_art_collect{
+	margin-left: 20px;
+}
+.act_details_head{
+	width: 690px;
+	margin:  0 auto;
+}
+.act_details_head_section{
+	padding-top: 40px;
+}
+.act_details_icon{
+	width: 38px;
+	height: 38px;
+	background-size: 100%;	
+}
+.icon_time{
+	background: url(../images/icon-activity-time.png);
+}
+.icon_address{	
+	background: url(../images/icon-activity-address.png) no-repeat;
+}
+.icon_price{
+	background: url(../images/icon-activity-price.png);
+}
+.icon_conference{
+	background: url(../images/icon-activity-conference.png);
+}
+.act_details_head_ct{
+	border-bottom:1px solid #e8e8e8;
+	width: 624px;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.act_section_ct{
+	font-size: 28px;
+	color: #999;
+	padding-bottom: 40px;
+	line-height: 1.2;
+}
+.act_section_ct_time{
+	margin-left: 24px;
+}
+.act_details_main{
+	width: 690px;
+	margin: 0 auto;
+}
+.act_details_main_section{
+	margin: 60px 0 30px;
+}
+.act_section_tit{
+	font-size: 30px;
+	color: #1e1e1e;
+	margin-left: 30px;
+}
+.act_details_main_ct{
+	font-size: 28px;
+	color: #999;
+	line-height: 1.5;
+}
+.act_main_pic{
+	width: 690px;
+}
+.act_love_icon{
+	margin: 24px 0 0 70px;
+}
+.act_det_btn{
+	width: 400px;
+	height: 99px;
+	position: absolute;
+	right: 0;
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
+	line-height: 99px;
+	background: #1e1e1e;
+}
+
+.sign_tit{
+	width: 750px;
+	height: 70px;
+	margin: 0 auto;
+	padding-left: 30px;
+	font-size: 28px;
+	color: #fff;
+	line-height: 70px;
+	background: #ff971d;
+}
+
+/*activity-details-signUp-need.html*/
+
+.advice_area{
+	width: 750px;
+	margin: 20px auto 0;
+	background-color: #fff;
+	position: relative;
+	padding: 30px 0;
+}
+.advice_text{
+	display: block;
+	padding-left: 0;
+	width: 690px;
+	height: 340px;
+	margin: 0 auto;
+}
+.advice_text2{
+	display: block;
+	width: 750px;
+	height: 80px;
+	margin: 20px auto 0;
+	padding-top: 26px;
+}
+.advice_numlim{
+	position: absolute;
+	bottom: 14px;
+	right: 30px;
+	color: #ccc;
+	font-size: 22px;
+}
+
+.advice_text:focus,.advice_text2:focus{
+	outline: none;
+}
+
+.register_btn {
+    display: block;
+    width: 690px;
+    height: 90px;
+    margin: 40px auto 30px;
+    text-align: center;
+    line-height: 90px;
+    background-color: #ccc;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 32px;
+}

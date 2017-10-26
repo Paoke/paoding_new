@@ -468,7 +468,7 @@ class UserController extends BaseRestController
         $user = new UserLogic();
         //设置参数
         $options = array(
-            "username" => $postData["mobile"],
+            "username" => $postData["username"],//新版改为mobile
             "password" => encrypt($postData["password"]),
 //            "password2" => encrypt($postData["password2"]),
         );
@@ -1397,7 +1397,7 @@ class UserController extends BaseRestController
         switch($action){
             case 'detail':
                 $where['user_id'] = $id;
-                $field = 'user_id,mobile,nickname,user_name,password,head_pic,email,sex,birthday,province,company,city,job,tel,authentication,district,oauth,openid';
+                $field = 'user_id,mobile,nickname,user_name,password,head_pic,email,sex,birthday,province,company,city,job,tel,authentication,district,oauth,openid,status,gzly,yyhy,idcard';
                 $info = $DAO->where($where)->field($field)->find();
                 $info['area'] = $info['province'] . '-' . $info['city'];
                 //密码置为1 代表有密码

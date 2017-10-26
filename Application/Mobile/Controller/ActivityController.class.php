@@ -12,6 +12,10 @@ class ActivityController extends BaseController
         parent::checkUrl();
     }
 
+    public function activity(){
+        $this->display();
+    }
+
     /*
         * 数据列表
         */
