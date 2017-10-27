@@ -15,7 +15,7 @@
       <file leaf-file-name="UserController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Mobile/Controller/UserController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
+            <state relative-caret-position="1755">
               <caret line="65" column="26" lean-forward="false" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
               <folding />
             </state>
@@ -25,7 +25,7 @@
       <file leaf-file-name="user_authen.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/user_authen.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
+            <state relative-caret-position="1890">
               <caret line="70" column="61" lean-forward="false" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -37,7 +37,7 @@
       <file leaf-file-name="UserController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Pc/Controller/UserController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
+            <state relative-caret-position="4482">
               <caret line="166" column="31" lean-forward="false" selection-start-line="166" selection-start-column="25" selection-end-line="166" selection-end-column="31" />
               <folding />
             </state>
@@ -47,8 +47,8 @@
       <file leaf-file-name="user_info.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/user_info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="49" />
+            <state relative-caret-position="216">
+              <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="49" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#div#0;n#a#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#0;n#a#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -73,7 +73,7 @@
       <file leaf-file-name="main330.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/mobile/js/main330.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="3564">
               <caret line="132" column="66" lean-forward="false" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="66" />
               <folding />
             </state>
@@ -93,7 +93,7 @@
       <file leaf-file-name="user_center.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/user_center.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-162">
+            <state relative-caret-position="729">
               <caret line="27" column="43" lean-forward="false" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -106,7 +106,7 @@
       <file leaf-file-name="UserController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Api/Controller/UserController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1114">
+            <state relative-caret-position="40743">
               <caret line="1512" column="17" lean-forward="false" selection-start-line="1512" selection-start-column="17" selection-end-line="1512" selection-end-column="17" />
               <folding />
             </state>
@@ -225,8 +225,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -503,6 +501,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -614,16 +614,17 @@
       <workItem from="1508809240061" duration="16446000" />
       <workItem from="1508893789811" duration="11204000" />
       <workItem from="1508981341365" duration="20555000" />
+      <workItem from="1509076559402" duration="610000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48827000" />
+    <option name="totallyTimeSpent" value="49437000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18443497" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18656716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -657,7 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="83" column="9" lean-forward="false" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -702,7 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="281" column="9" lean-forward="false" selection-start-line="281" selection-start-column="9" selection-end-line="281" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -710,7 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="551" column="9" lean-forward="false" selection-start-line="551" selection-start-column="9" selection-end-line="551" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -718,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -754,9 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12987">
           <caret line="482" column="20" lean-forward="false" selection-start-line="482" selection-start-column="20" selection-end-line="482" selection-end-column="20" />
-          <folding>
-            <element signature="e#29#50#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -772,14 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4989">
           <caret line="334" column="66" lean-forward="false" selection-start-line="334" selection-start-column="58" selection-end-line="334" selection-end-column="66" />
-          <folding>
-            <marker date="1508986764433" expanded="true" signature="17131:17148" ph="..." />
-            <marker date="1508986764433" expanded="true" signature="17160:17179" ph="..." />
-            <marker date="1508986764433" expanded="true" signature="17584:17601" ph="..." />
-            <marker date="1508986764433" expanded="true" signature="17613:17632" ph="..." />
-            <marker date="1508986764433" expanded="true" signature="18032:18049" ph="..." />
-            <marker date="1508986764433" expanded="true" signature="18061:18080" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -795,14 +780,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5508">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1501563480000" expanded="true" signature="1767:1914" ph="select first... " />
-            <marker date="1501563480000" expanded="true" signature="2065:2215" ph="select secon... " />
-            <marker date="1501563480000" expanded="true" signature="2368:2515" ph="select third... " />
-            <marker date="1501563480000" expanded="true" signature="42680:42827" ph="select first... " />
-            <marker date="1501563480000" expanded="true" signature="42962:43112" ph="select secon... " />
-            <marker date="1501563480000" expanded="true" signature="43249:43396" ph="select third... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -810,7 +787,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-567">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -818,7 +794,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="14" column="50" lean-forward="false" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -826,7 +801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="12" column="66" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="12" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -834,7 +808,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1269">
           <caret line="47" column="14" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,7 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -850,7 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -858,7 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -866,7 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -874,10 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="764" column="9" lean-forward="true" selection-start-line="764" selection-start-column="9" selection-end-line="764" selection-end-column="9" />
-          <folding>
-            <marker date="1497792376000" expanded="true" signature="21688:21808" ph="SELECT site_... global_site" />
-            <marker date="1497792376000" expanded="true" signature="22153:22318" ph="SELECT view_... global_site_template_config" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -885,7 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
           <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -893,7 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -901,7 +864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1863">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -917,7 +879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -925,7 +886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -933,14 +893,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="126" column="60" lean-forward="false" selection-start-line="126" selection-start-column="32" selection-end-line="126" selection-end-column="60" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#li#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#li#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#0;n#a#2;n#div#6;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -948,9 +900,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="29" column="20" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-          <folding>
-            <element signature="e#37#58#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -958,12 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="48" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#input#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -971,7 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -979,7 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -987,9 +928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1005,15 +943,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="1087" column="9" lean-forward="false" selection-start-line="1087" selection-start-column="9" selection-end-line="1087" selection-end-column="9" />
-          <folding>
-            <marker date="1498121940000" expanded="true" signature="9727:9737" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/mobile/js/main330.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
+        <state relative-caret-position="3564">
           <caret line="132" column="66" lean-forward="false" selection-start-line="132" selection-start-column="25" selection-end-line="132" selection-end-column="66" />
           <folding />
         </state>
@@ -1023,7 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1215">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1031,7 +965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1048,7 +981,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Pc/Controller/UserController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
+        <state relative-caret-position="4482">
           <caret line="166" column="31" lean-forward="false" selection-start-line="166" selection-start-column="25" selection-end-line="166" selection-end-column="31" />
           <folding />
         </state>
@@ -1056,7 +989,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Api/Controller/UserController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1114">
+        <state relative-caret-position="40743">
           <caret line="1512" column="17" lean-forward="false" selection-start-line="1512" selection-start-column="17" selection-end-line="1512" selection-end-column="17" />
           <folding />
         </state>
@@ -1064,7 +997,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Mobile/Controller/UserController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
+        <state relative-caret-position="1755">
           <caret line="65" column="26" lean-forward="false" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
           <folding />
         </state>
@@ -1072,7 +1005,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/user_authen.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
+        <state relative-caret-position="1890">
           <caret line="70" column="61" lean-forward="false" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1082,8 +1015,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/user_info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="49" />
+        <state relative-caret-position="216">
+          <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="49" />
           <folding>
             <element signature="n#style#0;n#input#0;n#div#0;n#a#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#0;n#a#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1093,7 +1026,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/user_center.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-162">
+        <state relative-caret-position="729">
           <caret line="27" column="43" lean-forward="false" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
