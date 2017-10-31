@@ -55,17 +55,29 @@ class UserController extends BaseController
         $this->display();
     }
 
+    //个人信息
     public function user_info()
     {
         $this->checkReg();
         $this->display();
     }
-
+    //申请认证
     public function user_authen()
     {
         $this->checkReg();
+        $arrData=array(
+            'idcard'=>$_GET['idcard']==''?session('arrData')['idcard']:$_GET['idcard'],
+            'email'=>$_GET['email']==''?session('arrData')['email']:$_GET['email'],
+            'company'=>$_GET['company']==''?session('company')['idcard']:$_GET['company'],
+            'job'=>$_GET['job']==''?session('arrData')['job']:$_GET['job'],
+            'gzly'=>$_GET['gzly']==''?session('arrData')['gzly']:$_GET['gzly'],
+            'yyhy'=>$_GET['yyhy']==''?session('arrData')['yyhy']:$_GET['yyhy']
+        );
+        session('arrData',$arrData);
+        $this->assign('arrData',session('arrData'));
         $this->display();
     }
+
 
 
     public function connect(){

@@ -739,6 +739,18 @@ html,body{
 	padding-left: 0;
 
 }
+.app_btn{
+	width: 400px;
+	height: 100px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background: #1e1e1e;
+	color: #fff;
+	text-align: center;
+	line-height: 100px;
+	font-size: 30px;
+}
 
 
 

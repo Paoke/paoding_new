@@ -1426,6 +1426,7 @@ class UserController extends BaseRestController
                 break;
             case 'edit':
                 $data = I('post.');
+                $data['status'] = '1';
                 $where['user_id'] = $data['user_id'];
                 $flag = $DAO->where($where)->save($data);
 
