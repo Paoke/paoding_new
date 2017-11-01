@@ -468,7 +468,7 @@ class UserController extends BaseRestController
         $user = new UserLogic();
         //设置参数
         $options = array(
-            "username" => $postData["username"],//新版改为mobile
+            "username" => $postData["mobile"],//新版改为mobile
             "password" => encrypt($postData["password"]),
 //            "password2" => encrypt($postData["password2"]),
         );
@@ -673,7 +673,6 @@ class UserController extends BaseRestController
         $pwd=encrypt($_POST["password"]);
         $code=$_POST["code"];
         $nickname=$_POST['nickname'];
-
         //验证表单不能为空
         $returnArr = array("result" => 0, "msg" => "手机号不能为空", "code" => 402, "data" => null);
         if (empty($username)) json_return($returnArr);

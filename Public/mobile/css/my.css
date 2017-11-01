@@ -531,6 +531,7 @@ html,body{
 }
 .ifm_deafault{
 	width: 100%;
+	border-radius: 50%;
 }
 .ifm_camera{
 	position: absolute;
@@ -549,6 +550,7 @@ html,body{
 	height: 112px;
 	margin: 0 auto;
 	border-bottom: 1px solid #eee;
+
 }
 
 /*my-advice.html*/

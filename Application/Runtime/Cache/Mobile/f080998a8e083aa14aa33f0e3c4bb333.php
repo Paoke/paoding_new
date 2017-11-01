@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
-<html lang="en">
+<html lang="en" ng-app="userCenter">
 <head>
     <meta charset="UTF-8">
     <title>我的</title>
@@ -9,19 +9,28 @@
     <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/common_new.css">
     <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/my.css">
 </head>
-<body style="padding-bottom:100px">
+<body ng-controller="myUserCen" style="padding-bottom:100px">
+
+<input type="hidden" id="id" value="<?php echo session('userId');?>" />
 <div class="my_header clear">
     <div class="my_head fl">
         <a href="/index.php/Mobile/User/change_head.html">
-            <img src="<?php echo (MOBILE); ?>/images/icon-portrait-default.png" alt="">
+            <img src="{{ user.head_pic }}" alt="" >
         </a>
     </div>
     <div class="my_nameBox fl">
-        <p class="my_name">凯越-JS</p>
-        <a class="my_apply">
+        <p class="my_name" ng-bind="user.nickname"></p>
+        <a class="my_apply" ng-show="user.status=='1'">
             <div class="my_circle">
                 <img src="<?php echo (MOBILE); ?>/images/icon-my-apply.png" alt="">
-    </div>
+            </div>
+            <span>已认证</span>
+        </a>
+
+        <a class="my_apply" ng-hide="user.status=='1'">
+            <div class="my_circle">
+                <img src="<?php echo (MOBILE); ?>/images/icon-my-apply.png" alt="">
+            </div>
             <span>申请认证</span>
         </a>
     </div>
@@ -91,4 +100,31 @@
     </a>
 </div>
 </body>
+<script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
+<script src='<?php echo (MOBILE); ?>/js/angular.min.js'></script>
+<script src='<?php echo (MOBILE); ?>/js/common.js'></script>
+<script>
+    var app = angular.module('userCenter', []);
+
+    app.controller('myUserCen', function($scope,$http) {
+    var id = $("#id").val();
+    $http({
+        method: 'GET',
+        url: '/api.php/User/user_info/action/detail?id='+id,
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },    
+        transformRequest: function(obj) {    
+            var str = [];    
+            for (var p in obj) {    
+                str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));    
+            }    
+            return str.join("&");    
+        } 
+    }).then(function successCallback(response) {    
+         $scope.user = response.data.data;
+        }, function errorCallback(response) {
+
+    });
+
+    });
+</script>
 </html>
