@@ -10,75 +10,75 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
 </head>
 <body ng-controller="myAuthen">
-<input type="hidden" id="id" value="{:session('userId')}" />
-<div class="mask" style="display:none;"></div>
-<div class="identify_tip">
-    <p>认证信息提交成功</p>
-    <a href="">两个工作日后通知认证结果</a>
-</div>
-<div class="apply_choose">
-    <div class="apply_choice">
-        <div class="apply_choosing apply_choice_company">公司</div>
-        <div class="apply_choosing apply_choice_personal">个人</div>
+    <input type="hidden" id="id" value="{:session('userId')}" />
+    <div class="mask" style="display:none;"></div>
+    <div class="identify_tip">
+        <p>认证信息提交成功</p>
+        <a href="">两个工作日后通知认证结果</a>
     </div>
-    <div class="apply_choice_cancle">取消</div>
-</div>
-<form class="" id="form-user-authen">
-<p class="apply_tit">申请认证</p>
-<p class="apply_tip">你当前未通过平台合格认证，请填写认证信息！</p>
-<!-- <div class="my_content" ng-init="idcard='{$arrData.idcard}';email='{$arrData.email}';company='{$arrData.company}';job='{$arrData.job}';gzly='{$arrData.gzly}';yyhy='{$arrData.yyhy}'"> -->
-    <a href="#">
-        <div class="apply_content_box clear">
-            <span class='apply_word fl'>手机号</span>
-            <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
-            <input class='apply_means fr' type="text" value="{{ user.mobile }}" readonly="readonly">
+    <div class="apply_choose">
+        <div class="apply_choice">
+            <div class="apply_choosing apply_choice_company">公司</div>
+            <div class="apply_choosing apply_choice_personal">个人</div>
         </div>
-    </a>
-
-    <a href="__MODULE__/User/idcard.html">
-        <div class="apply_content_box chose clear">
-            <span class='apply_word fl'>身份证号</span>
-            <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
-            <input class='apply_means fr' type="text" name="idcard" readonly="readonly" ng-value="idcard">
-        </div>
-    </a>
-
-    <a href="__MODULE__/User/email.html">
-        <div class="apply_content_box clear">
-            <span class='apply_word fl'>电子邮箱</span>
-            <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
-            <input class='apply_means fr' type="text" name="email"  readonly="readonly" ng-value="email" >
-        </div>
-    </a>
-
-    <div id="choose_class" class="my_content">
-        <div class="apply_content_box clear">
-            <span class='apply_word fl'>所属类别</span>
-            <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
-            <input id="chosed" class='apply_means fr' name="" type="text" value="必填" readonly="readonly">
-        </div>
+        <div class="apply_choice_cancle">取消</div>
     </div>
-    <input id="user_id" type="hidden" name="user_id" value="{:session('userId')}">
-    <input id="company" type="hidden" name="company" value="{{company}}">
-    <input id="job" type="hidden" id="job" value="{{job}}">
-    <a href="__MODULE__/User/gzly.html">
-        <div class="apply_content_box clear">
-            <span class='apply_word fl'>关注领域</span>
-            <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
-            <input class='apply_means fr' type="text" name="gzly" readonly="readonly" ng-value="gzly">
-        </div>
-    </a>
+    <form class="" id="form-user-authen">
+        <p class="apply_tit">申请认证</p>
+        <p class="apply_tip">你当前未通过平台合格认证，请填写认证信息！</p>
+        <div class="my_content" ng-init="idcard='{$arrData.idcard}';email='{$arrData.email}';company='{$arrData.company}';job='{$arrData.job}';gzly='{$arrData.gzly}';yyhy='{$arrData.yyhy}'">
+            <a href="#">
+                <div class="apply_content_box clear">
+                    <span class='apply_word fl'>手机号</span>
+                    <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
+                    <input  ng-cloak class='apply_means fr' type="text" ng-value="user.mobile" readonly="readonly">
+                </div>
+            </a>
 
-    <a href="__MODULE__/User/yyhy.html">
-        <div class="apply_content_box clear">
-            <span class='apply_word fl'>应用行业</span>
-            <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
-            <input class='apply_means fr' type="text" name="yyhy"  readonly="readonly" ng-value="yyhy">
-        </div>
-    </a>
-<!-- </div> -->
-<a class="apply_form">提 交</a>
-</form>
+            <a href="__MODULE__/User/idcard.html">
+                <div class="apply_content_box chose clear">
+                    <span class='apply_word fl'>身份证号</span>
+                    <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
+                    <input class='apply_means fr' type="text" name="idcard" readonly="readonly" ng-value="idcard">
+                </div>
+            </a>
+
+            <a href="__MODULE__/User/email.html">
+                <div class="apply_content_box clear">
+                    <span class='apply_word fl'>电子邮箱</span>
+                    <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
+                    <input class='apply_means fr' type="text" name="email"  readonly="readonly" ng-value="email" >
+                </div>
+            </a>
+
+            <div id="choose_class" class="my_content">
+                <div class="apply_content_box clear">
+                    <span class='apply_word fl'>所属类别</span>
+                    <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
+                    <input id="chosed" class='apply_means fr' name="" type="text" value="必填" readonly="readonly">
+                </div>
+            </div>
+            <input id="user_id" type="hidden" name="user_id" value="{:session('userId')}">
+            <input id="company" type="hidden" name="company" value="{{company}}">
+            <input id="job" type="hidden" id="job" value="{{job}}">
+            <a href="__MODULE__/User/gzly.html">
+                <div class="apply_content_box clear">
+                    <span class='apply_word fl'>关注领域</span>
+                    <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
+                    <input class='apply_means fr' type="text" name="gzly" readonly="readonly" ng-value="gzly">
+                </div>
+            </a>
+
+            <a href="__MODULE__/User/yyhy.html">
+                <div class="apply_content_box clear">
+                    <span class='apply_word fl'>应用行业</span>
+                    <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
+                    <input class='apply_means fr' type="text" name="yyhy"  readonly="readonly" ng-value="yyhy">
+                </div>
+            </a>
+        <!-- </div> -->
+        <a class="apply_form">提 交</a>
+    </form>
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
 <script src='{$Think.MOBILE}/js/return.js'></script>

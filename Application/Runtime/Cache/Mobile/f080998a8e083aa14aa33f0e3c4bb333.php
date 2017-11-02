@@ -107,23 +107,23 @@
     var app = angular.module('userCenter', []);
 
     app.controller('myUserCen', function($scope,$http) {
-    var id = $("#id").val();
-    $http({
-        method: 'GET',
-        url: '/api.php/User/user_info/action/detail?id='+id,
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },    
-        transformRequest: function(obj) {    
-            var str = [];    
-            for (var p in obj) {    
-                str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));    
-            }    
-            return str.join("&");    
-        } 
-    }).then(function successCallback(response) {    
-         $scope.user = response.data.data;
-        }, function errorCallback(response) {
+        var id = $("#id").val();
+        $http({
+            method: 'GET',
+            url: '/api.php/User/user_info/action/detail?id='+id,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },    
+            transformRequest: function(obj) {    
+                var str = [];    
+                for (var p in obj) {    
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));    
+                }    
+                return str.join("&");    
+            } 
+        }).then(function successCallback(response) {    
+             $scope.user = response.data.data;
+            }, function errorCallback(response) {
 
-    });
+        });
 
     });
 </script>

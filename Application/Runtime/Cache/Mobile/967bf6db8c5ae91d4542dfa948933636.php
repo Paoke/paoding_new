@@ -30,14 +30,14 @@
         <div class="apply_content_box chose clear">
             <span  class='apply_word fl'>昵称</span>
             <img  class='fr content_jt' src="<?php echo (MOBILE); ?>/images/icon-right2.png" alt="">
-            <input style="color:#666;" class='apply_means fr' type="text" value="{{user.nickname}}">
+            <input style="color:#666;" class='apply_means fr' type="text" ng-value="user.nickname">
         </div>
     </a>
     <a href="#">
         <div class="apply_content_box chose clear">
             <span class='apply_word fl'>手机</span>
             <img  class='fr content_jt' src="<?php echo (MOBILE); ?>/images/icon-right2.png" alt="">
-            <input style="color:#666;" class='apply_means fr' type="text" value="{{user.mobile}}">
+            <input style="color:#666;" class='apply_means fr' type="text" ng-value="user.mobile">
         </div>
     </a>
 </body>
@@ -49,24 +49,22 @@
     var app = angular.module('userInfo', []);
 
     app.controller('myInfo', function($scope,$http) {
-    var id = $("#id").val();
-    $http({
-        method: 'GET',
-        url: '/api.php/User/user_info/action/detail?id='+id,
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },    
-        transformRequest: function(obj) {    
-            var str = [];    
-            for (var p in obj) {    
-                str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));    
-            }    
-            return str.join("&");    
-        } 
-    }).then(function successCallback(response) {    
-         $scope.user = response.data.data;
-        }, function errorCallback(response) {
-
-    });
-
+        var id = $("#id").val();
+        $http({
+            method: 'GET',
+            url: '/api.php/User/user_info/action/detail?id='+id,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },    
+            transformRequest: function(obj) {    
+                var str = [];    
+                for (var p in obj) {    
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));    
+                }    
+                return str.join("&");    
+            } 
+        }).then(function successCallback(response) {    
+             $scope.user = response.data.data;
+            }, function errorCallback(response) {
+        });
     });
 </script>
 </html>

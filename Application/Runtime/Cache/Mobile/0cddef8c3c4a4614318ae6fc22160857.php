@@ -26,12 +26,12 @@
 <form class="" id="form-user-authen">
 <p class="apply_tit">申请认证</p>
 <p class="apply_tip">你当前未通过平台合格认证，请填写认证信息！</p>
-<!-- <div class="my_content" ng-init="idcard='<?php echo ($arrData["idcard"]); ?>';email='<?php echo ($arrData["email"]); ?>';company='<?php echo ($arrData["company"]); ?>';job='<?php echo ($arrData["job"]); ?>';gzly='<?php echo ($arrData["gzly"]); ?>';yyhy='<?php echo ($arrData["yyhy"]); ?>'"> -->
+<div class="my_content" ng-init="idcard='<?php echo ($arrData["idcard"]); ?>';email='<?php echo ($arrData["email"]); ?>';company='<?php echo ($arrData["company"]); ?>';job='<?php echo ($arrData["job"]); ?>';gzly='<?php echo ($arrData["gzly"]); ?>';yyhy='<?php echo ($arrData["yyhy"]); ?>'">
     <a href="#">
         <div class="apply_content_box clear">
             <span class='apply_word fl'>手机号</span>
             <img  class='fr content_jt' src="<?php echo (MOBILE); ?>/images/icon-right2.png" alt="">
-            <input class='apply_means fr' type="text" value="{{ user.mobile }}" readonly="readonly">
+            <input  ng-cloak class='apply_means fr' type="text" ng-value="user.mobile" readonly="readonly">
         </div>
     </a>
 
