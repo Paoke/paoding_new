@@ -555,7 +555,7 @@ $(function () {
 				var url="/<?php echo (API_PATH); ?>/ChannelIndex/index/action/dataList/channel/<?php echo ($channel); ?>/type/1";
 				var data={
 					"page": 1,
-					"page_num":10,
+					"page_num":5,
 					"order_field":"create_time",
 					"category_id":vm.category_id,
 					"tag_id":vm.tag_id,
@@ -587,7 +587,7 @@ $(function () {
 				this.search(id,vm.tag_id);
 				var data={
 					"page": 1,
-					"page_num":10,
+					"page_num":5,
 					"category_id":id,
 					"tag_id":id,
 					"order_field":"create_time",
