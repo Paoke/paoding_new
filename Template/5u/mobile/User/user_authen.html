@@ -26,7 +26,7 @@
     <form class="" id="form-user-authen">
         <p class="apply_tit">申请认证</p>
         <p class="apply_tip">你当前未通过平台合格认证，请填写认证信息！</p>
-        <div class="my_content" ng-init="idcard='{$arrData.idcard}';email='{$arrData.email}';company='{$arrData.company}';job='{$arrData.job}';gzly='{$arrData.gzly}';yyhy='{$arrData.yyhy}'">
+        <div class="my_content">
             <a href="#">
                 <div class="apply_content_box clear">
                     <span class='apply_word fl'>手机号</span>
@@ -39,7 +39,7 @@
                 <div class="apply_content_box chose clear">
                     <span class='apply_word fl'>身份证号</span>
                     <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
-                    <input class='apply_means fr' type="text" name="idcard" readonly="readonly" ng-value="idcard">
+                    <input class='apply_means fr' type="text" name="idcard" readonly="readonly" ng-value="contents.idcard">
                 </div>
             </a>
 
@@ -47,7 +47,7 @@
                 <div class="apply_content_box clear">
                     <span class='apply_word fl'>电子邮箱</span>
                     <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
-                    <input class='apply_means fr' type="text" name="email"  readonly="readonly" ng-value="email" >
+                    <input class='apply_means fr' type="text" name="email"  readonly="readonly" ng-value="contents.email" >
                 </div>
             </a>
 
@@ -59,13 +59,13 @@
                 </div>
             </div>
             <input id="user_id" type="hidden" name="user_id" value="{:session('userId')}">
-            <input id="company" type="hidden" name="company" value="{{company}}">
-            <input id="job" type="hidden" id="job" value="{{job}}">
+            <input id="company" type="hidden" name="company" ng-value="contents.company">
+            <input id="job" type="hidden" id="job" ng-value="contents.job">
             <a href="__MODULE__/User/gzly.html">
                 <div class="apply_content_box clear">
                     <span class='apply_word fl'>关注领域</span>
                     <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
-                    <input class='apply_means fr' type="text" name="gzly" readonly="readonly" ng-value="gzly">
+                    <input class='apply_means fr' type="text" name="gzly" readonly="readonly" ng-value="contents.gzly">
                 </div>
             </a>
 
@@ -73,7 +73,7 @@
                 <div class="apply_content_box clear">
                     <span class='apply_word fl'>应用行业</span>
                     <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
-                    <input class='apply_means fr' type="text" name="yyhy"  readonly="readonly" ng-value="yyhy">
+                    <input class='apply_means fr' type="text" name="yyhy"  readonly="readonly" ng-value="contents.yyhy">
                 </div>
             </a>
         <!-- </div> -->
@@ -84,76 +84,71 @@
 <script src='{$Think.MOBILE}/js/return.js'></script>
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script>
-var app = angular.module('userAuthen', []);
+    var app = angular.module('userAuthen', []);
 
-app.controller('myAuthen', function($scope,$http) {
-    var id = $("#id").val();
-    $http({
-        method: 'GET',
-        url: '/api.php/User/user_info/action/detail?id='+id,
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },    
-        transformRequest: function(obj) {    
-            var str = [];    
-            for (var p in obj) {    
-                str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));    
-            }    
-            return str.join("&");    
-        } 
-    }).then(function successCallback(response) {    
-         $scope.user = response.data.data;
-        }, function errorCallback(response) {
+    app.controller('myAuthen', function($scope,$http) {
+        $scope.contents = {
+            idcard:'{$arrData.idcard}',
+            email:'{$arrData.email}',
+            company:'{$arrData.company}', 
+            company:'{$arrData.company}', 
+            job:'{$arrData.job}', 
+            gzly:'{$arrData.gzly}', 
+            yyhy:'{$arrData.yyhy}'
+        };
+        var id = $("#id").val();
+        $http({
+            method: 'GET',
+            url: '/api.php/User/user_info/action/detail?id='+id,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },    
+            transformRequest: function(obj) {    
+                var str = [];    
+                for (var p in obj) {    
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));  
+                }    
+                return str.join("&");    
+            } 
+        }).then(function successCallback(response) {    
+             $scope.user = response.data.data;
+            }, function errorCallback(response) {
+        });
     });
-});
-    // $(document).ready(function(){
-    //     if($('#company').val()!=''){
-    //         $("#chosed").attr("value",'公司');
-    //     }
-    // });
-    
 
-    // function close(){
-    //     $('.apply_choose').hide();
-    //     $('.mask').hide();
-    //     $(".apply_choose").css('transform','translate3d(0,0,0)');
-    // }
+    $(document).ready(function(){
+        if($('#company').val()!=''){
+            $("#chosed").attr("value",'公司');
+        }
+    });    
 
-    // $("#choose_class").on("click",function(){
-    //     $('.apply_choose').show();
-    //     $('.mask').show();
-    //     $(".apply_choose").css('transform','translate3d(0,-320px,0)');
-    // })
-    // $('.mask').on("click",function(){
-    //     close();
-    // })
-    // $(".apply_choice_cancle").on("click",function(){
-    //     close();
-    // })
-    // $(".apply_choosing").on("click",function(){
-    //     close();
-    //     var _html = $(this).html();
-    //     if(_html=='公司'){
-    //         window.location.href='__MODULE__/User/company.html';
-    //     }
-    //     $("#chosed").attr("value",_html);
-    //     $('#company').val('');
-    //     $('#job').val('');
-    // });
-    // $('.apply_form').on('click',function () {
-    //     var data = {};
-    //     var t = $('#form-user-authen').serializeArray();
-    //     $.each(t, function() {
-    //         data[this.name] = this.value;
-    //     });
-    //     $.ajax({
-    //         url:"/api.php/User/user_info/action/edit",
-    //         data:data,
-    //         type:'post',
-    //         dataType:'json',
-    //         success:function(msg){
+    function close(eleStatus,transY){
+        $('.apply_choose').css({'display':eleStatus});
+        $('.mask').css({'display':eleStatus});
+        var time = setTimeout(eleTransform, 10)
+        function eleTransform(){
+            $(".apply_choose").css('transform','translate3d(0,'+transY+',0)');
+        };      
+    };
+    $('.mask').on("click",function(){
+        close('none','0');
+    });
+    $(".apply_choice_cancle").on("click",function(){
+        close('none','0');
+    });
 
-    //         }
-    //     });
-    // })
+    $("#choose_class").on("click",function(){
+        close('block','-320px');
+    });
+
+    $(".apply_choosing").on("click",function(){
+        close('none','0');
+        var _html = $(this).html();
+        if(_html=='公司'){
+            window.location.href='__MODULE__/User/company.html';
+        }
+        $("#chosed").attr("value",_html);
+        $('#company').val('');
+        $('#job').val('');
+    });
     // 提交后 identify_tip跟mask显示出现提示框
 </script>
 </html>
