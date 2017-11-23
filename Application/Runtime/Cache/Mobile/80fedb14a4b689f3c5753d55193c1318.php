@@ -1,0 +1,139 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en" ng-app="publishTec">
+<head>
+    <meta charset="UTF-8">
+    <title>发布技术</title>
+    <meta name="description" content="庖丁科技众包服务平台携手国内外先进技术科研院所、顶级技术专家，以实现科技成果市场化为核心，为企业提供快速精准的需求匹配服务，从而实现企业以及科技资源的有效对接，帮助企业实现产业技术升级，助力先进技术完成产业化发展。" />
+    <meta name="keywords" content="庖丁众包、智能技术、机械制造、健康医疗、材料科学、能源环保、生产流程优化"/>
+    <meta name='viewport' content='user-scalable=no,width=750'>
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/common_new.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/index-publish-common.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/index.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/swiper.css">
+</head>
+<body ng-controller="ctrlTec">
+<div class="demand_div clear">
+    <span class="demand_name fl">需求名称</span>
+    <input class="demand_input fr" type="text" placeholder="请输入技术需求的名称" >
+</div>
+
+<div class="demand_area">
+    <p style="margin-left:30px;">需求领域</p>
+    <div class="areas_main clear">
+        <li class="areas_default">电子信息</li>
+        <li class="areas_default">先进制造</li>
+        <li class="areas_default">新材料</li>
+        <li class="areas_default">新能源与节能</li>
+        <li class="areas_default">环境保护</li>
+        <li class="areas_default">健康医疗</li>
+        <li class="areas_default">智能技术</li>
+    </div>
+</div>
+
+<div class="demand_div clear"  style="border-top:1px solid #ccc;">
+    <span class="demand_name fl">技术成熟度</span>
+    <div class="fr demand_name">
+        <label><input  name="try" class="inp_radio" type="radio" value="小试" />小试</label>
+        <label><input  name="try" class="inp_radio" type="radio" value="中试" />中试</label>
+        <label><input  name="try" class="inp_radio" type="radio" value="生试" />生试</label>
+    </div>
+</div>
+
+<div class="demand_div clear">
+    <span class="demand_name fl">专利状态</span>
+    <div class="fr demand_name">
+        <label><input  name="patent" class="inp_radio" type="radio" value="有" />有</label>
+        <label><input  name="patent" class="inp_radio" type="radio" value="无" />无</label>
+    </div>
+</div>
+
+<div class="demand_div clear"   id="choose_btn">
+    <span class="demand_name fl">合作方式</span>
+    <img class='fr demand_div_jt' src="<?php echo (MOBILE); ?>/images/icon-index-issue-right.png" alt="">
+    <span class="demand_name fr" id="choose_html">请选择</span>
+</div>
+
+<div class="demand_div clear" style="border:none">
+    <span class="demand_name fl">合作价格</span>
+    <div class="fr demand_name">
+        <label><input ng-model="status" name="price" class="inp_radio" type="radio" value="面议" />面议</label>
+        <label><input ng-model="status" name="price" class="inp_radio" type="radio" value="公开" />公开</label>
+    </div>
+</div>
+<div class="demand_div clear" id="price_div" ng-show="status=='公开'" ng-cloak>
+    <span class="price fl">价格区间(万元)</span>
+    <div class="price_div fr">
+        <input type="number" placeholder="最低价" > -
+        <input type="number" placeholder="最高价">
+    </div>
+</div>
+<div class="index_div"></div>
+
+<div class="demand_div clear">
+    <span class="demand_name fl">技术讲述</span>
+    <img class='fl point_icon' src="<?php echo (MOBILE); ?>/images/icon-index-issue-remind.png" alt="">
+    <img class='fr demand_div_jt' src="<?php echo (MOBILE); ?>/images/icon-index-issue-down.png" alt="">
+</div>
+
+<div class="advice_area">
+    <textarea class="advice_text" ng-model="text" ng-change="tolCount();" maxlength="200" placeholder="描述方案的基本原理，应用场景，实现结果等，请注意核心技术细节的保密"></textarea >
+    <p class="advice_numlim">
+        <span class="advice_count" ng-cloak>{{count}}</span>
+        | 200字
+    </p>
+</div>
+<a href="" class="register_btn" style="margin-top:60px">确认发布</a>
+
+<!-- 选择上拉框 -->
+<div class="mask" style="display:none;height:200%"></div>
+<div class="slide-wrap">
+    <div class="choose-time clear">
+        <p class="fl cancle">取消</p>
+        <p class="fl choose-p2">选择时间</p>
+        <p class="fr complete">完成</p>
+    </div>
+    <div class="slide-line"></div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">技术入股</div>
+            <div class="swiper-slide">技术转让</div>
+            <div class="swiper-slide">技术许可</div>
+            <div class="swiper-slide">委托开发</div>
+            <div class="swiper-slide">其他</div>
+        </div>
+    </div>
+</div>
+</body>
+<script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
+<script src="<?php echo (MOBILE); ?>/js/swiper.min.js"></script>
+<script src="<?php echo (MOBILE); ?>/js/angular.min.js"></script>
+<script src="<?php echo (MOBILE); ?>/js/index-publishTec.js"></script>
+<script src='<?php echo (MOBILE); ?>/js/return.js'></script>
+<script>
+    // 监听输入框
+    $('.advice_text').keyup(function(){
+        if( $(this).val().length>0 ){
+            $(this).css("border-color","#1e1e1e");
+        }else{
+            $(this).css("border-color","#ccc");
+        }
+    });
+
+    // 限制input输入位数
+    $(".price_div input").keyup(function() {
+        if (this.value.length>4 ) {
+            this.value = this.value.substr(0,4);
+        }
+    });
+
+    var app = angular.module("publishTec",[]);
+    app.controller("ctrlTec",function ($scope){
+        $scope.status = "";
+        $scope.count = 0;
+        $scope.tolCount = function () {
+            $scope.count =$scope.text.length;
+        };
+    })
+
+</script>
+</html>

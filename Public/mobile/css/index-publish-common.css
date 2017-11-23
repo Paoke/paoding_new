@@ -1,0 +1,57 @@
+/*公共上拉框*/
+.slide-wrap{
+	width: 750px;
+	position: fixed;
+	z-index: 999;
+    bottom: -320px;
+    left: 50%;
+    margin-left: -375px;
+    transition: all 0.3s;
+    z-index: 999;
+    background: #ccc;
+}
+.choose-time{
+	position: absolute;
+	top: -80px;
+	left: 50%;
+	z-index: 99;
+	margin-left: -375px;
+	width: 750px;
+	height: 80px;
+	background: #f7f7f7;
+	font-size: 32px;
+	color: #1c82fb;
+	padding:20px 30px;
+}
+.swiper-container{
+	width: 750px;
+	height: 240px;
+	background: #fff;
+	margin: 0 auto;
+}
+.swiper-slide{
+	width: 750px;
+	font-size: 24px;
+	line-height: 80px;
+	height: 80px !important;
+	text-align:center; 
+	color: #999;
+	background: rgba(255,255,255,0);/*设置透明度显示下层边框*/
+}
+.slide-line{
+	width: 750px;
+	height: 80px;
+	position: absolute;
+	top: 80px;
+	left: 50%;
+	margin-left: -375px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.swiper-slide-active{
+	color: #000;
+}
+.choose-p2{
+	color: #333;
+	margin-left: 215px;
+}

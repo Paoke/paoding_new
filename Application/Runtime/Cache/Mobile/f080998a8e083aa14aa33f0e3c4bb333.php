@@ -68,7 +68,7 @@
     <span class="fl">认证中心</span>
     <img class="fr" src="<?php echo (MOBILE); ?>/images/icon-right2.png" alt="">
 </a>
-<a href="my-helpCenter.html" class="my_secion clear">
+<a href="/index.php/Mobile/User/help.html" class="my_secion clear">
     <span class="fl">帮助中心</span>
     <img class="fr" src="<?php echo (MOBILE); ?>/images/icon-right2.png" alt="">
 </a>
@@ -82,7 +82,7 @@
 </a>
 
 <div class="nav">
-    <a class="nav_option" href="">
+    <a class="nav_option" href="/index.php/Mobile/Index/index">
         <img src="<?php echo (MOBILE); ?>/images/icon-tabbar-technology-default.png" alt="">
         <p>技术</p>
     </a>

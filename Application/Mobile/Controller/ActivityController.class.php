@@ -66,13 +66,24 @@ class ActivityController extends BaseController
     /*
         * 详细数据
         */
-    public function detail(){
-        $channel=$_GET['channel'];
-        $data_id = $_GET["data_id"];
-        $this->assign("data_id", $data_id);
-        $this->assign("channel", $channel);
-        $this->display($channel."_detail");
-    }
+//    public function detail(){
+//        $channel=$_GET['channel'];
+//        $data_id = $_GET["data_id"];
+//        $this->assign("data_id", $data_id);
+//        $this->assign("channel", $channel);
+//        $this->display($channel."_detail");
+//    }
+     public function detail(){
+         $this->display();
+     }
+
+     /*
+      * 报名活动
+      */
+     public function enter(){
+         $this->checkReg();
+         $this->display();
+     }
 
     /*
      * 新增数据

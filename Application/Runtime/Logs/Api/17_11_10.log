@@ -1,0 +1,48 @@
+[ 2017-11-10T15:52:23+08:00 ] 127.0.0.1 /api.php/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: form D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 28 行.
+NOTIC: [8] Undefined index: dataId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 29 行.
+NOTIC: [8] Undefined index: selfUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 30 行.
+NOTIC: [8] Undefined index: selfUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 31 行.
+NOTIC: [8] Undefined index: orderUserId D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 32 行.
+NOTIC: [8] Undefined index: orderUserName D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 33 行.
+NOTIC: [8] Undefined index: userType D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 34 行.
+NOTIC: [8] Undefined index: count D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 37 行.
+NOTIC: [8] Undefined index: channel D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 38 行.
+NOTIC: [8] Undefined index: channel_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: top D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 40 行.
+NOTIC: [8] Undefined index: keywords D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 41 行.
+NOTIC: [8] Undefined index: orderMode D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 42 行.
+NOTIC: [8] Undefined index: limitNum D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 43 行.
+NOTIC: [8] Undefined index: limitStart D:\xampp\htdocs\paoding_new\Application\Api\Logic\UserLogic.class.php 第 44 行.
+
+[ 2017-11-10T15:52:24+08:00 ] 127.0.0.1 /api.php/User/user_info/action/detail?id=6800
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-11-10T15:54:24+08:00 ] 127.0.0.1 /api.php/User/user_info/action/detail?id=6800
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+

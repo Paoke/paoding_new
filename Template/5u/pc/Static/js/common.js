@@ -13,7 +13,7 @@ function login(url){
 	$.ajax({
 		type:"post",
 		url:url,
-		data:{"username":username,"password":password},
+		data:{"mobile":username,"password":password},
 		dataType:"json",
 		success:function(res){
 			tip.setBody(res.msg);

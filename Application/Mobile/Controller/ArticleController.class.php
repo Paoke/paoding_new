@@ -119,6 +119,22 @@ class ArticleController extends BaseController
         $this->display($channel."_search");
     }
 
+    /**
+     * 发布技术
+     */
+    public function release()
+    {
+        $this->checkReg();
+        if($_POST){
+
+        }else{
+
+            $this->display();
+        }
+
+
+    }
+
 
 }
 

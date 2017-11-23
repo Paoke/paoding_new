@@ -31,7 +31,8 @@ class PaodingController extends BaseRestController
     public function getIndex(){
         $where['is_deleted']=0;
         $where['is_active']=1;
-        $data = M("ArticleZtgl")->where($where)->field("id,title,cover_url")->order("create_time DESC")->limit("4")->select();
+        $page_num=$_GET['page_num'];
+        $data = M("ArticleZtgl")->where($where)->field("id,title,cover_url")->order("create_time DESC")->limit("$page_num")->select();
         if($data){
             $returnArr = array("result" => 1, "msg" => "获取成功", "code" => 200, 'data' =>$data);
         }else {
