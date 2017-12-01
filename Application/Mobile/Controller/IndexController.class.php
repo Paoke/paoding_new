@@ -9,9 +9,7 @@ class IndexController extends BaseController
     public function __construct()
     {
         parent::__construct();
-        if(parent::checkSite()){
-//            parent::checkUrl();
-        }
+        parent::checkUrl();
     }
     public function index()
     {
@@ -24,6 +22,19 @@ class IndexController extends BaseController
 //        }
        $this->display();
     }
+
+    public function choose()
+    {
+        $this->checkReg();
+        $this->display();
+    }
+
+    public function release()
+    {
+        $this->checkReg();
+        $this->display();
+    }
+
 
     /*
      * 自定义页面

@@ -122,7 +122,7 @@
         <img src="<?php echo (MOBILE); ?>/images/icon-tabbar-technology-default.png" alt="">
         <p>技术</p>
     </a>
-    <a class="nav_option" href="">
+    <a class="nav_option" href="/index.php/Mobile/Demand/demand_list">
         <img src="<?php echo (MOBILE); ?>/images/icon-tabbar-demand-default.png" alt="">
         <p>需求</p>
     </a>

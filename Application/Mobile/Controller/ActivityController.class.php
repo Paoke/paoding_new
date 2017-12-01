@@ -16,6 +16,8 @@ class ActivityController extends BaseController
         $this->display();
     }
 
+
+
     /*
         * 数据列表
         */
@@ -175,32 +177,32 @@ class ActivityController extends BaseController
         $this->display($channel."_result");
     }
 
-    //企业活动
-    public function release(){
-        $action = $_GET['action'];
-        $channel = $_GET['channel'];
-        if($action == 'company'){
-            $account= session('company_account');
-
-            $table = $this->getTableName($account['channel'], 1);
-            $accountInfo = M("$table")->where('id='.$account['data_id'])->field('title, logo_img')->find();
-            $account = array_merge($account, $accountInfo);
-
-            $this->assign('account', $account);
-            $this->assign('user_id', $account['user_id']);
-            $this->assign('channel', $channel);
-            $this->assign('company_channel', $account['channel']);
-            $this->assign('company_id', $_GET['data_id']);
-            $this->display('company_' . $channel . '_release');
-        }else{
-            $id = $_GET["id"];
-            $this->assign("id", $id);
-            $this->assign('channel', $channel);
-            $this->assign('user_id', session('userArr')['user_id']);
-            $this->display($channel . '_release');
-        }
-
-    }
+//    //企业活动
+//    public function release(){
+//        $action = $_GET['action'];
+//        $channel = $_GET['channel'];
+//        if($action == 'company'){
+//            $account= session('company_account');
+//
+//            $table = $this->getTableName($account['channel'], 1);
+//            $accountInfo = M("$table")->where('id='.$account['data_id'])->field('title, logo_img')->find();
+//            $account = array_merge($account, $accountInfo);
+//
+//            $this->assign('account', $account);
+//            $this->assign('user_id', $account['user_id']);
+//            $this->assign('channel', $channel);
+//            $this->assign('company_channel', $account['channel']);
+//            $this->assign('company_id', $_GET['data_id']);
+//            $this->display('company_' . $channel . '_release');
+//        }else{
+//            $id = $_GET["id"];
+//            $this->assign("id", $id);
+//            $this->assign('channel', $channel);
+//            $this->assign('user_id', session('userArr')['user_id']);
+//            $this->display($channel . '_release');
+//        }
+//
+//    }
 
     //子表录入
     public function child_release(){

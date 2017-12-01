@@ -1,0 +1,270 @@
+/*
+* @description: 庖丁移动端需求页
+* @author: huangxiang
+* @update: name (2017-11-24 114:35)
+*/
+html,body{
+	width: 750px;
+	margin: 0 auto;
+	overflow-x:hidden; 
+}
+.demand_nav{
+	width: 750px;
+	height: 90px;
+	padding: 30px;
+	padding: 30px 0;
+	position: relative;
+}
+.demand_nav li{
+	width: 112px;
+	font-size: 28px;
+	color: #999;
+	text-align: center;
+}
+.sildeBlock{
+	width: 114px;
+	height: 2px;
+	background: #ff971d;
+	position: absolute;
+	left: 0;
+	bottom: -28px;
+}
+.search{
+	width: 750px;
+	height: 90px;
+	background: #f0f0f0;
+	padding:0 30px;
+}
+.search_p{
+	font-size: 26px;
+	color: #999;
+	margin-top: 30px;
+}
+.search select{
+	margin-top: 30px;
+	margin-left: 34px;
+	border: none;
+	font-size: 22px;
+	/*-webkit-appearance:none;*/
+	background: #f0f0f0;
+}
+select::-ms-expand { display: none; }
+.inputDiv{
+	width: 156px;
+	height: 60px;
+	border: 1px solid #999;
+	border-radius: 40px;
+	background: #fff;
+	line-height: 28px;
+	padding: 14px 0 0 12px;
+	font-size: 22px;
+	color: #999;
+	margin-top: 14px;
+}
+.searching{
+	background: #f0f0f0;
+	padding: 15px 30px;
+
+}
+.click_search{
+	 width: 108px;
+	 height: 44px;
+	 background: #ff991d;
+	 text-align: center;
+	 line-height: 44px;
+	 font-size: 20px;
+	 color: #fff;
+	 border-radius: 40px;
+	 position: absolute;
+	 right: 10px;
+	 top: 7px;
+}
+.input_search{
+	width: 690px;
+	height: 60px;
+	border: 1px solid #999;
+	padding: 12px;
+	background: #fff;	
+	border-radius: 40px;
+	position: relative;
+}
+.tech_search{
+	width: 400px;
+}
+.section{
+	padding-top: 24px;
+}
+.callForBids{
+	font-size: 30px;
+	color: #ff971d;
+}
+.materials{
+	margin-left: 24px;
+	width: 500px;
+	font-size: 30px;
+	color: #1e1e1e;
+	display:block;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+.sec_content{
+	margin: 30px auto 0;
+	width: 690px;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	font-size: 26px;
+	color: #666;
+	line-height: 1.5;
+}
+.sec_title{
+	width: 750px;
+	margin: 0 auto;
+}
+.sec_data{
+	width: 690px;
+	margin:34px auto 0;
+	padding: 20px 0;
+	border-top: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+}
+.sec_data_left{
+	font-size: 24px;
+	color: #999;
+}
+.sec_data_span{
+	margin: 0 60px 0 12px;
+}
+.sec_data_p{
+	margin-top: 20px;
+}
+.sec_data_num{
+	margin: 0 0 22px 0;
+}
+.viewDetails{
+	width: 690px;
+	margin: 0 auto 0;
+	padding: 20px;
+}
+.viewDetails_span{
+	font-size: 24px;
+	color: #999;
+	margin-right: 14px;
+}
+
+.advert{
+	margin: 0 auto;
+	width: 750px;
+	height: 140px;
+	text-align: center;
+	line-height: 140px;
+	color: #ccc;
+	font-size: 24px;
+	background: #f0f0f0;
+}
+.demand_main{
+	width: 750px;
+	margin: 0 auto;
+	padding-left: 30px;
+	padding-top: 40px;
+	font-size: 28px;
+	color: #666;
+	line-height: 1.5;
+}
+.demand_main_tit{
+	font-size: 30px;
+	color: #1e1e1e;
+	margin-bottom: 30px;
+}
+.black_block{
+	width: 5px;
+	height: 30px;
+	background: #1e1e1e;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+.demand_photo{
+	width: 690px;
+	margin-top: 30px;
+}
+.demand_photo img{
+	width: 100%;
+}
+
+.collect{
+	position: absolute;
+	right: 0;
+	top: -1px;
+	width: 368px;
+	height: 100px;
+	background: #000;
+	font-size: 32px;
+	color: #fff;
+	text-align: center;
+	line-height: 96px;
+}
+.getConWay{
+	padding: 30px;
+	text-align: center;
+	color: #ff971d;
+	font-size: 30px;
+	text-decoration: underline;
+}
+.alert{
+	width: 460px;
+	height: 366px;
+	text-align: center;
+	font-size: 28px;
+	color: #666;
+	line-height: 1.5;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-left: -230px;
+	margin-top: -178px;
+	z-index: 999;
+	background: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.close{
+	position: absolute;
+	bottom: 0;
+	width: 460px;
+	height: 90px;
+	font-size: 32px;
+	color: #bbb;
+	background: #f2f2f2;
+	text-align: center;
+	line-height: 90px;
+
+}
+.sorry{
+	margin-top: 60px;
+}
+.findDemand{
+	color: #ff971d;
+	text-decoration: underline;
+
+}
+.showTel{
+	display: none;
+	width: 366px;
+	margin: 0 auto;
+	margin-top: 80px;
+	color: #666;
+	font-size: 28px;
+}
+.showTel p{
+	margin-top: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #e8e8e8;
+}
+.tel_email{
+	font-size: 28px;
+	color: #1e1e1e;
+	margin-left: 40px;
+}

@@ -47,9 +47,9 @@
             <p class="sec_intro">项市场需求发布</p>
         </div>
     </div>
-    <a href="/index.php/Mobile/Article/release.html">
+    <a href="/index.php/Mobile/Index/choose.html">
         <div class="issue_btn">
-            发布技术
+            发布技术/需求
             <p class="issue_num">已有326人发布</p>
         </div>
     </a>
@@ -482,7 +482,7 @@
         <img src="<?php echo (MOBILE); ?>/images/icon-tabbar-technology-selected.png" alt="">
         <p style="color:#ff971d;">技术</p>
     </a>
-    <a class="nav_option" href="">
+    <a class="nav_option" href="/index.php/Mobile/Demand/demand_list">
         <img src="<?php echo (MOBILE); ?>/images/icon-tabbar-demand-default.png" alt="">
         <p>需求</p>
     </a>

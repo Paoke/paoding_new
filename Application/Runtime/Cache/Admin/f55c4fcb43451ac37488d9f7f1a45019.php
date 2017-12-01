@@ -233,8 +233,8 @@
                                                 </li>
                                                 <li class=""><a href="#log" data-toggle="tab" tab_index="3">操作记录</a>
                                                 </li>
-                                                <!--<li class=""><a href="#chart" data-toggle="tab" tab_index="4">访问统计</a>-->
-                                                </li><?php endif; ?>
+                                                <?php if($channel == hzjg): ?><li class=""><a href="#chart" data-toggle="tab" tab_index="4">应用事例</a>
+                                                </li><?php endif; endif; ?>
                                             <?php if(is_array($child)): $i = 0; $__LIST__ = $child;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li class=""
                                                     onclick="loadChannelChild('<?php echo ($vo["channel_index"]); ?>', '<?php echo ($vo["type"]); ?>');">
                                                     <a href="#child" data-toggle="tab"><?php echo ($vo["title"]); ?></a>
@@ -392,290 +392,24 @@
                                     </div>
                                     <div id="chart" class="tab-pane">
 
-                                        <div class="edit_list no_edit ">
-
-                                            <div class="pull-left">
-                                                <h4>7月份数据</h4>
-                                            </div>
-                                            <div class="pull-right ">
-
-                                                <div class="btn-group">
-                                                    <a class="btn  btn-default "><i class="fa fa-bars"></i>所有数据</a>
-                                                    <a class="btn  btn-default "><i
-                                                            class="fa fa-chevron-left"></i>上一月</a>
-                                                    <a class="btn  btn-default "><i class="fa fa-chevron-right"></i>下一月</a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="panel-body " style="margin:10px;">
-                                            <div class="alian">
-                                                <div class="row state-overview">
-
-                                                    <div class="bllan">
-                                                        <div class="panel green">
-                                                            <div class="symbol">
-                                                                <i class="fa fa-eye fa-2x"></i>
-                                                            </div>
-                                                            <div class="state-value">
-                                                                <div class="value">85962</div>
-                                                                <div class="title">浏览量</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bllan">
-                                                        <div class="panel green">
-                                                            <div class="symbol">
-                                                                <i class="fa fa-user fa-2x"></i>
-                                                            </div>
-                                                            <div class="state-value">
-                                                                <div class="value">85962</div>
-                                                                <div class="title">浏览用户</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bllan">
-                                                        <div class="panel green">
-                                                            <div class="symbol">
-                                                                <i class="fa fa-share-square-o fa-2x"></i>
-                                                            </div>
-                                                            <div class="state-value">
-                                                                <div class="value">85962</div>
-                                                                <div class="title">分享数次</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bllan">
-                                                        <div class="panel green">
-                                                            <div class="symbol">
-                                                                <i class="fa fa-thumbs-o-up fa-2x"></i>
-                                                            </div>
-                                                            <div class="state-value">
-                                                                <div class="value">50%</div>
-                                                                <div>点赞率</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-
-                                                <div class="  col-md-12">
-                                                    <div id="main" style="width:1060px;height:400px;"></div>
-                                                    <script type="text/javascript">
-                                                        // 基于准备好的dom，初始化echarts实例
-                                                        var myChart = echarts.init(document.getElementById('main'));
-                                                        // 指定图表的配置项和数据
-                                                        var option = {
-                                                            title: {
-                                                                text: '折线图堆叠'
-                                                            },
-                                                            tooltip: {
-                                                                trigger: 'axis'
-                                                            },
-                                                            legend: {
-                                                                data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']
-                                                            },
-                                                            grid: {
-                                                                left: '3%',
-                                                                right: '4%',
-                                                                bottom: '3%',
-                                                                containLabel: true
-                                                            },
-                                                            toolbox: {
-                                                                feature: {
-                                                                    saveAsImage: {}
-                                                                }
-                                                            },
-                                                            xAxis: {
-                                                                type: 'category',
-                                                                boundaryGap: false,
-                                                                data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
-                                                            },
-                                                            yAxis: {
-                                                                type: 'value'
-                                                            },
-                                                            series: [{
-                                                                name: '邮件营销',
-                                                                type: 'line',
-                                                                stack: '总量',
-                                                                data: [120, 132, 101, 134, 90, 230, 210]
-                                                            }, {
-                                                                name: '联盟广告',
-                                                                type: 'line',
-                                                                stack: '总量',
-                                                                data: [220, 182, 191, 234, 290, 330, 310]
-                                                            }, {
-                                                                name: '视频广告',
-                                                                type: 'line',
-                                                                stack: '总量',
-                                                                data: [150, 232, 201, 154, 190, 330, 410]
-                                                            }, {
-                                                                name: '直接访问',
-                                                                type: 'line',
-                                                                stack: '总量',
-                                                                data: [320, 332, 301, 334, 390, 330, 320]
-                                                            }, {
-                                                                name: '搜索引擎',
-                                                                type: 'line',
-                                                                stack: '总量',
-                                                                data: [820, 932, 901, 934, 1290, 1330, 1320]
-                                                            }]
-                                                        };
-
-                                                        // 使用刚指定的配置项和数据显示图表。
-                                                        myChart.setOption(option);
-                                                    </script>
-
-                                                </div>
-
-
-                                            </div>
-
-                                            <div class="row">
-                                                <section class="panel ">
-                                                    <header class="panel-heading panel-body">
-                                                        <div class="pull-left "> 详细数据</div>
-                                                    </header>
-                                                    <div class="  col-md-12">
-                                                        <table class="table ">
-                                                            <thead>
-                                                            <tr>
-                                                                <th>时间</th>
-                                                                <th>浏览量</th>
-                                                                <th>浏览用户</th>
-                                                                <th>分享数</th>
-                                                                <th>点赞率</th>
-
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                            <tr>
-                                                                <td>2017-01-23</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>50%</td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2017-01-23</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>50%</td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2017-01-23</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>50%</td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2017-01-23</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>50%</td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2017-01-23</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>50%</td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2017-01-23</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>50%</td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2017-01-23</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>50%</td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2017-01-23</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>50%</td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2017-01-23</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>50%</td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2017-01-23</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>50%</td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2017-01-23</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>50%</td>
-
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2017-01-23</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>50%</td>
-
-                                                            </tr>
-
-                                                            <tr>
-                                                                <td>2017-01-23</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>50%</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2017-01-23</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>50%</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2017-01-23</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>19000</td>
-                                                                <td>50%</td>
-                                                            </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </section>
-                                            </div>
-
-                                        </div>
+                                        <table id="list-table" class="table table-bordered  table-striped" role="grid"
+                                               aria-describedby="example1_info">
+                                            <thead>
+                                            <tr role="row" align="center">
+                                                <td style="font-weight:bold; padding: 10px;text-align: left;">LogID</td>
+                                                <td style="font-weight:bold;text-align: left;">用户ID</td>
+                                                <td style="font-weight:bold;text-align: left;">昵称</td>
+                                                <td style="font-weight:bold;text-align: left;">操作时间</td>
+                                                <td style="font-weight:bold;text-align: left;">日志内容</td>
+                                                <td style="font-weight:bold;text-align: left;">IP地址</td>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <?php if(is_array($system_log)): foreach($system_log as $vokey=>$vo): ?><tr role="row" align="center">
+                                                    <?php if(is_array($vo)): foreach($vo as $vokey1=>$vo1): ?><td style="padding: 10px; text-align: left;"><?php echo ($vo1); ?></td><?php endforeach; endif; ?>
+                                                </tr><?php endforeach; endif; ?>
+                                            </tbody>
+                                        </table>
 
 
                                     </div>

@@ -32,7 +32,10 @@ class PaodingController extends BaseRestController
         $where['is_deleted']=0;
         $where['is_active']=1;
         $page_num=$_GET['page_num'];
-        $data = M("ArticleZtgl")->where($where)->field("id,title,cover_url")->order("create_time DESC")->limit("$page_num")->select();
+        $data = M("ArticleZtgl")->where($where)->field("id,title,cover_url,miaoshu")->order("create_time DESC")->limit("$page_num")->select();
+        foreach($data as $key=>$val){
+            $data[$key]['count']=M("ArticleJs")->where('sszt='.$val['id'])->count();
+        }
         if($data){
             $returnArr = array("result" => 1, "msg" => "获取成功", "code" => 200, 'data' =>$data);
         }else {
