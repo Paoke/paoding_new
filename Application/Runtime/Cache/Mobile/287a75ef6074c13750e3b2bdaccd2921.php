@@ -59,7 +59,7 @@
 <!-- 热门专题 -->
 <div class="index_main_title clear">
     <img class="fl" src="<?php echo (MOBILE); ?>/images/icon-index-hottopic.png" alt="">
-    <a href="#">
+    <a href="/index.php/Mobile/Index/theme_list.html">
         <p class="fr more_tec">更多专题<img src="<?php echo (MOBILE); ?>/images/icon-right.png" alt=""></p>
     </a>
 </div>
@@ -68,7 +68,7 @@
         <div class="swiper-container" id="swiper-container2">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <a href="#">
+                    <a href="/index.php/Mobile/Index/theme_tec.html">
                         <img src="<?php echo (MOBILE); ?>/images/index-hottopic.jpg" alt="">
                         <p class="hot_secTit">环保技术专题1</p>
                         <p class="hot_secCt">
@@ -268,7 +268,7 @@
 <!-- 前沿技术 -->
 <div class="index_main_title clear">
     <img class="fl" src="<?php echo (MOBILE); ?>/images/icon-index-advanced-tech.jpg" alt="">
-    <a href="#">
+    <a href="/index.php/Mobile/Index/tec_list.html">
         <p class="fr more_tec">更多技术<img src="<?php echo (MOBILE); ?>/images/icon-right.png" alt=""></p>
     </a>
 </div>
@@ -316,7 +316,7 @@
         </div>
     </div>
 </div>
-<a href="">
+<a href="/index.php/Mobile/Index/tec_list.html">
     <p class="scan_more">查看更多技术</p>
 </a>
 <div class="index_div"></div>

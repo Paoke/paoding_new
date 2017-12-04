@@ -35,6 +35,21 @@ class IndexController extends BaseController
         $this->display();
     }
 
+    public function theme_list()
+    {
+        $this->display();
+    }
+
+    public function theme_tec()
+    {
+        $this->display();
+    }
+
+    public function tec_list()
+    {
+        $this->display();
+    }
+
 
     /*
      * 自定义页面
