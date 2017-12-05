@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
-<html lang="en">
+<html lang="en" ng-app="demand_list">
 <head>
     <meta charset="UTF-8">
     <title>需求</title>
@@ -10,37 +10,23 @@
     <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/demand.css">
     <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/swiper.css">
 </head>
-<body>
+<body ng-cloak ng-controller="demandListCtrl">
+<input type="hidden" value="1" id="page"/>
+<input type="hidden" value="7"  id="page_total"/>
 <div class="demand_nav">
     <ul>
         <div class="swiper-container" style="overflow:visible">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <li style="margin-left:0;">全部</li>
+                    <li style="margin-left:0;text-align: center;">全部</li>
                     <div class="sildeBlock"></div>
                 </div>
-                <div class="swiper-slide">
-                    <li>电子信息</li>
-                </div>
-                <div class="swiper-slide">
-                    <li>先进制造</li>
-                </div>
-                <div class="swiper-slide">
-                    <li>健康医疗</li>
-                </div>
-                <div class="swiper-slide">
-                    <li>智能技术</li>
-                </div>
-                <div class="swiper-slide">
-                    <li>能源节能</li>
-                </div>
-                <div class="swiper-slide">
-                    <li>环境保护</li>
+                <div class="swiper-slide" ng-repeat="list in lists">
+                    <li>{{list.cat_name}}</li>                
                 </div>
             </div>
         </div>
-    </ul>
-    <!-- <div class="sildeBlock"></div> -->
+    </ul> 
 </div>
 
 <div class="search clear">
@@ -67,70 +53,39 @@
     </div>
 </div>
 
-<div class="main">
-    <div class="section">
-        <p class="sec_title clear">
-            <span class="callForBids fl">【招标中】</span>
-            <span class="materials fl">防水保温材料研发防水保温材料</span>
-        </p>
-        <p class="sec_content">防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%</p>
-        <div class="sec_data clear">
-            <div class="sec_data_left fl">
-                <div>
-                    <img src="<?php echo (MOBILE); ?>/images/icon-search-type.png" alt="">
-                    <span class="sec_data_span">材料科学</span>
-                    <img src="<?php echo (MOBILE); ?>/images/icon-search-time.png" alt="">
-                    <span class="sec_data_span">12个月</span>
-                    <img src="<?php echo (MOBILE); ?>/images/icon-search-scan.png" alt="">
-                    <span class="sec_data_span">2480</span>
+<div class="wrap">
+    <div class="main" ng-repeat="detail in details">
+        <div class="section">
+            <p class="sec_title clear">
+                <span class="callForBids fl">【{{detail.hzxs}}】</span>
+                <span class="materials fl">{{detail.title}}</span>
+            </p>
+            <p class="sec_content">{{detail.desc}}</p>
+            <div class="sec_data clear">
+                <div class="sec_data_left fl">
+                    <div>
+                        <img src="<?php echo (MOBILE); ?>/images/icon-search-type.png" alt="">
+                        <span class="sec_data_span">{{detail.cat_name}}</span>
+                        <img src="<?php echo (MOBILE); ?>/images/icon-search-time.png" alt="">
+                        <span class="sec_data_span">{{detail.yfzq}}</span>
+                        <img src="<?php echo (MOBILE); ?>/images/icon-search-scan.png" alt="">
+                        <span class="sec_data_span">{{detail.clicks}}</span>
+                    </div>
+                    <p class="sec_data_p">
+                        发布时间: <span class="sec_data_span">{{detail.create_time}}</span>
+                        投入预算：<span>{{detail.yfys}}</span>
+                    </p>
                 </div>
-                <p class="sec_data_p">
-                    发布时间: <span class="sec_data_span">2017-09-26</span>
-                    投入预算：<span>面议</span>
-                </p>
+                <img ng-show="detail.xpyf=='是'" class="fr" src="<?php echo (MOBILE); ?>/images/icon-research.png" alt="">
             </div>
-            <img class="fr" src="<?php echo (MOBILE); ?>/images/icon-research.png" alt="">
-        </div>
-        <a href="/index.php/Mobile/Demand/detail">
-            <div class="viewDetails clear">
-                <img class="fr" src="<?php echo (MOBILE); ?>/images/icon-right.png" alt="">
-                <span class="viewDetails_span fr">查看详情</span>
-            </div>
-        </a>
-    </div>
-    <div class="index_div"></div>
-</div>
-
-<div class="main">
-    <div class="section">
-        <p class="sec_title clear">
-            <span class="callForBids fl">【招标中】</span>
-            <span class="materials fl">防水保温材料研发防水保温材料</span>
-        </p>
-        <p class="sec_content">防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%</p>
-        <div class="sec_data clear">
-            <div class="sec_data_left fl">
-                <div>
-                    <img src="<?php echo (MOBILE); ?>/images/icon-search-type.png" alt="">
-                    <span class="sec_data_span">材料科学</span>
-                    <img src="<?php echo (MOBILE); ?>/images/icon-search-time.png" alt="">
-                    <span class="sec_data_span">12个月</span>
-                    <img src="<?php echo (MOBILE); ?>/images/icon-search-scan.png" alt="">
-                    <span class="sec_data_span">2480</span>
+            <a href="/index.php/Mobile/Demand/detail">
+                <div class="viewDetails clear">
+                    <img class="fr" src="<?php echo (MOBILE); ?>/images/icon-right.png" alt="">
+                    <span class="viewDetails_span fr">查看详情</span>
                 </div>
-                <p class="sec_data_p">
-                    发布时间: <span class="sec_data_span">2017-09-26</span>
-                    投入预算：<span>面议</span>
-                </p>
-            </div>
-            <img class="fr" src="<?php echo (MOBILE); ?>/images/icon-research.png" alt="">
+            </a>
         </div>
-        <a href="#">
-            <div class="viewDetails clear">
-                <img class="fr" src="<?php echo (MOBILE); ?>/images/icon-right.png" alt="">
-                <span class="viewDetails_span fr">查看详情</span>
-            </div>
-        </a>
+        <div class="index_div"></div>
     </div>
 </div>
 
@@ -157,24 +112,184 @@
     </a>
 </div>
 </body>
+<script src='<?php echo (MOBILE); ?>/js/angular.min.js'></script>
 <script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
 <script src='<?php echo (MOBILE); ?>/js/swiper.min.js'></script>
 <script>
+    //var page = "";
+    //var page_total = "";
+    var app = angular.module("demand_list",[]);
+    var code = "";
+    app.controller("demandListCtrl",function ($scope,$http){  
+        // 1.20.需求类别栏目
+        $http({
+            method:'GET',
+            url:'/api.php/ChannelIndex/index/action/dataList/channel/xq/type/2',          
+        }).then(function successCallback(response) {                      
+                $scope.lists = response.data.data;                  
+            }, function errorCallback(response) {
+            });
+
+        // 1.21 需求详情列表
+        var data = {"page":"1","page_num":"10","order_field":"create_time","order_by":"DESC","category_id":"0","get_page":"true"};
+        $http({
+            method:'POST',
+            data:data,
+            url:'/api.php/ChannelIndex/index/action/dataList/channel/xq/type/1',   
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },    
+            transformRequest: function(obj) {    
+                var str = [];    
+                for (var p in obj) {    
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));    
+                }    
+                return str.join("&");    
+            }       
+        }).then(function successCallback(response) {  
+                // page = response.data.data.page.page; 
+                // page_total = response.data.data.page.page_total; 
+
+                //$scope.page=response.data.data.page.page;
+
+                $scope.details = response.data.data.info;                
+            }, function errorCallback(response) {
+            });
+    });
+
+    $(window).scroll(function () {
+            if ($(document).scrollTop() > ($(document).height() - $(window).height()) / 1.5) {
+                var page=$("#page").val();
+                var page_total=$("#page_total").val();
+                //console.log(page);
+                // console.log(page_total);
+                if(page < page_total) {
+           
+                    var nextPage = parseInt(page)+1;
+                    //console.log(nextPage)
+                    var data = {"page":nextPage,"page_num":"10","order_field":"create_time","order_by":"DESC","category_id":"0","get_page":"true"};
+                    // $http({
+                    //     method:'POST',
+                    //     data:data,
+                    //     url:'/api.php/ChannelIndex/index/action/dataList/channel/xq/type/1',   
+                    //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },    
+                    //     transformRequest: function(obj) {    
+                    //         var str = [];    
+                    //         for (var p in obj) {    
+                    //             str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));    
+                    //         }    
+                    //         return str.join("&");    
+                    //     }       
+                    // }).then(function successCallback(response) {  
+                    //         page = response.data.data.page.page;  
+                    //         var info = response.data.data.info;
+                    //         for(var i = 0;i<info.length;i++){
+                    //             code = 
+                    //              '<div class="main">'+
+                    //                  '<div class="section">'+
+                    //                  '<p class="sec_title clear">'+
+                    //                         '<span class="callForBids fl">【'+info[i].hzxs+'】</span>'+
+                    //                         '<span class="materials fl">'+info[i].title+'</span>'+
+                    //                  '</p>'+
+                    //                  '<p class="sec_content">'+info[i].desc+'</p>'+
+                    //                  '<div class="sec_data clear">'+
+                    //                         '<div class="sec_data_left fl">'+
+                    //                            ' <div>'+
+                    //                                 '<img src="<?php echo (MOBILE); ?>/images/icon-search-type.png" alt="">'+
+                    //                                 '<span class="sec_data_span">'+info[i].cat_name+'</span>'+
+                    //                                 '<img src="<?php echo (MOBILE); ?>/images/icon-search-time.png" alt="">'+
+                    //                                 '<span class="sec_data_span">'+info[i].yfzq+'</span>'+
+                    //                                 '<img src="<?php echo (MOBILE); ?>/images/icon-search-scan.png" alt="">'+
+                    //                                 '<span class="sec_data_span">'+info[i].clicks+'</span>'+
+                    //                             '</div>'+
+                    //                             '<p class="sec_data_p">'+
+                    //                                 '发布时间: <span class="sec_data_span">'+info[i].create_time+'</span>'+
+                    //                                 '投入预算：<span>'+info[i].yfys+'</span>'+
+                    //                             '</p>'+
+                    //                        ' </div>'+
+                    //                         '<img class="fr" src="<?php echo (MOBILE); ?>/images/icon-research.png" alt="">'+
+                    //                    ' </div>'+
+                    //                     '<a href="/index.php/Mobile/Demand/detail">'+
+                    //                        ' <div class="viewDetails clear">'+
+                    //                            ' <img class="fr" src="<?php echo (MOBILE); ?>/images/icon-right.png" alt="">'+
+                    //                            ' <span class="viewDetails_span fr">查看详情</span>'+
+                    //                         '</div>'+
+                    //                     '</a>'+
+                    //                 '</div>'+
+                    //                 '<div class="index_div"></div>'+
+                    //              '</div>';
+                    //         }
+                    //         $('.wrap').append(code);                        
+                           
+                                  
+                    //     }, function errorCallback(response) {
+                    //     });
+                    $.post("/api.php/ChannelIndex/index/action/dataList/channel/xq/type/1",data,function(response){
+                       $("#page").val(response['data']['page']['page'])
+                       //page = response['data']['page']['page']; 
+                       console.log(page); 
+                       var info = response['data']['info'];
+                       for(var i = 0;i<info.length;i++){
+                           code = code+
+                            '<div class="main">'+
+                                '<div class="section">'+
+                                '<p class="sec_title clear">'+
+                                       '<span class="callForBids fl">【'+info[i].hzxs+'】</span>'+
+                                       '<span class="materials fl">'+info[i].title+'</span>'+
+                                '</p>'+
+                                '<p class="sec_content">'+info[i].desc+'</p>'+
+                                '<div class="sec_data clear">'+
+                                       '<div class="sec_data_left fl">'+
+                                          ' <div>'+
+                                               '<img src="<?php echo (MOBILE); ?>/images/icon-search-type.png" alt="">'+
+                                               '<span class="sec_data_span">'+info[i].cat_name+'</span>'+
+                                               '<img src="<?php echo (MOBILE); ?>/images/icon-search-time.png" alt="">'+
+                                               '<span class="sec_data_span">'+info[i].yfzq+'</span>'+
+                                               '<img src="<?php echo (MOBILE); ?>/images/icon-search-scan.png" alt="">'+
+                                               '<span class="sec_data_span">'+info[i].clicks+'</span>'+
+                                           '</div>'+
+                                           '<p class="sec_data_p">'+
+                                               '发布时间: <span class="sec_data_span">'+info[i].create_time+'</span>'+
+                                               '投入预算：<span>'+info[i].yfys+'</span>'+
+                                           '</p>'+
+                                      ' </div>'+
+                                       '<img class="fr" src="<?php echo (MOBILE); ?>/images/icon-research.png" alt="">'+
+                                  ' </div>'+
+                                   '<a href="/index.php/Mobile/Demand/detail">'+
+                                      ' <div class="viewDetails clear">'+
+                                          ' <img class="fr" src="<?php echo (MOBILE); ?>/images/icon-right.png" alt="">'+
+                                          ' <span class="viewDetails_span fr">查看详情</span>'+
+                                       '</div>'+
+                                   '</a>'+
+                               '</div>'+
+                               '<div class="index_div"></div>'+
+                            '</div>';
+                       }
+                       $('.wrap').append(code);              
+                    })
+                }
+              
+            }
+        });
+
     // 轮播
     var mySwiper = new Swiper(".swiper-container",{
         freeMode : true,
         slidesPerView : 5,
+        observer:true,//修改swiper自己或子元素时，自动初始化swiper 
+        observeParents:true//修改swiper的父元素时，自动初始化swiper 
     });
-    $(".swiper-slide li").on("click",function(){
+
+    $(".demand_nav").on("click",".swiper-slide li",function(){
         var index = $(this).parent(".swiper-slide").index();
-        var tranLeft = index*150;
-        // console.log($(this).parent(".swiper-slide").index());
+        var tranLeft = index*150;      
         $(".sildeBlock").css("transform","translateX("+tranLeft+"px)");
     });
 
     $(".inputDiv").on("click",function(){
         $(".search").hide();
         $(".searching").show();
-    })
+    });
+
+
+
 </script>
 </html>
