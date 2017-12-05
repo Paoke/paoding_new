@@ -915,3 +915,117 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
 
+[ 2017-12-05T21:14:52+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003573s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000853s ]
+NOTIC: [2] Declaration of Pc\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) D:\xampp\htdocs\paoding_new\Application\Pc\Controller\IndexController.class.php 第 7 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:1.105150s ]
+INFO: [ action_begin ] --END-- [ RunTime:1.105210s ]
+NOTIC: [8] Undefined index: code D:\xampp\htdocs\paoding_new\Application\Pc\Controller\IndexController.class.php 第 21 行.
+NOTIC: [8] Undefined index: ifWeChatLogin D:\xampp\htdocs\paoding_new\Application\Pc\Controller\IndexController.class.php 第 23 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000591s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000632s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000233s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000275s ]
+NOTIC: [8] Use of undefined constant Activity - assumed 'Activity' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\93c49ad67facdb6f997f1649493c88cf.php 第 22 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\93c49ad67facdb6f997f1649493c88cf.php 第 25 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\93c49ad67facdb6f997f1649493c88cf.php 第 25 行.
+NOTIC: [8] Undefined variable: fatherId D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\93c49ad67facdb6f997f1649493c88cf.php 第 392 行.
+NOTIC: [8] Undefined variable: sonId D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\93c49ad67facdb6f997f1649493c88cf.php 第 393 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\93c49ad67facdb6f997f1649493c88cf.php 第 401 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014497s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014530s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003530s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004120s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000875s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000922s ]
+
+[ 2017-12-05T22:17:15+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000963s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001032s ]
+NOTIC: [2] Declaration of Pc\Controller\IndexController::error() should be compatible with Think\Controller::error($message = '', $jumpUrl = '', $ajax = false) D:\xampp\htdocs\paoding_new\Application\Pc\Controller\IndexController.class.php 第 7 行.
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000800s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000883s ]
+NOTIC: [8] Undefined index: code D:\xampp\htdocs\paoding_new\Application\Pc\Controller\IndexController.class.php 第 21 行.
+NOTIC: [8] Undefined index: ifWeChatLogin D:\xampp\htdocs\paoding_new\Application\Pc\Controller\IndexController.class.php 第 23 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000690s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000738s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000291s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000341s ]
+NOTIC: [8] Use of undefined constant Activity - assumed 'Activity' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\93c49ad67facdb6f997f1649493c88cf.php 第 22 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\93c49ad67facdb6f997f1649493c88cf.php 第 25 行.
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\93c49ad67facdb6f997f1649493c88cf.php 第 25 行.
+NOTIC: [8] Undefined variable: fatherId D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\93c49ad67facdb6f997f1649493c88cf.php 第 392 行.
+NOTIC: [8] Undefined variable: sonId D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\93c49ad67facdb6f997f1649493c88cf.php 第 393 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\93c49ad67facdb6f997f1649493c88cf.php 第 401 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015890s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015927s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002375s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002959s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000986s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001037s ]
+
+[ 2017-12-05T22:17:27+08:00 ] 127.0.0.1 /index.php/Pc/Article/data_list/channel/xq
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000529s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000647s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000705s ]
+NOTIC: [8] Undefined index: if_hzqy D:\xampp\htdocs\paoding_new\Application\Pc\Controller\ArticleController.class.php 第 26 行.
+NOTIC: [8] Undefined index: code D:\xampp\htdocs\paoding_new\Application\Pc\Controller\ArticleController.class.php 第 29 行.
+NOTIC: [8] Undefined index: ifWeChatLogin D:\xampp\htdocs\paoding_new\Application\Pc\Controller\ArticleController.class.php 第 31 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000944s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000998s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000253s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000304s ]
+NOTIC: [8] Use of undefined constant Activity - assumed 'Activity' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\df68e5c44e63473a9f7b9541cd931c10.php 第 18 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\df68e5c44e63473a9f7b9541cd931c10.php 第 21 行.
+NOTIC: [8] Undefined index: listorder D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\df68e5c44e63473a9f7b9541cd931c10.php 第 121 行.
+NOTIC: [8] Undefined index: listorder D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\df68e5c44e63473a9f7b9541cd931c10.php 第 121 行.
+NOTIC: [8] Undefined index: cat_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\df68e5c44e63473a9f7b9541cd931c10.php 第 121 行.
+NOTIC: [8] Undefined index: listorder D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\df68e5c44e63473a9f7b9541cd931c10.php 第 124 行.
+NOTIC: [8] Undefined index: cat_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\df68e5c44e63473a9f7b9541cd931c10.php 第 124 行.
+NOTIC: [8] Undefined variable: fatherId D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\df68e5c44e63473a9f7b9541cd931c10.php 第 278 行.
+NOTIC: [8] Undefined variable: sonId D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\df68e5c44e63473a9f7b9541cd931c10.php 第 279 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\df68e5c44e63473a9f7b9541cd931c10.php 第 286 行.
+NOTIC: [8] Use of undefined constant Science - assumed 'Science' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\df68e5c44e63473a9f7b9541cd931c10.php 第 286 行.
+NOTIC: [8] Use of undefined constant Task - assumed 'Task' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Pc\df68e5c44e63473a9f7b9541cd931c10.php 第 287 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013921s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013962s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000668s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002589s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003319s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001620s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001698s ]
+

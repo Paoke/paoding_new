@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/swiper.css">
 </head>
 <body ng-cloak ng-controller="demandListCtrl">
-<input type="hidden" value="1" id="page"/>
-<input type="hidden" value="7"  id="page_total"/>
 <div class="demand_nav">
     <ul>
         <div class="swiper-container" style="overflow:visible">
@@ -116,17 +114,17 @@
 <script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
 <script src='<?php echo (MOBILE); ?>/js/swiper.min.js'></script>
 <script>
-    //var page = "";
-    //var page_total = "";
+    var page = "";
+    var page_total = "";
     var app = angular.module("demand_list",[]);
-    var code = "";
-    app.controller("demandListCtrl",function ($scope,$http){  
+
+    app.controller("demandListCtrl",function ($scope,$http){
         // 1.20.需求类别栏目
         $http({
             method:'GET',
-            url:'/api.php/ChannelIndex/index/action/dataList/channel/xq/type/2',          
-        }).then(function successCallback(response) {                      
-                $scope.lists = response.data.data;                  
+            url:'/api.php/ChannelIndex/index/action/dataList/channel/xq/type/2',
+        }).then(function successCallback(response) {
+                $scope.lists = response.data.data;
             }, function errorCallback(response) {
             });
 
@@ -135,98 +133,34 @@
         $http({
             method:'POST',
             data:data,
-            url:'/api.php/ChannelIndex/index/action/dataList/channel/xq/type/1',   
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },    
-            transformRequest: function(obj) {    
-                var str = [];    
-                for (var p in obj) {    
-                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));    
-                }    
-                return str.join("&");    
-            }       
-        }).then(function successCallback(response) {  
-                // page = response.data.data.page.page; 
-                // page_total = response.data.data.page.page_total; 
+            url:'/api.php/ChannelIndex/index/action/dataList/channel/xq/type/1',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            transformRequest: function(obj) {
+                var str = [];
+                for (var p in obj) {
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                }
+                return str.join("&");
+            }
+        }).then(function successCallback(response) {
+                 page = response.data.data.page.page;
+                 page_total = response.data.data.page.page_total;
 
-                //$scope.page=response.data.data.page.page;
-
-                $scope.details = response.data.data.info;                
+                $scope.details = response.data.data.info;
             }, function errorCallback(response) {
             });
     });
 
     $(window).scroll(function () {
             if ($(document).scrollTop() > ($(document).height() - $(window).height()) / 1.5) {
-                var page=$("#page").val();
-                var page_total=$("#page_total").val();
-                //console.log(page);
-                // console.log(page_total);
+
                 if(page < page_total) {
-           
-                    var nextPage = parseInt(page)+1;
-                    //console.log(nextPage)
-                    var data = {"page":nextPage,"page_num":"10","order_field":"create_time","order_by":"DESC","category_id":"0","get_page":"true"};
-                    // $http({
-                    //     method:'POST',
-                    //     data:data,
-                    //     url:'/api.php/ChannelIndex/index/action/dataList/channel/xq/type/1',   
-                    //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },    
-                    //     transformRequest: function(obj) {    
-                    //         var str = [];    
-                    //         for (var p in obj) {    
-                    //             str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));    
-                    //         }    
-                    //         return str.join("&");    
-                    //     }       
-                    // }).then(function successCallback(response) {  
-                    //         page = response.data.data.page.page;  
-                    //         var info = response.data.data.info;
-                    //         for(var i = 0;i<info.length;i++){
-                    //             code = 
-                    //              '<div class="main">'+
-                    //                  '<div class="section">'+
-                    //                  '<p class="sec_title clear">'+
-                    //                         '<span class="callForBids fl">【'+info[i].hzxs+'】</span>'+
-                    //                         '<span class="materials fl">'+info[i].title+'</span>'+
-                    //                  '</p>'+
-                    //                  '<p class="sec_content">'+info[i].desc+'</p>'+
-                    //                  '<div class="sec_data clear">'+
-                    //                         '<div class="sec_data_left fl">'+
-                    //                            ' <div>'+
-                    //                                 '<img src="<?php echo (MOBILE); ?>/images/icon-search-type.png" alt="">'+
-                    //                                 '<span class="sec_data_span">'+info[i].cat_name+'</span>'+
-                    //                                 '<img src="<?php echo (MOBILE); ?>/images/icon-search-time.png" alt="">'+
-                    //                                 '<span class="sec_data_span">'+info[i].yfzq+'</span>'+
-                    //                                 '<img src="<?php echo (MOBILE); ?>/images/icon-search-scan.png" alt="">'+
-                    //                                 '<span class="sec_data_span">'+info[i].clicks+'</span>'+
-                    //                             '</div>'+
-                    //                             '<p class="sec_data_p">'+
-                    //                                 '发布时间: <span class="sec_data_span">'+info[i].create_time+'</span>'+
-                    //                                 '投入预算：<span>'+info[i].yfys+'</span>'+
-                    //                             '</p>'+
-                    //                        ' </div>'+
-                    //                         '<img class="fr" src="<?php echo (MOBILE); ?>/images/icon-research.png" alt="">'+
-                    //                    ' </div>'+
-                    //                     '<a href="/index.php/Mobile/Demand/detail">'+
-                    //                        ' <div class="viewDetails clear">'+
-                    //                            ' <img class="fr" src="<?php echo (MOBILE); ?>/images/icon-right.png" alt="">'+
-                    //                            ' <span class="viewDetails_span fr">查看详情</span>'+
-                    //                         '</div>'+
-                    //                     '</a>'+
-                    //                 '</div>'+
-                    //                 '<div class="index_div"></div>'+
-                    //              '</div>';
-                    //         }
-                    //         $('.wrap').append(code);                        
-                           
-                                  
-                    //     }, function errorCallback(response) {
-                    //     });
+                    page = parseInt(page)+1;
+                    var data = {"page":page,"page_num":"10","order_field":"create_time","order_by":"DESC","category_id":"0","get_page":"true"};
                     $.post("/api.php/ChannelIndex/index/action/dataList/channel/xq/type/1",data,function(response){
-                       $("#page").val(response['data']['page']['page'])
-                       //page = response['data']['page']['page']; 
-                       console.log(page); 
+                       $("#page").val(response['data']['page'].page);
                        var info = response['data']['info'];
+                       var code = "";
                        for(var i = 0;i<info.length;i++){
                            code = code+
                             '<div class="main">'+
@@ -263,8 +197,8 @@
                                '<div class="index_div"></div>'+
                             '</div>';
                        }
-                       $('.wrap').append(code);              
-                    })
+                       $('.wrap').append(code);
+                    },'json');
                 }
               
             }
