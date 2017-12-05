@@ -67,17 +67,40 @@
     </div>
 </div>
 
-<div class="advancedWrap" ng-controller="advancedCtrl" ng-cloak style="margin-top:30px;">
-    <div class="main_section clear" ng-repeat="tech in techList">
+<div class="advancedWrap" style="margin-top:30px;">
+    <a href="__MODULE__/Index/detail_tec.html">
+        <div class="main_section clear">
+            <div class="fl main_section_left">
+                <img ng-src="{$Think.MOBILE}/images/index-advanced-tech.jpg" alt="">
+                <p class="transfer">技术转让</p>
+            </div>
+            <div class="fr main_section_right">
+                <p class="sec_tit">印刷品无痕防伪技术</p>
+                <p>
+                    <img src="{$Think.MOBILE}/images/icon-index-industry.png" alt="">
+                    <span class="sec_industry">印刷工业，防伪工业</span>
+                </p>
+                <p class="p_scan">
+                    <img src="{$Think.MOBILE}/images/icon-index-browse.png" alt="">
+                    <span class="sec_scan">2068</span>
+                </p>
+                <div class="adhi_print">
+                    <span class="adhibition">应用类</span>
+                    <span class="print">成熟方案</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <div class="main_section clear">
         <div class="fl main_section_left">
-            <img ng-src="{{tech.src}}" alt="">
+            <img ng-src="{$Think.MOBILE}/images/index-advanced-tech.jpg" alt="">
             <p class="transfer">技术转让</p>
         </div>
         <div class="fr main_section_right">
-            <p class="sec_tit">{{tech.title}}</p>
+            <p class="sec_tit">印刷品无痕防伪技术</p>
             <p>
                 <img src="{$Think.MOBILE}/images/icon-index-industry.png" alt="">
-                <span class="sec_industry">{{tech.type}}</span>
+                <span class="sec_industry">印刷工业，防伪工业</span>
             </p>
             <p class="p_scan">
                 <img src="{$Think.MOBILE}/images/icon-index-browse.png" alt="">

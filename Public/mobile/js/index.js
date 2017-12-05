@@ -22,13 +22,13 @@ app.controller("hotCtrl",function ($scope,$http){
 });
 
 	// 前沿技术
-app.controller("advancedCtrl",function ($scope,$http){
-	$scope.techList = [
-		{a:'activity.html',src:'images/index-advanced-tech.jpg',title:'印刷品无痕防伪技术',type:'印刷工业，防伪工业'},
-		{a:'activity.html',src:'images/index-advanced-tech.jpg',title:'印刷品无痕防伪技术2',type:'印刷工业，防伪工业'},
-
-	]
-})
+// app.controller("advancedCtrl",function ($scope,$http){
+// 	$scope.techList = [
+// 		{a:'activity.html',src:'images/index-advanced-tech.jpg',title:'印刷品无痕防伪技术',type:'印刷工业，防伪工业'},
+// 		{a:'activity.html',src:'images/index-advanced-tech.jpg',title:'印刷品无痕防伪技术2',type:'印刷工业，防伪工业'},
+//
+// 	]
+// })
 
 // 合作单位
 app.controller("coopUnitCtrl",function ($scope,$http){

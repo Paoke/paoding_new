@@ -201,15 +201,15 @@
 	line-height: 80px;
 	color: #fff;
 	font-size: 32px;
-	background:#ed4a60;
+	background:#ed4a60; 
 	background: -webkit-linear-gradient(left,#ff971d, #ffc11a);
-	background: -o-linear-gradient(left,#ff971d, #ffc11a);
-	background: -moz-linear-gradient(left,#ff971d, #ffc11a);
+	background: -o-linear-gradient(left,#ff971d, #ffc11a); 
+	background: -moz-linear-gradient(left,#ff971d, #ffc11a); 
 	background: linear-gradient(left,#ff971d, #ffc11a);
 	-webkit-box-shadow: 0 0 8px #ff971d;
-	-moz-box-shadow: 0 0 8px #ff971d;
-	-ms-box-shadow: 0 0 8px #ff971d;
-	box-shadow: 0 0 8px #ff971d;
+    -moz-box-shadow: 0 0 8px #ff971d;
+    -ms-box-shadow: 0 0 8px #ff971d;
+    box-shadow: 0 0 8px #ff971d;   
 
 }
 .ICP{
@@ -227,7 +227,7 @@
 .main_hot_wrap{
 	width: 750px;
 	margin: 0 auto;
-	overflow-x:hidden;
+	overflow-x:hidden; 
 }
 #sky-slide{
 	width: 540px;
@@ -239,12 +239,12 @@
 #swiper-container2 .swiper-slide{
 	width: 272px !important;
 	margin-left: 30px;
-	box-shadow: 0 5px 10px #ccc;
-	padding-bottom: 20px;
+	box-shadow: 0 5px 10px #ccc;  
+	padding-bottom: 20px;  
 }
 
 .main_hot{
-	/*	overflow-x:hidden; */
+/*	overflow-x:hidden; */
 	margin: 0 auto;
 	padding-bottom: 40px;
 }
@@ -293,8 +293,8 @@
 	margin-left: 25px;
 }
 .coop_img{
-	width: 262px;
-	height: 194px;
+	width: 270px;
+	height: 168px;
 }
 .coop_title{
 	line-height: 1.5;
@@ -330,7 +330,7 @@
 	background-color: #fff;
 	position: relative;
 
-
+	
 }
 .advice_text{
 	display: block;
@@ -390,16 +390,16 @@
 	border: 1px solid #fff;
 }
 .register_btn {
-	display: block;
-	width: 690px;
-	height: 90px;
-	margin: 90px auto 60px;
-	text-align: center;
-	line-height: 90px;
-	background-color: #ccc;
-	border-radius: 4px;
-	color: #fff;
-	font-size: 32px;
+    display: block;
+    width: 690px;
+    height: 90px;
+    margin: 90px auto 60px;
+    text-align: center;
+    line-height: 90px;
+    background-color: #ccc;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 32px;
 }
 
 .inp_radio{
@@ -493,7 +493,7 @@
 	font-size: 20px;
 	color: #999;
 	margin-top: 12px;
-
+	
 }
 .hot_tecs{
 	margin-left: 12px;
@@ -526,7 +526,7 @@
 	width: 140px;height: 88px;
 	background: #ff971d;
 	text-align: center;
-	line-height: 88px;
+	line-height: 88px;	
 	color: #fff;
 	font-size: 28px;
 	font-weight: bold;
@@ -535,7 +535,7 @@
 	font-size: 28px;
 	color: #1e1e1e;
 	font-weight: bold;
-	line-height: 88px;
+	line-height: 88px;	
 	margin-left: 104px;
 }
 .computer_wrap{
@@ -641,13 +641,15 @@
 	text-align: left;
 	border-bottom: 1px solid #e6e6e6;
 }
-.tec_tab{
+.tec_tab,.coop_tab{
+	margin: 0 auto;
 	width: 750px;
 	height: 90px;
 	position: relative;
 	color: #999;
 	font-size: 26px;
 	overflow: hidden;
+	background: #fff;
 }
 .tec_tab p{
 	width: 187px;
@@ -656,14 +658,28 @@
 	float: left;
 	text-align: center;
 }
+.coop_tab p{
+	width: 150px;
+	height: 90px;
+	line-height: 90px;
+	float: left;
+	text-align: center;
+}
 .slideBlock{
+	transition:all .2s;
 	position: absolute;
 	left: 40px;
-	/*left: 226px;*/
-	/*left: 412px;*/
-	/*left: 600px;*/
 	bottom: 1px;
 	width: 108px;
+	height: 2px;
+	background: #ff971d;
+}
+.coop_slideBlock{
+	transition:all .2s;
+	position: absolute;
+	left: 44px;
+	bottom: 1px;
+	width: 60px;
 	height: 2px;
 	background: #ff971d;
 }
@@ -677,9 +693,9 @@
 .tec_tit{
 	width: 326px;
 	height: 74px;
-	background: url(../images/index-techdetail-label.png);
+	background: url(./../images/index-techdetail-label.png);
 	background-size: 100%;
-	margin-top: 60px;
+	margin-top: 90px;
 	color: #fff;
 	font-size: 26px;
 	line-height: 74px;
@@ -708,6 +724,7 @@
 }
 
 .contackWay_alert{
+	display: none;
 	width: 580px;
 	height: 608px;
 	text-align: center;
@@ -752,4 +769,139 @@
 .active{
 	color:#ff971d;
 }
+.tec_tab a{
+	display: block;
+}
+.wrap{
+	display: none;
+}
+.coop_tab_main{
+	margin: 0 auto;
+	padding: 30px 0;
+	width: 690px;
+	background: #fff;
+	border-bottom: 1px solid #eee;
 
+}
+.coop_main_right{
+	width: 380px;
+	margin-left: 30px;
+}
+.cont_way{
+	margin-top: 16px;
+	font-size: 24px;
+	color: #666;
+	line-height: 1.3;
+}
+._title{
+	font-size: 26px;
+	color: #1e1e1e;
+}
+.coop_icon{
+	margin-top: 14px;
+}
+.wrap{
+	width: 750px;
+	margin: 0 auto;
+	background: #fff;
+}
+.ass_title{
+	width: 750px;
+	margin: 0 auto; 
+	font-size: 30px;
+	color: #1e1e1e;
+	padding: 16px 0;
+}
+.ass_title img{
+	margin-left: 232px;
+	margin-right: 20px;
+}
+.ass_title p{
+	margin-left: 5px;
+	margin-top: 6px;
+}
+.ass_intro{
+	width: 750px;
+	margin: 0 auto;
+	padding:30px;
+
+}
+.ass_intro_p{
+	font-size: 26px;
+	color: #666;
+	line-height: 44px;
+	text-indent:2em;
+}
+.showMore{
+	margin: 40px auto 10px;
+	width: 190px;
+	height: 40px;
+	border-radius: 22px;
+	color: #ff971d;
+	border: 1px solid #ff971d;
+	font-size: 24px;
+	line-height: 40px;
+	text-align: center;
+}
+.asso_title{
+	width: 750px;
+	margin: 20px auto;
+	color: #1e1e1e;
+	font-size: 26px;
+	padding-left: 30px;
+}
+
+.companyIntro{
+	width: 750px;
+	margin: 0 auto;
+	font-size: 26px;
+	color: #999;
+	line-height: 1.5;
+	padding: 20px 30px;
+	text-indent: 2em;
+}
+
+.userType{
+	width: 690px;
+	margin: 0 auto;
+	border-bottom: 1px solid #e7e7e7;
+	font-size: 26px;
+	color: #666;
+	padding-top: 20px;
+}
+.userType span{
+	margin: 8px 30px 30px 0;
+}
+.mastiry_type{
+	width: 500px;
+
+}
+
+.certi_main{
+	width: 750px;
+	margin: 0 auto;
+	padding: 40px 30px 0;
+}
+.certificate{
+	width: 690px;
+	margin-top: 20px;
+	display: none;
+}
+.certificate_left{
+	width: 332px;
+	height: 200px;
+	border: 1px solid #e7e7e7;
+	text-align: center;
+	overflow: hidden;
+}
+.certificate_left img{
+	width: 50%;	
+}
+.big_cert{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	z-index: 999;
+
+}

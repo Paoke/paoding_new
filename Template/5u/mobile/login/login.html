@@ -63,7 +63,7 @@
                 // 登陆成功跳转到my.html
                 if(response.data.result==1){
                     alert("登录成功");
-                    window.location.href="/index.php/Mobile/User/user_center.html";
+                    window.location.href="/index.php/Mobile/Index/index.html";
                 }else{
                     alert("登录失败");
                 } 

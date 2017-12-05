@@ -273,7 +273,9 @@
     </a>
 </div>
 
-<div class="main_section clear">
+
+<a href="/index.php/Mobile/Index/detail_tec.html">
+    <div class="main_section clear">
     <div class="fl main_section_left">
         <img src="<?php echo (MOBILE); ?>/images/index-advanced-tech.jpg" alt="">
         <p class="transfer">技术转让</p>
@@ -294,6 +296,7 @@
         </div>
     </div>
 </div>
+</a>
 
 <div class="main_section clear">
     <div class="fl main_section_left">
@@ -363,104 +366,20 @@
 
 
 <!-- 合作企业 -->
-<div class="index_main_title clear" style="margin-bottom:0">
+<div class="index_main_title clear">
     <img class="fl" src="<?php echo (MOBILE); ?>/images/icon-index-cooperative-enterprise.jpg" alt="">
     <a href="#">
         <p class="fr more_tec">更多单位<img src="<?php echo (MOBILE); ?>/images/icon-right.png" alt=""></p>
     </a>
 </div>
-<div class="main_coop">
+<div class="index_coop_swiper" ng-controller="companyCtrl" ng-cloak>
     <div class="swiper-container" id="swiper-container4">
         <div class="swiper-wrapper">
-            <div class="clear swiper-slide">
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
+            <div class="swiper-slide" ng-repeat="unit in comList">
+                <img class="coop_img" ng-src="{{unit.src}}" alt="">
             </div>
-            <div class="clear swiper-slide">
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-            </div>
-            <div class="clear swiper-slide">
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-                <div class="coop_sec fl">
-                    <img src="<?php echo (MOBILE); ?>/images/index-cooperative-enterprise.jpg" alt="">
-                </div>
-            </div>
+
         </div>
-        <div class="swiper-pagination"></div>
     </div>
 </div>
 
@@ -499,21 +418,28 @@
 </body>
 <script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
 <script src='<?php echo (MOBILE); ?>/js/swiper.min.js'></script>
+<script src='<?php echo (MOBILE); ?>/js/index.js'></script>
 <script>
     // 轮播
     var mySwiper = new Swiper('#swiper-container1', {
         pagination : '.swiper-pagination',
         paginationClickable :true,
-        loop:true,
-        // autoplay: 3000
+        // loop:true,
+        observer:true,//修改swiper自己或子元素时，自动初始化swiper
+        observeParents:true,//修改swiper的父元素时，自动初始化swiper
+        // onSlideChangeEnd: function(swiper){
+        // 　　　swiper.update();
+        // 　　　mySwiper.startAutoplay();
+        // 　　   mySwiper.reLoop();
+        // }
     });
     var mySwiper2 = new Swiper('#swiper-container2', {
         paginationClickable :true,
         slidesPerView : 3,
         slidesPerGroup : 3,
-        //普通模式：slide滑动时只滑动一格，并自动贴合wrapper，设置为true则变为free模式，slide会根据惯性滑动且不会贴合。
-        freeMode : true
-        // slidesPerView : 'auto'
+        freeMode : true,
+        observer:true,
+        observeParents:true
 
     });
     var mySwiper3 = new Swiper('#swiper-container3', {
@@ -522,13 +448,26 @@
         slidesPerView : 2,
         slidesPerGroup : 3,
         freeMode : true,
-        slidesPerView : 'auto'
+        slidesPerView : 'auto',
+        observer:true,
+        observeParents:true
     });
 
     var mySwiper4 = new Swiper('#swiper-container4', {
-        pagination : '.swiper-pagination',
         paginationClickable :true,
-        loop:true,
-    })
+        slidesPerColumn : 2,
+        slidesPerView : 2,
+        slidesPerGroup : 3,
+        freeMode : true,
+        slidesPerView : 'auto',
+        observer:true,
+        observeParents:true
+    });
+
+    // var mySwiper4 = new Swiper('#swiper-container4', {
+    // 	pagination : '.swiper-pagination',
+    // 	paginationClickable :true,
+    // 	loop:true,
+    // })
 </script>
 </html>

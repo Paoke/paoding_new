@@ -134,7 +134,7 @@ padding:0;
                                     </li><?php endif; ?>   <!-- 上一页 end -->
 
                                 <?php if($page < 5): ?><!-- 页码条 -->
-                                    <?php $__FOR_START_11822__=1;$__FOR_END_11822__=$page+1;for($i=$__FOR_START_11822__;$i < $__FOR_END_11822__;$i+=1){ ?><!-- 循环四条以内 -->
+                                    <?php $__FOR_START_22827__=1;$__FOR_END_22827__=$page+1;for($i=$__FOR_START_22827__;$i < $__FOR_END_22827__;$i+=1){ ?><!-- 循环四条以内 -->
                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($i); ?></a></li>
                                             <?php elseif($i < $page_now ): ?>
                                             <li><a href="/index.php/Admin/PageConfig/page_config/action/page_list/page_now/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>"><?php echo ($i); ?></a>
@@ -143,7 +143,7 @@ padding:0;
                                             <li><a href="/index.php/Admin/PageConfig/page_config/action/page_list/page_now/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>"><?php echo ($i); ?></a>
                                             </li><?php endif; } ?>
                                     <?php elseif($page_now < 3): ?>
-                                    <?php $__FOR_START_24015__=1;$__FOR_END_24015__=6;for($i=$__FOR_START_24015__;$i < $__FOR_END_24015__;$i+=1){ ?><!-- 循环1-5 -->
+                                    <?php $__FOR_START_16776__=1;$__FOR_END_16776__=6;for($i=$__FOR_START_16776__;$i < $__FOR_END_16776__;$i+=1){ ?><!-- 循环1-5 -->
 
                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                             <?php elseif($i < $page_now ): ?>
@@ -153,7 +153,7 @@ padding:0;
                                             <li><a href="/index.php/Admin/PageConfig/page_config/action/page_list/page_now/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>"><?php echo ($i); ?></a>
                                             </li><?php endif; } ?>
                                     <?php elseif($page_now == $page-1): ?>
-                                    <?php $__FOR_START_13148__=$page_now-3;$__FOR_END_13148__=$page+1;for($i=$__FOR_START_13148__;$i < $__FOR_END_13148__;$i+=1){ ?><!-- 循环当前页为倒数第二页时 -->
+                                    <?php $__FOR_START_1825__=$page_now-3;$__FOR_END_1825__=$page+1;for($i=$__FOR_START_1825__;$i < $__FOR_END_1825__;$i+=1){ ?><!-- 循环当前页为倒数第二页时 -->
                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                             <?php elseif($i < $page ): ?>
                                             <li><a href="/index.php/Admin/PageConfig/page_config/action/page_list/page_now/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>"><?php echo ($i); ?></a>
@@ -162,7 +162,7 @@ padding:0;
                                             <li><a href="/index.php/Admin/PageConfig/page_config/action/page_list/page_now/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>"><?php echo ($i); ?></a>
                                             </li><?php endif; } ?>
                                     <?php elseif($page_now == $page): ?>
-                                    <?php $__FOR_START_5733__=$page_now-4;$__FOR_END_5733__=$page+1;for($i=$__FOR_START_5733__;$i < $__FOR_END_5733__;$i+=1){ ?><!-- 循环当前页为最后一页时 -->
+                                    <?php $__FOR_START_18246__=$page_now-4;$__FOR_END_18246__=$page+1;for($i=$__FOR_START_18246__;$i < $__FOR_END_18246__;$i+=1){ ?><!-- 循环当前页为最后一页时 -->
                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                             <?php elseif($i < $page ): ?>
                                             <li><a href="/index.php/Admin/PageConfig/page_config/action/page_list/page_now/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>"><?php echo ($i); ?></a>
@@ -171,7 +171,7 @@ padding:0;
                                             <li><a href="/index.php/Admin/PageConfig/page_config/action/page_list/page_now/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>"><?php echo ($i); ?></a>
                                             </li><?php endif; } ?>
                                     <?php else: ?>
-                                    <?php $__FOR_START_32570__=$page_now-2;$__FOR_END_32570__=$page_now+3;for($i=$__FOR_START_32570__;$i < $__FOR_END_32570__;$i+=1){ ?><!-- 循环除了前五条 和后五条 -->
+                                    <?php $__FOR_START_23815__=$page_now-2;$__FOR_END_23815__=$page_now+3;for($i=$__FOR_START_23815__;$i < $__FOR_END_23815__;$i+=1){ ?><!-- 循环除了前五条 和后五条 -->
 
                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                             <?php elseif($i < $page ): ?>
