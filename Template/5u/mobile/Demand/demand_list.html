@@ -73,7 +73,7 @@
                 </div>
                 <img ng-show="detail.xpyf=='是'" class="fr" src="{$Think.MOBILE}/images/icon-research.png" alt="">
             </div>
-            <a href="__CONTROLLER__/detail">
+            <a href="__CONTROLLER__/detail?data_id={{detail.id}}">
                 <div class="viewDetails clear">
                     <img class="fr" src="{$Think.MOBILE}/images/icon-right.png" alt="">
                     <span class="viewDetails_span fr">查看详情</span>
@@ -170,7 +170,7 @@
             // var info = $("").length;
             var code = "";
             $.post("/api.php/ChannelIndex/index/action/dataList/channel/xq/type/1",data,function(response){
-              console.log(response.data.length);
+              // console.log(response.data.length);
               var info = response.data;
                 for(var i = 0;i<info.length;i++){
                     code = code+

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="detail">
 <head>
     <meta charset="UTF-8">
     <title>需求详情</title>
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/swiper.css">
 </head>
-<body>
+<body ng-controller="detailCtrl">
 <div class="mask"></div>
 <div class="alert">
     <div class="sorry">
@@ -29,24 +29,24 @@
 <div class="main">
     <div class="section">
         <p class="sec_title clear">
-            <span class="callForBids fl">【招标中】</span>
-            <span class="materials fl">防水保温材料研发防水保温材料</span>
+            <span class="callForBids fl">【{{detail.hzxs}}】</span>
+            <span class="materials fl">{{detail.title}}</span>
         </p>
 
         <div class="sec_data clear">
             <div class="sec_data_left fl">
                 <div>
-                    <p class="sec_data_num">需求编号:20171106001</p>
+                    <p class="sec_data_num">需求编号:{{detail.id}}</p>
                     <img src="{$Think.MOBILE}/images/icon-search-type.png" alt="">
-                    <span class="sec_data_span">材料科学</span>
+                    <span class="sec_data_span">{{detail.cat_name}}</span>
                     <img src="{$Think.MOBILE}/images/icon-search-time.png" alt="">
-                    <span class="sec_data_span">12个月</span>
+                    <span class="sec_data_span">{{detail.yfzq}}</span>
                     <img src="{$Think.MOBILE}/images/icon-search-scan.png" alt="">
-                    <span class="sec_data_span">2480</span>
+                    <span class="sec_data_span">{{detail.clicks}}</span>
                 </div>
                 <p class="sec_data_p">
-                    发布时间: <span class="sec_data_span">2017-09-26</span>
-                    投入预算：<span>面议</span>
+                    发布时间: <span class="sec_data_span">{{detail.create_time}}</span>
+                    投入预算：<span>{{detail.yfys}}</span>
                 </p>
             </div>
             <img class="fr" src="{$Think.MOBILE}/images/icon-research.png" alt="">
@@ -93,13 +93,7 @@
         <div class="black_block fl"></div>
         需求讲述
     </div>
-    <p>
-        1、通过裙板或桁架内侧多点监测梯级振动<br>
-        2、接入安全回路，必要时停梯<br>
-        3、每个梯型正常振幅不同，可以调整报警区间<br>
-        4、存储振动记录<br>
-        5、目前市场没有同类装置
-    </p>
+    <p ng-bind-html="detail.content|trustHtml"></p>
     <div class="demand_photo">
         <img src="{$Think.MOBILE}/images/demand-image.jpg" alt="">
     </div>
@@ -115,18 +109,45 @@
 </div>
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script>
 
     $(".findDemand").on("click",function(){
         $(".sorry").hide();
         $(".showTel").show();
     });
-
     // 关闭弹出框
-
     $(".close").on("click",function(){
         $(".mask").hide();
         $(".alert").hide();
-    })
+    });
+
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r!=null) return unescape(r[2]); return null;
+    }
+    var data_id = GetQueryString("data_id");
+
+   
+    var app = angular.module("detail",[]);
+    app.filter('trustHtml',function ($sce){
+        return function(val) {
+            return $sce.trustAsHtml(val);
+        }
+    });
+    app.controller("detailCtrl",function ($scope,$http){
+        $http({
+            method:'GET',
+            params:{data_id:data_id},  
+            // 1.25.获取需求详情接口
+            url:'/api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1',
+        }).then(function successCallback(response){       
+          $scope.detail = response.data.data;
+        },function errorCallback(){          
+        });
+    });
+
+
 </script>
 </html>
