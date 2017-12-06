@@ -35,18 +35,24 @@
 </div>
 
 <div class="activity_nav clear">
-    <li class="activity_nav_part fl" style="margin-left:90px;background: url(<?php echo (MOBILE); ?>/images/icon-activity-salon.png) center 0 no-repeat;">
-        <div class="activity_nav_part_icon"></div>
-        <p class="activity_nav_part_theme">沙龙分享</p>
-    </li>
-    <li class="activity_nav_part fl" style="background: url(<?php echo (MOBILE); ?>/images/icon-activity-fortum.png) center 0 no-repeat;">
-        <div class="activity_nav_part_icon"></div>
-        <p class="activity_nav_part_theme">主题论坛</p>
-    </li>
-    <li class="activity_nav_part fl" style="background: url(<?php echo (MOBILE); ?>/images/icon-activity-joint.png) center 0 no-repeat;">
-        <div class="activity_nav_part_icon"></div>
-        <p class="activity_nav_part_theme">对接会</p>
-    </li>
+    <a href="/index.php/Mobile/Activity/share.html">
+        <li class="activity_nav_part fl" style="margin-left:90px;background: url(<?php echo (MOBILE); ?>/images/icon-activity-salon.png) center 0 no-repeat;">
+            <div class="activity_nav_part_icon"></div>
+            <p class="activity_nav_part_theme">沙龙分享</p>
+        </li>
+    </a>
+    <a href="/index.php/Mobile/Activity/theme.html">
+        <li class="activity_nav_part fl" style="background: url(<?php echo (MOBILE); ?>/images/icon-activity-fortum.png) center 0 no-repeat;">
+            <div class="activity_nav_part_icon"></div>
+            <p class="activity_nav_part_theme">主题论坛</p>
+        </li>
+    </a>
+    <a href="/index.php/Mobile/Activity/abutment.html">
+        <li class="activity_nav_part fl" style="background: url(<?php echo (MOBILE); ?>/images/icon-activity-joint.png) center 0 no-repeat;">
+            <div class="activity_nav_part_icon"></div>
+            <p class="activity_nav_part_theme">对接会</p>
+        </li>
+    </a>
 </div>
 <div class="activity_grey"></div>
 

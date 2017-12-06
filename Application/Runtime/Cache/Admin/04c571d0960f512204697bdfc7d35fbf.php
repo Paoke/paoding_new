@@ -124,7 +124,7 @@
                                                         </a>
                                                     </li><?php endif; ?>   <!-- 上一页 end -->
                                                 <?php if($page < 5): ?><!-- 页码条 -->
-                                                    <?php $__FOR_START_17286__=1;$__FOR_END_17286__=$page+1;for($i=$__FOR_START_17286__;$i < $__FOR_END_17286__;$i+=1){ ?><!-- 循环四条以内 -->
+                                                    <?php $__FOR_START_1128__=1;$__FOR_END_1128__=$page+1;for($i=$__FOR_START_1128__;$i < $__FOR_END_1128__;$i+=1){ ?><!-- 循环四条以内 -->
                                                         <?php if($i == $page_now ): ?><li class="active"><a href=""><?php echo ($i); ?></a></li>
                                                             <?php elseif($i < $page_now ): ?>
                                                             <li>
@@ -135,7 +135,7 @@
                                                                 <a href="/index.php/Admin/Paoding/Paoding_list/action/page_list/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/page_now/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>/category_id/<?php echo ($category_id); ?>/keyword/<?php echo ($keyword); ?>"><?php echo ($i); ?></a>
                                                             </li><?php endif; } ?>
                                                     <?php elseif($page_now < 3): ?>
-                                                    <?php $__FOR_START_17479__=1;$__FOR_END_17479__=6;for($i=$__FOR_START_17479__;$i < $__FOR_END_17479__;$i+=1){ ?><!-- 循环1-5 -->
+                                                    <?php $__FOR_START_16513__=1;$__FOR_END_16513__=6;for($i=$__FOR_START_16513__;$i < $__FOR_END_16513__;$i+=1){ ?><!-- 循环1-5 -->
 
                                                         <?php if($i == $page_now ): ?><li class="active"><a href=""><?php echo ($page_now); ?></a></li>
                                                             <?php elseif($i < $page_now ): ?>
@@ -147,7 +147,7 @@
                                                                 <a href="/index.php/Admin/Paoding/Paoding_list/action/page_list/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/page_now/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>/category_id/<?php echo ($category_id); ?>/keyword/<?php echo ($keyword); ?>"><?php echo ($i); ?></a>
                                                             </li><?php endif; } ?>
                                                     <?php elseif($page_now == $page-1): ?>
-                                                    <?php $__FOR_START_25716__=$page_now-3;$__FOR_END_25716__=$page+1;for($i=$__FOR_START_25716__;$i < $__FOR_END_25716__;$i+=1){ ?><!-- 循环当前页为倒数第二页时 -->
+                                                    <?php $__FOR_START_29990__=$page_now-3;$__FOR_END_29990__=$page+1;for($i=$__FOR_START_29990__;$i < $__FOR_END_29990__;$i+=1){ ?><!-- 循环当前页为倒数第二页时 -->
                                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                                             <?php elseif($i < $page ): ?>
                                                             <li>
@@ -158,7 +158,7 @@
                                                                 <a href="/index.php/Admin/Paoding/Paoding_list/action/page_list/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/page_now/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>/category_id/<?php echo ($category_id); ?>/keyword/<?php echo ($keyword); ?>"><?php echo ($i); ?></a>
                                                             </li><?php endif; } ?>
                                                     <?php elseif($page_now == $page): ?>
-                                                    <?php $__FOR_START_19869__=$page_now-4;$__FOR_END_19869__=$page+1;for($i=$__FOR_START_19869__;$i < $__FOR_END_19869__;$i+=1){ ?><!-- 循环当前页为最后一页时 -->
+                                                    <?php $__FOR_START_9575__=$page_now-4;$__FOR_END_9575__=$page+1;for($i=$__FOR_START_9575__;$i < $__FOR_END_9575__;$i+=1){ ?><!-- 循环当前页为最后一页时 -->
                                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                                             <?php elseif($i < $page ): ?>
                                                             <li>
@@ -169,7 +169,7 @@
                                                                 <a href="/index.php/Admin/Paoding/Paoding_list/action/page_list/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/page_now/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>/category_id/<?php echo ($category_id); ?>/keyword/<?php echo ($keyword); ?>"><?php echo ($i); ?></a>
                                                             </li><?php endif; } ?>
                                                     <?php else: ?>
-                                                    <?php $__FOR_START_4626__=$page_now-2;$__FOR_END_4626__=$page_now+3;for($i=$__FOR_START_4626__;$i < $__FOR_END_4626__;$i+=1){ ?><!-- 循环除了前五条 和后五条 -->
+                                                    <?php $__FOR_START_32532__=$page_now-2;$__FOR_END_32532__=$page_now+3;for($i=$__FOR_START_32532__;$i < $__FOR_END_32532__;$i+=1){ ?><!-- 循环除了前五条 和后五条 -->
 
                                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                                             <?php elseif($i < $page ): ?>

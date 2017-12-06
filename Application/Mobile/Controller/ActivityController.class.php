@@ -16,6 +16,21 @@ class ActivityController extends BaseController
         $this->display();
     }
 
+    public function share()
+    {
+        $this->display();
+    }
+
+    public function theme()
+    {
+        $this->display();
+    }
+
+    public function abutment()
+    {
+        $this->display();
+    }
+
 
 
     /*
