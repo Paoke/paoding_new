@@ -8917,3 +8917,999 @@ NOTIC: [8] A non well formed numeric value encountered D:\xampp\htdocs\paoding_n
 NOTIC: [8] Undefined index: get_page D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 94 行.
 NOTIC: [8] Undefined variable: search D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 48 行.
 
+[ 2017-12-07T18:31:36+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.025002s ]
+NOTIC: [8] Undefined variable: search D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 48 行.
+
+[ 2017-12-07T18:31:36+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.020001s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+NOTIC: [8] A non well formed numeric value encountered D:\xampp\htdocs\paoding_new\Application\Common\Common\function.php 第 804 行.
+NOTIC: [8] Undefined index: get_page D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 94 行.
+NOTIC: [8] Undefined variable: search D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 48 行.
+
+[ 2017-12-07T18:31:41+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.031001s ]
+
+[ 2017-12-07T18:31:41+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.030002s ]
+
+[ 2017-12-07T18:31:41+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.029002s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-12-07T18:31:43+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.026001s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:31:49+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.031002s ]
+
+[ 2017-12-07T18:31:49+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.028001s ]
+
+[ 2017-12-07T18:31:49+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.023001s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-12-07T18:31:51+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=64
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.028002s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:31:54+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.021001s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-12-07T18:31:54+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.022001s ]
+
+[ 2017-12-07T18:31:54+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.033002s ]
+
+[ 2017-12-07T18:31:57+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=61
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.027002s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:07+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.032002s ]
+
+[ 2017-12-07T18:32:07+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.033002s ]
+
+[ 2017-12-07T18:32:08+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.025001s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-12-07T18:32:17+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.030001s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+NOTIC: [8] A non well formed numeric value encountered D:\xampp\htdocs\paoding_new\Application\Common\Common\function.php 第 804 行.
+NOTIC: [8] Undefined index: get_page D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 94 行.
+NOTIC: [8] Undefined variable: search D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 48 行.
+
+[ 2017-12-07T18:32:17+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.039002s ]
+NOTIC: [8] Undefined variable: search D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 48 行.
+
+[ 2017-12-07T18:32:18+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.035002s ]
+NOTIC: [8] Undefined variable: search D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 48 行.
+
+[ 2017-12-07T18:32:18+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.024001s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+NOTIC: [8] A non well formed numeric value encountered D:\xampp\htdocs\paoding_new\Application\Common\Common\function.php 第 804 行.
+NOTIC: [8] Undefined index: get_page D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 94 行.
+NOTIC: [8] Undefined variable: search D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 48 行.
+
+[ 2017-12-07T18:32:19+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.026001s ]
+NOTIC: [8] Undefined variable: search D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 48 行.
+
+[ 2017-12-07T18:32:19+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.023001s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+NOTIC: [8] A non well formed numeric value encountered D:\xampp\htdocs\paoding_new\Application\Common\Common\function.php 第 804 行.
+NOTIC: [8] Undefined index: get_page D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 94 行.
+NOTIC: [8] Undefined variable: search D:\xampp\htdocs\paoding_new\Application\Api\Controller\ActivityController.class.php 第 48 行.
+
+[ 2017-12-07T18:32:20+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.023001s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-12-07T18:32:20+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.036002s ]
+
+[ 2017-12-07T18:32:20+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.032002s ]
+
+[ 2017-12-07T18:32:23+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.022001s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:25+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.032002s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:25+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.030002s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:26+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.023001s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:27+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.035002s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:27+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.031001s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:29+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.032002s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-12-07T18:32:29+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.032002s ]
+
+[ 2017-12-07T18:32:34+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.020001s ]
+
+[ 2017-12-07T18:32:34+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.023001s ]
+
+[ 2017-12-07T18:32:34+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.030002s ]
+
+[ 2017-12-07T18:32:35+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.021001s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-12-07T18:32:36+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.023002s ]
+
+[ 2017-12-07T18:32:36+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.029002s ]
+
+[ 2017-12-07T18:32:36+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.025002s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-12-07T18:32:37+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.032002s ]
+
+[ 2017-12-07T18:32:37+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.033002s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-12-07T18:32:37+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.023001s ]
+
+[ 2017-12-07T18:32:38+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.031002s ]
+
+[ 2017-12-07T18:32:38+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.024002s ]
+
+[ 2017-12-07T18:32:38+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.028002s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-12-07T18:32:39+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.031002s ]
+
+[ 2017-12-07T18:32:39+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.028002s ]
+
+[ 2017-12-07T18:32:39+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.033002s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+
+[ 2017-12-07T18:32:41+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.029002s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:42+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.026002s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:43+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.022001s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:44+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.024001s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:45+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.025002s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:46+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.025001s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:47+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.028001s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:48+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.024001s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:49+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.023001s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:50+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.027002s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:52+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1?data_id=68
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.022002s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 154 行.
+
+[ 2017-12-07T18:32:54+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.024002s ]
+
+[ 2017-12-07T18:32:54+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.031002s ]
+
+[ 2017-12-07T18:32:54+08:00 ] 127.0.0.1 /api.php/ChannelIndex/index/action/dataList/channel/xq/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:-0.032002s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 19 行.
+NOTIC: [8] Undefined index: city D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 22 行.
+NOTIC: [8] Undefined index: search D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 39 行.
+NOTIC: [8] Undefined index: data_by D:\xampp\htdocs\paoding_new\Application\Api\Logic\ChannelLogic.class.php 第 59 行.
+

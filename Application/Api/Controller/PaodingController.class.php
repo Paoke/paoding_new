@@ -11,7 +11,7 @@ class PaodingController extends BaseRestController
 {
 
     public function getData(){
-        $_POST=I("post.");
+        $_POST=I("request.");
         $Ztgl= M("ArticleZtgl");
         $where['A.is_deleted']=0;
         $where['A.is_active']=1;
