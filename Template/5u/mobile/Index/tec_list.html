@@ -17,7 +17,7 @@
         <div class="swiper-container" style="overflow:visible">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <li style="margin-left:0;">全部</li>
+                    <li style="margin-left:0;text-align:center">全部</li>
                     <div class="sildeBlock"></div>
                 </div>
                 <div class="swiper-slide">

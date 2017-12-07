@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
-<html lang="en">
+<html lang="en" ng-app="detail">
 <head>
     <meta charset="UTF-8">
     <title>活动详情</title>
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/activity.css">
     <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/swiper.css">
 </head>
-<body style="padding-bottom:150px;">
+<body style="padding-bottom:150px;" ng-controller="detailCtrl">
 <div class="act_details_banner">
     <img src="<?php echo (MOBILE); ?>/images/hd-xqy-banner1.png" alt="">
 </div>
@@ -108,18 +108,24 @@
 </div>
 </body>
 <script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
+<script src="<?php echo (MOBILE); ?>/js/angular.min.js"></script>
 <script>
     var bol = true;
     $(".act_love_icon").on("click",function(){
         // true
         if(bol){
-            $(this).attr("src","images/icon-activity-collect-active.png");
+            $(this).attr("src","<?php echo (MOBILE); ?>/images/icon-activity-collect-active.png");
             bol = false;
         }else{
-            $(this).attr("src","images/icon-activity-collect-default.png");
+            $(this).attr("src","<?php echo (MOBILE); ?>/images/icon-activity-collect-default.png");
             bol = true;
         }
 
-    })
+    });
+
+    var app = angular.module("detail",[]);
+    app.controller("detailCtrl",function ($scope,$http){
+
+    });
 </script>
 </html>

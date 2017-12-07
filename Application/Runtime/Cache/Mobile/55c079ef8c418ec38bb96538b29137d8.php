@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
-<html lang="en">
+<html lang="en" ng-app="activity">
 <head>
     <meta charset="UTF-8">
     <title>活动</title>
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/activity.css">
     <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/swiper.css">
 </head>
-<body>
+<body ng-controller="actCtrl">
 <div class="activity_banner">
     <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -36,91 +36,72 @@
 
 <div class="activity_nav clear">
     <a href="/index.php/Mobile/Activity/share.html">
-        <li class="activity_nav_part fl" style="margin-left:90px;background: url(<?php echo (MOBILE); ?>/images/icon-activity-salon.png) center 0 no-repeat;">
-            <div class="activity_nav_part_icon"></div>
-            <p class="activity_nav_part_theme">沙龙分享</p>
+        <li class="activity_nav_part fl" style="margin-left:90px;">
+            <div class="activity_nav_part_icon" style="background: url(<?php echo (MOBILE); ?>/images/icon-activity-salon.png) center 0 no-repeat;"></div>
+            <p class="activity_nav_part_theme">{{options[2].tag_name}}</p>
         </li>
     </a>
     <a href="/index.php/Mobile/Activity/theme.html">
-        <li class="activity_nav_part fl" style="background: url(<?php echo (MOBILE); ?>/images/icon-activity-fortum.png) center 0 no-repeat;">
-            <div class="activity_nav_part_icon"></div>
-            <p class="activity_nav_part_theme">主题论坛</p>
+        <li class="activity_nav_part fl">
+            <div class="activity_nav_part_icon" style="background: url(<?php echo (MOBILE); ?>/images/icon-activity-fortum.png) center 0 no-repeat;"></div>
+            <p class="activity_nav_part_theme">{{options[1].tag_name}}</p>
         </li>
     </a>
     <a href="/index.php/Mobile/Activity/abutment.html">
-        <li class="activity_nav_part fl" style="background: url(<?php echo (MOBILE); ?>/images/icon-activity-joint.png) center 0 no-repeat;">
-            <div class="activity_nav_part_icon"></div>
-            <p class="activity_nav_part_theme">对接会</p>
+        <li class="activity_nav_part fl">
+            <div class="activity_nav_part_icon" style="background: url(<?php echo (MOBILE); ?>/images/icon-activity-joint.png) center 0 no-repeat;"></div>
+            <p class="activity_nav_part_theme">{{options[0].tag_name}}</p>
         </li>
     </a>
 </div>
 <div class="activity_grey"></div>
 
+<!-- 最近举办 -->
 <div class="activity_lately">
-    <div class="activity_lately_tit clear">
+    <div class="activity_lately_tit clear" ng-show="lists[0].have=='1'">
         <div class="activity_tit_icon fl" style="background: url(<?php echo (MOBILE); ?>/images/icon-activity-previous.png);"></div>
         <span class="activity_lately_span fl">最近举办</span>
     </div>
 
-    <a href="/index.php/Mobile/Activity/detail">
-        <div class="activity_main">
-            <img class="activity_main_img" src="<?php echo (MOBILE); ?>/images/hd-zjjb1.png" alt="">
-            <div class="activity_main_time clear">
-                <p class="fl">报名截止时间：2017-09-20</p>
-                <p class="fr">了解详情<img src="<?php echo (MOBILE); ?>/images/icon-right.png" alt=""></p>
+    <div ng-repeat="list in lists" ng-hide="list.status=='0'">
+        <a href="/index.php/Mobile/Activity/detail" >
+            <div class="activity_main">
+                <img class="activity_main_img" ng-src="{{list.cover_url}}" alt="">
+                <div class="activity_main_time clear">
+                    <p class="fl">{{list.plan_end_time}}</p>
+                    <p class="fr">了解详情<img src="<?php echo (MOBILE); ?>/images/icon-right.png" alt=""></p>
+                </div>
             </div>
-        </div>
-    </a>
-    <div class="activity_main">
-        <img class="activity_main_img" src="<?php echo (MOBILE); ?>/images/hd-zjjb2.png" alt="">
-        <div class="activity_main_time clear">
-            <p class="fl">报名截止时间：2017-09-20</p>
-            <p class="fr">了解详情<img src="<?php echo (MOBILE); ?>/images/icon-right.png" alt=""></p>
-        </div>
+        </a>
     </div>
 </div>
 <div class="activity_grey"></div>
 
+<!-- 往期活动 -->
 <div class="activity_lately">
-    <div class="activity_lately_tit clear">
+    <div class="activity_lately_tit clear"  ng-show="lists[0].have!='1'">
         <div class="activity_tit_icon fl"  style="background: url(<?php echo (MOBILE); ?>/images/icon-activity-previous.png) center 0 no-repeat;"></div>
         <span class="activity_lately_span fl">往期活动</span>
     </div>
 
-    <div class="activity_lately_section clear">
-        <div class="activity_section_left fl">
-            <img src="<?php echo (MOBILE); ?>/images/hd-wqhd1.png" alt="">
-        </div>
-        <div class="activity_section_right fr">
-            <p class="activity_right_tit">广东省家具行业推行绿色清洁生产与挥发性有机污染物</p>
-            <p class="activity_right_p">
-                <span class="activity_right_span">广州 天河区</span>
-                <span>09/16</span>
-            </p>
-            <p  class="activity_right_p">
-                浏览<span class="activity_right_span"> 2068</span>
-                收藏<span> 1258</span>
-            </p>
-        </div>
-    </div>
-
-    <div class="activity_lately_section clear">
-        <div class="activity_section_left fl">
-            <img src="<?php echo (MOBILE); ?>/images/hd-wqhd1.png" alt="">
-        </div>
-        <div class="activity_section_right fr">
-            <p class="activity_right_tit">广东省家具行业推行绿色清洁生产与挥发性有机污染物</p>
-            <p class="activity_right_p">
-                <span class="activity_right_span">广州 天河区</span>
-                <span>09/16</span>
-            </p>
-            <p  class="activity_right_p">
-                浏览<span class="activity_right_span"> 2068</span>
-                收藏<span> 1258</span>
-            </p>
+    <div ng-repeat="list in lists" ng-hide="list.status=='1'">
+        <div class="activity_lately_section clear">
+            <div class="activity_section_left fl">
+                <img src="<?php echo (MOBILE); ?>/images/hd-wqhd1.png" alt="">
+            </div>
+            <div class="activity_section_right fr">
+                <p class="activity_right_tit">{{list.title}}</p>
+                <p class="activity_right_p">
+                    <span class="activity_right_span">{{list.diqu}}</span>
+                    <span>{{list.formal_start_time}}</span>
+                </p>
+                <p  class="activity_right_p">
+                    浏览<span class="activity_right_span"> {{list.yuedu}}</span>
+                    收藏<span> {{list.shoucang}}</span>
+                </p>
+            </div>
         </div>
     </div>
-
 </div>
 
 <div class="nav">
@@ -143,6 +124,7 @@
 </div>
 </body>
 <script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
+<script src="<?php echo (MOBILE); ?>/js/angular.min.js"></script>
 <script src='<?php echo (MOBILE); ?>/js/swiper.min.js'></script>
 <script>
     // 轮播
@@ -151,6 +133,58 @@
         paginationClickable :true,
         loop:true,
         // autoplay: 3000
-    })
+    });
+    var data={
+        page:1,
+        page_num: 4,            
+        order_field:"create_time",
+        category_id:0,
+        tag_id:0,
+        order_by:"DESC"
+    }
+
+    var app = angular.module("activity",[]);
+    app.controller("actCtrl",function ($scope,$http){
+        //  获取活动标签接口
+        $http({
+            method:'GET',
+            url:'/api.php/ChannelIndex/index/action/dataList/channel/hd/type/4'
+        }).then(function successCallback(response){
+            $scope.options = response.data.data;
+            // console.log( $scope.options[1].tag_name);
+        },function errorCallback(){
+
+        });
+
+        //  获取活动列表接口
+        $http({
+            method: 'POST',
+            data: data,
+            url: '/api.php/ChannelIndex/index/action/dataList/channel/hd/type/1',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            transformRequest: function (obj) {
+                var str = [];
+                for (var p in obj) {
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                }
+                return str.join("&");
+            }
+        }).then(function successCallback(response){
+            var data=response.data.data;
+            for (var i = 0; i < data.length; i++) {
+                if(Date.parse(new Date())>(new Date(data[i].formal_end_time)).getTime()){
+                    data[i]['status']="0";//已经举办过了
+                }else{
+                    data[i]['status']="1";//未举办
+                    data[0]['have']="1";
+                }
+                
+            };
+            $scope.lists = data;
+            // console.log( $scope.lists);
+        },function errorCallback(){
+
+        })
+    });
 </script>
 </html>

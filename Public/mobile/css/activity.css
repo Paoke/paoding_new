@@ -210,7 +210,8 @@
 	line-height: 1.5;
 }
 .act_main_pic{
-	width: 690px;
+	width: 750px;
+	margin-left: -30px;
 }
 .act_love_icon{
 	margin: 24px 0 0 70px;
