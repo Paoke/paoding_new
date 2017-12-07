@@ -60,8 +60,8 @@
 <div class="demand_div clear" id="price_div" ng-show="status=='公开'" ng-cloak>
     <span class="price fl">价格区间(万元)</span>
     <div class="price_div fr">
-        <input type="number" placeholder="最低价" > -
-        <input type="number" placeholder="最高价">
+        <input type="number" placeholder="最低价" oninput="if(value.length>4)value=value.slice(0,4)"> -
+        <input type="number" placeholder="最高价" oninput="if(value.length>4)value=value.slice(0,4)">
     </div>
 </div>
 <div class="index_div"></div>
@@ -137,13 +137,6 @@
             $(this).css("border-color","#1e1e1e");
         }else{
             $(this).css("border-color","#ccc");
-        }
-    });
-
-    // 限制input输入位数
-    $(".price_div input").keyup(function() {
-        if (this.value.length>4 ) {
-            this.value = this.value.substr(0,4);
         }
     });
 

@@ -7,14 +7,9 @@ $('.advice_text').keyup(function(){
     }
 });
 
-// 需求领域
+// 需求领域  单选
 $(".areas_default").on("click",function(){
-    if($(this).hasClass('areas_default')){
-        $(this).addClass('areas_selected').removeClass('areas_default');
-    }
-    else{
-        $(this).addClass('areas_default').removeClass('areas_selected');
-    }
+    $(this).addClass('areas_selected').removeClass('areas_default').siblings().addClass('areas_default').removeClass('areas_selected');
 });
 
 // 上拉框选择

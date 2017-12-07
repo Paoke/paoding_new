@@ -100,7 +100,7 @@
 </div>
 <p class="advert">
     庖丁众包·专业科技服务平台
-</p>
+</p>1964856
 <div class="sec_return">
     <a onclick="javascript:history.go(-1);">
         <img class="return_icon" src="<?php echo (MOBILE); ?>/images/icon-common-return.png" alt="">
@@ -129,7 +129,7 @@
     }
     var data_id = GetQueryString("data_id");
 
-    // 1.25.获取需求详情接口
+   
     var app = angular.module("detail",[]);
     app.filter('trustHtml',function ($sce){
         return function(val) {
@@ -140,9 +140,9 @@
         $http({
             method:'GET',
             params:{data_id:data_id},  
+            // 1.25.获取需求详情接口
             url:'/api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1',
-        }).then(function successCallback(response){
-          console.log(response.data);
+        }).then(function successCallback(response){       
           $scope.detail = response.data.data;
         },function errorCallback(){          
         });

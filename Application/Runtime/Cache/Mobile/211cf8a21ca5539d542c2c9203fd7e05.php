@@ -123,7 +123,41 @@
                 console.log(res);
             }
         })
-    }
+    };
+
+    var mySwiper = new Swiper('.swiper-container', {    
+        initialSlide :1,     //初始化位置
+        direction : 'vertical',
+        slidesPerView : 3,//每组三个
+        centeredSlides : true,//设定为true时，活动块会居中，而不是默认状态下的居左。
+        slidesPerView : 'auto',
+        // loopedSlides :8,
+    });
+
+    // 期限要求 
+    $("#choose_html").on("click",function(){
+        showUpBox('.slide-wrap');
+    });
+
+    $(".complete").on("click",function(){
+        clickComplete(mySwiper,$(".swiper-slide"));
+        closeUpBox('.slide-wrap');
+        $("#choose_html").html(chooseHtml);
+    });
+
+    var app = angular.module("publishTec",[]);
+    app.controller("ctrlTec",function ($scope){
+        $scope.status = "";
+    　　$scope.count = 0;
+    　　$scope.tolCount = function () {
+    　　　　$scope.count =$scope.text.length;
+    　　};    
+    });
+
+
+
+
+
 
 </script>
 </html>

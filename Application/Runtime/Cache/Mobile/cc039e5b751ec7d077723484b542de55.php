@@ -47,32 +47,31 @@
            $.each(t, function () {
                data[this.name] = this.value;
            });
-            $http({
-                method: 'POST',
-                data:data,
-                url: '/api.php/User/login',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },    
-                transformRequest: function(obj) {    
-                    var str = [];    
-                    for (var p in obj) {    
-                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));    
-                    }    
-                    return str.join("&");    
-                } 
-            }).then(function successCallback(response) {
-                // 登陆成功跳转到my.html
-                if(response.data.result==1){
-                    alert("登录成功");
-                    window.location.href="/index.php/Mobile/Index/index.html";
-                }else{
-                    alert("登录失败");
-                } 
-                }, function errorCallback(response) {
+           
+        $http({
+            method: 'POST',
+            data:data,
+            url: '/api.php/User/login',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },    
+            transformRequest: function(obj) {    
+                var str = [];    
+                for (var p in obj) {    
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));    
+                }    
+                return str.join("&");    
+            } 
+        }).then(function successCallback(response) {
+            // 登陆成功跳转到my.html
+            if(response.data.result==1){
+                alert("登录成功");
+                window.location.href="/index.php/Mobile/User/user_center.html";
+            }else{
+                alert("登录失败");
+            } 
+            }, function errorCallback(response) {
 
-            });
         });
-    })
-
-  
+    });
+    })  
 </script>
 </html>
