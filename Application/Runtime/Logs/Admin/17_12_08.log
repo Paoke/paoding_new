@@ -1,0 +1,2158 @@
+[ 2017-12-08T10:30:17+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-12-08T10:30:17+08:00 ] 127.0.0.1 /index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: ad_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\52273aaaf1d17bbbe82a83b662c7ff40.php 第 66 行.
+NOTIC: [8] Undefined variable: friend_link D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\52273aaaf1d17bbbe82a83b662c7ff40.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T10:30:17+08:00 ] 127.0.0.1 /index.php/Admin/Admin/vertify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-12-08T10:30:27+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Admin&a=login&t=0.39367872961918704
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: role D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 852 行.
+NOTIC: [2] array_unique() expects parameter 1 to be array, null given D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 852 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 853 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 158 行.
+
+[ 2017-12-08T10:30:27+08:00 ] 127.0.0.1 /index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 48 行.
+NOTIC: [8] Undefined variable: ee D:\xampp\htdocs\paoding_new\Application\Admin\Controller\IndexController.class.php 第 213 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\paoding_new\Application\Admin\Controller\IndexController.class.php 第 213 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T10:30:28+08:00 ] 127.0.0.1 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 48 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T10:30:40+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_list/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined variable: categoryName D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 124 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 76 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 77 行.
+NOTIC: [8] Undefined index: keyword D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 90 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: gotPage D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 284 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T10:30:42+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_edit/channel/hd/type/1/id/7/page_now/1/page_num/25/category_id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined index: should_sign D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 256 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 276 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Illegal string offset 'data_id' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 218 行.
+NOTIC: [8] Undefined variable: is_bind_user D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 262 行.
+NOTIC: [8] Use of undefined constant category_id - assumed 'category_id' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 281 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined variable: page D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 503 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.006001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006001s ]
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T10:30:43+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/extends/channel/hd/type/1/id/7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined variable: itemStr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 553 行.
+
+[ 2017-12-08T10:32:58+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_list/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined variable: categoryName D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 124 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 76 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 77 行.
+NOTIC: [8] Undefined index: keyword D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 90 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: gotPage D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 284 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-12-08T10:32:59+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_edit/channel/hd/type/1/id/7/page_now/1/page_num/25/category_id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined index: should_sign D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 256 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 276 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Illegal string offset 'data_id' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 218 行.
+NOTIC: [8] Undefined variable: is_bind_user D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 262 行.
+NOTIC: [8] Use of undefined constant category_id - assumed 'category_id' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 281 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined variable: page D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 503 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.006000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007000s ]
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T10:33:00+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/extends/channel/hd/type/1/id/7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined variable: itemStr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 553 行.
+
+[ 2017-12-08T10:33:02+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_list/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined variable: categoryName D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 124 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 76 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 77 行.
+NOTIC: [8] Undefined index: keyword D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 90 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: gotPage D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 284 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-12-08T10:33:04+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_edit/channel/hd/type/1/id/5/page_now/1/page_num/25/category_id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined index: should_sign D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 256 行.
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 276 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Illegal string offset 'data_id' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 218 行.
+NOTIC: [8] Undefined variable: is_bind_user D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 262 行.
+NOTIC: [8] Use of undefined constant category_id - assumed 'category_id' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 281 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined variable: page D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 503 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.007001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008001s ]
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-12-08T10:33:04+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/extends/channel/hd/type/1/id/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined variable: itemStr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 553 行.
+
+[ 2017-12-08T10:33:09+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_list/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined variable: categoryName D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 124 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 76 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 77 行.
+NOTIC: [8] Undefined index: keyword D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 90 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: gotPage D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 284 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T10:33:10+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_edit/channel/hd/type/1/id/7/page_now/1/page_num/25/category_id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined index: should_sign D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 256 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 276 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'data_id' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 218 行.
+NOTIC: [8] Undefined variable: is_bind_user D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 262 行.
+NOTIC: [8] Use of undefined constant category_id - assumed 'category_id' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 281 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined variable: page D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 503 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.007000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007000s ]
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T10:33:10+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/extends/channel/hd/type/1/id/7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined variable: itemStr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 553 行.
+
+[ 2017-12-08T10:33:13+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_list/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined variable: categoryName D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 124 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 76 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 77 行.
+NOTIC: [8] Undefined index: keyword D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 90 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: gotPage D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 284 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:27:36+08:00 ] 127.0.0.1 /index.php/Admin/Admin/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 158 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:27:37+08:00 ] 127.0.0.1 /index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.032002s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.032002s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: ad_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\52273aaaf1d17bbbe82a83b662c7ff40.php 第 66 行.
+NOTIC: [8] Undefined variable: friend_link D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\52273aaaf1d17bbbe82a83b662c7ff40.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:27:37+08:00 ] 127.0.0.1 /index.php/Admin/Admin/vertify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:42:16+08:00 ] 127.0.0.1 /index.php/admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:42:16+08:00 ] 127.0.0.1 /index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: ad_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\52273aaaf1d17bbbe82a83b662c7ff40.php 第 66 行.
+NOTIC: [8] Undefined variable: friend_link D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\52273aaaf1d17bbbe82a83b662c7ff40.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:42:16+08:00 ] 127.0.0.1 /index.php/Admin/Admin/vertify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-12-08T11:42:24+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Admin&a=login&t=0.9567939261629279
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: role D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 852 行.
+NOTIC: [2] array_unique() expects parameter 1 to be array, null given D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 852 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 853 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 158 行.
+
+[ 2017-12-08T11:42:24+08:00 ] 127.0.0.1 /index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 48 行.
+NOTIC: [8] Undefined variable: ee D:\xampp\htdocs\paoding_new\Application\Admin\Controller\IndexController.class.php 第 213 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\paoding_new\Application\Admin\Controller\IndexController.class.php 第 213 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-12-08T11:42:25+08:00 ] 127.0.0.1 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 48 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:42:31+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_list/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined variable: categoryName D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 124 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 76 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 77 行.
+NOTIC: [8] Undefined index: keyword D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 90 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: gotPage D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 284 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.004001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004001s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:42:35+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_list/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined variable: categoryName D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 124 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 76 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 77 行.
+NOTIC: [8] Undefined index: keyword D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 90 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: gotPage D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 284 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004001s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:42:42+08:00 ] 127.0.0.1 /index.php/Admin/Activity/category/action/page_list/channel/hd/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 1023 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\972ddeda24c224e5488d744d3f5ea3aa.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\972ddeda24c224e5488d744d3f5ea3aa.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\972ddeda24c224e5488d744d3f5ea3aa.php 第 10 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 1212 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-12-08T11:42:43+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_list/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined variable: categoryName D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 124 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 76 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 77 行.
+NOTIC: [8] Undefined index: keyword D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 90 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: gotPage D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 284 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:43:01+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_add/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: currentUser D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 213 行.
+NOTIC: [8] Undefined variable: lead D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 218 行.
+NOTIC: [8] Undefined variable: child D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 237 行.
+NOTIC: [8] Undefined variable: id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 260 行.
+NOTIC: [8] Use of undefined constant category_id - assumed 'category_id' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 281 行.
+NOTIC: [8] Undefined variable: info D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 281 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 326 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 343 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 352 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 361 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 370 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 379 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 388 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 397 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 408 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 417 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 426 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 435 行.
+NOTIC: [8] Undefined variable: order_list D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 453 行.
+NOTIC: [8] Undefined variable: page_now D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 491 行.
+NOTIC: [8] Undefined variable: page_now D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 499 行.
+NOTIC: [8] Undefined variable: page_num D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 499 行.
+NOTIC: [8] Undefined variable: page_now D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 503 行.
+NOTIC: [8] Undefined variable: page D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 503 行.
+NOTIC: [8] Undefined variable: system_log D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 565 行.
+NOTIC: [8] Undefined variable: ifadd D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 753 行.
+NOTIC: [8] Undefined variable: id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 760 行.
+NOTIC: [8] Undefined variable: page_now D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 774 行.
+NOTIC: [8] Undefined variable: page_num D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 774 行.
+NOTIC: [8] Undefined variable: id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 793 行.
+NOTIC: [8] Undefined variable: id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 831 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.005000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006000s ]
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:43:01+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/extends/channel/hd/type/1/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined variable: itemStr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 553 行.
+
+[ 2017-12-08T11:43:06+08:00 ] 127.0.0.1 /index.php/Admin/Activity/examine/action/page_list/channel/hd/type/10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 592 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005000s ]
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 703 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:43:07+08:00 ] 127.0.0.1 /index.php/Admin/Activity/examine/action/audit/channel/hd/type/10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 592 行.
+
+[ 2017-12-08T11:43:09+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_list/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined variable: categoryName D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 124 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 76 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 77 行.
+NOTIC: [8] Undefined index: keyword D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 90 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: gotPage D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 284 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:43:10+08:00 ] 127.0.0.1 /index.php/Admin/Activity/category/action/page_list/channel/hd/type/2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 1023 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\972ddeda24c224e5488d744d3f5ea3aa.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\972ddeda24c224e5488d744d3f5ea3aa.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\972ddeda24c224e5488d744d3f5ea3aa.php 第 10 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 1212 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:43:11+08:00 ] 127.0.0.1 /index.php/Admin/Activity/tags/action/page_list/channel/hd/type/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 737 行.
+NOTIC: [8] Undefined offset: 4 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 771 行.
+NOTIC: [8] Undefined offset: 4 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 771 行.
+NOTIC: [8] Undefined offset: 4 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 771 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7ec80138979f490244c2978ef53a85ea.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7ec80138979f490244c2978ef53a85ea.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7ec80138979f490244c2978ef53a85ea.php 第 10 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7ec80138979f490244c2978ef53a85ea.php 第 82 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7ec80138979f490244c2978ef53a85ea.php 第 82 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7ec80138979f490244c2978ef53a85ea.php 第 82 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 914 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:43:12+08:00 ] 127.0.0.1 /index.php/Admin/Activity/examine/action/page_list/channel/hd/type/10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 592 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 703 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:43:12+08:00 ] 127.0.0.1 /index.php/Admin/Activity/examine/action/audit/channel/hd/type/10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 592 行.
+
+[ 2017-12-08T11:43:12+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_list/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined variable: categoryName D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 124 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 76 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 77 行.
+NOTIC: [8] Undefined index: keyword D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 90 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: gotPage D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 284 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:43:14+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_add/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: currentUser D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 213 行.
+NOTIC: [8] Undefined variable: lead D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 218 行.
+NOTIC: [8] Undefined variable: child D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 237 行.
+NOTIC: [8] Undefined variable: id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 260 行.
+NOTIC: [8] Use of undefined constant category_id - assumed 'category_id' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 281 行.
+NOTIC: [8] Undefined variable: info D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 281 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 326 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 343 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 352 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 361 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 370 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 379 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 388 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 397 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 408 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 417 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 426 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 435 行.
+NOTIC: [8] Undefined variable: order_list D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 453 行.
+NOTIC: [8] Undefined variable: page_now D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 491 行.
+NOTIC: [8] Undefined variable: page_now D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 499 行.
+NOTIC: [8] Undefined variable: page_num D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 499 行.
+NOTIC: [8] Undefined variable: page_now D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 503 行.
+NOTIC: [8] Undefined variable: page D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 503 行.
+NOTIC: [8] Undefined variable: system_log D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 565 行.
+NOTIC: [8] Undefined variable: ifadd D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 753 行.
+NOTIC: [8] Undefined variable: id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 760 行.
+NOTIC: [8] Undefined variable: page_now D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 774 行.
+NOTIC: [8] Undefined variable: page_num D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 774 行.
+NOTIC: [8] Undefined variable: id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 793 行.
+NOTIC: [8] Undefined variable: id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 831 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.005001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006001s ]
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:43:15+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/extends/channel/hd/type/1/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined variable: itemStr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 553 行.
+
+[ 2017-12-08T11:49:34+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_list/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined variable: categoryName D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 124 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001001s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 76 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 77 行.
+NOTIC: [8] Undefined index: keyword D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 90 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: gotPage D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 284 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:49:37+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_edit/channel/hd/type/1/id/7/page_now/1/page_num/25/category_id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined index: should_sign D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 256 行.
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 276 行.
+NOTIC: [8] Undefined offset: 2 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 276 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'data_id' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 218 行.
+NOTIC: [8] Undefined variable: is_bind_user D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 262 行.
+NOTIC: [8] Use of undefined constant category_id - assumed 'category_id' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 281 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 478 行.
+NOTIC: [8] Undefined index: sign_status D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 479 行.
+NOTIC: [8] Undefined variable: page D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 503 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.007000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008000s ]
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T11:49:37+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/extends/channel/hd/type/1/id/7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined variable: itemStr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 553 行.
+
+[ 2017-12-08T11:49:51+08:00 ] 127.0.0.1 /index.php/Admin/Comment/channelComment/action/page_list/channel/hd/data_id/7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: status D:\xampp\htdocs\paoding_new\Application\Admin\Controller\CommentController.class.php 第 34 行.
+NOTIC: [8] Undefined index: type D:\xampp\htdocs\paoding_new\Application\Admin\Controller\CommentController.class.php 第 35 行.
+ERR: Think\Controller:commentDataTree方法不存在！
+
+[ 2017-12-08T16:28:12+08:00 ] 127.0.0.1 /index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T16:28:12+08:00 ] 127.0.0.1 /index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: ad_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\52273aaaf1d17bbbe82a83b662c7ff40.php 第 66 行.
+NOTIC: [8] Undefined variable: friend_link D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\52273aaaf1d17bbbe82a83b662c7ff40.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.106006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-12-08T16:28:15+08:00 ] 127.0.0.1 /index.php/Admin/Admin/vertify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T16:49:27+08:00 ] 127.0.0.1 /index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: ad_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\52273aaaf1d17bbbe82a83b662c7ff40.php 第 66 行.
+NOTIC: [8] Undefined variable: friend_link D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\52273aaaf1d17bbbe82a83b662c7ff40.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T16:49:27+08:00 ] 127.0.0.1 /index.php/Admin/Admin/vertify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T16:49:34+08:00 ] 127.0.0.1 /index.php?m=Admin&c=Admin&a=login&t=0.5869086751959371
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+NOTIC: [8] Undefined variable: role D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 852 行.
+NOTIC: [2] array_unique() expects parameter 1 to be array, null given D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 852 行.
+NOTIC: [2] implode(): Invalid arguments passed D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 853 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 158 行.
+
+[ 2017-12-08T16:49:34+08:00 ] 127.0.0.1 /index.php/Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 48 行.
+NOTIC: [8] Undefined variable: ee D:\xampp\htdocs\paoding_new\Application\Admin\Controller\IndexController.class.php 第 213 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\paoding_new\Application\Admin\Controller\IndexController.class.php 第 213 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T16:49:36+08:00 ] 127.0.0.1 /index.php/Admin/Index/welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 48 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T16:49:39+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_list/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined offset: 10 D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 101 行.
+NOTIC: [8] Undefined variable: categoryName D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 124 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Admin/View/Public/breadcrumb.html): failed to open stream: No such file or directory D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 7 行.
+NOTIC: [8] Undefined variable: tpshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 8 行.
+NOTIC: [8] Undefined variable: gemmapshop_config D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 10 行.
+NOTIC: [8] Use of undefined constant is_import_data - assumed 'is_import_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 76 行.
+NOTIC: [8] Use of undefined constant is_export_data - assumed 'is_export_data' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 77 行.
+NOTIC: [8] Undefined index: keyword D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 90 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 116 行.
+NOTIC: [8] Undefined variable: mod_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 124 行.
+NOTIC: [8] Use of undefined constant is_copy - assumed 'is_copy' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: is_copy D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 135 行.
+NOTIC: [8] Undefined index: gotPage D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\5c98de065379332d05b4644824ab8a94.php 第 284 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 158 行.
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T16:49:41+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/page_add/channel/hd/type/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: currentUser D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 213 行.
+NOTIC: [8] Undefined variable: lead D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 218 行.
+NOTIC: [8] Undefined variable: child D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 237 行.
+NOTIC: [8] Undefined variable: id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 260 行.
+NOTIC: [8] Use of undefined constant category_id - assumed 'category_id' D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 281 行.
+NOTIC: [8] Undefined variable: info D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 281 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined index: checked D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 316 行.
+NOTIC: [8] Undefined variable: data D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 326 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 343 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 352 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 361 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 370 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 379 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 388 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 397 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 408 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 417 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 426 行.
+NOTIC: [8] Undefined variable: countArr D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 435 行.
+NOTIC: [8] Undefined variable: order_list D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 453 行.
+NOTIC: [8] Undefined variable: page_now D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 491 行.
+NOTIC: [8] Undefined variable: page_now D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 499 行.
+NOTIC: [8] Undefined variable: page_num D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 499 行.
+NOTIC: [8] Undefined variable: page_now D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 503 行.
+NOTIC: [8] Undefined variable: page D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 503 行.
+NOTIC: [8] Undefined variable: system_log D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 565 行.
+NOTIC: [8] Undefined variable: ifadd D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 753 行.
+NOTIC: [8] Undefined variable: id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 760 行.
+NOTIC: [8] Undefined variable: page_now D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 774 行.
+NOTIC: [8] Undefined variable: page_num D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 774 行.
+NOTIC: [8] Undefined variable: id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 793 行.
+NOTIC: [8] Undefined variable: id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\7f23fc84db534dda4acefb163b29f9c0.php 第 831 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.005001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006001s ]
+NOTIC: [8] Undefined variable: returnArr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 582 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at D:\xampp\htdocs\paoding_new\ThinkPHP\Library\Think\View.class.php:95) D:\xampp\htdocs\paoding_new\Application\Common\Common\common.php 第 1090 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T16:49:42+08:00 ] 127.0.0.1 /index.php/Admin/Activity/activity/action/extends/channel/hd/type/1/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 39 行.
+NOTIC: [8] Undefined index: category_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 41 行.
+NOTIC: [8] Undefined variable: itemStr D:\xampp\htdocs\paoding_new\Application\Admin\Controller\ActivityController.class.php 第 553 行.
+
+[ 2017-12-08T16:54:16+08:00 ] 127.0.0.1 /index.php/Admin/Admin/logout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+NOTIC: [8] Undefined index: user_id D:\xampp\htdocs\paoding_new\Application\Admin\Controller\BaseController.class.php 第 158 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T16:54:17+08:00 ] 127.0.0.1 /index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.023001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.023001s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: ad_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\52273aaaf1d17bbbe82a83b662c7ff40.php 第 66 行.
+NOTIC: [8] Undefined variable: friend_link D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\52273aaaf1d17bbbe82a83b662c7ff40.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T16:54:17+08:00 ] 127.0.0.1 /index.php/Admin/Admin/vertify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-12-08T17:27:25+08:00 ] 127.0.0.1 /index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.000000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: ad_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\52273aaaf1d17bbbe82a83b662c7ff40.php 第 66 行.
+NOTIC: [8] Undefined variable: friend_link D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\52273aaaf1d17bbbe82a83b662c7ff40.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T17:27:25+08:00 ] 127.0.0.1 /index.php/Admin/Admin/vertify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-12-08T17:27:28+08:00 ] 127.0.0.1 /index.php/Admin/Admin/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+INFO: [ view_begin ] --START--
+INFO: Run Home\Behaviors\testBehavior [ RunTime:0.001000s ]
+INFO: [ view_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: ad_id D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\52273aaaf1d17bbbe82a83b662c7ff40.php 第 66 行.
+NOTIC: [8] Undefined variable: friend_link D:\xampp\htdocs\paoding_new\Application\Runtime\Cache\Admin\52273aaaf1d17bbbe82a83b662c7ff40.php 第 190 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-12-08T17:27:29+08:00 ] 127.0.0.1 /index.php/Admin/Admin/vertify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Home\Behaviors\siteBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: action D:\xampp\htdocs\paoding_new\Application\Admin\Controller\AdminController.class.php 第 18 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

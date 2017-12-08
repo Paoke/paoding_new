@@ -994,3 +994,38 @@ function wechat_notify_url(){
     $url = $domain . '/index.php/Wechat/Mp/notify';
     return $url;
 }
+
+
+/**
+ * 发送站内信
+ * @param $content  内容
+ *
+*/
+function sendNotice($content)
+{
+    $data['user_id']=$_SESSION['userId'];
+    $data['content']=$content;
+    $data['status']='0';
+    $data['create_time']=date("Y-m-d H:i:s");
+    M('notice_relation_user')->add($data);
+}
+
+function send_note($content, $phonenum)
+{
+    $postFields['account']='paoding';
+    $postFields['pswd']='Tch123456';
+    $postFields['msg']=$content;
+    $postFields['mobile']=$phonenum;
+    $postFields['needstatus']='false';
+    $url="http://222.73.117.156/msg/HttpBatchSendSM";
+    $postFields = http_build_query ( $postFields );
+    $ch = curl_init();
+    curl_setopt ( $ch, CURLOPT_POST, 1 );
+    curl_setopt ( $ch, CURLOPT_HEADER, 0 );
+    curl_setopt ( $ch, CURLOPT_RETURNTRANSFER, 1 );
+    curl_setopt ( $ch, CURLOPT_URL, $url );
+    curl_setopt ( $ch, CURLOPT_POSTFIELDS, $postFields );
+    $result = curl_exec ( $ch );
+    curl_close ( $ch );
+    return $result;
+}

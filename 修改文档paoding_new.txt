@@ -42,5 +42,11 @@
 （5）添加描述摘要
 （6）内容->技术讲述，增加技术优势，效果指标，应用案例，收藏数
 
-6.专题模块
+7.专题模块
 （1）内容管理：增加描述字段
+
+8 增加数据表
+5u_activity_user_relation_hd
+5u_notice_relation_user
+5u_acticvity_enter_hd
+5u_notice_relation_user

@@ -123,7 +123,7 @@
     function close(eleStatus,transY){
         $('.apply_choose').css({'display':eleStatus});
         $('.mask').css({'display':eleStatus});
-        var time = setTimeout(eleTransform, 10)
+        var time = setTimeout(eleTransform, 10);
         function eleTransform(){
             $(".apply_choose").css('transform','translate3d(0,'+transY+',0)');
         };      
