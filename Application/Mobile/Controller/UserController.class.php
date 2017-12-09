@@ -12,6 +12,7 @@ class UserController extends BaseController
     {
         parent::__construct();
         parent::checkUrl();
+        $this->checkReg();
     }
 
 
@@ -20,7 +21,7 @@ class UserController extends BaseController
      */
     public function user_center()
     {
-        $this->checkReg();
+
         $userId = $_SESSION["userArr"]["user_id"];
         $this->assign("user_id",$userId);
         $this->display();
@@ -51,20 +52,34 @@ class UserController extends BaseController
     //修改头像
     public function change_head()
     {
-        $this->checkReg();
+
         $this->display();
     }
 
     //个人信息
     public function user_info()
     {
-        $this->checkReg();
+
         $this->display();
     }
+
+    //系统消息
+    public function user_news()
+    {
+
+        $this->display();
+    }
+    //信息详情
+    public function new_detail()
+    {
+
+        $this->display();
+    }
+
     //申请认证
     public function user_authen()
     {
-        $this->checkReg();
+
         $arrData=array(
             'idcard'=>$_GET['idcard']==''?session('arrData')['idcard']:$_GET['idcard'],
             'email'=>$_GET['email']==''?session('arrData')['email']:$_GET['email'],

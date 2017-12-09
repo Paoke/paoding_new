@@ -1607,6 +1607,71 @@ class UserController extends BaseRestController
        return $data;
     }
 
+    public function user_news()
+    {
+        $parameterGet = I('get.');
+        $parameterPost = I('post.');
+        $param = array_merge($parameterGet, $parameterPost);
+        if($param['action']){
+            switch($param['action']){
+                //未读信息
+                case "count":
+
+                    $data=M('notice_relation_user')->where('user_id='.$_SESSION["userArr"]["user_id"].' and status=0')->count();
+
+                    break;
+
+                case "data_list":
+
+                    if($param['page'] && $param['page_num']){
+                        $page = $param['page'];
+                        $page_num = $param['page_num'];
+                    }
+                    if($param['order_field']&&$param['order_by']){
+                        $orderBy = $param['order_field']. " ". $param['order_by'];
+                    }
+                    $info=M('notice_relation_user')
+                        ->where('user_id='.$_SESSION["userArr"]["user_id"])
+                        ->page($page, $page_num)
+                        ->order($orderBy)
+                        ->select();
+
+                    if($param['get_page']){
+                        $count = M('notice_relation_user')->where('user_id='.$_SESSION["userArr"]["user_id"])->count();
+                        $pageTotal = ($count / $page_num) > intval($count / $page_num) ? intval($count / $page_num + 1) : intval($count / $page_num);
+                        $pageInfo['page'] = $page;
+                        $pageInfo['page_total'] = $pageTotal;
+                        $data['info'] = $info;
+                        $data['page'] = $pageInfo;
+                    }else{
+                        $data = $info;
+                    }
+
+                    break;
+
+                case "data_detail":
+
+                    $data=M('notice_relation_user')->where('id='.$param['data_id'])->find();
+
+                    break;
+
+                default:
+                    $returnArr = array("result" => 0, "msg" => "参数有误", "code" => 400);
+
+
+            }
+            if ($data) {
+                $returnArr = array("result" => 1, "msg" => "获取成功", "code" => 200, "data" => $data);
+            } else {
+                $returnArr = array("result" => 0, "msg" => "没有数据或该用户不存在，否则为栏目不存在", "code" => 400);
+            }
+        }else{
+            $returnArr = array("result" => 0, "msg" => "参数有误", "code" => 400);
+        }
+
+        json_return($returnArr);
+    }
+
     private function clean_session(){
         session_unset();   //删除session变量
         session_destroy();   //销毁session

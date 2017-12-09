@@ -127,18 +127,18 @@ class ArticleController extends BaseRestController
         );
 
         //验证五分钟内验证码有效
-        $date=M("ManageSmsLog")->where("add_time between date_add(now(), interval - 5 minute) and now() AND is_active=1")->count();
-        if(!$date){
-            $returnArr=array("result"=>0,"msg"=>"验证码已过期，请重新发送","code"=>402,"data"=>null);
-            json_return($returnArr);
-        }
+//        $date=M("ManageSmsLog")->where("add_time between date_add(now(), interval - 5 minute) and now() AND is_active=1")->count();
+//        if(!$date){
+//            $returnArr=array("result"=>0,"msg"=>"验证码已过期，请重新发送","code"=>402,"data"=>null);
+//            json_return($returnArr);
+//        }
 
         //校验验证码的正误
-        $count = M("ManageSmsLog")->where(array("code = '" . $postData['code'] . "'","is_active=1"))->count();
-        if(!$count){
-            $returnArr = array("result" => 0, "msg" => "验证码不正确,请重新输入", "code" => 200, "data" => null);
-            json_return($returnArr);
-        }
+//        $count = M("ManageSmsLog")->where(array("code = '" . $postData['code'] . "'","is_active=1"))->count();
+//        if(!$count){
+//            $returnArr = array("result" => 0, "msg" => "验证码不正确,请重新输入", "code" => 200, "data" => null);
+//            json_return($returnArr);
+//        }
 
         $returnArr = array("result" => 0, "msg" => "姓名不能为空", "code" => 402, "data" => null);
         if (empty($options["nickname"])) json_return($returnArr);

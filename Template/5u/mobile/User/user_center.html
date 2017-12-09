@@ -27,7 +27,7 @@
             <span>已认证</span>
         </a>
 
-        <a class="my_apply" ng-hide="user.status=='1'">
+        <a href="" class="my_apply" ng-hide="user.status=='1'">
             <div class="my_circle">
                 <img src="{$Think.MOBILE}/images/icon-my-apply.png" alt="">
             </div>
@@ -39,17 +39,18 @@
 
 <div class="my_project clear">
     <div class="clear fl my_project_left">
-        <a href="" class="fl">
+        <a href="__MODULE__/Demand/release.html" class="fl">
             <img src="{$Think.MOBILE}/images/icon-my-demand.png" alt="">
             <p>发布需求</p>
         </a>
-        <a href="" class="fl">
+        <a href="__MODULE__/Index/release.html" class="fl">
             <img src="{$Think.MOBILE}/images/icon-my-technology.png" alt="">
             <p>发布技术</p>
         </a>
-        <a href="" class="fl">
+        <a href="user_news.html" class="fl">
             <img src="{$Think.MOBILE}/images/icon-my-activity2.png" alt="">
-            <p>我的活动</p>
+            <p>我的消息</p>
+            <div class="news_circle">16</div>
         </a>
         <a href="" class="fl">
             <img src="{$Think.MOBILE}/images/icon-my-collect.png" alt="">
@@ -72,11 +73,11 @@
     <span class="fl">帮助中心</span>
     <img class="fr" src="{$Think.MOBILE}/images/icon-right2.png" alt="">
 </a>
-<a href="my-advice.html" class="my_secion clear">
+<a href="user_advice.html" class="my_secion clear">
     <span class="fl">意见反馈</span>
     <img class="fr" src="{$Think.MOBILE}/images/icon-right2.png" alt="">
 </a>
-<a href="my-set.html" class="my_secion clear">
+<a href="user_set.html" class="my_secion clear">
     <span class="fl">设置</span>
     <img class="fr" src="{$Think.MOBILE}/images/icon-right2.png" alt="">
 </a>

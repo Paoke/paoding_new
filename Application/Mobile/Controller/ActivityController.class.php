@@ -95,8 +95,7 @@ class ActivityController extends BaseController
     /*
         * 数据列表
         */
-    public
-    function data_list()
+    public function data_list()
     {
         $action = $_GET['action'];
         if ($action == 'company') {
@@ -122,8 +121,7 @@ class ActivityController extends BaseController
     /*
      * 子表列表
      */
-    public
-    function child_list()
+    public function child_list()
     {
         $where['channel_index'] = $_GET['channel'];
         $where['child_index'] = $_GET['child'];
@@ -153,8 +151,7 @@ class ActivityController extends BaseController
 //        $this->assign("channel", $channel);
 //        $this->display($channel."_detail");
 //    }
-    public
-    function detail()
+    public function detail()
     {
         $this->display();
     }
@@ -163,8 +160,7 @@ class ActivityController extends BaseController
     /*
      * 新增数据
      */
-    public
-    function add()
+    public function add()
     {
         $channel = $_GET['channel'];
         $data_id = $_GET["data_id"];
@@ -176,8 +172,7 @@ class ActivityController extends BaseController
     /*
     * 编辑数据
     */
-    public
-    function edit()
+    public function edit()
     {
         $channel = $_GET['channel'];
         $data_id = $_GET["data_id"];
@@ -189,8 +184,7 @@ class ActivityController extends BaseController
     /*
      * 删除数据
      */
-    public
-    function del()
+    public function del()
     {
         $channel = $_GET['channel'];
         $data_id = $_GET["data_id"];
@@ -199,8 +193,7 @@ class ActivityController extends BaseController
         $this->display($channel . "_del");
     }
 
-    public
-    function info()
+    public function info()
     {
         $action = $_GET['action'];
         if ($action == 'company') {
@@ -224,8 +217,7 @@ class ActivityController extends BaseController
 
     }
 
-    public
-    function questionnaire()
+    public function questionnaire()
     {
         $activity_id = $_GET['activity_id'];
         $channel = I('channel');
@@ -238,8 +230,7 @@ class ActivityController extends BaseController
         $this->display("questionnaire_list");
     }
 
-    public
-    function companyList()
+    public function companyList()
     {
         $action = $_GET['action'];
         $channel = I('channel');
@@ -250,8 +241,7 @@ class ActivityController extends BaseController
         $this->display("company_list");
     }
 
-    public
-    function result()
+    public function result()
     {
 
         $channel = $_GET['channel'];
@@ -293,8 +283,7 @@ class ActivityController extends BaseController
 //    }
 
 //子表录入
-    public
-    function child_release()
+    public function child_release()
     {
         $channel = $_GET['channel'];
         $type = $_GET['type'];
@@ -317,8 +306,7 @@ class ActivityController extends BaseController
     /*
      * 查询数据
      */
-    public
-    function search()
+    public function search()
     {
         $search = $_POST['search'];
         $city = $_GET['city'];
@@ -331,8 +319,7 @@ class ActivityController extends BaseController
         $this->display($channel . "_search");
     }
 
-    public
-    function order()
+    public function order()
     {
         $channel = $_GET['channel'];
         $title = M('SystemChannel')->where("call_index='" . $channel . "'")->getField('channel_title');
@@ -342,8 +329,7 @@ class ActivityController extends BaseController
         $this->display($channel . '_order');
     }
 
-    public
-    function evaluate()
+    public function evaluate()
     {
         $channel = $_GET['channel'];
         $this->assign("channel", $_GET['channel']);
@@ -352,8 +338,7 @@ class ActivityController extends BaseController
         $this->display($channel . '_evaluate');
     }
 
-    public
-    function collect()
+    public function collect()
     {
         $channel = $_GET['channel'];
         $this->assign("channel", $_GET['channel']);

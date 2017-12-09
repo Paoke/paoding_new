@@ -66,7 +66,21 @@
 	height: 152px;
 	text-align: center;
 	border-right: 2px solid #fff;
-	border-bottom: 2px solid #fff;	
+	border-bottom: 2px solid #fff;
+	position: relative;	
+}
+.news_circle{
+	position: absolute;
+	bottom: 25px;
+	right: 30px;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	background: #ff981c;
+	text-align: center;
+	line-height: 32px;
+	color: #fff;
+	font-size: 16px;
 }
 .my_project .a_project{
 	width: 174px;
@@ -107,8 +121,6 @@
 	margin-top: 41px;
 	margin-right: 20px;
 }
-
-
 /*my-helpCenter*/
 html,body{
 	width: 100%;
@@ -165,6 +177,7 @@ html,body{
 	color: #fff;
 	font-size: 32px;
 }
+
 
 .identify_tip{
 	width: 420px;
@@ -351,7 +364,7 @@ html,body{
 	width: 690px;
 	height: 112px; 
 	margin:0 auto;
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #ccc;
 }
 .apply_content_box img{
 	margin-top: 40px;
@@ -365,6 +378,7 @@ html,body{
 	color: #ccc;
 	margin-right: 6px;
 	text-align: right;
+	background: rgba(0,0,0,0);
 }
 .apply_form{
 	display: block;
@@ -520,7 +534,6 @@ html,body{
 }
 .ifm_deafault{
 	width: 100%;
-	border-radius: 50%;
 }
 .ifm_camera{
 	position: absolute;
@@ -539,7 +552,6 @@ html,body{
 	height: 112px;
 	margin: 0 auto;
 	border-bottom: 1px solid #eee;
-
 }
 
 /*my-advice.html*/
@@ -594,7 +606,6 @@ html,body{
 .areas_main,.areas_click{
 	width: 750px;
 	margin: 0 auto;
-	padding-left: 30px;
 	overflow: hidden;
 	/*cursor: pointer;*/
 }
@@ -611,12 +622,12 @@ html,body{
 .areas_class,.class_active{
 	cursor: pointer;
 	float: left;
-	width: 198px;
+	width: 208px;
 	height: 70px;
 	text-align: center;
 	line-height: 70px;
 	border-radius: 4px;
-	margin-right: 40px;
+	margin-left: 30px;
 	margin-top: 44px;
 	font-size: 28px;
 }
@@ -742,6 +753,161 @@ html,body{
 	line-height: 100px;
 	font-size: 30px;
 }
+.news_div{
+	width: 690px;
+	margin: 60px auto 0;
+}
+.news_div_right{
+	width: 540px;
+	margin-left: 20px;
+	border-top: 10px solid #fe981c;
+	border-bottom: 1px solid #8e8e8e;
+	padding: 20px 0 30px;
+}
+.new_msg{
+	font-size: 30px;
+	color: #1e1e1e;
+	margin-left: 30px;
+}
+.new_date{
+	font-size: 22px;
+	color: #999;
+	margin-top: 5px;
+}
+.news_content{
+	font-size: 26px;
+	color: #666;
+	line-height: 1.5;
+	width: 480px;
+	margin: 20px auto 0;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp:3;
+	-webkit-box-orient:vertical;
+
+}
+.news_detail{
+	width: 690px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+.new_det_msg{
+	font-size: 32px;
+	color: #1e1e1e;
+}
+.news_detail_ct{
+	margin-top: 30px;
+	font-size: 28px;
+	color: #666;
+	line-height: 1.5;
+}
+.det_time{
+	font-size: 28px;
+	color: #ccc;
+	text-align: right;
+}
+
+/*my-myDemand.html*/
+.section{
+	padding-bottom: 20px;
+}
+.left_option{
+	text-align: center;
+}
+.left_option img{
+	margin-top: 20px;
+}
+.right_option{
+	width: 500px;
+	margin-left: 30px;
+}
+.sec_content{
+	margin: 20px auto 0;
+	width: 550px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	font-size: 26px;
+	color: #666;
+	line-height: 1.5;
+}
+.materials2{
+	width: 500px;
+	font-size: 30px;
+	color: #1e1e1e;
+	display:block;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+.marginT{
+	margin-top: 10px;
+	font-size: 24px;
+	color: #999;
+}
+
+.demand{
+	width: 750px;
+	margin: 0 auto;
+}
+.border{
+	width: 690px;
+	margin: 0 auto;
+	border-top: 1px solid #ccc;
+	padding:0 0 20px;
+}
+.padding{
+	padding:20px 0;
+}
+.coop_nav{
+	margin: -48px auto 30px;
+	width: 750px;
+	height: 70px;
+	background: #f0f0f0;
+	font-size: 26px;
+	color: #999;
+}
+
+.coop_nav p{
+	width: 250px;
+	height: 70px;
+	text-align: center;
+	line-height: 70px;
+}
+
+.coop_section{
+	width: 290px;
+	padding: 14px 14px 28px;
+	border: 1px solid #e8e8e8;
+	margin-bottom: 30px;
+	margin-left: 60px;
+}
+.index_coop_swiper,.tab_body{
+	display: none;
+}
+.active{
+	color: #ff971d;
+}
+.cer-middle{
+	width: 750px;
+	margin: 0 auto;
+	 padding-bottom: 100px;
+}
+.mid_p{
+	font-size: 32px;
+	width: 190px;
+	height: 116px;
+	line-height: 116px;
+	margin-left: 35px;
+}
+.IDcardDiv{
+	width: 690px;
+	margin: 0 auto;
+}
+
 
 
 
