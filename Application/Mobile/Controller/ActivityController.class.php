@@ -57,6 +57,29 @@ class ActivityController extends BaseController
         json_return($returnArr);
     }
 
+
+    /**
+     * 获取收藏列表
+     */
+    public function collect_list()
+    {
+        if (empty($_SESSION["userArr"])) {
+            $returnArr = array("result" => 0, "msg" => "请先登录", "code" => 402);
+        }else{
+            $info=M('activity_user_relation_hd')
+                ->table('5u_activity_user_relation_hd A')
+                ->join('5u_activity_hd B ON A.hd_id=B.id')
+                ->where('A.user_id='.$_SESSION['userId'])
+                ->select();
+            if ($info) {
+                $returnArr = array("result" => 1, "msg" => "获取成功", "code" => 200, "data" => $info);
+            }else{
+                $returnArr = array("result" => 0, "msg" => "没有数据或该用户不存在，否则为栏目不存在", "code" => 400);
+            }
+        }
+        json_return($returnArr);
+    }
+
     /**
      * 报名活动
      */

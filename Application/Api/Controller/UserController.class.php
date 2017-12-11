@@ -1049,16 +1049,18 @@ class UserController extends BaseRestController
                 }
                 break;
             case 'edit':
-                $where['user_id'] = $id;
+                $where['user_id'] = $_SESSION['userId'];
                 $data = I('post.');
                 $ifHaveUser = $DAO->where($where)->getField("user_id");
                 if($ifHaveUser) {
                     $flag = $DAO->where($where)->save($data);
+
                 } else {
                     $data['user_id'] = $id;
                     $data['add_time'] = date("Y-m-d H:i:s", time());
                     $flag = $DAO->where($where)->add($data);
                 }
+                M('5u_manage_users')->where($where)->save($data);
                 if ($flag === false) {
                     $returnArr = array("result" => 0, "msg" => "请求错误，获取数据出错", "code" => 402, "data" => null);
                 } else {
@@ -1195,19 +1197,19 @@ class UserController extends BaseRestController
                     file_put_contents($imgPath, base64_decode($base64Img));
 
                     //保存数据库
-                    $data['company_pic'] = '/' . $imgPath;
-                    $where['user_id'] = $userId;
-                    $ifHaveUser = $DAO->where($where)->getField("user_id");
-                    if($ifHaveUser) {
-                        $flag = $DAO->where($where)->save($data);
-                    } else {
-                        $data['user_id'] = $id;
-                        $data['add_time'] = date("Y-m-d H:i:s", time());
-                        $flag = $DAO->where($where)->add($data);
-                    }
+                    $data = '/' . $imgPath;
+//                    $where['user_id'] = $userId;
+//                    $ifHaveUser = $DAO->where($where)->getField("user_id");
+//                    if($ifHaveUser) {
+//                        $flag = $DAO->where($where)->save($data);
+//                    } else {
+//                        $data['user_id'] = $id;
+//                        $data['add_time'] = date("Y-m-d H:i:s", time());
+//                        $flag = $DAO->where($where)->add($data);
+//                    }
 
-                    if ($flag) {
-                        $returnArr = array("result" => 1, "msg" => "请求成功", "code" => 200, "data" => null);
+                    if ($data) {
+                        $returnArr = array("result" => 1, "msg" => "请求成功", "code" => 200, "data" => $data);
                     } else {
                         $returnArr = array("result" => 0, "msg" => "请求错误，获取数据出错", "code" => 402, "data" => null);
                     }
@@ -1396,7 +1398,7 @@ class UserController extends BaseRestController
         switch($action){
             case 'detail':
                 $where['user_id'] = $id;
-                $field = 'user_id,mobile,nickname,user_name,password,head_pic,email,sex,birthday,province,company,city,job,tel,authentication,district,oauth,openid,status,gzly,yyhy,idcard';
+                $field = 'user_id,mobile,nickname,user_name,password,head_pic,email,sex,birthday,province,company,city,job,tel,authentication,district,oauth,openid';
                 $info = $DAO->where($where)->field($field)->find();
                 $info['area'] = $info['province'] . '-' . $info['city'];
                 //密码置为1 代表有密码
@@ -1426,7 +1428,7 @@ class UserController extends BaseRestController
             case 'edit':
                 $data = I('post.');
                 $data['status'] = '1';
-                $where['user_id'] = $data['user_id'];
+                $where['user_id'] = $_SESSION['userId'];
                 $flag = $DAO->where($where)->save($data);
 
                 if ($flag === false) {

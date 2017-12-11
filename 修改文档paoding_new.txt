@@ -10,7 +10,8 @@
 
 2.用户管理
 
-5u_manage_users数据表添加字段 status(认证状态)  gzly(关注领域) yyhy（应用行业）
+5u_manage_users_authen数据表添加字段 idcard(身份证号) zyyw（主营业务）address(地址)
+idcard_img_front(身份证正面) idcard_img_back(身份证背面) business_licence_img(营业执照)
 
 3.活动
 
@@ -50,3 +51,6 @@
 5u_notice_relation_user
 5u_acticvity_enter_hd
 5u_notice_relation_user
+
+
+9.登录修改手机字段
