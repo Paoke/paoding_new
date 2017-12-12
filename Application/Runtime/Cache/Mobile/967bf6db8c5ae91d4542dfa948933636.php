@@ -26,7 +26,7 @@
 
         </div>
     </a>
-    <a href="#">
+    <a href="/index.php/Mobile/User/change_nickname.html">
         <div class="apply_content_box chose clear">
             <span  class='apply_word fl'>昵称</span>
             <img  class='fr content_jt' src="<?php echo (MOBILE); ?>/images/icon-right2.png" alt="">

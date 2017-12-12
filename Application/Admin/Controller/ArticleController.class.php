@@ -319,6 +319,12 @@ class ArticleController extends BaseController
                         } else {
                             $this->assign('category_id', 0);
                         }
+
+                        //应用事例
+                        if($channel=="hzjg"){
+                            $yysl=M('article_relation_yysl')->where('hzjg_id='.$getId)->select();
+                        }
+
                         $this->assign('keyword', $keyword);
                         $pageNow = $_GET["page_now"];
                         $pageNum = $_GET['page_num'];
@@ -340,6 +346,8 @@ class ArticleController extends BaseController
                         //绑定的用户信息
                         $this->assign("bind_user_id", $bind_user_id);
                         $this->assign("bind_user_name", $bind_user_name);
+
+                        $this->assign('yysl',$yysl);
 
                         $this->display("article_info");
                     } else {
@@ -1668,6 +1676,30 @@ class ArticleController extends BaseController
         $this->assign("URL_imageUp", U("Admin/Ueditor/imageUp", array("savepath" => "article")));
         $this->assign("URL_getMovie", U("Admin/Ueditor/getMovie", array("savepath" => "article")));
         $this->assign("URL_Home", "");
+    }
+
+
+    /**
+     * 应用事例
+     *
+     */
+    public function use_example()
+    {
+        $action=$_GET['action'];
+
+        switch ($action){
+
+            case "add":
+                $this->assign('id',$_GET['id']);
+                $this->display('example_info');
+                break;
+
+
+            case "add_data":
+
+                break;
+
+        }
     }
 
 }

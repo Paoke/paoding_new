@@ -1036,7 +1036,7 @@ class UserController extends BaseRestController
         switch($action){
             case 'detail':
                 $where['user_id'] = $id;
-                $field = 'user_id,type,company_code,company_name,tech_field,desc,has_patent,company_pic,tech_file,patent_file,status';
+                $field = 'user_id,type,company_name,tech_field,desc,has_patent,company_pic,tech_file,patent_file,status';
                 $info = $DAO->where($where)->field($field)->find();
 //                $info['area'] = $info['province'] . '-' . $info['city'];
                 if(empty($info['company_name'])) {
@@ -1427,7 +1427,6 @@ class UserController extends BaseRestController
                 break;
             case 'edit':
                 $data = I('post.');
-                $data['status'] = '1';
                 $where['user_id'] = $_SESSION['userId'];
                 $flag = $DAO->where($where)->save($data);
 

@@ -54,3 +54,9 @@ idcard_img_front(身份证正面) idcard_img_back(身份证背面) business_licence_img(营
 
 
 9.登录修改手机字段
+
+10.合作企业  增加内容  对接方向 应用行业 专利证书 联系人 手机号码 邮箱 专利证书 荣誉证书 其他证书
+
+增加标签 院所 企业 其他
+
+增加5u_article_relation_yysl

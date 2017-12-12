@@ -391,22 +391,36 @@
                                         </table>
                                     </div>
                                     <div id="chart" class="tab-pane">
+                                        <div class="pull-right">
+                                            <div class="btn-group">
+                                                <a  class="btn btn-default "
+                                                   href="/index.php/Admin/Article/use_example/action/add?id=<?php echo ($id); ?>"><i class="fa fa-save"></i>增加事例
+                                                </a>
 
+
+                                            </div>
+                                        </div>
                                         <table id="list-table" class="table table-bordered  table-striped" role="grid"
                                                aria-describedby="example1_info">
                                             <thead>
                                             <tr role="row" align="center">
-                                                <td style="font-weight:bold; padding: 10px;text-align: left;">LogID</td>
-                                                <td style="font-weight:bold;text-align: left;">用户ID</td>
-                                                <td style="font-weight:bold;text-align: left;">昵称</td>
-                                                <td style="font-weight:bold;text-align: left;">操作时间</td>
-                                                <td style="font-weight:bold;text-align: left;">日志内容</td>
-                                                <td style="font-weight:bold;text-align: left;">IP地址</td>
+
+                                                <td style="font-weight:bold; padding: 10px;text-align: left;">ID</td>
+                                                <td style="font-weight:bold;text-align: left;">标题</td>
+                                                <td style="font-weight:bold;text-align: left;">技术领域</td>
+                                                <td style="font-weight:bold;text-align: left;">合作方式</td>
+                                                <td style="font-weight:bold;text-align: left;">交付方式</td>
+                                                <td style="font-weight:bold;text-align: left;">时间</td>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <?php if(is_array($system_log)): foreach($system_log as $vokey=>$vo): ?><tr role="row" align="center">
-                                                    <?php if(is_array($vo)): foreach($vo as $vokey1=>$vo1): ?><td style="padding: 10px; text-align: left;"><?php echo ($vo1); ?></td><?php endforeach; endif; ?>
+                                            <?php if(is_array($yysl)): foreach($yysl as $vokey=>$vo): ?><tr role="row" align="center">
+                                                    <td style="padding: 10px; text-align: left;"><?php echo ($vo["id"]); ?></td>
+                                                    <td style="padding: 10px; text-align: left;"><?php echo ($vo["title"]); ?></td>
+                                                    <td style="padding: 10px; text-align: left;"><?php echo ($vo["jsly"]); ?></td>
+                                                    <td style="padding: 10px; text-align: left;"><?php echo ($vo["hzfs"]); ?></td>
+                                                    <td style="padding: 10px; text-align: left;"><?php echo ($vo["jffs"]); ?></td>
+                                                    <td style="padding: 10px; text-align: left;"><?php echo ($vo["create_time"]); ?></td>
                                                 </tr><?php endforeach; endif; ?>
                                             </tbody>
                                         </table>
