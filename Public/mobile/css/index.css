@@ -210,7 +210,10 @@
     -moz-box-shadow: 0 0 8px #ff971d;
     -ms-box-shadow: 0 0 8px #ff971d;
     box-shadow: 0 0 8px #ff971d;   
-
+}
+.topic_img{
+	width: 270px;
+	height: 188px;
 }
 .ICP{
 	width: 750px;
@@ -240,6 +243,7 @@
 	width: 272px !important;
 	margin-left: 30px;
 	box-shadow: 0 5px 10px #ccc;  
+	border-bottom: 1px solid #ccc;
 	padding-bottom: 20px;  
 }
 
@@ -247,9 +251,14 @@
 /*	overflow-x:hidden; */
 	margin: 0 auto;
 	padding-bottom: 40px;
+
 }
 
 .hot_secTit{
+	display:bolck;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
 	margin: 20px 0 10px 12px;
 	font-size: 28px;
 	color: #1e1e1e;
@@ -263,6 +272,8 @@
 .hot_secCt2{
 	margin-left: 12px;
 	margin-top: 10px;
+	padding-bottom: 10px;
+
 }
 .hot_secCt_tec{
 	margin-left: 12px;

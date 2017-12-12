@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
-<html lang="en">
+<html lang="en" ng-app="index">
 <head>
     <meta charset="UTF-8">
     <title>技术</title>
@@ -31,19 +31,19 @@
 
 <!-- 发布技术 -->
 <div class="index_dataBox">
-    <div class="index_data clear">
+    <div class="index_data clear" ng-controller="dataCtrl">
         <div class="data_section fl first_data">
-            <p class="sec_num">1088</p>
+            <p class="sec_num" ng-cloak>{{serve}}</p>
             <p class="sec_intro">次服务对接</p>
             <p class="sec_line"></p>
         </div>
         <div class="data_section fl">
-            <p class="sec_num">675</p>
+            <p class="sec_num" ng-cloak>{{tec}}</p>
             <p class="sec_intro">项技术发布</p>
             <p class="sec_line"></p>
         </div>
         <div class="data_section fl">
-            <p class="sec_num">1088</p>
+            <p class="sec_num" ng-cloak>{{damend}}</p>
             <p class="sec_intro">项市场需求发布</p>
         </div>
     </div>
@@ -63,195 +63,29 @@
         <p class="fr more_tec">更多专题<img src="<?php echo (MOBILE); ?>/images/icon-right.png" alt=""></p>
     </a>
 </div>
-<div class="main_hot">
+<div class="main_hot" ng-controller="specTopicCtrl">
     <div class="main_hot_wrap">
         <div class="swiper-container" id="swiper-container2">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="/index.php/Mobile/Index/theme_tec.html">
-                        <img src="<?php echo (MOBILE); ?>/images/index-hottopic.jpg" alt="">
-                        <p class="hot_secTit">环保技术专题1</p>
+                <div class="swiper-slide" ng-repeat="list in lists">
+                    <a href="/index.php/Mobile/Index/theme_tec?id={{list.id}}.html">
+                        <img class="topic_img" ng-src="{{list.cover_url}}" alt="" ng-cloak>
+                        <p class="hot_secTit" ng-cloak>{{list.title}}</p>
                         <p class="hot_secCt">
                             <img src="<?php echo (MOBILE); ?>/images/icon-index-item.png" alt="">
-                            <span class="hot_secCt_tec">68项技术</span>
+                            <span class="hot_secCt_tec" ng-cloak>{{list.count}}项技术</span>
                         </p>
 
                         <div class="hot_secCt2 clear">
                             <p class="fl">
                                 <span class="point"></span>
-                                <span class="sec_world">激光清洗</span>
+                                <span class="sec_world" ng-cloak>{{list.miaoshu}}</span>
                             </p>
-                            <p class="fl" style="margin-left: 30px;">
+                          <!--  <p class="fl" style="margin-left: 30px;">
                                 <span class="point"></span>
                                 <span class="sec_world">抗菌清洁</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?php echo (MOBILE); ?>/images/index-hottopic.jpg" alt="">
-                        <p class="hot_secTit">环保技术专题2</p>
-                        <p class="hot_secCt">
-                            <img src="<?php echo (MOBILE); ?>/images/icon-index-item.png" alt="">
-                            <span class="hot_secCt_tec">68项技术</span>
-                        </p>
-
-                        <div class="hot_secCt2 clear">
-                            <p class="fl">
-                                <span class="point"></span>
-                                <span class="sec_world">激光清洗</span>
-                            </p>
-                            <p class="fl" style="margin-left: 30px;">
-                                <span class="point"></span>
-                                <span class="sec_world">抗菌清洁</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?php echo (MOBILE); ?>/images/index-hottopic.jpg" alt="">
-                        <p class="hot_secTit">环保技术专题3</p>
-                        <p class="hot_secCt">
-                            <img src="<?php echo (MOBILE); ?>/images/icon-index-item.png" alt="">
-                            <span class="hot_secCt_tec">68项技术</span>
-                        </p>
-
-                        <div class="hot_secCt2 clear">
-                            <p class="fl">
-                                <span class="point"></span>
-                                <span class="sec_world">激光清洗</span>
-                            </p>
-                            <p class="fl" style="margin-left: 30px;">
-                                <span class="point"></span>
-                                <span class="sec_world">抗菌清洁</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?php echo (MOBILE); ?>/images/index-hottopic.jpg" alt="">
-                        <p class="hot_secTit">环保技术专题4</p>
-                        <p class="hot_secCt">
-                            <img src="<?php echo (MOBILE); ?>/images/icon-index-item.png" alt="">
-                            <span class="hot_secCt_tec">68项技术</span>
-                        </p>
-
-                        <div class="hot_secCt2 clear">
-                            <p class="fl">
-                                <span class="point"></span>
-                                <span class="sec_world">激光清洗</span>
-                            </p>
-                            <p class="fl" style="margin-left: 30px;">
-                                <span class="point"></span>
-                                <span class="sec_world">抗菌清洁</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?php echo (MOBILE); ?>/images/index-hottopic.jpg" alt="">
-                        <p class="hot_secTit">环保技术专题5</p>
-                        <p class="hot_secCt">
-                            <img src="<?php echo (MOBILE); ?>/images/icon-index-item.png" alt="">
-                            <span class="hot_secCt_tec">68项技术</span>
-                        </p>
-                        <div class="hot_secCt2 clear">
-                            <p class="fl">
-                                <span class="point"></span>
-                                <span class="sec_world">激光清洗</span>
-                            </p>
-                            <p class="fl" style="margin-left: 30px;">
-                                <span class="point"></span>
-                                <span class="sec_world">抗菌清洁</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?php echo (MOBILE); ?>/images/index-hottopic.jpg" alt="">
-                        <p class="hot_secTit">环保技术专题6</p>
-                        <p class="hot_secCt">
-                            <img src="<?php echo (MOBILE); ?>/images/icon-index-item.png" alt="">
-                            <span class="hot_secCt_tec">68项技术</span>
-                        </p>
-
-                        <div class="hot_secCt2 clear">
-                            <p class="fl">
-                                <span class="point"></span>
-                                <span class="sec_world">激光清洗</span>
-                            </p>
-                            <p class="fl" style="margin-left: 30px;">
-                                <span class="point"></span>
-                                <span class="sec_world">抗菌清洁</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?php echo (MOBILE); ?>/images/index-hottopic.jpg" alt="">
-                        <p class="hot_secTit">环保技术专题7</p>
-                        <p class="hot_secCt">
-                            <img src="<?php echo (MOBILE); ?>/images/icon-index-item.png" alt="">
-                            <span class="hot_secCt_tec">68项技术</span>
-                        </p>
-
-                        <div class="hot_secCt2 clear">
-                            <p class="fl">
-                                <span class="point"></span>
-                                <span class="sec_world">激光清洗</span>
-                            </p>
-                            <p class="fl" style="margin-left: 30px;">
-                                <span class="point"></span>
-                                <span class="sec_world">抗菌清洁</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?php echo (MOBILE); ?>/images/index-hottopic.jpg" alt="">
-                        <p class="hot_secTit">环保技术专题8</p>
-                        <p class="hot_secCt">
-                            <img src="<?php echo (MOBILE); ?>/images/icon-index-item.png" alt="">
-                            <span class="hot_secCt_tec">68项技术</span>
-                        </p>
-
-                        <div class="hot_secCt2 clear">
-                            <p class="fl">
-                                <span class="point"></span>
-                                <span class="sec_world">激光清洗</span>
-                            </p>
-                            <p class="fl" style="margin-left: 30px;">
-                                <span class="point"></span>
-                                <span class="sec_world">抗菌清洁</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <img src="<?php echo (MOBILE); ?>/images/index-hottopic.jpg" alt="">
-                        <p class="hot_secTit">环保技术专题9</p>
-                        <p class="hot_secCt">
-                            <img src="<?php echo (MOBILE); ?>/images/icon-index-item.png" alt="">
-                            <span class="hot_secCt_tec">68项技术</span>
-                        </p>
-
-                        <div class="hot_secCt2 clear">
-                            <p class="fl">
-                                <span class="point"></span>
-                                <span class="sec_world">激光清洗</span>
-                            </p>
-                            <p class="fl" style="margin-left: 30px;">
-                                <span class="point"></span>
-                                <span class="sec_world">抗菌清洁</span>
-                            </p>
+                            </p> 
+                           -->
                         </div>
                     </a>
                 </div>
@@ -273,52 +107,32 @@
     </a>
 </div>
 
-
-<a href="/index.php/Mobile/Index/detail_tec.html">
-    <div class="main_section clear">
-    <div class="fl main_section_left">
-        <img src="<?php echo (MOBILE); ?>/images/index-advanced-tech.jpg" alt="">
-        <p class="transfer">技术转让</p>
-    </div>
-    <div class="fr main_section_right">
-        <p class="sec_tit">印刷品无痕防伪技术</p>
-        <p>
-            <img src="<?php echo (MOBILE); ?>/images/icon-index-industry.png" alt="">
-            <span class="sec_industry">印刷工业，防伪工业</span>
-        </p>
-        <p class="p_scan">
-            <img src="<?php echo (MOBILE); ?>/images/icon-index-browse.png" alt="">
-            <span class="sec_scan">2068</span>
-        </p>
-        <div class="adhi_print">
-            <span class="adhibition">应用类</span>
-            <span class="print">成熟方案</span>
+<div class="advancedWrap" ng-controller="advancedCtrl" ng-cloak>
+    <a href="/index.php/Mobile/Index/detail_tec.html" ng-repeat="tecList in tecLists">
+        <div class="main_section clear">
+            <div class="fl main_section_left">
+                <img ng-src="{{tecList.lbxt}}" alt="">
+                <p class="transfer">{{tecList.hzxs}}</p>
+            </div>
+            <div class="fr main_section_right">
+                <p class="sec_tit">{{tecList.title}}</p>
+                <p>
+                    <img src="<?php echo (MOBILE); ?>/images/icon-index-industry.png" alt="">
+                    <span class="sec_industry">{{tecList.yyxy}}</span>
+                </p>
+                <p class="p_scan">
+                    <img src="<?php echo (MOBILE); ?>/images/icon-index-browse.png" alt="">
+                    <span class="sec_scan">{{tecList.clicks}}</span>
+                </p>
+                <div class="adhi_print">
+                    <span class="adhibition">{{tecList.cat_name}}</span>
+                    <span class="print">{{tecList.csd}}</span>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-</a>
+    </a>
+ </div>
 
-<div class="main_section clear">
-    <div class="fl main_section_left">
-        <img src="<?php echo (MOBILE); ?>/images/index-advanced-tech.jpg" alt="">
-        <p class="transfer">技术转让</p>
-    </div>
-    <div class="fr main_section_right">
-        <p class="sec_tit">印刷品无痕防伪技术</p>
-        <p>
-            <img src="<?php echo (MOBILE); ?>/images/icon-index-industry.png" alt="">
-            <span class="sec_industry">印刷工业，防伪工业</span>
-        </p>
-        <p class="p_scan">
-            <img src="<?php echo (MOBILE); ?>/images/icon-index-browse.png" alt="">
-            <span class="sec_scan">2068</span>
-        </p>
-        <div class="adhi_print">
-            <span class="adhibition">应用类</span>
-            <span class="print">成熟方案</span>
-        </div>
-    </div>
-</div>
 <a href="/index.php/Mobile/Index/tec_list.html">
     <p class="scan_more">查看更多技术</p>
 </a>
@@ -418,7 +232,8 @@
 </body>
 <script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
 <script src='<?php echo (MOBILE); ?>/js/swiper.min.js'></script>
-<script src='<?php echo (MOBILE); ?>/js/index.js'></script>
+<script src='<?php echo (MOBILE); ?>/js/angular.min.js'></script>
+<!-- <script src='<?php echo (MOBILE); ?>/js/index.js'></script> -->
 <script>
     // 轮播
     var mySwiper = new Swiper('#swiper-container1', {
@@ -464,10 +279,74 @@
         observeParents:true
     });
 
-    // var mySwiper4 = new Swiper('#swiper-container4', {
-    // 	pagination : '.swiper-pagination',
-    // 	paginationClickable :true,
-    // 	loop:true,
-    // })
+    var app = angular.module('index',[]);
+    app.controller("dataCtrl",function ($scope,$http){
+        $http({
+            method:"GET",
+            url:"/api.php/ChannelIndex/index/action/count/channel/fwdj/type/1"
+        }).then(function successCallback(response) {                      
+                $scope.serve = response.data.data;                             
+            }, function errorCallback(response) {
+            });
+
+        $http({
+            method:"GET",
+            url:"/api.php/ChannelIndex/index/action/count/channel/js/type/1"
+        }).then(function successCallback(response) {                      
+                $scope.tec = response.data.data;                            
+            }, function errorCallback(response) {
+            });
+
+        $http({
+            method:"GET",
+            url:"/api.php/ChannelIndex/index/action/count/channel/xq/type/1"
+        }).then(function successCallback(response) {                      
+                $scope.damend = response.data.data;                
+            }, function errorCallback(response) {
+            });
+
+    });
+
+    app.controller("specTopicCtrl",function ($scope,$http){    
+        $http({
+            method:"GET",
+            params:{page_num:9},
+            url:"/api.php/Paoding/getIndex"
+        }).then(function successCallback(response) {                      
+                $scope.lists = response.data.data;                           
+            }, function errorCallback(response) {
+
+            });
+    });
+
+    // 前沿技术
+    app.controller("advancedCtrl",function ($scope,$http){
+        var data = {
+            page:1,
+            page_num:2,
+            order_field:'create_time',
+            category_id:0,
+            tag_id:0,
+            order_by:'DESC'
+        };
+        $http({
+            method:"POST",
+            data:data,
+            url:"/api.php/ChannelIndex/index/action/dataList/channel/js/type/1",
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            transformRequest: function(obj) {
+                var str = [];
+                for (var p in obj) {
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                }
+                return str.join("&");
+            }
+        }).then(function successCallback(response) {                      
+                $scope.tecLists = response.data.data; 
+                console.log(response.data.data);                            
+            }, function errorCallback(response) {
+
+            });
+    })
 </script>
 </html>

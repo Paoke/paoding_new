@@ -1,4 +1,4 @@
-var app = angular.module('myApp',[]);
+// var app = angular.module('myApp',[]);
 
 	// 头部banner
 app.controller("bannerCtrl",function ($scope,$http){
