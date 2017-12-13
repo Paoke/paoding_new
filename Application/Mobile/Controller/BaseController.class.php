@@ -109,7 +109,7 @@ class BaseController extends Controller
                         $recordData['user_id'] = session('userArr')['user_id'];
                         $recordData['user_ip'] = getIP();
                         M("ManageUserRecord") -> add($recordData);
-                }
+                    }
 
                 } else if ($oauthFlag == 0) {//如果没有数据的话，就跳过去重新获取。有缓存的的话就不再记录log
                     R("Wechat/Wechat/index", array("code"));
