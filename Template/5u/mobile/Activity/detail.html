@@ -125,7 +125,16 @@
 
     var app = angular.module("detail",[]);
     app.controller("detailCtrl",function ($scope,$http){
+        $http({
+            method:"GET",
+            params:
+            url:"/index.php/Mobile/Article/like?channel=js&id=**&action=**"
+        }).then(function successCallback(response) {                      
+                $scope.serve = response.data.data;                             
+            }, function errorCallback(response) {
+            });
 
+     
     });
 </script>
 </html>
