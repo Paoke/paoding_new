@@ -28,6 +28,7 @@ class WechatController
             case "redirect":
                 $res = $wechat->getOauthAccessToken();
                 $info = $wechat->getUserInfo($res["openid"]);
+                var_dump($info);exit;
                 if ($info) {
                     // R("Api/Wechat/index", array("login", $info));
                     $this->process($info);
