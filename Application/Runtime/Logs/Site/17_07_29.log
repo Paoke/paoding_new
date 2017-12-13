@@ -1,9 +1,0 @@
-[ 2017-07-29T21:29:42+08:00 ] 46.118.156.191 /site/wp-includes/wlwmanifest.xml
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
-INFO: [ app_begin ] --START--
-INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000345s ]
-INFO: [ app_begin ] --END-- [ RunTime:0.000417s ]
-ERR: 无法加载控制器:Wp-includes
-

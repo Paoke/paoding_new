@@ -1696,7 +1696,15 @@ class ArticleController extends BaseController
 
 
             case "add_data":
-
+                $data=I('post.');
+                $data['create_time']=date('Y-m-d H:i:s');
+                $result=M("article_relation_yysl")->add($data);
+                if($result){
+                    $returnArr = array("result" => 1, "msg" => "添加成功", "code" => 200, "data" => null);
+                }else{
+                    $returnArr = array("result" => 0, "msg" => "添加失败", "code" => 402, "data" => null);
+                }
+                json_return($returnArr);
                 break;
 
         }
