@@ -59,7 +59,8 @@ class UserController extends BaseController
     //个人信息
     public function user_info()
     {
-
+        $userId = $_SESSION["userArr"]["user_id"];
+        $this->assign("user_id",$userId);
         $this->display();
     }
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -7,29 +7,29 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="#" type="image/png">
 
-    <title>{$gemmap_config['shop_info_store_title']}</title>
-    <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}"/>
-    <meta name="description" content="{$gemmap_config['shop_info_store_desc']}"/>
+    <title><?php echo ($gemmap_config['shop_info_store_title']); ?></title>
+    <meta name="keywords" content="<?php echo ($gemmap_config['shop_info_store_keyword']); ?>"/>
+    <meta name="description" content="<?php echo ($gemmap_config['shop_info_store_desc']); ?>"/>
 
-    <link href="{$Think.const.CSS}/style.css" rel="stylesheet">
-    <link href="{$Think.const.CSS}/style-responsive.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{$Think.const.CSS}/bootstrap.min.css" media="all"/>
-    <link rel="stylesheet" type="text/css" href="{$Think.const.CSS}/bootstrap-reset.css" media="all"/>
-    <link rel="stylesheet" href="__PUBLIC__/js/cityselect/cityselect.css"/>
-    <script src="{$Think.const.JS}/cityselect/cityselect.js"></script>
-    <script src="__PUBLIC__/plugins/jQuery/jQuery-2.1.4.min.js"></script>
-    <script src="__PUBLIC__/js/global.js"></script>
-    <script src="__PUBLIC__/js/myFormValidate.js"></script>
-    <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-    <!-- <script src="__PUBLIC__/js/layer/layer-min.js"></script> -->
-    <script src="__PUBLIC__/js/layer/layer.js"></script>
-    <script src="__PUBLIC__/js/myAjax.js"></script>
-    <script src="__PUBLIC__/js/echarts.js"></script>
+    <link href="<?php echo (CSS); ?>/style.css" rel="stylesheet">
+    <link href="<?php echo (CSS); ?>/style-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?php echo (CSS); ?>/bootstrap.min.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo (CSS); ?>/bootstrap-reset.css" media="all"/>
+    <link rel="stylesheet" href="/Public/js/cityselect/cityselect.css"/>
+    <script src="<?php echo (JS); ?>/cityselect/cityselect.js"></script>
+    <script src="/Public/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="/Public/js/global.js"></script>
+    <script src="/Public/js/myFormValidate.js"></script>
+    <script src="/Public/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- <script src="/Public/js/layer/layer-min.js"></script> -->
+    <script src="/Public/js/layer/layer.js"></script>
+    <script src="/Public/js/myAjax.js"></script>
+    <script src="/Public/js/echarts.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="__PUBLIC__/js/html5shiv.js"></script>
-    <script src="__PUBLIC__/js/respond.min.js"></script>
+    <script src="/Public/js/html5shiv.js"></script>
+    <script src="/Public/js/respond.min.js"></script>
     <![endif]-->
     <style type="text/css">
 
@@ -198,25 +198,22 @@
     <div class="page-heading panel-title">
 
         <h3 id="article_title">
-            <empty name="info">标题
-                <else/>
-                {$info.title}
-            </empty>
+            <?php if(empty($info)): ?>标题
+                <?php else: ?>
+                <?php echo ($info["title"]); endif; ?>
         </h3>
         <ul class="breadcrumb">
             <li>发布人：
-                <empty name="info">{$currentUser}
-                    <else/>
-                    {$info.create_user}
-                </empty>
+                <?php if(empty($info)): echo ($currentUser); ?>
+                    <?php else: ?>
+                    <?php echo ($info["create_user"]); endif; ?>
             </li>
             <li>发布时间：
-                <empty name="info">{$currentDate}
-                    <else/>
-                    {$info.create_time}
-                </empty>
+                <?php if(empty($info)): echo ($currentDate); ?>
+                    <?php else: ?>
+                    <?php echo ($info["create_time"]); endif; ?>
             </li>
-            <li>浏览数：{$lead.data_id}</li>
+            <li>浏览数：<?php echo ($lead["data_id"]); ?></li>
         </ul>
     </div>
 
@@ -232,22 +229,16 @@
                                     <div class="form-group">
                                         <ul id="module" class="nav nav-tabs">
                                             <li class="active"><a href="#base" data-toggle="tab">内容编辑</a></li>
-                                            <notempty name="ifadd">
-                                                <li class="" onclick="loadComment('all');"><a href="#commentlist"  data-toggle="tab">评论管理</a>
+                                            <?php if(!empty($ifadd)): ?><li class="" onclick="loadComment('all');"><a href="#commentlist"  data-toggle="tab">评论管理</a>
                                                 </li>
                                                 <li class=""><a href="#log" data-toggle="tab" tab_index="3">操作记录</a>
                                                 </li>
-                                                <if condition="$channel eq hzjg">
-                                                <li class=""><a href="#chart" data-toggle="tab" tab_index="4">应用事例</a>
-                                                </li>
-                                                </if>
-                                            </notempty>
-                                            <volist name="child" id="vo">
-                                                <li class=""
-                                                    onclick="loadChannelChild('{$vo.channel_index}', '{$vo.type}');">
-                                                    <a href="#child" data-toggle="tab">{$vo.title}</a>
-                                                </li>
-                                            </volist>
+                                                <?php if($channel == hzjg): ?><li class=""><a href="#chart" data-toggle="tab" tab_index="4">应用事例</a>
+                                                </li><?php endif; endif; ?>
+                                            <?php if(is_array($child)): $i = 0; $__LIST__ = $child;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li class=""
+                                                    onclick="loadChannelChild('<?php echo ($vo["channel_index"]); ?>', '<?php echo ($vo["type"]); ?>');">
+                                                    <a href="#child" data-toggle="tab"><?php echo ($vo["title"]); ?></a>
+                                                </li><?php endforeach; endif; else: echo "" ;endif; ?>
                                         </ul>
                                     </div>
                                 </div>
@@ -268,100 +259,77 @@
                                             </div>
                                         </div>
                                         <br>
-                                        <input type="hidden" id="id" name="id" value="{$id}">
-                                        <input type="hidden" id="channel" name="channel" value="{$channel}">
-                                        <if condition="$is_bind_user eq 1">
-                                            <div class="form-group">
+                                        <input type="hidden" id="id" name="id" value="<?php echo ($id); ?>">
+                                        <input type="hidden" id="channel" name="channel" value="<?php echo ($channel); ?>">
+                                        <?php if($is_bind_user == 1): ?><div class="form-group">
                                                 <label class="col-sm-2 control-label">绑定用户：</label>
                                                 <div class="col-sm-9">
                                                     <input name="bind_user_name" class="form-control form-option" style="float: left;" id="bind_user_name" value="" placeholder="用户名/昵称/手机/邮箱搜索" />&nbsp;&nbsp;&nbsp;&nbsp;
                                                     <select name="bind_user_id" style="height: 34px;" id="bind_user_id" class="option">
-                                                        <if condition="$bind_user_id neq 0"> <option value={$bind_user_id} >账号：{$bind_user_name}</option>
-                                                            <else />
-                                                            <option value="a">--请搜索后选择--</option>
-                                                        </if>
+                                                        <?php if($bind_user_id != 0): ?><option value=<?php echo ($bind_user_id); ?> >账号：<?php echo ($bind_user_name); ?></option>
+                                                            <?php else: ?>
+                                                            <option value="a">--请搜索后选择--</option><?php endif; ?>
                                                     </select>&nbsp;&nbsp;&nbsp;&nbsp;
                                                     <button class="btn btn-info" type="button" onclick="search_user();"/>搜索
                                                 </div>
-                                            </div>
-                                        </if>
-                                        <if condition="$jschannel eq js">
-                                            <div class="form-group">
+                                            </div><?php endif; ?>
+                                        <?php if($jschannel == js): ?><div class="form-group">
                                                 <label class="col-sm-2 control-label">所属专题：</label>
                                                 <div class="col-sm-9">
                                                     <select class="small form-option" id="sszt" name="sszt"
                                                             style="font-size: 14px;">
                                                             <option value="0"></option>
-                                                            <foreach name="zutiData" item="cat">
-                                                                <option value="{$cat.id}"
-                                                                <if condition="$cat.id eq $info[sszt]">selected</if>
-                                                                >{$cat.title}</option>
-                                                            </foreach>
+                                                            <?php if(is_array($zutiData)): foreach($zutiData as $key=>$cat): ?><option value="<?php echo ($cat["id"]); ?>"
+                                                                <?php if($cat["id"] == $info[sszt]): ?>selected<?php endif; ?>
+                                                                ><?php echo ($cat["title"]); ?></option><?php endforeach; endif; ?>
 
                                                     </select>
-                                                    <!--<empty name="category_data">-->
+                                                    <!--<?php if(empty($category_data)): ?>-->
                                                         <!--<span class="warn_msg">-->
                                                             <!--请先新增"栏目类别"-->
                                                         <!--</span>-->
-                                                    <!--</empty>-->
+                                                    <!--<?php endif; ?>-->
                                                 </div>
-                                            </div>
-                                        </if>
+                                            </div><?php endif; ?>
                                         <div class="form-group">
                                             <label class="col-sm-2 control-label">栏目类别：</label>
                                             <div class="col-sm-9">
                                                 <select class="small form-option" id="category_id" name="category_id"
                                                         style="font-size: 14px;">
-                                                    <empty name="category_data">
-                                                        <option value="0">无</option>
-                                                        <else/>
-                                                        <volist name="category_data" id="cat">
-                                                            <option value="{$cat.id}"
-                                                            <if condition="$cat.id eq $info[category_id]">selected</if>
-                                                            >{$cat.cat_name}</option>
-                                                        </volist>
-                                                    </empty>
+                                                    <?php if(empty($category_data)): ?><option value="0">无</option>
+                                                        <?php else: ?>
+                                                        <?php if(is_array($category_data)): $i = 0; $__LIST__ = $category_data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cat): $mod = ($i % 2 );++$i;?><option value="<?php echo ($cat["id"]); ?>"
+                                                            <?php if($cat["id"] == $info[category_id]): ?>selected<?php endif; ?>
+                                                            ><?php echo ($cat["cat_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; endif; ?>
                                                 </select>
-                                                <empty name="category_data">
-                                                    <span class="warn_msg">
+                                                <?php if(empty($category_data)): ?><span class="warn_msg">
                                                         请先新增"栏目类别"
-                                                    </span>
-                                                </empty>
+                                                    </span><?php endif; ?>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label class="col-sm-2 control-label">标签：</label>
                                             <div class="col-sm-9">
-                                                <if condition="$if_tags eq 0">
-                                                    <label class=" control-label" style="color: red">暂无标签，请添加</label>
-                                                    <else/>
-                                                    <foreach name="tags_info" item="vo" key="vokey">
-                                                        <label class=" control-label" style=""><input name="tag_name[]"
+                                                <?php if($if_tags == 0): ?><label class=" control-label" style="color: red">暂无标签，请添加</label>
+                                                    <?php else: ?>
+                                                    <?php if(is_array($tags_info)): foreach($tags_info as $vokey=>$vo): ?><label class=" control-label" style=""><input name="tag_name[]"
                                                                                                       type="checkbox"
-                                                                                                      value="{$vo.id}"
-                                                            <if condition="$vo.checked eq 1">
-                                                                checked="checked"
-                                                            </if>
-                                                            />&nbsp{$vo.tag_name} &nbsp&nbsp&nbsp</label>
-                                                    </foreach>
-                                                </if>
+                                                                                                      value="<?php echo ($vo["id"]); ?>"
+                                                            <?php if($vo["checked"] == 1): ?>checked="checked"<?php endif; ?>
+                                                            />&nbsp<?php echo ($vo["tag_name"]); ?> &nbsp&nbsp&nbsp</label><?php endforeach; endif; endif; ?>
 
                                             </div>
                                         </div>
-                                        <if condition="$is_top eq '1'">
-                                        <div class="form-group">
+                                        <?php if($is_top == '1'): ?><div class="form-group">
                                             <label class="col-sm-2 control-label">属性：</label>
                                             <div class="col-sm-9">
                                                     <label class=" control-label" style="">
                                                         <input   name="is_red" id="is_red" type="checkbox" value=1
-                                                        <if condition="$data.is_red eq '1'">
-                                                            checked="checked"
-                                                        </if>
+                                                        <?php if($data["is_red"] == '1'): ?>checked="checked"<?php endif; ?>
                                                         /> 置顶 </label>
 
                                             </div>
-                                        </div>
-                                        </if>
+                                        </div><?php endif; ?>
                                         <div id="extends_div" class="extends_group">
                                         </div>
                                     </div>
@@ -416,13 +384,9 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <foreach name="system_log" item="vo" key="vokey">
-                                                <tr role="row" align="center">
-                                                    <foreach name="vo" item="vo1" key="vokey1">
-                                                        <td style="padding: 10px; text-align: left;">{$vo1}</td>
-                                                    </foreach>
-                                                </tr>
-                                            </foreach>
+                                            <?php if(is_array($system_log)): foreach($system_log as $vokey=>$vo): ?><tr role="row" align="center">
+                                                    <?php if(is_array($vo)): foreach($vo as $vokey1=>$vo1): ?><td style="padding: 10px; text-align: left;"><?php echo ($vo1); ?></td><?php endforeach; endif; ?>
+                                                </tr><?php endforeach; endif; ?>
                                             </tbody>
                                         </table>
                                     </div>
@@ -430,7 +394,7 @@
                                         <div class="pull-right">
                                             <div class="btn-group">
                                                 <a  class="btn btn-default "
-                                                   href="__CONTROLLER__/use_example/action/add?id={$id}"><i class="fa fa-save"></i>增加事例
+                                                   href="/index.php/Admin/Article/use_example/action/add?id=<?php echo ($id); ?>"><i class="fa fa-save"></i>增加事例
                                                 </a>
 
 
@@ -451,27 +415,25 @@
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <foreach name="yysl" item="vo" key="vokey">
-                                                <tr role="row" align="center">
-                                                    <td style="padding: 10px; text-align: left;">{$vo.id}</td>
-                                                    <td style="padding: 10px; text-align: left;">{$vo.title}</td>
-                                                    <td style="padding: 10px; text-align: left;">{$vo.jsly}</td>
-                                                    <td style="padding: 10px; text-align: left;">{$vo.hzfs}</td>
-                                                    <td style="padding: 10px; text-align: left;">{$vo.jffs}</td>
-                                                    <td style="padding: 10px; text-align: left;">{$vo.create_time}</td>
+                                            <?php if(is_array($yysl)): foreach($yysl as $vokey=>$vo): ?><tr role="row" align="center">
+                                                    <td style="padding: 10px; text-align: left;"><?php echo ($vo["id"]); ?></td>
+                                                    <td style="padding: 10px; text-align: left;"><?php echo ($vo["title"]); ?></td>
+                                                    <td style="padding: 10px; text-align: left;"><?php echo ($vo["jsly"]); ?></td>
+                                                    <td style="padding: 10px; text-align: left;"><?php echo ($vo["hzfs"]); ?></td>
+                                                    <td style="padding: 10px; text-align: left;"><?php echo ($vo["jffs"]); ?></td>
+                                                    <td style="padding: 10px; text-align: left;"><?php echo ($vo["create_time"]); ?></td>
                                                     <td style="font-weight:bold;text-align: left;">
                                                         <div class="btn-group">
                                                             <a class="btn btn-default"
-                                                               href="__MODULE__/Article/use_example/action/edit?id={$vo.id}"
+                                                               href="/index.php/Admin/Article/use_example/action/edit?id=<?php echo ($vo["id"]); ?>"
                                                                title="编辑"><i class="fa fa-pencil"></i></a>
                                                             <a  data-toggle="modal" class="btn btn-default"
                                                                data-name="" title="删除"
                                                                status=""
-                                                               onclick="delModal('{$vo.id}')" id=""><i class="fa fa-trash-o"></i></a>
+                                                               onclick="delModal('<?php echo ($vo["id"]); ?>')" id=""><i class="fa fa-trash-o"></i></a>
                                                         </div>
                                                     </td>
-                                                </tr>
-                                            </foreach>
+                                                </tr><?php endforeach; endif; ?>
                                             </tbody>
                                         </table>
 
@@ -548,24 +510,24 @@
 </section>
 
 <!-- Placed js at the end of the document so the pages load faster -->
-<script src="{$Think.const.JS}/jquery-1.10.2.min.js"></script>
-<script src="{$Think.const.JS}/jquery-ui-1.9.2.custom.min.js"></script>
-<script src="{$Think.const.JS}/jquery-migrate-1.2.1.min.js"></script>
-<script src="{$Think.const.JS}/bootstrap.min.js"></script>
-<script src="{$Think.const.JS}/modernizr.min.js"></script>
-<script src="{$Think.const.JS}/jquery.nicescroll.js"></script>
-<!-- <script src="__PUBLIC__/js/layer/layer-min.js"></script> -->
-<script src="__PUBLIC__/js/layer/layer.js"></script>
+<script src="<?php echo (JS); ?>/jquery-1.10.2.min.js"></script>
+<script src="<?php echo (JS); ?>/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="<?php echo (JS); ?>/jquery-migrate-1.2.1.min.js"></script>
+<script src="<?php echo (JS); ?>/bootstrap.min.js"></script>
+<script src="<?php echo (JS); ?>/modernizr.min.js"></script>
+<script src="<?php echo (JS); ?>/jquery.nicescroll.js"></script>
+<!-- <script src="/Public/js/layer/layer-min.js"></script> -->
+<script src="/Public/js/layer/layer.js"></script>
 <!--common scripts for all pages-->
-<script src="{$Think.const.JS}/scripts.js"></script>
+<script src="<?php echo (JS); ?>/scripts.js"></script>
 <!-- ueditor start-->
-<script src="{$Think.const.JS}/ueditor/ueditor.config.js"></script>
-<script src="{$Think.const.JS}/ueditor/ueditor.all.min.js"></script>
-<script src="{$Think.const.JS}/ueditor/lang/zh-cn/zh-cn.js"></script>
-<script src="{$Think.const.JS}/extends.js"></script>
-<script src="{$Think.const.JS}/laydate/laydate.js"></script>
-<script src="{$Think.const.JS}/Validform_v5.3.2_min.js"></script>
-<script src="__PUBLIC__/js/vue.js"></script>
+<script src="<?php echo (JS); ?>/ueditor/ueditor.config.js"></script>
+<script src="<?php echo (JS); ?>/ueditor/ueditor.all.min.js"></script>
+<script src="<?php echo (JS); ?>/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script src="<?php echo (JS); ?>/extends.js"></script>
+<script src="<?php echo (JS); ?>/laydate/laydate.js"></script>
+<script src="<?php echo (JS); ?>/Validform_v5.3.2_min.js"></script>
+<script src="/Public/js/vue.js"></script>
 
 <!-- ueditor end-->
 <script type="text/javascript">
@@ -582,7 +544,7 @@
     /**
      * 初始化编辑工具
      */
-    window.UEDITOR_HOME_URL = "{$Think.const.JS}/ueditor/";
+    window.UEDITOR_HOME_URL = "<?php echo (JS); ?>/ueditor/";
     function preview(id) {
         var src = $('#' + id).val();
         var content;
@@ -626,14 +588,14 @@
         }
         //判断id值是否存在
         var id = $("#id").val();
-        var ifadd = "{$ifadd}";
+        var ifadd = "<?php echo ($ifadd); ?>";
         var action = '';
         if (ifadd == '') {
             //不存在，表示添加
-            action = "__MODULE__/Article/article/action/add/channel/{$channel}/type/{$type}/iscopy/{$iscopy}";
+            action = "/index.php/Admin/Article/article/action/add/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/iscopy/<?php echo ($iscopy); ?>";
         } else if (ifadd == 'b') {
             //存在，表示编辑
-            action = "__MODULE__/Article/article/action/edit/channel/{$channel}/type/{$type}/id/{$id}";
+            action = "/index.php/Admin/Article/article/action/edit/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/id/<?php echo ($id); ?>";
         }
         //异步提交表单数据
         $.ajax({
@@ -645,7 +607,7 @@
                 if (res.result == 1) {
                     layer.msg(res.msg);
                     setTimeout(function () {
-                        window.location.href = "__MODULE__/Article/article/action/page_list/channel/{$channel}/type/{$type}/page_now/{$page_now}/page_num/{$page_num}/category_id/{$category_id}/keyword/{$keyword}";
+                        window.location.href = "/index.php/Admin/Article/article/action/page_list/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/page_now/<?php echo ($page_now); ?>/page_num/<?php echo ($page_num); ?>/category_id/<?php echo ($category_id); ?>/keyword/<?php echo ($keyword); ?>";
                     }, 1000);
                 }
                 if (res.result == 0) {
@@ -664,9 +626,9 @@
 
     var form_check = null;
     $(function () {
-        var url = "__URL__/article/action/extends/channel/{$channel}/type/{$type}/id/{$id}";
+        var url = "/index.php/Admin/Article/article/action/extends/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/id/<?php echo ($id); ?>";
         var id = $("#id").val();
-        var site = "{:session('site_name')}";
+        var site = "<?php echo session('site_name');?>";
         loadExtends(site, url, id, 'extends_div');
 
         $("#feiyong").bind('keyup', function () {
@@ -716,7 +678,7 @@
     });
 
     function loadComment(sta1) {
-        var url = "__MODULE__/Comment/channelComment/action/page_list/channel/{$channel}/data_id/{$id}/status/" + sta1;
+        var url = "/index.php/Admin/Comment/channelComment/action/page_list/channel/<?php echo ($channel); ?>/data_id/<?php echo ($id); ?>/status/" + sta1;
         $.post(url, null, function (ret) {
             if (ret.result == 1) {
                 $("#comment_data").empty();
@@ -834,7 +796,7 @@
                 var channel = $("#child_channel").val();
                 var type = $("#child_type").val();
                 var title = "修改数据";
-                var url = "__MODULE__/ChannelData/child_module/action/page_edit/channel/"+channel+"/type/"+type+"/id/"+id;
+                var url = "/index.php/Admin/ChannelData/child_module/action/page_edit/channel/"+channel+"/type/"+type+"/id/"+id;
 
                 child_win = layer_window(title, url);
             },
@@ -853,7 +815,7 @@
     function del_child(id){
         var channel = $("#child_channel").val();
         var type = $("#child_type").val();
-        var url = "__MODULE__/ChannelData/child_module/action/del/channel/"+channel+"/type/"+type+"/id/"+id;
+        var url = "/index.php/Admin/ChannelData/child_module/action/del/channel/"+channel+"/type/"+type+"/id/"+id;
         $.get(url, function(ret){
             layer.msg(ret.msg);
             if(ret.result == 1){
@@ -870,7 +832,7 @@
 
     function getChildData(channel, type){
         var data_id = $("#id").val();
-        var url = "__MODULE__/ChannelData/child_module/action/page_list/channel/"+channel+"/type/"+type+"/data_id/"+data_id;
+        var url = "/index.php/Admin/ChannelData/child_module/action/page_list/channel/"+channel+"/type/"+type+"/data_id/"+data_id;
         var data = {'page_num': vm.page_num, 'page_now': vm.page_now};
         $.post(url, data, function(ret){
             $("#child_channel").val(channel);
@@ -937,7 +899,7 @@
         var type = $("#child_type").val();
         var data_id = $("#id").val();
         var title = "添加数据";
-        var url = "__MODULE__/ChannelData/child_module/action/page_add/channel/"+channel+"/type/"+type+"/data_id/"+data_id;
+        var url = "/index.php/Admin/ChannelData/child_module/action/page_add/channel/"+channel+"/type/"+type+"/data_id/"+data_id;
 
         child_win = layer_window(title, url);
     });

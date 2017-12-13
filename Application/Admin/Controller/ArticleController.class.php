@@ -1690,13 +1690,13 @@ class ArticleController extends BaseController
         switch ($action){
 
             case "add":
-                $this->assign('id',$_GET['id']);
+                $this->assign('hzjg_id',$_GET['id']);
                 $this->display('example_info');
                 break;
 
 
             case "add_data":
-                $data=I('post.');
+                $data=$_POST;
                 $data['create_time']=date('Y-m-d H:i:s');
                 $result=M("article_relation_yysl")->add($data);
                 if($result){
@@ -1706,6 +1706,41 @@ class ArticleController extends BaseController
                 }
                 json_return($returnArr);
                 break;
+
+
+            case "edit":
+
+                $id=$_GET['id'];
+                $data=M('article_relation_yysl')->where('id='.$id)->find();
+                $this->assign('id',$_GET['id']);
+                $this->assign('data',$data);
+                $this->display('example_info');
+                break;
+
+            case "save":
+                $id=$_GET['id'];
+                $data=$_POST;
+                $result=M("article_relation_yysl")->where('id='.$id)->save($data);
+                if($result){
+                    $returnArr = array("result" => 1, "msg" => "保存成功", "code" => 200, "data" => null);
+                }else{
+                    $returnArr = array("result" => 0, "msg" => "保存失败", "code" => 402, "data" => null);
+                }
+                json_return($returnArr);
+                break;
+            case "delete":
+
+                $id=$_GET['id'];
+                $result=M("article_relation_yysl")->where('id='.$id)->delete();
+                if($result){
+                    $returnArr = array("result" => 1, "msg" => "删除成功", "code" => 200, "data" => null);
+                }else{
+                    $returnArr = array("result" => 0, "msg" => "删除失败", "code" => 402, "data" => null);
+                }
+                json_return($returnArr);
+                break;
+
+
 
         }
     }

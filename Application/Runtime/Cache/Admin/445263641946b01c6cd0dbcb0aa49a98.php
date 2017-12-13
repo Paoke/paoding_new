@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -7,19 +7,19 @@
     <meta name="author" content="ThemeBucket">
     <link rel="shortcut icon" href="#" type="image/png">
 
-    <title>{$gemmap_config['shop_info_store_title']}</title>
-    <meta name="keywords" content="{$gemmap_config['shop_info_store_keyword']}"/>
-    <meta name="description" content="{$gemmap_config['shop_info_store_desc']}"/>
+    <title><?php echo ($gemmap_config['shop_info_store_title']); ?></title>
+    <meta name="keywords" content="<?php echo ($gemmap_config['shop_info_store_keyword']); ?>"/>
+    <meta name="description" content="<?php echo ($gemmap_config['shop_info_store_desc']); ?>"/>
 
-    <link href="{$Think.const.CSS}/style.css" rel="stylesheet">
-    <link href="{$Think.const.CSS}/style-responsive.css" rel="stylesheet">
+    <link href="<?php echo (CSS); ?>/style.css" rel="stylesheet">
+    <link href="<?php echo (CSS); ?>/style-responsive.css" rel="stylesheet">
 
-    <script src="__PUBLIC__/plugins/jQuery/jQuery-2.1.4.min.js"></script>
-    <script src="__PUBLIC__/js/global.js"></script>
-    <script src="__PUBLIC__/js/myFormValidate.js"></script>
-    <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="__PUBLIC__/js/layer/layer-min.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
-    <script src="__PUBLIC__/js/myAjax.js"></script>
+    <script src="/Public/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="/Public/js/global.js"></script>
+    <script src="/Public/js/myFormValidate.js"></script>
+    <script src="/Public/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/Public/js/layer/layer-min.js"></script><!-- 弹窗js 参考文档 http://layer.layui.com/-->
+    <script src="/Public/js/myAjax.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -52,20 +52,18 @@
                         <div class="panel-body">
                             <!--表单数据-->
                             <form class="form-horizontal adminex-form" method="post" id="form_id_name">
-                                <if condition="$data.hzjg_id eq null">
-                                    <input type="hidden" id="hzjg_id" name="hzjg_id" value="{$hzjg_id}">
-                                    <else/>
-                                    <input type="hidden" id="hzjg_id" name="hzjg_id" value="{$data.hzjg_id}">
-                                </if>
-                                <input type="hidden" id="data_id" name="data_id" value="{$data.id}">
-                                <input type="hidden" id="content" name="content" value="{$data.content}">
+                                <?php if($data["hzjg_id"] == null): ?><input type="hidden" id="hzjg_id" name="hzjg_id" value="<?php echo ($hzjg_id); ?>">
+                                    <?php else: ?>
+                                    <input type="hidden" id="hzjg_id" name="hzjg_id" value="<?php echo ($data["hzjg_id"]); ?>"><?php endif; ?>
+                                <input type="hidden" id="data_id" name="data_id" value="<?php echo ($data["id"]); ?>">
+                                <input type="hidden" id="content" name="content" value="<?php echo ($data["content"]); ?>">
                                 <div id="extends_div" class="extends_group">
                                     <div class="form-group">
                                         <label class="col-sm-2 control-label">
                                             标题：
                                         </label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control form-input" id="title" name="title" value="{$data.title}" placeholder="标题">
+                                            <input type="text" class="form-control form-input" id="title" name="title" value="<?php echo ($data["title"]); ?>" placeholder="标题">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -76,7 +74,7 @@
                                             描述：
                                         </label>
                                         <div class="col-sm-9">
-                                            <textarea class="form-control form-input" id="desc" name="desc">{$data.desc}</textarea>
+                                            <textarea class="form-control form-input" id="desc" name="desc"><?php echo ($data["desc"]); ?></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -84,7 +82,7 @@
                                             技术领域：
                                         </label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control form-input" id="jsly" name="jsly" value="{$data.jsly}" placeholder="技术领域">
+                                            <input type="text" class="form-control form-input" id="jsly" name="jsly" value="<?php echo ($data["jsly"]); ?>" placeholder="技术领域">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -92,7 +90,7 @@
                                             合作方式：
                                         </label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control form-input" id="hzfs" name="hzfs" value="{$data.hzfs}" placeholder="合作方式">
+                                            <input type="text" class="form-control form-input" id="hzfs" name="hzfs" value="<?php echo ($data["hzfs"]); ?>" placeholder="合作方式">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -100,7 +98,7 @@
                                             交付方式：
                                         </label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control form-input" id="jffs" name="jffs" value="{$data.jffs}" placeholder="交付方式">
+                                            <input type="text" class="form-control form-input" id="jffs" name="jffs" value="<?php echo ($data["jffs"]); ?>" placeholder="交付方式">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -108,20 +106,18 @@
                                             具体内容：
                                         </label>
                                         <div class="col-sm-9">
-                                            <script id="editor" type="text/plain" style="width:800px;height:300px;">{$data.content}</script>
+                                            <script id="editor" type="text/plain" style="width:800px;height:300px;"><?php echo ($data["content"]); ?></script>
                                         </div>
                                     </div>
 
                                     <div class="form-group" style="text-align: center;">
-                                        <if condition="$data eq null">
-                                        <button type="button" id="postbutton" class="btn btn-default "
+                                        <?php if($data == null): ?><button type="button" id="postbutton" class="btn btn-default "
                                                 onclick="ajax_submit_form('form_id_name','add')"><i class="fa fa-floppy-o"></i>保存
                                         </button>
-                                            <else />
+                                            <?php else: ?>
                                             <button type="button" id="postbutton" class="btn btn-default "
                                         onclick="ajax_submit_form('form_id_name','edit')"><i class="fa fa-floppy-o"></i>提交
-                                            </button>
-                                            </if>
+                                            </button><?php endif; ?>
 
                                         <a href="javascript:history.go(-1)" data-toggle="tooltip" title=""
                                            class="btn btn-default"><i class="fa fa-reply"></i>返回</a>
@@ -139,24 +135,24 @@
 </section>
 
 <!-- Placed js at the end of the document so the pages load faster -->
-<script src="{$Think.const.JS}/jquery-1.10.2.min.js"></script>
-<script src="{$Think.const.JS}/jquery-ui-1.9.2.custom.min.js"></script>
-<script src="{$Think.const.JS}/jquery-migrate-1.2.1.min.js"></script>
-<script src="{$Think.const.JS}/bootstrap.min.js"></script>
-<script src="{$Think.const.JS}/modernizr.min.js"></script>
-<script src="{$Think.const.JS}/jquery.nicescroll.js"></script>
-<!-- <script src="__PUBLIC__/js/layer/layer-min.js"></script> -->
-<script src="__PUBLIC__/js/layer/layer.js"></script>
+<script src="<?php echo (JS); ?>/jquery-1.10.2.min.js"></script>
+<script src="<?php echo (JS); ?>/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="<?php echo (JS); ?>/jquery-migrate-1.2.1.min.js"></script>
+<script src="<?php echo (JS); ?>/bootstrap.min.js"></script>
+<script src="<?php echo (JS); ?>/modernizr.min.js"></script>
+<script src="<?php echo (JS); ?>/jquery.nicescroll.js"></script>
+<!-- <script src="/Public/js/layer/layer-min.js"></script> -->
+<script src="/Public/js/layer/layer.js"></script>
 <!--common scripts for all pages-->
-<script src="{$Think.const.JS}/scripts.js"></script>
+<script src="<?php echo (JS); ?>/scripts.js"></script>
 <!-- ueditor start-->
-<script src="{$Think.const.JS}/ueditor/ueditor.config.js"></script>
-<script src="{$Think.const.JS}/ueditor/ueditor.all.min.js"></script>
-<script src="{$Think.const.JS}/ueditor/lang/zh-cn/zh-cn.js"></script>
-<script src="{$Think.const.JS}/extends.js"></script>
-<script src="{$Think.const.JS}/laydate/laydate.js"></script>
-<script src="{$Think.const.JS}/Validform_v5.3.2_min.js"></script>
-<script src="__PUBLIC__/js/vue.js"></script>
+<script src="<?php echo (JS); ?>/ueditor/ueditor.config.js"></script>
+<script src="<?php echo (JS); ?>/ueditor/ueditor.all.min.js"></script>
+<script src="<?php echo (JS); ?>/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script src="<?php echo (JS); ?>/extends.js"></script>
+<script src="<?php echo (JS); ?>/laydate/laydate.js"></script>
+<script src="<?php echo (JS); ?>/Validform_v5.3.2_min.js"></script>
+<script src="/Public/js/vue.js"></script>
 <script type="text/javascript">
 
     var ue = UE.getEditor('editor');
