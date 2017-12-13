@@ -11,7 +11,7 @@
 </head>
 <body ng-controller="myUserCen" style="padding-bottom:100px">
 
-<input type="hidden" id="id" value="<?php echo session('userId');?>" />
+<input type="hidden" id="id" value="<?php echo ($user_id); ?>" />
 <div class="my_header clear">
     <div class="my_head fl">
         <a href="/index.php/Mobile/User/change_head.html">           
