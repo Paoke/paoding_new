@@ -197,7 +197,6 @@
         // 1.23.按需求栏目和业务范围请求列表接口
         data.page="1";
         data.category_id = $(this).val();
-        alert($(this).val());
         data.tag_id = $("#demand_type").val();
         page_total=getListData(data,"html");
     });

@@ -60,6 +60,9 @@
     <input class='apply_means fr' type="text" value="柯大大" readonly="readonly">
 </div>
 
+<!-- 获取联系方式 -->
+<p class="getConWay">获取联系方式</p>
+<!-- 未认证时 getTelphoto 不可见 -->
 <div class="getTelphoto" style="display:none">
     <div class="apply_content_box chose clear">
         <span class='apply_word fl'>联系人</span>
@@ -80,33 +83,6 @@
        庖丁技术开发" readonly="readonly">
     </div>
 </div>
-<!-- 获取联系方式 -->
-<p class="getConWay">获取联系方式</p>
-
-<!-- 未认证时 demand_hide 不可见 -->
-<div class="demand_hide" style="display:none">
-    <div class="apply_content_box chose clear">
-        <span class='apply_word fl'>联系人</span>
-        <input class='apply_means fr' type="text" value="柯大大" readonly="readonly">
-    </div>
-
-    <div class="apply_content_box chose clear">
-        <span class='apply_word fl'>手机号</span>
-        <input class='apply_means fr' type="text" value="13651248714" readonly="readonly">
-    </div>
-
-    <div class="apply_content_box chose clear">
-        <span class='apply_word fl'>邮箱</span>
-        <input class='apply_means fr' type="text" value="32456132@qq.com" readonly="readonly">
-    </div>
-
-    <div class="apply_content_box chose clear">
-        <span class='apply_word fl'>企业名称</span>
-        <input class='apply_means fr' type="text" value="庖丁技术开发" readonly="readonly">
-    </div>
-</div>
-
-
 <div class="index_div"></div>
 
 <div class="demand_main">
@@ -152,10 +128,9 @@
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
         var r = window.location.search.substr(1).match(reg);
         if (r!=null) return unescape(r[2]); return null;
-    }
+    };
     var data_id = GetQueryString("data_id");
 
-   
     var app = angular.module("detail",[]);
     app.filter('trustHtml',function ($sce){
         return function(val) {

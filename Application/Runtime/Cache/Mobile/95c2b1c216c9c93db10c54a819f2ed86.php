@@ -49,31 +49,30 @@
     </div>
 </div>
 
-<!-- <div class="wrap"> -->
-    <div class="advancedWrap" style="margin-top:30px;">
-        <a href="/index.php/Mobile/Index/detail_tec.html" ng-repeat="tecList in tecLists">
-            <div class="main_section clear">
-                <div class="fl main_section_left">
-                    <img ng-src="{{tecList.lbxt}}" alt="">
-                    <p class="transfer">{{tecList.hzxs}}</p>
-                </div>
-                <div class="fr main_section_right">
-                    <p class="sec_tit">{{tecList.title}}</p>
-                    <p>
-                        <img src="<?php echo (MOBILE); ?>/images/icon-index-industry.png" alt="">
-                        <span class="sec_industry">{{tecList.yyxy}}</span>
-                    </p>
-                    <p class="p_scan">
-                        <img src="<?php echo (MOBILE); ?>/images/icon-index-browse.png" alt="">
-                        <span class="sec_scan">{{tecList.clicks}}</span>
-                    </p>
-                    <div class="adhi_print">
-                        <span class="adhibition">{{tecList.cat_name}}</span>
-                        <span class="print">{{tecList.csd}}</span>
-                    </div>
+<div class="advancedWrap" style="margin-top:30px;">
+    <a href="/index.php/Mobile/Index/detail_tec.html?data_id={{tecList.id}}" ng-repeat="tecList in tecLists">
+        <div class="main_section clear">
+            <div class="fl main_section_left">
+                <img ng-cloak ng-src="{{tecList.lbxt}}" alt="">
+                <p ng-cloak class="transfer">{{tecList.hzxs}}</p>
+            </div>
+            <div class="fr main_section_right">
+                <p class="sec_tit" ng-cloak>{{tecList.title}}</p>
+                <p>
+                    <img src="<?php echo (MOBILE); ?>/images/icon-index-industry.png" alt="">
+                    <span class="sec_industry" ng-cloak>{{tecList.yyxy}}</span>
+                </p>
+                <p class="p_scan">
+                    <img src="<?php echo (MOBILE); ?>/images/icon-index-browse.png" alt="">
+                    <span class="sec_scan" ng-cloak>{{tecList.clicks}}</span>
+                </p>
+                <div class="adhi_print">
+                    <span class="adhibition" ng-cloak>{{tecList.cat_name}}</span>
+                    <span class="print" ng-cloak>{{tecList.csd}}</span>
                 </div>
             </div>
-        </a>
+        </div>
+    </a>
     <!--     <a href="/index.php/Mobile/Index/detail_tec.html">
             <div class="main_section clear">
                 <div class="fl main_section_left">
@@ -98,7 +97,7 @@
             </div>
         </a> -->
     </div>
-<!-- </div> -->
+
 
 <p class="advert">
     庖丁众包·专业科技服务平台
@@ -240,7 +239,7 @@
                 result=response['data']['page'].page_total;
                 for (var i = 0; i < info.length; i++) {
                     code = code +
-                    '<a href="/index.php/Mobile/Index/detail_tec.html">'+
+                    '<a href="/index.php/Mobile/Index/detail_tec.html?data='+info[i].id+'">'+
                         '<div class="main_section clear">'+
                             '<div class="fl main_section_left">'+
                                 '<img src="'+info[i].lbxt+'" alt="">'+
