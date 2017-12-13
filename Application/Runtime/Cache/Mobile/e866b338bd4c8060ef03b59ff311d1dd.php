@@ -1,4 +1,4 @@
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html lang="en" ng-app="demand_list">
 <head>
     <meta charset="UTF-8">
@@ -7,9 +7,9 @@
           content="庖丁科技众包服务平台携手国内外先进技术科研院所、顶级技术专家，以实现科技成果市场化为核心，为企业提供快速精准的需求匹配服务，从而实现企业  以及科技资源的有效对接，帮助企业实现产业技术升级，助力先进技术完成产业化发展。"/>
     <meta name="keywords" content="庖丁众包、智能技术、机械制造、健康医疗、材料科学、能源环保、生产流程优化"/>
     <meta name='viewport' content='user-scalable=no,width=750'>
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/common_new.css">
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/demand.css">
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/swiper.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/common_new.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/demand.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/swiper.css">
 </head>
 <body ng-cloak ng-controller="demandListCtrl">
 <div class="demand_nav">
@@ -35,7 +35,7 @@
         <option ng-value="option.id" ng-repeat="option in options">{{option.tag_name}}</option>
     </select>
     <div class="inputDiv fr">
-        <img src="{$Think.MOBILE}/images/icon-search-default.png" alt="">
+        <img src="<?php echo (MOBILE); ?>/images/icon-search-default.png" alt="">
         技术搜索
     </div>
 </div>
@@ -43,7 +43,7 @@
 <!-- 搜索框 -->
 <div class="searching" style="display:none;">
     <div class="input_search">
-        <img src="{$Think.MOBILE}/images/icon-search-default.png" alt="">
+        <img src="<?php echo (MOBILE); ?>/images/icon-search-default.png" alt="">
         <input class="tech_search" type="text" placeholder="技术搜索">
         <p class="click_search fr">点击搜索</p>
     </div>
@@ -60,11 +60,11 @@
             <div class="sec_data clear">
                 <div class="sec_data_left fl">
                     <div>
-                        <img src="{$Think.MOBILE}/images/icon-search-type.png" alt="">
+                        <img src="<?php echo (MOBILE); ?>/images/icon-search-type.png" alt="">
                         <span class="sec_data_span">{{detail.cat_name}}</span>
-                        <img src="{$Think.MOBILE}/images/icon-search-time.png" alt="">
+                        <img src="<?php echo (MOBILE); ?>/images/icon-search-time.png" alt="">
                         <span class="sec_data_span">{{detail.yfzq}}</span>
-                        <img src="{$Think.MOBILE}/images/icon-search-scan.png" alt="">
+                        <img src="<?php echo (MOBILE); ?>/images/icon-search-scan.png" alt="">
                         <span class="sec_data_span">{{detail.clicks}}</span>
                     </div>
                     <p class="sec_data_p">
@@ -72,11 +72,11 @@
                         投入预算：<span>{{detail.yfys}}</span>
                     </p>
                 </div>
-                <img ng-show="detail.xpyf=='是'" class="fr" src="{$Think.MOBILE}/images/icon-research.png" alt="">
+                <img ng-show="detail.xpyf=='是'" class="fr" src="<?php echo (MOBILE); ?>/images/icon-research.png" alt="">
             </div>
-            <a ng-href="__CONTROLLER__/detail?data_id={{detail.id}}">
+            <a ng-href="/index.php/Mobile/Demand/detail?data_id={{detail.id}}">
                 <div class="viewDetails clear">
-                    <img class="fr" src="{$Think.MOBILE}/images/icon-right.png" alt="">
+                    <img class="fr" src="<?php echo (MOBILE); ?>/images/icon-right.png" alt="">
                     <span class="viewDetails_span fr">查看详情</span>
                 </div>
             </a>
@@ -90,27 +90,27 @@
 </p>
 <!-- 底部导航 -->
 <div class="nav">
-    <a class="nav_option" href="__MODULE__/Index/index">
-        <img src="{$Think.MOBILE}/images/icon-tabbar-technology-default.png" alt="">
+    <a class="nav_option" href="/index.php/Mobile/Index/index">
+        <img src="<?php echo (MOBILE); ?>/images/icon-tabbar-technology-default.png" alt="">
         <p>技术</p>
     </a>
     <a class="nav_option" href="">
-        <img src="{$Think.MOBILE}/images/icon-tabbar-demand-selected.png" alt="">
+        <img src="<?php echo (MOBILE); ?>/images/icon-tabbar-demand-selected.png" alt="">
         <p style="color:#ff971d;">需求</p>
     </a>
-    <a class="nav_option" href="__MODULE__/Activity/activity">
-        <img src="{$Think.MOBILE}/images/icon-tabbar-activity-default.png.png" alt="">
+    <a class="nav_option" href="/index.php/Mobile/Activity/activity">
+        <img src="<?php echo (MOBILE); ?>/images/icon-tabbar-activity-default.png.png" alt="">
         <p>活动</p>
     </a>
-    <a class="nav_option" href="__MODULE__/User/user_center">
-        <img src="{$Think.MOBILE}/images/icon-tabbar-my-default.png" alt="">
+    <a class="nav_option" href="/index.php/Mobile/User/user_center">
+        <img src="<?php echo (MOBILE); ?>/images/icon-tabbar-my-default.png" alt="">
         <p>我的</p>
     </a>
 </div>
 </body>
-<script src='{$Think.MOBILE}/js/angular.min.js'></script>
-<script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
-<script src='{$Think.MOBILE}/js/swiper.min.js'></script>
+<script src='<?php echo (MOBILE); ?>/js/angular.min.js'></script>
+<script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
+<script src='<?php echo (MOBILE); ?>/js/swiper.min.js'></script>
 <script>
     // 轮播
     var mySwiper = new Swiper(".swiper-container", {
@@ -197,6 +197,7 @@
         // 1.23.按需求栏目和业务范围请求列表接口
         data.page="1";
         data.category_id = $(this).val();
+        alert($(this).val());
         data.tag_id = $("#demand_type").val();
         page_total=getListData(data,"html");
     });
@@ -253,11 +254,11 @@
                         '<div class="sec_data clear">' +
                         '<div class="sec_data_left fl">' +
                         ' <div>' +
-                        '<img src="{$Think.MOBILE}/images/icon-search-type.png" alt="">' +
+                        '<img src="<?php echo (MOBILE); ?>/images/icon-search-type.png" alt="">' +
                         '<span class="sec_data_span">' + info[i].cat_name + '</span>' +
-                        '<img src="{$Think.MOBILE}/images/icon-search-time.png" alt="">' +
+                        '<img src="<?php echo (MOBILE); ?>/images/icon-search-time.png" alt="">' +
                         '<span class="sec_data_span">' + info[i].yfzq + '</span>' +
-                        '<img src="{$Think.MOBILE}/images/icon-search-scan.png" alt="">' +
+                        '<img src="<?php echo (MOBILE); ?>/images/icon-search-scan.png" alt="">' +
                         '<span class="sec_data_span">' + info[i].clicks + '</span>' +
                         '</div>' +
                         '<p class="sec_data_p">' +
@@ -265,11 +266,11 @@
                         '投入预算：<span>' + info[i].yfys + '</span>' +
                         '</p>' +
                         ' </div>' +
-                        '<img class="fr" src="{$Think.MOBILE}/images/icon-research.png" alt="">' +
+                        '<img class="fr" src="<?php echo (MOBILE); ?>/images/icon-research.png" alt="">' +
                         ' </div>' +
-                        '<a href=__CONTROLLER__/detail?data_id='+info[i].id+'>' +
+                        '<a href=/index.php/Mobile/Demand/detail?data_id='+info[i].id+'>' +
                         ' <div class="viewDetails clear">' +
-                        ' <img class="fr" src="{$Think.MOBILE}/images/icon-right.png" alt="">' +
+                        ' <img class="fr" src="<?php echo (MOBILE); ?>/images/icon-right.png" alt="">' +
                         ' <span class="viewDetails_span fr">查看详情</span>' +
                         '</div>' +
                         '</a>' +
