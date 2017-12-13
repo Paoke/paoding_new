@@ -1,4 +1,4 @@
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,14 +6,14 @@
     <meta name="description" content="庖丁科技众包服务平台携手国内外先进技术科研院所、顶级技术专家，以实现科技成果市场化为核心，为企业提供快速精准的需求匹配服务，从而实现企业以及科技资源的有效对接，帮助企业实现产业技术升级，助力先进技术完成产业化发展。" />
     <meta name="keywords" content="庖丁众包、智能技术、机械制造、健康医疗、材料科学、能源环保、生产流程优化"/>
     <meta name='viewport' content='user-scalable=no,width=750'>
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/common_new.css">
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/index.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/common_new.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/index.css">
 </head>
 <body>
 <div class="mask" style="display:none"></div>
 
 <div class="banner">
-    <img src="{$Think.MOBILE}/images/index-techdetail-image1.jpg" alt="">
+    <img src="<?php echo (MOBILE); ?>/images/index-techdetail-image1.jpg" alt="">
 </div>
 
 <div class="share clear">
@@ -25,7 +25,7 @@
         </p>
     </div>
     <div class="fr">
-        <img src="{$Think.MOBILE}/images/icon-index-techdetail-share.jpg" alt="">
+        <img src="<?php echo (MOBILE); ?>/images/icon-index-techdetail-share.jpg" alt="">
         <p class="tip">分享</p>
     </div>
 </div>
@@ -147,8 +147,8 @@
         <div class="tec_tit">效果指标</div>
         <div class="tec_content">
             <p class="tec_ct_tit">一、本产品已进入量产阶段</p>
-            <img src="{$Think.MOBILE}/images/index-techdetail-image2.jpg" alt="">
-            <img src="{$Think.MOBILE}/images/index-techdetail-image3.jpg" alt="">
+            <img src="<?php echo (MOBILE); ?>/images/index-techdetail-image2.jpg" alt="">
+            <img src="<?php echo (MOBILE); ?>/images/index-techdetail-image3.jpg" alt="">
         </div>
     </div>
 </a>
@@ -158,8 +158,8 @@
         <div class="tec_tit">应用案例</div>
         <div class="tec_content">
             <p class="tec_ct_tit">一、应用案例1</p>
-            <img src="{$Think.MOBILE}/images/index-techdetail-image4.jpg" alt="">
-            <img src="{$Think.MOBILE}/images/index-techdetail-image5.jpg" alt="">
+            <img src="<?php echo (MOBILE); ?>/images/index-techdetail-image4.jpg" alt="">
+            <img src="<?php echo (MOBILE); ?>/images/index-techdetail-image5.jpg" alt="">
         </div>
     </div>
 </a>
@@ -170,12 +170,12 @@
 
 <div class="sec_return">
     <a onclick="javascript:history.go(-1);">
-        <img class="return_icon" src="{$Think.MOBILE}/images/icon-common-return.png" alt="">
+        <img class="return_icon" src="<?php echo (MOBILE); ?>/images/icon-common-return.png" alt="">
     </a>
     <p class="collect">收藏</p>
 </div>
 </body>
-<script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
+<script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
 <script>
 
     // 导航栏

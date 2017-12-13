@@ -1,4 +1,4 @@
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html lang="en" ng-app="detail">
 <head>
     <meta charset="UTF-8">
@@ -6,10 +6,10 @@
     <meta name="description" content="庖丁科技众包服务平台携手国内外先进技术科研院所、顶级技术专家，以实现科技成果市场化为核心，为企业提供快速精准的需求匹配服务，从而实现企业以及科技资源的有效对接，帮助企业实现产业技术升级，助力先进技术完成产业化发展。" />
     <meta name="keywords" content="庖丁众包、智能技术、机械制造、健康医疗、材料科学、能源环保、生产流程优化"/>
     <meta name='viewport' content='user-scalable=no,width=750'>
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/common_new.css">
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/demand.css">
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/swiper.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/common_new.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/demand.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/my.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/swiper.css">
 </head>
 <body ng-controller="detailCtrl">
 <div class="mask"></div>
@@ -37,11 +37,11 @@
             <div class="sec_data_left fl">
                 <div>
                     <p class="sec_data_num">需求编号:{{detail.id}}</p>
-                    <img src="{$Think.MOBILE}/images/icon-search-type.png" alt="">
+                    <img src="<?php echo (MOBILE); ?>/images/icon-search-type.png" alt="">
                     <span class="sec_data_span">{{detail.cat_name}}</span>
-                    <img src="{$Think.MOBILE}/images/icon-search-time.png" alt="">
+                    <img src="<?php echo (MOBILE); ?>/images/icon-search-time.png" alt="">
                     <span class="sec_data_span">{{detail.yfzq}}</span>
-                    <img src="{$Think.MOBILE}/images/icon-search-scan.png" alt="">
+                    <img src="<?php echo (MOBILE); ?>/images/icon-search-scan.png" alt="">
                     <span class="sec_data_span">{{detail.clicks}}</span>
                 </div>
                 <p class="sec_data_p">
@@ -49,7 +49,7 @@
                     投入预算：<span>{{detail.yfys}}</span>
                 </p>
             </div>
-            <img class="fr" src="{$Think.MOBILE}/images/icon-research.png" alt="">
+            <img class="fr" src="<?php echo (MOBILE); ?>/images/icon-research.png" alt="">
         </div>
     </div>
     <div class="index_div"></div>
@@ -60,9 +60,6 @@
     <input class='apply_means fr' type="text" value="柯大大" readonly="readonly">
 </div>
 
-<!-- 获取联系方式 -->
-<p class="getConWay">获取联系方式</p>
-<!-- 未认证时 getTelphoto 不可见 -->
 <div class="getTelphoto" style="display:none">
     <div class="apply_content_box chose clear">
         <span class='apply_word fl'>联系人</span>
@@ -83,6 +80,33 @@
        庖丁技术开发" readonly="readonly">
     </div>
 </div>
+<!-- 获取联系方式 -->
+<p class="getConWay">获取联系方式</p>
+
+<!-- 未认证时 demand_hide 不可见 -->
+<div class="demand_hide" style="display:none">
+    <div class="apply_content_box chose clear">
+        <span class='apply_word fl'>联系人</span>
+        <input class='apply_means fr' type="text" value="柯大大" readonly="readonly">
+    </div>
+
+    <div class="apply_content_box chose clear">
+        <span class='apply_word fl'>手机号</span>
+        <input class='apply_means fr' type="text" value="13651248714" readonly="readonly">
+    </div>
+
+    <div class="apply_content_box chose clear">
+        <span class='apply_word fl'>邮箱</span>
+        <input class='apply_means fr' type="text" value="32456132@qq.com" readonly="readonly">
+    </div>
+
+    <div class="apply_content_box chose clear">
+        <span class='apply_word fl'>企业名称</span>
+        <input class='apply_means fr' type="text" value="庖丁技术开发" readonly="readonly">
+    </div>
+</div>
+
+
 <div class="index_div"></div>
 
 <div class="demand_main">
@@ -92,7 +116,7 @@
     </div>
     <p ng-bind-html="detail.content|trustHtml"></p>
     <div class="demand_photo">
-        <img src="{$Think.MOBILE}/images/demand-image.jpg" alt="">
+        <img src="<?php echo (MOBILE); ?>/images/demand-image.jpg" alt="">
     </div>
 </div>
 <p class="advert">
@@ -100,13 +124,13 @@
 </p>
 <div class="sec_return">
     <a onclick="javascript:history.go(-1);">
-        <img class="return_icon" src="{$Think.MOBILE}/images/icon-common-return.png" alt="">
+        <img class="return_icon" src="<?php echo (MOBILE); ?>/images/icon-common-return.png" alt="">
     </a>
     <p class="collect">收藏</p>
 </div>
 </body>
-<script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
-<script src='{$Think.MOBILE}/js/angular.min.js'></script>
+<script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
+<script src='<?php echo (MOBILE); ?>/js/angular.min.js'></script>
 <script>
 
     $(".findDemand").on("click",function(){
@@ -128,9 +152,10 @@
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
         var r = window.location.search.substr(1).match(reg);
         if (r!=null) return unescape(r[2]); return null;
-    };
+    }
     var data_id = GetQueryString("data_id");
 
+   
     var app = angular.module("detail",[]);
     app.filter('trustHtml',function ($sce){
         return function(val) {
