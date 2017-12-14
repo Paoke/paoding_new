@@ -28,7 +28,7 @@ class IndexController extends BaseController
                 }
             }
         }
-       $this->display();
+       $this->display('/User/binding');
     }
 
     public function choose()

@@ -724,11 +724,11 @@ html,body{
 
 .apply_identifying{
 	position: relative;
-	margin-top: 228px;
+	margin-top: 60px;
 }
 .get_indentify{
 	position: absolute;
-	bottom: 12px;
+	bottom: 120px;
 	right: 30px;
 	width: 234px;
 	height: 80px;
@@ -894,7 +894,6 @@ html,body{
 .cer-middle{
 	width: 750px;
 	margin: 0 auto;
-	 padding-bottom: 100px;
 }
 .mid_p{
 	font-size: 32px;
@@ -907,7 +906,27 @@ html,body{
 	width: 690px;
 	margin: 0 auto;
 }
-
+.user_header{
+	width: 750px;
+	margin: 60px auto 0;
+}
+.user_cicle img{
+	width: 100%;
+	text-align: center;
+}
+.user_cicle{
+	width: 120px;
+	height: 120px;
+	border: 6px solid #383f4a;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+.user_name{
+	font-size: 32px;
+	color: #1e1e1e;
+	margin: 20px auto 0;
+	text-align: center;
+}
 
 
 

@@ -12,9 +12,9 @@
 <body>
 <div class="user_header">
     <div class="user_cicle">
-        <img src="images/WX-head.png" alt="">
+        <img src="<?php echo ($head_pic); ?>" alt="">
     </div>
-    <p class="user_name">老王</p>
+    <p class="user_name"><?php echo ($nickname); ?></p>
 </div>
 <div class="apply_identifying">
     <input class="new_name" type="number" placeholder="输入新手机号" id="phone1" oninput="if(this.value>4){this.value=this.value.substr(0,11)};;">
