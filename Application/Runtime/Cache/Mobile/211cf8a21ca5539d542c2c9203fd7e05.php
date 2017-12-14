@@ -15,14 +15,14 @@
 <input type="hidden" id="user_id" name="user_id" value="<?php echo ($user_id); ?>">
 <div class="demand_div clear">
     <span class="demand_name fl">需求名称</span>
-    <input class="demand_input fr" type="text" placeholder="请输入技术需求的名称" >
+    <input class="demand_input fr" type="text" placeholder="请输入技术需求的名称" id="title">
 </div>
 <div class="demand_div clear" style="border:none;">
     <span class="demand_name fl">需求说明</span>
     <img class='fr demand_div_jt' src="<?php echo (MOBILE); ?>/images/icon-index-issue-down.png" alt="">
 </div>
 <div class="advice_area">
-    <textarea class="advice_text" ng-model="text" ng-change="tolCount();" maxlength="200" placeholder="请输入目前主要的技术问题、需求场景、指标指数等"></textarea >
+    <textarea class="advice_text" ng-model="text" ng-change="tolCount();" maxlength="200" placeholder="请输入目前主要的技术问题、需求场景、指标指数等" id="content"></textarea >
     <p class="advice_numlim">
         <span class="advice_count" ng-bind="count">0</span>
         | 200字
@@ -43,8 +43,8 @@
 <div class="demand_div clear" style="border-top:1px solid #ccc;">
     <span class="demand_name fl">投入预算</span>
     <div class="fr demand_name">
-        <label><input name="Fruit" class="inp_radio" type="radio" value="面议" />面议</label>
-        <label><input name="Fruit" class="inp_radio" type="radio" value="公开" />公开</label>
+        <label><input name="price" class="inp_radio" type="radio" value="面议" />面议</label>
+        <label><input name="price" class="inp_radio" type="radio" value="公开" />公开</label>
 
     </div>
 </div>
@@ -57,26 +57,26 @@
 
 <div class="demand_div clear">
     <span class="demand_name fl">企业名称</span>
-    <img class='fl point_icon' src="<?php echo (MOBILE); ?>/images/icon-index-issue-remind.png" alt="">
-    <input class="demand_input fr" type="text" placeholder="请输入企业名称" >
+    <!-- <img class='fl point_icon' src="<?php echo (MOBILE); ?>/images/icon-index-issue-remind.png" alt=""> -->
+    <input class="demand_input fr" type="text" placeholder="请输入企业名称" id="company">
 </div>
 <div class="demand_div clear">
     <span class="demand_name fl">主营业务</span>
-    <img class='fl point_icon' src="<?php echo (MOBILE); ?>/images/icon-index-issue-remind.png" alt="">
+    <!-- <img class='fl point_icon' src="<?php echo (MOBILE); ?>/images/icon-index-issue-remind.png" alt=""> -->
     <input class="demand_input fr" type="text" placeholder="请输入主营业务" >
 </div>
 <div class="demand_div clear">
     <span class="demand_name fl">联系人</span>
-    <input class="demand_input fr" type="text" placeholder="请输入联系人名字" >
+    <input class="demand_input fr" type="text" placeholder="请输入联系人名字" id="people" >
 </div>
 <div class="demand_div clear">
     <span class="demand_name fl">联系号码</span>
-    <input class="demand_input fr" type="text" placeholder="请输入联系手机号码" >
+    <input class="demand_input fr" type="number" placeholder="请输入联系手机号码" id="phone" oninput="if(this.value>11){this.value = this.value.substr(0,11)};">
 </div>
-<a  class="register_btn" style="margin-top:60px" onclick="test();">确认发布</a>
+<a  class="register_btn" style="margin-top:60px" onclick="getMsg();">确认发布</a>
 
 <!-- 选择上拉框 -->
-<div class="mask" style="display:none;height:200%"></div>
+<div class="mask" style="display:none"></div>
 <div class="issue-tip">
     <!-- <img src="issue-close" alt=""> -->
     <!-- <img class="issue-done" src="images/index-issue-done.png" alt=""> -->
@@ -113,18 +113,49 @@
 <script src="<?php echo (MOBILE); ?>/js/index-publishTec.js"></script>
 <script src='<?php echo (MOBILE); ?>/js/return.js'></script>
 <script>
-    function test() {
-        //异步提交表单数据
-        $.ajax({
-            type: "post",
-            url: '/index.php/Mobile/Article/add?channel=xq&type=1&iscopy=0',
-            data: {user_id:'6800',title:'title',content:'content',jsly:'jsly',yfys:'yfys',yfzq:'yfzq',gsm:'gsm',lxrxm:'lxrxm',dhhm:'dhhm'},
-            dataType: 'json',
-            success: function (res) {
-                console.log(res);
+    function getMsg() {
+        // 获取技术领域选中状态
+        var li = $(".areas_main li");
+        var lingyu_html;
+        for(var i = 0;i < li.length ; i++){
+            if( li.eq(i).hasClass('areas_selected') ){               
+                 lingyu_html = li.eq(i).html();
             }
-        })
-    };
+        };
+        // 获取需提交的值
+        var user_id = $("#user_id").val(),
+            title = $("#title").val(),
+            content = $("#content").val(),
+            lingyu = lingyu_html,
+            csd = $("input[name='price']:checked").val(),
+            yfzq = $("#choose_html").html(),
+            gsm = $("#company").val(),
+            lxrxm = $("#people").val(),
+            dhhm = $("#phone").val();
+
+        var data = {
+            user_id : user_id,
+            title : title,
+            content : content,
+            jsly : lingyu,
+            yfys : csd,
+            yfzq : yfzq,
+            gsm : gsm,
+            lxrxm : lxrxm,
+            dhhm:dhhm
+        };
+         //异步提交表单数据
+         $.ajax({
+             type: "post",
+             url: '/index.php/Mobile/Article/add?channel=xq&type=1&iscopy=0',
+             data: data,
+             dataType: 'json',
+             success: function (res) {
+                 console.log(res);
+             }
+         })
+    }
+
 
     var mySwiper = new Swiper('.swiper-container', {    
         initialSlide :1,     //初始化位置
@@ -144,6 +175,11 @@
         clickComplete(mySwiper,$(".swiper-slide"));
         closeUpBox('.slide-wrap');
         $("#choose_html").html(chooseHtml);
+    });
+
+    $('.mask').on("click",function(){
+        closeUpBox('.slide-wrap');
+
     });
 
     var app = angular.module("publishTec",[]);

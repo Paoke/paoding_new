@@ -15,7 +15,7 @@
 <input type="hidden" id="user_id" name="user_id" value="<?php echo ($user_id); ?>">
 <div class="demand_div clear">
     <span class="demand_name fl">技术名称</span>
-    <input class="demand_input fr" type="text" placeholder="请输入技术需求的名称" >
+    <input class="demand_input fr" type="text" placeholder="请输入技术需求的名称" id="title">
 </div>
 
 <div class="demand_area">
@@ -34,14 +34,14 @@
 <div class="demand_div clear"  id="choose_tec">
     <span class="demand_name fl">技术成熟度</span>
     <img class='fr demand_div_jt' src="<?php echo (MOBILE); ?>/images/icon-index-issue-right.png" alt="">
-    <span class="demand_name fr" id="choose_tecHtml">请选择</span>
+    <span class="demand_name csd fr" id="choose_tecHtml">请选择</span>
 </div>
 
 <div class="demand_div clear">
     <span class="demand_name fl">专利状态</span>
     <div class="fr demand_name">
-        <label><input  name="patent" class="inp_radio" type="radio" value="有" />有</label>
-        <label><input  name="patent" class="inp_radio" type="radio" value="无" />无</label>
+        <label><input name="patent" class="inp_radio" type="radio" value="有" />有</label>
+        <label><input name="patent" class="inp_radio" type="radio" value="无" />无</label>
     </div>
 </div>
 
@@ -74,16 +74,16 @@
 </div>
 
 <div class="advice_area">
-    <textarea class="advice_text" ng-model="text" ng-change="tolCount();" maxlength="200" placeholder="描述方案的基本原理，应用场景，实现结果等，请注意核心技术细节的保密"></textarea >
+    <textarea class="advice_text" ng-model="text" ng-change="tolCount();" maxlength="200" placeholder="描述方案的基本原理，应用场景，实现结果等，请注意核心技术细节的保密" id="content"></textarea >
     <p class="advice_numlim">
         <span class="advice_count" ng-cloak>{{count}}</span>
         | 200字
     </p>
 </div>
-<a href="" class="register_btn" style="margin-top:60px" onclick="test();">确认发布</a>
+<a href="" class="register_btn" style="margin-top:60px" onclick="getMsg();">确认发布</a>
 
 <!-- 选择上拉框 -->
-<div class="mask" style="display:none;height:200%"></div>
+<div class="mask" style="display:none;"></div>
 
 <div class="slide-wrap" id="slide-wrap1">
     <div class="choose-time clear">
@@ -148,14 +148,42 @@
         $scope.tolCount = function () {
             $scope.count =$scope.text.length;
         };
-    })
+    });
 
-    function test() {
-        //异步提交表单数据
+    function getMsg() {
+        // 获取技术领域选中状态
+        var li = $(".areas_main li");
+        var lingyu_html;
+        for(var i = 0;i < li.length ; i++){
+            if( li.eq(i).hasClass('areas_selected') ){               
+                 lingyu_html = li.eq(i).html();
+            }
+        };
+        // 获取需提交的值
+        var user_id = $("#user_id").val(),
+            title = $("#title").val(),
+            content = $("#content").val(),
+            lingyu = lingyu_html,
+            csd = $("#choose_tecHtml").html(),
+            zhuanli = $("input[name='patent']:checked").val(),
+            hzxs = $("#choose_coopHtml").html(),
+            hzjg = $("input[name='price']:checked").val(); 
+
+        var data = {
+            user_id : user_id,
+            title : title,
+            content : content,
+            lingyu : lingyu,
+            csd : csd,
+            zhuanli : zhuanli,
+            hzxs : hzxs,
+            hzjg : hzjg
+        };
+         //异步提交表单数据
         $.ajax({
             type: "post",
             url: '/index.php/Mobile/Article/add?channel=js&type=1&iscopy=0',
-            data: {user_id:'6800',title:'title',content:'content',lingyu:'lingyu',csd:'成熟方案',zhuanli:'无',hzxs:'hzxs',hzjg:'hzjg'},
+            data: data,
             dataType: 'json',
             success: function (res) {
                 console.log(res);

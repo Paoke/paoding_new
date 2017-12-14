@@ -128,11 +128,11 @@
         $(".search").hide();
         $(".searching").show();
     });
-    $(function(){
-        $.ajaxSetup({
-            async: false,
-        });
-    });
+    // $(function(){
+    //     $.ajaxSetup({
+    //         async: false,
+    //     });
+    // });
 
     var page = "";//页码
     var page_total = "";//总页数

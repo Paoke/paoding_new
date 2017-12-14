@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/my.css">
 </head>
 <body ng-controller="myInfo">
-    <input type="hidden" id="id" value="<?php echo session('userId');?>" />
+    <input type="hidden" id="id" value="<?php echo ($user_id); ?>" />
     <p class="ifm_tit">个人信息</p>
     <div class="ifm_head_wrap">
         <div class="ifm_head">

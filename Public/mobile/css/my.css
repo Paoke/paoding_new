@@ -531,6 +531,7 @@ html,body{
 	height: 110px;
 	border-radius: 50%;
 	position: relative;
+	overflow: hidden;
 }
 .ifm_deafault{
 	width: 100%;
