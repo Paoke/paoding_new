@@ -13,13 +13,21 @@ class IndexController extends BaseController
     }
     public function index()
     {
-//        $isMp = $_SERVER['HTTP_USER_AGENT'];
-//        if (strpos($isMp, 'MicroMessenger') !== false) {
+        $isMp = $_SERVER['HTTP_USER_AGENT'];
+        if (strpos($isMp, 'MicroMessenger') !== false) {
 //            //记录微信用户登录次数
 //            $log_number = M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}") ->getField("log_number");
 //            $log_number++;
 //            M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}")->setField('log_number',$log_number);
-//        }
+            if($_SESSION["userArr"]['user_id']){
+                if(!$_SESSION['userArr']['mobile']){
+                    $this->assign('nickname',$_SESSION["userArr"]['nickname']);
+                    $this->assign('head_pic',$_SESSION["userArr"]['head_pic']);
+                    $this->display('/User/binding');
+                    return false;
+                }
+            }
+        }
        $this->display();
     }
 
