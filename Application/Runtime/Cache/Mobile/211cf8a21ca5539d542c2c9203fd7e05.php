@@ -1,4 +1,4 @@
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html lang="en" ng-app="publishTec">
 <head>
     <meta charset="UTF-8">
@@ -6,20 +6,20 @@
     <meta name="description" content="庖丁科技众包服务平台携手国内外先进技术科研院所、顶级技术专家，以实现科技成果市场化为核心，为企业提供快速精准的需求匹配服务，从而实现企业以及科技资源的有效对接，帮助企业实现产业技术升级，助力先进技术完成产业化发展。" />
     <meta name="keywords" content="庖丁众包、智能技术、机械制造、健康医疗、材料科学、能源环保、生产流程优化"/>
     <meta name='viewport' content='user-scalable=no,width=750'>
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/common_new.css">
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/index-publish-common.css">
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/index.css">
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/swiper.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/common_new.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/index-publish-common.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/index.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/swiper.css">
 </head>
 <body ng-controller="ctrlTec">
-<input type="hidden" id="user_id" name="user_id" value="{$user_id}">
+<input type="hidden" id="user_id" name="user_id" value="<?php echo ($user_id); ?>">
 <div class="demand_div clear">
     <span class="demand_name fl">需求名称</span>
     <input class="demand_input fr" type="text" placeholder="请输入技术需求的名称" >
 </div>
 <div class="demand_div clear" style="border:none;">
     <span class="demand_name fl">需求说明</span>
-    <img class='fr demand_div_jt' src="{$Think.MOBILE}/images/icon-index-issue-down.png" alt="">
+    <img class='fr demand_div_jt' src="<?php echo (MOBILE); ?>/images/icon-index-issue-down.png" alt="">
 </div>
 <div class="advice_area">
     <textarea class="advice_text" ng-model="text" ng-change="tolCount();" maxlength="200" placeholder="请输入目前主要的技术问题、需求场景、指标指数等"></textarea >
@@ -50,19 +50,19 @@
 </div>
 <div class="demand_div clear"  id="choose_btn">
     <span class="demand_name fl">期限要求</span>
-    <img class='fr demand_div_jt' src="{$Think.MOBILE}/images/icon-index-issue-right.png" alt="">
+    <img class='fr demand_div_jt' src="<?php echo (MOBILE); ?>/images/icon-index-issue-right.png" alt="">
     <span class="demand_name fr" id="choose_html">请选择</span>
 </div>
 <div class="index_div"></div>
 
 <div class="demand_div clear">
     <span class="demand_name fl">企业名称</span>
-    <img class='fl point_icon' src="{$Think.MOBILE}/images/icon-index-issue-remind.png" alt="">
+    <img class='fl point_icon' src="<?php echo (MOBILE); ?>/images/icon-index-issue-remind.png" alt="">
     <input class="demand_input fr" type="text" placeholder="请输入企业名称" >
 </div>
 <div class="demand_div clear">
     <span class="demand_name fl">主营业务</span>
-    <img class='fl point_icon' src="{$Think.MOBILE}/images/icon-index-issue-remind.png" alt="">
+    <img class='fl point_icon' src="<?php echo (MOBILE); ?>/images/icon-index-issue-remind.png" alt="">
     <input class="demand_input fr" type="text" placeholder="请输入主营业务" >
 </div>
 <div class="demand_div clear">
@@ -107,11 +107,11 @@
 </div>
 
 </body>
-<script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
-<script src="{$Think.MOBILE}/js/swiper.min.js"></script>
-<script src="{$Think.MOBILE}/js/angular.min.js"></script>
-<script src="{$Think.MOBILE}/js/index-publishTec.js"></script>
-<script src='{$Think.MOBILE}/js/return.js'></script>
+<script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
+<script src="<?php echo (MOBILE); ?>/js/swiper.min.js"></script>
+<script src="<?php echo (MOBILE); ?>/js/angular.min.js"></script>
+<script src="<?php echo (MOBILE); ?>/js/index-publishTec.js"></script>
+<script src='<?php echo (MOBILE); ?>/js/return.js'></script>
 <script>
     function test() {
         //异步提交表单数据

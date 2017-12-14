@@ -40,6 +40,7 @@ class IndexController extends BaseController
     public function release()
     {
         $this->checkReg();
+        $this->assign('user_id',$_SESSION['userArr']['user_id']);
         $this->display();
     }
 
