@@ -42,6 +42,7 @@ idcard_img_front(身份证正面) idcard_img_back(身份证背面) business_licence_img(营
 （4）删除专利，增加专利证书
 （5）添加描述摘要
 （6）内容->技术讲述，增加技术优势，效果指标，应用案例，收藏数
+（7）数据表增加hzjg_id
 
 7.专题模块
 （1）内容管理：增加描述字段
@@ -55,8 +56,12 @@ idcard_img_front(身份证正面) idcard_img_back(身份证背面) business_licence_img(营
 
 9.登录修改手机字段
 
-10.合作企业  增加内容  对接方向 应用行业 专利证书 联系人 手机号码 邮箱 专利证书 荣誉证书 其他证书
+10.合作企业  增加内容  对接方向 应用行业  联系人 手机号码 邮箱 专利证书 荣誉证书 其他证书
 
 增加标签 院所 企业 其他
 
+
+
 增加5u_article_relation_yysl
+
+5u_article_jtgs 添加hzjg_id

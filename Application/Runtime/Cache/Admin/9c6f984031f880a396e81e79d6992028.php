@@ -17,18 +17,13 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
-    <style>
-        tr td:nth-of-type(3),tr th:nth-of-type(3){display:none !important;}
-    </style>
+
 </head>
 <body class="sticky-header" >
 
 <section>
-
     <!-- main content start-->
     <div class="main-content" width="100%" style="margin:0px;">
-
-
         <!--body wrapper start-->
         <div class="wrapper">
             <!--  -->
@@ -37,7 +32,7 @@
                     <section class="panel">
                         <header class="panel-heading panel-body">
                             <div class="pull-left">
-                                栏目类别
+                                标签管理
                             </div>
                             <div class="collapse navbar-collapse pull-right">
                                 <form role="search" method="post">
@@ -48,20 +43,11 @@
                                         </div>
                                         <div class="pull-right">
                                             <div class="btn-group" style="margin-top: -5px;">
-                                                <a href="/index.php/Admin/Article/category/action/page_add/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>"
+                                                <a href="/index.php/Admin/Article/tags/action/page_add/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>"
                                                    class="btn btn-default "><i
-                                                        class="fa fa-plus"></i>新增类别</a>
+                                                        class="fa fa-plus"></i>新增标签</a>
                                             </div>
                                         </div>
-                                        <div class="pull-right">
-                                            <div class="input-group search-form" style="margin-top: -5px;">
-                                            <input type="text" class="form-control" id="keyword" name="keyword" value="<?php echo ($_POST['keyword']); ?>"  placeholder="请输入类别名称">
-                                                    <span class="input-group-btn">
-                                                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                                              </span>
-                                            </div>
-                                        </div>
-
                                     </div>
                                 </form>
                             </div>
@@ -77,6 +63,7 @@
                                     <tr role="row">
                                         <?php if($info_field): ?><th valign="middle">ID</th>
                                             <?php if(is_array($info_field)): foreach($info_field as $key=>$vo1): ?><th id="filed" width="" valign="middle"><?php echo ($vo1["title"]); ?></th><?php endforeach; endif; ?>
+                                            <th  width="" valign="middle">显示/隐藏</th>
                                             <th valign="middle" width="12%">操作</th><?php endif; ?>
                                     </tr>
                                     </thead>
@@ -85,16 +72,24 @@
                                             <?php if(is_array($vo)): foreach($vo as $vokey1=>$vo1): if($vo1["type"] == 'image'): ?><td class="text-center">
                                                         <img width="40" height="40" src="<?php echo ($vo1["data"]); ?>" onclick="preview(this)"/>
                                                     </td>
+                                                    <?php elseif($vokey1 == 'status'): ?>
+                                                    <td>
+                                                        <img width="20" height="20"
+                                                             src="/Public/images/<?php if($vo1["data"] == 1): ?>yes.png<?php else: ?>cancel.png<?php endif; ?>"
+                                                             onclick="changeTableVal('<?php echo ($mod_id); ?>','<?php echo ($table_name); ?>','id','<?php echo ($vo["id"]["data"]); ?>','status',this)"/>
+                                                    </td>
                                                     <?php else: ?>
                                                     <td><?php echo ($vo1["data"]); ?></td><?php endif; endforeach; endif; ?>
+
                                             <td>
                                                 <div class="btn-group">
                                                     <a class="btn btn-default"
-                                                       href="/index.php/Admin/Article/category/action/page_edit/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/id/<?php echo ($vo["id"]["data"]); ?>"
+                                                       href="/index.php/Admin/Article/tags/action/page_edit/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/id/<?php echo ($vo["id"]["data"]); ?>"
                                                        title="编辑"><i class="fa fa-pencil"></i></a>
                                                     <a href="#delModal" data-toggle="modal" class="btn btn-default"
-                                                       data-name="<?php echo ($vo["cat_name"]["data"]); ?>" title="删除"
-                                                       data-url="/index.php/Admin/Article/category/action/del/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/id/<?php echo ($vo["id"]["data"]); ?>"
+                                                       data-name="<?php echo ($vo["id"]["data"]); ?>" title="删除"
+                                                       myname="<?php echo ($vo["cat_name"]["data"]); ?>"
+                                                       data-url="/index.php/Admin/Article/tags/action/del/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/id/<?php echo ($vo["id"]["data"]); ?>"
                                                        onclick="delModal(this)"><i class="fa fa-trash-o"></i></a>
                                                 </div>
                                             </td>
@@ -157,8 +152,8 @@
                                                     </li><?php endif; ?>   <!-- 上一页 end -->
 
                                                 <?php if($page < 5): ?><!-- 页码条 -->
-                                                    <?php $__FOR_START_5427__=1;$__FOR_END_5427__=$page+1;for($i=$__FOR_START_5427__;$i < $__FOR_END_5427__;$i+=1){ ?><!-- 循环四条以内 -->
-                                                        <?php if($i == $page_now ): ?><li class="active"><a href=""><?php echo ($i); ?></a></li>
+                                                    <?php $__FOR_START_32022__=1;$__FOR_END_32022__=$page+1;for($i=$__FOR_START_32022__;$i < $__FOR_END_32022__;$i+=1){ ?><!-- 循环四条以内 -->
+                                                        <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($i); ?></a></li>
                                                             <?php elseif($i < $page_now ): ?>
                                                             <li>
                                                                 <a href="<?php echo U('Admin/User/index/page_now');?>/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>"><?php echo ($i); ?></a>
@@ -168,9 +163,9 @@
                                                                 <a href="<?php echo U('Admin/User/index/page_now');?>/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>"><?php echo ($i); ?></a>
                                                             </li><?php endif; } ?>
                                                     <?php elseif($page_now < 3): ?>
-                                                    <?php $__FOR_START_16624__=1;$__FOR_END_16624__=6;for($i=$__FOR_START_16624__;$i < $__FOR_END_16624__;$i+=1){ ?><!-- 循环1-5 -->
+                                                    <?php $__FOR_START_9879__=1;$__FOR_END_9879__=6;for($i=$__FOR_START_9879__;$i < $__FOR_END_9879__;$i+=1){ ?><!-- 循环1-5 -->
 
-                                                        <?php if($i == $page_now ): ?><li class="active"><a href=""><?php echo ($page_now); ?></a></li>
+                                                        <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                                             <?php elseif($i < $page_now ): ?>
                                                             <li>
                                                                 <a href="<?php echo U('Admin/User/index/page_now');?>/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>"><?php echo ($i); ?></a>
@@ -180,7 +175,7 @@
                                                                 <a href="<?php echo U('Admin/User/index/page_now');?>/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>"><?php echo ($i); ?></a>
                                                             </li><?php endif; } ?>
                                                     <?php elseif($page_now == $page-1): ?>
-                                                    <?php $__FOR_START_30313__=$page_now-3;$__FOR_END_30313__=$page+1;for($i=$__FOR_START_30313__;$i < $__FOR_END_30313__;$i+=1){ ?><!-- 循环当前页为倒数第二页时 -->
+                                                    <?php $__FOR_START_8324__=$page_now-3;$__FOR_END_8324__=$page+1;for($i=$__FOR_START_8324__;$i < $__FOR_END_8324__;$i+=1){ ?><!-- 循环当前页为倒数第二页时 -->
                                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                                             <?php elseif($i < $page ): ?>
                                                             <li>
@@ -191,7 +186,7 @@
                                                                 <a href="<?php echo U('Admin/User/index/page_now');?>/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>"><?php echo ($i); ?></a>
                                                             </li><?php endif; } ?>
                                                     <?php elseif($page_now == $page): ?>
-                                                    <?php $__FOR_START_6382__=$page_now-4;$__FOR_END_6382__=$page+1;for($i=$__FOR_START_6382__;$i < $__FOR_END_6382__;$i+=1){ ?><!-- 循环当前页为最后一页时 -->
+                                                    <?php $__FOR_START_16493__=$page_now-4;$__FOR_END_16493__=$page+1;for($i=$__FOR_START_16493__;$i < $__FOR_END_16493__;$i+=1){ ?><!-- 循环当前页为最后一页时 -->
                                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                                             <?php elseif($i < $page ): ?>
                                                             <li>
@@ -202,7 +197,7 @@
                                                                 <a href="<?php echo U('Admin/User/index/page_now');?>/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>"><?php echo ($i); ?></a>
                                                             </li><?php endif; } ?>
                                                     <?php else: ?>
-                                                    <?php $__FOR_START_20879__=$page_now-2;$__FOR_END_20879__=$page_now+3;for($i=$__FOR_START_20879__;$i < $__FOR_END_20879__;$i+=1){ ?><!-- 循环除了前五条 和后五条 -->
+                                                    <?php $__FOR_START_21666__=$page_now-2;$__FOR_END_21666__=$page_now+3;for($i=$__FOR_START_21666__;$i < $__FOR_END_21666__;$i+=1){ ?><!-- 循环除了前五条 和后五条 -->
 
                                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                                             <?php elseif($i < $page ): ?>
@@ -265,12 +260,12 @@
     //删除菜单
     function delModal(obj) {
         modal_object = $(obj);
-//        console.log(modal_object.attr("myname"));
-//        if(modal_object.attr("myname")!=''){
-//            modal_object.attr('data-toggle','');
-//            layer.msg("该分类下有数据,禁止删除");
-//            return false;
-//        }
+        console.log(modal_object.attr("myname"));
+        if(modal_object.attr("myname")!=''){
+            modal_object.attr('data-toggle','');
+            layer.msg("该分类下有数据,禁止删除");
+            return false;
+        }
         modal_url = $(obj).attr('data-url');
         modal_name = $(obj).attr('data-name');
         $("#del_info").html(" 是否确认删除【" + modal_name + "】?");
@@ -310,7 +305,7 @@
     }
     function listSon(obj, id) {
         var str = '';
-        var url = "/index.php/Admin/Article/category/action/page_list/id/" + id + "/type/<?php echo ($type); ?>";
+        var url = "/index.php/Admin/Article/tags/action/page_list/id/" + id + "/type/<?php echo ($type); ?>";
         var faClass = $(obj).children().attr("class");
         if (faClass == "fa fa-caret-right") {
             $.get(url, function (res) {
@@ -333,17 +328,17 @@
                     str += '<td class="text-center">' +
                             '<img width="40" height="40" src="' + item.icon_url + '" onclick="preview(this)"/>' +
                             '</td>';
-                    str += '<td><input type="text" onchange=\'updateSort("","article_category","id",' +
+                    str += '<td><input type="text" onchange=\'updateSort("","article_tags","id",' +
                             '"' + item.id + '","sort_id",this)\' ' +
                             'onkeyup="this.value=this.value.replace(/[^\d]/g,"")" maxlength="4" ' +
                             'size="4" value="' + item.sort_id + '" class="input-sm"/></td>';
                     str += '<td><div class="btn-group btn-group-sm">';
                     str += '<a class="btn btn-default" ' +
-                            'href="/index.php/Admin/Article/category/action/page_edit/id/' + item.id +
+                            'href="/index.php/Admin/Article/tags/action/page_edit/id/' + item.id +
                             '/channel/<?php echo ($channel); ?>" title="编辑"><i class="fa fa-pencil"></i></a>';
                     str += '<a href="#delModal" data-toggle="modal" class="btn btn-default delModal"' +
                             'data-name="' + item.name + '" data-id="' + item.id + '"' +
-                            'data-url="/index.php/Admin/Article/category/action/del/id/' + item.id + '"' +
+                            'data-url="/index.php/Admin/Article/tags/action/del/id/' + item.id + '"' +
                             'title="删除" onclick="delModal(this)"><i class="fa fa-trash-o"></i></a>';
                     str += '</div></td></tr>';
                 });
@@ -353,7 +348,7 @@
                 $('body').niceScroll().resize();
             });
         } else {
-            var url = "/index.php/Admin/Article/category/action/page_list/id/" + id +
+            var url = "/index.php/Admin/Article/tags/action/page_list/id/" + id +
                     "/channel/<?php echo ($channel); ?>/getTreeSon/1";
             $.post(url, function (res) {
                 $.each(res.data, function (i, item) {

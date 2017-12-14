@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
 </head>
 <body>
+<input type="hidden" id="user_id" name="user_id" value="{$user_id}"/>
 <div class="user_header">
     <div class="user_cicle">
         <img src="{$head_pic}" alt="">
@@ -17,7 +18,7 @@
     <p class="user_name">{$nickname}</p>
 </div>
 <div class="apply_identifying">
-    <input class="new_name" type="number" placeholder="输入新手机号" id="phone1" oninput="if(this.value>4){this.value=this.value.substr(0,11)};;">
+    <input class="new_name" type="number" placeholder="输入手机号码" id="phone1" oninput="if(this.value>4){this.value=this.value.substr(0,11)};;">
     <input type='button' class="get_indentify" value='点击获取验证码'>
     <input class="new_name" type="number" placeholder="输入验证码" id="phone2" oninput="if(this.value>4){this.value=this.value.substr(0,4)};">
     <input class="new_name" type="password" placeholder="密码不少于6位" id="phone3">

@@ -307,6 +307,34 @@
                                                     </span><?php endif; ?>
                                             </div>
                                         </div>
+                                        <?php if($hzjg == js): ?><div class="form-group">
+                                                <label class="col-sm-2 control-label">所属企业：</label>
+                                                <div class="col-sm-9">
+                                                    <select class="small form-option" id="hzjg_id" name="hzjg_id"
+                                                            style="font-size: 14px;">
+                                                        <option value="0"></option>
+                                                        <?php if(is_array($data_hzjg)): foreach($data_hzjg as $key=>$vo): ?><option value="<?php echo ($vo["id"]); ?>"
+                                                            <?php if($vo["id"] == $info['hzjg_id']): ?>selected<?php endif; ?>
+                                                            ><?php echo ($vo["title"]); ?></option><?php endforeach; endif; ?>
+
+                                                    </select>
+                                                    <!--<?php if(empty($category_data)): ?>-->
+                                                    <!--<span class="warn_msg">-->
+                                                    <!--请先新增"栏目类别"-->
+                                                    <!--</span>-->
+                                                    <!--<?php endif; ?>-->
+                                                </div>
+                                            </div><?php endif; ?>
+                                        <?php if($hzjg == jtgs): ?><input type="hidden" id="hzjg_id" name="hzjg_id" value="<?php echo ($info['hzjg_id']); ?>">
+                                            <div class="form-group">
+                                                <label class="col-sm-2 control-label">会员：</label>
+                                                <div class="col-sm-9">
+                                                    <?php if(is_array($data_hzjg)): foreach($data_hzjg as $key=>$vo): ?><input type="checkbox" value="<?php echo ($vo["id"]); ?>" onchange="check(this)"
+                                                        <?php
+ for($i=0;$i<count($arrHzjg);$i++) { if($vo['id']==$arrHzjg[$i]){ echo checked; } } ?>/><?php echo ($vo["title"]); ?><br><?php endforeach; endif; ?>
+
+                                                </div>
+                                            </div><?php endif; ?>
                                         <div class="form-group">
                                             <label class="col-sm-2 control-label">标签：</label>
                                             <div class="col-sm-9">
@@ -597,15 +625,15 @@
             //存在，表示编辑
             action = "/index.php/Admin/Article/article/action/edit/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/id/<?php echo ($id); ?>";
         }
+        var data=$('#' + form_id).serialize();
         //异步提交表单数据
         $.ajax({
             type: "post",
             url: action,
-            data: $('#' + form_id).serialize(),
+            data: data,
             dataType: 'json',
             success: function (res) {
                 if (res.result == 1) {
-                    layer.msg(res.msg);
                     setTimeout(function () {
                         window.location.href = "/index.php/Admin/Article/article/action/page_list/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/page_now/<?php echo ($page_now); ?>/page_num/<?php echo ($page_num); ?>/category_id/<?php echo ($category_id); ?>/keyword/<?php echo ($keyword); ?>";
                     }, 1000);
@@ -936,6 +964,18 @@
                 }
             }
         });
+
+    }
+
+    function check(id) {
+        $hzjg_id=$("#hzjg_id").val();
+        $id=$(id).val();
+        if($hzjg_id==null||$hzjg_id==""){
+            $hzjg_id=$id;
+        }else{
+            $hzjg_id=$hzjg_id+','+$id;
+        }
+        $("#hzjg_id").val($hzjg_id);
 
     }
 </script>

@@ -226,6 +226,17 @@ class ArticleController extends BaseController
                         } else {
                             $ifTags = 0;
                         }
+
+                        if($channel=="js"||$channel=="jtgs"){
+                            $data_hzjg=M('article_hzjg')->select();
+                            if($channel=='js'){
+                                $this->assign('hzjg','js');
+                            }else{
+                                $this->assign('hzjg','jtgs');
+                            }
+
+                            $this->assign('data_hzjg',$data_hzjg);
+                        }
                         $this->assign("tags_info", $tagsInfo);
                         $this->assign("if_tags", $ifTags);
                         $this->assign('currentUser', $userName);
@@ -323,6 +334,20 @@ class ArticleController extends BaseController
                         //应用事例
                         if($channel=="hzjg"){
                             $yysl=M('article_relation_yysl')->where('hzjg_id='.$getId)->select();
+                            $this->assign('yysl',$yysl);
+                        }
+
+                        if($channel=="js"||$channel=="jtgs"){
+                            $data_hzjg=M('article_hzjg')->select();
+                            if($channel=='js'){
+                                $this->assign('hzjg','js');
+                            }else{
+                                $arrHzjg=explode(',',$article['hzjg_id']);
+                                $this->assign('arrHzjg',$arrHzjg);
+                                $this->assign('hzjg','jtgs');
+                            }
+
+                            $this->assign('data_hzjg',$data_hzjg);
                         }
 
                         $this->assign('keyword', $keyword);
@@ -347,7 +372,7 @@ class ArticleController extends BaseController
                         $this->assign("bind_user_id", $bind_user_id);
                         $this->assign("bind_user_name", $bind_user_name);
 
-                        $this->assign('yysl',$yysl);
+
 
                         $this->display("article_info");
                     } else {

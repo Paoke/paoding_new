@@ -178,13 +178,16 @@
                 return str.join("&");
             }
         }).then(function successCallback(response) {
-               $scope.tecLists = response.data.data.info;             
+               $scope.tecLists = response.data.data.info;
+                page = response.data.data.page.page;
+                page_total = response.data.data.page.page_total;
             }, function errorCallback() {
         }); 
 
     });
 
     $(".demand_nav").on("click",".swiper-slide li",function(){
+        page="1";
         $(".swiper-slide li").each(function () {
             $(this).removeClass('active_cat');
         });
@@ -195,8 +198,8 @@
         $(".sildeBlock").css("transform","translateX("+tranLeft+"px)");
         // 按需求栏目和业务范围请求列表接口
         data.page="1";
-        data.category_id = $(this).val();
-        data.tag_id = $("#demand_type").val();
+        data.category_id = $("#demand_type").val();
+        data.tag_id = $(this).val();
         page_total=getListData(data,"html");
     });
 
@@ -213,9 +216,10 @@
 
     // 下拉请求
     $('select#demand_type').change(function () {
+        page="1";
         data.page="1";
-        data.category_id = $(".active_cat").val();
-        data.tag_id = $(this).val();
+        data.category_id = $(this).val();
+        data.tag_id = $(".active_cat").val();
         page_total=getListData(data,"html");
     }); 
 
@@ -239,10 +243,10 @@
                 result=response['data']['page'].page_total;
                 for (var i = 0; i < info.length; i++) {
                     code = code +
-                    '<a href="__MODULE__/Index/detail_tec.html?data='+info[i].id+'">'+
+                    '<a href=__MODULE__/Index/detail_tec.html?data_id='+info[i].id+'>'+
                         '<div class="main_section clear">'+
                             '<div class="fl main_section_left">'+
-                                '<img src="'+info[i].lbxt+'" alt="">'+
+                                '<img src='+info[i].lbxt+' alt="">'+
                                 '<p class="transfer">'+info[i].hzxs+'</p>'+
                             '</div>'+
                             '<div class="fr main_section_right">'+
@@ -261,7 +265,7 @@
                                 '</div>'+
                             '</div>'+
                         '</div>'+
-                    '</a>'
+                    '</a>';
 
                 }
                 if(action == "html"){

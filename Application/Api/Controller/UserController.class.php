@@ -468,7 +468,7 @@ class UserController extends BaseRestController
         $user = new UserLogic();
         //设置参数
         $options = array(
-            "username" => $postData["mobile"],//新版改为mobile
+            "mobile" => $postData["mobile"],//新版改为mobile
             "password" => encrypt($postData["password"]),
 //            "password2" => encrypt($postData["password2"]),
         );
@@ -477,7 +477,7 @@ class UserController extends BaseRestController
         $user->__invoke($options);
         //验证表单不能为空
         $returnArr = array("result" => 0, "msg" => "账号不能为空", "code" => 402);
-        if (empty($options["username"])) json_return($returnArr);
+        if (empty($options["mobile"])) json_return($returnArr);
         $returnArr = array("result" => 0, "msg" => "密码不能为空", "code" => 402);
         if (empty($options["password"])) json_return($returnArr);
         //判断是否登录，参数：orderUserId，username
@@ -1287,7 +1287,7 @@ class UserController extends BaseRestController
                 $data = array(
                     "user_id"=>$options["user_id"],
                     "mobile" => $options["mobile"],
-                    "user_name" => $options["mobile"]
+                    //"user_name" => $options["mobile"]
                 );
                 if($options["paswd"]){
                     $data['password'] = $options["paswd"];

@@ -186,6 +186,7 @@
     });
 
     $(".demand_nav").on("click", ".swiper-slide li", function () {
+        page="1";
         $(".swiper-slide li").each(function () {
                 $(this).removeClass('active_cat');
         });
@@ -216,6 +217,7 @@
 
     // 下拉请求
     $('select#demand_type').change(function () {
+        page="1";
         data.page="1";
         data.category_id = $(".active_cat").val();
         data.tag_id = $(this).val();

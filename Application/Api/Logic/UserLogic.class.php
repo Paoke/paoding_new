@@ -21,6 +21,7 @@ class UserLogic extends BaseRestLogic
     private $orderMode = 0;  //排序的方式，1，为（ASC）正序，2，为（DESC）倒序
     private $limitNum = 0;  //查询的的时候，每次获取的条数
     private $limitStart = 0;  //查询的时候，从第几条查询
+    private $mobile = "";  //手机号码
 
     //动态配置变量
     public function __invoke($options = array())
@@ -42,6 +43,7 @@ class UserLogic extends BaseRestLogic
         $this->orderMode = $options["orderMode"] ? $options["orderMode"] : 0;
         $this->limitNum = $options["limitNum"] ? $options["limitNum"] : 0;
         $this->limitStart = $options["limitStart"] ? $options["limitStart"] : 0;
+        $this->mobile = $options["mobile"] ? $options["mobile"] : "";
     }
 
     //----------------------获取信息 start
@@ -152,7 +154,7 @@ class UserLogic extends BaseRestLogic
     {
         $info = M()
             ->table("{$_SESSION["site_name"]}_manage_users")->field("user_id,user_name,authentication,mobile,nickname,desc,head_pic,sex,province,city,district")
-            ->where("user_name='{$this->username}' AND password='{$this->password}'")
+            ->where("mobile='{$this->mobile}' AND password='{$this->password}'")
             ->find();
         return $info ? $info : null;
     }
@@ -489,10 +491,10 @@ class UserLogic extends BaseRestLogic
                 ->where("user_id={$this->orderUserId}")
                 ->count();
             return $info ? true : false;
-        } elseif ($this->username) {
+        } elseif ($this->mobile) {
             //查找是否有这个用户账号
             $info = M('ManageUsers')
-                ->where("user_name='".$this->username."'")
+                ->where("mobile='".$this->mobile."'")
                 ->count();
             return $info ? true : false;
         } else {
