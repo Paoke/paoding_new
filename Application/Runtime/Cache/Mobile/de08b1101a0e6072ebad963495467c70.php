@@ -110,29 +110,35 @@
 <script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
 <script src="<?php echo (MOBILE); ?>/js/angular.min.js"></script>
 <script>
-    var bol = true;
-    $(".act_love_icon").on("click",function(){
-        // true
-        if(bol){
-            $(this).attr("src","<?php echo (MOBILE); ?>/images/icon-activity-collect-active.png");
-            bol = false;
-        }else{
-            $(this).attr("src","<?php echo (MOBILE); ?>/images/icon-activity-collect-default.png");
-            bol = true;
-        }
+    var action = 0;
 
-    });
 
     var app = angular.module("detail",[]);
     app.controller("detailCtrl",function ($scope,$http){
-        $http({
-            method:"GET",
-            params:
-            url:"/index.php/Mobile/Article/like?channel=js&id=**&action=**"
-        }).then(function successCallback(response) {                      
-                $scope.serve = response.data.data;                             
-            }, function errorCallback(response) {
-            });
+        $(".act_love_icon").on("click",function(){
+            if(action == 0){
+                $(this).attr("src","<?php echo (MOBILE); ?>/images/icon-activity-collect-active.png");
+                action = 1;
+            }else{
+                $(this).attr("src","<?php echo (MOBILE); ?>/images/icon-activity-collect-default.png");
+                action = 0;
+            };
+
+            var data = {
+                channel:'js',
+                id:'id',
+                action:action
+            };
+            $http({
+                method:"GET",
+                params:{data:data},
+                url:"/index.php/Mobile/Article/like?channel=js&id=**&action=**"
+            }).then(function successCallback(response) {                      
+                    $scope.serve = response.data.data;                             
+                }, function errorCallback(response) {
+                });
+
+        });
 
      
     });

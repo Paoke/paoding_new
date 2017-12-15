@@ -1,4 +1,4 @@
-<!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html lang="en" ng-app="user_collect">
 <head>
     <meta charset="UTF-8">
@@ -6,11 +6,11 @@
     <meta name="description" content="庖丁科技众包服务平台携手国内外先进技术科研院所、顶级技术专家，以实现科技成果市场化为核心，为企业提供快速精准的需求匹配服务，从而实现企业以及科技资源的有效对接，帮助企业实现产业技术升级，助力先进技术完成产业化发展。" />
     <meta name="keywords" content="庖丁众包、智能技术、机械制造、健康医疗、材料科学、能源环保、生产流程优化"/>
     <meta name='viewport' content='user-scalable=no,width=750'>
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/common_new.css">
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/index.css">
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/demand.css">
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/activity.css">
-    <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/common_new.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/index.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/demand.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/activity.css">
+    <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/my.css">
 </head>
 <body>
 <div class="tec_tab">
@@ -25,7 +25,7 @@
 <!-- 技术 -->
 <div class="tab_body" style="display:block">
     <div class="advancedWrap" ng-controller="advancedCtrl">
-        <a href="__MODULE__/Index/detail_tec.html?data_id={{tecList.id}}" ng-repeat="tecList in tecLists">
+        <a href="/index.php/Mobile/Index/detail_tec.html?data_id={{tecList.id}}" ng-repeat="tecList in tecLists">
             <div class="main_section clear">
                 <div class="fl main_section_left">
                     <img ng-src="{{tecList.lbxt}}" alt="">
@@ -34,11 +34,11 @@
                 <div class="fr main_section_right">
                     <p class="sec_tit" ng-cloak>{{tecList.title}}</p>
                     <p>
-                        <img src="{$Think.MOBILE}/images/icon-index-industry.png" alt="">
+                        <img src="<?php echo (MOBILE); ?>/images/icon-index-industry.png" alt="">
                         <span class="sec_industry" ng-cloak>{{tecList.yyxy}}</span>
                     </p>
                     <p class="p_scan">
-                        <img src="{$Think.MOBILE}/images/icon-index-browse.png" alt="">
+                        <img src="<?php echo (MOBILE); ?>/images/icon-index-browse.png" alt="">
                         <span class="sec_scan" ng-cloak>{{tecList.clicks}}</span>
                     </p>
                     <div class="adhi_print">
@@ -62,11 +62,11 @@
             <div class="sec_data clear">
                 <div class="sec_data_left fl">
                     <div>
-                        <img src="{$Think.MOBILE}/images/icon-search-type.png" alt="">
+                        <img src="<?php echo (MOBILE); ?>/images/icon-search-type.png" alt="">
                         <span class="sec_data_span">材料科学</span>
-                        <img src="{$Think.MOBILE}/images/icon-search-time.png" alt="">
+                        <img src="<?php echo (MOBILE); ?>/images/icon-search-time.png" alt="">
                         <span class="sec_data_span">12个月</span>
-                        <img src="{$Think.MOBILE}/images/icon-search-scan.png" alt="">
+                        <img src="<?php echo (MOBILE); ?>/images/icon-search-scan.png" alt="">
                         <span class="sec_data_span">2480</span>
                     </div>
                     <p class="sec_data_p">
@@ -74,11 +74,11 @@
                         投入预算：<span>面议</span>
                     </p>
                 </div>
-                <img class="fr" src="{$Think.MOBILE}/images/icon-research.png" alt="">
+                <img class="fr" src="<?php echo (MOBILE); ?>/images/icon-research.png" alt="">
             </div>
             <a href="#">
                 <div class="viewDetails clear">
-                    <img class="fr" src="{$Think.MOBILE}/images/icon-right.png" alt="">
+                    <img class="fr" src="<?php echo (MOBILE); ?>/images/icon-right.png" alt="">
                     <span class="viewDetails_span fr">查看详情</span>
                 </div>
             </a>
@@ -91,7 +91,7 @@
 <div class="tab_body">
     <div class="activity_lately_section clear">
         <div class="activity_section_left fl">
-            <img src="{$Think.MOBILE}/images/activity-bottom-banner-1.jpg" alt="">
+            <img src="<?php echo (MOBILE); ?>/images/activity-bottom-banner-1.jpg" alt="">
         </div>
         <div class="activity_section_right fr">
             <p class="activity_right_tit">广东省家具行业推行绿色清洁生产与挥发性有机污染物</p>
@@ -140,9 +140,9 @@
 
 
 </body>
-<script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
-<script src='{$Think.MOBILE}/js/angular.min.js'></script>
-<script src='{$Think.MOBILE}/js/return.js'></script>
+<script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
+<script src='<?php echo (MOBILE); ?>/js/angular.min.js'></script>
+<script src='<?php echo (MOBILE); ?>/js/return.js'></script>
 <script>
     var app = angular.module('user_collect',[]);
     // 技术

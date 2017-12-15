@@ -107,26 +107,26 @@
     </a>
 </div>
 
-<div class="advancedWrap" ng-controller="advancedCtrl" ng-cloak>
-    <a href="__MODULE__/Index/detail_tec.html" ng-repeat="tecList in tecLists">
+<div class="advancedWrap" ng-controller="advancedCtrl">
+    <a href="__MODULE__/Index/detail_tec.html?data_id={{tecList.id}}" ng-repeat="tecList in tecLists">
         <div class="main_section clear">
             <div class="fl main_section_left">
                 <img ng-src="{{tecList.lbxt}}" alt="">
-                <p class="transfer">{{tecList.hzxs}}</p>
+                <p class="transfer" ng-cloak>{{tecList.hzxs}}</p>
             </div>
             <div class="fr main_section_right">
-                <p class="sec_tit">{{tecList.title}}</p>
+                <p class="sec_tit" ng-cloak>{{tecList.title}}</p>
                 <p>
                     <img src="{$Think.MOBILE}/images/icon-index-industry.png" alt="">
-                    <span class="sec_industry">{{tecList.yyxy}}</span>
+                    <span class="sec_industry" ng-cloak>{{tecList.yyxy}}</span>
                 </p>
                 <p class="p_scan">
                     <img src="{$Think.MOBILE}/images/icon-index-browse.png" alt="">
-                    <span class="sec_scan">{{tecList.clicks}}</span>
+                    <span class="sec_scan" ng-cloak>{{tecList.clicks}}</span>
                 </p>
                 <div class="adhi_print">
-                    <span class="adhibition">{{tecList.cat_name}}</span>
-                    <span class="print">{{tecList.csd}}</span>
+                    <span class="adhibition" ng-cloak>{{tecList.cat_name}}</span>
+                    <span class="print" ng-cloak>{{tecList.csd}}</span>
                 </div>
             </div>
         </div>

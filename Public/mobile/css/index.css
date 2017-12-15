@@ -107,6 +107,11 @@
 	width: 390px;
 }
 .sec_tit{
+	width: 390px;
+	display:bolck;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
 	font-size: 32px;
 	color: #1e1e1e;
 	margin-bottom: 28px;
@@ -714,8 +719,11 @@
 }
 .tec_content{
 	background: #fff;
-	padding: 0 26px 30px;
+	padding: 20px 26px 0 30px;
 	overflow: hidden;
+	font-size: 26px;
+	color: #999;
+	line-height: 46px;
 }
 .tec_ct_tit{
 	margin: 40px 0 30px;
@@ -726,7 +734,6 @@
 	font-size: 26px;
 	color: #999;
 	line-height: 46px;
-
 }
 .tec_content img{
 	width: 690px;
