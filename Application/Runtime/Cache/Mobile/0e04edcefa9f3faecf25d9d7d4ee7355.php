@@ -21,7 +21,7 @@
 <div class="my_content">
     <div class="apply_content_box clear">
         <span class='apply_word fl'>手机号</span>
-        <input class='apply_means fr' type="text" value="<?php echo ($_SESSION['userArr']['mobile']); ?>" readonly="readonly" disabled>
+        <input class='apply_means fr' type="text" value="<?php echo ($_SESSION['userArr']['mobile']); ?>" readonly="readonly">
     </div>
 
 

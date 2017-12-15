@@ -1398,8 +1398,8 @@ class UserController extends BaseRestController
         switch($action){
             case 'detail':
                 $where['user_id'] = $id;
-                $field = 'user_id,mobile,nickname,user_name,password,head_pic,email,sex,birthday,province,company,city,job,tel,authentication,district,oauth,openid';
-                $info = $DAO->where($where)->field($field)->find();
+                $field = 'A.user_id,A.mobile,A.nickname,A.user_name,A.password,A.head_pic,A.email,A.sex,A.birthday,A.province,A.company,A.city,A.job,B.idcard,B.status';
+                $info = $DAO->table('5u_manage_users A')->join('LEFT JOIN 5u_manage_user_authen B ON A.user_id=B.user_id')->where('A.user_id='.$id)->find();
                 $info['area'] = $info['province'] . '-' . $info['city'];
                 //密码置为1 代表有密码
                 if($info['password']) {

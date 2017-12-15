@@ -11,7 +11,7 @@
 2.用户管理
 
 5u_manage_users_authen数据表添加字段 idcard(身份证号) zyyw（主营业务）address(地址)
-idcard_img_front(身份证正面) idcard_img_back(身份证背面) business_licence_img(营业执照)
+idcard_img_front(身份证正面) idcard_img_back(身份证背面) business_licence_img(营业执照)tech_fieid(关注领域)
 
 3.活动
 
