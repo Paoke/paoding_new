@@ -140,7 +140,8 @@
         "order_by": "DESC",
         "category_id": "0",
         "tag_id": "0",
-        "get_page":"true"
+        "get_page":"true",
+        "search":""
     };
 
     var app = angular.module("demand_list", []);
@@ -196,6 +197,7 @@
         if(index==8){tranLeft = 1170;}
         $(".sildeBlock").css("transform", "translateX(" + tranLeft + "px)");
         // 1.23.按需求栏目和业务范围请求列表接口
+        data.search="";
         data.page="1";
         data.category_id = $(this).val();
         data.tag_id = $("#demand_type").val();
@@ -206,8 +208,8 @@
     // 滚动加载
     $(window).scroll(function () {
         if ($(document).scrollTop() > ($(document).height() - $(window).height()) / 1.5) {
-            if (page <= page_total) {
-                page = parseInt(page) + 1;
+            page = parseInt(page) + 1;
+            if (page <= page_total) {                
                 data.page=page;
                 page_total=getListData(data,"append");
             }
@@ -218,12 +220,22 @@
     // 下拉请求
     $('select#demand_type').change(function () {
         page="1";
+        data.search="";
         data.page="1";
         data.category_id = $(".active_cat").val();
         data.tag_id = $(this).val();
         page_total=getListData(data,"html");
     });
 
+    // 搜索
+    $(".click_search").on("click",function(){
+        page="1";
+        data.category_id="0";
+        data.tag_id="0";
+        data.page="1";
+        data.search = $(".tech_search").val();      
+        page_total=getListData(data,"html");
+    })
 
     /**
      * 请求列表数据

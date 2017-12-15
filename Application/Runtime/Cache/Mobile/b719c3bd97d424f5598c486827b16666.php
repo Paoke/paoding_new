@@ -147,17 +147,16 @@
     var app = angular.module('user_collect',[]);
     // 技术
     app.controller("advancedCtrl",function ($scope,$http){
-        var data = {
-            page:1,
-            page_num:2,
-            order_field:'create_time',
-            category_id:0,
-            tag_id:0,
-            order_by:'DESC'
-        };
+        // var data = {
+        //     page:1,
+        //     page_num:2,
+        //     order_field:'create_time',
+        //     category_id:0,
+        //     tag_id:0,
+        //     order_by:'DESC'
+        // };
         $http({
             method:"GET",
-            data:data,
             url:"/index.php/Mobile/Article/collect_list?channel=js",
         }).then(function successCallback(response) {                      
                 $scope.tecLists = response.data.data;
