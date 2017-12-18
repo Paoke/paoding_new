@@ -169,6 +169,24 @@ class ChannelLogic extends BaseRestLogic
         if($info['content']){
             $info['content'] = htmlspecialchars_decode($info['content']);
         }
+        if($info['jsys']){
+            $info['jsys'] = htmlspecialchars_decode($info['jsys']);
+        }
+        if($info['xgzb']){
+            $info['xgzb'] = htmlspecialchars_decode($info['xgzb']);
+        }
+        if($info['yyal']){
+            $info['yyal'] = htmlspecialchars_decode($info['yyal']);
+        }
+        if($info['zlzs']){
+            $info['zlzs'] = htmlspecialchars_decode($info['zlzs']);
+        }
+        if($info['ryzs']){
+            $info['ryzs'] = htmlspecialchars_decode($info['ryzs']);
+        }
+        if($info['qtzs']){
+            $info['qtzs'] = htmlspecialchars_decode($info['qtzs']);
+        }
         return $info ? $info : null;
     }
 

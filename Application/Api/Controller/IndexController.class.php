@@ -11,6 +11,15 @@ class IndexController extends BaseRestController
         $returnArr = array("result" => 0, "msg" => "页面待开发", "code" => '402');
         json_return($returnArr);
     }
+
+    public function banner()
+    {
+        $module=$_GET['module'];
+        $ad=M("Ad");
+        $info=$ad->where("pid=".$module)->field("ad_code")->select();
+        $returnArr = array("result" => 0, "msg" => "频道参数错误", "code" => 402, "data" => $info);
+        json_return($returnArr);
+    }
 //
 //    public $user_id = 0;
 //    public $user = array();

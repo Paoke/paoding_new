@@ -125,14 +125,13 @@
             };
 
             var data = {
-                channel:'js',
-                id:'id',
+                hd_id:,
                 action:action
             };
             $http({
                 method:"GET",
                 params:{data:data},
-                url:"/index.php/Mobile/Article/like?channel=js&id=**&action=**"
+                url:"/index.php/Mobile/Activity/like?hd_id=***&action=***"
             }).then(function successCallback(response) {                      
                     $scope.serve = response.data.data;                             
                 }, function errorCallback(response) {

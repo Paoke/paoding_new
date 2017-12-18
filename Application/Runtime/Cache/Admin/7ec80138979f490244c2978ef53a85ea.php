@@ -22,8 +22,11 @@
 <body class="sticky-header" >
 
 <section>
+
     <!-- main content start-->
     <div class="main-content" width="100%" style="margin:0px;">
+
+
         <!--body wrapper start-->
         <div class="wrapper">
             <!--  -->
@@ -43,7 +46,7 @@
                                         </div>
                                         <div class="pull-right">
                                             <div class="btn-group" style="margin-top: -5px;">
-                                                <a href="/index.php/Admin/Article/tags/action/page_add/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>"
+                                                <a href="/index.php/Admin/Activity/tags/action/page_add/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>"
                                                    class="btn btn-default "><i
                                                         class="fa fa-plus"></i>新增标签</a>
                                             </div>
@@ -84,12 +87,11 @@
                                             <td>
                                                 <div class="btn-group">
                                                     <a class="btn btn-default"
-                                                       href="/index.php/Admin/Article/tags/action/page_edit/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/id/<?php echo ($vo["id"]["data"]); ?>"
+                                                       href="/index.php/Admin/Activity/tags/action/page_edit/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/id/<?php echo ($vo["id"]["data"]); ?>"
                                                        title="编辑"><i class="fa fa-pencil"></i></a>
                                                     <a href="#delModal" data-toggle="modal" class="btn btn-default"
-                                                       data-name="<?php echo ($vo["id"]["data"]); ?>" title="删除"
-                                                       myname="<?php echo ($vo["cat_name"]["data"]); ?>"
-                                                       data-url="/index.php/Admin/Article/tags/action/del/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/id/<?php echo ($vo["id"]["data"]); ?>"
+                                                       data-name="<?php echo ($vo["tag_name"]["data"]); ?>" title="删除"
+                                                       data-url="/index.php/Admin/Activity/tags/action/del/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/id/<?php echo ($vo["id"]["data"]); ?>"
                                                        onclick="delModal(this)"><i class="fa fa-trash-o"></i></a>
                                                 </div>
                                             </td>
@@ -152,7 +154,7 @@
                                                     </li><?php endif; ?>   <!-- 上一页 end -->
 
                                                 <?php if($page < 5): ?><!-- 页码条 -->
-                                                    <?php $__FOR_START_4086__=1;$__FOR_END_4086__=$page+1;for($i=$__FOR_START_4086__;$i < $__FOR_END_4086__;$i+=1){ ?><!-- 循环四条以内 -->
+                                                    <?php $__FOR_START_22340__=1;$__FOR_END_22340__=$page+1;for($i=$__FOR_START_22340__;$i < $__FOR_END_22340__;$i+=1){ ?><!-- 循环四条以内 -->
                                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($i); ?></a></li>
                                                             <?php elseif($i < $page_now ): ?>
                                                             <li>
@@ -163,7 +165,7 @@
                                                                 <a href="<?php echo U('Admin/User/index/page_now');?>/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>"><?php echo ($i); ?></a>
                                                             </li><?php endif; } ?>
                                                     <?php elseif($page_now < 3): ?>
-                                                    <?php $__FOR_START_28663__=1;$__FOR_END_28663__=6;for($i=$__FOR_START_28663__;$i < $__FOR_END_28663__;$i+=1){ ?><!-- 循环1-5 -->
+                                                    <?php $__FOR_START_4141__=1;$__FOR_END_4141__=6;for($i=$__FOR_START_4141__;$i < $__FOR_END_4141__;$i+=1){ ?><!-- 循环1-5 -->
 
                                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                                             <?php elseif($i < $page_now ): ?>
@@ -175,7 +177,7 @@
                                                                 <a href="<?php echo U('Admin/User/index/page_now');?>/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>"><?php echo ($i); ?></a>
                                                             </li><?php endif; } ?>
                                                     <?php elseif($page_now == $page-1): ?>
-                                                    <?php $__FOR_START_7780__=$page_now-3;$__FOR_END_7780__=$page+1;for($i=$__FOR_START_7780__;$i < $__FOR_END_7780__;$i+=1){ ?><!-- 循环当前页为倒数第二页时 -->
+                                                    <?php $__FOR_START_18786__=$page_now-3;$__FOR_END_18786__=$page+1;for($i=$__FOR_START_18786__;$i < $__FOR_END_18786__;$i+=1){ ?><!-- 循环当前页为倒数第二页时 -->
                                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                                             <?php elseif($i < $page ): ?>
                                                             <li>
@@ -186,7 +188,7 @@
                                                                 <a href="<?php echo U('Admin/User/index/page_now');?>/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>"><?php echo ($i); ?></a>
                                                             </li><?php endif; } ?>
                                                     <?php elseif($page_now == $page): ?>
-                                                    <?php $__FOR_START_6349__=$page_now-4;$__FOR_END_6349__=$page+1;for($i=$__FOR_START_6349__;$i < $__FOR_END_6349__;$i+=1){ ?><!-- 循环当前页为最后一页时 -->
+                                                    <?php $__FOR_START_19187__=$page_now-4;$__FOR_END_19187__=$page+1;for($i=$__FOR_START_19187__;$i < $__FOR_END_19187__;$i+=1){ ?><!-- 循环当前页为最后一页时 -->
                                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                                             <?php elseif($i < $page ): ?>
                                                             <li>
@@ -197,7 +199,7 @@
                                                                 <a href="<?php echo U('Admin/User/index/page_now');?>/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>"><?php echo ($i); ?></a>
                                                             </li><?php endif; } ?>
                                                     <?php else: ?>
-                                                    <?php $__FOR_START_13698__=$page_now-2;$__FOR_END_13698__=$page_now+3;for($i=$__FOR_START_13698__;$i < $__FOR_END_13698__;$i+=1){ ?><!-- 循环除了前五条 和后五条 -->
+                                                    <?php $__FOR_START_9136__=$page_now-2;$__FOR_END_9136__=$page_now+3;for($i=$__FOR_START_9136__;$i < $__FOR_END_9136__;$i+=1){ ?><!-- 循环除了前五条 和后五条 -->
 
                                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                                             <?php elseif($i < $page ): ?>
@@ -260,12 +262,6 @@
     //删除菜单
     function delModal(obj) {
         modal_object = $(obj);
-        console.log(modal_object.attr("myname"));
-        if(modal_object.attr("myname")!=''){
-            modal_object.attr('data-toggle','');
-            layer.msg("该分类下有数据,禁止删除");
-            return false;
-        }
         modal_url = $(obj).attr('data-url');
         modal_name = $(obj).attr('data-name');
         $("#del_info").html(" 是否确认删除【" + modal_name + "】?");
@@ -305,7 +301,7 @@
     }
     function listSon(obj, id) {
         var str = '';
-        var url = "/index.php/Admin/Article/tags/action/page_list/id/" + id + "/type/<?php echo ($type); ?>";
+        var url = "/index.php/Admin/Activity/tags/action/page_list/id/" + id + "/type/<?php echo ($type); ?>";
         var faClass = $(obj).children().attr("class");
         if (faClass == "fa fa-caret-right") {
             $.get(url, function (res) {
@@ -328,17 +324,17 @@
                     str += '<td class="text-center">' +
                             '<img width="40" height="40" src="' + item.icon_url + '" onclick="preview(this)"/>' +
                             '</td>';
-                    str += '<td><input type="text" onchange=\'updateSort("","article_tags","id",' +
+                    str += '<td><input type="text" onchange=\'updateSort("","Activity_tags","id",' +
                             '"' + item.id + '","sort_id",this)\' ' +
                             'onkeyup="this.value=this.value.replace(/[^\d]/g,"")" maxlength="4" ' +
                             'size="4" value="' + item.sort_id + '" class="input-sm"/></td>';
                     str += '<td><div class="btn-group btn-group-sm">';
                     str += '<a class="btn btn-default" ' +
-                            'href="/index.php/Admin/Article/tags/action/page_edit/id/' + item.id +
+                            'href="/index.php/Admin/Activity/tags/action/page_edit/id/' + item.id +
                             '/channel/<?php echo ($channel); ?>" title="编辑"><i class="fa fa-pencil"></i></a>';
                     str += '<a href="#delModal" data-toggle="modal" class="btn btn-default delModal"' +
                             'data-name="' + item.name + '" data-id="' + item.id + '"' +
-                            'data-url="/index.php/Admin/Article/tags/action/del/id/' + item.id + '"' +
+                            'data-url="/index.php/Admin/Activity/tags/action/del/id/' + item.id + '"' +
                             'title="删除" onclick="delModal(this)"><i class="fa fa-trash-o"></i></a>';
                     str += '</div></td></tr>';
                 });
@@ -348,7 +344,7 @@
                 $('body').niceScroll().resize();
             });
         } else {
-            var url = "/index.php/Admin/Article/tags/action/page_list/id/" + id +
+            var url = "/index.php/Admin/Activity/tags/action/page_list/id/" + id +
                     "/channel/<?php echo ($channel); ?>/getTreeSon/1";
             $.post(url, function (res) {
                 $.each(res.data, function (i, item) {
