@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="share" >
 <head>
     <meta charset="UTF-8">
     <title>主题论坛</title>
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/common_new.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/activity.css">
 </head>
-<body>
+<body ng-controller="shareCtrl">
 <div class="theme_banner">
     <img class="theme_img" src="{$Think.MOBILE}/images/theme-banner.jpg" alt="">
 </div>
@@ -31,9 +31,9 @@
     <div class="theme_main">
         <div class="clear">
             <div class="fl lump"></div>
-            <span class="fl theme_tit">主题论坛</span>
+            <span class="fl theme_tit">论坛峰会介绍</span>
         </div>
-        <p class="theme_ct">论坛根生中国、立足亚洲、辐射世界，是为亚洲各国之间、亚洲各国与世界其它地区之间经济交流与商务交流合作的高端平台；是亚洲各国政、商、学、研、资等各界精英指点财富江山、激荡财智思想的饕餮盛宴，是以亚洲各国高层政要、地方首脑、驻华使节、企业领袖、专家学者、社会名流等为主体的高端国际组织。</p>
+        <p class="theme_ct">科技直通车每半年举行一次论坛峰会，针对庖丁四大领域，整合半年来科技沙龙优秀的技术企业与技术案例，开放式邀请所有行业内人士共同交流。通过论坛峰会，聚集行业内最领先最高端的行业领头者，通过思维碰撞，共同探讨行业发展，聚合多方力量共同实现行业升级。</p>
     </div>
     <div class="index_div"></div>
 
@@ -42,54 +42,23 @@
             <div class="fl lump"></div>
             <span class="fl theme_tit">举办活动</span>
         </div>
-        <div class="activity_lately_section clear">
-            <div class="activity_section_left fl">
-                <img src="{$Think.MOBILE}/images/activity-bottom-banner-1.jpg" alt="">
-            </div>
-            <div class="activity_section_right fr">
-                <p class="activity_right_tit">广东省家具行业推行绿色清洁生产与挥发性有机污染物</p>
-                <p class="activity_right_p">
-                    <span class="activity_right_span">广州 天河区</span>
-                    <span>09/16</span>
-                </p>
-                <p class="activity_right_p">
-                    浏览<span class="activity_right_span"> 2068</span>
-                    收藏<span> 1258</span>
-                </p>
-            </div>
-        </div>
-
-        <div class="activity_lately_section clear">
-            <div class="activity_section_left fl">
-                <img src="{$Think.MOBILE}/images/activity-bottom-banner-1.jpg" alt="">
-            </div>
-            <div class="activity_section_right fr">
-                <p class="activity_right_tit">广东省家具行业推行绿色清洁生产与挥发性有机污染物</p>
-                <p class="activity_right_p">
-                    <span class="activity_right_span">广州 天河区</span>
-                    <span>09/16</span>
-                </p>
-                <p class="activity_right_p">
-                    浏览<span class="activity_right_span"> 2068</span>
-                    收藏<span> 1258</span>
-                </p>
-            </div>
-        </div>
-
-        <div class="activity_lately_section clear">
-            <div class="activity_section_left fl">
-                <img src="{$Think.MOBILE}/images/activity-bottom-banner-1.jpg" alt="">
-            </div>
-            <div class="activity_section_right fr">
-                <p class="activity_right_tit">广东省家具行业推行绿色清洁生产与挥发性有机污染物</p>
-                <p class="activity_right_p">
-                    <span class="activity_right_span">广州 天河区</span>
-                    <span>09/16</span>
-                </p>
-                <p class="activity_right_p">
-                    浏览<span class="activity_right_span"> 2068</span>
-                    收藏<span> 1258</span>
-                </p>
+        <!-- 举办活动 -->
+        <div ng-repeat="list in lists">
+            <div class="activity_lately_section clear">
+                <div class="activity_section_left fl">
+                    <img class="activity_logo" ng-src="{{list.sponsor_logo_url}}" alt="">
+                </div>
+                <div class="activity_section_right fr">
+                    <p class="activity_right_tit">{{list.title}}</p>
+                    <p class="activity_right_p">
+                        <span class="activity_right_span">{{list.diqu}}</span>
+                        <span>{{list.formal_start_time}}</span>
+                    </p>
+                    <p  class="activity_right_p">
+                        浏览<span class="activity_right_span"> {{list.yuedu}}</span>
+                        收藏<span> {{list.shoucang}}</span>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -122,8 +91,32 @@
 
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
+<script src="{$Think.MOBILE}/js/angular.min.js"></script>
 <script src='{$Think.MOBILE}/js/return.js'></script>
 <script>
+    var tag_id = GetQueryString('tag_id'); 
+    var app = angular.module("share",[]);
+    app.controller("shareCtrl",function ($scope,$http){
+        //  获取活动标签接口
+        $http({
+            method:'GET',
+            params:{tag_id:tag_id},
+            url: '/api.php/ChannelIndex/index/action/dataList/channel/hd/type/1',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            transformRequest: function (obj) {
+                var str = [];
+                for (var p in obj) {
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                }
+                return str.join("&");
+            }
+        }).then(function successCallback(response){
+            $scope.lists = response.data.data;
+            // console.log( $scope.options[1].tag_name);
+        },function errorCallback(){
+
+        });
+    });
     // tab切换
     $(".theme_tab").on("click",function(){
         var index = $(this).index();
@@ -155,6 +148,12 @@
             }
         });
     });
+    
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r!=null) return unescape(r[2]); return null;
+    }
 
 </script>
 </html>

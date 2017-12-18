@@ -33,24 +33,24 @@
         <div class="swiper-pagination"></div>
     </div>
 </div>
-
+    <!-- 导航 -->
 <div class="activity_nav clear">
-    <a href="/index.php/Mobile/Activity/share.html">
+    <a href="/index.php/Mobile/Activity/share.html?tag_id={{options[2].id}}">
         <li class="activity_nav_part fl" style="margin-left:90px;">
             <div class="activity_nav_part_icon" style="background: url(<?php echo (MOBILE); ?>/images/icon-activity-salon.png) center 0 no-repeat;"></div>
-            <p class="activity_nav_part_theme">{{options[2].tag_name}}</p>
+            <p class="activity_nav_part_theme" ng-cloak>{{options[2].tag_name}}</p>
         </li>
     </a>
-    <a href="/index.php/Mobile/Activity/theme.html">
+    <a href="/index.php/Mobile/Activity/theme.html?tag_id={{options[1].id}}">
         <li class="activity_nav_part fl">
             <div class="activity_nav_part_icon" style="background: url(<?php echo (MOBILE); ?>/images/icon-activity-fortum.png) center 0 no-repeat;"></div>
-            <p class="activity_nav_part_theme">{{options[1].tag_name}}</p>
+            <p class="activity_nav_part_theme" ng-cloak>{{options[1].tag_name}}</p>
         </li>
     </a>
-    <a href="/index.php/Mobile/Activity/abutment.html">
+    <a href="/index.php/Mobile/Activity/abutment.html?tag_id={{options[0].id}}">
         <li class="activity_nav_part fl">
             <div class="activity_nav_part_icon" style="background: url(<?php echo (MOBILE); ?>/images/icon-activity-joint.png) center 0 no-repeat;"></div>
-            <p class="activity_nav_part_theme">{{options[0].tag_name}}</p>
+            <p class="activity_nav_part_theme" ng-cloak>{{options[0].tag_name}}</p>
         </li>
     </a>
 </div>
@@ -87,7 +87,7 @@
     <div ng-repeat="list in lists" ng-hide="list.status=='1'">
         <div class="activity_lately_section clear">
             <div class="activity_section_left fl">
-                <img src="<?php echo (MOBILE); ?>/images/hd-wqhd1.png" alt="">
+                <img class="activity_logo" ng-src="{{list.sponsor_logo_url}}" alt="">
             </div>
             <div class="activity_section_right fr">
                 <p class="activity_right_tit">{{list.title}}</p>

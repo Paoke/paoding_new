@@ -237,7 +237,6 @@
         page_total=getListData(data,"html");
     })
 
-
     /**
      * 请求列表数据
      * @param data  全局变量data

@@ -15,8 +15,27 @@
     <img class="fr" src="{$Think.MOBILE}/images/icon-right2.png" alt="">
 </a>
 
-<a href="my.html" class="register_btn">退出登录</a>
+<p class="register_btn">退出登录</p>
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
 <script src='{$Think.MOBILE}/js/return.js'></script>
+<script>
+	$(".register_btn").on("click",function(){
+		$.ajax({
+			url: '/api.php/User/logout',
+			type: 'GET',
+		})
+		.done(function() {
+			console.log("success");
+			window.location.href="/index.php/Mobile/";
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		.always(function() {
+			console.log("complete");
+		});
+		
+	})
+</script>
 </html>

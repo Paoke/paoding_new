@@ -25,23 +25,23 @@
 
 			<div class="regist_input">
 				<span class="regist_span">验证码</span>
-				<input type="text" placeholder="输入您收到的验证码"  name="code">
+				<input type="text" placeholder="输入您收到的验证码"  name="code" id="code">
 			</div>
 
 			<div class="regist_input">
 				<span class="regist_span">密码</span>
-				<input type="password" placeholder="密码不少于6位数" name="password">
+				<input type="password" placeholder="密码不少于6位数" name="password" id="password">
 			</div>
 
 			<div class="regist_input" style="margin-bottom:10px">
 				<span class="regist_span">昵称</span>
-				<input type="text" placeholder="不做无名之辈" name="nickname">
+				<input type="text" placeholder="请填写昵称" name="nickname" id="nickname">
 			</div>
 
-			<div class="regist_tip clear">
+<!-- 			<div class="regist_tip clear">
 				<div class="fl regist_tip_icon"></div>
 				<span class="fl">无效的验证码，请重新输入</span>
-			</div>
+			</div> -->
 
 			<a class="register_btn">注 册</a>
 
@@ -60,38 +60,128 @@
 </body>
 <script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
 <script src='<?php echo (MOBILE); ?>/js/angular.min.js'></script>
-<script src='<?php echo (MOBILE); ?>/js/common.js'></script>
 <script>
+
+	var countdown=60;  
+	var mobile,code,password,nickname;
+	var tip = {
+		tip_ct:"",
+	};
+	var tips = {
+		addtips:function(tip_ct){
+			var tipNode = '<div class="tipCommon" style="display:block">'+tip_ct+'</div>';
+			$('body').append(tipNode);
+			setTimeout(function(){
+				$(".tipCommon").remove();
+			},1500)
+		}
+	}
+
 	var app = angular.module('register', []);
-
 	app.controller('myReg', function($scope,$http) {
-		$(".register_btn").on("click",function(){
-		   var data = {};
-	       var t = $('#formID').serializeArray();
-	       $.each(t, function () {
-	           data[this.name] = this.value;
-	       });
-	       // console.log(data);
-	       // console.log($("#mobile").val());
-			$http({
-			    method: 'POST',
-			    data:data,
-			    url: '/api.php/User/register',
-				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },    
-	            transformRequest: function(obj) {    
-	                var str = [];    
-	                for (var p in obj) {    
-	                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));    
-	                }    
-	                return str.join("&");    
-	            } 
-			}).then(function successCallback(response) {
-			     console.log(response.data.result);
-			    }, function errorCallback(response) {
 
-			});
+		$(".register_btn").on("click",function(){
+			var regPsw = /^.{6,}$/;
+			var regName = /^[a-zA-Z0-9_-]{2,8}$/;
+			mobile = $('#mobile').val();
+			nickname = $('#nickname').val();
+			password = $('#password').val();
+
+			if( $('#password').val()=="" || $('#code').val()=="" || $('#nickname').val()=="" || $('#password').val()=="" || $('#nickname').val()=="" ){
+					tip_ct = "请完善信息再注册";
+					tips.addtips(tip_ct);
+					return false;
+			}
+			else if(!regPsw.test(password)){
+				tip_ct = "密码不少于6位数";
+				tips.addtips(tip_ct);
+				return false;
+			}
+			else if(!regName.test(nickname)){
+				tip_ct = "昵称请输入2-8位";
+				tips.addtips(tip_ct);
+				return false;
+			}
+			else{
+				// 注册信息提交接口
+			   var data = {};
+		       var t = $('#formID').serializeArray();
+		       $.each(t, function () {
+		           data[this.name] = this.value;
+		       });
+		       // console.log(data);
+
+		       // 注册信息提交接口
+				$http({
+				    method: 'POST',
+				    data:data,
+				    url: '/api.php/User/register',
+					headers: { 'Content-Type': 'application/x-www-form-urlencoded' },    
+		            transformRequest: function(obj) {    
+		                var str = [];    
+		                for (var p in obj) {    
+		                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));    
+		                }    
+		                return str.join("&");    
+		            } 
+				}).then(function successCallback(response) {
+				     console.log(response.data.result);
+				    }, function errorCallback(response) {
+
+				});
+			}
+
+		});
+
+		// 获取注册验证码
+		$(".getIdentify").on("click",function(){
+			var regTel = /^[1][3,4,5,7,8][0-9]{9}$/;
+			mobile = $('#mobile').val();
+			if(!regTel.test(mobile)){
+				tip_ct = "请输入正确的手机号码";
+				tips.addtips(tip_ct);
+				return false;
+			}
+			else{
+				goTime();
+				$http({
+				    method: 'POST',
+				    url: '/api.php/Sms/sendMessage',
+					headers: { 'Content-Type': 'application/x-www-form-urlencoded' },    
+		            transformRequest: function(obj) {    
+		                var str = [];    
+		                for (var p in obj) {    
+		                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));    
+		                }    
+		                return str.join("&");    
+		            } 
+				}).then(function successCallback(response) {
+				     console.log(response);
+				    }, function errorCallback(response) {
+
+				});
+
+			}
 		});
 	});
+
+
+
+	function goTime() {
+		if (countdown == 0) {  			
+			$('.getIdentify').attr("disabled",false);    
+			$('.getIdentify').val("重新发送"); 			
+			countdown = 60;   
+		} else {  			
+			$('.getIdentify').attr("disabled",true); 
+			$('.getIdentify').css('background','#fff');
+			$('.getIdentify').val("重新发送(" + countdown + ")"); 
+			countdown--;   
+			setTimeout(function() {   
+				goTime()   
+			},1000);   
+		}   
+	};  
 
 </script>
 </html>

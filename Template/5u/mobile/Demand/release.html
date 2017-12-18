@@ -63,7 +63,7 @@
 <div class="demand_div clear">
     <span class="demand_name fl">主营业务</span>
     <!-- <img class='fl point_icon' src="{$Think.MOBILE}/images/icon-index-issue-remind.png" alt=""> -->
-    <input class="demand_input fr" type="text" placeholder="请输入主营业务" >
+    <input class="demand_input fr" type="text" placeholder="请输入主营业务" id="business">
 </div>
 <div class="demand_div clear">
     <span class="demand_name fl">联系人</span>
@@ -105,6 +105,7 @@
         </div>
     </div>
 </div>
+<div class='tipCommon'>信息未完善，请填写完毕后提交</div>
 
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
@@ -114,48 +115,59 @@
 <script src='{$Think.MOBILE}/js/return.js'></script>
 <script>
     function getMsg() {
-        // 获取技术领域选中状态
-        var li = $(".areas_main li");
-        var lingyu_html;
-        for(var i = 0;i < li.length ; i++){
-            if( li.eq(i).hasClass('areas_selected') ){               
-                 lingyu_html = li.eq(i).html();
-            }
-        };
-        // 获取需提交的值
-        var user_id = $("#user_id").val(),
-            title = $("#title").val(),
-            content = $("#content").val(),
-            lingyu = lingyu_html,
-            csd = $("input[name='price']:checked").val(),
-            yfzq = $("#choose_html").html(),
-            gsm = $("#company").val(),
-            lxrxm = $("#people").val(),
-            dhhm = $("#phone").val();
+        // 资料填写完整判断反馈
+        var count = $(".areas_selected").length;       
+        if( 
+            $("#title").val()!="" && $("#content").val()!="" && count>0 
+            && $("input[name='price']:checked").val()!=undefined && $("#choose_html").html()!="请选择" 
+            && $("#company").val()!="" && $("#business").val()!="" && $("#people").val()!="" && $("#phone").val()!=""
+        ){
+                alert("全部选中");        
+                // 获取技术领域选中状态
+                var li = $(".areas_main li");
+                var lingyu_html;
+                for(var i = 0;i < li.length ; i++){
+                    if( li.eq(i).hasClass('areas_selected') ){               
+                         lingyu_html = li.eq(i).html();
+                    }
+                };
+                // 获取需提交的值
+                var user_id = $("#user_id").val(),
+                    title = $("#title").val(),
+                    content = $("#content").val(),
+                    lingyu = lingyu_html,
+                    csd = $("input[name='price']:checked").val(),
+                    yfzq = $("#choose_html").html(),
+                    gsm = $("#company").val(),
+                    lxrxm = $("#people").val(),
+                    dhhm = $("#phone").val();
 
-        var data = {
-            user_id : user_id,
-            title : title,
-            content : content,
-            jsly : lingyu,
-            yfys : csd,
-            yfzq : yfzq,
-            gsm : gsm,
-            lxrxm : lxrxm,
-            dhhm:dhhm
-        };
-         //异步提交表单数据
-         $.ajax({
-             type: "post",
-             url: '/index.php/Mobile/Article/add?channel=xq&type=1&iscopy=0',
-             data: data,
-             dataType: 'json',
-             success: function (res) {
-                 console.log(res);
-             }
-         })
+                var data = {
+                    user_id : user_id,
+                    title : title,
+                    content : content,
+                    jsly : lingyu,
+                    yfys : csd,
+                    yfzq : yfzq,
+                    gsm : gsm,
+                    lxrxm : lxrxm,
+                    dhhm:dhhm
+                };
+                 //异步提交表单数据
+                 $.ajax({
+                     type: "post",
+                     url: '/index.php/Mobile/Article/add?channel=xq&type=1&iscopy=0',
+                     data: data,
+                     dataType: 'json',
+                     success: function (res) {
+                         console.log(res);
+                     }
+                 })
+         }else{
+            $(".tipCommon").show();
+            setTimeout(function(){ $(".tipCommon").hide(); }, 1000);
+         }
     }
-
 
     var mySwiper = new Swiper('.swiper-container', {    
         initialSlide :1,     //初始化位置

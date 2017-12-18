@@ -13,7 +13,7 @@
 <div class="mask" style="display:none"></div>
 
 <div class="banner">
-    <img src="<?php echo (MOBILE); ?>/images/index-techdetail-image1.jpg" alt="">
+    <img ng-cloak ng-src="{{lists.cover_url}}" alt="">
 </div>
 
 <div class="share clear">
@@ -185,8 +185,7 @@
             $http({
                 method:'GET',                
                 url:'/index.php/Mobile/Article/like?channel=js&id='+data_id+'&action=0'
-            }).then(function successCallback(response) {                    
-                    // alert("取消成功");
+            }).then(function successCallback(response) {                   
                     $("#collect").show();
                     $("#cancle").hide();
                 }, function errorCallback(response) {                   

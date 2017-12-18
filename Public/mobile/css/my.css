@@ -15,6 +15,11 @@
 	border-radius: 50%;
 	overflow: hidden;
 	margin: 46px 42px 0 76px;
+	text-align: center;
+}
+.head_pic{
+	width: 100px;
+	margin-top: -10px;
 }
 .my_nameBox{
 	margin-top: 66px;
@@ -33,6 +38,7 @@
 	border-radius: 19px;
 	background-color: #42454b;
 }
+
 .my_circle{
 	display: inline-block;
 	width: 28px;

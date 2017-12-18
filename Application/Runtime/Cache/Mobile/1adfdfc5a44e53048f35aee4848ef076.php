@@ -10,32 +10,13 @@
     <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/my.css">
 </head>
 <body>
-<a href="user_change.html" class="my_secion clear">
-    <span class="fl">修改登录密码</span>
-    <img class="fr" src="<?php echo (MOBILE); ?>/images/icon-right2.png" alt="">
-</a>
-
-<p class="register_btn">退出登录</p>
+<p class="apply_tit">修改登录密码</p>
+<p class="apply_tip">密码可使用英文、数字，字数限制6-20位字符</p>
+<input class="set_psw" type="text" placeholder="输入原登录密码" maxlength="20">
+<input class="set_psw" type="text" placeholder="输入新密码" maxlength="20">
+<input class="set_psw" type="text" placeholder="在此确认新密码" maxlength="20">
+<a href="my-set.html" class="register_btn">保存</a>
 </body>
 <script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
 <script src='<?php echo (MOBILE); ?>/js/return.js'></script>
-<script>
-	$(".register_btn").on("click",function(){
-		$.ajax({
-			url: '/api.php/User/logout',
-			type: 'GET',
-		})
-		.done(function() {
-			console.log("success");
-			window.location.href="/index.php/Mobile/";
-		})
-		.fail(function() {
-			console.log("error");
-		})
-		.always(function() {
-			console.log("complete");
-		});
-		
-	})
-</script>
 </html>

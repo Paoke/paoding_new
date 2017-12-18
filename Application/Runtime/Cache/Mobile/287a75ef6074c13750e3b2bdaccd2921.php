@@ -111,7 +111,7 @@
     <a href="/index.php/Mobile/Index/detail_tec.html?data_id={{tecList.id}}" ng-repeat="tecList in tecLists">
         <div class="main_section clear">
             <div class="fl main_section_left">
-                <img ng-src="{{tecList.lbxt}}" alt="">
+                <img ng-src="{{tecList.cover_url}}" alt="">
                 <p class="transfer" ng-cloak>{{tecList.hzxs}}</p>
             </div>
             <div class="fr main_section_right">

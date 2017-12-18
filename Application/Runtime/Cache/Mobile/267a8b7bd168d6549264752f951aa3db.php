@@ -123,6 +123,7 @@
         </div>
     </div>
 </div>
+<div class='tipCommon'>信息未完善，请填写完毕后提交</div>
 
 
 </body>
@@ -151,44 +152,58 @@
     });
 
     function getMsg() {
-        // 获取技术领域选中状态
-        var li = $(".areas_main li");
-        var lingyu_html;
-        for(var i = 0;i < li.length ; i++){
-            if( li.eq(i).hasClass('areas_selected') ){               
-                 lingyu_html = li.eq(i).html();
-            }
-        };
-        // 获取需提交的值
-        var user_id = $("#user_id").val(),
-            title = $("#title").val(),
-            content = $("#content").val(),
-            lingyu = lingyu_html,
-            csd = $("#choose_tecHtml").html(),
-            zhuanli = $("input[name='patent']:checked").val(),
-            hzxs = $("#choose_coopHtml").html(),
-            hzjg = $("input[name='price']:checked").val(); 
+        // 资料填写完整判断反馈 
+        var count = $(".areas_selected").length;       
+        if( 
+            $("#title").val()!=""  && count>0  && $("#choose_tecHtml").html()!="请选择"
+            && $("input[name='price']:checked").val()!=undefined  && $("input[name='patent']:checked").val()!=undefined 
+            && $("#choose_html").html()!="请选择" && $("#content").val()!=""          
+        ){
+            alert("全部选中");
+            // 获取技术领域选中状态
+            var li = $(".areas_main li");
+            var lingyu_html;
+            for(var i = 0;i < li.length ; i++){
+                if( li.eq(i).hasClass('areas_selected') ){               
+                     lingyu_html = li.eq(i).html();
+                }
+            };
+            // 获取需提交的值
+            var user_id = $("#user_id").val(),
+                title = $("#title").val(),
+                content = $("#content").val(),
+                lingyu = lingyu_html,
+                csd = $("#choose_tecHtml").html(),
+                zhuanli = $("input[name='patent']:checked").val(),
+                hzxs = $("#choose_coopHtml").html(),
+                hzjg = $("input[name='price']:checked").val(); 
 
-        var data = {
-            user_id : user_id,
-            title : title,
-            content : content,
-            lingyu : lingyu,
-            csd : csd,
-            zhuanli : zhuanli,
-            hzxs : hzxs,
-            hzjg : hzjg
-        };
-         //异步提交表单数据
-        $.ajax({
-            type: "post",
-            url: '/index.php/Mobile/Article/add?channel=js&type=1&iscopy=0',
-            data: data,
-            dataType: 'json',
-            success: function (res) {
-                console.log(res);
-            }
-        })
+            var data = {
+                user_id : user_id,
+                title : title,
+                content : content,
+                lingyu : lingyu,
+                csd : csd,
+                zhuanli : zhuanli,
+                hzxs : hzxs,
+                hzjg : hzjg
+            };
+             //异步提交表单数据
+            $.ajax({
+                type: "post",
+                url: '/index.php/Mobile/Article/add?channel=js&type=1&iscopy=0',
+                data: data,
+                dataType: 'json',
+                success: function (res) {
+                    console.log(res);
+                }
+            })
+        }else{
+              $(".tipCommon").show();
+              setTimeout(function(){ $(".tipCommon").hide(); }, 1000);
+        }
+
+
     }
 </script>
 

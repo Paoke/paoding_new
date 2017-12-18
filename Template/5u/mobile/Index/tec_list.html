@@ -53,7 +53,7 @@
     <a href="__MODULE__/Index/detail_tec.html?data_id={{tecList.id}}" ng-repeat="tecList in tecLists">
         <div class="main_section clear">
             <div class="fl main_section_left">
-                <img ng-cloak ng-src="{{tecList.lbxt}}" alt="">
+                <img ng-cloak ng-src="{{tecList.cover_url}}" alt="">
                 <p ng-cloak class="transfer">{{tecList.hzxs}}</p>
             </div>
             <div class="fr main_section_right">
@@ -73,29 +73,6 @@
             </div>
         </div>
     </a>
-    <!--     <a href="__MODULE__/Index/detail_tec.html">
-            <div class="main_section clear">
-                <div class="fl main_section_left">
-                    <img ng-src="{$Think.MOBILE}/images/index-advanced-tech.jpg" alt="">
-                    <p class="transfer">技术转让</p>
-                </div>
-                <div class="fr main_section_right">
-                    <p class="sec_tit">印刷品无痕防伪技术</p>
-                    <p>
-                        <img src="{$Think.MOBILE}/images/icon-index-industry.png" alt="">
-                        <span class="sec_industry">印刷工业，防伪工业</span>
-                    </p>
-                    <p class="p_scan">
-                        <img src="{$Think.MOBILE}/images/icon-index-browse.png" alt="">
-                        <span class="sec_scan">2068</span>
-                    </p>
-                    <div class="adhi_print">
-                        <span class="adhibition">应用类</span>
-                        <span class="print">成熟方案</span>
-                    </div>
-                </div>
-            </div>
-        </a> -->
     </div>
 
 
@@ -143,7 +120,8 @@
         "order_by": "DESC",
         "category_id": "0",
         "tag_id": "0",
-        "get_page":"true"
+        "get_page":"true",
+        "search":""
     };
    
     var app = angular.module("tec_list", []);  
@@ -197,6 +175,7 @@
         if(index==6){tranLeft = 873;}
         $(".sildeBlock").css("transform","translateX("+tranLeft+"px)");
         // 按需求栏目和业务范围请求列表接口
+        data.search="";
         data.page="1";
         data.category_id = $("#demand_type").val();
         data.tag_id = $(this).val();
@@ -206,8 +185,8 @@
     // 滚动加载
     $(window).scroll(function () {
         if ($(document).scrollTop() > ($(document).height() - $(window).height()) / 1.5) {
+            page = parseInt(page) + 1;
             if (page <= page_total) {
-                page = parseInt(page) + 1;
                 data.page=page;
                 page_total=getListData(data,"append");
             }
@@ -217,11 +196,22 @@
     // 下拉请求
     $('select#demand_type').change(function () {
         page="1";
+        data.search="";
         data.page="1";
         data.category_id = $(this).val();
         data.tag_id = $(".active_cat").val();
         page_total=getListData(data,"html");
     }); 
+
+    // 搜索
+    $(".click_search").on("click",function(){
+        page="1";
+        data.category_id="0";
+        data.tag_id="0";
+        data.page="1";
+        data.search = $(".tech_search").val();      
+        page_total=getListData(data,"html");
+    })
 
     /**
      * 请求列表数据
@@ -246,7 +236,7 @@
                     '<a href=__MODULE__/Index/detail_tec.html?data_id='+info[i].id+'>'+
                         '<div class="main_section clear">'+
                             '<div class="fl main_section_left">'+
-                                '<img src='+info[i].lbxt+' alt="">'+
+                                '<img src='+info[i].cover_url+' alt="">'+
                                 '<p class="transfer">'+info[i].hzxs+'</p>'+
                             '</div>'+
                             '<div class="fr main_section_right">'+
