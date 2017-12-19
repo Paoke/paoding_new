@@ -159,7 +159,7 @@
             && $("input[name='price']:checked").val()!=undefined  && $("input[name='patent']:checked").val()!=undefined 
             && $("#choose_html").html()!="请选择" && $("#content").val()!=""          
         ){
-            alert("全部选中");
+      
             // 获取技术领域选中状态
             var li = $(".areas_main li");
             var lingyu_html;
@@ -195,7 +195,10 @@
                 data: data,
                 dataType: 'json',
                 success: function (res) {
-                    console.log(res);
+                  if(res.result == 1){
+                    alert("发布成功!");
+                    window.location.href="/index.php/Mobile";
+                  }
                 }
             })
         }else{

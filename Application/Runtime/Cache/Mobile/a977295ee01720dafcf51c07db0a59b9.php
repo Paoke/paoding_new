@@ -117,6 +117,7 @@
             url:'/api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1',
         }).then(function successCallback(response){       
           $scope.detail = response.data.data;
+          console.log($scope.detail.lxrxm);
         },function errorCallback(){          
         });
     });

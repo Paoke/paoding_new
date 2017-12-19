@@ -87,7 +87,7 @@
 			nickname = $('#nickname').val();
 			password = $('#password').val();
 
-			if( $('#password').val()=="" || $('#code').val()=="" || $('#nickname').val()=="" || $('#password').val()=="" || $('#nickname').val()=="" ){
+			if( $('#password').val()=="" || $('#code').val()=="" || $('#nickname').val()=="" || $('#mobile').val()=="" ){
 					tip_ct = "请完善信息再注册";
 					tips.addtips(tip_ct);
 					return false;

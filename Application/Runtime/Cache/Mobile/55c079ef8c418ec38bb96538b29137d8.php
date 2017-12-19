@@ -58,17 +58,17 @@
 
 <!-- 最近举办 -->
 <div class="activity_lately">
-    <div class="activity_lately_tit clear" ng-show="lists[0].have=='1'">
+    <div class="activity_lately_tit clear" ng-show="lists[0].have=='1'" ng-cloak>
         <div class="activity_tit_icon fl" style="background: url(<?php echo (MOBILE); ?>/images/icon-activity-previous.png);"></div>
         <span class="activity_lately_span fl">最近举办</span>
     </div>
 
     <div ng-repeat="list in lists" ng-hide="list.status=='0'">
-        <a href="/index.php/Mobile/Activity/detail" >
+        <a href="/index.php/Mobile/Activity/detail.html" >
             <div class="activity_main">
-                <img class="activity_main_img" ng-src="{{list.cover_url}}" alt="">
+                <img class="activity_main_img" ng-cloak ng-src="{{list.cover_url}}" alt="">
                 <div class="activity_main_time clear">
-                    <p class="fl">{{list.plan_end_time}}</p>
+                    <p class="fl" ng-cloak>{{list.plan_end_time}}</p>
                     <p class="fr">了解详情<img src="<?php echo (MOBILE); ?>/images/icon-right.png" alt=""></p>
                 </div>
             </div>
@@ -85,22 +85,24 @@
     </div>
 
     <div ng-repeat="list in lists" ng-hide="list.status=='1'">
-        <div class="activity_lately_section clear">
-            <div class="activity_section_left fl">
-                <img class="activity_logo" ng-src="{{list.sponsor_logo_url}}" alt="">
+        <a href="/index.php/Mobile/Activity/detail.html" >
+            <div class="activity_lately_section clear">
+                <div class="activity_section_left fl">
+                    <img class="activity_logo" ng-src="{{list.sponsor_logo_url}}" alt="">
+                </div>
+                <div class="activity_section_right fr">
+                    <p class="activity_right_tit">{{list.title}}</p>
+                    <p class="activity_right_p">
+                        <span class="activity_right_span">{{list.diqu}}</span>
+                        <span>{{list.formal_start_time}}</span>
+                    </p>
+                    <p  class="activity_right_p">
+                        浏览<span class="activity_right_span"> {{list.clicks}}</span>
+                        收藏<span> {{list.shoucang}}</span>
+                    </p>
+                </div>
             </div>
-            <div class="activity_section_right fr">
-                <p class="activity_right_tit">{{list.title}}</p>
-                <p class="activity_right_p">
-                    <span class="activity_right_span">{{list.diqu}}</span>
-                    <span>{{list.formal_start_time}}</span>
-                </p>
-                <p  class="activity_right_p">
-                    浏览<span class="activity_right_span"> {{list.clicks}}</span>
-                    收藏<span> {{list.shoucang}}</span>
-                </p>
-            </div>
-        </div>
+        </a>
     </div>
 </div>
 

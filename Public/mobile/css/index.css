@@ -118,7 +118,11 @@
 }
 .sec_industry,.sec_scan{
 	font-size: 24px;
-	color: #999;
+	color: #999;	
+}
+.index_icon{
+	margin-top:4px;
+	margin-right: 10px;
 }
 .sec_scan{
 	margin: 20px 0 44px;

@@ -121,8 +121,7 @@
             $("#title").val()!="" && $("#content").val()!="" && count>0 
             && $("input[name='price']:checked").val()!=undefined && $("#choose_html").html()!="请选择" 
             && $("#company").val()!="" && $("#business").val()!="" && $("#people").val()!="" && $("#phone").val()!=""
-        ){
-                alert("全部选中");        
+        ){         
                 // 获取技术领域选中状态
                 var li = $(".areas_main li");
                 var lingyu_html;
