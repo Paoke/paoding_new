@@ -146,6 +146,7 @@
 				goTime();
 				$http({
 				    method: 'POST',
+					data:{mobile:mobile},
 				    url: '/api.php/Sms/sendMessage',
 					headers: { 'Content-Type': 'application/x-www-form-urlencoded' },    
 		            transformRequest: function(obj) {    

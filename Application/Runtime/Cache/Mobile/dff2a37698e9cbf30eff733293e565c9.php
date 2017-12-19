@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
-<html lang="en">
+<html lang="en" ng-app="binding">
 <head>
     <meta charset="UTF-8">
     <title>关联手机号</title>
@@ -9,25 +9,132 @@
     <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/common_new.css">
     <link rel="stylesheet" href="<?php echo (MOBILE); ?>/css/my.css">
 </head>
-<body>
-<input type="hidden" id="user_id" name="user_id" value="<?php echo ($user_id); ?>"/>
-<div class="user_header">
-    <div class="user_cicle">
-        <img src="<?php echo ($head_pic); ?>" alt="">
+<body ng-controller="myReg">
+<form id="formID">
+    <input type="hidden" id="userId" name="userId" value="<?php echo ($user_id); ?>"/>
+    <div class="user_header">
+        <div class="user_cicle">
+            <img src="<?php echo ($head_pic); ?>" alt="">
+        </div>
+        <p class="user_name"><?php echo ($nickname); ?></p>
     </div>
-    <p class="user_name"><?php echo ($nickname); ?></p>
-</div>
-<div class="apply_identifying">
-    <input class="new_name" type="number" placeholder="输入手机号码" id="phone1" oninput="if(this.value>4){this.value=this.value.substr(0,11)};;">
-    <input type='button' class="get_indentify" value='点击获取验证码'>
-    <input class="new_name" type="number" placeholder="输入验证码" id="phone2" oninput="if(this.value>4){this.value=this.value.substr(0,4)};">
-    <input class="new_name" type="password" placeholder="密码不少于6位" id="phone3">
-</div>
-<a class="change_name_save" href="" style="margin:108px auto 0;">完成</a>
+    <div class="apply_identifying">
+        <input class="new_name" type="number" placeholder="输入手机号码" id="bindMob" name="bindMob" oninput="if(this.value>4){this.value=this.value.substr(0,11)};;">
+        <input type='button' class="get_indentify" value='点击获取验证码'>
+        <input class="new_name" type="number" placeholder="输入验证码" id="bindMobCode" name="bindMobCode" oninput="if(this.value>4){this.value=this.value.substr(0,4)};">
+        <input class="new_name" type="password" placeholder="密码不少于6位" id="paswd" name="paswd">
+    </div>
+    <a class="change_name_save" href="" style="margin:108px auto 0;">完成</a>
+</form>
 </body>
 <script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
+<script src='<?php echo (MOBILE); ?>/js/angular.min.js'></script>
 <script src='<?php echo (MOBILE); ?>/js/common.js'></script>
 <script>
+
+    var countdown=60;
+    var mobile,code,password;
+    var tip = {
+        tip_ct:"",
+    };
+    var tips = {
+        addtips:function(tip_ct,next){
+            var tipNode = '<div class="tipCommon" style="display:block">'+tip_ct+'</div>';
+            $('body').append(tipNode);
+            setTimeout(function(){
+                $(".tipCommon").remove();
+                if(next){
+                    window.location.href=next;
+                }
+
+            },1500);
+
+        }
+    }
+
+    var app = angular.module('binding', []);
+    app.controller('myReg', function($scope,$http) {
+
+        //提交信息
+        $(".change_name_save").on("click",function(){
+            var regPsw = /^.{6,}$/;
+            // 注册信息提交接口
+            var data = {};
+            var t = $('#formID').serializeArray();
+            $.each(t, function () {
+                data[this.name] = this.value;
+            });
+
+            if( data['bindMob']=="" || data['bindMobCode']=="" || data['paswd']==""){
+                tip_ct = "请完善信息再注册";
+                tips.addtips(tip_ct);
+                return false;
+            }else if(!regPsw.test(data['paswd'])){
+                tip_ct = "密码不少于6位数";
+                tips.addtips(tip_ct);
+                return false;
+            }else{
+                // 注册信息提交接口
+                $http({
+                    method: 'POST',
+                    data:data,
+                    url: '/api.php/User/Modify',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    transformRequest: function(obj) {
+                        var str = [];
+                        for (var p in obj) {
+                            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                        }
+                        return str.join("&");
+                    }
+                }).then(function successCallback(response) {
+                    if(response.data.result==1){
+                        tip_ct =response.data.msg ;
+                        tips.addtips(tip_ct);
+                        window.location.href='/index.php/Mobile/Index/index';
+                    }else{
+                        tip_ct =response.data.msg ;
+                        tips.addtips(tip_ct);
+                    }
+                }, function errorCallback(response) {
+
+                });
+            }
+        });
+
+
+        //发送验证码
+        $('.get_indentify').on('click',function(){
+            var regTel = /^[1][3,4,5,7,8][0-9]{9}$/;
+            mobile = $('#bindMob').val();
+            if(!regTel.test(mobile)){
+                tip_ct = "请输入正确的手机号码";
+                tips.addtips(tip_ct,'/index.php/Mobile/Index/index');
+                return false;
+            }else{
+                goTime();
+                $http({
+                    method: 'POST',
+                    url: '/api.php/Sms/sendMessage',
+                    data:{mobile:mobile},
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    transformRequest: function(obj) {
+                        var str = [];
+                        for (var p in obj) {
+                            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                        }
+                        return str.join("&");
+                    }
+                }).then(function successCallback(response) {
+                    console.log(response);
+                }, function errorCallback(response) {
+
+                });
+            }
+
+        })
+    });
+
     // 判断输入内容不为空时按钮状态改变
     $(".new_name").keyup(function(){
         if($("#phone1").val()!="" && $("#phone2").val()!="" && $("#phone3").val()!=""){
@@ -55,9 +162,6 @@
         }
     }
 
-    $('.get_indentify').on('click',function(){
-        goTime();
-    })
 
 </script>
 </html>

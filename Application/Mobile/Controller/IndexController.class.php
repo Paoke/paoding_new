@@ -29,10 +29,7 @@ class IndexController extends BaseController
                 }
             }
         }
-//        $this->assign('user_id',$_SESSION["userArr"]['user_id']);
-//        $this->assign('nickname',$_SESSION["userArr"]['nickname']);
-//        $this->assign('head_pic',$_SESSION["userArr"]['head_pic']);
-       //$this->display('/User/binding');
+
         $this->display();
     }
 
