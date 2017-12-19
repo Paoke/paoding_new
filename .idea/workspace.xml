@@ -15,17 +15,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Mobile/Controller/IndexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="32" column="8" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+            <state relative-caret-position="359">
+              <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="binding.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="binding.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/binding.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="621">
@@ -62,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Register/register.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="483">
-              <caret line="130" column="19" lean-forward="true" selection-start-line="113" selection-start-column="15" selection-end-line="130" selection-end-column="19" />
+              <caret line="130" column="19" lean-forward="false" selection-start-line="113" selection-start-column="15" selection-end-line="130" selection-end-column="19" />
               <folding>
                 <marker date="1513669223353" expanded="true" signature="2297:2310" ph="..." />
               </folding>
@@ -168,8 +168,8 @@
         <option value="$PROJECT_DIR$/Application/Api/Controller/PaodingController.class.php" />
         <option value="$PROJECT_DIR$/Application/Api/Controller/UserController.class.php" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/Register/register.html" />
-        <option value="$PROJECT_DIR$/Application/Mobile/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/User/binding.html" />
+        <option value="$PROJECT_DIR$/Application/Mobile/Controller/IndexController.class.php" />
       </list>
     </option>
   </component>
@@ -494,12 +494,12 @@
       <workItem from="1513214791423" duration="26486000" />
       <workItem from="1513301448120" duration="8011000" />
       <workItem from="1513560632992" duration="17116000" />
-      <workItem from="1513647077222" duration="8734000" />
+      <workItem from="1513647077222" duration="9582000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="257661000" />
+    <option name="totallyTimeSpent" value="258509000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -831,11 +831,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
           <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#p#1;n#div#4;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#5;n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#1;n#div#8;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -901,7 +897,7 @@
     <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Register/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
-          <caret line="130" column="19" lean-forward="true" selection-start-line="113" selection-start-column="15" selection-end-line="130" selection-end-column="19" />
+          <caret line="130" column="19" lean-forward="false" selection-start-line="113" selection-start-column="15" selection-end-line="130" selection-end-column="19" />
           <folding>
             <marker date="1513669223353" expanded="true" signature="2297:2310" ph="..." />
           </folding>
@@ -924,14 +920,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Mobile/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="32" column="8" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/binding.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
@@ -940,6 +928,14 @@
             <element signature="n#style#0;n#a#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <marker date="1513671571697" expanded="true" signature="1855:1868" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Mobile/Controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="23" column="27" lean-forward="false" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
