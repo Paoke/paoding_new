@@ -162,7 +162,7 @@
     });
 
     var page = "";//页码
-    var info = "";
+    var info = "";//搜索判断有无数据
     var page_total = "";//总页数
     var data = {
         "page": "1",

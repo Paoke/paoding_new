@@ -91,7 +91,10 @@
 <script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
 <script src='<?php echo (MOBILE); ?>/js/angular.min.js'></script>
 <script>
-
+    $(".getConWay").on("click",function(){
+        $(this).hide();
+        $(".getTelphoto").show();
+    })
 
     function GetQueryString(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
