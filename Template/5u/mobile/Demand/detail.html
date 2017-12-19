@@ -15,24 +15,24 @@
 <div class="main">
     <div class="section">
         <p class="sec_title clear">
-            <span class="callForBids fl">【{{detail.hzxs}}】</span>
-            <span class="materials fl">{{detail.title}}</span>
+            <span class="callForBids fl" ng-cloak>【{{detail.hzxs}}】</span>
+            <span class="materials fl" ng-cloak>{{detail.title}}</span>
         </p>
 
         <div class="sec_data clear">
             <div class="sec_data_left fl">
                 <div>
-                    <p class="sec_data_num">需求编号:{{detail.id}}</p>
+                    <p class="sec_data_num" ng-cloak>需求编号:{{detail.id}}</p>
                     <img src="{$Think.MOBILE}/images/icon-search-type.png" alt="">
-                    <span class="sec_data_span">{{detail.cat_name}}</span>
-                    <img src="{$Think.MOBILE}/images/icon-search-time.png" alt="">
-                    <span class="sec_data_span">{{detail.yfzq}}</span>
+                    <span ng-cloak class="sec_data_span">{{detail.cat_name}}</span>
+                    <img ng-cloak src="{$Think.MOBILE}/images/icon-search-time.png" alt="">
+                    <span ng-cloak class="sec_data_span">{{detail.yfzq}}</span>
                     <img src="{$Think.MOBILE}/images/icon-search-scan.png" alt="">
-                    <span class="sec_data_span">{{detail.clicks}}</span>
+                    <span ng-cloak class="sec_data_span">{{detail.clicks}}</span>
                 </div>
                 <p class="sec_data_p">
-                    发布时间: <span class="sec_data_span">{{detail.create_time}}</span>
-                    投入预算：<span>{{detail.yfys}}</span>
+                    发布时间: <span class="sec_data_span" ng-cloak>{{detail.create_time}}</span>
+                    投入预算：<span ng-cloak>{{detail.yfys}}</span>
                 </p>
             </div>
             <img class="fr" src="{$Think.MOBILE}/images/icon-research.png" alt="">
@@ -52,21 +52,21 @@
 <div class="getTelphoto" style="display:none">
     <div class="apply_content_box chose clear">
         <span class='apply_word fl'>联系人</span>
-        <input class='apply_means fr' type="text" ng-value="detail.lxrxm" readonly="readonly">
+        <input class='apply_means fr' type="text" ng-value="detail.lxrxm" readonly="readonly" ng-cloak>
     </div>
     <div class="apply_content_box chose clear">
         <span class='apply_word fl'>手机号</span>
-        <input class='apply_means fr' type="text" ng-value="detail.dhhm" readonly="readonly">
+        <input class='apply_means fr' type="text" ng-value="detail.dhhm" readonly="readonly" ng-cloak>
     </div>
     <div class="apply_content_box chose clear">
         <span class='apply_word fl'>邮箱</span>
         <input class='apply_means fr' type="text" ng-value="
-        detail.dzyx" readonly="readonly">
+        detail.dzyx" readonly="readonly" ng-cloak>
     </div>
     <div class="apply_content_box chose clear">
         <span class='apply_word fl'>企业名称</span>
         <input class='apply_means fr' type="text" ng-value="
-       detail.gsm" readonly="readonly">
+       detail.gsm" readonly="readonly" ng-cloak>
     </div>
 </div>
 <div class="index_div"></div>

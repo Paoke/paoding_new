@@ -17,27 +17,29 @@
 </div>
 <div class="index_div"></div>
 <div class="computer_wrap" ng-repeat="tecList in tecLists">
-    <div class="main_section clear">
-        <div class="fl main_section_left">
-            <img ng-src="{{tecList.cover_url}}" alt="">
-            <p class="transfer" ng-cloak>{{tecList.hzxs}}</p>
-        </div>
-        <div class="fr main_section_right">
-            <p class="sec_tit" ng-cloak>{{tecList.title}}</p>
-            <p>
-                <img src="<?php echo (MOBILE); ?>/images/icon-index-industry.png" alt="">
-                <span class="sec_industry" ng-cloak>{{tecList.yyxy}}</span>
-            </p>
-            <p class="p_scan">
-                <img src="<?php echo (MOBILE); ?>/images/icon-index-browse.png" alt="">
-                <span class="sec_scan" ng-cloak>{{tecList.clicks}}</span>
-            </p>
-            <div class="adhi_print">
-                <span class="adhibition" ng-cloak>{{tecList.cat_name}}</span>
-                <span class="print" ng-cloak>{{tecList.csd}}</span>
+    <a href="/index.php/Mobile/Index/detail_tec.html?data_id={{tecList.id}}">
+        <div class="main_section clear">
+            <div class="fl main_section_left">
+                <img ng-src="{{tecList.cover_url}}" alt="">
+                <p class="transfer" ng-cloak>{{tecList.hzxs}}</p>
+            </div>
+            <div class="fr main_section_right">
+                <p class="sec_tit" ng-cloak>{{tecList.title}}</p>
+                <p>
+                    <img src="<?php echo (MOBILE); ?>/images/icon-index-industry.png" alt="">
+                    <span class="sec_industry" ng-cloak>{{tecList.yyxy}}</span>
+                </p>
+                <p class="p_scan">
+                    <img src="<?php echo (MOBILE); ?>/images/icon-index-browse.png" alt="">
+                    <span class="sec_scan" ng-cloak>{{tecList.clicks}}</span>
+                </p>
+                <div class="adhi_print">
+                    <span class="adhibition" ng-cloak>{{tecList.cat_name}}</span>
+                    <span class="print" ng-cloak>{{tecList.csd}}</span>
+                </div>
             </div>
         </div>
-    </div>
+    </a>
 </div>
 
 <p class="advert">

@@ -109,9 +109,9 @@
             </div>
             <div class="fr main_section_right">
                 <p class="sec_tit" ng-cloak>{{tecList.title}}</p>
-                <p>
-                    <img src="<?php echo (MOBILE); ?>/images/icon-index-industry.png" alt="">
-                    <span class="sec_industry" ng-cloak>{{tecList.yyxy}}</span>
+                <p class="clear">
+                    <img class="fl index_icon" src="<?php echo (MOBILE); ?>/images/icon-index-industry.png" alt="">
+                    <span class="fl sec_industry" ng-cloak>{{tecList.yyxy}}</span>
                 </p>
                 <p class="p_scan">
                     <img src="<?php echo (MOBILE); ?>/images/icon-index-browse.png" alt="">
@@ -249,10 +249,6 @@
     </div>
 </div>
 
-
-
-
-
 <!--  申请认证-->
 <div class="apply_div">
     <p class="apply_div_p">申请认证，技术/需求优先发布</p>
@@ -295,14 +291,9 @@
     var mySwiper = new Swiper('#swiper-container1', {
         pagination : '.swiper-pagination',
         paginationClickable :true,
-        // loop:true,
+        autoplay:2000,
         observer:true,//修改swiper自己或子元素时，自动初始化swiper
-        observeParents:true,//修改swiper的父元素时，自动初始化swiper
-        // onSlideChangeEnd: function(swiper){
-        // 　　　swiper.update();
-        // 　　　mySwiper.startAutoplay();
-        // 　　   mySwiper.reLoop();
-        // }
+        observeParents:true//修改swiper的父元素时，自动初始化swiper
     });
     var mySwiper2 = new Swiper('#swiper-container2', {
         paginationClickable :true,
@@ -399,7 +390,7 @@
     app.controller("advancedCtrl",function ($scope,$http){
         var data = {
             page:1,
-            page_num:2,
+            page_num:4,
             order_field:'create_time',
             category_id:0,
             tag_id:0,
