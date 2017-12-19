@@ -72,7 +72,7 @@
                         <div class="hot_secCt2 clear">
                             <p class="fl">
                                 <span class="point"></span>
-                                <span class="sec_world" ng-cloak>{{list.miaoshu}}</span>
+                                <span class="sec_world" ng-cloak>{{list.yyxy}}</span>
                             </p>
                           <!--  <p class="fl" style="margin-left: 30px;">
                                 <span class="point"></span>
