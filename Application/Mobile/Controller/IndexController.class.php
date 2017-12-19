@@ -21,7 +21,7 @@ class IndexController extends BaseController
 //            M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}")->setField('log_number',$log_number);
             if($_SESSION["userArr"]['user_id']){
                 $mobile=M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}")->field('mobile')->find();
-                if(!$mobile){
+                if(!$mobile['mobile']){
                     $this->assign('user_id',$_SESSION["userArr"]['user_id']);
                     $this->assign('nickname',$_SESSION["userArr"]['nickname']);
                     $this->assign('head_pic',$_SESSION["userArr"]['head_pic']);
@@ -30,7 +30,6 @@ class IndexController extends BaseController
                 }
             }
         }
-
         $this->display();
     }
 
