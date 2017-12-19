@@ -13,7 +13,7 @@
 <div class="mask" style="display:none"></div>
 
 <div class="banner">
-    <img ng-cloak ng-src="{{lists.cover_url}}" alt="">
+    <img ng-cloak ng-src="{{lists.lbxt}}" alt="">
 </div>
 
 <div class="share clear">
@@ -134,7 +134,7 @@
 </p>
 
 <div class="sec_return">
-    <a onclick="javascript:history.go(-1);">
+    <a onclick="goBack();">
         <img class="return_icon" src="{$Think.MOBILE}/images/icon-common-return.png" alt="">
     </a>
     <p class="collect" id="collect">收藏</p>
@@ -144,6 +144,8 @@
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script>
+
+    var referrer = document.referrer;
     function GetQueryString(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
         var r = window.location.search.substr(1).match(reg);
@@ -233,6 +235,10 @@
              }
          });
      });
+
+    function goBack(){
+        window.location.href=referrer;
+    }
 
 
 

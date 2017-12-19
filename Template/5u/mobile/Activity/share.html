@@ -11,7 +11,7 @@
 </head>
 <body ng-controller="shareCtrl">
 <div class="theme_banner">
-    <img class="theme_img" src="{$Think.MOBILE}/images/theme-banner.jpg" alt="">
+    <img class="theme_img" src="{$Think.MOBILE}/images/actibity-joint.jpg" alt="">
 </div>
 <!-- tab切换 -->
 <div class="clear theme_title">
@@ -31,9 +31,9 @@
     <div class="theme_main">
         <div class="clear">
             <div class="fl lump"></div>
-            <span class="fl theme_tit">科技沙龙介绍</span>
+            <span class="fl theme_tit">供需对接会介绍</span>
         </div>
-        <p class="theme_ct">科技沙龙是庖丁科技众包平台长期举行的固定活动。与行业协会联手合作，每期针对行业技术痛点，选定一个主题，邀请3-5家科技企业进行分享，并邀请需求企业如制造业企业等参与交流提出问题。沙龙主要面向需求企业、投资机构等，帮助科技企业推广前沿技术，凸显技术应用先进性，扩大市场知名度；帮忙需求企业启发技术升级方向，了解前沿技术发展情况。</p>
+        <p class="theme_ct">线下对接会是庖丁与科研机构、高校及政府合作，通过前期调研、对接等多种方式，找到产业升级难题与案例，在前期对接案例顺利的基础上，让技术团队与需求企业进行线下对接活动，与此同事，再开放邀请筛选潜在需求企业，为技术团队提供更多机会。每次对接会只针对同个行业同个产业，分地域集群，实现精准对接。</p>
     </div>
     <div class="index_div"></div>
 
@@ -46,17 +46,17 @@
         <div ng-repeat="list in lists">
             <div class="activity_lately_section clear">
                 <div class="activity_section_left fl">
-                    <img class="activity_logo" ng-src="{{list.sponsor_logo_url}}" alt="">
+                    <img ng-cloak class="activity_logo" ng-src="{{list.sponsor_logo_url}}" alt="">
                 </div>
                 <div class="activity_section_right fr">
-                    <p class="activity_right_tit">{{list.title}}</p>
-                    <p class="activity_right_p">
-                        <span class="activity_right_span">{{list.diqu}}</span>
-                        <span>{{list.formal_start_time}}</span>
+                    <p class="activity_right_tit" ng-cloak>{{list.title}}</p>
+                    <p class="activity_right_p" ng-cloak>
+                        <span class="activity_right_span" ng-cloak >{{list.diqu}}</span>
+                        <span ng-cloak>{{list.formal_start_time}}</span>
                     </p>
                     <p  class="activity_right_p">
-                        浏览<span class="activity_right_span"> {{list.yuedu}}</span>
-                        收藏<span> {{list.shoucang}}</span>
+                        浏览<span ng-cloak class="activity_right_span">{{list.clicks}}</span>
+                        收藏<span ng-cloak>{{list.shoucang}}</span>
                     </p>
                 </div>
             </div>
@@ -68,23 +68,78 @@
 <div class="theme_tab_content">
     <div class="theme_guest clear">
         <div class="theme_head fl">
-            <img src="{$Think.MOBILE}/images/activity-guest.jpg" alt="">
+            <img src="{$Think.MOBILE}/images/joint1.png" alt="">
         </div>
         <div class="guset_introduce fl">
-            <p class="guest_name">张全琪</p>
-            <p class="guest_university">中山大学卡内基梅隆大学</p>
-            <p class="guest_position">国际联合研究会(JRI)副研究员</p>
+            <p class="guest_name">张  霞</p>
+            <p class="guest_university">海汇投资</p>
+            <p class="guest_position">投资总监</p>
         </div>
     </div>
 
     <div class="theme_guest clear">
         <div class="theme_head fl">
-            <img src="{$Think.MOBILE}/images/activity-guest.jpg" alt="">
+            <img src="{$Think.MOBILE}/images/joint2.png" alt="">
         </div>
         <div class="guset_introduce fl">
-            <p class="guest_name">张全琪</p>
-            <p class="guest_university">中山大学卡内基梅隆大学</p>
-            <p class="guest_position">国际联合研究会(JRI)副研究员</p>
+            <p class="guest_name">舒小武</p>
+            <p class="guest_university">达晨创投业务合伙人</p>
+            <!-- <p class="guest_position">国际联合研究会(JRI)副研究员</p> -->
+        </div>
+    </div>
+
+    <div class="theme_guest clear">
+        <div class="theme_head fl">
+            <img src="{$Think.MOBILE}/images/joint3.png" alt="">
+        </div>
+        <div class="guset_introduce fl">
+            <p class="guest_name">郭守彬 </p>
+            <p class="guest_university">广州天赐研究院副院长兼总经理助理</p>
+            <!-- <p class="guest_position">国际联合研究会(JRI)副研究员</p> -->
+        </div>
+    </div>
+
+    <div class="theme_guest clear">
+        <div class="theme_head fl">
+            <img src="{$Think.MOBILE}/images/joint4.png" alt="">
+        </div>
+        <div class="guset_introduce fl">
+            <p class="guest_name">慕家骁</p>
+            <p class="guest_university">中国电信广东研究院项目主管、高级工程师</p>
+            <!-- <p class="guest_position">国际联合研究会(JRI)副研究员</p> -->
+        </div>
+    </div>
+
+    <div class="theme_guest clear">
+        <div class="theme_head fl">
+            <img src="{$Think.MOBILE}/images/joint5.png" alt="">
+        </div>
+        <div class="guset_introduce fl">
+            <p class="guest_name">陈亚伟</p>
+            <p class="guest_university">广州三的模型设计有限公司副总经理</p>
+            <!-- <p class="guest_position">国际联合研究会(JRI)副研究员</p> -->
+        </div>
+    </div>
+
+    <div class="theme_guest clear">
+        <div class="theme_head fl">
+            <img src="{$Think.MOBILE}/images/joint6.png" alt="">
+        </div>
+        <div class="guset_introduce fl">
+            <p class="guest_name">邓俊文</p>
+            <p class="guest_university">ORFIN隆发进出口贸易有限公司总经理</p>
+            <!-- <p class="guest_position">国际联合研究会(JRI)副研究员</p> -->
+        </div>
+    </div>
+
+    <div class="theme_guest clear">
+        <div class="theme_head fl">
+            <img src="{$Think.MOBILE}/images/joint7.png" alt="">
+        </div>
+        <div class="guset_introduce fl">
+            <p class="guest_name">凌宇辉</p>
+            <p class="guest_university">广州市小盒信息科技有限公司总经理</p>
+            <!-- <p class="guest_position">国际联合研究会(JRI)副研究员</p> -->
         </div>
     </div>
 </div>

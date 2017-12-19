@@ -472,8 +472,9 @@
 	height: 204px;
 	position: relative;
 }
-.hot_section_left_left img{
-	width: 100%;
+.hot_img{
+	width: 272px;
+	/*height: 204px;*/
 }
 .transfer{
 	position: absolute;

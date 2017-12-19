@@ -12,20 +12,6 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/swiper.css">
 </head>
 <body ng-controller="detailCtrl">
-<div class="mask"></div>
-<div class="alert">
-    <div class="sorry">
-        很抱歉，没有找到相关的结果。<br>
-        你可以委托庖丁众包
-        <p class="findDemand">找需求</p>
-    </div>
-
-    <div class="showTel">
-        <p>电话号码<span class="tel_email">020-34031992</span></p>
-        <p style="border:none">邮箱号<span class="tel_email">info@paoding.cc </span></p>
-    </div>
-    <div class="close">关闭</div>
-</div>
 <div class="main">
     <div class="section">
         <p class="sec_title clear">
@@ -56,8 +42,8 @@
 </div>
 
 <div class="apply_content_box chose clear">
-    <span class='apply_word fl'>发布者</span>
-    <input class='apply_means fr' type="text" value="柯大大" readonly="readonly">
+    <span class='apply_word fl'>合作方式</span>
+    <input class='apply_means fr' type="text" ng-value="{{detail.hzfs}}" readonly="readonly">
 </div>
 
 <!-- 获取联系方式 -->
@@ -66,21 +52,21 @@
 <div class="getTelphoto" style="display:none">
     <div class="apply_content_box chose clear">
         <span class='apply_word fl'>联系人</span>
-        <input class='apply_means fr' type="text" value="张杰辉" readonly="readonly">
+        <input class='apply_means fr' type="text" ng-value="{{detail.lxrxm}}" readonly="readonly">
     </div>
     <div class="apply_content_box chose clear">
         <span class='apply_word fl'>手机号</span>
-        <input class='apply_means fr' type="text" value="12345645623" readonly="readonly">
+        <input class='apply_means fr' type="text" ng-value="{{detail.dhhm}}" readonly="readonly">
     </div>
     <div class="apply_content_box chose clear">
         <span class='apply_word fl'>邮箱</span>
-        <input class='apply_means fr' type="text" value="
-        3253@qq.com" readonly="readonly">
+        <input class='apply_means fr' type="text" ng-value="
+        {{detail.dzyx}}" readonly="readonly">
     </div>
     <div class="apply_content_box chose clear">
         <span class='apply_word fl'>企业名称</span>
-        <input class='apply_means fr' type="text" value="
-       庖丁技术开发" readonly="readonly">
+        <input class='apply_means fr' type="text" ng-value="
+       {{detail.gsm}}" readonly="readonly">
     </div>
 </div>
 <div class="index_div"></div>
@@ -91,9 +77,6 @@
         需求讲述
     </div>
     <p ng-bind-html="detail.content|trustHtml"></p>
-    <div class="demand_photo">
-        <img src="{$Think.MOBILE}/images/demand-image.jpg" alt="">
-    </div>
 </div>
 <p class="advert">
     庖丁众包·专业科技服务平台
@@ -109,20 +92,6 @@
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script>
 
-    $(".findDemand").on("click",function(){
-        $(".sorry").hide();
-        $(".showTel").show();
-    });
-    // 关闭弹出框
-    $(".close").on("click",function(){
-        $(".mask").hide();
-        $(".alert").hide();
-    });
-
-    $(".getConWay").on("click",function(){
-        $(this).hide();
-        $(".getTelphoto").show();
-    })
 
     function GetQueryString(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");

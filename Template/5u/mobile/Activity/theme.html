@@ -11,7 +11,7 @@
 </head>
 <body ng-controller="shareCtrl">
 <div class="theme_banner">
-    <img class="theme_img" src="{$Think.MOBILE}/images/theme-banner.jpg" alt="">
+    <img class="theme_img" src="{$Think.MOBILE}/images/activity-forum.jpg" alt="">
 </div>
 <!-- tab切换 -->
 <div class="clear theme_title">
@@ -46,17 +46,17 @@
         <div ng-repeat="list in lists">
             <div class="activity_lately_section clear">
                 <div class="activity_section_left fl">
-                    <img class="activity_logo" ng-src="{{list.sponsor_logo_url}}" alt="">
+                    <img ng-cloak class="activity_logo" ng-src="{{list.sponsor_logo_url}}" alt="">
                 </div>
                 <div class="activity_section_right fr">
-                    <p class="activity_right_tit">{{list.title}}</p>
+                    <p class="activity_right_tit" ng-cloak>{{list.title}}</p>
                     <p class="activity_right_p">
-                        <span class="activity_right_span">{{list.diqu}}</span>
-                        <span>{{list.formal_start_time}}</span>
+                        <span class="activity_right_span" ng-cloak>{{list.diqu}}</span>
+                        <span ng-cloak>{{list.formal_start_time}}</span>
                     </p>
                     <p  class="activity_right_p">
-                        浏览<span class="activity_right_span"> {{list.yuedu}}</span>
-                        收藏<span> {{list.shoucang}}</span>
+                        浏览<span class="activity_right_span" ng-cloak> {{list.clicks}}</span>
+                        收藏<span ng-cloak> {{list.shoucang}}</span>
                     </p>
                 </div>
             </div>
@@ -68,23 +68,94 @@
 <div class="theme_tab_content">
     <div class="theme_guest clear">
         <div class="theme_head fl">
-            <img src="{$Think.MOBILE}/images/activity-guest.jpg" alt="">
+            <img src="{$Think.MOBILE}/images/forum1.png" alt="">
         </div>
         <div class="guset_introduce fl">
-            <p class="guest_name">张全琪</p>
-            <p class="guest_university">中山大学卡内基梅隆大学</p>
-            <p class="guest_position">国际联合研究会(JRI)副研究员</p>
+            <p class="guest_name">郭孔快</p>
+            <p class="guest_university">广州速威智能系统科技有限公司总经理</p>
+            <!-- <p class="guest_position">国际联合研究会(JRI)副研究员</p> -->
         </div>
     </div>
 
     <div class="theme_guest clear">
         <div class="theme_head fl">
-            <img src="{$Think.MOBILE}/images/activity-guest.jpg" alt="">
+            <img src="{$Think.MOBILE}/images/forum2.png" alt="">
         </div>
         <div class="guset_introduce fl">
-            <p class="guest_name">张全琪</p>
-            <p class="guest_university">中山大学卡内基梅隆大学</p>
-            <p class="guest_position">国际联合研究会(JRI)副研究员</p>
+            <p class="guest_name">童格明</p>
+            <p class="guest_university">深圳动进智能科技有限公司总经理</p>
+            <!-- <p class="guest_position">国际联合研究会(JRI)副研究员</p> -->
+        </div>
+    </div>
+
+    <div class="theme_guest clear">
+        <div class="theme_head fl">
+            <img src="{$Think.MOBILE}/images/forum3.png" alt="">
+        </div>
+        <div class="guset_introduce fl">
+            <p class="guest_name">王兆广</p>
+            <p class="guest_university">灵踪科技（深圳）有限公司创始人</p>
+            <!-- <p class="guest_position">国际联合研究会(JRI)副研究员</p> -->
+        </div>
+    </div>
+    <div class="theme_guest clear">
+        <div class="theme_head fl">
+            <img src="{$Think.MOBILE}/images/forum4.png" alt="">
+        </div>
+        <div class="guset_introduce fl">
+            <p class="guest_name">王悦翔</p>
+            <p class="guest_university">马路创新科技技术合伙人</p>
+            <!-- <p class="guest_position">国际联合研究会(JRI)副研究员</p> -->
+        </div>
+    </div>
+    <div class="theme_guest clear">
+        <div class="theme_head fl">
+            <img src="{$Think.MOBILE}/images/forum5.png" alt="">
+        </div>
+        <div class="guset_introduce fl">
+            <p class="guest_name">杨红宇</p>
+            <p class="guest_university">广州珐玛珈智能设备股份有限公司董事会董事、副总经理</p>
+            <!-- <p class="guest_position">国际联合研究会(JRI)副研究员</p> -->
+        </div>
+    </div>
+    <div class="theme_guest clear">
+        <div class="theme_head fl">
+            <img src="{$Think.MOBILE}/images/forum6.png" alt="">
+        </div>
+        <div class="guset_introduce fl">
+            <p class="guest_name">李  志</p>
+            <p class="guest_university">制造物联网技术国家地方联合工程实验室副主任</p>
+            <!-- <p class="guest_position">国际联合研究会(JRI)副研究员</p> -->
+        </div>
+    </div>
+    <div class="theme_guest clear">
+        <div class="theme_head fl">
+            <img src="{$Think.MOBILE}/images/forum7.png" alt="">
+        </div>
+        <div class="guset_introduce fl">
+            <p class="guest_name">陈浩城</p>
+            <p class="guest_university">广州珐玛珈智能装备股份有限公司产品管理部经理</p>
+            <!-- <p class="guest_position">国际联合研究会(JRI)副研究员</p> -->
+        </div>
+    </div>
+    <div class="theme_guest clear">
+        <div class="theme_head fl">
+            <img src="{$Think.MOBILE}/images/forum8.png" alt="">
+        </div>
+        <div class="guset_introduce fl">
+            <p class="guest_name">闫  研</p>
+            <p class="guest_university">珠海丹德图像技术有限公司市场总监</p>
+            <!-- <p class="guest_position">国际联合研究会(JRI)副研究员</p> -->
+        </div>
+    </div>
+    <div class="theme_guest clear">
+        <div class="theme_head fl">
+            <img src="{$Think.MOBILE}/images/forum9.png" alt="">
+        </div>
+        <div class="guset_introduce fl">
+            <p class="guest_name">杜  威 </p>
+            <p class="guest_university">亮风台信息科技有限公司华南总监</p>
+            <!-- <p class="guest_position">国际联合研究会(JRI)副研究员</p> -->
         </div>
     </div>
 </div>

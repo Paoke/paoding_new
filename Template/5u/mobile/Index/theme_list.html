@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="theme_list">
 <head>
     <meta charset="UTF-8">
     <title>热门专题</title>
@@ -10,74 +10,55 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/index.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/swiper.css">
 </head>
-<body style="background:#f0f0f0;">
+<body style="background:#f0f0f0;" ng-controller="theme_listCtrl">
 <p class="follow_tip">关注庖丁众包，发现最前沿技术项目</p>
 
-<a href="__MODULE__/Index/theme_tec.html">
-    <div class="hot_section clear">
-    <div class="fl hot_section_left">
-        <img src="{$Think.MOBILE}/images/index-advanced-tech.jpg" alt="">
-        <p class="transfer">本周专题</p>
-    </div>
-    <div class="fr hot_section_right">
-        <p class="hot_topic">环保技术专题</p>
-        <p class="hot_ct">士大士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫夫</p>
-        <p class="hot_tec">
-            <img src="{$Think.MOBILE}/images/icon-index-item.png" alt="">
-            <span class="hot_tecs">68项技术</span>
-        </p>
+<div class="listDiv" ng-repeat="list in lists">
+    <a href="__MODULE__/Index/theme_tec.html?id={{list.id}}">
+        <div class="hot_section clear">
+            <div class="fl hot_section_left">
+                <img class="hot_img" ng-src="{{list.cover_url}}" alt="">
+                <p class="transfer">本周专题</p>
+            </div>
+            
+            <div class="fr hot_section_right">
+                <p class="hot_topic">{{list.title}}</p>
+                <p class="hot_ct" ng-cloak>{{list.miaoshu}}</p>
+                <p class="hot_tec">
+                    <img src="{$Think.MOBILE}/images/icon-index-item.png" alt="">
+                    <span class="hot_tecs">{{list.count}}项技术</span>
+                </p>
 
-        <div class="hot_tecs2 clear">
-            <p class="fl">
-                <span class="point"></span>
-                <span class="hot_world">激光清洗</span>
-            </p>
-            <p class="fl" style="margin-left: 30px;">
-                <span class="point"></span>
-                <span class="hot_world">抗菌清洁</span>
-            </p>
-            <p class="fl" style="margin-left: 30px;">
-                <span class="point"></span>
-                <span class="hot_world">清洁液膜</span>
-            </p>
+                <div class="hot_tecs2 clear">
+                    <p class="fl">
+                        <span class="point"></span>
+                        <span class="hot_world">{{list.yyhy}}</span>
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
+    </a>
 </div>
-</a>
-<div class="hot_section clear">
-    <div class="fl hot_section_left">
-        <img src="{$Think.MOBILE}/images/index-advanced-tech.jpg" alt="">
-        <p class="transfer">本周专题</p>
-    </div>
-    <div class="fr hot_section_right">
-        <p class="hot_topic">环保技术专题</p>
-        <p class="hot_ct">士大士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫夫</p>
-        <p class="hot_tec">
-            <img src="{$Think.MOBILE}/images/icon-index-item.png" alt="">
-            <span class="hot_tecs">68项技术</span>
-        </p>
 
-        <div class="hot_tecs2 clear">
-            <p class="fl">
-                <span class="point"></span>
-                <span class="hot_world">激光清洗</span>
-            </p>
-            <p class="fl" style="margin-left: 30px;">
-                <span class="point"></span>
-                <span class="hot_world">抗菌清洁</span>
-            </p>
-            <p class="fl" style="margin-left: 30px;">
-                <span class="point"></span>
-                <span class="hot_world">清洁液膜</span>
-            </p>
-        </div>
-    </div>
-</div>
 <p class="advert">
     庖丁众包·专业科技服务平台
 </p>
 
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script src='{$Think.MOBILE}/js/return.js'></script>
+<script>
+    var app = angular.module('theme_list',[]);
+    app.controller("theme_listCtrl",function ($scope,$http){
+        $http({
+            method:"GET",
+            url:"/api.php/Paoding/getIndex"
+        }).then(function successCallback(response) {          
+                $scope.lists = response.data.data;                             
+            }, function errorCallback(response) {
+            });
+
+    })
+</script>
 </html>

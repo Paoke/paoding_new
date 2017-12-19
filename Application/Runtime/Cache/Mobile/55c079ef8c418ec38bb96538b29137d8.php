@@ -96,7 +96,7 @@
                     <span>{{list.formal_start_time}}</span>
                 </p>
                 <p  class="activity_right_p">
-                    浏览<span class="activity_right_span"> {{list.yuedu}}</span>
+                    浏览<span class="activity_right_span"> {{list.clicks}}</span>
                     收藏<span> {{list.shoucang}}</span>
                 </p>
             </div>

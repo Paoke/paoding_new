@@ -12,6 +12,21 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/swiper.css">
 </head>
 <body ng-controller="tecListCtrl">
+
+<div class="mask" style="display:none"></div>
+<div class="alert" style="display:none">
+    <div class="sorry">
+        很抱歉，没有找到相关的结果。<br>
+        你可以委托庖丁众包
+        <p class="findDemand">找技术</p>
+    </div>
+
+    <div class="showTel">
+        <p>电话号码<span class="tel_email">020-34031992</span></p>
+        <p style="border:none">邮箱号<span class="tel_email">info@paoding.cc </span></p>
+    </div>
+    <div class="close">关闭</div>
+</div>
 <div class="demand_nav">
     <ul>
         <div class="swiper-container" style="overflow:visible">
@@ -93,6 +108,21 @@
 <script src="{$Think.MOBILE}/js/angular.min.js"></script>
 <script src="{$Think.MOBILE}/js/index-publishTec.js"></script>
 <script>
+    $(".findDemand").on("click",function(){
+        $(".sorry").hide();
+        $(".showTel").show();
+    });
+    // 关闭弹出框
+    $(".close").on("click",function(){
+        $(".mask").hide();
+        $(".alert").hide();
+    });
+
+    $(".getConWay").on("click",function(){
+        $(this).hide();
+        $(".getTelphoto").show();
+    })
+
     // 轮播
     var mySwiper = new Swiper(".swiper-container",{
         freeMode : true,
@@ -112,6 +142,7 @@
     });
 
     var page = "";//页码
+    var info = "";//搜索判断有无数据
     var page_total = "";//总页数
     var data = {
         "page": "1",
@@ -211,6 +242,10 @@
         data.page="1";
         data.search = $(".tech_search").val();      
         page_total=getListData(data,"html");
+        if(info == ""){
+            $(".mask").show();
+            $(".alert").show();
+        }
     })
 
     /**
