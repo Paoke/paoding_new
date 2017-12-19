@@ -927,6 +927,7 @@ html,body{
 	border: 6px solid #383f4a;
 	border-radius: 50%;
 	margin: 0 auto;
+	overflow: hidden;
 }
 .user_name{
 	font-size: 32px;
