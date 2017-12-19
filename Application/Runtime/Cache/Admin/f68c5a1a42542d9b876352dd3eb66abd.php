@@ -194,7 +194,7 @@
                                                         </a>
                                                     </li><?php endif; ?>   <!-- 上一页 end -->
                                                 <?php if($page < 5): ?><!-- 页码条 -->
-                                                    <?php $__FOR_START_4671__=1;$__FOR_END_4671__=$page+1;for($i=$__FOR_START_4671__;$i < $__FOR_END_4671__;$i+=1){ ?><!-- 循环四条以内 -->
+                                                    <?php $__FOR_START_4402__=1;$__FOR_END_4402__=$page+1;for($i=$__FOR_START_4402__;$i < $__FOR_END_4402__;$i+=1){ ?><!-- 循环四条以内 -->
                                                         <?php if($i == $page_now ): ?><li class="active"><a href=""><?php echo ($i); ?></a></li>
                                                             <?php elseif($i < $page_now ): ?>
                                                             <li>
@@ -205,7 +205,7 @@
                                                                 <a href="/index.php/Admin/Article/article/action/page_list/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/page_now/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>/category_id/<?php echo ($category_id); ?>/keyword/<?php echo ($keyword); ?>"><?php echo ($i); ?></a>
                                                             </li><?php endif; } ?>
                                                     <?php elseif($page_now < 3): ?>
-                                                    <?php $__FOR_START_9996__=1;$__FOR_END_9996__=6;for($i=$__FOR_START_9996__;$i < $__FOR_END_9996__;$i+=1){ ?><!-- 循环1-5 -->
+                                                    <?php $__FOR_START_16003__=1;$__FOR_END_16003__=6;for($i=$__FOR_START_16003__;$i < $__FOR_END_16003__;$i+=1){ ?><!-- 循环1-5 -->
 
                                                         <?php if($i == $page_now ): ?><li class="active"><a href=""><?php echo ($page_now); ?></a></li>
                                                             <?php elseif($i < $page_now ): ?>
@@ -217,7 +217,7 @@
                                                                 <a href="/index.php/Admin/Article/article/action/page_list/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/page_now/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>/category_id/<?php echo ($category_id); ?>/keyword/<?php echo ($keyword); ?>"><?php echo ($i); ?></a>
                                                             </li><?php endif; } ?>
                                                     <?php elseif($page_now == $page-1): ?>
-                                                    <?php $__FOR_START_30805__=$page_now-3;$__FOR_END_30805__=$page+1;for($i=$__FOR_START_30805__;$i < $__FOR_END_30805__;$i+=1){ ?><!-- 循环当前页为倒数第二页时 -->
+                                                    <?php $__FOR_START_14336__=$page_now-3;$__FOR_END_14336__=$page+1;for($i=$__FOR_START_14336__;$i < $__FOR_END_14336__;$i+=1){ ?><!-- 循环当前页为倒数第二页时 -->
                                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                                             <?php elseif($i < $page ): ?>
                                                             <li>
@@ -228,7 +228,7 @@
                                                                 <a href="/index.php/Admin/Article/article/action/page_list/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/page_now/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>/category_id/<?php echo ($category_id); ?>/keyword/<?php echo ($keyword); ?>"><?php echo ($i); ?></a>
                                                             </li><?php endif; } ?>
                                                     <?php elseif($page_now == $page): ?>
-                                                    <?php $__FOR_START_21098__=$page_now-4;$__FOR_END_21098__=$page+1;for($i=$__FOR_START_21098__;$i < $__FOR_END_21098__;$i+=1){ ?><!-- 循环当前页为最后一页时 -->
+                                                    <?php $__FOR_START_2105__=$page_now-4;$__FOR_END_2105__=$page+1;for($i=$__FOR_START_2105__;$i < $__FOR_END_2105__;$i+=1){ ?><!-- 循环当前页为最后一页时 -->
                                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                                             <?php elseif($i < $page ): ?>
                                                             <li>
@@ -239,7 +239,7 @@
                                                                 <a href="/index.php/Admin/Article/article/action/page_list/channel/<?php echo ($channel); ?>/type/<?php echo ($type); ?>/page_now/<?php echo ($i); ?>/page_num/<?php echo ($page_num); ?>/category_id/<?php echo ($category_id); ?>/keyword/<?php echo ($keyword); ?>"><?php echo ($i); ?></a>
                                                             </li><?php endif; } ?>
                                                     <?php else: ?>
-                                                    <?php $__FOR_START_4955__=$page_now-2;$__FOR_END_4955__=$page_now+3;for($i=$__FOR_START_4955__;$i < $__FOR_END_4955__;$i+=1){ ?><!-- 循环除了前五条 和后五条 -->
+                                                    <?php $__FOR_START_3710__=$page_now-2;$__FOR_END_3710__=$page_now+3;for($i=$__FOR_START_3710__;$i < $__FOR_END_3710__;$i+=1){ ?><!-- 循环除了前五条 和后五条 -->
 
                                                         <?php if($i == $page_now ): ?><li class="active"><a href="#"><?php echo ($page_now); ?></a></li>
                                                             <?php elseif($i < $page ): ?>
