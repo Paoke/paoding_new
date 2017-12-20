@@ -18,7 +18,8 @@ class PaodingController extends BaseRestController
         $where['A.sszt']=$_POST['sszt'];
         $sszt=$_POST['sszt']>0;
         $data = M("ArticleJs")->join("AS A LEFT JOIN __ARTICLE_ZTGL__ AS B ON A.sszt=B.id")
-            ->field("B.title as t_name,A.*")
+            ->join("LEFT JOIN __ARTICLE_CATEGORY_JS__ AS C ON A.category_id=C.id")
+            ->field("B.title as t_name,C.cat_name,A.*")
             ->where($where,"A.$sszt")
             ->select();
         if($data){
