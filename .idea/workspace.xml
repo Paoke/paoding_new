@@ -25,11 +25,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="theme_list.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="theme_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Index/theme_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="46" column="47" lean-forward="false" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+            <state relative-caret-position="444">
+              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="49" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="theme_tec.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Index/theme_tec.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="54" column="57" lean-forward="false" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -94,7 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Template/5u/mobile/User/new_detail.html" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/User/user_news.html" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/User/user_change.html" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/User/user_set.html" />
@@ -145,6 +154,7 @@
         <option value="$PROJECT_DIR$/Application/Api/Controller/PaodingController.class.php" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/Index/tec_list.html" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/Index/theme_list.html" />
+        <option value="$PROJECT_DIR$/Template/5u/mobile/Index/theme_tec.html" />
       </list>
     </option>
   </component>
@@ -404,12 +414,12 @@
       <workItem from="1513301448120" duration="8011000" />
       <workItem from="1513560632992" duration="17116000" />
       <workItem from="1513647077222" duration="14453000" />
-      <workItem from="1513734170264" duration="1252000" />
+      <workItem from="1513734170264" duration="1416000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="264632000" />
+    <option name="totallyTimeSpent" value="264796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -455,13 +465,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Template/5u/pc/User/user_security.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="532" column="72" lean-forward="false" selection-start-line="532" selection-start-column="67" selection-end-line="532" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Template/5u/pc/Static/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6148">
@@ -831,8 +834,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Index/theme_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="46" column="47" lean-forward="false" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+        <state relative-caret-position="444">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="49" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Index/theme_tec.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="54" column="57" lean-forward="false" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
           <folding />
         </state>
       </provider>

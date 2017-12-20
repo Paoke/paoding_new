@@ -45,10 +45,14 @@
 <p class="advert">
     庖丁众包·专业科技服务平台
 </p>
+<div class="sec_return">
+    <a href="/index.php/Mobile/Index/index.html">
+        <img class="return_icon" src="<?php echo (MOBILE); ?>/images/icon-common-return.png" alt="">
+    </a>
+</div>
 </body>
 <script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
 <script src='<?php echo (MOBILE); ?>/js/angular.min.js'></script>
-<script src='<?php echo (MOBILE); ?>/js/return.js'></script>
 <script>
      var acId = GetQueryString('id');
      var app = angular.module('theme_tec',[]);
