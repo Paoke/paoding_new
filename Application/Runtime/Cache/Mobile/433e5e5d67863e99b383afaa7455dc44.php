@@ -32,7 +32,7 @@
                 <div class="hot_tecs2 clear">
                     <p class="fl">
                         <span class="point"></span>
-                        <span class="hot_world">{{list.yyhy}}</span>
+                        <span class="hot_world">{{list.yyxy}}</span>
                     </p>
                 </div>
             </div>
@@ -43,11 +43,14 @@
 <p class="advert">
     庖丁众包·专业科技服务平台
 </p>
-
+<div class="sec_return">
+    <a href="/index.php/Mobile/Index/index.html">
+        <img class="return_icon" src="<?php echo (MOBILE); ?>/images/icon-common-return.png" alt="">
+    </a>
+</div>
 </body>
 <script src='<?php echo (MOBILE); ?>/js/jquery-3.0.0.min.js'></script>
 <script src='<?php echo (MOBILE); ?>/js/angular.min.js'></script>
-<script src='<?php echo (MOBILE); ?>/js/return.js'></script>
 <script>
     var app = angular.module('theme_list',[]);
     app.controller("theme_listCtrl",function ($scope,$http){

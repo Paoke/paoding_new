@@ -96,7 +96,7 @@
 </p>
 
 <div class="sec_return">
-    <a onclick="javascript:history.go(-1);">
+    <a href="/index.php/Mobile/Index/index.html">
         <img class="return_icon" src="<?php echo (MOBILE); ?>/images/icon-common-return.png" alt="">
     </a>
     <p class="collect">发布技术</p>
