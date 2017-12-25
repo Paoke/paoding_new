@@ -322,6 +322,35 @@ class ArticleController extends BaseController
         json_return($returnArr);
     }
 
+    /**
+     * 查看是否收藏
+     */
+    public function is_like()
+    {
+        $channel=$_GET['channel'];
+        $data_id=$_GET['data_id'];
+
+        if($channel=='js'){
+            $tableName='article_user_relation_js';
+            $column='js_id';
+        }elseif ($channel=='hd'){
+            $tableName='activity_user_relation_hd';
+            $column='hd_id';
+        }else{
+            $tableName='article_user_relation_xq';
+            $column='xq_id';
+        }
+
+        $count=M($tableName)->where($column . '=' .$data_id . ' and user_id=' .$_SESSION['userId'])->count();
+        if($count){
+            $returnArr = array("result" => 1, "msg" => "已收藏", "code" => 200);
+        }else{
+            $returnArr = array("result" => 0, "msg" => "未收藏", "code" => 200);
+        }
+
+        json_return($returnArr);
+    }
+
 }
 
 

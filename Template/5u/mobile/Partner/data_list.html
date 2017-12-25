@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>合作单位</title>
+    <meta name="description" content="庖丁科技众包服务平台携手国内外先进技术科研院所、顶级技术专家，以实现科技成果市场化为核心，为企业提供快速精准的需求匹配服务，从而实现企业以及科技资源的有效对接，帮助企业实现产业技术升级，助力先进技术完成产业化发展。" />
+    <meta name="keywords" content="庖丁众包、智能技术、机械制造、健康医疗、材料科学、能源环保、生产流程优化"/>
+    <meta name='viewport' content='user-scalable=no,width=750'>
+    <link rel="stylesheet" href="{$Think.MOBILE}/css/common_new.css">
+    <link rel="stylesheet" href="{$Think.MOBILE}/css/index.css">
+</head>
+<style>
+    body{
+        background: #f5f5f5;
+    }
+</style>
+<body>
+<div class="coop_tab">
+    <p class="active">全部</p>
+    <p>协会</p>
+    <p>院所</p>
+    <p>企业</p>
+    <p>其他</p>
+    <div class="coop_slideBlock"></div>
+</div>
+<div class="index_div"></div>
+
+<div class="wrap"  style="display:block">
+    <div class="coop_tab_main clear">
+        <div class="fl">
+            <img src="{$Think.MOBILE}/images/index-cooperator1.jpg" alt="">
+        </div>
+        <div class="fl coop_main_right">
+            <p class="_title">广州中国科学院先进技术研究所</p>
+            <p class="cont_way">对接方向：高分子材料，有机化学，硝酸铵</p>
+            <div class="coop_icon">
+                <img src="{$Think.MOBILE}/images/icon-index-cooperator-authenticated.jpg" alt="">
+                <img src="{$Think.MOBILE}/images/icon-index-cooperator-honest.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrap">
+    <div class="coop_tab_main clear">
+        <div class="fl">
+            <img src="{$Think.MOBILE}/images/index-cooperator1.jpg" alt="">
+        </div>
+        <div class="fl coop_main_right">
+            <p class="_title">2广州中国科学院先进技术研究所</p>
+            <p class="cont_way">对接方向：高分子材料，有机化学，硝酸铵</p>
+            <div class="coop_icon">
+                <img src="{$Think.MOBILE}/images/icon-index-cooperator-authenticated.jpg" alt="">
+                <img src="{$Think.MOBILE}/images/icon-index-cooperator-honest.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrap">
+    <div class="coop_tab_main clear">
+        <div class="fl">
+            <img src="{$Think.MOBILE}/images/index-cooperator1.jpg" alt="">
+        </div>
+        <div class="fl coop_main_right">
+            <p class="_title">3广州中国科学院先进技术研究所</p>
+            <p class="cont_way">对接方向：高分子材料，有机化学，硝酸铵</p>
+            <div class="coop_icon">
+                <img src="{$Think.MOBILE}/images/icon-index-cooperator-authenticated.jpg" alt="">
+                <img src="{$Think.MOBILE}/images/icon-index-cooperator-honest.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrap">
+    <div class="coop_tab_main clear">
+        <div class="fl">
+            <img src="{$Think.MOBILE}/images/index-cooperator1.jpg" alt="">
+        </div>
+        <div class="fl coop_main_right">
+            <p class="_title">4广州中国科学院先进技术研究所</p>
+            <p class="cont_way">对接方向：高分子材料，有机化学，硝酸铵</p>
+            <div class="coop_icon">
+                <img src="{$Think.MOBILE}/images/icon-index-cooperator-authenticated.jpg" alt="">
+                <img src="{$Think.MOBILE}/images/icon-index-cooperator-honest.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrap">
+    <div class="coop_tab_main clear">
+        <div class="fl">
+            <img src="{$Think.MOBILE}/images/index-cooperator1.jpg" alt="">
+        </div>
+        <div class="fl coop_main_right">
+            <p class="_title">5广州中国科学院先进技术研究所</p>
+            <p class="cont_way">对接方向：高分子材料，有机化学，硝酸铵</p>
+            <div class="coop_icon">
+                <img src="{$Think.MOBILE}/images/icon-index-cooperator-authenticated.jpg" alt="">
+                <img src="{$Think.MOBILE}/images/icon-index-cooperator-honest.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<p class="advert" style="display:none;">
+    庖丁众包·专业科技服务平台
+</p>
+</body>
+<script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
+<script src="{$Think.MOBILE}/js/return.js"></script>
+<script>
+    $(".coop_tab p").on("click",function(){
+        var index = $(this).index();
+        var tranX = index*150;
+        $(".coop_slideBlock").css("transform","translateX("+tranX+"px)");
+        $(this).addClass('active').siblings().removeClass('active');
+        $(".wrap").eq(index).show().siblings('.wrap').hide();
+    });
+    (function(){
+        console.log($(".wrap .coop_tab_main").length)
+        if($(".wrap .coop_tab_main").length>5){
+            alert(1);
+        }
+    })()
+</script>
+</html>
