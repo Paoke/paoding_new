@@ -4,11 +4,10 @@
 namespace Mobile\Controller;
 
 
-class PartnerController
+use Think\Controller;
+
+class PartnerController extends Controller
 {
 
-    public function data_list()
-    {
-        $this->display();
-    }
+
 }

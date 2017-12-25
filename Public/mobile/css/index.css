@@ -875,7 +875,7 @@
 }
 
 .companyIntro{
-	width: 750px;
+	/*width: 750px;*/
 	margin: 0 auto;
 	font-size: 26px;
 	color: #999;
@@ -928,6 +928,168 @@
 	z-index: 999;
 
 }
+.tab_body{
+	display: none;
+}
+.evaluate{
+	width: 750px;
+	margin: 0 auto;
+	position: relative;
+}
+.eva_section{
+	width: 375px;
+	height: 134px;
+	padding-top: 4px;
+	text-align: center;
+	position: relative;
+}
+.grade{
+	font-size: 34px;
+	color: #ff971d;
+	font-weight: bold;
+	margin-bottom: 16px;
+}
+.eva_type{
+	font-size: 22px;
+	color: #999
+}
+.line{
+	position: absolute;
+	top: 28px;
+	right: 0;
+	width: 2px;
+	height: 48px;
+	background: #999;
+}
+.line2{
+	position: absolute;
+	top: 26px;
+	right: 375px;
+	width: 2px;
+	height: 38px;
+	background: #999;
+}
+.score{
+	width: 375px;
+	height: 94px;
+	text-align: center;
+	padding-top:30px;
+	font-size: 24px;
+	color: #ff971d;
+}
+.telphone{
+	padding-top: 40px;
+	padding-left: 30px;
+	font-size: 28px;
+	color: #666;
+	margin-right: 30px;
+}
+.request{
+	margin-top: 8px;
+}
+.honest{
+	margin-left: 20px;
+}
+.commont{
+	padding-top: 34px;
+	padding-left: 30px;
+	font-size: 26px;
+	color: #1e1e1e;
+}
+.publish_time{
+	padding-top: 34px;
+	padding-left: 30px;
+	font-size: 22px;
+	color: #666;
+}
+.show_more{
+	width: 190px;
+	height: 44px;
+	border-radius: 22px;
+	border: 1px solid #ff971d;
+	font-size: 24px;
+	color: #ff971d;
+	text-align: center;
+	line-height: 44px;
+	margin: 36px auto;
+}
+.lable{
+	width: 690px;
+	margin: 24px auto 0;
+	height: 90px;
+	border-bottom: 1px solid #999;
+}
+.lable span{
+	font-size: 26px;
+	color: #999;
+	margin-top: 5px;
+	margin-left: 40px;
+}
+.certi_main2{
+	width: 750px;
+	margin: 0 auto 80px;
+	padding: 40px 30px 0;
+}
+._header{
+	width: 690px;
+	margin: 0 auto;
+	font-size: 32px;
+	color: #1e1e1e;
+	text-align: center;
+	line-height: 90px;
+	border-bottom: 1px solid #ccc;
+
+}
+.explain{
+	padding: 40px 30px 30px;
+	width: 750px;
+	margin: 0 auto;
+}
+.explain p{
+	margin-top: 14px;
+	font-size: 26px;
+	color: #999;
+	line-height: 1.5;
+}
+.tip{
+	font-size: 28px;
+	color: #1e1e1e;
+}
+.list{
+	width: 690px;
+	height: 88px;
+	margin: 0 auto;
+	border-bottom: 1px solid #ccc;
+}
+.list_left{
+	height: 88px;
+	line-height: 88px;
+	font-size: 32px;
+	color: #666;
+}
+.list_right{
+	height: 88px;
+	line-height: 88px;
+	font-size: 32px;
+	color: #999;
+	margin-left: 40px;
+}
+.product{
+	width: 750px;
+	margin: 0 auto;
+}
+.product img{
+	margin-top: 30px;
+	width: 100%;
+}
+.tip_pho{
+	font-size: 28px;
+	color: #1e1e1e;
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+
 #swiper-container3 .swiper-slide{
 	height: 292px;
 }

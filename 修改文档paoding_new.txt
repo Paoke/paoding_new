@@ -53,3 +53,6 @@ idcard_img_front(身份证正面) idcard_img_back(身份证背面) business_licence_img(营
 11.协会管理
 （1）栏目类别
 （2）增加对接方向，协会简介，内容改为会员展示
+（3）合作企业增加专利数量
+（4）article_relation_yysl 增加字段leftlogo
+

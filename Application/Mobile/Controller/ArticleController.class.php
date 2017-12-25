@@ -351,6 +351,45 @@ class ArticleController extends BaseController
         json_return($returnArr);
     }
 
+    /**
+     * 统计企业的技术项目
+     */
+    public function count_js()
+    {
+        $data_id=$_GET['data_id'];
+        $action=$_GET['action'];
+        if($action=='count'){
+            $info=M('article_js')->where('is_deleted=0 and is_active=1 and status=0 and hzjg_id=' .$data_id)->count();
+        }else{
+            $info= M("ArticleJs")->join("AS A LEFT JOIN __ARTICLE_CATEGORY_JS__ AS B ON A.category_id=B.id")
+                ->where('A.is_deleted=0 and A.is_active=1 and A.status=0 and A.hzjg_id=' .$data_id)
+                ->field("B.cat_name,A.*")
+                ->order('create_time DESC')
+                ->select();
+        }
+        if($info){
+            $returnArr = array("result" => 1, "msg" => "请求成功", "code" => 200,"data" => $info);
+        }else{
+            $returnArr = array("result" => 0, "msg" => "频道参数错误", "code" => 402, "data" => null);
+        }
+
+        json_return($returnArr);
+    }
+
+    /**
+     * 企业应用事例
+     */
+    public function example()
+    {
+        $data_id=$_GET['data_id'];
+        $action=$_GET['action'];
+        if($action=='datalist'){
+
+        }else{
+
+        }
+    }
+
 }
 
 

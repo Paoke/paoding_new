@@ -11,9 +11,6 @@
 .activity_banner img{
 	width: 100%;
 }
-.activity_logo{
-	width: 230px;
-}
 
 .activity_nav{
 	width: 750px;
@@ -89,7 +86,7 @@
 }
 .activity_section_left{
 	width: 230px;
-	height: 170px;
+	height: 120px;
 	border-radius: 4px;
 	margin-top: 30px;
 }
@@ -101,10 +98,11 @@
 	font-size: 26px;
 	color: #1e1e1e;
 	width: 420px;
-	display:bolck;
-	overflow:hidden;
-	white-space:nowrap;
-	text-overflow:ellipsis;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	line-height: 1.4;
 }
 .activity_right_p{
 	margin-top: 22px;
@@ -212,8 +210,7 @@
 	line-height: 1.5;
 }
 .act_main_pic{
-	width: 750px;
-	margin-left: -30px;
+	width: 690px;
 }
 .act_love_icon{
 	margin: 24px 0 0 70px;
@@ -357,10 +354,19 @@
 	color: #666;
 	font-size: 26px;
 	margin-top: 20px;
-	width: 370px;
 }
 .guest_position{
 	color: #666;
 	font-size: 26px;
 	margin-top: 10px;
+}
+.signUp_inp{
+	margin-top: 20px;
+	width: 690px;
+	display: block;
+	height: 70px;
+	background: #f4f4f4;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+
 }
