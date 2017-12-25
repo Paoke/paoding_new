@@ -65,7 +65,7 @@
     </div>
 
     <div ng-repeat="list in lists" ng-hide="list.status=='0'">
-        <a href="__CONTROLLER__/detail.html" >
+        <a href="__CONTROLLER__/detail.html?data_id={{list.id}}" >
             <div class="activity_main">
                 <img class="activity_main_img" ng-cloak ng-src="{{list.cover_url}}" alt="">
                 <div class="activity_main_time clear">
@@ -86,24 +86,24 @@
     </div>
 
     <div ng-repeat="list in lists" ng-hide="list.status=='1'">
-        <!-- <a href="__CONTROLLER__/detail.html" > -->
+        <a href="__CONTROLLER__/detail.html?data_id={{list.id}}" >
             <div class="activity_lately_section clear">
                 <div class="activity_section_left fl">
                     <img class="activity_logo" ng-src="{{list.sponsor_logo_url}}" alt="">
                 </div>
                 <div class="activity_section_right fr">
-                    <p class="activity_right_tit">{{list.title}}</p>
+                    <p class="activity_right_tit" ng-cloak>{{list.title}}</p>
                     <p class="activity_right_p">
-                        <span class="activity_right_span">{{list.diqu}}</span>
-                        <span>{{list.formal_start_time}}</span>
+                        <span class="activity_right_span" ng-cloak>{{list.diqu}}</span>
+                        <span ng-cloak>{{list.formal_start_time}}</span>
                     </p>
                     <p  class="activity_right_p">
-                        浏览<span class="activity_right_span"> {{list.clicks}}</span>
-                        收藏<span> {{list.shoucang}}</span>
+                        浏览<span class="activity_right_span" ng-cloak> {{list.clicks}}</span>
+                        收藏<span ng-cloak> {{list.shoucang}}</span>
                     </p>
                 </div>
             </div>
-        <!-- </a> -->
+        </a>
     </div>
 </div>
 
