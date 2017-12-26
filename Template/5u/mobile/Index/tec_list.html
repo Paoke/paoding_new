@@ -16,6 +16,7 @@
 
 <div class="mask" style="display:none"></div>
 <div class="alert" style="display:none">
+    <img src="{$Think.MOBILE}/images/exclamation.png" alt="" style="margin-top:15px">
     <div class="sorry">
         很抱歉，没有找到相关的结果。<br>
         你可以委托庖丁众包
@@ -25,6 +26,15 @@
     <div class="showTel">
         <p>电话号码<span class="tel_email">020-34031992</span></p>
         <p style="border:none">邮箱号<span class="tel_email">info@paoding.cc </span></p>
+    </div>
+    <div class="close">关闭</div>
+</div>
+<div class="alert" style="display:none" id="alert">
+    <img src="{$Think.MOBILE}/images/exclamation.png" alt="" style="margin-top:40px">
+    <div class="sorry">
+        您目前还没有登录<br>
+        请先
+        <a href="/index.php/Mobile/Login/login"><span class="findDemand">登录/注册</span></a>
     </div>
     <div class="close">关闭</div>
 </div>
@@ -45,24 +55,20 @@
 </div>
 
 <div class="search clear">
-    <p class="search_p fl">您当前选择的业务范围</p>   
-    <select class="fl" name="" id="demand_type">
+    <!-- 搜索框 -->
+    <div class="searching fl">
+        <div class="input_search">
+            <img src="{$Think.MOBILE}/images/icon-search-default.png" alt="">
+            <input class="tech_search" type="text" placeholder="技术搜索">
+            <p class="click_search fr">点击搜索</p>
+        </div>
+    </div>
+    <img class="fr" style="margin-top:30px;" src="{$Think.MOBILE}/images/icon-gengduo.png" alt="">
+    <select class="fr" name="" id="demand_type" ng-cloak>
         <option value="0">全部</option>
-        <option ng-cloak ng-value="option.id" ng-repeat="option in options">{{option.cat_name}}</option>
+        <option ng-value="option.id" ng-repeat="option in options" ng-cloak>{{option.cat_name}}</option>       
     </select>
-    <div class="inputDiv fr">
-        <img src="{$Think.MOBILE}/images/icon-search-default.png" alt="">
-        技术搜索
-    </div>
-</div>
 
-<!-- 搜索框 -->
-<div class="searching" style="display:none;">
-    <div class="input_search">
-        <img src="{$Think.MOBILE}/images/icon-search-default.png" alt="">
-        <input class="tech_search" type="text" placeholder="技术搜索">
-        <p class="click_search fr">点击搜索</p>
-    </div>
 </div>
 
 <div class="advancedWrap" style="margin-top:30px;">
@@ -100,7 +106,9 @@
     <a href="/index.php/Mobile/Index/index.html">
         <img class="return_icon" src="{$Think.MOBILE}/images/icon-common-return.png" alt="">
     </a>
-    <p class="collect">发布技术</p>
+    <a href="/index.php/Mobile/Index/release.html">
+        <p class="collect">发布技术</p>
+    </a>    
 </div>
 
 </body>
@@ -132,10 +140,7 @@
         observeParents: true//修改swiper的父元素时，自动初始化swiper
     });
 
-    $(".inputDiv").on("click",function(){
-        $(".search").hide();
-        $(".searching").show();
-    });
+
     $(function(){
         $.ajaxSetup({
             async: false,
@@ -193,7 +198,6 @@
                 page_total = response.data.data.page.page_total;
             }, function errorCallback() {
         }); 
-
     });
 
     $(".demand_nav").on("click",".swiper-slide li",function(){
@@ -205,6 +209,7 @@
         var index = $(this).parent(".swiper-slide").index();
         var tranLeft = index*150;
         if(index==6){tranLeft = 873;}
+        if(index==8){tranLeft = 1170;}
         $(".sildeBlock").css("transform","translateX("+tranLeft+"px)");
         // 按需求栏目和业务范围请求列表接口
         data.search="";
@@ -303,5 +308,20 @@
         });
         return result;
     }
+
+    $(".findDemand").on("click",function(){
+        $(".sorry").hide();
+        $(".showTel").show();
+    });
+    // 关闭弹出框
+    $(".close").on("click",function(){
+        $(".mask").hide();
+        $(".alert").hide();
+    });
+    $(".mask").on("click",function(){
+        $(".mask").hide();
+        $(".alert").hide();
+    })
+
 </script>
 </html>

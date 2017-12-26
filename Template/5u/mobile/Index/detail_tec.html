@@ -231,8 +231,23 @@
                 });
         });
 
+        // 获取联系方式
+        $("#getContackWay").on("click",function(){
+           $http({
+               method:'GET',                
+               url:'/index.php/Mobile/Article/like?channel=js&id='+data_id+'&action=0'
+           }).then(function successCallback(response) {                   
+               if(response.data.code=="402"){
+                   $(".mask").show();
+                   $(".alert").show();
+                   return false;
+               } else {
+                    $(".getTelphone").show();
+                    $(this).parent().hide();
+               }
+           }, function errorCallback(response) {});
+        });
     });   
-
   
      $(".tec_tab a").on("click",function(){
          var index = $(this).index();
@@ -241,25 +256,17 @@
          $(this).addClass('active').siblings().removeClass('active');
      });
 
-     $("#getContackWay").on("click",function(){
-         $(".getTelphone").show();
-         $(this).parent().hide();
-     });
-
      // 导航栏
      // 需修改的元素：dv、 body的padding-top值，赋为dv的高度
      $(function () {
          var ie6 = /msie 6/i.test(navigator.userAgent),
              dv = $('.tec_tab'), //活动元素
              st;
-         dv.attr('otop', dv.offset().top); //存储原来的距离顶部的距离
+         dv.attr('otop', '1259'); //存储原来的距离顶部的距离
          $(window).scroll(function () {
-             // 监听滚动  nav字体颜色   四个锚点分别监听位置判断
-             // console.log($(".tec_tit").offset().top - document.body.scrollTop);
              st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
              if (st >= parseInt(dv.attr('otop'))) {
-                 if (ie6) {
-                     //IE6不支持fixed属性，所以只能靠设置position为absolute和top实现此效果
+                 if (ie6) {                    
                      dv.css({ position: 'absolute', top: st });
                  }
                  else if(dv.css('position') != 'fixed'){

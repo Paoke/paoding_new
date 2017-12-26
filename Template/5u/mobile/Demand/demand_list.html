@@ -43,26 +43,24 @@
     </ul>
 </div>
 
+
 <div class="search clear">
-    <p class="search_p fl">您当前选择的业务范围</p>
-    <select class="fl" name="" id="demand_type" ng-cloak>
-        <option value="0">全部</option>
-        <option ng-value="option.id" ng-repeat="option in options">{{option.tag_name}}</option>
-    </select>
-    <div class="inputDiv fr">
-        <img src="{$Think.MOBILE}/images/icon-search-default.png" alt="">
-        技术搜索
+    <!-- 搜索框 -->
+    <div class="searching fl">
+        <div class="input_search">
+            <img src="{$Think.MOBILE}/images/icon-search-default.png" alt="">
+            <input class="tech_search" type="text" placeholder="技术搜索">
+            <p class="click_search fr">点击搜索</p>
+        </div>
     </div>
+    <img class="fr" style="margin-top:30px;" src="{$Think.MOBILE}/images/icon-gengduo.png" alt="">
+    <select class="fr" name="" id="demand_type" ng-cloak>
+        <option value="0">全部</option>
+        <option ng-value="option.id" ng-repeat="option in options" ng-cloak>{{option.tag_name}}</option>
+    </select>
 </div>
 
-<!-- 搜索框 -->
-<div class="searching" style="display:none;">
-    <div class="input_search">
-        <img src="{$Think.MOBILE}/images/icon-search-default.png" alt="">
-        <input class="tech_search" type="text" placeholder="技术搜索">
-        <p class="click_search fr">点击搜索</p>
-    </div>
-</div>
+
 
 <div class="wrap">
     <div class="main" ng-repeat="detail in details">
@@ -114,7 +112,7 @@
         <p style="color:#ff971d;">需求</p>
     </a>
     <a class="nav_option" href="__MODULE__/Activity/activity">
-        <img src="{$Think.MOBILE}/images/icon-tabbar-activity-default.png.png" alt="">
+        <img src="{$Think.MOBILE}/images/icon-tabbar-activity-default.png" alt="">
         <p>活动</p>
     </a>
     <a class="nav_option" href="__MODULE__/User/user_center">
@@ -149,11 +147,6 @@
         slidesPerView: 5,
         observer: true,//修改swiper自己或子元素时，自动初始化swiper
         observeParents: true//修改swiper的父元素时，自动初始化swiper
-    });
-
-    $(".inputDiv").on("click", function () {
-        $(".search").hide();
-        $(".searching").show();
     });
 
     $(function(){
@@ -267,13 +260,11 @@
         data.page="1";
         data.search = $(".tech_search").val();      
         page_total=getListData(data,"html");
-        console.log(info);
+        // console.log(info);
         if(info == ""){
             $(".mask").show();
             $(".alert").show();
         }
-
-
     })
 
     /**

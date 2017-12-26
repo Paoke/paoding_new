@@ -90,6 +90,9 @@
 	border-radius: 4px;
 	margin-top: 30px;
 }
+.activity_section_left img{
+	width: 230px;
+}
 .activity_section_right{
 	width: 420px;
 	margin-top: 32px;
