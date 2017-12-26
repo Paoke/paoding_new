@@ -92,13 +92,13 @@ class ActivityController extends BaseController
             } else {
                 $data = I('post.');
                 $data['user_id'] = $_SESSION['userId'];
-                $data['create_time'] = date("Y-m-d H:i:s");
-                $result = M('activity_enter_hd')->add($data);
+                $data['add_time'] = date("Y-m-d H:i:s");
+                $result = M('activity_order_hd')->add($data);
                 if ($result) {
-                    $activity = M('activity_hd')->where('id=' . $data['hd_id'])->field('title,plan_start_time,address')->find();
-                    $content = "【庖丁众包】尊敬的用户，感谢您一直以来对庖丁众包平台的支持，平台致力于推送优质项目资源，我们将举行" . $activity['title'] . "活动，报名时间：" . $activity['plan_start_time'] . "；活动地点：" . $activity['address'] . "；诚邀您的参与！";
+                    $activity = M('activity_hd')->where('id=' . $data['hd_id'])->find();
+                    $content = "恭喜你！您已成功报名参加" . $activity['title'] . "活动，活动将于".$activity['formal_start_time']."举行，届时欢迎您的莅临参加，祝你生活愉快，事业高升！";
                     send_note($content, $_SESSION['userArr']['mobile']);
-                    sendNotice($content);
+                    sendNotice($content,'');
 
                     $returnArr = array("result" => 1, "msg" => "操作成功", "code" => 402);
                 } else {

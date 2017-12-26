@@ -201,66 +201,66 @@ class ActivityController extends BaseController
                         $condition['channel_id'] = $channel_id;
                         $condition['activity_id'] = $getId;
                         $orderTableName = M("SystemChannelTableConfig")->where("channel='$channel' AND type=3")->getField("table_format");
-                        $orderCount = M("$orderTableName")->count();
-                        $orderList = M("$orderTableName")->page(1,10)->select();
+                        $orderCount = M("$orderTableName")->where('hd_id='.$getId)->count();
+                        $orderList = M("$orderTableName")->where('hd_id='.$getId)->page(1,10)->select();
 
                         $orderPage = ($orderCount/10) > intval(($orderCount/10)) ? intval(($orderCount/10))+1 : intval(($orderCount/10));
                         $countArr['page_count'] = $orderPage;
 
-                        // 提交报名
-                        $countArr['submit_apply'] = M("$orderTableName")->where($condition)->count();
-
-                        // 待审核
-                        $cond = $condition;
-                        $cond['order_status'] = -1;
-                        $countArr['wait_audit'] = M("$orderTableName")->where($cond)->count();
-
-                        // 报名人数
-                        $cond = $condition;
-                        $cond['order_status'] = 1;
-                        $countArr['apply_success'] = M("$orderTableName")->where($cond)->count();
-
-                        // 已取消
-                        $cond = $condition;
-                        $cond['order_status'] = 4;
-                        $countArr['cancel'] = M("$orderTableName")->where($cond)->count();
-
-                        // 不通过(作废)
-                        $cond = $condition;
-                        $cond['order_status'] = 5;
-                        $countArr['not_pass'] = M("$orderTableName")->where($cond)->count();
-
-                        // 待支付
-                        $cond = $condition;
-                        $cond['pay_status'] = 0;
-                        $countArr['not_pay'] = M("$orderTableName")->where($cond)->count();
-
-                        //活动收入
-                        $cond = $condition;
-                        $cond['pay_status'] = 1;
-                        $countArr['total_amount'] = M("$orderTableName")->where($cond)->sum('total_amount');
-                        if(empty($countArr['total_amount'])){
-                            $countArr['total_amount'] = '0.00';
-                        }
-
-                        // 已签到
-                        $cond = $condition;
-                        $cond['sign_status'] = 1;
-                        $countArr['sign_success'] = M("$orderTableName")->where($cond)->count();
-
-                        // 未签到
-                        $cond = $condition;
-                        $cond['sign_status'] = 0;
-                        $cond['pay_status'] = 1;
-                        $cond['order_status'] = 1;
-                        if($countArr['should_sign'] === 0){
-                            $countArr['not_sign'] = 0;
-                        }else{
-                            $countArr['not_sign'] = M("$orderTableName")->where($cond)->count();
-                        }
-
-                        // 应签到 = 未签到 + 已签到
-                        $countArr['should_sign'] = $countArr['not_sign'] + $countArr['sign_success'];
+//                        // 提交报名
+//                        $countArr['submit_apply'] = M("$orderTableName")->where($condition)->count();
+//
+//                        // 待审核
+//                        $cond = $condition;
+//                        $cond['order_status'] = -1;
+//                        $countArr['wait_audit'] = M("$orderTableName")->where($cond)->count();
+//
+//                        // 报名人数
+//                        $cond = $condition;
+//                        $cond['order_status'] = 1;
+//                        $countArr['apply_success'] = M("$orderTableName")->where($cond)->count();
+//
+//                        // 已取消
+//                        $cond = $condition;
+//                        $cond['order_status'] = 4;
+//                        $countArr['cancel'] = M("$orderTableName")->where($cond)->count();
+//
+//                        // 不通过(作废)
+//                        $cond = $condition;
+//                        $cond['order_status'] = 5;
+//                        $countArr['not_pass'] = M("$orderTableName")->where($cond)->count();
+//
+//                        // 待支付
+//                        $cond = $condition;
+//                        $cond['pay_status'] = 0;
+//                        $countArr['not_pay'] = M("$orderTableName")->where($cond)->count();
+//
+//                        //活动收入
+//                        $cond = $condition;
+//                        $cond['pay_status'] = 1;
+//                        $countArr['total_amount'] = M("$orderTableName")->where($cond)->sum('total_amount');
+//                        if(empty($countArr['total_amount'])){
+//                            $countArr['total_amount'] = '0.00';
+//                        }
+//
+//                        // 已签到
+//                        $cond = $condition;
+//                        $cond['sign_status'] = 1;
+//                        $countArr['sign_success'] = M("$orderTableName")->where($cond)->count();
+//
+//                        // 未签到
+//                        $cond = $condition;
+//                        $cond['sign_status'] = 0;
+//                        $cond['pay_status'] = 1;
+//                        $cond['order_status'] = 1;
+//                        if($countArr['should_sign'] === 0){
+//                            $countArr['not_sign'] = 0;
+//                        }else{
+//                            $countArr['not_sign'] = M("$orderTableName")->where($cond)->count();
+//                        }
+//
+//                        // 应签到 = 未签到 + 已签到
+//                        $countArr['should_sign'] = $countArr['not_sign'] + $countArr['sign_success'];
 
                         $tagsTableName = M("SystemChannelTableConfig")->where("channel='$channel' AND type=4")->getField("table_format");
                         $tagsRelationTableName = M("SystemChannelTableConfig")->where("channel='$channel' AND type=5")->getField("table_format");
@@ -1354,8 +1354,8 @@ class ActivityController extends BaseController
                 $orderTableName = M("SystemChannelTableConfig")->where("channel='$index' AND type=3")->getField("table_format");
                 $condition['activity_id'] = $activityId;
                 $condition['channel_id'] = $channel['id'];
-                $count= M("$orderTableName")->count();
-                $list = M("$orderTableName")->page($page_now, $page_num)->select();
+                $count= M("$orderTableName")->where('hd_id='.$activityId)->count();
+                $list = M("$orderTableName")->where('hd_id='.$activityId)->page($page_now, $page_num)->select();
                 $page = ($count / $page_num) > intval($count / $page_num) ? intval($count / $page_num + 1) : intval($count / $page_num);
 
                 $data['page'] = $page;

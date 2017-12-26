@@ -8,13 +8,13 @@
     <meta name='viewport' content='user-scalable=no,width=750'>
     <link rel="stylesheet" href="{$Think.MOBILE}/css/common_new.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
+    <link rel="stylesheet" href="{$Think.MOBILE}/css/index.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/activity.css">
-    <include file="./Template/5u/common/common.html" />
 </head>
-<body style="padding-top:60px;">
+<body style="padding-top:60px;overflow-x:hidden">
 
 <!-- 使用my.css 注册页面样式 -->
-
+<input type="hidden" value="{$Think.session.userArr.user_id}">
 <div class="mask" style="display:none;"></div>
 <div class="identify_tip">
     <p>活动报名成功</p>
@@ -29,49 +29,59 @@
 </div>
 <div class="regist_main">
     <div class="regist_input">
+        <span class="star" style="color:red">*</span>
         <span class="regist_span">姓名</span>
         <input type="text" placeholder="输入您的真实姓名">
     </div>
 
     <div class="regist_input">
+        <span class="star" style="color:red">*</span>
         <span class="regist_span">手机</span>
-        <span style="margin-left:20px;color:#1e1e1e">13688888888</span>
+        <input type="text" placeholder="输入手机号码">
     </div>
 
     <div class="regist_input">
+        <span class="star" style="color:red">*</span>
         <span class="regist_span">公司</span>
         <input type="text" placeholder="输入公司名称">
     </div>
 
     <div class="regist_input">
+        <span class="star" style="color:red">*</span>
         <span class="regist_span">职务</span>
         <input type="text" placeholder="请输入您所在公司职务">
     </div>
 
-    <div class="regist_input">
+    <div class="regist_input" style="border:none">
+        <span class="star" style="color:red">*</span>
         <span class="regist_span">关注领域</span>
-        <span style="margin-left:20px;color:#ccc">请点选</span>
+        <span style="margin-left:20px;color:#ccc;font-size:20px">（最多选3项）</span>
+    </div>
+    <div class="demand_area" style="margin-top:-40px;">
+        <div class="areas_main clear" style="margin-left:-30px;">
+            <li class="areas_default">电子信息</li>
+            <li class="areas_default">先进制造</li>
+            <li class="areas_default">新材料</li>
+            <li class="areas_default">新能源与节能</li>
+            <li class="areas_default">环境保护</li>
+            <li class="areas_default">健康医疗</li>
+            <li class="areas_default">智能技术</li>
+        </div>
     </div>
 
-    <div class="regist_input">
-        <span class="regist_span">贵公司的业务范围</span>
-        <img class="fr" src="{$Think.MOBILE}/images/icon-right2.png" alt="">
+    <div class="regist_input" style="border:none">
+        <p class="regist_span">贵公司的业务范围</p>
+        <input class="signUp_inp" type="text" placeholder="请输入贵公司的业务范围" maxlength="50">
     </div>
 
-    <div class="regist_input">
-        <span class="regist_span">您本人的研究方向</span>
-        <img class="fr" src="{$Think.MOBILE}/images/icon-right2.png" alt="">
+    <div class="regist_input" style="border:none">
+        <p class="regist_span">您希望对接的技术</p>
+        <input class="signUp_inp" type="text" placeholder="请输入您希望对接的技术"  maxlength="50">
     </div>
 
-    <div class="regist_input">
-        <span class="regist_span">希望对接的技术领域或您所需要的需求领域</span>
-        <img class="fr" src="{$Think.MOBILE}/images/icon-right2.png" alt="">
-    </div>
-
-    <div class="regist_input">
-        <span class="regist_span">需求内容</span>
-        <input type="text" placeholder="请简要描述您需要解决的技术难题" style="width:500px;">
-        <img class="fr" src="{$Think.MOBILE}/images/icon-right2.png" alt="">
+    <div class="regist_input" style="border:none">
+        <p class="regist_span">您希望对接的需求</p>
+        <input class="signUp_inp" type="text" placeholder="请输入您希望对接的需求"  maxlength="50">
     </div>
 </div>
 
@@ -85,4 +95,21 @@
 </div>
 
 </body>
+<script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
+<script>
+    // 需求领域  限制可选3个
+    $(".areas_main li").on("click",function(){
+        var count = $(".areas_selected").length;
+        if(count==3){
+            $(this).addClass('areas_default').removeClass('areas_selected');
+            return false;
+        }
+        else if($(this).hasClass('areas_default')){
+            $(this).addClass('areas_selected').removeClass('areas_default');
+        }
+        else{
+            $(this).addClass('areas_default').removeClass('areas_selected');
+        }
+    });
+</script>
 </html>

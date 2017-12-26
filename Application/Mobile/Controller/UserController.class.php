@@ -80,18 +80,14 @@ class UserController extends BaseController
     //申请认证
     public function user_authen()
     {
+        $DAO = M('ManageUsers');
+        $info = $DAO->table('5u_manage_users A')->join('LEFT JOIN 5u_manage_user_authen B ON A.user_id=B.user_id')->where('A.user_id='.$_SESSION["userArr"]["user_id"])->field('B.status,B.type')->find();
+        if($info['status']==null || $info['status']=='-1'){
+            $this->display();
+        }else{
+            $this->display();
+        }
 
-        $arrData=array(
-            'idcard'=>$_GET['idcard']==''?session('arrData')['idcard']:$_GET['idcard'],
-            'email'=>$_GET['email']==''?session('arrData')['email']:$_GET['email'],
-            'company'=>$_GET['company']==''?session('company')['idcard']:$_GET['company'],
-            'job'=>$_GET['job']==''?session('arrData')['job']:$_GET['job'],
-            'gzly'=>$_GET['gzly']==''?session('arrData')['gzly']:$_GET['gzly'],
-            'yyhy'=>$_GET['yyhy']==''?session('arrData')['yyhy']:$_GET['yyhy']
-        );
-        session('arrData',$arrData);
-        $this->assign('arrData',session('arrData'));
-        $this->display();
     }
 
 

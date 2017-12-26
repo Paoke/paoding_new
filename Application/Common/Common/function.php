@@ -1001,9 +1001,14 @@ function wechat_notify_url(){
  * @param $content  内容
  *
 */
-function sendNotice($content)
+function sendNotice($content,$userid)
 {
-    $data['user_id']=$_SESSION['userId'];
+    if($userid==''){
+        $data['user_id']=$_SESSION['userId'];
+    }else{
+        $data['user_id']=$userid;
+    }
+
     $data['content']=$content;
     $data['status']='0';
     $data['create_time']=date("Y-m-d H:i:s");

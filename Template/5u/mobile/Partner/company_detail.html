@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/common_new.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/index.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/activity.css">
+    <include file="./Template/5u/common/common.html" />
     <style type="text/css">
         .certificate_book{
             width: 50%;
@@ -145,53 +146,57 @@
 
 <!-- 前沿技术 -->
 <div class="tab_body">
-    <div class="advancedWrap">
-        <div class="main_section clear" ng-repeat="tech in techList">
-            <div class="fl main_section_left">
-                <img ng-src="{{tech.src}}" alt="">
-                <!-- <p class="transfer">技术转让</p> -->
-            </div>
-            <div class="fr main_section_right">
-                <p class="sec_tit">{{tech.title}}</p>
-                <p>
-                    <img src="{$Think.MOBILE}/images/icon-index-industry.png" alt="">
-                    <span class="sec_industry">{{tech.type}}</span>
-                </p>
-                <p class="p_scan">
-                    <img src="{$Think.MOBILE}/images/icon-index-browse.png" alt="">
-                    <span class="sec_scan">2068</span>
-                </p>
-                <div class="adhi_print">
-                    <span class="adhibition">应用类</span>
-                    <span class="print">成熟方案</span>
+    <a href="__MODULE__/Index/detail_tec.html">
+        <div class="advancedWrap">
+            <div class="main_section clear" ng-repeat="tech in techList">
+                <div class="fl main_section_left">
+                    <img ng-src="{{tech.src}}" alt="">
+                    <!-- <p class="transfer">技术转让</p> -->
+                </div>
+                <div class="fr main_section_right">
+                    <p class="sec_tit">{{tech.title}}</p>
+                    <p>
+                        <img src="{$Think.MOBILE}/images/icon-index-industry.png" alt="">
+                        <span class="sec_industry">{{tech.type}}</span>
+                    </p>
+                    <p class="p_scan">
+                        <img src="{$Think.MOBILE}/images/icon-index-browse.png" alt="">
+                        <span class="sec_scan">2068</span>
+                    </p>
+                    <div class="adhi_print">
+                        <span class="adhibition">应用类</span>
+                        <span class="print">成熟方案</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </a>
 </div>
 <!-- 应用案例-->
 <div class="tab_body" >
-    <div class="advancedWrap">
-        <div class="main_section clear" ng-repeat="tech in techList">
-            <div class="fl main_section_left">
-                <img ng-src="{{tech.src}}" alt="">
-                <!-- <p class="transfer">技术转让</p> -->
-            </div>
-            <div class="fr main_section_right">
-                <p class="sec_tit">{{tech.title}}</p>
-                <p class="hot_ct" style="margin:-10px 0 20px;-webkit-line-clamp: 2;">士大士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫夫</p>
-                <p>
-                    <img src="{$Think.MOBILE}/images/icon-index-industry.png" alt="">
-                    <span class="sec_industry">{{tech.type}}</span>
-                </p>
-                <p class="p_scan">
-                    <img src="{$Think.MOBILE}/images/icon-index-browse.png" alt="">
-                    <span class="sec_scan">3个月</span>
-                </p>
+    <a href="__CONTROLLER__/example_detail.html">
+        <div class="advancedWrap">
+            <div class="main_section clear" ng-repeat="tech in techList">
+                <div class="fl main_section_left">
+                    <img ng-src="{{tech.src}}" alt="">
+                    <!-- <p class="transfer">技术转让</p> -->
+                </div>
+                <div class="fr main_section_right">
+                    <p class="sec_tit">{{tech.title}}</p>
+                    <p class="hot_ct" style="margin:-10px 0 20px;-webkit-line-clamp: 2;">士大士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫夫</p>
+                    <p>
+                        <img src="{$Think.MOBILE}/images/icon-index-industry.png" alt="">
+                        <span class="sec_industry">{{tech.type}}</span>
+                    </p>
+                    <p class="p_scan">
+                        <img src="{$Think.MOBILE}/images/icon-index-browse.png" alt="">
+                        <span class="sec_scan">3个月</span>
+                    </p>
 
+                </div>
             </div>
         </div>
-    </div>
+    </a>
 </div>
 <div class="tab_body" >
     <div class="evaluate clear">

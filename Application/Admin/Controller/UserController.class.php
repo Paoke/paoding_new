@@ -543,9 +543,13 @@ class UserController extends BaseController
                             $returnArr = array("result" => 0, "msg" => "审核失败，请重试", "code" => 405, "data" => null);
                         }else if($status==0){
                             $this->logRecord(6, "审核【".$article["company_code"]."】通过!", 6, -2, $id);
+                            $content = "【庖丁众包】尊敬的用户，恭喜您成为庖丁众包认证用户！认证用户可发布技术/需求项目、获取联系方式，还能获得一对一项目对接等更多礼遇。";
+                            sendNotice($content,$article['user_id']);
                             $returnArr = array("result" => 1, "msg" => "审核成功", "code" => 200, "data" => null);
                         }else if($status==-1){
                             $this->logRecord(6, "审核【".$article["company_code"]."】不通过!", 6, -2, $id);
+                            $content = "【庖丁众包】尊敬的用户，您提交的申请认证资料与平台所要求的不相符，请您核对后再次提交，感谢您的支持，谢谢！";
+                            sendNotice($content,$article['user_id']);
                             $returnArr = array("result" => 1, "msg" => "审核成功", "code" => 200, "data" => null);
                         }
                     } else {

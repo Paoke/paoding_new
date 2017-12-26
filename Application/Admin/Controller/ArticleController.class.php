@@ -855,6 +855,15 @@ class ArticleController extends BaseController
                             $returnArr = array("result" => 0, "msg" => "审核失败，请重试", "code" => 405, "data" => null);
                         }else{
                             $this->logRecord(6, "审核【".$article["title"]."】成功!", 9, $article['channel_id'], $id);
+                            if($status==0){
+                                $content = "【庖丁众包】尊敬的用户，您提交的".$article["title"]."项目已通过审核！项目经理将于24小时内与您联系，请保持电话畅通。";
+                            }else{
+                                $content = "【庖丁众包】尊敬的用户，很抱歉！您提交的".$article["title"]."项目不符合平台的发布要求，感谢您对庖丁众包的支持！顺祝商祺！";
+                            }
+
+                            $user_mobile=M('manage_users')->where('user_id='.$article['create_user_id'])->field('mobile')->find();
+                            send_note($content,$user_mobile['mobile']);
+                            sendNotice($content,$article['create_user_id']);
                             $returnArr = array("result" => 1, "msg" => "审核成功", "code" => 200, "data" => null);
                         }
                     } else {

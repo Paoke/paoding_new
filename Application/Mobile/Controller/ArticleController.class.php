@@ -181,6 +181,12 @@ class ArticleController extends BaseController
 
                 //记录操作日志
                 $this->logRecord(6, "发布" . $postData["title"] . "成功", 3, $channel_id, $dataid, $postData['user_id']);
+                $admin_mobile=M('manage_users')->where('user_id=2')->field('mobile')->find();
+                $content = "【庖丁众包】尊敬的用户，您于".date('Y')."年".date('m')."月".date('d')."日成功提交的技术/需求资料到庖丁众包平台，平台将以两个工作日内以站内信形式发送审核结果，届时请留意，谢谢！";
+                $content_admin="【庖丁众包】才华与美貌并重的管理员，您好！有用户在线上提交了技术/需求项目，请您尽快查看审核。您辛苦了！";
+                send_note($content_admin,$admin_mobile['mobile']);
+                sendNotice($content);
+
                 $returnArr = array("result" => 1, "msg" => "保存成功", "code" => 200, "data" => null);
             } else {
                 //日志记录，参数：级别，字符串（你拼接的字符串与后台拼接，后台字符串为（进行？？操作），？？为你的字符串）
@@ -384,10 +390,19 @@ class ArticleController extends BaseController
         $data_id=$_GET['data_id'];
         $action=$_GET['action'];
         if($action=='datalist'){
-
+            $info=M('article_relation_yysl')
+                ->where('hzjg_id='.$data_id)
+                ->select();
         }else{
-
+            $info=M('article_relation_yysl')->where('id='.$data_id)->select();
         }
+        if($info){
+            $returnArr = array("result" => 1, "msg" => "请求成功", "code" => 200,"data" => $info);
+        }else{
+            $returnArr = array("result" => 0, "msg" => "频道参数错误", "code" => 402, "data" => null);
+        }
+
+        json_return($returnArr);
     }
 
 }

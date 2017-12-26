@@ -728,7 +728,11 @@ class UserController extends BaseRestController
                 $data['create_time'] = date("Y-m-d H:i:s",time());
                 M("ManageUserRecord")->add($data);
             }
+            $content = "【庖丁众包】尊敬的用户，恭喜您加入庖丁众包平台，我们将竭力为您推荐最优质的技术/需求对接项目服务，获取更多的项目资讯！";
+            send_note($content, $_SESSION['userArr']['mobile']);
+            sendNotice($content,'');
             $returnArr = array("result" => 1, "msg" => "注册成功", "code" => 200);
+
         }
         json_return($returnArr);
     }
@@ -1056,15 +1060,18 @@ class UserController extends BaseRestController
                     $flag = $DAO->where($where)->save($data);
 
                 } else {
-                    $data['user_id'] = $id;
+                    $data['user_id'] = $_SESSION['userId'];
                     $data['add_time'] = date("Y-m-d H:i:s", time());
                     $flag = $DAO->where($where)->add($data);
                 }
-                M('5u_manage_users')->where($where)->save($data);
+                M('manage_users')->where($where)->save($data);
                 if ($flag === false) {
                     $returnArr = array("result" => 0, "msg" => "请求错误，获取数据出错", "code" => 402, "data" => null);
                 } else {
                     $this->logRecord(6, "审核【".$data["company_code"]."】重新认证!", 6, -2, $id);
+                    $admin_mobile=M('manage_users')->where('user_id=2')->field('mobile')->find();
+                    $content = "【庖丁众包】才华与美貌并重的管理员，您好！有用户在线上提交了实名认证，请您尽快查看审核。您辛苦了！";
+                    send_note($content,$admin_mobile['mobile']);
                     $returnArr = array("result" => 1, "msg" => "请求成功", "code" => 200, "data" => null);
 
                 }
@@ -1289,7 +1296,7 @@ class UserController extends BaseRestController
                     "mobile" => $options["mobile"],
                     //"user_name" => $options["mobile"]
                 );
-                if($options["paswd"]){
+                if($postData["paswd"]){
                     $data['password'] = $options["paswd"];
                 }
                 //用户信息绑定
