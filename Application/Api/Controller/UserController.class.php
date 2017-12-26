@@ -1404,7 +1404,7 @@ class UserController extends BaseRestController
 
         switch($action){
             case 'detail':
-                $where['user_id'] = $id;
+                $where['user_id'] = $_SESSION["userArr"]["user_id"];
                 $field = 'A.user_id,A.mobile,A.nickname,A.user_name,A.password,A.head_pic,A.email,A.sex,A.birthday,A.province,A.company,A.city,A.job,B.idcard,B.status';
                 $info = $DAO->table('5u_manage_users A')->join('LEFT JOIN 5u_manage_user_authen B ON A.user_id=B.user_id')->where('A.user_id='.$id)->find();
                 $info['area'] = $info['province'] . '-' . $info['city'];

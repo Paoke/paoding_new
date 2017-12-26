@@ -85,7 +85,12 @@ class UserController extends BaseController
         if($info['status']==null || $info['status']=='-1'){
             $this->display();
         }else{
-            $this->display();
+            if($info['type']=='个人'){
+                $this->display('info_person');
+            }else{
+                $this->display('info_company');
+            }
+
         }
 
     }
