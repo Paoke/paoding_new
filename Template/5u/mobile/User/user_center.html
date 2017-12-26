@@ -52,7 +52,7 @@
         <a href="#" class="fl">
             <img src="{$Think.MOBILE}/images/icon-my-message.png" alt="">
             <p>我的消息</p>
-            <!-- <div class="news_circle">16</div> -->
+            <div class="news_circle" ng-cloak>{{news}}</div>
         </a>
         <a href="user_collect.html" class="fl">
             <img src="{$Think.MOBILE}/images/icon-my-collect.png" alt="">
@@ -124,6 +124,15 @@
             } 
         }).then(function successCallback(response) {    
              $scope.user = response.data.data;
+            }, function errorCallback(response) {
+
+        });
+        // 未读信息
+        $http({
+            method: 'GET',
+            url: '/api.php/User/user_news/action/count',          
+        }).then(function successCallback(response) {    
+             $scope.news = response.data.data;
             }, function errorCallback(response) {
 
         });
