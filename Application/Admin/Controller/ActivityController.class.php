@@ -320,6 +320,7 @@ class ActivityController extends BaseController
                         $this->assign('info', $activity);
                         $this->assign("data", $data);
                         $this->assign('category_data', $categoryData);
+                        $this->assign('order_count',$orderCount);
                         $this->display("activity_info");
                     } else {
                         $returnArr = array("result" => 0, "msg" => "该数据不存在，请重试", "code" => 402, "data" => null);
@@ -1711,6 +1712,26 @@ class ActivityController extends BaseController
         $this->assign("problem_tatistics",$problemStatistics);
         $this->assign("meeting",$meeting);
         $this->display("statistics_list");
+    }
+
+    /*
+     * 导出到excel
+     */
+    public function outExcel(){
+        $hd_id=$_GET['hd_id'];
+        $xlsName="活动报名列表";
+        $xlsCell=array(
+            array('name','姓名'),
+            array('mobile','手机号码'),
+            array('company','公司'),
+            array('job','职务'),
+            array('lingyu','关注领域'),
+            array('ywfw','业务范围'),
+            array('js','希望对接的技术'),
+            array('xq','希望对接的需求')
+        );
+        $xlsData=M("activity_order_hd")->where('hd_id='.$hd_id)->field('name,mobile,company,job,lingyu,ywfw,js,xq')->select();
+        exportExcel($xlsName, $xlsCell, $xlsData);
     }
 }
 

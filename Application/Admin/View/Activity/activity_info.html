@@ -459,6 +459,11 @@
                                         <div class="panel-body " style="margin:10px;">
                                             <input type="hidden" id="page_now" value="1">
                                             <input type="hidden" id="page_count" value="{$countArr.page_count}">
+                                            <if condition="$order_count gt 0">
+                                                <a href="__CONTROLLER__/outExcel?hd_id={$id}">
+                                                    导出数据
+                                                </a>
+                                            </if>
                                             <table id="apply_table" class="table table-bordered  table-striped" role="grid"
                                                    aria-describedby="example1_info">
                                                 <thead>

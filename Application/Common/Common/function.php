@@ -1034,3 +1034,51 @@ function send_note($content, $phonenum)
     curl_close ( $ch );
     return $result;
 }
+
+/*
+ * 导出excel
+ * @param1 string $expTitle 文件名
+ * @param2 array $expCellName  列名
+ * @param3 array $expTableData 表数据
+ */
+
+function exportExcel($expTitle, $expCellName, $expTableData)
+{
+    $xlsTitle = iconv('utf-8', 'gb2312', $expTitle); //文件名称
+    $cellNum = count($expCellName);
+    $dataNum = count($expTableData);
+    vendor("PHPExcel.PHPExcel");
+    $objPHPExcel = new PHPExcel();
+    //列的数目，可以根据需要添加
+    $cellName = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+        'AA', 'AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AI', 'AJ', 'AK', 'AL', 'AM', 'AN', 'AO', 'AP', 'AQ', 'AR', 'AS', 'AT', 'AU', 'AV', 'AW', 'AX', 'AY', 'AZ');
+    //设置字体样式
+    $objPHPExcel->getActiveSheet()->getStyle('A1:AZ1')->getFont()->setName('黑体');
+    $objPHPExcel->getActiveSheet()->getStyle('A1:AZ1')->getFont()->setSize(14);
+//    $objPHPExcel->getActiveSheet()->getStyle('A1:AZ1')->getFont()->setBold(true);
+
+    //$objPHPExcel->getActiveSheet(0)->mergeCells('A1:' . $cellName[$cellNum - 1] . '1'); //合并单元格
+    //遍历生成表第一行->每一列的名称
+    for ($i = 0; $i < $cellNum; $i++) {
+        $objPHPExcel->setActiveSheetIndex(0)->setCellValue($cellName[$i] . '1', $expCellName[$i][1]);
+    }
+    //遍历填入数据
+    for ($i = 0; $i < $dataNum; $i++) {
+        for ($j = 0; $j < $cellNum; $j++) {
+            $objPHPExcel->getActiveSheet(0)->setCellValue($cellName[$j] . ($i + 2), $expTableData[$i][$expCellName[$j][0]]);
+        }
+    }
+
+    ob_end_clean(); //清空缓存
+    header('Content-Type: application/vnd.ms-excel;charset=utf-8;name="' . $xlsTitle . '.xls"');
+    header("Content-Disposition: attachment;filename=$xlsTitle.xls");
+    header('Cache-Control: max-age=0');
+    header('Cache-Control: max-age=1');
+    header('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); // Date in the past
+    header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT'); // always modified
+    header('Cache-Control: cache, must-revalidate'); // HTTP/1.1
+    header('Pragma: public'); // HTTP/1.0
+    $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel5');
+    $objWriter->save('php://output');
+    exit;
+}

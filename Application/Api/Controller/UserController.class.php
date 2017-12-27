@@ -1658,9 +1658,9 @@ class UserController extends BaseRestController
                     break;
 
                 case "data_detail":
-
+                    $status['status']='1';
                     $data=M('notice_relation_user')->where('id='.$param['data_id'])->find();
-
+                    M('notice_relation_user')->where('id='.$param['data_id'])->save($status);
                     break;
 
                 default:
