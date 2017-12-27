@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en"  ng-app="authen">
 <head>
     <meta charset="UTF-8">
     <title>个人认证</title>
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
     <include file="./Template/5u/common/common.html" />
 </head>
-<body>
+<body ng-controller="authenCtrl">
 <div class="mask" style="display:none;"></div>
 <div class="identify_tip" style="display:none;">
     <p>认证信息提交成功</p>
@@ -19,64 +19,67 @@
 </div>
 <p class="apply_tit">申请认证</p>
 <p class="apply_tip">你当前未通过平台合格认证，请填写认证信息！</p>
-<div class="my_content">
-    <div class="apply_content_box clear">
-        <span class='apply_word fl'>手机号</span>
-        <input class='apply_means fr' type="text" value="{$Think.session.userArr.mobile}" readonly="readonly">
-    </div>
-
-
-    <div class="apply_content_box chose clear">
-        <span class='apply_word fl'>真实姓名</span>
-        <input class='apply_means fr' type="text" placeholder="请输入真实姓名">
-    </div>
-
-
-    <div class="apply_content_box chose clear">
-        <span class='apply_word fl'>身份证号</span>
-        <input class='apply_means fr' type="text" placeholder="请输入身份证号">
-    </div>
-
-    <div class="apply_content_box clear">
-        <span class='apply_word fl'>电子邮箱</span>
-        <input class='apply_means fr' type="text" placeholder="请输入电子邮箱">
-    </div>
-
-    <div class="apply_content_box clear">
-        <span class='apply_word fl'>在职职务</span>
-        <input class='apply_means fr' type="text" placeholder="请输入在职职务">
-    </div>
-
-    <div class="apply_content_box clear">
-        <span class='apply_word fl'>关注领域</span>
-        <input class='apply_means fr' type="text"  placeholder="请选择关注领域" readonly="readonly">
-    </div>
-    <div class="areas_main clear">
-        <li class="areas_default">电子信息</li>
-        <li class="areas_default">先进制造</li>
-        <li class="areas_default">新材料</li>
-        <li class="areas_default">新能源与节能</li>
-        <li class="areas_default">环境保护</li>
-        <li class="areas_default">健康医疗</li>
-        <li class="areas_default">智能技术</li>
-    </div>
-
-    <div class="cer-middle">
-        <p class='mid_p'>上传证件</p>
-        <div class="IDcardDiv clear">
-            <input type="file" name="pic" accept="image/*" class="picZM" style='display:none'/>
-            <input type="file" name="pic" accept="image/*" class="picFM" style='display:none'/>
-            <img class='fl fileZm' src="{$Think.MOBILE}/images/sfz-zm.png" alt="">
-            <img class='fr fileFm' src="{$Think.MOBILE}/images/sfz-fm.png" alt="">
+<form id="formID">
+    <div class="my_content">
+        <div class="apply_content_box clear">
+            <span class='apply_word fl'>手机号</span>
+            <input class='apply_means fr' type="text" value="{$Think.session.userArr.mobile}" readonly="readonly">
         </div>
-    </div>
 
-</div>
-<a href="" class="apply_form">提 交</a>
+        <div class="apply_content_box chose clear">
+            <span class='apply_word fl'>真实姓名</span>
+            <input class='apply_means fr' type="text" placeholder="请输入真实姓名" name="user_name">
+        </div>
+
+
+        <div class="apply_content_box chose clear">
+            <span class='apply_word fl'>身份证号</span>
+            <input class='apply_means fr' type="text" placeholder="请输入身份证号" name="idcard">
+        </div>
+
+        <div class="apply_content_box clear">
+            <span class='apply_word fl'>电子邮箱</span>
+            <input class='apply_means fr' type="text" placeholder="请输入电子邮箱" name="email">
+        </div>
+
+        <div class="apply_content_box clear">
+            <span class='apply_word fl'>在职职务</span>
+            <input class='apply_means fr' type="text" placeholder="请输入在职职务" name="job">
+        </div>
+
+        <div class="apply_content_box clear">
+            <span class='apply_word fl'>关注领域</span>
+            <input class='fr' type="text"  placeholder="请选择关注领域" readonly="readonly" style="margin-top:40px;text-align:right;">
+        </div>
+        <div class="areas_main clear">
+            <li class="areas_default">电子信息</li>
+            <li class="areas_default">先进制造</li>
+            <li class="areas_default">新材料</li>
+            <li class="areas_default">新能源与节能</li>
+            <li class="areas_default">环境保护</li>
+            <li class="areas_default">健康医疗</li>
+            <li class="areas_default">智能技术</li>
+        </div>
+
+        <div class="cer-middle">
+            <p class='mid_p'>上传证件</p>
+            <div class="IDcardDiv clear">
+                <input type="file" name="pic" accept="image/*" class="picZM" style='display:none'/>
+                <input type="file" name="pic" accept="image/*" class="picFM" style='display:none'/>
+                <img class='fl fileZm' src="{$Think.MOBILE}/images/sfz-zm.png" alt="">
+                <img class='fr fileFm' src="{$Think.MOBILE}/images/sfz-fm.png" alt="">
+            </div>
+        </div>
+
+    </div>
+</form>
+<a class="apply_form">提 交</a>
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script src='{$Think.MOBILE}/js/return.js'></script>
 <script>
+    var data = {};//全局data
     // 需求领域  单选
     $(".areas_default").on("click",function(){
         $(this).addClass('areas_selected').removeClass('areas_default').siblings().addClass('areas_default').removeClass('areas_selected');
@@ -85,9 +88,118 @@
     // 点击触发拍照上传功能
     $('.fileZm').on('click',function(){
         $('.picZM').click();
-    })
+    });
     $('.fileFm').on('click',function(){
         $('.picFM').click();
-    })
+    });
+
+
+    var app = angular.module('authen', []);
+    app.controller('authenCtrl', function ($scope,$http) {
+
+    });
+
+
+    function getMsg(){        
+        // 判断资料是否填写完整
+        var count = $(".areas_selected").length;
+        var picZM = $(".picZM").val();  
+        var picFM = $(".picFM").val();
+        // 关注领域选中状态
+        var li = $(".areas_main li");
+        var lingyu_html;
+        for(var i = 0;i < li.length ; i++){
+            if( li.eq(i).hasClass('areas_selected') ){               
+                 lingyu_html = li.eq(i).html();
+            }
+        };
+        for(var j = 0 ;j < $(".apply_means").length;j++){
+            console.log($(".apply_means").eq(j).val());
+            if($(".apply_means").eq(j).val()==""){
+               alert("当前表单不能有空项");
+               $(".apply_means").eq(j).focus();
+                return false;
+            }
+            else if(count < 1){
+                alert("请选择关注领域");
+                return false;
+            }else if(picZM=="" && picFM==""){
+                alert("请上传身份证照片");
+                return false;
+            }
+            else{
+                //异步提交表单数据
+                var t = $("#formID").serializeArray();
+                $.each(t, function() {
+                    data[this.name] = this.value;
+                });
+
+                $.ajax({
+                    type: "post",
+                    url: '/api.php/User/user_authen/action/edit',
+                    data: data,
+                    dataType: 'json',
+                    success: function (res) {
+                      if(res.result == 1){
+                        alert("提交成功!"); 
+                        return false;                      
+                      }
+                    }
+                })
+                
+            }
+        }
+    }   
+    
+    $(".apply_form").on("click",function(){ 
+        getMsg();
+    });
+
+    // 上传照片
+    function filePhoto(){
+
+    };
+
+    $('.picZM').change(function() {
+        console.log($(this).val());
+        var head_pic = $(this).val();
+        var data = {
+            head_pic:head_pic
+        };
+        $.ajax({
+            type: "post",
+            url: '/api.php/User/user_authen/action/update_head',
+            data: data,
+            dataType: 'json',
+            success: function (res) {
+              if(res.result == 1){
+                alert("提交照片成功!"); 
+                return false;                      
+              }
+            }
+        })
+    });
+
+    $('.picFM').change(function() {
+        console.log($(this).val());
+        var head_pic = $(this).val();
+        var data = {
+            head_pic:head_pic
+        };
+        $.ajax({
+            type: "post",
+            url: '/api.php/User/user_authen/action/update_head',
+            data: data,
+            dataType: 'json',
+            success: function (res) {
+              if(res.result == 1){
+                alert("提交照片成功!"); 
+                return false;                      
+              }
+            }
+        })
+    });
+
+
 </script>
 </html>

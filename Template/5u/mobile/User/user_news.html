@@ -14,10 +14,12 @@
     <div ng-repeat="new in news">
         <a href="/index.php/Mobile/User/new_detail.html?data_id={{new.id}}">
             <div class="news_div clear">
-                <img class="fl" src="{$Think.MOBILE}/images/my-new-default.png" alt="">
-                <div class="news_div_right fl">
+                <!-- status判断消息是否已读,1为已读 -->
+                <img class="fl" src="{$Think.MOBILE}/images/my-new-default.png" alt="" ng-show="{{new.status}}!=1">
+                <img class="fl" src="{$Think.MOBILE}/images/my-new-visited.png" alt="" ng-hide="{{new.status}}!=1">
+                <div class="news_div_right fl" ng-class="{{new.status}}!=1?'news_div_right':'_visitedBg'">
                     <div class="clear">
-                        <p class="fl new_msg">系统通知</p>
+                        <p class="fl" ng-class="{{new.status}}!=1?'new_msg':'_visited'">系统通知</p>
                         <p class="fr new_date" ng-cloak>{{new.create_time}}</p>
                     </div>
                     <p class="news_content" ng-cloak>
@@ -34,6 +36,7 @@
 <script>
     var app = angular.module('user_news', []);
     app.controller('newsCtrl', function($scope,$http) {
+        $scope.status = 0;
         var data = {
             page : 1,
             page_num : 10,
@@ -53,8 +56,8 @@
                      }
                      return str.join("&");
                  }
-        }).then(function successCallback(response) {    
-             $scope.news = response.data.data.info;             
+        }).then(function successCallback(response) {             
+            $scope.news = response.data.data.info;       
             }, function errorCallback(response) {
 
         });

@@ -15,6 +15,7 @@
 <body ng-cloak ng-controller="demandListCtrl">
     <div class="mask" style="display:none"></div>
     <div class="alert" style="display:none">
+        <img class="exc" src="{$Think.MOBILE}/images/exclamation.png" alt="" style="margin-top:5px">
         <div class="sorry">
             很抱歉，没有找到相关的结果。<br>
             你可以委托庖丁众包
@@ -127,6 +128,7 @@
 <script>
     
     $(".findDemand").on("click",function(){
+        $(".exc").hide();
         $(".sorry").hide();
         $(".showTel").show();
     });
@@ -260,7 +262,7 @@
         data.page="1";
         data.search = $(".tech_search").val();      
         page_total=getListData(data,"html");
-        // console.log(info);
+        console.log(info);
         if(info == ""){
             $(".mask").show();
             $(".alert").show();

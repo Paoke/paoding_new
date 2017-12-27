@@ -15,7 +15,7 @@
 <body ng-controller="tecListCtrl">
 
 <div class="mask" style="display:none"></div>
-<div class="alert" style="display:none">
+<div class="alert" style="display:none" id="nofind_alert">
     <img src="{$Think.MOBILE}/images/exclamation.png" alt="" style="margin-top:15px">
     <div class="sorry">
         很抱歉，没有找到相关的结果。<br>
@@ -148,7 +148,6 @@
     });
 
     var page = "";//页码
-    var info = "";//搜索判断有无数据
     var page_total = "";//总页数
     var data = {
         "page": "1",
@@ -248,9 +247,10 @@
         data.page="1";
         data.search = $(".tech_search").val();      
         page_total=getListData(data,"html");
-        if(info == ""){
+        // 判断有无搜索结果
+        if(page_total == 0){
             $(".mask").show();
-            $(".alert").show();
+            $("#nofind_alert").show();
         }
     })
 
@@ -270,7 +270,7 @@
             async: false,
             success: function(response){
                 var code="";
-                var info = response['data']['info'];
+                info = response['data']['info'];
                 result=response['data']['page'].page_total;
                 for (var i = 0; i < info.length; i++) {
                     code = code +

@@ -936,5 +936,29 @@ html,body{
 	text-align: center;
 }
 
+._visited{
+	color: #999;
+	font-size: 30px;
+	margin-left: 30px;
+}
+._visitedBg{
+	width: 540px;
+	margin-left: 20px;
+	border-top: 10px solid #999;
+	border-bottom: 1px solid #8e8e8e;
+	padding: 20px 0 30px;
+}
+._visitedCt{
+	font-size: 26px;
+	color: #999;
+	line-height: 1.5;
+	width: 480px;
+	margin: 20px auto 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
 
 
