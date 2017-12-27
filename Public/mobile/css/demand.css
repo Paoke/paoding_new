@@ -147,6 +147,8 @@ html,body{
 }
 .sec_data_p{
 	margin-top: 20px;
+	font-size: 24px;
+	color: #999;
 }
 .sec_data_num{
 	margin: 0 0 22px 0;

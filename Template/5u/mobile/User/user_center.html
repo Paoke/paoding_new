@@ -40,11 +40,11 @@
 
 <div class="my_project clear">
     <div class="clear fl my_project_left">
-        <a href="__MODULE__/Demand/release.html" class="fl">
+        <a href="__MODULE__/User/user_demand.html" class="fl">
             <img src="{$Think.MOBILE}/images/icon-my-demand.png" alt="">
             <p>我的需求</p>
         </a>
-        <a href="__MODULE__/Index/release.html" class="fl">
+        <a href="__MODULE__/User/user_tec.html" class="fl">
             <img src="{$Think.MOBILE}/images/icon-my-technology.png" alt="">
             <p>我的技术</p>
         </a>
@@ -93,7 +93,7 @@
         <p>需求</p>
     </a>
     <a class="nav_option" href="__MODULE__/Activity/activity">
-        <img src="{$Think.MOBILE}/images/icon-tabbar-activity-default.png" alt="">
+        <img src="{$Think.MOBILE}/images/icon-tabbar-activity-default.png.png" alt="">
         <p>活动</p>
     </a>
     <a class="nav_option" href="__MODULE__/User/user_center">
@@ -132,9 +132,8 @@
             url: '/api.php/User/user_news/action/count',          
         }).then(function successCallback(response) {    
              $scope.news = response.data.data;
-             console.log(response.data.msg);
             }, function errorCallback(response) {
-                console.log(response.data.msg);
+
         });
 
     });

@@ -309,6 +309,8 @@ class ArticleController extends BaseController
                 $info=M('article_user_relation_js')
                     ->table('5u_article_user_relation_js A')
                     ->join('5u_article_js B ON A.js_id=B.id')
+                    ->join("LEFT JOIN __ARTICLE_CATEGORY_JS__ AS C ON B.category_id=C.id")
+                    ->field('A.*,B.*,c.cat_name')
                     ->where('A.user_id='.$_SESSION['userId'])
                     ->select();
             }else{
@@ -403,6 +405,37 @@ class ArticleController extends BaseController
         }
 
         json_return($returnArr);
+    }
+
+    /**
+     * 我的技术/需求
+     */
+    public function my_project()
+    {
+        $channel=$_GET['channel'];
+        $action=$_GET['action'];
+        if($action=='datalist'){
+            if($channel=='js'){
+                $info=M('article_js')->where('create_user_id='.$_SESSION['userId'])->order('create_time desc')->select();
+            }else{
+                $info=M('article_xq')->where('create_user_id='.$_SESSION['userId'])->order('create_time desc')->select();
+            }
+        }else{
+            $data_id=$_GET['data_id'];
+            if($channel=='js'){
+                $info=M('article_js')->where('id='.$data_id)->find();
+            }else{
+                $info=M('article_xq')->where('id='.$data_id)->find();
+            }
+        }
+        if($info){
+            $returnArr = array("result" => 1, "msg" => "请求成功", "code" => 200,"data" => $info);
+        }else{
+            $returnArr = array("result" => 0, "msg" => "频道参数错误", "code" => 402, "data" => null);
+        }
+
+        json_return($returnArr);
+
     }
 
 }

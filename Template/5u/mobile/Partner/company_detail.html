@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="detail">
 <head>
     <meta charset="UTF-8">
     <title>合作单位</title>
@@ -17,31 +17,31 @@
         }
     </style>
 </head>
-<body>
+<body ng-controller="detailCtrl">
 <div class="mask" style="display:none"></div>
 <div class="contackWay_alert">
     <p class="contackWay">联系方式</p>
     <div class="alert_part clear">
         <p class="alert_part_l fl">联系人</p>
-        <p class="alert_part_r fl">张东伟</p>
+        <p class="alert_part_r fl" ng-cloak>{{ detail.lxr }}</p>
     </div>
     <div class="alert_part clear">
         <p class="alert_part_l fl">手机号</p>
-        <p class="alert_part_r fl">1852020174</p>
+        <p class="alert_part_r fl" ng-cloak>{{ detail.sjhm }}</p>
     </div>
     <div class="alert_part clear">
         <p class="alert_part_l fl">邮箱号</p>
-        <p class="alert_part_r fl">21343@qq.com</p>
+        <p class="alert_part_r fl" ng-cloak>{{ detail.youxiang }}</p>
     </div>
     <div class="alert_part clear">
         <p class="alert_part_l fl">企业名</p>
-        <p class="alert_part_r fl">广州中国科技园先进技术研究所</p>
+        <p class="alert_part_r fl" ng-cloak>{{ detail.title }}</p>
     </div>
     <div class="close" style="width:580px;">关闭</div>
 </div>
 
 <div class="banner">
-    <img src="{$Think.MOBILE}/images/index-banner1.jpg" alt="">
+    <img src="{{ detail.xqydt }}" alt="" ng-cloak="">
 </div>
 
 <div class="tec_tab">
@@ -55,7 +55,7 @@
 <!-- 企业简介 -->
 <div class="tab_body" style="display:block;">
     <p class="companyIntro">
-        关于广东英吉尔科技股份有限公司挂牌申请文件的第一次反馈意见的回复主办券商华创证券有限责任公司二〇一五年十二月/35广东英吉尔科技股份有限公司、...
+        {{ detail.desc }}
     </p>
     <div class="index_div"></div>
 
@@ -67,7 +67,7 @@
 
         <div class="userType clear">
             <span class="fl">前沿技术</span>
-            <span class="fl">237</span>
+            <span class="fl" ng-controller="countCtrl">{{ count }}</span>
         </div>
 
         <div class="userType clear">
@@ -333,6 +333,33 @@
         $(".big_cert").hide();
     });
 
+    var data_id = GetQueryString("data_id");
+    var app = angular.module("detail",[]);
+    app.filter('trustHtml',function ($sce){
+        return function(val) {
+            return $sce.trustAsHtml(val);
+        }
+    });
+    app.controller("detailCtrl",function ($scope,$http){
+        $http({
+            method:'GET',
+            params:{data_id:data_id},
+            url:'/api.php/ChannelIndex/index/action/dataDetail/channel/hzjg/type/1',
+        }).then(function successCallback(response){
+            $scope.detail = response.data.data;
+        },function errorCallback(){
+        });
+    });
 
+    app.controller("countCtrl",function ($scope,$http) {
+        $http({
+            method:'GET',
+            params:{data_id:data_id,action:'count'},
+            url:'/index.php/Mobile/Article/count_js',
+        }).then(function successCallback(response){
+            $scope.count = response.data.data;
+        },function errorCallback(){
+        });
+    });
 </script>
 </html>
