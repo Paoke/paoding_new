@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="new_detail">
 <head>
     <meta charset="UTF-8">
     <title>我的消息</title>
@@ -10,15 +10,37 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
     <include file="./Template/5u/common/common.html" />
 </head>
-<body>
+<body ng-controller="newDetCtrl">
 <div class="news_detail">
     <p class="new_det_msg">系统通知</p>
-    <p class="news_detail_ct">
-        尊敬的用户，您好！您于2017年9月26日成功提交资料申请合格认证，认证审核结果在两个工作日后发送，届时请你留意，谢谢！
+    <p class="news_detail_ct" ng-cloak>
+        {{news.content}}
     </p>
-    <p class="det_time">2017-11-16</p>
+    <p class="det_time" ng-cloak>{{news.create_time}}</p>
 </div>
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script src='{$Think.MOBILE}/js/return.js'></script>
+<script>
+    var data_id = GetQueryString('data_id'); 
+    var app = angular.module('new_detail', []);
+    app.controller('newDetCtrl', function($scope,$http) {
+        $http({
+            method: 'GET',
+            params:{data_id:data_id},
+            url: '/api.php/User/user_news/action/data_detail'
+        }).then(function successCallback(response) {    
+             $scope.news = response.data.data;           
+            }, function errorCallback(response) {
+
+        });
+    });
+
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r!=null) return unescape(r[2]); return null;
+    }
+</script>
 </html>
