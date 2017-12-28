@@ -7,18 +7,21 @@
     <meta name="keywords" content="庖丁众包、智能技术、机械制造、健康医疗、材料科学、能源环保、生产流程优化"/>
     <meta name='viewport' content='user-scalable=no,width=750'>
     <link rel="stylesheet" href="{$Think.MOBILE}/css/common_new.css">
+    <link rel="stylesheet" href="{$Think.MOBILE}/css/demand.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/index.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
     <include file="./Template/5u/common/common.html" />
 </head>
 <body ng-controller="authenCtrl">
 <div class="mask" style="display:none;"></div>
-<div class="identify_tip" style="display:none;">
-    <p>认证信息提交成功</p>
-    <a href="">两个工作日后通知认证结果</a>
+<div class="alert" style="display:none;">
+    <img src="{$Think.MOBILE}/images/exclamation.png" alt="" style="margin-top:15px">
+    <div class="sorry">
+        认证信息提交成功<br>
+        两个工作日后通知认证结果
+    </div>
+    <div class="close">关闭</div>
 </div>
-<p class="apply_tit">申请认证</p>
-<p class="apply_tip">你当前未通过平台合格认证，请填写认证信息！</p>
 <form id="formID">
     <div class="my_content">
         <div class="apply_content_box clear">
@@ -28,18 +31,18 @@
 
         <div class="apply_content_box chose clear">
             <span class='apply_word fl'>真实姓名</span>
-            <input class='apply_means fr' type="text" placeholder="请输入真实姓名" name="user_name">
+            <input class='apply_means fr' type="text" placeholder="请输入真实姓名" name="user_name" id="user_name">
         </div>
 
 
         <div class="apply_content_box chose clear">
             <span class='apply_word fl'>身份证号</span>
-            <input class='apply_means fr' type="text" placeholder="请输入身份证号" name="idcard">
+            <input class='apply_means fr' type="text" placeholder="请输入身份证号" name="idcard" id="idcard">
         </div>
 
         <div class="apply_content_box clear">
             <span class='apply_word fl'>电子邮箱</span>
-            <input class='apply_means fr' type="text" placeholder="请输入电子邮箱" name="email">
+            <input class='apply_means fr' type="text" placeholder="请输入电子邮箱" name="email" id="email">
         </div>
 
         <div class="apply_content_box clear">
@@ -79,7 +82,138 @@
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script src='{$Think.MOBILE}/js/return.js'></script>
 <script>
-    var data = {};//全局data
+    var lingyu_html, tech_field, head_pic1,head_pic2;
+    var data = {
+        user_name:'',
+        idcard:'',
+        email:'',
+        job:'',
+        tech_field : tech_field,
+        idcard_img_front : '',
+        idcard_img_back : '',
+        type : "个人"
+    };//全局data
+    var tip = {
+        tip_ct:"",
+    };
+    var tips = {
+        addtips:function(tip_ct){
+            var tipNode = '<div class="tipCommon" style="display:block">'+tip_ct+'</div>';
+            $('body').append(tipNode);
+            setTimeout(function(){
+                $(".tipCommon").remove();
+            },1500)
+        }
+    };
+
+    function getMsg(){ 
+        var regName = /^([\u4e00-\u9fa5]){2,5}$/;
+        var regId = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/;    
+        var regEm = /^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/;
+        var user_name = $("#user_name").val();
+        var idcard = $("#idcard").val();
+        var email = $("#email").val();
+        // 判断资料是否填写完整
+        var count = $(".areas_selected").length;
+        var picZM = $(".picZM").val();  
+        var picFM = $(".picFM").val();
+        // 关注领域选中状态
+        var li = $(".areas_main li");        
+        for(var i = 0;i < li.length ; i++){
+            if( li.eq(i).hasClass('areas_selected') ){               
+                 lingyu_html = li.eq(i).html();
+            }
+        };
+        for(var j = 0 ;j < $(".apply_means").length;j++){           
+            if($(".apply_means").eq(j).val()==""){
+               $(".apply_means").eq(j).focus();
+               tip_ct = "当前表单不能有空项";
+               tips.addtips(tip_ct);
+               return false;
+            }
+        }
+        if(count < 1){
+            tip_ct = "请选择关注领域";
+            tips.addtips(tip_ct);
+            return false;
+        }
+        else if(picZM=="" || picFM==""){
+            tip_ct = "请上传身份证照片";
+            tips.addtips(tip_ct);
+            return false;
+        }
+        else if(!regName.test(user_name)){
+            tip_ct = "请输入2——5位的中文姓名";
+            tips.addtips(tip_ct);
+            return false;
+        }
+        else if(!regId.test(idcard)){
+            tip_ct = "请输入正确的身份证号";
+            tips.addtips(tip_ct);
+            return false;
+        }
+        else if(!regEm.test(email)){
+            tip_ct = "请输入正确的邮箱号";
+            tips.addtips(tip_ct);
+            return false;
+        }
+        else{
+            //异步提交表单数据
+            var t = $("#formID").serializeArray();
+            $.each(t, function() {
+                data[this.name] = this.value;
+            });
+            data['tech_field'] = lingyu_html;
+            data['idcard_img_front'] = head_pic1;
+            data['idcard_img_back'] = head_pic2;
+
+            $.ajax({
+                type: "post",
+                url: '/api.php/User/user_authen/action/edit',
+                data: data,
+                dataType: 'json',
+                success: function (res) {
+                    console.log(res);
+                  if(res.result == 1){
+                    $(".alert").show();
+                    $(".mask").show();                   
+                  }
+                }
+            })            
+        }
+    }   
+
+    // 上传照片
+    function filePhoto(head_pic){
+        var data = {
+            head_pic:head_pic
+        };
+        $.ajax({
+            type: "post",
+            url: '/api.php/User/user_authen/action/update_head',
+            data: data,
+            dataType: 'json',
+            success: function (res) {
+                console.log(res);
+              if(res.result == 1){
+                tip_ct = "提交身份证照片成功";
+                tips.addtips(tip_ct);
+                return false;                    
+              }
+            }
+        })
+    };
+    // 上传照片
+    $('.picZM').change(function() {   
+        head_pic1 = $(this).val();     
+        filePhoto(head_pic1)
+    });
+
+    $('.picFM').change(function() {
+        head_pic2 = $(this).val();
+        filePhoto(head_pic2);
+    });
+
     // 需求领域  单选
     $(".areas_default").on("click",function(){
         $(this).addClass('areas_selected').removeClass('areas_default').siblings().addClass('areas_default').removeClass('areas_selected');
@@ -93,112 +227,18 @@
         $('.picFM').click();
     });
 
-
-    var app = angular.module('authen', []);
-    app.controller('authenCtrl', function ($scope,$http) {
-
-    });
-
-
-    function getMsg(){        
-        // 判断资料是否填写完整
-        var count = $(".areas_selected").length;
-        var picZM = $(".picZM").val();  
-        var picFM = $(".picFM").val();
-        // 关注领域选中状态
-        var li = $(".areas_main li");
-        var lingyu_html;
-        for(var i = 0;i < li.length ; i++){
-            if( li.eq(i).hasClass('areas_selected') ){               
-                 lingyu_html = li.eq(i).html();
-            }
-        };
-        for(var j = 0 ;j < $(".apply_means").length;j++){
-            console.log($(".apply_means").eq(j).val());
-            if($(".apply_means").eq(j).val()==""){
-               alert("当前表单不能有空项");
-               $(".apply_means").eq(j).focus();
-                return false;
-            }
-            else if(count < 1){
-                alert("请选择关注领域");
-                return false;
-            }else if(picZM=="" && picFM==""){
-                alert("请上传身份证照片");
-                return false;
-            }
-            else{
-                //异步提交表单数据
-                var t = $("#formID").serializeArray();
-                $.each(t, function() {
-                    data[this.name] = this.value;
-                });
-
-                $.ajax({
-                    type: "post",
-                    url: '/api.php/User/user_authen/action/edit',
-                    data: data,
-                    dataType: 'json',
-                    success: function (res) {
-                      if(res.result == 1){
-                        alert("提交成功!"); 
-                        return false;                      
-                      }
-                    }
-                })
-                
-            }
-        }
-    }   
-    
+    // 提交
     $(".apply_form").on("click",function(){ 
         getMsg();
     });
 
-    // 上传照片
-    function filePhoto(){
-
-    };
-
-    $('.picZM').change(function() {
-        console.log($(this).val());
-        var head_pic = $(this).val();
-        var data = {
-            head_pic:head_pic
-        };
-        $.ajax({
-            type: "post",
-            url: '/api.php/User/user_authen/action/update_head',
-            data: data,
-            dataType: 'json',
-            success: function (res) {
-              if(res.result == 1){
-                alert("提交照片成功!"); 
-                return false;                      
-              }
-            }
-        })
+    $(".close").on("click",function(){
+        $(".mask").hide();
+        $(".alert").hide();
+        window.location.href="/index.php/Mobile/User/user_center.html";
     });
 
-    $('.picFM').change(function() {
-        console.log($(this).val());
-        var head_pic = $(this).val();
-        var data = {
-            head_pic:head_pic
-        };
-        $.ajax({
-            type: "post",
-            url: '/api.php/User/user_authen/action/update_head',
-            data: data,
-            dataType: 'json',
-            success: function (res) {
-              if(res.result == 1){
-                alert("提交照片成功!"); 
-                return false;                      
-              }
-            }
-        })
-    });
+
 
 
 </script>
