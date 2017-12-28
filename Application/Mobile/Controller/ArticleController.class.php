@@ -279,7 +279,12 @@ class ArticleController extends BaseController
                 $tableName='article_user_relation_js';
                 $data['js_id']=$_GET['id'];
                 $data['col']='js_id';
-            }else{
+            }elseif($channel=='hz'){
+                $tableName='article_user_relation_hz';
+                $data['article_id']=$_GET['id'];
+                $data['col']='article_id';
+                $data['type']=$_GET['type'];
+            } else{
                 $tableName='article_user_relation_xq';
                 $data['xq_id']=$_GET['id'];
                 $data['col']='xq_id';
@@ -313,6 +318,24 @@ class ArticleController extends BaseController
                     ->field('A.*,B.*,c.cat_name')
                     ->where('A.user_id='.$_SESSION['userId'])
                     ->select();
+            }elseif($channel=='hz'){
+                $type=$_GET['type'];
+                if($type=='jtgs'){
+                    $info=M('article_user_relation_hz')
+                        ->table('5u_article_user_relation_hz A')
+                        ->join('5u_article_jtgs B ON A.article_id=B.id')
+                        ->field('B.*')
+                        ->where('A.user_id='.$_SESSION['userId'].' and A.type='.$type)
+                        ->select();
+                }else{
+                    $info=M('article_user_relation_hz')
+                        ->table('5u_article_user_relation_hz A')
+                        ->join('5u_article_hzjg B ON A.article_id=B.id')
+                        ->field('B.*')
+                        ->where('A.user_id='.$_SESSION['userId'].' and A.type='.$type)
+                        ->select();
+                }
+
             }else{
                 $info=M('article_user_relation_xq')
                     ->table('5u_article_user_relation_xq A')
@@ -344,6 +367,9 @@ class ArticleController extends BaseController
         }elseif ($channel=='hd'){
             $tableName='activity_user_relation_hd';
             $column='hd_id';
+        }elseif($channel=='hz'){
+            $tableName='article_user_relation_hz';
+            $column='article_id';
         }else{
             $tableName='article_user_relation_xq';
             $column='xq_id';
@@ -353,7 +379,7 @@ class ArticleController extends BaseController
         if($count){
             $returnArr = array("result" => 1, "msg" => "已收藏", "code" => 200);
         }else{
-            $returnArr = array("result" => 0, "msg" => "未收藏", "code" => 200);
+            $returnArr = array("result" => 0, "msg" => "未收藏", "code" => 402);
         }
 
         json_return($returnArr);
@@ -437,6 +463,11 @@ class ArticleController extends BaseController
         json_return($returnArr);
 
     }
+
+    /**
+     * 合作机构收藏
+     */
+
 
 }
 

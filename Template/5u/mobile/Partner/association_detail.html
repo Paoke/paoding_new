@@ -8,10 +8,21 @@
     <meta name='viewport' content='user-scalable=no,width=750'>
     <link rel="stylesheet" href="{$Think.MOBILE}/css/common_new.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/index.css">
+    <link rel="stylesheet" href="{$Think.MOBILE}/css/demand.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
     <include file="./Template/5u/common/common.html" />
 </head>
 <body style="overflow-x:hidden" ng-controller="detailCtrl">
+<div class="mask" style="display:none"></div>
+<div class="alert" style="display:none">
+    <img src="{$Think.MOBILE}/images/exclamation.png" alt="" style="margin-top:40px">
+    <div class="sorry">
+        您目前还没有登录<br>
+        请先
+        <a href="/index.php/Mobile/Login/login"><span class="findDemand">登录/注册</span></a>
+    </div>
+    <div class="close">关闭</div>
+</div>
 <div class="ass_title clear">
     <img class="fl" src="{$Think.MOBILE}/images/index-cooperator-association-logo.jpg" alt="">
     <p class="fl" ng-cloak>{{ detail.title }}</p>
@@ -34,15 +45,19 @@
 
 </div>
 
-<p class="advert">
-    专业科技服务平台
-</p>
+<div class="sec_return">
+    <a onclick="javascript:history.go(-1);">
+        <img class="return_icon" src="{$Think.MOBILE}/images/icon-common-return.png" alt="">
+    </a>
+    <span class="collect" id="collect" ng-show="status == 1" ng-cloak>收藏</span>
+    <span class="collect" id="cancle" style="background:#ccc;" ng-show="status == 0" ng-cloak>取消收藏</span>
+</div>
 
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script src='{$Think.MOBILE}/js/index.js'></script>
-<script src='{$Think.MOBILE}/js/return.js'></script>
+
 <script>
 
     var data_id = GetQueryString("data_id");
@@ -53,6 +68,7 @@
         }
     });
     app.controller("detailCtrl",function ($scope,$http){
+        $scope.status = 1;
         $http({
             method:'GET',
             params:{data_id:data_id},
@@ -61,6 +77,67 @@
             $scope.detail = response.data.data;
         },function errorCallback(){
         });
+
+        // 判断是否已经收藏
+        $http({
+            method:'GET',
+            params:{data_id:data_id,channel:'hz'},
+            url:'/index.php/Mobile/Article/is_like'
+        }).then(function successCallback(response) {
+            if(response.data.msg == "已收藏"){
+                $scope.status = 0;
+            }else{
+                $scope.status = 1;
+            }
+        }, function errorCallback(response) {
+        });
+
+
+        // 收藏
+        $("#collect").on("click",function(){
+            $http({
+                method:'GET',
+                url:'/index.php/Mobile/Article/like?channel=hz&id='+data_id+'&action=1&type=jtgs'
+            }).then(function successCallback(response) {
+                if(response.data.code=="402"){
+                    $(".mask").show();
+                    $(".alert").show();
+                    return false;
+                } else {
+                    $scope.status = 0;
+                }
+            }, function errorCallback(response) {
+            });
+        });
+
+        // 取消收藏
+        $("#cancle").on("click",function(){
+            $http({
+                method:'GET',
+                url:'/index.php/Mobile/Article/like?channel=hz&id='+data_id+'&action=0'
+            }).then(function successCallback(response) {
+                if(response.data.code=="402"){
+                    $(".mask").show();
+                    $(".alert").show();
+                    return false;
+                } else {
+                    $scope.status = 1;
+                }
+            }, function errorCallback(response) {
+            });
+        });
     });
+
+    // 关闭弹出框
+    $(".close").on("click",function(){
+        $(".mask").hide();
+        $(".alert").hide();
+    });
+    $(".mask").on("click",function(){
+        $(".mask").hide();
+        $(".alert").hide();
+    })
+
+
 </script>
 </html>

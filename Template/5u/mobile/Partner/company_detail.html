@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/common_new.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/index.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/activity.css">
+    <link rel="stylesheet" href="{$Think.MOBILE}/css/demand.css">
     <include file="./Template/5u/common/common.html" />
     <style type="text/css">
         .certificate_book{
@@ -19,6 +20,15 @@
 </head>
 <body ng-controller="detailCtrl">
 <div class="mask" style="display:none"></div>
+<div class="alert" style="display:none">
+    <img src="{$Think.MOBILE}/images/exclamation.png" alt="" style="margin-top:40px">
+    <div class="sorry">
+        您目前还没有登录<br>
+        请先
+        <a href="/index.php/Mobile/Login/login"><span class="findDemand">登录/注册</span></a>
+    </div>
+    <div class="close">关闭</div>
+</div>
 <div class="contackWay_alert">
     <p class="contackWay">联系方式</p>
     <div class="alert_part clear">
@@ -54,7 +64,7 @@
 <div class="index_div" style="margin-bottom:20px;"></div>
 <!-- 企业简介 -->
 <div class="tab_body" style="display:block;">
-    <p class="companyIntro">
+    <p class="companyIntro" ng-cloak>
         {{ detail.desc }}
     </p>
     <div class="index_div"></div>
@@ -67,22 +77,22 @@
 
         <div class="userType clear">
             <span class="fl">前沿技术</span>
-            <span class="fl" ng-controller="countCtrl">{{ count }}</span>
+            <span class="fl" ng-controller="countCtrl" ng-cloak>{{ count }}</span>
         </div>
 
         <div class="userType clear">
             <span class="fl">对接方向</span>
-            <span class="fl mastiry_type">高分子材料，有机化学，硝酸铵，高分子材料，有机化学，硝酸铵，高分子材料</span>
+            <span class="fl mastiry_type" ng-cloak>{{ detail.djfx }}</span>
         </div>
 
         <div class="userType clear">
             <span class="fl">应用行业</span>
-            <span class="fl">建筑、环境装饰</span>
+            <span class="fl" ng-cloak>{{ detail.yyxy }}</span>
         </div>
 
         <div class="userType clear">
             <span class="fl">专利证书</span>
-            <span class="fl">23项</span>
+            <span class="fl" ng-cloak>{{ detail.zlsl }}</span>
         </div>
 
         <div class="userType clear">
@@ -92,7 +102,7 @@
 
         <div class="userType clear">
             <span class="fl">企业地址</span>
-            <span class="fl">广州市天河区珠江新城265号</span>
+            <span class="fl" ng-cloak>{{ detail.xxdz }}</span>
         </div>
     </div>
 
@@ -107,10 +117,7 @@
             </div>
 
             <!-- 专利证书 -->
-            <div class="certificate clear" style="display: block;">
-                <img src="{$Think.MOBILE}/images/index-cooperator-company-certificate1-orginal.jpg" alt="">
-                <img src="{$Think.MOBILE}/images/index-cooperator-company-certificate2-orginal.jpg" alt="">
-            </div>
+            <div class="certificate clear" ng-bind-html="detail.zlzs|trustHtml" ng-cloak></div>
         </div>
 
         <div class="certi_main">
@@ -119,10 +126,7 @@
                 <span class="fl theme_tit">荣誉证书</span>
             </div>
             <!-- 荣誉证书 -->
-            <div class="certificate clear">
-                <img src="{$Think.MOBILE}/images/index-cooperator-company-certificate1-orginal.jpg" alt="">
-                <img src="{$Think.MOBILE}/images/index-cooperator-company-certificate2-orginal.jpg" alt="">
-            </div>
+            <div class="certificate clear" ng-bind-html="detail.ryzs|trustHtml" ng-cloak></div>
         </div>
 
         <div class="certi_main">
@@ -131,41 +135,34 @@
                 <span class="fl theme_tit">其他证书</span>
             </div>
             <!-- 其他证书 -->
-            <div class="certificate clear">
-
-                <img src="{$Think.MOBILE}/images/index-cooperator-company-certificate1-orginal.jpg" alt="">
-
-
-                <img src="{$Think.MOBILE}/images/index-cooperator-company-certificate2-orginal.jpg" alt="">
-
-            </div>
+            <div class="certificate clear" ng-bind-html="detail.qtzs|trustHtml" ng-cloak></div>
         </div>
     </div>
     <div class="index_div" style="height:150px;margin-top:30px"></div>
 </div>
 
 <!-- 前沿技术 -->
-<div class="tab_body">
-    <a href="__MODULE__/Index/detail_tec.html">
+<div class="tab_body" ng-controller="countCtrl">
+    <a href="__MODULE__/Index/detail_tec.html?data_id={{techList.id}}" ng-repeat="techList in techLists">
         <div class="advancedWrap">
-            <div class="main_section clear" ng-repeat="tech in techList">
+            <div class="main_section clear">
                 <div class="fl main_section_left">
-                    <img ng-src="{{tech.src}}" alt="">
+                    <img ng-src="{{techList.cover_url}}" alt="" ng-cloak>
                     <!-- <p class="transfer">技术转让</p> -->
                 </div>
                 <div class="fr main_section_right">
-                    <p class="sec_tit">{{tech.title}}</p>
+                    <p class="sec_tit">{{techList.title}}</p>
                     <p>
                         <img src="{$Think.MOBILE}/images/icon-index-industry.png" alt="">
-                        <span class="sec_industry">{{tech.type}}</span>
+                        <span class="sec_industry" ng-cloak>{{techList.yyxy}}</span>
                     </p>
                     <p class="p_scan">
                         <img src="{$Think.MOBILE}/images/icon-index-browse.png" alt="">
-                        <span class="sec_scan">2068</span>
+                        <span class="sec_scan" ng-cloak>{{techList.clicks}}</span>
                     </p>
                     <div class="adhi_print">
-                        <span class="adhibition">应用类</span>
-                        <span class="print">成熟方案</span>
+                        <span class="adhibition" ng-cloak>{{techList.cat_name}}</span>
+                        <span class="print" ng-cloak>{{techList.csd}}</span>
                     </div>
                 </div>
             </div>
@@ -173,24 +170,24 @@
     </a>
 </div>
 <!-- 应用案例-->
-<div class="tab_body" >
-    <a href="__CONTROLLER__/example_detail.html">
+<div class="tab_body" ng-controller="exampleCtrl">
+    <a href="__CONTROLLER__/example_detail.html?data_id={{exampleList.id}}" ng-repeat="exampleList in exampleLists">
         <div class="advancedWrap">
-            <div class="main_section clear" ng-repeat="tech in techList">
+            <div class="main_section clear">
                 <div class="fl main_section_left">
-                    <img ng-src="{{tech.src}}" alt="">
+                    <img ng-src="{{exampleList.leftlogo}}" alt="" ng-cloak>
                     <!-- <p class="transfer">技术转让</p> -->
                 </div>
                 <div class="fr main_section_right">
-                    <p class="sec_tit">{{tech.title}}</p>
-                    <p class="hot_ct" style="margin:-10px 0 20px;-webkit-line-clamp: 2;">士大士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫士大夫夫</p>
+                    <p class="sec_tit" ng-cloak>{{exampleList.title}}</p>
+                    <p class="hot_ct" style="margin:-10px 0 20px;-webkit-line-clamp: 2;" ng-cloak>{{exampleList.desc}}</p>
                     <p>
                         <img src="{$Think.MOBILE}/images/icon-index-industry.png" alt="">
-                        <span class="sec_industry">{{tech.type}}</span>
+                        <span class="sec_industry" ng-cloak>{{exampleList.jsly}}</span>
                     </p>
                     <p class="p_scan">
                         <img src="{$Think.MOBILE}/images/icon-index-browse.png" alt="">
-                        <span class="sec_scan">3个月</span>
+                        <span class="sec_scan" ng-cloak>{{exampleList.jffs}}</span>
                     </p>
 
                 </div>
@@ -265,7 +262,8 @@
     <a onclick="javascript:history.go(-1);">
         <img class="return_icon" src="{$Think.MOBILE}/images/icon-common-return.png" alt="">
     </a>
-    <span class="collect">收藏</p>
+    <span class="collect" id="collect" ng-show="status == 1" ng-cloak>收藏</span>
+    <span class="collect" id="cancle" style="background:#ccc;" ng-show="status == 0" ng-cloak>取消收藏</span>
 </div>
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
@@ -274,7 +272,7 @@
 <script>
 
     $(function(){
-        $('.certificate img').addClass('certificate_book');
+        $('.certificate p img').addClass('certificate_book');
 
     });
 
@@ -308,6 +306,7 @@
 
     // 证书手风琴效果
     $('.show_cert').on('click',function(){
+        $('.certificate p img').addClass('certificate_book');
         //判断当前元素是否是展开状态
         if($(this).parent().find(".certificate").css('display')=="block"){
             $(this).parent().find(".certificate").slideUp(300);
@@ -333,6 +332,16 @@
         $(".big_cert").hide();
     });
 
+    // 关闭弹出框
+    $(".close").on("click",function(){
+        $(".mask").hide();
+        $(".alert").hide();
+    });
+    $(".mask").on("click",function(){
+        $(".mask").hide();
+        $(".alert").hide();
+    })
+
     var data_id = GetQueryString("data_id");
     var app = angular.module("detail",[]);
     app.filter('trustHtml',function ($sce){
@@ -340,7 +349,9 @@
             return $sce.trustAsHtml(val);
         }
     });
+    //详情
     app.controller("detailCtrl",function ($scope,$http){
+        $scope.status = 1;
         $http({
             method:'GET',
             params:{data_id:data_id},
@@ -349,15 +360,77 @@
             $scope.detail = response.data.data;
         },function errorCallback(){
         });
-    });
 
+        // 判断是否已经收藏
+        $http({
+            method:'GET',
+            params:{data_id:data_id,channel:'hz'},
+            url:'/index.php/Mobile/Article/is_like'
+        }).then(function successCallback(response) {
+            if(response.data.msg == "已收藏"){
+                $scope.status = 0;
+            }else{
+                $scope.status = 1;
+            }
+        }, function errorCallback(response) {
+        });
+
+        // 收藏
+        $("#collect").on("click",function(){
+            $http({
+                method:'GET',
+                url:'/index.php/Mobile/Article/like?channel=hz&id='+data_id+'&action=1&type=hzjg'
+            }).then(function successCallback(response) {
+                if(response.data.code=="402"){
+                    $(".mask").show();
+                    $(".alert").show();
+                    return false;
+                } else {
+                    $scope.status = 0;
+                }
+            }, function errorCallback(response) {
+            });
+        });
+
+        // 取消收藏
+        $("#cancle").on("click",function(){
+            $http({
+                method:'GET',
+                url:'/index.php/Mobile/Article/like?channel=hz&id='+data_id+'&action=0'
+            }).then(function successCallback(response) {
+                if(response.data.code=="402"){
+                    $(".mask").show();
+                    $(".alert").show();
+                    return false;
+                } else {
+                    $scope.status = 1;
+                }
+            }, function errorCallback(response) {
+            });
+        });
+
+    });
+    //前沿技术/统计
     app.controller("countCtrl",function ($scope,$http) {
         $http({
             method:'GET',
-            params:{data_id:data_id,action:'count'},
+            params:{data_id:data_id,action:'datalist'},
             url:'/index.php/Mobile/Article/count_js',
         }).then(function successCallback(response){
-            $scope.count = response.data.data;
+            $scope.techLists = response.data.data;
+            $scope.count = response.data.data.length;
+
+        },function errorCallback(){
+        });
+    });
+    //应用案例
+    app.controller("exampleCtrl",function ($scope,$http) {
+        $http({
+            method:'GET',
+            params:{data_id:data_id,action:'datalist'},
+            url:'/index.php/Mobile/Article/example',
+        }).then(function successCallback(response){
+            $scope.exampleLists = response.data.data;
         },function errorCallback(){
         });
     });

@@ -1061,6 +1061,7 @@ class UserController extends BaseRestController
 
                 } else {
                     $data['user_id'] = $_SESSION['userId'];
+                    $data['status'] = '1';
                     $data['add_time'] = date("Y-m-d H:i:s", time());
                     $flag = $DAO->where($where)->add($data);
                 }

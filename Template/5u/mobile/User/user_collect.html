@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
     <include file="./Template/5u/common/common.html" />
 </head>
-<body>
+<body ng-controller="advancedCtrl">
 <div class="tec_tab">
     <p class="active">技术</p>
     <p>需求</p>
@@ -25,7 +25,7 @@
 
 <!-- 技术 -->
 <div class="tab_body" style="display:block">
-    <div class="advancedWrap" ng-controller="advancedCtrl">
+    <div class="advancedWrap">
         <a href="__MODULE__/Index/detail_tec.html?data_id={{tecList.id}}" ng-repeat="tecList in tecLists">
             <div class="main_section clear">
                 <div class="fl main_section_left">
@@ -112,29 +112,23 @@
 <!-- .nav -->
 <div class="tab_body">
     <div class="coop_nav">
-        <p class="fl active">院所</p>
         <p class="fl">协会</p>
-        <p class="fl">公司</p>
+        <p class="fl active">企业</p>
     </div>
 
-    <div class="index_coop_swiper clear" ng-controller="coopUnitCtrl" ng-cloak style="display:block">
-        <div class="coop_section fl" ng-repeat="unit in unitList">
-            <img class="coop_img" ng-src="{{unit.src}}" alt="">
-            <p class="coop_title">{{unit.unit}}2</p>
+    <a href="__MODULE__/Partner/association_detail.html?data_id={{ assoList.id }}" ng-repeat="assoList in assoLists">
+        <div class="index_coop_swiper clear"  style="display:block">
+            <div class="coop_section fl">
+                <img class="coop_img" src=""  alt="{{ assoList.conver_url }}" ng-cloak>
+                <p class="coop_title">{{ assoList.title }}</p>
+            </div>
         </div>
-    </div>
+    </a>
 
-    <div class="index_coop_swiper clear" ng-controller="coopUnitCtrl" ng-cloak >
-        <div class="coop_section fl" ng-repeat="unit in unitList">
-            <img class="coop_img" ng-src="{{unit.src}}" alt="">
-            <p class="coop_title">{{unit.unit}}3</p>
-        </div>
-    </div>
-
-    <div class="index_coop_swiper clear" ng-controller="coopUnitCtrl" ng-cloak >
-        <div class="coop_section fl" ng-repeat="unit in unitList">
-            <img class="coop_img" ng-src="{{unit.src}}" alt="">
-            <p class="coop_title">{{unit.unit}}4</p>
+    <div class="index_coop_swiper clear"  >
+        <div class="coop_section fl" >
+            <img class="coop_img"  alt="">
+            <p class="coop_title">3</p>
         </div>
     </div>
 </div>
@@ -164,6 +158,17 @@
             }, function errorCallback(response) {
                 console.log(response)
             });
+
+        //单位->协会
+        $http({
+            method:"GET",
+            url:"/index.php/Mobile/Article/collect_list?channel=hz&type=jtgs",
+        }).then(function successCallback(response) {
+            $scope.assoLists = response.data.data;
+        }, function errorCallback(response) {
+            console.log(response)
+        });
+
     });
 
     $(".tec_tab p").on("click",function(){
