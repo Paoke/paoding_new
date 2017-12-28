@@ -12,4 +12,17 @@
         var r = window.location.search.substr(1).match(reg);
         if (r!=null) return unescape(r[2]); return null;
     };
+
+    var tip = {
+        tip_ct:"",
+    };
+    var tips = {
+        addtips:function(tip_ct){
+            var tipNode = '<div class="tipCommon" style="display:block">'+tip_ct+'</div>';
+            $('body').append(tipNode);
+            setTimeout(function(){
+                $(".tipCommon").remove();
+            },1500)
+        }
+    };
 </script>

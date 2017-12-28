@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"  ng-app="authen">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>个人认证</title>
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
     <include file="./Template/5u/common/common.html" />
 </head>
-<body ng-controller="authenCtrl">
+<body>
 <div class="mask" style="display:none;"></div>
 <div class="alert" style="display:none;">
     <img src="{$Think.MOBILE}/images/exclamation.png" alt="" style="margin-top:15px">
@@ -67,8 +67,8 @@
         <div class="cer-middle">
             <p class='mid_p'>上传证件</p>
             <div class="IDcardDiv clear">
-                <input type="file" name="pic" accept="image/*" class="picZM" style='display:none'/>
-                <input type="file" name="pic" accept="image/*" class="picFM" style='display:none'/>
+                <input type="file" name="pic" accept="image/*" class="picZM" style='display:none'/ id="picZM">
+                <input type="file" name="pic" accept="image/*" class="picFM" style='display:none'/ id="picFM">
                 <img class='fl fileZm' src="{$Think.MOBILE}/images/sfz-zm.png" alt="">
                 <img class='fr fileFm' src="{$Think.MOBILE}/images/sfz-fm.png" alt="">
             </div>
@@ -79,7 +79,6 @@
 <a class="apply_form">提 交</a>
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
-<script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script src='{$Think.MOBILE}/js/return.js'></script>
 <script>
     var lingyu_html, tech_field, head_pic1,head_pic2;
@@ -88,23 +87,11 @@
         idcard:'',
         email:'',
         job:'',
-        tech_field : tech_field,
+        tech_field : '',
         idcard_img_front : '',
         idcard_img_back : '',
         type : "个人"
     };//全局data
-    var tip = {
-        tip_ct:"",
-    };
-    var tips = {
-        addtips:function(tip_ct){
-            var tipNode = '<div class="tipCommon" style="display:block">'+tip_ct+'</div>';
-            $('body').append(tipNode);
-            setTimeout(function(){
-                $(".tipCommon").remove();
-            },1500)
-        }
-    };
 
     function getMsg(){ 
         var regName = /^([\u4e00-\u9fa5]){2,5}$/;
@@ -127,7 +114,7 @@
         for(var j = 0 ;j < $(".apply_means").length;j++){           
             if($(".apply_means").eq(j).val()==""){
                $(".apply_means").eq(j).focus();
-               tip_ct = "当前表单不能有空项";
+               tip_ct = "请填写完毕再提交";
                tips.addtips(tip_ct);
                return false;
             }
@@ -173,7 +160,6 @@
                 data: data,
                 dataType: 'json',
                 success: function (res) {
-                    console.log(res);
                   if(res.result == 1){
                     $(".alert").show();
                     $(".mask").show();                   
@@ -181,37 +167,55 @@
                 }
             })            
         }
-    }   
-
-    // 上传照片
-    function filePhoto(head_pic){
-        var data = {
-            head_pic:head_pic
-        };
-        $.ajax({
-            type: "post",
-            url: '/api.php/User/user_authen/action/update_head',
-            data: data,
-            dataType: 'json',
-            success: function (res) {
-                console.log(res);
-              if(res.result == 1){
-                tip_ct = "提交身份证照片成功";
-                tips.addtips(tip_ct);
-                return false;                    
-              }
-            }
-        })
-    };
+    } 
     // 上传照片
     $('.picZM').change(function() {   
-        head_pic1 = $(this).val();     
-        filePhoto(head_pic1)
+        var file = document.getElementById('picZM').files[0];
+        var reader = new FileReader(); //声明一个FileReader实例
+        reader.readAsDataURL(file); 
+        reader.onload = function(e){
+            dataPic = this.result;
+            $.ajax({
+                type: "post",
+                url: '/api.php/User/user_authen/action/update_head',
+                data: {head_pic:dataPic},
+                dataType: 'json',
+                // 路径有中文无法提交
+                success: function (res) {               
+                  if(res.result == 1){
+                    console.log(res.data);
+                    head_pic1 = res.data;  //获取返回图片路径
+                    tip_ct = "提交身份证正面成功";
+                    tips.addtips(tip_ct);
+                    return false;                    
+                  }
+                }
+            })
+        }       
     });
 
     $('.picFM').change(function() {
-        head_pic2 = $(this).val();
-        filePhoto(head_pic2);
+        var file = document.getElementById('picFM').files[0];
+        var reader = new FileReader();
+        reader.readAsDataURL(file); 
+        reader.onload = function(e){
+            dataPic = this.result;
+            $.ajax({
+                type: "post",
+                url: '/api.php/User/user_authen/action/update_head',
+                data: {head_pic:dataPic},
+                dataType: 'json',               
+                success: function (res) {               
+                  if(res.result == 1){
+                    console.log(res.data);
+                    head_pic2 = res.data;  
+                    tip_ct = "提交身份证反面成功";
+                    tips.addtips(tip_ct);
+                    return false;                    
+                  }
+                }
+            })
+        }  
     });
 
     // 需求领域  单选

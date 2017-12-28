@@ -7,75 +7,136 @@
     <meta name="keywords" content="庖丁众包、智能技术、机械制造、健康医疗、材料科学、能源环保、生产流程优化"/>
     <meta name='viewport' content='user-scalable=no,width=750'>
     <link rel="stylesheet" href="{$Think.MOBILE}/css/common_new.css">
+    <link rel="stylesheet" href="{$Think.MOBILE}/css/demand.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/index.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
     <include file="./Template/5u/common/common.html" />
 </head>
 <body>
 <div class="mask" style="display:none;"></div>
-<div class="identify_tip">
-    <p>认证信息提交成功</p>
-    <a href="">两个工作日后通知认证结果</a>
+<div class="alert" style="display:none;">
+    <img src="{$Think.MOBILE}/images/exclamation.png" alt="" style="margin-top:15px">
+    <div class="sorry">
+        认证信息提交成功<br>
+        两个工作日后通知认证结果
+    </div>
+    <div class="close">关闭</div>
 </div>
-
-<p class="apply_tit">申请认证</p>
-<p class="apply_tip">你当前未通过平台合格认证，请填写认证信息！</p>
-<div class="my_content">
-    <div class="apply_content_box clear">
-        <span class='apply_word fl'>手机号</span>
-        <input class='apply_means fr' type="text" value="{$Think.session.userArr.mobile}" readonly="readonly">
-    </div>
-
-
-    <div class="apply_content_box chose clear">
-        <span class='apply_word fl'>企业/单位名</span>
-        <input class='apply_means fr' type="text" placeholder="请输入企业/单位名">
-    </div>
-
-
-    <div class="apply_content_box chose clear">
-        <span class='apply_word fl'>主营业务</span>
-        <input class='apply_means fr' type="text" placeholder="请输入主营业务">
-    </div>
-
-    <div class="apply_content_box chose clear">
-        <span class='apply_word fl'>企业地址</span>
-        <input class='apply_means fr' type="text" placeholder="省--市--区--街">
-    </div>
-
-    <div class="apply_content_box chose clear">
-        <span class='apply_word fl'>联系人</span>
-        <input class='apply_means fr' type="text" placeholder="请输入联系人姓名">
-    </div>
-
-    <div class="apply_content_box clear">
-        <span class='apply_word fl'>关注领域</span>
-        <input class='apply_means fr' type="text"  placeholder="请选择关注领域" readonly="readonly">
-    </div>
-    <div class="areas_main clear">
-        <li class="areas_default">电子信息</li>
-        <li class="areas_default">先进制造</li>
-        <li class="areas_default">新材料</li>
-        <li class="areas_default">新能源与节能</li>
-        <li class="areas_default">环境保护</li>
-        <li class="areas_default">健康医疗</li>
-        <li class="areas_default">智能技术</li>
-    </div>
-
-    <div class="cer-middle">
-        <p class='mid_p'>营业执照</p>
-        <div class="IDcardDiv" style="text-align:center">
-            <input type="file" name="pic" accept="image/*" class="picFM" style='display:none'/>
-            <img class='fileFm' src="{$Think.MOBILE}/images/yyzz.png" alt="">
+<form id="formID">
+    <div class="my_content">
+        <div class="apply_content_box clear">
+            <span class='apply_word fl'>手机号</span>
+            <input class='apply_means fr' type="text" value="{$Think.session.userArr.mobile}" readonly="readonly">
         </div>
-    </div>
 
-</div>
+
+        <div class="apply_content_box chose clear">
+            <span class='apply_word fl'>企业/单位名</span>
+            <input class='apply_means fr' type="text" placeholder="请输入企业/单位名" name="company_name">
+        </div>
+
+
+        <div class="apply_content_box chose clear">
+            <span class='apply_word fl'>主营业务</span>
+            <input class='apply_means fr' type="text" placeholder="请输入主营业务" name="zyyw">
+        </div>
+
+        <div class="apply_content_box chose clear">
+            <span class='apply_word fl'>企业地址</span>
+            <input class='apply_means fr' type="text" placeholder="省--市--区--街" name="address">
+        </div>
+
+        <div class="apply_content_box chose clear">
+            <span class='apply_word fl'>联系人</span>
+            <input class='apply_means fr' type="text" placeholder="请输入联系人姓名" name="user_name">
+        </div>
+
+        <div class="apply_content_box clear">
+            <span class='apply_word fl'>关注领域</span>
+            <input class='fr' type="text"  placeholder="请选择关注领域" readonly="readonly" style="margin-top:40px;text-align:right;">
+        </div>
+        <div class="areas_main clear">
+            <li class="areas_default">电子信息</li>
+            <li class="areas_default">先进制造</li>
+            <li class="areas_default">新材料</li>
+            <li class="areas_default">新能源与节能</li>
+            <li class="areas_default">环境保护</li>
+            <li class="areas_default">健康医疗</li>
+            <li class="areas_default">智能技术</li>
+        </div>
+
+        <div class="cer-middle">
+            <p class='mid_p'>营业执照</p>
+            <div class="IDcardDiv" style="text-align:center">
+                <input type="file" name="pic" accept="image/*" class="picFM" style='display:none'/ id="picFM">
+                <img class='fileFm' src="{$Think.MOBILE}/images/yyzz.png" alt="">
+            </div>
+        </div>
+
+    </div>
+</form>
 <p href="" class="apply_form">提 交</p>
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
 <script src='{$Think.MOBILE}/js/return.js'></script>
 <script>
+    var head_pic;
+    var data = {
+        tech_field:'',
+        company_pic:'',
+        type:'企业'
+    };
+
+    function getMsg(){
+        var count = $(".areas_selected").length;
+        var picFM = $(".picFM").val();
+        var li = $(".areas_main li");        
+        for(var i = 0;i < li.length ; i++){
+            if( li.eq(i).hasClass('areas_selected') ){               
+                 lingyu_html = li.eq(i).html();
+            }
+        };
+        for(var j = 0 ;j < $(".apply_means").length;j++){           
+            if($(".apply_means").eq(j).val()==""){
+               $(".apply_means").eq(j).focus();
+               tip_ct = "请填写完毕再提交";
+               tips.addtips(tip_ct);
+               return false;
+            }
+        };
+        if(count < 1){
+            tip_ct = "请选择关注领域";
+            tips.addtips(tip_ct);
+            return false;
+        }
+        else if(picFM == ""){
+            tip_ct = "请上传营业执照";
+            tips.addtips(tip_ct);
+            return false;
+        }
+        else{
+            //异步提交表单数据
+            var t = $("#formID").serializeArray();
+            $.each(t, function() {
+                data[this.name] = this.value;
+            });
+            data['tech_field'] = lingyu_html;
+            data['company_pic'] = head_pic;
+
+            $.ajax({
+                type: "post",
+                url: '/api.php/User/user_authen/action/edit',
+                data: data,
+                dataType: 'json',
+                success: function (res) {
+                  if(res.result == 1){
+                    $(".alert").show();
+                    $(".mask").show();                   
+                  }
+                }
+            })            
+        }
+    }
 
     // 需求领域  单选
     $(".areas_default").on("click",function(){
@@ -86,10 +147,44 @@
         $('.picFM').click();
     });
 
-    $(".apply_form").on("click",function(){
-        alert("信息提交成功,两个工作日后通知认证结果");
-        window.location.href='my.html';
-    })
+    // 上传照片
+    $('.picFM').change(function() {   
+        var file = document.getElementById('picFM').files[0];
+        var reader = new FileReader(); //声明一个FileReader实例
+        reader.readAsDataURL(file);
+        reader.onload = function(){
+            dataPic = this.result;
+            $.ajax({
+                type: "post",
+                url: '/api.php/User/user_authen/action/update_head',
+                data: dataPic,
+                dataType: 'json',              
+                success: function (res) {               
+                  if(res.result == 1){
+                    console.log(res.data);
+                    head_pic = res.data;  //获取返回图片路径
+                    tip_ct = "提交身份证照片成功";
+                    tips.addtips(tip_ct);
+                    return false;                    
+                  }
+                }
+            })
+        }
+    });
+
+    // 提交
+    $(".apply_form").on("click",function(){ 
+        getMsg();
+    });
+
+    $(".close").on("click",function(){
+        $(".mask").hide();
+        $(".alert").hide();
+        window.location.href="/index.php/Mobile/User/user_center.html";
+    });
+
+
+
 
 
 
