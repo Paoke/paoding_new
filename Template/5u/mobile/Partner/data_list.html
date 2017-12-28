@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="data_list">
 <head>
     <meta charset="UTF-8">
     <title>合作单位</title>
@@ -15,7 +15,7 @@
         background: #f5f5f5;
     }
 </style>
-<body>
+<body ng-controller="advancedCtrl">
 <div class="coop_tab">
     <p class="active">全部</p>
     <p>协会</p>
@@ -27,15 +27,52 @@
 <div class="index_div"></div>
 
 <div class="wrap"  style="display:block">
-    <div class="coop_tab_main clear">
-        <a href="__CONTROLLER__/association_detail.html">
+    <div class="coop_tab_main clear" ng-repeat="assoList in assoLists">
+        <a href="__CONTROLLER__/association_detail.html?data_id={{ assoList.id }}">
             <div class="fl">
-                <img src="{$Think.MOBILE}/images/index-cooperator1.jpg" alt="">
+                <img src="{{ assoList.cover_url }}" width="270" height="168" alt="" ng-cloak>
             </div>
 
             <div class="fl coop_main_right">
-                <p class="_title">广州中国科学院先进技术研究所</p>
-                <p class="cont_way">对接方向：高分子材料，有机化学，硝酸铵</p>
+                <p class="_title" ng-cloak>{{ assoList.title }}</p>
+                <p class="cont_way" ng-cloak>对接方向：{{ assoList.djfx }}</p>
+                <div class="coop_icon">
+                    <img src="{$Think.MOBILE}/images/icon-index-cooperator-authenticated.jpg" alt="">
+                    <img src="{$Think.MOBILE}/images/icon-index-cooperator-honest.jpg" alt="">
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="coop_tab_main clear" ng-repeat="companyList in companyLists">
+        <a href="__CONTROLLER__/company_detail.html?data_id={{ companyList.id }}">
+            <div class="fl">
+                <img src="{{ companyList.cover_url }}" width="270" height="168" alt="" ng-cloak>
+            </div>
+
+            <div class="fl coop_main_right">
+                <p class="_title" ng-cloak>{{ companyList.title }}</p>
+                <p class="cont_way" ng-cloak>对接方向：{{ companyList.djfx }}</p>
+                <div class="coop_icon">
+                    <img src="{$Think.MOBILE}/images/icon-index-cooperator-authenticated.jpg" alt="">
+                    <img src="{$Think.MOBILE}/images/icon-index-cooperator-honest.jpg" alt="">
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+<div class="wrap">
+    <div class="coop_tab_main clear" ng-repeat="assoList in assoLists">
+        <a href="__CONTROLLER__/association_detail.html?data_id={{ assoList.id }}">
+            <div class="fl">
+                <img src="{{ assoList.cover_url }}" width="270" height="168" alt="" ng-cloak>
+            </div>
+
+            <div class="fl coop_main_right">
+                <p class="_title" ng-cloak>{{ assoList.title }}</p>
+                <p class="cont_way" ng-cloak>对接方向：{{ assoList.djfx }}</p>
                 <div class="coop_icon">
                     <img src="{$Think.MOBILE}/images/icon-index-cooperator-authenticated.jpg" alt="">
                     <img src="{$Think.MOBILE}/images/icon-index-cooperator-honest.jpg" alt="">
@@ -46,14 +83,14 @@
 </div>
 
 <div class="wrap">
-    <div class="coop_tab_main clear">
-        <a href="__CONTROLLER__/association_detail.html">
+    <div class="coop_tab_main clear" ng-repeat="ysList in ysLists">
+        <a href="__CONTROLLER__/company_detail.html?data_id={{ ysList.id }}">
             <div class="fl">
-                <img src="{$Think.MOBILE}/images/index-cooperator1.jpg" alt="">
+                <img src="{{ ysList.cover_url }}" width="270" height="168" alt="" ng-cloak>
             </div>
             <div class="fl coop_main_right">
-                <p class="_title">2广州中国科学院先进技术研究所</p>
-                <p class="cont_way">对接方向：高分子材料，有机化学，硝酸铵</p>
+                <p class="_title" ng-cloak>{{ ysList.title }}</p>
+                <p class="cont_way" ng-cloak>对接方向：{{ ysList.djfx }}</p>
                 <div class="coop_icon">
                     <img src="{$Think.MOBILE}/images/icon-index-cooperator-authenticated.jpg" alt="">
                     <img src="{$Think.MOBILE}/images/icon-index-cooperator-honest.jpg" alt="">
@@ -64,14 +101,14 @@
 </div>
 
 <div class="wrap">
-    <div class="coop_tab_main clear">
-        <a href="__CONTROLLER__/company_detail.html">
+    <div class="coop_tab_main clear" ng-repeat="qyList in qyLists">
+        <a href="__CONTROLLER__/company_detail.html?data_id={{ qyList.id }}">
             <div class="fl">
-                <img src="{$Think.MOBILE}/images/index-cooperator1.jpg" alt="">
+                <img src="{{ qyList.cover_url }}" width="270" height="168" alt="" ng-cloak>
             </div>
             <div class="fl coop_main_right">
-                <p class="_title">3广州中国科学院先进技术研究所</p>
-                <p class="cont_way">对接方向：高分子材料，有机化学，硝酸铵</p>
+                <p class="_title" ng-cloak>{{ qyList.title }}</p>
+                <p class="cont_way" ng-cloak>对接方向：{{ qyList.djfx }}</p>
                 <div class="coop_icon">
                     <img src="{$Think.MOBILE}/images/icon-index-cooperator-authenticated.jpg" alt="">
                     <img src="{$Think.MOBILE}/images/icon-index-cooperator-honest.jpg" alt="">
@@ -82,32 +119,14 @@
 </div>
 
 <div class="wrap">
-    <div class="coop_tab_main clear">
-        <a href="__CONTROLLER__/company_detail.html">
+    <div class="coop_tab_main clear" ng-repeat="qtList in qtLists">
+        <a href="__CONTROLLER__/company_detail.html?data_id={{ qtList.id }}">
             <div class="fl">
-                <img src="{$Think.MOBILE}/images/index-cooperator1.jpg" alt="">
+                <img src="{{ qtList.cover_url }}" width="270" height="168" alt="" ng-cloak>
             </div>
             <div class="fl coop_main_right">
-                <p class="_title">4广州中国科学院先进技术研究所</p>
-                <p class="cont_way">对接方向：高分子材料，有机化学，硝酸铵</p>
-                <div class="coop_icon">
-                    <img src="{$Think.MOBILE}/images/icon-index-cooperator-authenticated.jpg" alt="">
-                    <img src="{$Think.MOBILE}/images/icon-index-cooperator-honest.jpg" alt="">
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-
-<div class="wrap">
-    <div class="coop_tab_main clear">
-        <a href="__CONTROLLER__/company_detail.html">
-            <div class="fl">
-                <img src="{$Think.MOBILE}/images/index-cooperator1.jpg" alt="">
-            </div>
-            <div class="fl coop_main_right">
-                <p class="_title">5广州中国科学院先进技术研究所</p>
-                <p class="cont_way">对接方向：高分子材料，有机化学，硝酸铵</p>
+                <p class="_title" ng-cloak>{{ qtList.title }}</p>
+                <p class="cont_way" ng-cloak>对接方向：{{ qtList.djfx }}</p>
                 <div class="coop_icon">
                     <img src="{$Think.MOBILE}/images/icon-index-cooperator-authenticated.jpg" alt="">
                     <img src="{$Think.MOBILE}/images/icon-index-cooperator-honest.jpg" alt="">
@@ -122,8 +141,62 @@
 </p>
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script src="{$Think.MOBILE}/js/return.js"></script>
 <script>
+    var app = angular.module('data_list', []);
+    app.controller("advancedCtrl", function ($scope, $http) {
+        //协会
+        $http({
+            method:'GET',
+            params:{page_num:500},
+            url:'/api.php/ChannelIndex/index/action/dataList/channel/jtgs/type/1/page/1',
+        }).then(function successCallback(response){
+            $scope.assoLists = response.data.data;
+        },function errorCallback(){
+        });
+
+        //企业
+        $http({
+            method:'GET',
+            params:{page_num:500,data_by:'is_red desc,create_time desc'},
+            url:'/api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1/page/1',
+        }).then(function successCallback(response){
+            $scope.companyLists = response.data.data;
+        },function errorCallback(){
+        });
+
+        //院所
+        $http({
+            method:'GET',
+            params:{page_num:500,tag_id:1},
+            url:'/api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1/page/1',
+        }).then(function successCallback(response){
+            $scope.ysLists = response.data.data;
+        },function errorCallback(){
+        });
+
+        //企业
+        $http({
+            method:'GET',
+            params:{page_num:500,tag_id:2},
+            url:'/api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1/page/1',
+        }).then(function successCallback(response){
+            $scope.qyLists = response.data.data;
+        },function errorCallback(){
+        });
+
+        //其他
+        $http({
+            method:'GET',
+            params:{page_num:500,tag_id:3},
+            url:'/api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1/page/1',
+        }).then(function successCallback(response){
+            $scope.qtLists = response.data.data;
+        },function errorCallback(){
+        });
+    });
+
     $(".coop_tab p").on("click",function(){
         var index = $(this).index();
         var tranX = index*150;
@@ -134,7 +207,7 @@
     (function(){
         console.log($(".wrap .coop_tab_main").length)
         if($(".wrap .coop_tab_main").length>5){
-            alert(1);
+            //alert(1);
         }
     })()
 </script>

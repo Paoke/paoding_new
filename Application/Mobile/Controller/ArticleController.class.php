@@ -325,14 +325,14 @@ class ArticleController extends BaseController
                         ->table('5u_article_user_relation_hz A')
                         ->join('5u_article_jtgs B ON A.article_id=B.id')
                         ->field('B.*')
-                        ->where('A.user_id='.$_SESSION['userId'].' and A.type='.$type)
+                        ->where('A.user_id='.$_SESSION['userId']." and A.type='$type'")
                         ->select();
                 }else{
                     $info=M('article_user_relation_hz')
                         ->table('5u_article_user_relation_hz A')
                         ->join('5u_article_hzjg B ON A.article_id=B.id')
                         ->field('B.*')
-                        ->where('A.user_id='.$_SESSION['userId'].' and A.type='.$type)
+                        ->where('A.user_id='.$_SESSION['userId']." and A.type='$type'")
                         ->select();
                 }
 
@@ -340,6 +340,8 @@ class ArticleController extends BaseController
                 $info=M('article_user_relation_xq')
                     ->table('5u_article_user_relation_xq A')
                     ->join('5u_article_xq B ON A.xq_id=B.id')
+                    ->join('5u_article_category_xq C ON B.category_id=C.id')
+                    ->field('B.*,C.cat_name')
                     ->where('A.user_id='.$_SESSION['userId'])
                     ->select();
             }

@@ -131,7 +131,7 @@
         // 判断本技术是否已经收藏
         $http({
             method:'GET',
-            params:{data_id:data_id,channel:'js'},
+            params:{data_id:data_id,channel:'xq'},
             url:'/index.php/Mobile/Article/is_like'
         }).then(function successCallback(response) {                
                 if(response.data.msg == "已收藏"){
@@ -146,7 +146,7 @@
         $("#collect").on("click",function(){
             $http({
                 method:'GET',                
-                url:'/index.php/Mobile/Article/like?channel=js&id='+data_id+'&action=1'
+                url:'/index.php/Mobile/Article/like?channel=xq&id='+data_id+'&action=1'
             }).then(function successCallback(response) {  
                   if(response.data.code=="402"){
                         $(".mask").show();
@@ -162,7 +162,7 @@
         $("#cancle").on("click",function(){
             $http({
                 method:'GET',                
-                url:'/index.php/Mobile/Article/like?channel=js&id='+data_id+'&action=0'
+                url:'/index.php/Mobile/Article/like?channel=xq&id='+data_id+'&action=0'
             }).then(function successCallback(response) { 
                   if(response.data.code=="402"){
                         $(".mask").show();
