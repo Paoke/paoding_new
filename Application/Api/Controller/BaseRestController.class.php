@@ -23,7 +23,7 @@ class BaseRestController extends Controller\RestController
             $data["log_ip"] = $_SERVER["REMOTE_ADDR"];
             $data["admin_id"] = $_SESSION["admin_id"];
             $data["admin_user_name"] = $_SESSION["admin_user_name"];
-            $data["user_id"] = $_SESSION["user_id"];
+            $data["user_id"] = $_SESSION['userArr']['user_id'];
             $data["log_time"] = date("Y-m-d H:i:s", time());
             $data["log_url"] = $_SERVER["REQUEST_URI"];
             $data["log_level"] = $level;

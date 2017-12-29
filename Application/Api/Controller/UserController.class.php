@@ -845,7 +845,7 @@ class UserController extends BaseRestController
         $wechat = new Wechat($options);
         $res = $wechat->getOauthAccessToken();
         $info = $wechat->getOauthUserinfo($res["access_token"],$res["openid"]);
-        $userId= $_SESSION['userId'];
+        $userId= $_SESSION["userArr"]["user_id"];
         $userData = array(
             'wechatmp_bind' => 1,
             'oauth' => "wechat_pc",
@@ -884,7 +884,7 @@ class UserController extends BaseRestController
     public function WeChatUnBind(){
         $manageUsers = M("ManageUsers");
         $manageUsersOauth = M("ManageUsersOauth");
-        $userId= $_SESSION['userId'];
+        $userId= $_SESSION["userArr"]["user_id"];
         $openid =  $manageUsers->where("user_id= '$userId'")->getField("openid");
         $userData = array(
             'wechatmp_bind' => 0,
@@ -1053,14 +1053,14 @@ class UserController extends BaseRestController
                 }
                 break;
             case 'edit':
-                $where['user_id'] = $_SESSION['userId'];
+                $where['user_id'] = $_SESSION["userArr"]["user_id"];
                 $data = I('post.');
                 $ifHaveUser = $DAO->where($where)->getField("user_id");
                 if($ifHaveUser) {
                     $flag = $DAO->where($where)->save($data);
 
                 } else {
-                    $data['user_id'] = $_SESSION['userId'];
+                    $data['user_id'] = $_SESSION["userArr"]["user_id"];
                     $data['status'] = '1';
                     $data['add_time'] = date("Y-m-d H:i:s", time());
                     $flag = $DAO->where($where)->add($data);
@@ -1435,7 +1435,7 @@ class UserController extends BaseRestController
                 break;
             case 'edit':
                 $data = I('post.');
-                $where['user_id'] = $_SESSION['userId'];
+                $where['user_id'] = $_SESSION["userArr"]["user_id"];
                 $flag = $DAO->where($where)->save($data);
 
                 if ($flag === false) {
