@@ -153,7 +153,7 @@
             data['tech_field'] = lingyu_html;
             data['idcard_img_front'] = head_pic1;
             data['idcard_img_back'] = head_pic2;
-
+            data['type']="个人";
             $.ajax({
                 type: "post",
                 url: '/api.php/User/user_authen/action/edit',
