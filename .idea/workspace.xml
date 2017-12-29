@@ -15,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UserController.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Api/Controller/UserController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="1436" column="31" lean-forward="true" selection-start-line="1436" selection-start-column="31" selection-end-line="1436" selection-end-column="31" />
+            <state relative-caret-position="249">
+              <caret line="1056" column="30" lean-forward="false" selection-start-line="1056" selection-start-column="30" selection-end-line="1056" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -28,14 +28,14 @@
       <file leaf-file-name="authen_personal.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/authen_personal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="155" column="30" lean-forward="true" selection-start-line="155" selection-start-column="12" selection-end-line="155" selection-end-column="30" />
+            <state relative-caret-position="2106">
+              <caret line="156" column="20" lean-forward="false" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="info_person.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="info_person.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/info_person.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -58,7 +58,7 @@
       <file leaf-file-name="authen_company.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/authen_company.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="729">
+            <state relative-caret-position="1701">
               <caret line="135" column="17" lean-forward="true" selection-start-line="135" selection-start-column="17" selection-end-line="135" selection-end-column="17" />
               <folding />
             </state>
@@ -96,7 +96,6 @@
       <find>getConWay</find>
       <find>close</find>
       <find>mask</find>
-      <find>user_authen</find>
       <find>advancedCtrl</find>
       <find>update_pw</find>
       <find>detailCtrl</find>
@@ -106,6 +105,7 @@
       <find>$_SESSION[&quot;user_id&quot;]</find>
       <find>$_SESSION[&quot;userId&quot;]</find>
       <find>$_SESSION</find>
+      <find>user_authen</find>
     </findStrings>
     <replaceStrings>
       <replace>$_SESSION[&quot;userArr&quot;][&quot;user_id&quot;]</replace>
@@ -167,8 +167,8 @@
         <option value="$PROJECT_DIR$/Template/5u/mobile/User/info_person.html" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/User/authen_personal.html" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/User/authen_company.html" />
-        <option value="$PROJECT_DIR$/Application/Api/Controller/UserController.class.php" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/User/info_company.html" />
+        <option value="$PROJECT_DIR$/Application/Api/Controller/UserController.class.php" />
       </list>
     </option>
   </component>
@@ -475,12 +475,12 @@
       <workItem from="1514251742927" duration="19682000" />
       <workItem from="1514339057548" duration="21186000" />
       <workItem from="1514423872220" duration="19811000" />
-      <workItem from="1514511864963" duration="13538000" />
+      <workItem from="1514511864963" duration="14114000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="363155000" />
+    <option name="totallyTimeSpent" value="363731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -894,18 +894,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Api/Controller/UserController.class.php">
+    <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/info_person.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="1436" column="31" lean-forward="true" selection-start-line="1436" selection-start-column="31" selection-end-line="1436" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/authen_personal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="155" column="30" lean-forward="true" selection-start-line="155" selection-start-column="12" selection-end-line="155" selection-end-column="30" />
+        <state relative-caret-position="255">
+          <caret line="63" column="80" lean-forward="false" selection-start-line="63" selection-start-column="80" selection-end-line="63" selection-end-column="80" />
           <folding />
         </state>
       </provider>
@@ -920,16 +912,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/authen_company.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
+        <state relative-caret-position="1701">
           <caret line="135" column="17" lean-forward="true" selection-start-line="135" selection-start-column="17" selection-end-line="135" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/info_person.html">
+    <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/authen_personal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="63" column="80" lean-forward="false" selection-start-line="63" selection-start-column="80" selection-end-line="63" selection-end-column="80" />
+        <state relative-caret-position="2106">
+          <caret line="156" column="20" lean-forward="false" selection-start-line="156" selection-start-column="20" selection-end-line="156" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Api/Controller/UserController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="1056" column="30" lean-forward="false" selection-start-line="1056" selection-start-column="30" selection-end-line="1056" selection-end-column="30" />
           <folding />
         </state>
       </provider>

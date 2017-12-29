@@ -1054,7 +1054,7 @@ class UserController extends BaseRestController
                 break;
             case 'edit':
                 $where['user_id'] = $_SESSION["userArr"]["user_id"];
-                $data = I('post.');
+                $data = $_POST;
                 $ifHaveUser = $DAO->where($where)->getField("user_id");
                 if($ifHaveUser) {
                     $flag = $DAO->where($where)->save($data);
@@ -1063,7 +1063,7 @@ class UserController extends BaseRestController
                     $data['user_id'] = $_SESSION["userArr"]["user_id"];
                     $data['status'] = '1';
                     $data['add_time'] = date("Y-m-d H:i:s", time());
-                    $flag = $DAO->where($where)->add($data);
+                    $flag = $DAO->add($data);
                 }
                 M('manage_users')->where($where)->save($data);
                 if ($flag === false) {
