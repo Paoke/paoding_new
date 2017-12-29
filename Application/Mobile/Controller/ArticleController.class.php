@@ -315,7 +315,7 @@ class ArticleController extends BaseController
                     ->table('5u_article_user_relation_js A')
                     ->join('5u_article_js B ON A.js_id=B.id')
                     ->join("LEFT JOIN __ARTICLE_CATEGORY_JS__ AS C ON B.category_id=C.id")
-                    ->field('A.*,B.*,c.cat_name')
+                    ->field('A.*,B.*,C.cat_name')
                     ->where('A.user_id='.$_SESSION["userArr"]["user_id"])
                     ->select();
             }elseif($channel=='hz'){
