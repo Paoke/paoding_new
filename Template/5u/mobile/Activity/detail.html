@@ -109,8 +109,11 @@
             <img class="return_icon" src="{$Think.MOBILE}/images/icon-common-return.png" alt="">
         </a>
         <img class="act_love_icon" src="{$Think.MOBILE}/images/icon-activity-collect-default.png" alt="">
-        <a class="act_det_btn">
+        <a class="act_det_btn" id="act_det_btn" ng-show="detail.status=='0'">
             立即报名
+        </a>
+        <a class="act_det_btn" style="background:#999;" ng-hide="detail.status=='0'">
+            活动已结束
         </a>
     </div>
 </body>
@@ -132,7 +135,13 @@
             params:{data_id:data_id},
             url:"/api.php/ChannelIndex/index/action/dataDetail/channel/hd/type/1/"
         }).then(function successCallback(response) {                      
-                $scope.details = response.data.data;                                 
+                $scope.details = response.data.data;     
+                 var startTime = $scope.details.formal_start_time;
+                 if(Date.parse(new Date()) > startTime){
+                    $scope.details['status']="0";//已经举办过了
+                }else{
+                    $scope.details['status']="1";//未举办
+                }
             }, function errorCallback(response) {
             });
 
@@ -155,7 +164,7 @@
             });
 
         // 立即报名
-        $(".act_det_btn").on("click",function(){
+        $("#act_det_btn").on("click",function(){
             $http({
                 method:'GET',                
                 url:'/index.php/Mobile/Activity/like?hd_id='+data_id+'&action='+action

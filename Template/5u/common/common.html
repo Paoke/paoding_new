@@ -33,4 +33,22 @@
 
         }
     };
+
+    // 验证码倒计时
+    function goTime() {
+        if (countdown == 0) {
+            $('.get_indentify').attr("disabled",false);
+
+            $('.get_indentify').val("重新发送");
+            countdown = 60;
+        } else {
+            $('.get_indentify').attr("disabled",true);
+            // $('.get_indentify').css('background','#fff');
+            $('.get_indentify').val("重新发送(" + countdown + ")");
+            countdown--;
+            setTimeout(function() {
+                goTime()
+            },1000);
+        }
+    }
 </script>

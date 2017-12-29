@@ -35,35 +35,7 @@
             $('.change_name_save').css('background','#ccc');
         }
     })
-
     var countdown=60;
-    var tips = {
-        addtips:function(tip_ct){
-            var tipNode = '<div class="tipCommon" style="display:block">'+tip_ct+'</div>';
-            $('body').append(tipNode);
-            setTimeout(function(){
-                $(".tipCommon").remove();
-            },1500);
-
-        }
-    }
-    function goTime() {
-        if (countdown == 0) {
-            $('.get_indentify').attr("disabled",false);
-
-            $('.get_indentify').val("重新发送");
-            countdown = 60;
-        } else {
-            $('.get_indentify').attr("disabled",true);
-            // $('.get_indentify').css('background','#fff');
-            $('.get_indentify').val("重新发送(" + countdown + ")");
-            countdown--;
-            setTimeout(function() {
-                goTime()
-            },1000);
-        }
-    }
-
     var app = angular.module('change_binding', []);
     app.controller('myReg', function($scope,$http) {
 
@@ -125,10 +97,10 @@
                 }).then(function successCallback(response) {
                     if(response.data.result==1){
                         tip_ct =response.data.msg ;
-                        tips.addtips(tip_ct,'/index.php/Mobile/Index/index');
-                        // window.location.href="/index.php/Mobile/login/login.html";
+                        tip_url = '/index.php/Mobile/Index/index'
+                        tips.addtips(tip_ct,tip_url);
                     }else{
-                        tip_ct =response.data.msg ;
+                        tip_ct =response.data.msg;
                         tips.addtips(tip_ct);
                     }
                 }, function errorCallback(response) {

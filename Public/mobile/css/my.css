@@ -16,10 +16,15 @@
 	overflow: hidden;
 	margin: 46px 42px 0 76px;
 	text-align: center;
+	position: relative;
 }
 .head_pic{
-	width: 100px;
-	margin-top: -10px;
+	width: 120px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
 }
 .my_nameBox{
 	margin-top: 66px;

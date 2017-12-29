@@ -50,7 +50,7 @@
             <input class='apply_means fr' type="text" placeholder="请输入在职职务" name="job">
         </div>
 
-        <div class="apply_content_box clear">
+        <div class="apply_content_box clear" style="border:none;">
             <span class='apply_word fl'>关注领域</span>
             <input class='fr' type="text"  placeholder="请选择关注领域" readonly="readonly" style="margin-top:40px;text-align:right;">
         </div>
@@ -185,6 +185,9 @@
                   if(res.result == 1){
                     console.log(res.data);
                     head_pic1 = res.data;  //获取返回图片路径
+                    $(".fileZm").attr({
+                        src: head_pic1,                     
+                    });
                     tip_ct = "提交正面身份证成功";
                     tips.addtips(tip_ct);
                     return false;                    
@@ -209,6 +212,9 @@
                   if(res.result == 1){
                     console.log(res.data);
                     head_pic2 = res.data;  
+                    $(".fileFm").attr({
+                        src: head_pic2,                     
+                    });
                     tip_ct = "提交反面身份证成功";
                     tips.addtips(tip_ct);
                     return false;                    

@@ -55,7 +55,7 @@
             <span class='apply_word fl'>关注领域</span>
             <input class='fr' type="text"  placeholder="请选择关注领域" readonly="readonly" style="margin-top:40px;text-align:right;">
         </div>
-        <div class="areas_main clear">
+        <div class="areas_main clear" style="border:none;">
             <li class="areas_default">电子信息</li>
             <li class="areas_default">先进制造</li>
             <li class="areas_default">新材料</li>
@@ -164,6 +164,9 @@
                     console.log(res.data);
                     head_pic = res.data;  //获取返回图片路径
                     tip_ct = "提交身份证照片成功";
+                    $(".fileFm").attr({
+                        src:head_pic
+                    });
                     tips.addtips(tip_ct);
                     return false;                    
                   }
