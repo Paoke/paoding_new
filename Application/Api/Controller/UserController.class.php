@@ -1434,7 +1434,7 @@ class UserController extends BaseRestController
                }
                 break;
             case 'edit':
-                $data = I('post.');
+                $data = $_POST;
                 $where['user_id'] = $_SESSION["userArr"]["user_id"];
                 $flag = $DAO->where($where)->save($data);
 
