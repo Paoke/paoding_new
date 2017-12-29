@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="tec_detail">
 <head>
     <meta charset="UTF-8">
     <title>我的技术</title>
@@ -9,20 +9,23 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/common_new.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/demand.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
+    <include file="./Template/5u/common/common.html" />
 </head>
-<body>
+<body ng-controller="detailCtrl">
 <div class="demand">
     <div class="padding">
         <p class="sec_title clear">
-            <span class="callForBids fl">【审核中】</span>
-            <span class="materials fl">防水保温材料研发防水保温材料</span>
+            <span class="callForBids fl" ng-show="detail.status==1" ng-cloak>【审核中】</span>
+            <span class="callForBids fl" ng-show="detail.status==0 && detail.is_active==1" ng-cloak>【已通过】</span>
+            <span class="callForBids fl" ng-show="detail.is_active==0 && detail.status==0" ng-cloak>【已下架】</span>
+            <span class="materials fl" ng-cloak>{{ detail.title }}</span>
         </p>
     </div>
     <div class="border">
         <p class="sec_data_p">
-            技术领域：<span class="sec_data_span">材料科学</span>
-            浏览数<span class="sec_data_span">111</span>
-        <p class="marginT">发布时间: <span class="sec_data_span">2017-09-26</span>	</p>
+            技术领域：<span class="sec_data_span" ng-cloak>{{ detail.lingyu }}</span>
+            浏览数<span class="sec_data_span" ng-cloak>{{ detail.clicks }}</span>
+        <p class="marginT">发布时间: <span class="sec_data_span" ng-cloak>{{ detail.create_time }}</span>	</p>
         </p>
     </div>
 </div>
@@ -31,22 +34,22 @@
 <form>
     <div class="apply_content_box chose clear">
         <span class="apply_word fl">技术成熟度</span>
-        <input class="apply_means fr" type="text" value="产品成型" readonly="readonly">
+        <input class="apply_means fr" type="text" ng-value="detail.csd" readonly="readonly">
     </div>
 
     <div class="apply_content_box chose clear">
         <span class="apply_word fl">专利状态</span>
-        <input class="apply_means fr" type="text" value="无" readonly="readonly">
+        <input class="apply_means fr" type="text" ng-value="detail.zlzs" readonly="readonly">
     </div>
 
     <div class="apply_content_box chose clear">
         <span class="apply_word fl">合作方式</span>
-        <input class="apply_means fr" type="text" value="技术许可" readonly="readonly">
+        <input class="apply_means fr" type="text" ng-value="detail.hzxs" readonly="readonly">
     </div>
 
     <div class="apply_content_box chose clear">
         <span class="apply_word fl">合作价格</span>
-        <input class="apply_means fr" type="text" value="无" readonly="readonly">
+        <input class="apply_means fr" type="text" ng-value="detail.hzjg" readonly="readonly">
     </div>
 </form>
 
@@ -56,14 +59,29 @@
         <div class="black_block fl"></div>
         技术详述
     </div>
-    <p>
-        防水性能： 吸湿率小于0.2%，憎水率大于99%。
-        导热性能： 在长期浸泡于水中的环境下，导热系数低于0.03W/m.K。<br>
-        其他要求： 耐酸碱腐蚀，不易脆断，不含玻璃纤维、石棉等有害物质，健康环保，且不易老化，使用寿命10年以上。
-    </p>
+    <p ng-bind-html="detail.content|trustHtml"></p>
 </div>
 <div class="index_div"></div>
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
 <script src='{$Think.MOBILE}/js/return.js'></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
+<script>
+    var data_id = GetQueryString("data_id");
+    var app = angular.module('tec_detail', []);
+    app.filter('trustHtml',function ($sce){
+        return function(val) {
+            return $sce.trustAsHtml(val);
+        }
+    });
+    app.controller("detailCtrl", function ($scope, $http) {
+        $http({
+            method: "GET",
+            url: "/index.php/Mobile/Article/my_project?data_id="+data_id+"&channel=js&action=detail",
+        }).then(function successCallback(response) {
+            $scope.detail = response.data.data;
+        }, function errorCallback(response) {
+        });
+    });
+</script>
 </html>

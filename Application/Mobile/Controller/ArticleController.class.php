@@ -290,10 +290,10 @@ class ArticleController extends BaseController
                 $data['col']='xq_id';
             }
             if($action=='1'){
-                $data['user_id'] = $_SESSION['userId'];
+                $data['user_id'] = $_SESSION["userArr"]["user_id"];
                 M($tableName)->add($data);
             }else{
-                M($tableName)->where('user_id=' . $_SESSION['userId'] . ' and '.$data['col'].'=' .$data[$data['col']] )->delete();
+                M($tableName)->where('user_id=' . $_SESSION["userArr"]["user_id"] . ' and '.$data['col'].'=' .$data[$data['col']] )->delete();
             }
             $returnArr = array("result" => 1, "msg" => "操作成功", "code" => 200);
 
@@ -316,7 +316,7 @@ class ArticleController extends BaseController
                     ->join('5u_article_js B ON A.js_id=B.id')
                     ->join("LEFT JOIN __ARTICLE_CATEGORY_JS__ AS C ON B.category_id=C.id")
                     ->field('A.*,B.*,c.cat_name')
-                    ->where('A.user_id='.$_SESSION['userId'])
+                    ->where('A.user_id='.$_SESSION["userArr"]["user_id"])
                     ->select();
             }elseif($channel=='hz'){
                 $type=$_GET['type'];
@@ -325,14 +325,14 @@ class ArticleController extends BaseController
                         ->table('5u_article_user_relation_hz A')
                         ->join('5u_article_jtgs B ON A.article_id=B.id')
                         ->field('B.*')
-                        ->where('A.user_id='.$_SESSION['userId']." and A.type='$type'")
+                        ->where('A.user_id='.$_SESSION["userArr"]["user_id"]." and A.type='$type'")
                         ->select();
                 }else{
                     $info=M('article_user_relation_hz')
                         ->table('5u_article_user_relation_hz A')
                         ->join('5u_article_hzjg B ON A.article_id=B.id')
                         ->field('B.*')
-                        ->where('A.user_id='.$_SESSION['userId']." and A.type='$type'")
+                        ->where('A.user_id='.$_SESSION["userArr"]["user_id"]." and A.type='$type'")
                         ->select();
                 }
 
@@ -342,7 +342,7 @@ class ArticleController extends BaseController
                     ->join('5u_article_xq B ON A.xq_id=B.id')
                     ->join('5u_article_category_xq C ON B.category_id=C.id')
                     ->field('B.*,C.cat_name')
-                    ->where('A.user_id='.$_SESSION['userId'])
+                    ->where('A.user_id='.$_SESSION["userArr"]["user_id"])
                     ->select();
             }
             if ($info) {
@@ -377,7 +377,7 @@ class ArticleController extends BaseController
             $column='xq_id';
         }
 
-        $count=M($tableName)->where($column . '=' .$data_id . ' and user_id=' .$_SESSION['userId'])->count();
+        $count=M($tableName)->where($column . '=' .$data_id . ' and user_id=' .$_SESSION["userArr"]["user_id"])->count();
         if($count){
             $returnArr = array("result" => 1, "msg" => "已收藏", "code" => 200);
         }else{
@@ -444,19 +444,24 @@ class ArticleController extends BaseController
         $action=$_GET['action'];
         if($action=='datalist'){
             if($channel=='js'){
-                $info=M('article_js')->where('create_user_id='.$_SESSION['userId'])->order('create_time desc')->select();
+                $info=M('article_js')->where('create_user_id='.$_SESSION["userArr"]["user_id"].' and is_deleted=0')->order('create_time desc')->select();
             }else{
-                $info=M('article_xq')->where('create_user_id='.$_SESSION['userId'])->order('create_time desc')->select();
+                $info=M('article_xq')->where('create_user_id='.$_SESSION["userArr"]["user_id"].' and is_deleted=0')->order('create_time desc')->select();
+            }
+            foreach($info as $k=>$v){
+                $info[$k]['content']=htmlspecialchars_decode($info[$k]['content']);
             }
         }else{
             $data_id=$_GET['data_id'];
             if($channel=='js'){
                 $info=M('article_js')->where('id='.$data_id)->find();
-            }else{
-                $info=M('article_xq')->where('id='.$data_id)->find();
+            }else {
+                $info = M('article_xq')->where('id=' . $data_id)->find();
             }
+            $info['content']=htmlspecialchars_decode($info['content']);
         }
         if($info){
+
             $returnArr = array("result" => 1, "msg" => "请求成功", "code" => 200,"data" => $info);
         }else{
             $returnArr = array("result" => 0, "msg" => "频道参数错误", "code" => 402, "data" => null);

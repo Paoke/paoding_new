@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="user_demand">
 <head>
     <meta charset="UTF-8">
     <title>我的需求</title>
@@ -9,48 +9,34 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/common_new.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/demand.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
+    <include file="./Template/5u/common/common.html" />
 </head>
-<body>
-<a href="__CONTROLLER__/demand_detail.html">
+<body ng-controller="advancedCtrl">
+<a href="__CONTROLLER__/demand_detail.html?data_id={{ demandList.id }}" ng-repeat="demandList in demandLists">
     <div class="index_div"></div>
     <div class="section">
         <div class="sec_title clear">
             <div class="left_option fl">
-                <p class="callForBids">【招标中】</p>
-                <img src="{$Think.MOBILE}/images/icon-wodexq.png" alt="">
+                <p class="callForBids" ng-show="demandList.status==1" ng-cloak>【审核中】</p>
+                <p class="callForBids" ng-show="demandList.status==0 && demandList.is_active==1" ng-cloak>【已通过】</p>
+                <p class="callForBids" ng-show="demandList.is_active==0 && demandList.status==0" ng-cloak>【已下架】</p>
+                <img src="{$Think.MOBILE}/images/icon-wodexq.png" alt="" ng-show="demandList.status==1" ng-cloak>
+                <img src="{$Think.MOBILE}/images/icon-wodexq.png" alt="" ng-show="demandList.status==0 && demandList.is_active==1" ng-cloak>
+                <img src="{$Think.MOBILE}/images/icon-wodexq-yqx.png" alt="" ng-show="demandList.is_active==0 && demandList.status==0" ng-cloak>
             </div>
 
             <div class="right_option fl">
-                <span class="materials2">防水保温材料研发防水保温材料</span>
-                <p class="sec_content">防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%</p>
+                <span class="materials2" ng-cloak>{{ demandList.title }}</span>
+                <p class="sec_content" ng-cloak>{{ demandList.content }}</p>
                 <p class="sec_data_p">
-                    需求领域：<span class="sec_data_span">材料科学</span>
+                    需求领域：<span class="sec_data_span" ng-cloak>{{ demandList.lingyu }}</span>
                     <!--咨询数<span class="sec_data_span">111</span>-->
-                <p class="marginT">发布时间: <span class="sec_data_span">2017-09-26</span>	</p>
+                <p class="marginT">发布时间: <span class="sec_data_span" ng-cloak="">{{ demandList.create_time }}</span>	</p>
                 </p>
             </div>
         </div>
     </div>
 </a>
-<div class="index_div"></div>
-<div class="section">
-    <div class="sec_title clear">
-        <div class="left_option fl">
-            <p class="callForBids">【招标中】</p>
-            <img src="{$Think.MOBILE}/images/icon-wodexq.png" alt="">
-        </div>
-
-        <div class="right_option fl">
-            <span class="materials2">防水保温材料研发防水保温材料</span>
-            <p class="sec_content">防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%防水性能：吸湿率小于0.2%</p>
-            <p class="sec_data_p">
-                需求领域：<span class="sec_data_span">材料科学</span>
-                <!--咨询数<span class="sec_data_span">111</span>-->
-            <p class="marginT">发布时间: <span class="sec_data_span">2017-09-26</span>	</p>
-            </p>
-        </div>
-    </div>
-</div>
 <div class="index_div"></div>
 
 <div class="sec_return">
@@ -60,4 +46,24 @@
     <!--<p class="collect">收藏</p>-->
 </div>
 </body>
+<script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
+<script>
+    var app = angular.module('user_demand', []);
+    app.filter('trustHtml',function ($sce){
+        return function(val) {
+            return $sce.trustAsHtml(val);
+        }
+    });
+    app.controller("advancedCtrl", function ($scope, $http) {
+        $http({
+            method: "GET",
+            url: "/index.php/Mobile/Article/my_project?channel=xq&action=datalist",
+        }).then(function successCallback(response) {
+            $scope.demandLists = response.data.data;
+        }, function errorCallback(response) {
+            console.log(response)
+        });
+    });
+</script>
 </html>
