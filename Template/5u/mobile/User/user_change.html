@@ -11,13 +11,58 @@
     <include file="./Template/5u/common/common.html" />
 </head>
 <body>
-<p class="apply_tit">修改登录密码</p>
-<p class="apply_tip">密码可使用英文、数字，字数限制6-20位字符</p>
-<input class="set_psw" type="text" placeholder="输入原登录密码" maxlength="20">
-<input class="set_psw" type="text" placeholder="输入新密码" maxlength="20">
-<input class="set_psw" type="text" placeholder="在此确认新密码" maxlength="20">
-<a href="my-set.html" class="register_btn">保存</a>
+	<p class="apply_tit">修改登录密码</p>
+	<p class="apply_tip">密码可使用英文、数字，字数限制6-20位字符</p>
+	<form id="formID">
+		<input class="set_psw" type="password" placeholder="输入原登录密码" maxlength="20" name="old">
+		<input class="set_psw" type="password" placeholder="输入新密码" maxlength="20" name="new">
+		<input class="set_psw" type="password" placeholder="在此确认新密码" maxlength="20" name="re_new">
+	</form>
+	<a class="register_btn">保存</a>
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
 <script src='{$Think.MOBILE}/js/return.js'></script>
+<script>
+	$('.register_btn').on('click',function () {			
+		var newPsw = $("input[name='new']").val();
+		var rePsw = $("input[name='re_new']").val();
+		// 新密码输入不一致
+		if(newPsw != rePsw){
+			tip_ct = '新密码输入不一致';
+			tips.addtips(tip_ct);
+			return false;
+		}
+		else{
+			// 提交
+			var data = {};
+			var t = $('#formID').serializeArray();
+			$.each(t, function(){
+				data[this.name] = this.value;
+			});	  
+		    $.ajax({
+		        type: "POST",
+		        url: "/api.php/User/user_info/action/update_pw",
+		        data: data,
+		        dataType: "json",
+		        success: function(response){
+		        	// 旧密码输入错误
+		        	if(response.result == 0){
+		        		tip_ct = response.msg;
+		        		tips.addtips(tip_ct);
+		        		return false;
+		        	}
+		        	else if(response.result == 1){
+		        		tip_ct = '密码修改成功';
+		        		tip_url = '/index.php/Mobile/User/user_center.html';
+		        		tips.addtips(tip_ct,tip_url);
+
+		        	}
+
+		        }
+		    });
+		}
+
+
+	});
+</script>
 </html>

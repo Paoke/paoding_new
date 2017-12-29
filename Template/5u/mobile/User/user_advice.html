@@ -12,20 +12,22 @@
 </head>
 <body class="advice_body">
 <p class="advice_p">您对庖丁众包平台的意见或建议(必填)</p>
-<div class="advice_area">
-    <textarea class="advice_text"  maxlength="200"></textarea>
-    <p class="advice_numlim">
-        <span class="advice_count">0 </span>
-        | 200字
-    </p>
-</div>
-<p class="advice_p">您的手机号</p>
+<form id="formID">
+    <div class="advice_area">
+        <textarea class="advice_text" maxlength="200" name="jumpMessage"></textarea>
+        <p class="advice_numlim">
+            <span class="advice_count">0 </span>
+            | 200字
+        </p>
+    </div>
+    <p class="advice_p">您的手机号</p>
 
-<input class="advice_area2" type="text" placeholder="请输入您的手机号码">
+    <input class="advice_area2" type="number" placeholder="请输入您的手机号码" id="phone" name="jumpMobile">
 
-<p class="advice_p">您的称呼(选填)</p>
-<input class="advice_area2" type="text" placeholder="请输入您的贵姓">
-<a href="my.html" class="register_btn" style="margin: 70px auto 100px;">发 送</a>
+    <p class="advice_p">您的称呼(选填)</p>
+    <input class="advice_area2" type="text" placeholder="请输入您的贵姓" id="name" name="jumpName">
+</form>
+<a class="register_btn" style="margin: 70px auto 100px;background:#1a191e">发 送</a>
 
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
@@ -35,12 +37,42 @@
     $('.advice_text').keyup(function(){
         remainNum = $('textarea').val().length;
         $('.advice_count').html(remainNum);
-        if($('textarea').val()!=""){
-            $('.register_btn').css('background','#1a191e');
-        }else{
-            $('.register_btn').css('background','#ccc');
+    });
+
+    $(".register_btn").on("click",function(){
+        var regPsw = /^.{6,}$/;
+        var regTel = /^[1][3,4,5,7,8][0-9]{9}$/;
+        phone = $('#phone').val();
+        if(!regTel.test(phone)){
+             tip_ct = "请输入正确的手机号码";
+             tips.addtips(tip_ct);
+             return false;
         }
+        else{
+            var data = {};
+            var t = $("#formID").serializeArray();
+            $.each(t, function(){
+                data[this.name] = this.value;
+            });
+            $.ajax({
+                type: "POST",
+                url: "/api.php/Article/add_by_code",
+                data: data,
+                dataType: "json",
+                success: function(response){    
+                    if(response.result == 1){
+                        tip_ct = "提交成功";
+                        tip_url ='/index.php/Mobile/User/user_center.html';
+                        tips.addtips(tip_ct,tip_url);
+                        return false;
+                    }
+                }
+            });
+        }
+        
     })
+
+
 
 </script>
 </html>

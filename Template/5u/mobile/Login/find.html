@@ -50,18 +50,6 @@
 <script>
     var countdown=60;  
     var mobile,code,password;
-    var tip = {
-        tip_ct:"",
-    };
-    var tips = {
-        addtips:function(tip_ct){
-            var tipNode = '<div class="tipCommon" style="display:block">'+tip_ct+'</div>';
-            $('body').append(tipNode);
-            setTimeout(function(){
-                $(".tipCommon").remove();
-            },1500)
-        }
-    }
     var app = angular.module('find', []);
     app.controller('findCtrl', function($scope,$http) {
       

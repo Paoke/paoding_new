@@ -1,4 +1,5 @@
 <script>
+    // 百度统计
     var _hmt = _hmt || [];
     (function() {
         var hm = document.createElement("script");
@@ -7,22 +8,29 @@
         s.parentNode.insertBefore(hm, s);
     })();
 
+    // 取hash
     function GetQueryString(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
         var r = window.location.search.substr(1).match(reg);
         if (r!=null) return unescape(r[2]); return null;
     };
 
+    // 公共提示框
     var tip = {
         tip_ct:"",
+        tip_url:""
     };
     var tips = {
-        addtips:function(tip_ct){
+        addtips:function(tip_ct,tip_url){         
             var tipNode = '<div class="tipCommon" style="display:block">'+tip_ct+'</div>';
             $('body').append(tipNode);
             setTimeout(function(){
                 $(".tipCommon").remove();
+                if(tip_url){
+                    window.location.href = tip_url;
+                };
             },1500)
+
         }
     };
 </script>

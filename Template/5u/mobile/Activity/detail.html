@@ -165,7 +165,7 @@
                        $(".alert").show();
                         return false;
                   }else{
-                    window.location.href="enter.html"
+                    window.location.href='enter.html?data_id='+data_id+''
                   } 
                 }, function errorCallback(response) {
                     console.log(response.data.msg);                   

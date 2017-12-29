@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="info">
 <head>
     <meta charset="UTF-8">
     <title>认证中心</title>
@@ -8,12 +8,13 @@
     <meta name='viewport' content='user-scalable=no,width=750'>
     <link rel="stylesheet" href="{$Think.MOBILE}/css/common_new.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
+    <include file="./Template/5u/common/common.html" />
 </head>
-<body>
+<body ng-controller="infoCtrl">
 <p class="ifm_tit">认证中心</p>
 <div class="ifm_head_wrap">
     <div class="ifm_head">
-        <img class="ifm_deafault" src="{$Think.MOBILE}/images/icon-portrait-default.png" alt="">
+        <img class="ifm_deafault" ng-src="{{info.head_pic}}" alt="" ng-cloak>
         <img class="ifm_camera" src="{$Think.MOBILE}/images/icon-camera.png" alt="">
     </div>
 </div>
@@ -22,63 +23,70 @@
     <div class="apply_content_box chose clear">
         <span class='apply_word fl'>合格认证</span>
         <img class='fr content_jt' src="{$Think.MOBILE}/images/icon-index-cooperator-authenticated.jpg" alt="">
-        <!-- <img  class='fr content_jt' src="images/icon-right2.png" alt=""> -->
-
     </div>
 </a>
 <a href="__MODULE__/User/change_nickname.html">
     <div class="apply_content_box chose clear">
         <span class='apply_word fl'>昵称</span>
         <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
-        <input class='apply_means fr' type="text" readonly="readonly" value="凯越">
+        <input class='apply_means fr' type="text" readonly="readonly" ng-value="info.nickname" ng-cloak>
     </div>
 </a>
 
 <div class="apply_content_box chose clear">
     <span class='apply_word fl'>手机</span>
-    <input class='ifm_input apply_means fr' readonly="readonly" type="text" value="159****6033">
+    <input class='ifm_input apply_means fr' readonly="readonly" type="text" ng-value="info.mobile" ng-cloak>
 </div>
 
 <div class="apply_content_box chose clear">
     <span class='apply_word fl'>企业/单位名</span>
-    <input class='ifm_input apply_means fr' readonly="readonly" type="text" value="广州华新科实业有限公司">
+    <input class='ifm_input apply_means fr' readonly="readonly" type="text" ng-value="info.company" ng-cloak>
 </div>
 
 <div class="apply_content_box chose clear">
     <span class='apply_word fl'>主营业务</span>
-    <input class='ifm_input apply_means fr' readonly="readonly" type="text" value="芯片研发">
+    <input class='ifm_input apply_means fr' readonly="readonly" type="text" ng-value="info.zyyw" ng-cloak>
 </div>
 
 <div class="apply_content_box chose clear">
     <span class='apply_word fl'>关注领域</span>
-    <input class='ifm_input apply_means fr' readonly="readonly" type="text" value="现金制造 健康医疗">
+    <input class='ifm_input apply_means fr' readonly="readonly" type="text" vg-value="info.tech_fieid" ng-cloak>
 </div>
 
 <div class="apply_content_box chose clear">
     <span class='apply_word fl'>企业地址</span>
-    <input class='ifm_input apply_means fr' readonly="readonly" type="text" value="广州省广州市海珠区滨江...">
+    <input class='ifm_input apply_means fr' readonly="readonly" type="text" ng-value="info.address" ng-cloak>
 </div>
 
-<div class="apply_content_box chose clear">
+<!-- <div class="apply_content_box chose clear">
     <span class='apply_word fl'>联系人</span>
     <input class='ifm_input apply_means fr' readonly="readonly" type="text" value="张晓东">
-</div>
+</div> -->
 
 <div class="cer-middle">
     <p class='mid_p'>营业执照</p>
     <div class="IDcardDiv" style="text-align:center">
         <input type="file" name="pic" accept="image/*" class="picFM" style='display:none'/>
-        <img class='fileFm' src="{$Think.MOBILE}/images/yyzz.png" alt="">
+        <img class='fileFm' ng-src="{{info.company_pic}}" alt="">
     </div>
 </div>
 
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script src='{$Think.MOBILE}/js/return.js'></script>
 <script>
-    // 点击触发拍照上传功能
-//    $('.fileFm').on('click',function(){
-//        $('.picFM').click();
-//    })
+    var app = angular.module('info',[]);
+    app.controller("infoCtrl",function ($scope,$http){
+        $http({
+            method:'GET',
+            url:'/api.php/User/user_info/action/detail',            
+        }).then(function successCallback(response) {    
+             $scope.info = response.data.data;
+             console.log($scope.info.head_pic);
+            }, function errorCallback(response) {
+
+        });
+    })
 </script>
 </html>

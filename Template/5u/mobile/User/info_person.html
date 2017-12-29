@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="info">
 <head>
     <meta charset="UTF-8">
     <title>认证中心</title>
@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
     <include file="./Template/5u/common/common.html" />
 </head>
-<body>
+<body ng-controller="infoCtrl">
 <p class="ifm_tit">认证中心</p>
 <div class="ifm_head_wrap">
     <div class="ifm_head">
-        <img class="ifm_deafault" src="{$Think.MOBILE}/images/icon-portrait-default.png" alt="">
+        <img class="ifm_deafault" ng-src="{{info.head_pic}}" alt="" ng-cloak>
         <img class="ifm_camera" src="{$Think.MOBILE}/images/icon-camera.png" alt="">
     </div>
 </div>
@@ -30,53 +30,66 @@
     <div class="apply_content_box chose clear">
         <span class='apply_word fl'>昵称</span>
         <img  class='fr content_jt' src="{$Think.MOBILE}/images/icon-right2.png" alt="">
-        <input class='apply_means fr' type="text" readonly="readonly" value="凯越">
+        <input class='apply_means fr' type="text" readonly="readonly" ng-value="info.nickname" ng-cloak>
     </div>
 </a>
 
 <div class="apply_content_box chose clear">
     <span class='apply_word fl'>手机</span>
-    <input class='ifm_input apply_means fr' readonly="readonly" type="text" value="159****6033">
+    <input class='ifm_input apply_means fr' readonly="readonly" type="text" ng-value="info.mobile" ng-cloak>
 </div>
 
 <div class="apply_content_box chose clear">
     <span class='apply_word fl'>证件</span>
-    <input class='ifm_input apply_means fr' readonly="readonly" type="text" value="441821****3030">
+    <input class='ifm_input apply_means fr' readonly="readonly" type="text" ng-value="info.idcard" ng-cloak>
 </div>
 
 <div class="apply_content_box chose clear">
     <span class='apply_word fl'>邮箱</span>
-    <input class='ifm_input apply_means fr' readonly="readonly" type="text" value="kaiyue@paoding.cc">
+    <input class='ifm_input apply_means fr' readonly="readonly" type="text" ng-value="info.email" ng-cloak>
 </div>
 
 <div class="apply_content_box chose clear">
     <span class='apply_word fl'>公司</span>
-    <input class='ifm_input apply_means fr' readonly="readonly" type="text" value="广州华新实业有限公司">
+    <input class='ifm_input apply_means fr' readonly="readonly" type="text" ng-value="info.company" ng-cloak>
 </div>
 
 <div class="apply_content_box chose clear">
     <span class='apply_word fl'>职位</span>
-    <input class='ifm_input apply_means fr' readonly="readonly" type="text" value="CEO">
+    <input class='ifm_input apply_means fr' readonly="readonly" type="text" ng-value="info.job" ng-cloak>
 </div>
 
 <div class="apply_content_box chose clear">
     <span class='apply_word fl'>关注领域</span>
-    <input class='ifm_input apply_means fr' readonly="readonly" type="text" value="材料科学 能量环保">
+    <input class='ifm_input apply_means fr' readonly="readonly" type="text" ng-value="info.tech_fieid" ng-cloak>
 </div>
 
 
 <div class="cer-middle">
-    <p class='mid_p'>上传证件</p>
+    <p class='mid_p'>身份证件</p>
     <div class="IDcardDiv clear">
-        <img class='fl fileZm' src="{$Think.MOBILE}/images/sfz-zm.png" alt="">
-        <img class='fr fileFm' src="{$Think.MOBILE}/images/sfz-fm.png" alt="">
+        <!-- src="{$Think.MOBILE}/images/sfz-zm.png" -->
+        <img class='fl fileZm' ng-src="{{info.idcard_img_front}}" alt="">
+        <img class='fr fileFm' ng-src="{{info.idcard_img_back}}" alt="">
     </div>
 </div>
 
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script src='{$Think.MOBILE}/js/return.js'></script>
 <script>
-    
+    var app = angular.module('info',[]);
+    app.controller("infoCtrl",function ($scope,$http){
+        $http({
+            method:'GET',
+            url:'/api.php/User/user_info/action/detail',            
+        }).then(function successCallback(response) {    
+             $scope.info = response.data.data;
+             console.log($scope.info.head_pic);
+            }, function errorCallback(response) {
+
+        });
+    })
 </script>
 </html>

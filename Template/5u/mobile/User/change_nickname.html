@@ -15,7 +15,7 @@
 <p class="change_name_tip">可使用中英文、数字和下划线，字数限制2-10位</p>
 <p class="write_tip">输入新昵称</p>
 <input class="new_name" id="nickname" type="text" placeholder="输入新昵称">
-<a class="change_name_save" href="">保存</a>
+<a class="change_name_save">保存</a>
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
 <script src='{$Think.MOBILE}/js/common.js'></script>
@@ -43,7 +43,10 @@
             data: data,
             dataType: "json",
             success: function(response){
-                alert(response.result);
+               tip_ct = '修改成功';
+               tips.addtips(tip_ct);
+               window.location.href = '/index.php/Mobile/User/user_info.html';
+
             }
         });
     });

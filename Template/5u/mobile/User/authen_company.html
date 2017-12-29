@@ -157,7 +157,7 @@
             $.ajax({
                 type: "post",
                 url: '/api.php/User/user_authen/action/update_head',
-                data: dataPic,
+                data: {head_pic:dataPic},
                 dataType: 'json',              
                 success: function (res) {               
                   if(res.result == 1){

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/index.css">
     <link rel="stylesheet" href="{$Think.MOBILE}/css/activity.css">
+    <include file="./Template/5u/common/common.html" />
 </head>
 <body style="padding-top:60px;overflow-x:hidden">
 
@@ -27,76 +28,128 @@
     </div>
     <div class="apply_choice_cancle">取消</div>
 </div>
-<div class="regist_main">
-    <div class="regist_input">
-        <span class="star" style="color:red">*</span>
-        <span class="regist_span">姓名</span>
-        <input type="text" placeholder="输入您的真实姓名">
-    </div>
+<form id="formID">
+    <div class="regist_main">
+        <div class="regist_input">
+            <span class="star" style="color:red">*</span>
+            <span class="regist_span">姓名</span>
+            <input class="enter_ip" type="text" placeholder="输入您的真实姓名" name="name">
+        </div>
 
-    <div class="regist_input">
-        <span class="star" style="color:red">*</span>
-        <span class="regist_span">手机</span>
-        <input type="text" placeholder="输入手机号码">
-    </div>
+        <div class="regist_input">
+            <span class="star" style="color:red">*</span>
+            <span class="regist_span">手机</span>
+            <input class="enter_ip" type="number" placeholder="输入手机号码" name="mobile" oninput="if(this.value>11){this.value = this.value.substr(0,11)}">
+        </div>
 
-    <div class="regist_input">
-        <span class="star" style="color:red">*</span>
-        <span class="regist_span">公司</span>
-        <input type="text" placeholder="输入公司名称">
-    </div>
+        <div class="regist_input">
+            <span class="star" style="color:red">*</span>
+            <span class="regist_span">公司</span>
+            <input class="enter_ip" type="text" placeholder="输入公司名称" name="company">
+        </div>
 
-    <div class="regist_input">
-        <span class="star" style="color:red">*</span>
-        <span class="regist_span">职务</span>
-        <input type="text" placeholder="请输入您所在公司职务">
-    </div>
+        <div class="regist_input">
+            <span class="star" style="color:red">*</span>
+            <span class="regist_span">职务</span>
+            <input class="enter_ip" type="text" placeholder="请输入您所在公司职务" name="job">
+        </div>
 
-    <div class="regist_input" style="border:none">
-        <span class="star" style="color:red">*</span>
-        <span class="regist_span">关注领域</span>
-        <span style="margin-left:20px;color:#ccc;font-size:20px">（最多选3项）</span>
-    </div>
-    <div class="demand_area" style="margin-top:-40px;">
-        <div class="areas_main clear" style="margin-left:-30px;">
-            <li class="areas_default">电子信息</li>
-            <li class="areas_default">先进制造</li>
-            <li class="areas_default">新材料</li>
-            <li class="areas_default">新能源与节能</li>
-            <li class="areas_default">环境保护</li>
-            <li class="areas_default">健康医疗</li>
-            <li class="areas_default">智能技术</li>
+        <div class="regist_input" style="border:none">
+            <span class="star" style="color:red">*</span>
+            <span class="regist_span">关注领域</span>
+            <span style="margin-left:20px;color:#ccc;font-size:20px">（最多选3项）</span>
+        </div>
+        <div class="demand_area" style="margin-top:-40px;">
+            <div class="areas_main clear" style="margin-left:-30px;">
+                <li class="areas_default">电子信息</li>
+                <li class="areas_default">先进制造</li>
+                <li class="areas_default">新材料</li>
+                <li class="areas_default">新能源与节能</li>
+                <li class="areas_default">环境保护</li>
+                <li class="areas_default">健康医疗</li>
+                <li class="areas_default">智能技术</li>
+            </div>
+        </div>
+
+        <div class="regist_input" style="border:none">
+            <p class="regist_span">贵公司的业务范围</p>
+            <input class="signUp_inp" type="text" placeholder="请输入贵公司的业务范围" maxlength="50" name="ywfw">
+        </div>
+
+        <div class="regist_input" style="border:none">
+            <p class="regist_span">您希望对接的技术</p>
+            <input class="signUp_inp" type="text" placeholder="请输入您希望对接的技术"  maxlength="50" name="js">
+        </div>
+
+        <div class="regist_input" style="border:none">
+            <p class="regist_span">您希望对接的需求</p>
+            <input class="signUp_inp" type="text" placeholder="请输入您希望对接的需求"  maxlength="50" name="xq">
         </div>
     </div>
-
-    <div class="regist_input" style="border:none">
-        <p class="regist_span">贵公司的业务范围</p>
-        <input class="signUp_inp" type="text" placeholder="请输入贵公司的业务范围" maxlength="50">
-    </div>
-
-    <div class="regist_input" style="border:none">
-        <p class="regist_span">您希望对接的技术</p>
-        <input class="signUp_inp" type="text" placeholder="请输入您希望对接的技术"  maxlength="50">
-    </div>
-
-    <div class="regist_input" style="border:none">
-        <p class="regist_span">您希望对接的需求</p>
-        <input class="signUp_inp" type="text" placeholder="请输入您希望对接的需求"  maxlength="50">
-    </div>
-</div>
+</form>
 
 <div class="sec_return">
     <a onclick="javascript:history.go(-1);">
         <img class="return_icon" src="{$Think.MOBILE}/images/icon-common-return.png" alt="">
     </a>
-    <a href="" class="act_det_btn">
+    <a class="act_det_btn">
         确定
     </a>
 </div>
 
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
-<script>
+<script>   
+    var lingyu_html;
+    var hd_id = GetQueryString('data_id');
+    var data = {};
+    $(".act_det_btn").on("click",function(){
+        var li = $(".areas_main li"); 
+        var count = $(".areas_selected").length; 
+        for(var j = 0 ;j < $(".enter_ip").length;j++){           
+            if($(".enter_ip").eq(j).val()==""){
+               $(".enter_ip").eq(j).focus();
+               tip_ct = "请填写完毕再提交";
+               tips.addtips(tip_ct);
+               return false;
+            }
+        };
+        // 关注领域选中状态
+        var li = $(".areas_main li");        
+        for(var i = 0;i < li.length ; i++){
+            if( li.eq(i).hasClass('areas_selected') ){               
+                 lingyu_html = li.eq(i).html();
+            }
+        };
+        if(count < 1){
+            tip_ct = "请选择关注领域";
+            tips.addtips(tip_ct);
+            return false;
+        }
+        else{
+            var t = $("#formID").serializeArray();
+            $.each(t, function(){
+                data[this.name] = this.value;
+            });
+            data['hd_id'] = hd_id;
+            data['lingyu'] = lingyu_html;
+            $.ajax({
+                type:'post',
+                url:'/index.php/Mobile/Activity/enter',
+                data:data,
+                dataType:'json',
+                success:function(res) {
+                    if(res.result == 1){
+                        tip_ct = "活动报名成功";
+                        tips.addtips(tip_ct);
+                        return false;
+                    }
+                }
+            })
+        }
+
+    })
+
     // 需求领域  限制可选3个
     $(".areas_main li").on("click",function(){
         var count = $(".areas_selected").length;
