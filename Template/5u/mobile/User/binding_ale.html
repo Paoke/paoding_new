@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="userInfo">
 <head>
     <meta charset="UTF-8">
     <title>个人信息</title>
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{$Think.MOBILE}/css/my.css">
     <include file="./Template/5u/common/common.html" />
 </head>
-<body>
+<body ng-controller="myInfo">
 <p class="apply_tit">已绑定手机号</p>
 <p class="apply_tip"></p>
 <div class="apply_already clear">
@@ -19,15 +19,27 @@
     </div>
     <div class="already_num fl">
         <p class="already_tip">你当前已绑定手机号</p>
-        <p class="already_number">{$Think.session.userArr.mobile}</p>
+        <p class="already_number" ng-cloak>{{ user.mobile }}</p>
     </div>
 </div>
 <a href="__MODULE__/User/change_binding.html" class="apply_form">修改绑定</a>
 <p class="apply_change_tip">为确保账户安全，换绑前需验证当前手机号</p>
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script src='{$Think.MOBILE}/js/return.js'></script>
 <script>
+    var app = angular.module('userInfo', []);
 
+    app.controller('myInfo', function($scope,$http) {
+        $http({
+            method: 'GET',
+            url: '/api.php/User/user_info/action/detail',
+
+        }).then(function successCallback(response) {
+            $scope.user = response.data.data;
+        }, function errorCallback(response) {
+        });
+    });
 </script>
 </html>

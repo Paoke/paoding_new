@@ -25,11 +25,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_info.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user_info.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/user_info.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="47" column="10" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+            <state relative-caret-position="729">
+              <caret line="72" column="7" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="72" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="binding_ale.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/binding_ale.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="567">
+              <caret line="21" column="42" lean-forward="false" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tec_detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/tec_detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="41" column="72" lean-forward="true" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="release.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Index/release.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="648">
+              <caret line="177" column="20" lean-forward="false" selection-start-line="177" selection-start-column="20" selection-end-line="177" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -138,7 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Template/5u/mobile/Demand/demand_list.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Uploadify/upload.html" />
         <option value="$PROJECT_DIR$/Application/Api/Controller/ChannelIndexController.class.php" />
         <option value="$PROJECT_DIR$/Application/Api/Controller/ArticleController.class.php" />
@@ -146,7 +175,6 @@
         <option value="$PROJECT_DIR$/Application/Api/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/Register/register.html" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/User/binding.html" />
-        <option value="$PROJECT_DIR$/Template/5u/mobile/Index/release.html" />
         <option value="$PROJECT_DIR$/Application/Mobile/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/Application/Api/Controller/PaodingController.class.php" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/Index/tec_list.html" />
@@ -179,7 +207,6 @@
         <option value="$PROJECT_DIR$/Public/mobile/css/my.css" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/User/user_tec.html" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/User/user_demand.html" />
-        <option value="$PROJECT_DIR$/Template/5u/mobile/User/tec_detail.html" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/User/demand_detail.html" />
         <option value="$PROJECT_DIR$/Application/Mobile/Controller/ArticleController.class.php" />
         <option value="$PROJECT_DIR$/Application/Api/Controller/BaseRestController.class.php" />
@@ -189,6 +216,9 @@
         <option value="$PROJECT_DIR$/Template/5u/mobile/User/info_company.html" />
         <option value="$PROJECT_DIR$/Application/Api/Controller/UserController.class.php" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/User/user_info.html" />
+        <option value="$PROJECT_DIR$/Template/5u/mobile/User/binding_ale.html" />
+        <option value="$PROJECT_DIR$/Template/5u/mobile/User/tec_detail.html" />
+        <option value="$PROJECT_DIR$/Template/5u/mobile/Index/release.html" />
       </list>
     </option>
   </component>
@@ -271,10 +301,6 @@
               <option name="myItemId" value="mobile" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="User" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -295,6 +321,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mobile" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Index" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -495,12 +525,12 @@
       <workItem from="1514251742927" duration="19682000" />
       <workItem from="1514339057548" duration="21186000" />
       <workItem from="1514423872220" duration="19811000" />
-      <workItem from="1514511864963" duration="14742000" />
+      <workItem from="1514511864963" duration="15951000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="364359000" />
+    <option name="totallyTimeSpent" value="365568000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -546,20 +576,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Application/Admin/View/Activity/activity_info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="462" column="91" lean-forward="false" selection-start-line="462" selection-start-column="91" selection-end-line="462" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/ActivityController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="1730" column="33" lean-forward="true" selection-start-line="1730" selection-start-column="33" selection-end-line="1730" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Common/Common/function.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-280">
@@ -672,14 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="55" column="51" lean-forward="false" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/tec_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="61" column="51" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -946,8 +954,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/user_info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="47" column="10" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+        <state relative-caret-position="729">
+          <caret line="72" column="7" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="72" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/binding_ale.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="42" lean-forward="false" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/tec_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="41" column="72" lean-forward="true" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Index/release.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="177" column="20" lean-forward="false" selection-start-line="177" selection-start-column="20" selection-end-line="177" selection-end-column="20" />
           <folding />
         </state>
       </provider>
