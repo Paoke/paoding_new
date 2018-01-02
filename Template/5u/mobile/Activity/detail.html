@@ -137,8 +137,8 @@
         }).then(function successCallback(response) {                      
                 $scope.details = response.data.data;     
                  var startTime = $scope.details.formal_start_time;
-                 if(Date.parse(new Date()) > startTime){
-                    $scope.details['status']="0";//已经举办过了
+                 if(Date.parse(new Date()) > Date.parse(startTime)){   
+                    $scope.details['status']="0";//已结束
                 }else{
                     $scope.details['status']="1";//未举办
                 }
