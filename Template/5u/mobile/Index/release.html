@@ -197,8 +197,9 @@
                 dataType: 'json',
                 success: function (res) {
                   if(res.result == 1){
-                    alert("发布成功!");
-                    window.location.href="/index.php/Mobile";
+                    tip_ct = "发布成功",
+                    tip_url = "/index.php/Mobile";
+                    tips.addtips(tip_ct,tip_url);
                   }
                 }
             })

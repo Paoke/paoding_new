@@ -92,21 +92,23 @@
 <!-- 活动 -->
 <div class="tab_body">
     <div class="activity_lately_section clear" ng-repeat="activityList in activityLists">
-        <div class="activity_section_left fl">
-            <img src="{{ activityList.sponsor_logo_url }}" alt="" ng-cloak>
+        <a href="__MODULE__/Activity/detail.html?data_id={{activityList.id}}">
+            <div class="activity_section_left fl">
+                <img src="{{ activityList.sponsor_logo_url }}" alt="" ng-cloak>
+            </div>
+            <div class="activity_section_right fr">
+                <p class="activity_right_tit" ng-cloak>{{ activityList.title }}</p>
+                <p class="activity_right_p">
+                    <span class="activity_right_span" ng-cloak>{{ activityList.diqu }}</span>
+                    <span ng-cloak>{{ activityList.formal_start_time }}</span>
+                </p>
+                <p class="activity_right_p">
+                    浏览<span class="activity_right_span" ng-cloak>{{ activityList.clicks }}</span>
+                    收藏<span ng-cloak>{{ activityList.shoucang }}</span>
+                </p>
+            </div>
         </div>
-        <div class="activity_section_right fr">
-            <p class="activity_right_tit" ng-cloak>{{ activityList.title }}</p>
-            <p class="activity_right_p">
-                <span class="activity_right_span" ng-cloak>{{ activityList.diqu }}</span>
-                <span ng-cloak>{{ activityList.formal_start_time }}</span>
-            </p>
-            <p class="activity_right_p">
-                浏览<span class="activity_right_span" ng-cloak>{{ activityList.clicks }}</span>
-                收藏<span ng-cloak>{{ activityList.shoucang }}</span>
-            </p>
-        </div>
-    </div>
+    </a>
 
 </div>
 
@@ -164,7 +166,7 @@
         }).then(function successCallback(response) {
             $scope.tecLists = response.data.data;
         }, function errorCallback(response) {
-            console.log(response)
+            // console.log(response)
         });
 
         //需求
@@ -174,7 +176,7 @@
         }).then(function successCallback(response) {
             $scope.demandLists = response.data.data;
         }, function errorCallback(response) {
-            console.log(response)
+            // console.log(response)
         });
 
         //活动
@@ -184,7 +186,7 @@
         }).then(function successCallback(response) {
             $scope.activityLists = response.data.data;
         }, function errorCallback(response) {
-            console.log(response)
+            // console.log(response)
         });
 
         //单位->协会
@@ -194,7 +196,7 @@
         }).then(function successCallback(response) {
             $scope.assoLists = response.data.data;
         }, function errorCallback(response) {
-            console.log(response)
+            // console.log(response)
         });
 
         //单位->企业
@@ -204,7 +206,7 @@
         }).then(function successCallback(response) {
             $scope.companyLists = response.data.data;
         }, function errorCallback(response) {
-            console.log(response)
+            // console.log(response)
         });
 
     });

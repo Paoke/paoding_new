@@ -19,12 +19,13 @@
     </div>
 </div>
 
-<a href="#">
-    <div class="apply_content_box chose clear">
-        <span class='apply_word fl'>合格认证</span>
-        <img class='fr content_jt' src="{$Think.MOBILE}/images/icon-index-cooperator-authenticated.jpg" alt="">
-    </div>
-</a>
+
+<div class="apply_content_box chose clear">
+    <span class='apply_word fl'>合格认证</span>
+    <img class='fr content_jt' src="{$Think.MOBILE}/images/icon-index-cooperator-authenticated.jpg" alt="" ng-show="info.status =='0' " ng-cloak>
+    <input class='ifm_input apply_means fr' type="text" readonly="readonly" ng-value="sta" ng-cloak ng-show="info.status != '0'">
+</div>
+
 <a href="__MODULE__/User/change_nickname.html">
     <div class="apply_content_box chose clear">
         <span class='apply_word fl'>昵称</span>
@@ -40,7 +41,7 @@
 
 <div class="apply_content_box chose clear">
     <span class='apply_word fl'>企业/单位名</span>
-    <input class='ifm_input apply_means fr' readonly="readonly" type="text" ng-value="info.company" ng-cloak>
+    <input class='ifm_input apply_means fr' readonly="readonly" type="text" ng-value="info.company_name" ng-cloak>
 </div>
 
 <div class="apply_content_box chose clear">
@@ -78,12 +79,19 @@
 <script>
     var app = angular.module('info',[]);
     app.controller("infoCtrl",function ($scope,$http){
+        $scope.sta = "";
         $http({
             method:'GET',
             url:'/api.php/User/user_info/action/detail',            
         }).then(function successCallback(response) {    
              $scope.info = response.data.data;
-             console.log($scope.info.head_pic);
+             console.log($scope.info.status);
+             if($scope.info.status == 1){
+                $scope.sta = "审核中";
+             }else if($scope.info.status == null){
+                $scope.sta = "未认证";
+             }
+             // console.log($scope.info.head_pic);
             }, function errorCallback(response) {
 
         });

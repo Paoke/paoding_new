@@ -1,4 +1,22 @@
 $(function () {
+  // 公共提示框
+  var tip = {
+      tip_ct:"",
+      tip_url:""
+  };
+  var tips = {
+      addtips:function(tip_ct,tip_url){         
+          var tipNode = '<div class="tipCommon" style="display:block">'+tip_ct+'</div>';
+          $('body').append(tipNode);
+          setTimeout(function(){
+              $(".tipCommon").remove();
+              if(tip_url){
+                  window.location.href = tip_url;
+              };
+          },1500)
+
+      }
+  };
 
   'use strict';
 
@@ -132,9 +150,12 @@ $(function () {
                 var data = {head_pic: imgBase};
                 $.post('/api.php/User/user_info/action/update_head', data, function (ret) {
                     if(ret!=false){
-		                alert('上传成功');
+                        tip_ct = "上传成功";
+                        tip_url = "/index.php/Mobile/User/user_center";
+                        tips.addtips(tip_ct,tip_url);
 		              }else{
-		                alert('上传失败');
+		                tip_ct = '上传失败';
+                    tips.addtips(tip_ct);
 		              }
                 }, 'json');
             }

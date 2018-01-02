@@ -21,18 +21,18 @@
     </div>
     <div class="my_nameBox fl">
         <p class="my_name" ng-bind="user.nickname"></p>
-        <a class="my_apply" ng-show="user.status=='1'">
+        <a class="my_apply" ng-show="user.status=='0'">
             <div class="my_circle">
-                <img src="{$Think.MOBILE}/images/icon-my-apply.png" alt="">
+                <img src="{$Think.MOBILE}/icon-my-authenticated.png" alt="">
             </div>
             <span>已认证</span>
         </a>
 
-        <a href="user_authen.html" class="my_apply" ng-hide="user.status=='1'">
+        <a href="user_authen.html" class="my_apply" ng-hide="user.status=='0'">
             <div class="my_circle">
                 <img src="{$Think.MOBILE}/images/icon-my-apply.png" alt="">
             </div>
-            <span>申请认证</span>
+            <span ng-cloak>{{sta}}</span>
         </a>
     </div>
     <a href="__MODULE__/User/user_info.html"><img class="my_header_jt" src="{$Think.MOBILE}/images/icon-right.png" alt=""></a>
@@ -123,6 +123,12 @@
             } 
         }).then(function successCallback(response) {    
              $scope.user = response.data.data;
+             console.log($scope.user.status); 
+             if($scope.user.status == 1){
+                $scope.sta = "审核中";
+             }else if($scope.user.status == null){
+                $scope.sta = "未认证";
+             }
             }, function errorCallback(response) {
 
         });
