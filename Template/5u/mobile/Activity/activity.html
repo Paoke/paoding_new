@@ -64,7 +64,7 @@
         <span class="activity_lately_span fl">最近举办</span>
     </div>
 
-    <div ng-repeat="list in lists" ng-show="list.status">
+    <div ng-repeat="list in lists" ng-hide="list.status=='0'">
         <a href="__CONTROLLER__/detail.html?data_id={{list.id}}" >
             <div class="activity_main">
                 <img class="activity_main_img" ng-cloak ng-src="{{list.cover_url}}" alt="">
@@ -80,12 +80,12 @@
 
 <!-- 往期活动 -->
 <div class="activity_lately">
-    <div class="activity_lately_tit clear"  ng-show="lists[0].have=='1'">
+    <div class="activity_lately_tit clear"  ng-show="lists[0].have!='1'">
         <div class="activity_tit_icon fl"  style="background: url({$Think.MOBILE}/images/icon-activity-previous.png) center 0 no-repeat;"></div>
         <span class="activity_lately_span fl">往期活动</span>
     </div>
 
-    <div ng-repeat="list in lists" ng-hide="list.status">
+    <div ng-repeat="list in lists" ng-hide="list.status=='1'">
         <a href="__CONTROLLER__/detail.html?data_id={{list.id}}" >
             <div class="activity_lately_section clear">
                 <div class="activity_section_left fl">
@@ -176,9 +176,9 @@
             var data=response.data.data;
             for (var i = 0; i < data.length; i++) {
                 if(Date.parse(new Date())>(new Date(data[i].formal_end_time)).getTime()){
-                    data[i]['status']=false;//已经举办过了
+                    data[i]['status']="0";//已经举办过了
                 }else{
-                    data[i]['status']=true;//未举办
+                    data[i]['status']="1";//未举办
                     data[0]['have']="1";
                 }
                 
