@@ -42,8 +42,8 @@
                         <span ng-cloak class="sec_data_span">{{detail.clicks}}</span>
                     </div>
                     <p class="sec_data_p">
-                        发布时间: <span class="sec_data_span" ng-cloak>{{detail.create_time}}</span>
-                        投入预算：<span ng-cloak>{{detail.yfys}}</span>
+                        发布时间: <span class="sec_data_span" ng-cloak>{{times | date:'yyyy-MM-dd'}}</span>
+                        投入预算：<span ng-cloak>{{detail.yfys}}</span>                       
                     </p>
                 </div>
                 <img class="fr" src="{$Think.MOBILE}/images/icon-research.png" alt="">
@@ -125,6 +125,7 @@
             url:'/api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1',
         }).then(function successCallback(response){       
           $scope.detail = response.data.data;
+          $scope.times = Date.parse($scope.detail.create_time);
         },function errorCallback(){          
         });   
 

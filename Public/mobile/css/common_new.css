@@ -1,19 +1,19 @@
 /*reset*/
-body, h1, h2, h3, h4, h5, h6, p, dl, dd, ul, ol , input, textarea, th, td, select, form{margin:0; padding:0;}
+body, h1, h2, h3, h4, h5, h6, p, dl, dd, ul, ol , input, textarea, th, td, select, form,span,p{margin:0; padding:0;}
 em{font-size: normal;}
 li{list-style:none;}
 /*去除点击高亮*/
 a{text-decoration: none;-webkit-tap-highlight-color: transparent;}
 /*a标签点击样式*/
-a:hover,a:active,a:visited,a:link{-webkit-tap-highlight-color: transparent;}
+a:hover,a:active,a:visited,a:link{-webkit-tap-highlight-color: transparent;color: #999;}
 img{vertical-align: top;}
 textarea{resize:none;overflow: auto;}
-body{font-family: "方正兰亭黑简体","微软雅黑",Helvetica;}
+body{font-family:"微软雅黑",Helvetica;}
 html{-webkit-text-size-adjust:none;}
 input:focus{border:none;outline:none}
 div,a{-webkit-box-sizing: border-box; box-sizing: border-box;}
-input,textarea{border:none;font-size:28px;font-family: "方正兰亭黑简体","微软雅黑",Helvetica;color:#333;padding-left: 30px;-webkit-box-sizing: border-box; box-sizing: border-box;}
-::-webkit-input-placeholder {font-size: 28px; color:#ccc;font-family: "方正兰亭黑简体","微软雅黑",Helvetica;}
+input,textarea{border:none;font-size:28px;font-family:"微软雅黑",Helvetica;color:#333;padding-left: 30px;-webkit-box-sizing: border-box; box-sizing: border-box;}
+::-webkit-input-placeholder {font-size: 28px; color:#ccc;font-family:"微软雅黑",Helvetica;}
 input[type=button]{	-webkit-appearance:none;-moz-appearance:none;outline:none;}
 [ng-cloak]{display:none !important;}
 
@@ -57,9 +57,21 @@ body{width: 750px;margin: 0 auto; padding-bottom: 100px;}
 	color: #666;
 	font-size: 22px;
 }
-.nav_option img{
-	margin-bottom: 8px;
+
+.icon_tabbar{
+	width: 40px;
+	height: 40px;
+	margin:0 auto 8px;
+	background:url(../images/icon-tabbar.png) no-repeat;
 }
+.icon-tabbar-technology-selected{background-position:0 0;}
+.icon-tabbar-technology-default{background-position:-41px 0;}
+.icon-tabbar-demand-selected{background-position:-84px 0;}
+.icon-tabbar-demand-default{background-position:-124px 0;}
+.icon-tabbar-activity-selected{background-position:-168px 0;}
+.icon-tabbar-activity-default{background-position:-209px 0;}
+.icon-tabbar-my-selected{background-position:-251px 0;}
+.icon-tabbar-my-default{background-position:-293px 0;}
 
 /*返回上一级按钮*/
 .sec_return {

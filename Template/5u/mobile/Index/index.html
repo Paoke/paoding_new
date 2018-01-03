@@ -44,7 +44,7 @@
     <a href="__MODULE__/Index/choose.html">
         <div class="issue_btn">
             发布技术/需求
-            <p class="issue_num">已有326人发布</p>
+            <span class="issue_num">已有326人发布</span>
         </div>
     </a>
 </div>
@@ -69,13 +69,6 @@
                             <img src="{$Think.MOBILE}/images/icon-index-item.png" alt="">
                             <span class="hot_secCt_tec" ng-cloak>{{list.count}}项技术</span>
                         </p>
-<!-- 
-                        <div class="hot_secCt2 clear">
-                            <p class="fl">
-                                <span class="point"></span>
-                                <span class="sec_world" ng-cloak>{{list.yyxy}}</span>
-                            </p>
-                        </div> -->
                     </a>
                 </div>
                 <!-- 占位div -->
@@ -105,14 +98,14 @@
             </div>
             <div class="fr main_section_right">
                 <p class="sec_tit" ng-cloak>{{tecList.title}}</p>
-                <p class="clear">
+                <div class="clear">
                     <img class="fl index_icon" src="{$Think.MOBILE}/images/icon-index-industry.png" alt="">
                     <span class="fl sec_industry" ng-cloak>{{tecList.yyxy}}</span>
-                </p>
-                <p class="p_scan">
-                    <img src="{$Think.MOBILE}/images/icon-index-browse.png" alt="">
+                </div>
+                <div class="p_scan">
+                    <img class="fl index_icon" src="{$Think.MOBILE}/images/icon-index-browse.png" alt="">
                     <span class="sec_scan" ng-cloak>{{tecList.clicks}}</span>
-                </p>
+                </div>
                 <div class="adhi_print">
                     <span class="adhibition" ng-cloak>{{tecList.cat_name}}</span>
                     <span class="print" ng-cloak>{{tecList.csd}}</span>
@@ -184,20 +177,20 @@
 
 <div class="nav">
     <a class="nav_option" href="__MODULE__/Index/index">
-        <img src="{$Think.MOBILE}/images/icon-tabbar-technology-selected.png" alt="">
+        <div class="icon_tabbar icon-tabbar-technology-selected"></div>
         <p style="color:#ff971d;">技术</p>
     </a>
     <a class="nav_option" href="__MODULE__/Demand/demand_list">
-        <img src="{$Think.MOBILE}/images/icon-tabbar-demand-default.png" alt="">
+        <div class="icon_tabbar icon-tabbar-demand-default"></div>
         <p>需求</p>
     </a>
     <a class="nav_option" href="__MODULE__/Activity/activity">
-        <img src="{$Think.MOBILE}/images/icon-tabbar-activity-default.png" alt="">
+        <div class="icon_tabbar icon-tabbar-activity-default"></div>
         <p>活动</p>
     </a>
     <a class="nav_option" href="__MODULE__/User/user_center">
-        <img src="{$Think.MOBILE}/images/icon-tabbar-my-default.png" alt="">
-        <p >我的</p>
+        <div class="icon_tabbar icon-tabbar-my-default"></div>
+        <p>我的</p>
     </a>
 </div>
 
@@ -205,7 +198,6 @@
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
 <script src='{$Think.MOBILE}/js/swiper.min.js'></script>
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
-<!-- <script src='{$Think.MOBILE}/js/index.js'></script> -->
 <script>
     // 轮播
     var mySwiper = new Swiper('#swiper-container1', {

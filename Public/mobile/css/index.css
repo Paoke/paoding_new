@@ -48,7 +48,7 @@
 	width: 650px;
 	height: 110px;
 	border-radius: 55px;
-	margin: 38px auto 0;
+	margin: 20px auto 0;
 	text-align: center;
 	color: #fff;
 	padding-top: 20px;
@@ -58,8 +58,9 @@
 }
 .issue_num{
 	font-size: 22px;
-	margin-top: 12px;
+	margin-top: 6px;
 	font-weight: normal;
+	display: block;
 }
 
 .index_main_title{
@@ -121,7 +122,8 @@
 	color: #999;	
 }
 .index_icon{
-	margin-top:4px;
+	
+	margin-top:6px;
 	margin-right: 10px;
 }
 .sec_scan{
@@ -790,7 +792,7 @@
 	line-height: 90px;
 }
 .active{
-	color:#ff971d;
+	color:#ff971d !important;
 }
 .tec_tab a{
 	display: block;

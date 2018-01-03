@@ -50,7 +50,7 @@
     <div class="searching fl">
         <div class="input_search">
             <img src="{$Think.MOBILE}/images/icon-search-default.png" alt="">
-            <input class="tech_search" type="text" placeholder="技术搜索">
+            <input class="tech_search" type="text" placeholder="需求搜索">
             <p class="click_search fr">点击搜索</p>
         </div>
     </div>
@@ -82,7 +82,7 @@
                         <span class="sec_data_span">{{detail.clicks}}</span>
                     </div>
                     <p class="sec_data_p">
-                        发布时间: <span class="sec_data_span">{{detail.create_time}}</span>
+                        发布时间: <span class="sec_data_span">{{times | date:'yyyy-MM-dd'}}</span>
                         投入预算：<span>{{detail.yfys}}</span>
                     </p>
                 </div>
@@ -105,19 +105,19 @@
 <!-- 底部导航 -->
 <div class="nav">
     <a class="nav_option" href="__MODULE__/Index/index">
-        <img src="{$Think.MOBILE}/images/icon-tabbar-technology-default.png" alt="">
+        <div class="icon_tabbar icon-tabbar-technology-default"></div>
         <p>技术</p>
     </a>
-    <a class="nav_option" href="">
-        <img src="{$Think.MOBILE}/images/icon-tabbar-demand-selected.png" alt="">
+    <a class="nav_option" href="__MODULE__/Demand/demand_list">
+        <div class="icon_tabbar icon-tabbar-demand-selected"></div>
         <p style="color:#ff971d;">需求</p>
     </a>
     <a class="nav_option" href="__MODULE__/Activity/activity">
-        <img src="{$Think.MOBILE}/images/icon-tabbar-activity-default.png" alt="">
+        <div class="icon_tabbar icon-tabbar-activity-default"></div>
         <p>活动</p>
     </a>
     <a class="nav_option" href="__MODULE__/User/user_center">
-        <img src="{$Think.MOBILE}/images/icon-tabbar-my-default.png" alt="">
+        <div class="icon_tabbar icon-tabbar-my-default"></div>
         <p>我的</p>
     </a>
 </div>
@@ -207,8 +207,11 @@
         }).then(function successCallback(response) {
             page = response.data.data.page.page;
             page_total = response.data.data.page.page_total;
-
             $scope.details = response.data.data.info;
+            for(var i = 0 ;i < $scope.details.length;i++){
+                $scope.times = Date.parse($scope.details[i].create_time);//转成时间戳
+            };            
+            console.log($scope.times)
         }, function errorCallback(response) {
         });
     });
@@ -262,7 +265,7 @@
         data.page="1";
         data.search = $(".tech_search").val();      
         page_total=getListData(data,"html");
-        console.log(info);
+        // console.log(info);
         if(info == ""){
             $(".mask").show();
             $(".alert").show();
@@ -287,7 +290,10 @@
                 var code="";
                 info = response['data']['info'];
                 result=response['data']['page'].page_total;
+  
                 for (var i = 0; i < info.length; i++) {
+                    // 时间格式转换
+                    info[i].create_time = formatDate(new Date(Date.parse(info[i].create_time)));
                     code = code +
                         '<div class="main">' +
                         '<div class="section">' +
@@ -336,6 +342,17 @@
         return result;
 
     }
+
+    //js方法返回值：2015-03-19
+    var formatDate = function (date) {  
+        var y = date.getFullYear();  
+        var m = date.getMonth() + 1;  
+        m = m < 10 ? '0' + m : m;  
+        var d = date.getDate();  
+        d = d < 10 ? ('0' + d) : d;  
+        return y + '-' + m + '-' + d;  
+    };  
+ 
 
 </script>
 </html>

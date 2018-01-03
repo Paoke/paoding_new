@@ -174,7 +174,10 @@
                        $(".alert").show();
                         return false;
                   }else{
-                    window.location.href='enter.html?data_id='+data_id+''
+                    // window.location.href='enter.html?data_id='+data_id+''
+                    tip_ct = "报名成功";
+                    tip_url = '/index.php/Mobile/Activity/activity';
+                    tips.addtips(tip_ct,tip_url);
                   } 
                 }, function errorCallback(response) {
                     console.log(response.data.msg);                   
