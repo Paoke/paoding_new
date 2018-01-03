@@ -6,6 +6,7 @@ use Api\Logic\UserLogic;
 use Com\Wechat;
 use Think\Controller;
 use Think\Log;
+
 class UserController extends BaseRestController
 {
     public $userId = 0;
@@ -20,22 +21,22 @@ class UserController extends BaseRestController
         }
     }
 
-    public function index( $userParameter  = array())
+    public function index($userParameter = array())
     {
         $getData = $_GET;
         $postData = $_POST;
 
         $getAction = $_GET["action"];  //操作参数
-        if($getAction == null) {
+        if ($getAction == null) {
             $getAction = $userParameter['action'];  //操作参数
         }
         $getSelfUserId = $_SESSION["userArr"]["user_id"];  //自身的用户id
         $getSelfUserName = $_SESSION["userArr"]["mobile"];  //自身的用户名
         $getOrderUserId = $_GET["id"];  //别人的用户id
         $relationType = 0; //为0 表明是同一类型的用户（在同一张表里），ID不可相同。例如人与人。
-        if($getOrderUserId == null) {
+        if ($getOrderUserId == null) {
             $getOrderUserId = $userParameter['company_id'];
-            $getData["rel_type"] = 2 ; //为2 为关注
+            $getData["rel_type"] = 2; //为2 为关注
             $relationType = 1;  //为1 表明不是同一类型的用户，ID可相同。例如人与公司。
         }
         $getChannel = $_GET["channel"];  //频道别名
@@ -330,7 +331,7 @@ class UserController extends BaseRestController
                         } elseif ($data["rel_type"] == 2) {
                             //判断黑名单、关注用户是否是用户本人
 
-                            if($relationType == 0) {
+                            if ($relationType == 0) {
                                 if ($getOrderUserId == $getSelfUserId) {
                                     $returnArr = array("result" => 0, "msg" => "不能将自己作为关注对象", "code" => 402);
                                     break;
@@ -444,14 +445,15 @@ class UserController extends BaseRestController
                     $returnArr = array("result" => 0, "msg" => "请求错误，请求参数设置有误", "code" => 402);
             }
         }
-            json_return($returnArr);
+        json_return($returnArr);
 
     }
 
     /*
      * 检查登录状态,session存在返回true，不存在返回false
      */
-    private function checkLoginStatus(){
+    private function checkLoginStatus()
+    {
         $getSelfUserId = $_SESSION["userArr"]["user_id"];  //自身的用户id
         if (!empty($getSelfUserId)) {
             return true;
@@ -462,7 +464,8 @@ class UserController extends BaseRestController
     /*
      * 登录
      */
-    public function login(){
+    public function login()
+    {
         $getData = $_GET;
         $postData = $_POST;
         $user = new UserLogic();
@@ -495,17 +498,17 @@ class UserController extends BaseRestController
                 session("userName", $info['user_name']);
                 session("headPic", $info['head_pic']);
                 //记录用户登录次数
-                $log_number = M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}") ->getField("log_number");
+                $log_number = M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}")->getField("log_number");
                 $log_number++;
-                M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}")->setField('log_number',$log_number);
+                M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}")->setField('log_number', $log_number);
                 //记录用户登录时间
-                M("ManageUsers")->where("user_name='".$options["username"]."'")->save(array("last_login" => date("Y-m-d H:i:s", time())));
-                if( $_SESSION["userArr"]["user_id"] ) {
-                        $userIP = get_client_ip();
-                        $data['user_id'] = $_SESSION["userArr"]["user_id"] ;
-                        $data['user_ip'] = $userIP;
-                        $data['create_time'] = date("Y-m-d H:i:s",time());
-                        M("ManageUserRecord")->add($data);
+                M("ManageUsers")->where("user_name='" . $options["username"] . "'")->save(array("last_login" => date("Y-m-d H:i:s", time())));
+                if ($_SESSION["userArr"]["user_id"]) {
+                    $userIP = get_client_ip();
+                    $data['user_id'] = $_SESSION["userArr"]["user_id"];
+                    $data['user_ip'] = $userIP;
+                    $data['create_time'] = date("Y-m-d H:i:s", time());
+                    M("ManageUserRecord")->add($data);
                 }
                 $returnArr = array("result" => 1, "msg" => "登录成功", "code" => 200, "data" => $info);
             } else {
@@ -520,16 +523,16 @@ class UserController extends BaseRestController
     /*
      * 获取appid,area_name
      * */
-    public function getAppIdData(){
+    public function getAppIdData()
+    {
         $config = M("Config");
         $options = array(
             'appid' => $config->where("name = 'appid'")->getField("value"), //微信开放平台appid
             'area_name' => $config->where("name = 'area_name'")->getField("value"), //微信开放台回调地址
         );
-        if($options['appid']) {
+        if ($options['appid']) {
             $returnArr = array("result" => 1, "msg" => "登录成功", "code" => 200, "data" => $options);
-        }
-        else {
+        } else {
             $returnArr = array("result" => 0, "msg" => "系统繁忙，请稍后再试。。。", "code" => 402);
         }
         json_return($returnArr);
@@ -539,7 +542,8 @@ class UserController extends BaseRestController
     /*
      * 网页微信扫码自动登录
      * */
-    public function WeChatLogin(){
+    public function WeChatLogin()
+    {
         $manageUsers = M("ManageUsers");
         $manageUsersOauth = M("ManageUsersOauth");
         $config = M("Config");
@@ -550,36 +554,36 @@ class UserController extends BaseRestController
         );
         $wechat = new Wechat($options);
         $res = $wechat->getOauthAccessToken();
-        $info = $wechat->getOauthUserinfo($res["access_token"],$res["openid"]);
+        $info = $wechat->getOauthUserinfo($res["access_token"], $res["openid"]);
         //判断此微信账号有没有unionid，
-        if($info['unionid']){
+        if ($info['unionid']) {
             //根据wechat_pc和unionid获取user_id
-            $userId = $manageUsersOauth->where("oauth_name ='wechat_pc' AND unionid  ='".$info['unionid']."'")->getField("user_id");
+            $userId = $manageUsersOauth->where("oauth_name ='wechat_pc' AND unionid  ='" . $info['unionid'] . "'")->getField("user_id");
             //若user_id为空则根据uniodid去查找有没有相应的user_id，若没有则
-            if(empty($userId)) {
+            if (empty($userId)) {
                 $unionId = $info['unionid'];
                 $userId = $manageUsersOauth->where("unionid  = '$unionId'")->getField("user_id");
                 //可以根据uniodid找到user_id，在user_oauth表建一条数据，
-                if($userId) {
-                    $this->WeChatRegister($info,$userId);
+                if ($userId) {
+                    $this->WeChatRegister($info, $userId);
                 } else {
                     //在user表和user_oauth表各建一条数据
-                    $userId =  $this->WeChatRegister($info,'0');
+                    $userId = $this->WeChatRegister($info, '0');
                 }
             }
         } else {
             //根据openid查找user_id
             $userId = $manageUsersOauth->where("oauth_name = 'wechat_pc' AND oauth_openid = '{$info['openid']}'")->getField("user_id");
             //如果user_id为空则在user表和user_oauth表都创建一条数据
-            if(!$userId) {
-                $userId =  $this->WeChatRegister($info,'0');
+            if (!$userId) {
+                $userId = $this->WeChatRegister($info, '0');
             }
         }
         //根据user_id获取user的基本信息
         $userInfo = $manageUsers->field("user_id,user_name,authentication,mobile,nickname,desc,head_pic,sex,province,city,district")
-            ->where("user_id = ".$userId)
+            ->where("user_id = " . $userId)
             ->find();
-        if($userInfo) {
+        if ($userInfo) {
             //判断是否登录，参数：orderUserId，usernam
             session_unset();
             //存储用户基本信息
@@ -589,16 +593,16 @@ class UserController extends BaseRestController
             session("userName", $userInfo['user_name']);
             session("headPic", $userInfo['head_pic']);
             //记录用户登录次数
-            $log_number = M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}") ->getField("log_number");
+            $log_number = M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}")->getField("log_number");
             $log_number++;
-            M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}")->setField('log_number',$log_number);
+            M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}")->setField('log_number', $log_number);
             //记录用户登录时间
-            M("ManageUsers")->where("user_name='".$options["username"]."'")->save(array("last_login" => date("Y-m-d H:i:s", time())));
-            if( $_SESSION["userArr"]["user_id"] ) {
+            M("ManageUsers")->where("user_name='" . $options["username"] . "'")->save(array("last_login" => date("Y-m-d H:i:s", time())));
+            if ($_SESSION["userArr"]["user_id"]) {
                 $userIP = get_client_ip();
-                $data['user_id'] = $_SESSION["userArr"]["user_id"] ;
+                $data['user_id'] = $_SESSION["userArr"]["user_id"];
                 $data['user_ip'] = $userIP;
-                $data['create_time'] = date("Y-m-d H:i:s",time());
+                $data['create_time'] = date("Y-m-d H:i:s", time());
                 M("ManageUserRecord")->add($data);
             }
             $returnArr = array("result" => 1, "msg" => "登录成功", "code" => 200, "data" => $userInfo);
@@ -611,27 +615,28 @@ class UserController extends BaseRestController
     /*
     * 网页微信登录时注册
     */
-    public function WeChatRegister($data,$userId){
-       //user_id为0，表示数据库里没有这个用户，需要在user表里创建这个用户
-      if($userId ==0) {
-          if($data['sex'] =='') {
-              $data['sex'] = 0;
-          }
-          //将注册用户注册信息进行封装
-          $addInfo = array(
-              'openid' => $data['openid'],
-              'oauth' => 'wechat_pc',
-              'desc' => '该用户未填写简介',
-              'nickname' => trim($data['nickname']),
-              'sex' => $data['sex'],
-              'province' => $data['province'],
-              'city' => $data['city'],
-              'head_pic' => $data['headimgurl'],
-              "reg_time" => date("Y-m-d H:i:s", time()),   //注册时间
-          );
+    public function WeChatRegister($data, $userId)
+    {
+        //user_id为0，表示数据库里没有这个用户，需要在user表里创建这个用户
+        if ($userId == 0) {
+            if ($data['sex'] == '') {
+                $data['sex'] = 0;
+            }
+            //将注册用户注册信息进行封装
+            $addInfo = array(
+                'openid' => $data['openid'],
+                'oauth' => 'wechat_pc',
+                'desc' => '该用户未填写简介',
+                'nickname' => trim($data['nickname']),
+                'sex' => $data['sex'],
+                'province' => $data['province'],
+                'city' => $data['city'],
+                'head_pic' => $data['headimgurl'],
+                "reg_time" => date("Y-m-d H:i:s", time()),   //注册时间
+            );
 
-          $userId = M("ManageUsers")->add($addInfo);
-      }
+            $userId = M("ManageUsers")->add($addInfo);
+        }
 
         $addOauthInfo = array(
             'user_name' => trim($data['nickname']),
@@ -644,17 +649,18 @@ class UserController extends BaseRestController
         $addOauthInfo['add_time'] = date("Y-m-d H:i:s", time());
         $addOauthInfo['user_id'] = $userId;
         $oauthInfo = M("ManageUsersOauth")->add($addOauthInfo);
-       if($oauthInfo) {
-           return $userId;
-       } else {
-           return false;
-       }
+        if ($oauthInfo) {
+            return $userId;
+        } else {
+            return false;
+        }
     }
-    
+
     /*
      * 注销
      */
-    public function logout(){
+    public function logout()
+    {
         $this->clean_session();
         foreach ($_COOKIE as $key => $value) {
             setcookie($key, '', time() - 3600, '/');   //删除cookie
@@ -667,12 +673,13 @@ class UserController extends BaseRestController
     /*
      * 注册
      */
-    public function register(){
+    public function register()
+    {
         //获取表单内容
-        $username=$_POST["mobile"];
-        $pwd=encrypt($_POST["password"]);
-        $code=$_POST["code"];
-        $nickname=$_POST['nickname'];
+        $username = $_POST["mobile"];
+        $pwd = encrypt($_POST["password"]);
+        $code = $_POST["code"];
+        $nickname = $_POST['nickname'];
         //验证表单不能为空
         $returnArr = array("result" => 0, "msg" => "手机号不能为空", "code" => 402, "data" => null);
         if (empty($username)) json_return($returnArr);
@@ -680,20 +687,20 @@ class UserController extends BaseRestController
         if (empty($pwd)) json_return($returnArr);
 
         //校验验证码
-        $checkResult=check_mobile_code($username,$code);
-        if($checkResult['result']!=1){
+        $checkResult = check_mobile_code($username, $code);
+        if ($checkResult['result'] != 1) {
             json_return($checkResult);
         }
         //将注册用户注册信息进行封装
         $data = array(
-            "user_name" =>$username,  //用户名，默认为用户注册的手机
-            "mobile" =>$username, //手机号码
+            "user_name" => $username,  //用户名，默认为用户注册的手机
+            "mobile" => $username, //手机号码
             "password" => $pwd,  //用户密码
             "sex" => 1,  //性别，默认为男
             "desc" => "该用户未有简介",  //简介
             "reg_time" => date("Y-m-d H:i:s", time()),   //注册时间
             "head_pic" => "/Public/images/m_pic.png", //默认头像
-            "nickname" =>$nickname,  //昵称
+            "nickname" => $nickname,  //昵称
         );
         //用户注册信息添加;
         $user = new UserLogic();
@@ -702,7 +709,7 @@ class UserController extends BaseRestController
         if ($info == false) {
             $returnArr = array("result" => 0, "msg" => "账号已经存在", "code" => 402);
         } else {
-            M("ManageSmsLog")->where("mobile='".$username."'")->setField('is_active',0);
+            M("ManageSmsLog")->where("mobile='" . $username . "'")->setField('is_active', 0);
             //自动登陆
             $options = array(
                 "username" => $username,
@@ -716,21 +723,21 @@ class UserController extends BaseRestController
             session("nickName", $info['nickname']);
             session("headPic", $info['head_pic']);
             //记录用户登录次数
-            $log_number = M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}") ->getField("log_number");
+            $log_number = M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}")->getField("log_number");
             $log_number++;
-            M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}")->setField('log_number',$log_number);
+            M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}")->setField('log_number', $log_number);
             //记录用户登录时间
-            M("ManageUsers")->where("user_name='".$options["username"]."'")->save(array("last_login" => date("Y-m-d H:i:s", time())));
-            if( $_SESSION["userArr"]["user_id"] ) {
+            M("ManageUsers")->where("user_name='" . $options["username"] . "'")->save(array("last_login" => date("Y-m-d H:i:s", time())));
+            if ($_SESSION["userArr"]["user_id"]) {
                 $userIP = get_client_ip();
-                $data['user_id'] = $_SESSION["userArr"]["user_id"] ;
+                $data['user_id'] = $_SESSION["userArr"]["user_id"];
                 $data['user_ip'] = $userIP;
-                $data['create_time'] = date("Y-m-d H:i:s",time());
+                $data['create_time'] = date("Y-m-d H:i:s", time());
                 M("ManageUserRecord")->add($data);
             }
             $content = "【庖丁众包】尊敬的用户，恭喜您加入庖丁众包平台，我们将竭力为您推荐最优质的技术/需求对接项目服务，获取更多的项目资讯！";
             send_note($content, $_SESSION['userArr']['mobile']);
-            sendNotice($content,'');
+            sendNotice($content, '');
             $returnArr = array("result" => 1, "msg" => "注册成功", "code" => 200);
 
         }
@@ -740,7 +747,8 @@ class UserController extends BaseRestController
     /*
      * 重设密码
      */
-    public function reset_by_code(){
+    public function reset_by_code()
+    {
         $getData = $_GET;
         $postData = $_POST;
         $user = new UserLogic();
@@ -750,8 +758,8 @@ class UserController extends BaseRestController
         );
 
         //校验验证码
-        $checkResult=check_mobile_code($options['username'],$postData["code"]);
-        if($checkResult['result']!=1){
+        $checkResult = check_mobile_code($options['username'], $postData["code"]);
+        if ($checkResult['result'] != 1) {
             json_return($checkResult);
         }
 
@@ -763,17 +771,17 @@ class UserController extends BaseRestController
 
         //执行重置逻辑代码
         $info = $user->ResetCode($options);
-            if ($info) {
-                //判断用户是否修改成功
-                if ($info == false) {
-                    $returnArr = array("result" => 0, "msg" => "网络繁忙，修改失败", "code" => 402);
-                } else {
-                    M("ManageSmsLog")->where($options['username'])->setField('is_active',0);
-                    $returnArr = array("result" => 1, "msg" => "修改成功，请重新登陆", "code" => 200);
-                }
+        if ($info) {
+            //判断用户是否修改成功
+            if ($info == false) {
+                $returnArr = array("result" => 0, "msg" => "网络繁忙，修改失败", "code" => 402);
             } else {
-                $returnArr = array("result" => 0, "msg" => "该账号未注册", "code" => 402);
+                M("ManageSmsLog")->where($options['username'])->setField('is_active', 0);
+                $returnArr = array("result" => 1, "msg" => "修改成功，请重新登陆", "code" => 200);
             }
+        } else {
+            $returnArr = array("result" => 0, "msg" => "该账号未注册", "code" => 402);
+        }
         json_return($returnArr);
     }
 
@@ -833,7 +841,8 @@ class UserController extends BaseRestController
     /*
         * 用户绑定微信
         * */
-    public function WeChatBind(){
+    public function WeChatBind()
+    {
         $manageUsers = M("ManageUsers");
         $manageUsersOauth = M("ManageUsersOauth");
         $config = M("Config");
@@ -844,8 +853,8 @@ class UserController extends BaseRestController
         );
         $wechat = new Wechat($options);
         $res = $wechat->getOauthAccessToken();
-        $info = $wechat->getOauthUserinfo($res["access_token"],$res["openid"]);
-        $userId= $_SESSION["userArr"]["user_id"];
+        $info = $wechat->getOauthUserinfo($res["access_token"], $res["openid"]);
+        $userId = $_SESSION["userArr"]["user_id"];
         $userData = array(
             'wechatmp_bind' => 1,
             'oauth' => "wechat_pc",
@@ -854,24 +863,24 @@ class UserController extends BaseRestController
         $userOauthData = array(
             'user_id' => $userId,
             'oauth_openid' => $info['openid'],
-            'oauth_name' =>  "wechat_pc ",
+            'oauth_name' => "wechat_pc ",
             'unionid' => $info['unionid'],
-            'add_time' =>  date("Y-m-d H:i:s", time())
+            'add_time' => date("Y-m-d H:i:s", time())
         );
-        if($info['openid']) {
+        if ($info['openid']) {
             $manageUsers->where("user_id= '$userId'")->save($userData);
             $user = $manageUsersOauth->where("user_id = '$userId' AND oauth_name = 'wechat_pc' AND oauth_openid = '{$info['openid']}'")->find();
-            if($user) {
+            if ($user) {
                 $info = $manageUsersOauth->where("user_id= '$userId' AND oauth_name = 'wechat_pc' AND oauth_openid = '{$info['openid']}'")->save($userOauthData);
             } else {
-                $info =  $manageUsersOauth->add($userOauthData);
+                $info = $manageUsersOauth->add($userOauthData);
             }
-            if($info) {
+            if ($info) {
                 $returnArr = array("result" => 1, "msg" => "绑定成功！", "code" => 200);
             } else {
                 $returnArr = array("result" => 0, "msg" => "绑定失败，请重新绑定！", "code" => 402);
             }
-        }else {
+        } else {
             $returnArr = array("result" => 0, "msg" => "绑定失败，请重新绑定！", "code" => 402);
         }
 
@@ -881,11 +890,12 @@ class UserController extends BaseRestController
     /*
        * 用户解除绑定微信
        * */
-    public function WeChatUnBind(){
+    public function WeChatUnBind()
+    {
         $manageUsers = M("ManageUsers");
         $manageUsersOauth = M("ManageUsersOauth");
-        $userId= $_SESSION["userArr"]["user_id"];
-        $openid =  $manageUsers->where("user_id= '$userId'")->getField("openid");
+        $userId = $_SESSION["userArr"]["user_id"];
+        $openid = $manageUsers->where("user_id= '$userId'")->getField("openid");
         $userData = array(
             'wechatmp_bind' => 0,
             'oauth' => "",
@@ -893,40 +903,42 @@ class UserController extends BaseRestController
         );
         $manageUsers->where("user_id= '$userId'")->save($userData);
         $yesOrNo = $manageUsersOauth->where("user_id = '$userId' AND oauth_name = 'wechat_pc' AND oauth_openid = '$openid'")->delete();
-        if($yesOrNo) {
+        if ($yesOrNo) {
             $returnArr = array("result" => 1, "msg" => "解除微信绑定成功！", "code" => 200);
         } else {
             $returnArr = array("result" => 0, "msg" => "解除绑定失败，请重新解除！", "code" => 402);
         }
         json_return($returnArr);
     }
+
     /*
      * 绑定手机
      */
-    public function binding(){
-       
+    public function binding()
+    {
+
         $getData = $_GET;
         $postData = $_POST;
         //调用用户类
         $user = new UserLogic();
-        $options = array (
+        $options = array(
             "mobile" => $postData["bindMob"],
 //            "paswd" => encrypt($postData["paswd"]),
             "code" => $postData["bindMobCode"],
-            "user_id"=>$postData['userId']
+            "user_id" => $postData['userId']
         );
-        
+
 
         //验证五分钟内验证码有效
-        $date=M("ManageSmsLog")->where("add_time between date_add(now(), interval - 5 minute) and now() AND is_active=1")->count();
-        if(!$date){
-            $returnArr=array("result"=>0,"msg"=>"验证码已过期，请重新发送","code"=>402,"data"=>null);
+        $date = M("ManageSmsLog")->where("add_time between date_add(now(), interval - 5 minute) and now() AND is_active=1")->count();
+        if (!$date) {
+            $returnArr = array("result" => 0, "msg" => "验证码已过期，请重新发送", "code" => 402, "data" => null);
             json_return($returnArr);
         }
 
         //校验验证码的正误
-        $count = M("ManageSmsLog")->where(array("code = '" . $postData['bindMobCode'] . "'","is_active=1"))->count();
-        if(!$count){
+        $count = M("ManageSmsLog")->where(array("code = '" . $postData['bindMobCode'] . "'", "is_active=1"))->count();
+        if (!$count) {
             $returnArr = array("result" => 0, "msg" => "验证码不正确,请重新输入", "code" => 200, "data" => null);
             json_return($returnArr);
         }
@@ -939,7 +951,7 @@ class UserController extends BaseRestController
 
         //将用户手机进行绑定
         $data = array(
-            "user_id"=>$options["user_id"],
+            "user_id" => $options["user_id"],
             "mobile" => $options["mobile"]  //手机号码
         );
         //用户信息绑定
@@ -948,7 +960,7 @@ class UserController extends BaseRestController
         if ($info === false) {
             $returnArr = array("result" => 0, "msg" => "绑定失败", "code" => 402);
         } else {
-            M("ManageSmsLog")->where($options['mobile'])->setField('is_active',0);
+            M("ManageSmsLog")->where($options['mobile'])->setField('is_active', 0);
             $returnArr = array("result" => 1, "msg" => "绑定成功", "code" => 200);
         }
         json_return($returnArr);
@@ -957,29 +969,30 @@ class UserController extends BaseRestController
     /*
      * （庖丁手机端）绑定手机
      */
-    public function bundling(){
-      
+    public function bundling()
+    {
+
         $getData = $_GET;
         $postData = $_POST;
         //调用用户类
         $user = new UserLogic();
-        $options = array (
+        $options = array(
             "mobile" => $postData["mobile"],
             "code" => $postData["code"],
-            "user_id"=>$postData['userId'],
+            "user_id" => $postData['userId'],
             "paswd" => encrypt($postData["paswd"]),
         );
-        
+
         //验证五分钟内验证码有效
-        $date=M("ManageSmsLog")->where("add_time between date_add(now(), interval - 5 minute) and now() AND is_active=1")->count();
-        if(!$date){
-            $returnArr=array("result"=>0,"msg"=>"验证码已过期，请重新发送","code"=>402,"data"=>null);
+        $date = M("ManageSmsLog")->where("add_time between date_add(now(), interval - 5 minute) and now() AND is_active=1")->count();
+        if (!$date) {
+            $returnArr = array("result" => 0, "msg" => "验证码已过期，请重新发送", "code" => 402, "data" => null);
             json_return($returnArr);
         }
 
         //校验验证码的正误
-        $count = M("ManageSmsLog")->where(array("code = '" . $postData['code'] . "'","is_active=1"))->count();
-        if(!$count){
+        $count = M("ManageSmsLog")->where(array("code = '" . $postData['code'] . "'", "is_active=1"))->count();
+        if (!$count) {
             $returnArr = array("result" => 0, "msg" => "验证码不正确,请重新输入", "code" => 200, "data" => null);
             json_return($returnArr);
         }
@@ -991,12 +1004,12 @@ class UserController extends BaseRestController
 
         //此手机号码曾经注册过没有
         $mobile = $options["mobile"];
-        $userId =$options["user_id"];
+        $userId = $options["user_id"];
         $phoneUser = M("ManageUsers")->where("mobile = '$mobile'")->getField("user_id");
-        if($phoneUser) {
+        if ($phoneUser) {
             $WeChatData = array(
                 'oauth' => M("ManageUsers")->where("user_id = '$userId'")->getField("oauth"),
-                'openid' =>M("ManageUsers")->where("user_id = '$userId'")->getField("openid"),
+                'openid' => M("ManageUsers")->where("user_id = '$userId'")->getField("openid"),
             );
             M("ManageUsers")->where("user_id = '$phoneUser'")->save($WeChatData);
             $useridToPhoneid['user_id'] = $phoneUser;
@@ -1007,22 +1020,22 @@ class UserController extends BaseRestController
         } else {
             //将用户手机进行绑定
             $data = array(
-                "user_id"=>$options["user_id"],
-                "user_name"=>$options["mobile"],
+                "user_id" => $options["user_id"],
+                "user_name" => $options["mobile"],
                 "mobile" => $options["mobile"]  //手机号码
             );
-            if($options["paswd"]){
+            if ($options["paswd"]) {
                 $data['password'] = $options["paswd"];
             }
             //用户信息绑定
             $info = $user->binbang($data);
         }
-       
+
         //判断用户是否绑定成功
         if ($info === false) {
             $returnArr = array("result" => 0, "msg" => "绑定失败", "code" => 402);
         } else {
-            M("ManageSmsLog")->where($options['mobile'])->setField('is_active',0);
+            M("ManageSmsLog")->where($options['mobile'])->setField('is_active', 0);
             $returnArr = array("result" => 1, "msg" => "绑定成功", "code" => 200);
         }
         json_return($returnArr);
@@ -1031,19 +1044,20 @@ class UserController extends BaseRestController
     /*
      * 用户认证(庖丁)
      */
-    public function user_authen(){
+    public function user_authen()
+    {
 
         $action = $_GET['action'];
         $id = $_GET['id'] ? $_GET['id'] : $_POST['id'];
         $DAO = M('ManageUserAuthen');
 
-        switch($action){
+        switch ($action) {
             case 'detail':
                 $where['user_id'] = $id;
                 $field = 'user_id,type,company_name,tech_field,desc,has_patent,company_pic,tech_file,patent_file,status';
                 $info = $DAO->where($where)->field($field)->find();
 //                $info['area'] = $info['province'] . '-' . $info['city'];
-                if(empty($info['company_name'])) {
+                if (empty($info['company_name'])) {
                     $info['company_name'] = M("ManageUsers")->where($where)->getField("company");
                 }
                 if ($info) {
@@ -1056,7 +1070,7 @@ class UserController extends BaseRestController
                 $where['user_id'] = $_SESSION["userArr"]["user_id"];
                 $data = $_POST;
                 $ifHaveUser = $DAO->where($where)->getField("user_id");
-                if($ifHaveUser) {
+                if ($ifHaveUser) {
                     $flag = $DAO->where($where)->save($data);
 
                 } else {
@@ -1069,17 +1083,17 @@ class UserController extends BaseRestController
                 if ($flag === false) {
                     $returnArr = array("result" => 0, "msg" => "请求错误，获取数据出错", "code" => 402, "data" => null);
                 } else {
-                    $this->logRecord(6, "审核【".$data["company_code"]."】重新认证!", 6, -2, $id);
-                    $admin_mobile=M('manage_users')->where('user_id=2')->field('mobile')->find();
+                    $this->logRecord(6, "审核【" . $data["company_code"] . "】重新认证!", 6, -2, $id);
+                    $admin_mobile = M('manage_users')->where('user_id=2')->field('mobile')->find();
                     $content = "【庖丁众包】才华与美貌并重的管理员，您好！有用户在线上提交了实名认证，请您尽快查看审核。您辛苦了！";
-                    send_note($content,$admin_mobile['mobile']);
+                    send_note($content, $admin_mobile['mobile']);
                     $returnArr = array("result" => 1, "msg" => "请求成功", "code" => 200, "data" => null);
 
                 }
                 break;
             case 'Upload_files':
                 $userId = $_SESSION["userArr"]["user_id"];
-                if($userId){
+                if ($userId) {
                     //获取文件
                     $headPic = $_POST['file'];
                     $type = $_POST['zip'];
@@ -1097,10 +1111,10 @@ class UserController extends BaseRestController
 
                     //保存文件到本地
                     $site = get_site_name();
-                    $imgDiv = UPLOAD_PATH . $site. '/extend_file/' . date('Ymd', time()) . '/';
+                    $imgDiv = UPLOAD_PATH . $site . '/extend_file/' . date('Ymd', time()) . '/';
                     $imgName = time() . '.' . $suffix;
 
-                    if(!is_dir($imgDiv)){
+                    if (!is_dir($imgDiv)) {
                         mkdir($imgDiv, 0777, true);
                     }
                     $imgPath = $imgDiv . $imgName;
@@ -1110,7 +1124,7 @@ class UserController extends BaseRestController
                     $data['tech_file'] = '/' . $imgPath;
                     $where['user_id'] = $userId;
                     $ifHaveUser = $DAO->where($where)->getField("user_id");
-                    if($ifHaveUser) {
+                    if ($ifHaveUser) {
                         $flag = $DAO->where($where)->save($data);
                     } else {
                         $data['user_id'] = $id;
@@ -1123,16 +1137,16 @@ class UserController extends BaseRestController
                     } else {
                         $returnArr = array("result" => 0, "msg" => "请求错误，获取数据出错", "code" => 402, "data" => null);
                     }
-                }else{
+                } else {
                     $returnArr = array("result" => 0, "msg" => "请求错误，没有登录", "code" => 666, "data" => null);
                 }
                 break;
             case 'patent_files':
                 $userId = $_SESSION["userArr"]["user_id"];
-                if($userId){
+                if ($userId) {
                     //获取文件
                     $headPic = $_POST['file'];
-                    $type= $_POST['zip'];
+                    $type = $_POST['zip'];
 
                     $flag = 'base64,';
                     $index = strpos($headPic, $flag) + strlen($flag);
@@ -1148,10 +1162,10 @@ class UserController extends BaseRestController
 
                     //保存文件到本地
                     $site = get_site_name();
-                    $imgDiv = UPLOAD_PATH . $site. '/extend_file/' . date('Ymd', time()) . '/';
+                    $imgDiv = UPLOAD_PATH . $site . '/extend_file/' . date('Ymd', time()) . '/';
                     $imgName = time() . '.' . $suffix;
 
-                    if(!is_dir($imgDiv)){
+                    if (!is_dir($imgDiv)) {
                         mkdir($imgDiv, 0777, true);
                     }
                     $imgPath = $imgDiv . $imgName;
@@ -1161,7 +1175,7 @@ class UserController extends BaseRestController
                     $data['patent_file'] = '/' . $imgPath;
                     $where['user_id'] = $userId;
                     $ifHaveUser = $DAO->where($where)->getField("user_id");
-                    if($ifHaveUser) {
+                    if ($ifHaveUser) {
                         $flag = $DAO->where($where)->save($data);
                     } else {
                         $data['user_id'] = $id;
@@ -1173,13 +1187,13 @@ class UserController extends BaseRestController
                     } else {
                         $returnArr = array("result" => 0, "msg" => "请求错误，获取数据出错", "code" => 402, "data" => null);
                     }
-                }else{
+                } else {
                     $returnArr = array("result" => 0, "msg" => "请求错误，没有登录", "code" => 666, "data" => null);
                 }
                 break;
             case 'update_head':
                 $userId = $_SESSION["userArr"]["user_id"];
-                if($userId){
+                if ($userId) {
                     //获取图片
                     $headPic = $_POST['head_pic'];
 
@@ -1196,9 +1210,9 @@ class UserController extends BaseRestController
 
                     //保存图片到本地
                     $site = get_site_name();
-                    $imgDiv = UPLOAD_PATH . $site. '/head_img/' . date('Ymd', time()) . '/';
+                    $imgDiv = UPLOAD_PATH . $site . '/head_img/' . date('Ymd', time()) . '/';
                     $imgName = time() . '.' . $suffix;
-                    if(!is_dir($imgDiv)){
+                    if (!is_dir($imgDiv)) {
                         mkdir($imgDiv, 0777, true);
                     }
                     $imgPath = $imgDiv . $imgName;
@@ -1221,7 +1235,7 @@ class UserController extends BaseRestController
                     } else {
                         $returnArr = array("result" => 0, "msg" => "请求错误，获取数据出错", "code" => 402, "data" => null);
                     }
-                }else{
+                } else {
                     $returnArr = array("result" => 0, "msg" => "请求错误，没有登录", "code" => 666, "data" => null);
                 }
                 break;
@@ -1235,39 +1249,40 @@ class UserController extends BaseRestController
     /*
      * 修改绑定
      */
-    public function Modify(){
+    public function Modify()
+    {
         $getData = $_GET;
         $postData = $_POST;
         //调用用户类
         $user = new UserLogic();
-        $options = array (
+        $options = array(
             "mobile" => $postData["bindMob"],
-            "oldMobile" =>  $postData["oldMobile"],
+            "oldMobile" => $postData["oldMobile"],
             "paswd" => encrypt($postData["paswd"]),
             "code" => $postData["bindMobCode"],
             "oldCode" => $postData["oldMobCode"],
-            "user_id"=>$postData['userId']
+            "user_id" => $postData['userId']
         );
         //验证五分钟内验证码有效
-        $date=M("ManageSmsLog")->where("add_time between date_add(now(), interval - 5 minute) and now() AND is_active=1")->count();
-        if(!$date){
-            $returnArr=array("result"=>0,"msg"=>"验证码已过期，请重新发送","code"=>402,"data"=>null);
+        $date = M("ManageSmsLog")->where("add_time between date_add(now(), interval - 5 minute) and now() AND is_active=1")->count();
+        if (!$date) {
+            $returnArr = array("result" => 0, "msg" => "验证码已过期，请重新发送", "code" => 402, "data" => null);
             json_return($returnArr);
         }
 
         //校验验证码的正误
-        if($postData['bindMobCode']){
-            $count = M("ManageSmsLog")->where(array("code = '" . $postData['bindMobCode'] . "'","is_active=1"))->count();
+        if ($postData['bindMobCode']) {
+            $count = M("ManageSmsLog")->where(array("code = '" . $postData['bindMobCode'] . "'", "is_active=1"))->count();
         } else {
-            $count = M("ManageSmsLog")->where(array("code = '" . $postData['oldMobCode'] . "'","is_active=1"))->count();
+            $count = M("ManageSmsLog")->where(array("code = '" . $postData['oldMobCode'] . "'", "is_active=1"))->count();
         }
 
-        if(!$count){
+        if (!$count) {
             $returnArr = array("result" => 0, "msg" => "验证码不正确,请重新输入", "code" => 200, "data" => null);
             json_return($returnArr);
         }
         //旧手机号码不为空，获取旧手机号码的验证码
-        if($options["oldMobile"]) {
+        if ($options["oldMobile"]) {
             $returnArr = array("result" => 1, "msg" => "验证成功", "code" => 200);
         } else {
             $returnArr = array("result" => 0, "msg" => "手机号不能为空", "code" => 402, "data" => null);
@@ -1277,27 +1292,27 @@ class UserController extends BaseRestController
 
             //此手机号码曾经注册过没有
             $mobile = $options["mobile"];
-            $userId =$options["user_id"];
+            $userId = $options["user_id"];
             $phoneUser = M("ManageUsers")->where("mobile = '$mobile'")->getField("user_id");
             //手机号码已经存在，账户变为手机账户
-            if($phoneUser) {
+            if ($phoneUser) {
                 $WeChatData = array(
                     'oauth' => M("ManageUsers")->where("user_id = '$userId'")->getField("oauth"),
-                    'openid' =>M("ManageUsers")->where("user_id = '$userId'")->getField("openid"),
+                    'openid' => M("ManageUsers")->where("user_id = '$userId'")->getField("openid"),
                 );
                 M("ManageUsers")->where("user_id = '$phoneUser'")->save($WeChatData);
                 $useridToPhoneid['user_id'] = $phoneUser;
                 $info = M("ManageUsersOauth")
-                   ->where("user_id = '$userId'")
-                   ->save($useridToPhoneid);
+                    ->where("user_id = '$userId'")
+                    ->save($useridToPhoneid);
                 $this->logout();
             } else {
                 $data = array(
-                    "user_id"=>$options["user_id"],
+                    "user_id" => $options["user_id"],
                     "mobile" => $options["mobile"],
                     //"user_name" => $options["mobile"]
                 );
-                if($postData["paswd"]){
+                if ($postData["paswd"]) {
                     $data['password'] = $options["paswd"];
                 }
                 //用户信息绑定
@@ -1309,7 +1324,7 @@ class UserController extends BaseRestController
             if ($info == false) {
                 $returnArr = array("result" => 0, "msg" => "绑定失败", "code" => 402);
             } else {
-                M("ManageSmsLog")->where($options['mobile'])->setField('is_active',0);
+                M("ManageSmsLog")->where($options['mobile'])->setField('is_active', 0);
                 $returnArr = array("result" => 1, "msg" => "绑定成功", "code" => 200);
             }
 
@@ -1318,13 +1333,12 @@ class UserController extends BaseRestController
         json_return($returnArr);
     }
 
-    
-
 
     /*
      * 关于我们
      */
-    public function about(){
+    public function about()
+    {
         $action = $_GET['action'];
         $userId = $_SESSION["userArr"]["user_id"];
         if ($userId) {
@@ -1354,7 +1368,8 @@ class UserController extends BaseRestController
     /*
      * 获取验证码
      */
-    public function getVerifyCode(){
+    public function getVerifyCode()
+    {
         $getData = $_GET;
         $postData = $_POST;
         $options = array(
@@ -1397,20 +1412,21 @@ class UserController extends BaseRestController
     /*
      * 用户个人信息
      */
-    public function user_info(){
+    public function user_info()
+    {
 
         $action = $_GET['action'];
         $id = $_GET['id'] ? $_GET['id'] : $_POST['id'];
         $DAO = M('ManageUsers');
 
-        switch($action){
+        switch ($action) {
             case 'detail':
                 $where['user_id'] = $_SESSION["userArr"]["user_id"];
                 $field = 'A.user_id,A.mobile,A.nickname,A.user_name,A.password,A.head_pic,A.email,A.sex,A.birthday,A.province,A.company,A.city,A.job,B.idcard,B.status';
-                $info = $DAO->table('5u_manage_users A')->join('LEFT JOIN 5u_manage_user_authen B ON A.user_id=B.user_id')->where('A.user_id='.$_SESSION["userArr"]["user_id"])->find();
+                $info = $DAO->table('5u_manage_users A')->join('LEFT JOIN 5u_manage_user_authen B ON A.user_id=B.user_id')->where('A.user_id=' . $_SESSION["userArr"]["user_id"])->find();
                 $info['area'] = $info['province'] . '-' . $info['city'];
                 //密码置为1 代表有密码
-                if($info['password']) {
+                if ($info['password']) {
                     $info['password'] = 1;
                 } else {
                     $info['password'] = 0;
@@ -1422,16 +1438,16 @@ class UserController extends BaseRestController
                 }
                 break;
             case "title":
-                $Config=M("Config")->select();
+                $Config = M("Config")->select();
                 foreach ($Config as $key => $value) {
                     $vo[$value['name']] = $value['value'];
                 }
                 $this->vo = $vo;
-               if($vo){
-                   $returnArr = array("result" => 1, "msg" => "获取成功", "code" => 200, "data" => $vo);
-               }else {
-                   $returnArr = array("result" => 0, "msg" => "获取失败", "code" => 402, "data" => null);
-               }
+                if ($vo) {
+                    $returnArr = array("result" => 1, "msg" => "获取成功", "code" => 200, "data" => $vo);
+                } else {
+                    $returnArr = array("result" => 0, "msg" => "获取失败", "code" => 402, "data" => null);
+                }
                 break;
             case 'edit':
                 $data = $_POST;
@@ -1450,18 +1466,18 @@ class UserController extends BaseRestController
                 $newPw = $_POST['new'];
                 $reNewPw = $_POST['re_new'];
                 $userId = $_SESSION["userArr"]["user_id"];
-                if(!$userId){
+                if (!$userId) {
                     $returnArr = array("result" => 0, "msg" => "请求错误，没有登录", "code" => 666, "data" => null);
-                }else{
+                } else {
                     $where['user_id'] = $userId;
                     $info = $DAO->where($where)->find();
 
-                    if($oldPw != $info['password']){
+                    if ($oldPw != $info['password']) {
                         $returnArr = array("result" => 0, "msg" => "旧密码错误，请检查", "code" => 402, "data" => null);
-                    }else{
-                        if($newPw != $reNewPw){
+                    } else {
+                        if ($newPw != $reNewPw) {
                             $returnArr = array("result" => 0, "msg" => "两次密码不一致，请检查", "code" => 402, "data" => null);
-                        }else{
+                        } else {
                             $newPw = encrypt($newPw);
                             $flag = $DAO->where($where)->setField('password', $newPw);
                             if ($flag === false) {
@@ -1476,7 +1492,7 @@ class UserController extends BaseRestController
                 break;
             case 'update_head':
                 $userId = $_SESSION["userArr"]["user_id"];
-                if($userId){
+                if ($userId) {
                     //获取图片
                     $headPic = $_POST['head_pic'];
 
@@ -1493,9 +1509,9 @@ class UserController extends BaseRestController
 
                     //保存图片到本地
                     $site = get_site_name();
-                    $imgDiv = UPLOAD_PATH . $site. '/head_img/' . date('Ymd', time()) . '/';
+                    $imgDiv = UPLOAD_PATH . $site . '/head_img/' . date('Ymd', time()) . '/';
                     $imgName = time() . '.' . $suffix;
-                    if(!is_dir($imgDiv)){
+                    if (!is_dir($imgDiv)) {
                         mkdir($imgDiv, 0777, true);
                     }
                     $imgPath = $imgDiv . $imgName;
@@ -1511,7 +1527,7 @@ class UserController extends BaseRestController
                     } else {
                         $returnArr = array("result" => 1, "msg" => "请求成功", "code" => 200, "data" => null);
                     }
-                }else{
+                } else {
                     $returnArr = array("result" => 0, "msg" => "请求错误，没有登录", "code" => 666, "data" => null);
                 }
                 break;
@@ -1525,7 +1541,8 @@ class UserController extends BaseRestController
     /*
      * 获取统计数据,1，全部男，2，全部女，3，会员，4，男会员，5，女会员，all，全部
      */
-    public function getCount(){
+    public function getCount()
+    {
         $getData = $_GET;
         $user = new UserLogic();
 
@@ -1542,31 +1559,34 @@ class UserController extends BaseRestController
             $returnArr = array("result" => 0, "msg" => "获取成功，但未获取到数据", "code" => 402, "data" => $info);
         }
     }
+
     //我的关注
-    public function myFollow() {
+    public function myFollow()
+    {
         $userId = $_SESSION["userArr"]["user_id"];
         if ($userId) {
-           $company = M("ManageUsersRelation")
-               ->field("to_user_id")
-               ->where("from_user_id = '$userId' AND rel_type = 2")
-               ->select();
-           $info = $this->getFollowCompany($company);
+            $company = M("ManageUsersRelation")
+                ->field("to_user_id")
+                ->where("from_user_id = '$userId' AND rel_type = 2")
+                ->select();
+            $info = $this->getFollowCompany($company);
             if ($info) {
                 $returnArr = array("result" => 1, "msg" => "请求成功", "code" => 200, "data" => $info);
             } else {
                 $returnArr = array("result" => 0, "msg" => "请求错误，获取数据出错", "code" => 402);
             }
-        }else {
+        } else {
             $returnArr = array("result" => 0, "msg" => "请求错误，请先登陆!", "code" => 403);
         }
         json_return($returnArr);
     }
 
     //我的关注
-    public function myLike() {
+    public function myLike()
+    {
         $parameterGet = I('get.');
-        $channelModel = M("SystemChannel")->where("call_index = '".$parameterGet["channel"]."'")->find();
-        $userId=$_SESSION["userArr"]["user_id"];
+        $channelModel = M("SystemChannel")->where("call_index = '" . $parameterGet["channel"] . "'")->find();
+        $userId = $_SESSION["userArr"]["user_id"];
 
         $where['channel_id'] = $channelModel["id"];
         $where["zan_user_id"] = $userId;
@@ -1579,17 +1599,18 @@ class UserController extends BaseRestController
             } else {
                 $returnArr = array("result" => 0, "msg" => "请求错误，获取数据出错", "code" => 402);
             }
-        }else {
+        } else {
             $returnArr = array("result" => 0, "msg" => "请求错误，请先登陆!", "code" => 403);
         }
         json_return($returnArr);
     }
 
-    public function  getLikeCompany($companyIds) {
-        $channel =$_GET['channel'];
-        $companyTable = getTable($channel,1);
-        $recruitTable = getTable($channel,6);
-        $activityTable = getTable('jhjj',1);
+    public function getLikeCompany($companyIds)
+    {
+        $channel = $_GET['channel'];
+        $companyTable = getTable($channel, 1);
+        $recruitTable = getTable($channel, 6);
+        $activityTable = getTable('jhjj', 1);
 
         $i = 0;
         foreach ($companyIds as $item) {
@@ -1602,18 +1623,18 @@ class UserController extends BaseRestController
                 ->count();
             $companyInfo = M($companyTable['table_format'])
                 ->field("id,title,logo_img")
-                ->where("is_deleted=0 AND id=".$item['data_id']." AND is_active =1"  )
+                ->where("is_deleted=0 AND id=" . $item['data_id'] . " AND is_active =1")
                 ->find();
-            if($companyInfo){
+            if ($companyInfo) {
                 $info[$i]['activityCount'] = $activityCount;
                 $info[$i]['recruitCount'] = $recruitCount;
                 $info[$i]['companyInfo'] = $companyInfo;
-                $i ++;
+                $i++;
             }
         }
         $data[0] = $i; //该用户关注的公司量
-        $data[1] = $info; 
-       return $data;
+        $data[1] = $info;
+        return $data;
     }
 
     public function user_news()
@@ -1621,47 +1642,47 @@ class UserController extends BaseRestController
         $parameterGet = I('get.');
         $parameterPost = I('post.');
         $param = array_merge($parameterGet, $parameterPost);
-        if($param['action']){
-            switch($param['action']){
+        if ($param['action']) {
+            switch ($param['action']) {
                 //未读信息
                 case "count":
 
-                    $data=M('notice_relation_user')->where('user_id='.$_SESSION["userArr"]["user_id"].' and status=0')->count();
+                    $data = M('notice_relation_user')->where('user_id=' . $_SESSION["userArr"]["user_id"] . ' and status=0')->count();
 
                     break;
 
                 case "data_list":
 
-                    if($param['page'] && $param['page_num']){
+                    if ($param['page'] && $param['page_num']) {
                         $page = $param['page'];
                         $page_num = $param['page_num'];
                     }
-                    if($param['order_field']&&$param['order_by']){
-                        $orderBy = $param['order_field']. " ". $param['order_by'];
+                    if ($param['order_field'] && $param['order_by']) {
+                        $orderBy = $param['order_field'] . " " . $param['order_by'];
                     }
-                    $info=M('notice_relation_user')
-                        ->where('user_id='.$_SESSION["userArr"]["user_id"])
+                    $info = M('notice_relation_user')
+                        ->where('user_id=' . $_SESSION["userArr"]["user_id"])
                         ->page($page, $page_num)
                         ->order($orderBy)
                         ->select();
 
-                    if($param['get_page']){
-                        $count = M('notice_relation_user')->where('user_id='.$_SESSION["userArr"]["user_id"])->count();
+                    if ($param['get_page']) {
+                        $count = M('notice_relation_user')->where('user_id=' . $_SESSION["userArr"]["user_id"])->count();
                         $pageTotal = ($count / $page_num) > intval($count / $page_num) ? intval($count / $page_num + 1) : intval($count / $page_num);
                         $pageInfo['page'] = $page;
                         $pageInfo['page_total'] = $pageTotal;
                         $data['info'] = $info;
                         $data['page'] = $pageInfo;
-                    }else{
+                    } else {
                         $data = $info;
                     }
 
                     break;
 
                 case "data_detail":
-                    $status['status']='1';
-                    $data=M('notice_relation_user')->where('id='.$param['data_id'])->find();
-                    M('notice_relation_user')->where('id='.$param['data_id'])->save($status);
+                    $status['status'] = '1';
+                    $data = M('notice_relation_user')->where('id=' . $param['data_id'])->find();
+                    M('notice_relation_user')->where('id=' . $param['data_id'])->save($status);
                     break;
 
                 default:
@@ -1674,14 +1695,40 @@ class UserController extends BaseRestController
             } else {
                 $returnArr = array("result" => 0, "msg" => "没有数据或该用户不存在，否则为栏目不存在", "code" => 400);
             }
-        }else{
+        } else {
             $returnArr = array("result" => 0, "msg" => "参数有误", "code" => 400);
         }
 
         json_return($returnArr);
     }
 
-    private function clean_session(){
+    public function check_login()
+    {
+        if (session("?userArr")) {
+            $returnArr = array("result" => 1, "msg" => "已登录", "code" => 200);
+        } else {
+            $returnArr = array("result" => 0, "msg" => "未登录", "code" => 400);
+        }
+        json_return($returnArr);
+    }
+
+    public function check_phone()
+    {
+        if ($_SESSION["userArr"]['user_id']) {
+            $mobile = M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}")->field('mobile')->find();
+            if ($mobile['mobile']) {
+                $returnArr = array("result" => 1, "msg" => "已绑定", "code" => 200);
+            }else{
+                $returnArr = array("result" => 0, "msg" => "未绑定", "code" => 402);
+            }
+        }else{
+            $returnArr = array("result" => 0, "msg" => "参数有误", "code" => 400);
+        }
+        json_return($returnArr);
+    }
+
+    private function clean_session()
+    {
         session_unset();   //删除session变量
         session_destroy();   //销毁session
     }

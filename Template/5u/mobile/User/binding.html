@@ -91,7 +91,7 @@
                 }).then(function successCallback(response) {
                     if(response.data.result==1){
                         tip_ct =response.data.msg ;
-                        tips.addtips(tip_ct,'/index.php/Mobile/Index/index');
+                        tips.addtips(tip_ct);
                     }else{
                         tip_ct =response.data.msg ;
                         tips.addtips(tip_ct);

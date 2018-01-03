@@ -186,6 +186,18 @@
                                 </div>
                                 <div class="panel-body">
                                     <div class="nav-button ">
+                                        <span class="col-md-2">认证类型: </span>
+                                        <span>{$Authen.type}</span>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="nav-button ">
+                                        <span class="col-md-2">证件号码: </span>
+                                        <span>{$Authen.idcard}</span>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="nav-button ">
                                         <span class="col-md-2">公司: </span>
                                         <span>{$Authen.company_name}</span>
                                     </div>
@@ -222,54 +234,99 @@
                                     </div>
                                 </div>
                                 <div class="panel-body">
-                                    <div class="nav-button ">
-                                        <span class="col-md-2">统一社会信用代码/身份证号码: </span>
-                                        <span>{$Authen.company_code}</span>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="nav-button ">
-                                        <span class="col-md-2">希望展示的内容: </span>
-                                        <span class="sh">{$Authen.desc}</span>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="nav-button ">
-                                        <span class="col-md-2">专利: </span>
-                                        <if condition="$Authen.has_patent eq 1">
-                                        <span>有</span>
-                                            <else />
-                                            <span>无</span>
-                                        </if>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="nav-button ">
-                                        <span class="col-md-2">营业执照: </span>
-                                        <button type="button" id="company_pic"  value="{$Authen.company_pic}" class="btn btn-default "
-                                                onclick="savepic()"><i class="fa fa-cloud-download"></i>下载
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="nav-button ">
-                                        <span class="col-md-2">技术资料: </span>
-                                        <button type="button" id="tech_file" value="{$Authen.tech_file}"  class="btn btn-default "
-                                                onclick="dataFile()"><i class="fa fa-cloud-download"></i>下载
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div class="panel-body">
-                                    <div class="nav-button ">
-                                        <if condition="$Authen.has_patent eq 1">
-                                        <span class="col-md-2">专利资料: </span>
-                                            <button type="button" id="patent_file" value="{$Authen.patent_file}" class="btn btn-default "
-                                                    onclick="infoFile()"><i class="fa fa-cloud-download"></i>下载
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">
+                                            身份证正面：
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control form-input" name="leftlogo"
+                                                   readonly="readonly"
+                                                   id="idcard_img_front" value="{$Authen.idcard_img_front}"/>
+                                            <button class="btn btn-default " type="button"
+                                                    onclick="preview('idcard_img_front')"><i class="fa fa-search"></i>
                                             </button>
-                                        </if>
+                                        </div>
                                     </div>
                                 </div>
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">
+                                            身份证背面：
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control form-input" name="leftlogo"
+                                                   readonly="readonly"
+                                                   id="idcard_img_back" value="{$Authen.idcard_img_back}"/>
+                                            <button class="btn btn-default " type="button"
+                                                    onclick="preview('idcard_img_back')"><i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 control-label">
+                                            营业执照：
+                                        </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control form-input" name="leftlogo"
+                                                   readonly="readonly"
+                                                   id="company_pic" value="{$Authen.company_pic}"/>
+                                            <button class="btn btn-default " type="button"
+                                                    onclick="preview('company_pic')"><i class="fa fa-search"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--<div class="panel-body">-->
+                                    <!--<div class="nav-button ">-->
+                                        <!--<span class="col-md-2">统一社会信用代码/身份证号码: </span>-->
+                                        <!--<span>{$Authen.company_code}</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="panel-body">-->
+                                    <!--<div class="nav-button ">-->
+                                        <!--<span class="col-md-2">希望展示的内容: </span>-->
+                                        <!--<span class="sh">{$Authen.desc}</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="panel-body">-->
+                                    <!--<div class="nav-button ">-->
+                                        <!--<span class="col-md-2">专利: </span>-->
+                                        <!--<if condition="$Authen.has_patent eq 1">-->
+                                        <!--<span>有</span>-->
+                                            <!--<else />-->
+                                            <!--<span>无</span>-->
+                                        <!--</if>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="panel-body">-->
+                                    <!--<div class="nav-button ">-->
+                                        <!--<span class="col-md-2">营业执照: </span>-->
+                                        <!--<button type="button" id="company_pic"  value="{$Authen.company_pic}" class="btn btn-default "-->
+                                                <!--onclick="savepic()"><i class="fa fa-cloud-download"></i>下载-->
+                                        <!--</button>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="panel-body">-->
+                                    <!--<div class="nav-button ">-->
+                                        <!--<span class="col-md-2">技术资料: </span>-->
+                                        <!--<button type="button" id="tech_file" value="{$Authen.tech_file}"  class="btn btn-default "-->
+                                                <!--onclick="dataFile()"><i class="fa fa-cloud-download"></i>下载-->
+                                        <!--</button>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+
+                                <!--<div class="panel-body">-->
+                                    <!--<div class="nav-button ">-->
+                                        <!--<if condition="$Authen.has_patent eq 1">-->
+                                        <!--<span class="col-md-2">专利资料: </span>-->
+                                            <!--<button type="button" id="patent_file" value="{$Authen.patent_file}" class="btn btn-default "-->
+                                                    <!--onclick="infoFile()"><i class="fa fa-cloud-download"></i>下载-->
+                                            <!--</button>-->
+                                        <!--</if>-->
+                                    <!--</div>-->
+                                <!--</div>-->
 
                             </form>
                         </div>
@@ -373,12 +430,12 @@ function savepic(){
             layer.msg(content);
         }
         else {
-            content = "<img width='300' height='300' src='" + src + "'>";
+            content = "<img width='600' height='600' src='" + src + "'>";
             layer.open({
                 type: 1,
                 title: false,
                 closeBtn: false,
-                area: ['300px', '300px'],
+                area: ['600px', '600px'],
                 skin: 'layui-layer-nobg', //没有背景色
                 shadeClose: true,
                 content: content

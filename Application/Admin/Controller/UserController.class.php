@@ -666,7 +666,10 @@ class UserController extends BaseController
         $count = M("$table")->where($where)->count();
         $page = ($count / $page_num) > intval($count / $page_num) ? intval($count / $page_num + 1) : intval($count / $page_num); //$page  总共有几页
 
-        $info = M("$table")->where($where)->page($page_now,$page_num)->field("id,type,idcard,tech_field,company_pic,status,company_name")->select();
+        $info = M("$table")->where($where)
+            ->page($page_now,$page_num)
+            ->field("id,type,idcard,tech_field,company_pic,status,company_name")
+            ->select();
         $arr['page_now'] = $page_now;
         $arr['page'] = $page;
         $arr['count'] = $count;

@@ -95,6 +95,14 @@ class UserController extends BaseController
 
     }
 
+    public function binding()
+    {
+        $this->assign('user_id', $_SESSION["userArr"]['user_id']);
+        $this->assign('nickname', $_SESSION["userArr"]['nickname']);
+        $this->assign('head_pic', $_SESSION["userArr"]['head_pic']);
+        $this->display();
+    }
+
 
 
     public function connect(){
