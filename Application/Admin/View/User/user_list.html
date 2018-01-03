@@ -134,10 +134,13 @@
                                     <table class="display table table-bordered table-striped">
                                         <thead>
                                         <tr>
+                                            <th class="text-center" width="5%">
+                                                序号
+                                            </th>
                                             <th class="text-center" width="10%">
                                                 头像
                                             </th>
-                                            <th class="text-center" width="15%">
+                                            <th class="text-center" width="10%">
                                                 昵称
                                             </th>
                                             <th class="text-center" width="15%">
@@ -170,6 +173,7 @@
                                         <tbody>
                                         <volist name="userList" id="list" key="n">
                                             <tr role="row" align="center" style="background:#FFFFFF;">
+                                                <td class="text-center">{$list.user_id}</td>
                                                 <td class="text-center">
                                                     <img width="40" height="40" src="{$list.head_pic}" id="head_pic"
                                                          onclick="preview(this)"/></td>
