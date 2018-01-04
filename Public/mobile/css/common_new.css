@@ -5,7 +5,7 @@ li{list-style:none;}
 /*去除点击高亮*/
 a{text-decoration: none;-webkit-tap-highlight-color: transparent;}
 /*a标签点击样式*/
-a:hover,a:active,a:visited,a:link{-webkit-tap-highlight-color: transparent;color: #999;}
+a:hover,a:active,a:visited,a:link{-webkit-tap-highlight-color: transparent;}
 img{vertical-align: top;}
 textarea{resize:none;overflow: auto;}
 body{font-family:"微软雅黑",Helvetica;}

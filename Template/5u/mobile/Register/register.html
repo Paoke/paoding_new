@@ -65,25 +65,14 @@
 
 	var countdown=60;  
 	var mobile,code,password,nickname;
-	var tip = {
-		tip_ct:"",
-	};
-	var tips = {
-		addtips:function(tip_ct){
-			var tipNode = '<div class="tipCommon" style="display:block">'+tip_ct+'</div>';
-			$('body').append(tipNode);
-			setTimeout(function(){
-				$(".tipCommon").remove();
-			},1500)
-		}
-	}
 
 	var app = angular.module('register', []);
 	app.controller('myReg', function($scope,$http) {
 
 		$(".register_btn").on("click",function(){
 			var regPsw = /^.{6,}$/;
-			var regName = /^[a-zA-Z0-9_-]{2,8}$/;
+			var regName = /^[\u4E00-\u9FA5A-Za-z]+$/;
+
 			mobile = $('#mobile').val();
 			nickname = $('#nickname').val();
 			password = $('#password').val();
@@ -99,7 +88,7 @@
 				return false;
 			}
 			else if(!regName.test(nickname)){
-				tip_ct = "昵称请输入2-8位";
+				tip_ct = "昵称只能输入中文和英文";
 				tips.addtips(tip_ct);
 				return false;
 			}
@@ -110,7 +99,7 @@
 		       $.each(t, function () {
 		           data[this.name] = this.value;
 		       });
-		       // console.log(data);
+		       console.log(data);
 
 		       // 注册信息提交接口
 				$http({
@@ -127,6 +116,16 @@
 		            } 
 				}).then(function successCallback(response) {
 				     console.log(response.data.result);
+				     if(response.data.result == '1'){
+				     	tip_ct = "注册成功";
+				     	tip_url = "/index.php/Mobile/Login/login.html";
+				     	tips.addtips(tip_ct,tip_url);
+				     }else{
+				     	tip_ct = response.data.msg;
+				     	tips.addtips(tip_ct);
+				     	return false;
+				     }
+
 				    }, function errorCallback(response) {
 
 				});

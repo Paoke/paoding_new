@@ -12,7 +12,7 @@
     <include file="./Template/5u/common/common.html" />
 </head>
 <body ng-controller="detail_tecCtrl">
-
+    <img class="share_img" src="{$Think.MOBILE}/images/index-techdetail-share.png" alt="">
     <div class="mask" style="display:none"></div>
     <div class="alert" style="display:none">
         <img src="{$Think.MOBILE}/images/exclamation.png" alt="" style="margin-top:40px">
@@ -36,7 +36,7 @@
                 浏览  <span ng-cloak>{{lists.clicks}}</span>
             </p>
         </div>
-        <div class="fr">
+        <div class="fr" onclick="share()">
             <img src="{$Think.MOBILE}/images/icon-index-techdetail-share.jpg" alt="">
             <p class="tip">分享</p>
         </div>
@@ -106,7 +106,7 @@
     <div class="index_div"></div>
 
     <div class="tec_tab">
-        <a href="#tip1" class="active"><p class="tab_p">技术详述</p></a>
+        <a href="#tip1"><p class="tab_p active">技术详述</p></a>
         <a href="#tip2"><p class="tab_p">技术优势</p></a>
         <a href="#tip3"><p class="tab_p">效果指标</p></a>
         <a href="#tip4"><p class="tab_p">应用案例</p></a>
@@ -115,29 +115,29 @@
 
     <a name="tip1">
         <div class="tec_main">
-            <div class="tec_tit">技术详述</div>
-            <div class="tec_content" ng-bind-html="lists.content|trustHtml"></div>
+            <div class="tec_tit" ng-show="lists.content!=''">技术详述</div>
+            <div class="tec_content" ng-bind-html="lists.content|trustHtml" ></div>
         </div>
     </a>
 
     <a name="tip2">
         <div class="tec_main">
-            <div class="tec_tit">技术优势</div>
-            <div class="tec_content" ng-bind-html="lists.jsys|trustHtml"></div>
+            <div class="tec_tit" ng-show="lists.jsys !=''">技术优势</div>
+            <div class="tec_content" ng-bind-html="lists.jsys|trustHtml" ></div>
         </div>
     </a>
 
     <a name="tip3">
         <div class="tec_main">
-            <div class="tec_tit">效果指标</div>
-            <div class="tec_content" ng-bind-html="lists.xgzb|trustHtml"></div>
+            <div class="tec_tit" ng-show="lists.xgzb !=''">效果指标</div>
+            <div class="tec_content" ng-bind-html="lists.xgzb|trustHtml" ></div>
         </div>
     </a>
 
     <a name="tip4">
         <div class="tec_main">
-            <div class="tec_tit">应用案例</div>
-            <div class="tec_content" ng-bind-html="lists.yyal|trustHtml"></div>
+            <div class="tec_tit" ng-show="lists.yyal !=''">应用案例</div>
+            <div class="tec_content" ng-bind-html="lists.yyal|trustHtml" ></div>
         </div>
     </a>
 
@@ -157,13 +157,7 @@
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script>
 
-    var referrer = document.referrer;
-    function GetQueryString(name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
-        var r = window.location.search.substr(1).match(reg);
-        if (r!=null) return unescape(r[2]); return null;
-    };     
-
+    var referrer = document.referrer; 
     var data_id = GetQueryString('data_id');  
    
     var app = angular.module('detail_tec',[]);
@@ -253,7 +247,9 @@
          var index = $(this).index();
          var tranX = index*188;
          $(".slideBlock").css("transform","translateX("+tranX+"px)");
-         $(this).addClass('active').siblings().removeClass('active');
+         $(this).find("p").addClass('active');
+         $(this).siblings(".tec_tab a").find("p").removeClass('active');
+
      });
 
      // 导航栏
@@ -296,7 +292,12 @@
     $(".mask").on("click",function(){
         $(".mask").hide();
         $(".alert").hide();
-    })
+        $(".share_img").hide();        
+    });
+    function share(){
+        $(".share_img").show();
+        $(".mask").show();
+    }
     
 
 

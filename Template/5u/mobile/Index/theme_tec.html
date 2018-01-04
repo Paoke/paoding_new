@@ -65,20 +65,9 @@
         }).then(function successCallback(response) {  
                 $scope.tec = response.data.data[0];                   
                 $scope.tecLists = response.data.data;
-                console.log(response.data.data); 
-                console.log(response.data.data[0].t_name);  
             }, function errorCallback(response) {
                 console.log(response.data.msg);
             });
       })
-
-     function GetQueryString(name) {
-         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
-         var r = window.location.search.substr(1).match(reg);
-         if (r!=null) return unescape(r[2]); return null;
-     }
-    
-    
-
 </script>
 </html>
