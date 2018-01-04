@@ -164,7 +164,7 @@ class UserLogic extends BaseRestLogic
     {
         $info = M()
             ->table("{$_SESSION["site_name"]}_manage_users")
-            ->where("user_name={$data["user_name"]}")
+            ->where("mobile='{$data["user_name"]}'")
             ->find();
         if ($info) {
             //账号已存在

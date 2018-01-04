@@ -723,9 +723,9 @@ class UserController extends BaseRestController
             session("nickName", $info['nickname']);
             session("headPic", $info['head_pic']);
             //记录用户登录次数
-            $log_number = M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}")->getField("log_number");
-            $log_number++;
-            M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}")->setField('log_number', $log_number);
+//            $log_number = M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}")->getField("log_number");
+//            $log_number++;
+//            M("ManageUsers")->where("user_id = {$_SESSION["userArr"]["user_id"]}")->setField('log_number', $log_number);
             //记录用户登录时间
             M("ManageUsers")->where("user_name='" . $options["username"] . "'")->save(array("last_login" => date("Y-m-d H:i:s", time())));
             if ($_SESSION["userArr"]["user_id"]) {
