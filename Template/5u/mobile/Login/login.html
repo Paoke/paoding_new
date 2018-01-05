@@ -40,6 +40,7 @@
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <!-- <script src='{$Think.MOBILE}/js/common.js'></script> -->
 <script>
+    var url_ref = document.referrer;
     var mobile,password;
     app = angular.module('login', []);
     app.controller('myLogin', function ($scope,$http) {
@@ -76,7 +77,8 @@
             // 登陆成功跳转到my.html
             if(response.data.result==1){
                 tip_ct = "登录成功";
-                tip_url = '/index.php/Mobile/User/user_center.html';
+                // tip_url = '/index.php/Mobile/User/user_center.html';
+                tip_url = url_ref;
                 tips.addtips(tip_ct,tip_url);
             }else{
                 tip_ct = "登录失败";                

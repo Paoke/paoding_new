@@ -105,7 +105,7 @@
     </div>
 
     <div class="sec_return">
-        <a onclick="javascript:history.go(-1);">
+        <a onclick="goBack();">
             <img class="return_icon" src="{$Think.MOBILE}/images/icon-common-return.png" alt="">
         </a>
         <img class="act_love_icon" src="{$Think.MOBILE}/images/icon-activity-collect-default.png" alt="">
@@ -216,7 +216,11 @@
         $(".mask").on("click",function(){
             $(".mask").hide();
             $(".alert").hide();
-        })
+        });
+
+        function goBack(){
+            window.location.href='/index.php/Mobile/Activity/activity';
+        };
         
 </script>
 </html>
