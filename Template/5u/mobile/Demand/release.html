@@ -107,13 +107,16 @@
     </div>
 </div>
 <div class='tipCommon'>信息未完善，请填写完毕后提交</div>
-
+<div class="sec_return">
+    <a onclick="goBack();">
+        <img class="return_icon" src="{$Think.MOBILE}/images/icon-common-return.png" alt="">
+    </a>
+</div>
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
 <script src="{$Think.MOBILE}/js/swiper.min.js"></script>
 <script src="{$Think.MOBILE}/js/angular.min.js"></script>
 <script src="{$Think.MOBILE}/js/index-publishTec.js"></script>
-<script src='{$Think.MOBILE}/js/return.js'></script>
 <script>
     function getMsg() {
         // 资料填写完整判断反馈
@@ -206,10 +209,9 @@
     　　};    
     });
 
-
-
-
-
+    function goBack(){
+        window.location.href='/index.php/Mobile/Demand/demand_list.html';
+    };
 
 </script>
 </html>

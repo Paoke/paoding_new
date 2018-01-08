@@ -32,26 +32,9 @@
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script src='{$Think.MOBILE}/js/common.js'></script>
 <script>
-    
+    var referrer = document.referrer;
     var countdown=60;
     var mobile,code,password;
-    var tip = {
-        tip_ct:"",
-    };
-    var tips = {
-        addtips:function(tip_ct,next){
-            var tipNode = '<div class="tipCommon" style="display:block">'+tip_ct+'</div>';
-            $('body').append(tipNode);
-            setTimeout(function(){
-                $(".tipCommon").remove();
-                if(next){
-                    window.location.href=next;
-                }
-
-            },1500);
-
-        }
-    }
 
     var app = angular.module('binding', []);
     app.controller('myReg', function($scope,$http) {
@@ -91,7 +74,8 @@
                 }).then(function successCallback(response) {
                     if(response.data.result==1){
                         tip_ct =response.data.msg ;
-                        tips.addtips(tip_ct);
+                        tip_url = referrer+'?show=1';
+                        tips.addtips(tip_ct,tip_url);
                     }else{
                         tip_ct =response.data.msg ;
                         tips.addtips(tip_ct);
@@ -126,7 +110,7 @@
                         return str.join("&");
                     }
                 }).then(function successCallback(response) {
-                    console.log(response);
+                    // console.log(response);
                 }, function errorCallback(response) {
 
                 });

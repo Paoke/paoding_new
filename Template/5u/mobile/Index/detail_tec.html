@@ -81,7 +81,7 @@
             <p class="intro_right fr" ng-cloak>{{lists.zlzs}}</p>
         </div>
 
-        <div class="intro_section clear">
+        <div class="intro_section clear" id="contackWay">
             <p class="intro_left fl">联系方式</p>
             <p class="intro_right fr" id="getContackWay" style="color:#ff971d">获取联系方式</p>
         </div>
@@ -156,6 +156,16 @@
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script>
+    window.onload = function(){
+    // onload事件在加载的时候判断url,如果包含show=1显示联系方式
+        var urlStr = location.href; 
+          if (urlStr.indexOf('show=1') > -1 && urlStr.indexOf('show=1')!='') { 
+             getContackWay();
+            
+
+          }          
+    }
+    var dv;//二级导航
     var data_id = GetQueryString('data_id');  
    
     var app = angular.module('detail_tec',[]);
@@ -225,31 +235,29 @@
 
         // 获取联系方式
         $("#getContackWay").on("click",function(){
+            //判断是否登录             
            $http({
                method:'GET',                
-               url:'/index.php/Mobile/Article/like?channel=js&id='+data_id+'&action=0'
-           }).then(function successCallback(response) { 
-                    //判断是否登录                  
-               if(response.data.code=="402"){
+               url:'/api.php/user/check_login'
+           }).then(function successCallback(response) {                     
+               if(response.data.code=="400" || response.data.result==0){
                    $(".mask").show();
                    $(".alert").show();
-                   return false;
+                   return false;               
                } else {
                     // 判断是否绑定手机号
                     $http({
                         method:'GET',                
                         url:'/api.php/user/check_phone'
-                    }).then(function successCallback(response) {                        
+                    }).then(function successCallback(response) {                  
                         // 已经绑定
                         if(response.data.result==1){
-                            $(".getTelphone").show();
-                            $(this).parent().hide();
+                            getContackWay();
                         // 没有绑定
                         }else{
                             window.location.href="/index.php/Mobile/User/binding.html";
                         }
                     })
-
                }
            }, function errorCallback(response) {});
         });
@@ -261,7 +269,21 @@
          $(".slideBlock").css("transform","translateX("+tranX+"px)");
          $(this).find("p").addClass('active');
          $(this).siblings(".tec_tab a").find("p").removeClass('active');
+     });
 
+     $(".findDemand").on("click",function(){
+         $(".sorry").hide();
+         $(".showTel").show();
+     });
+     // 关闭弹出框
+     $(".close").on("click",function(){
+         $(".mask").hide();
+         $(".alert").hide();
+     });
+     $(".mask").on("click",function(){
+         $(".mask").hide();
+         $(".alert").hide();
+         $(".share_img").hide();        
      });
 
      // 导航栏
@@ -270,8 +292,12 @@
          var ie6 = /msie 6/i.test(navigator.userAgent),
              dv = $('.tec_tab'), //活动元素
              st;
-         dv.attr('otop', '1259'); //存储原来的距离顶部的距离
+         dv.attr('otop', '1190'); //存储原来的距离顶部的距离
          $(window).scroll(function () {
+            // 判断联系人方式是否显示，若显示，整体高度增加
+            if( $(".getTelphone").css("display")=="block" ){
+                dv.attr('otop', '1366'); 
+            };
              st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
              if (st >= parseInt(dv.attr('otop'))) {
                  if (ie6) {                    
@@ -291,25 +317,17 @@
     function goBack(){
         window.location.href='/index.php/Mobile/Index/tec_list.html';
     };
-
-    $(".findDemand").on("click",function(){
-        $(".sorry").hide();
-        $(".showTel").show();
-    });
-    // 关闭弹出框
-    $(".close").on("click",function(){
-        $(".mask").hide();
-        $(".alert").hide();
-    });
-    $(".mask").on("click",function(){
-        $(".mask").hide();
-        $(".alert").hide();
-        $(".share_img").hide();        
-    });
+    function getContackWay(){
+        $("#contackWay").hide();
+        $(".getTelphone").show();
+        $(this).parent().hide();
+    };
     function share(){
         $(".share_img").show();
         $(".mask").show();
-    }
+    };
+
+
     
 
 

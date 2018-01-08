@@ -735,8 +735,9 @@ html,body{
 }
 
 .apply_identifying{
+	width: 750px;
 	position: relative;
-	margin-top: 60px;
+	margin: 60px auto 0;
 }
 .get_indentify{
 	position: absolute;

@@ -12,20 +12,57 @@
     <include file="./Template/5u/common/common.html" />
 </head>
 <body>
-<a href="__MODULE__/Index/release.html">
-    <div class="publishBtn">
+<!-- <a href="__MODULE__/Index/release.html"> -->
+    <div class="publishBtn" id="publishTec">
         <p class="publish_p">发布技术</p>
         <img src="{$Think.MOBILE}/images/index-issue-image1.jpg" alt="">
     </div>
-</a>
+<!-- </a> -->
 
-<a href="__MODULE__/Demand/release.html">
-    <div class="publishBtn">
+<!-- <a href="__MODULE__/Demand/release.html"> -->
+    <div class="publishBtn" id="publishDem">
         <p class="publish_p">发布需求</p>
         <img src="{$Think.MOBILE}/images/index-issue-image2.jpg" alt="">
     </div>
-</a>
+<!-- </a> -->
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
 <script src='{$Think.MOBILE}/js/return.js'></script>
+<script>
+    $("#publishTec").on("click",function(){
+        // 判断是否绑定手机号
+        $.ajax({
+            type:"get",
+            url:"/api.php/user/check_phone",
+            success:function(res) {               
+                // 已经绑定
+                if(res.result==1){
+                    window.location.href="/index.php/Mobile/Index/release.html"
+                // 没有绑定
+                }else{
+                    window.location.href="/index.php/Mobile/User/binding.html";
+                }
+            }
+        })
+    });
+
+    $("#publishDem").on("click",function(){
+        // 判断是否绑定手机号
+        $.ajax({
+            type:"get",
+            url:"/api.php/user/check_phone",
+            success:function(res) {
+                // 已经绑定
+                if(res.result==1){
+                    window.location.href="/index.php/Mobile/Demand/release.html"
+                // 没有绑定
+                }else{
+                    window.location.href="/index.php/Mobile/User/binding.html";
+                }
+            }
+        })
+    });
+
+
+</script>
 </html>

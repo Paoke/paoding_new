@@ -11,12 +11,14 @@ html,body{
 .demand_nav{
 	width: 750px;
 	height: 90px;
-	padding: 28px 0 0;
+	/*padding: 28px 0 0;*/
 	position: relative;
 }
 .demand_nav li{
 	width: 112px;
+	height: 90px;
 	font-size: 28px;
+	line-height: 90px;
 	color: #999;
 	text-align: left;
 }

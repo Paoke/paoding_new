@@ -103,10 +103,15 @@
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script>
-    $(".getConWay").on("click",function(){
-        $(this).hide();
-        $(".getTelphoto").show();
-    })
+    window.onload = function(){
+    // onload事件在加载的时候判断url,如果包含show=1显示联系方式
+        var urlStr = location.href; 
+          if (urlStr.indexOf('show=1') > -1 && urlStr.indexOf('show=1')!='') {
+             $(".getConWay").hide();
+             $(".getTelphoto").show();
+          }          
+    };  
+
 
     var data_id = GetQueryString("data_id");
 
@@ -121,13 +126,44 @@
         $http({
             method:'GET',
             params:{data_id:data_id},  
-            // 1.25.获取需求详情接口
+            //获取需求详情接口
             url:'/api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1',
         }).then(function successCallback(response){       
           $scope.detail = response.data.data;
           $scope.times = Date.parse($scope.detail.create_time);
         },function errorCallback(){          
         });   
+
+
+        $(".getConWay").on("click",function(){
+             //判断是否登录             
+            $http({
+                method:'GET',                
+                url:'/api.php/user/check_login'
+            }).then(function successCallback(response) { 
+            console.log(response.data.code)                     
+                if(response.data.code=="400" || response.data.result==0){
+                    $(".mask").show();
+                    $(".alert").show();
+                    return false;               
+                } else {
+                     // 判断是否绑定手机号
+                     $http({
+                         method:'GET',                
+                         url:'/api.php/user/check_phone'
+                     }).then(function successCallback(response) {                  
+                         // 已经绑定
+                         if(response.data.result==1){
+                             $(".getConWay").hide();
+                             $(".getTelphoto").show();
+                         // 没有绑定
+                         }else{
+                             window.location.href="/index.php/Mobile/User/binding.html";
+                         }
+                     })
+                }
+            }, function errorCallback(response) {});
+        })
 
         // 判断本技术是否已经收藏
         $http({

@@ -125,6 +125,11 @@
     </div>
 </div>
 <div class='tipCommon'>信息未完善，请填写完毕后提交</div>
+<div class="sec_return">
+    <a onclick="goBack();">
+        <img class="return_icon" src="{$Think.MOBILE}/images/icon-common-return.png" alt="">
+    </a>
+</div>
 
 
 </body>
@@ -132,8 +137,8 @@
 <script src="{$Think.MOBILE}/js/swiper.min.js"></script>
 <script src="{$Think.MOBILE}/js/angular.min.js"></script>
 <script src="{$Think.MOBILE}/js/index-publishTec.js"></script>
-<script src='{$Think.MOBILE}/js/return.js'></script>
 <script>
+
     // 监听输入框
     $('.advice_text').keyup(function(){
         if( $(this).val().length>0 ){
@@ -156,9 +161,12 @@
         // 资料填写完整判断反馈 
         var count = $(".areas_selected").length;       
         if( 
-            $("#title").val()!=""  && count>0  && $("#choose_tecHtml").html()!="请选择"
-            && $("input[name='price']:checked").val()!=undefined  && $("input[name='patent']:checked").val()!=undefined 
-            && $("#choose_html").html()!="请选择" && $("#content").val()!=""          
+            $("#title").val()!=""  && count>0  && 
+            $("#choose_tecHtml").html()!="请选择"  && 
+            $("input[name='price']:checked").val()!= undefined  && 
+            $("input[name='patent']:checked").val()!= undefined && 
+            $("#choose_html").html()!="请选择" && 
+            $("#content").val()!=""          
         ){
       
             // 获取技术领域选中状态
@@ -195,7 +203,7 @@
                 url: '/index.php/Mobile/Article/add?channel=js&type=1&iscopy=0',
                 data: data,
                 dataType: 'json',
-                success: function (res) {
+                success: function (res) {                    
                   if(res.result == 1){
                     tip_ct = "发布成功",
                     tip_url = "/index.php/Mobile";
@@ -207,9 +215,11 @@
               $(".tipCommon").show();
               setTimeout(function(){ $(".tipCommon").hide(); }, 1000);
         }
-
-
     }
+
+    function goBack(){
+        window.location.href='/index.php/Mobile/Index/tec_list.html';
+    };
 </script>
 
 </html>
