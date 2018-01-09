@@ -140,7 +140,7 @@
             <div class="tec_content" ng-bind-html="lists.yyal|trustHtml" ></div>
         </div>
     </a>
-
+ <!-- ng-show="lists.jsys !=''" -->
     <p class="advert">
         庖丁众包·专业科技服务平台
     </p>
@@ -165,12 +165,18 @@
           };
 
           // iOS无法隐藏空标签处理;
-          for(var i = 0 ;i < $(".tec_content").length ; i++){ 
-          alert($(".tec_content")[i].innerHTML);         
-            if( $(".tec_content")[i].innerHTML == ""){      
-              $(".tec_content").eq(i).parent().hide();
-            }
-          }          
+          $(".tec_content").each(function(){
+              // alert($(this).text());
+              if($(this).text()=="" || $(this).text() == null){
+                  $(this).parent().hide();
+              }
+          })
+          // for(var i = 0 ;i < $(".tec_content").length ; i++){ 
+          // alert($(".tec_content")[i].innerHTML);         
+          //   if( $(".tec_content")[i].innerHTML == ""){      
+          //     $(".tec_content").eq(i).parent().hide();
+          //   }
+          // }          
     }
     var dv;//二级导航
     var data_id = GetQueryString('data_id');  
