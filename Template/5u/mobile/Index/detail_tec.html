@@ -113,7 +113,7 @@
         <div class="slideBlock"></div>
     </div>
 
-    <a name="tip1">
+<!--     <a name="tip1">
         <div class="tec_main">
             <div class="tec_tit">技术详述</div>
             <div class="tec_content" ng-bind-html="lists.content|trustHtml" ></div>
@@ -139,7 +139,35 @@
             <div class="tec_tit">应用案例</div>
             <div class="tec_content" ng-bind-html="lists.yyal|trustHtml" ></div>
         </div>
-    </a>
+    </a> -->
+  <a name="tip1">
+      <div class="tec_main">
+          <div class="tec_tit">技术详述</div>
+          <div class="tec_content">12技术详述</div>
+      </div>
+  </a>
+
+  <a name="tip2">
+      <div class="tec_main">
+          <div class="tec_tit">技术优势</div>
+          <div class="tec_content">技术详述12</div>
+      </div>
+  </a>
+
+  <a name="tip3">
+      <div class="tec_main">
+          <div class="tec_tit">效果指标</div>
+          <div class="tec_content"></div>
+      </div>
+  </a>
+
+  <a name="tip4">
+      <div class="tec_main">
+          <div class="tec_tit">应用案例</div>
+          <div class="tec_content"></div>
+      </div>
+  </a>
+
  <!-- ng-show="lists.jsys !=''" -->
     <p class="advert">
         庖丁众包·专业科技服务平台
@@ -156,11 +184,8 @@
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script>
-
-
     var dv;//二级导航
-    var data_id = GetQueryString('data_id');  
-   
+    var data_id = GetQueryString('data_id');     
     var app = angular.module('detail_tec',[]);
     app.filter("trustHtml",function ($sce){
         return function(val) {
@@ -225,7 +250,6 @@
             }, function errorCallback(response) {                   
                 });
         });
-
         // 获取联系方式
         $("#getContackWay").on("click",function(){
             //判断是否登录             
@@ -278,7 +302,6 @@
          $(".alert").hide();
          $(".share_img").hide();        
      });
-
      // 导航栏
      // 需修改的元素：dv、 body的padding-top值，赋为dv的高度
      $(function () {
@@ -306,17 +329,15 @@
              }
          });
      });
-
     window.onload = function(){
       // onload事件在加载的时候判断url,如果包含show=1显示联系方式
         var urlStr = location.href; 
           if (urlStr.indexOf('show=1') > -1 && urlStr.indexOf('show=1')!='') { 
              getContackWay();
           };
-
           // iOS无法隐藏空标签处理;
           $(".tec_content").each(function(){
-              alert($(this).text());
+              // alert($(this).text());
               if($(this).text() === "" || $(this).text() === null){
                   $(this).parent().hide();
               }
