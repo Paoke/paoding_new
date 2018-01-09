@@ -157,27 +157,7 @@
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script>
 
-    window.onload = function(){
-      // onload事件在加载的时候判断url,如果包含show=1显示联系方式
-        var urlStr = location.href; 
-          if (urlStr.indexOf('show=1') > -1 && urlStr.indexOf('show=1')!='') { 
-             getContackWay();
-          };
 
-          // iOS无法隐藏空标签处理;
-          $(".tec_content").each(function(){
-              // alert($(this).text());
-              if($(this).text()=="" || $(this).text() == null){
-                  $(this).parent().hide();
-              }
-          })
-          // for(var i = 0 ;i < $(".tec_content").length ; i++){ 
-          // alert($(".tec_content")[i].innerHTML);         
-          //   if( $(".tec_content")[i].innerHTML == ""){      
-          //     $(".tec_content").eq(i).parent().hide();
-          //   }
-          // }          
-    }
     var dv;//二级导航
     var data_id = GetQueryString('data_id');  
    
@@ -327,7 +307,21 @@
          });
      });
 
+    window.onload = function(){
+      // onload事件在加载的时候判断url,如果包含show=1显示联系方式
+        var urlStr = location.href; 
+          if (urlStr.indexOf('show=1') > -1 && urlStr.indexOf('show=1')!='') { 
+             getContackWay();
+          };
 
+          // iOS无法隐藏空标签处理;
+          $(".tec_content").each(function(){
+              alert($(this).text());
+              if($(this).text() === "" || $(this).text() === null){
+                  $(this).parent().hide();
+              }
+          })        
+    };
 
     function goBack(){
         window.location.href='/index.php/Mobile/Index/tec_list.html';
