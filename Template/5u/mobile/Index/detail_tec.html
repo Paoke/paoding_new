@@ -113,62 +113,33 @@
         <div class="slideBlock"></div>
     </div>
 
-<!--     <a name="tip1">
-        <div class="tec_main">
+    <a name="tip1">
+        <div class="tec_main" ng-show="show1 == 0 ">
             <div class="tec_tit">技术详述</div>
             <div class="tec_content" ng-bind-html="lists.content|trustHtml" ></div>
         </div>
     </a>
 
     <a name="tip2">
-        <div class="tec_main">
+        <div class="tec_main" ng-show="show2 == 0 ">
             <div class="tec_tit">技术优势</div>
             <div class="tec_content" ng-bind-html="lists.jsys|trustHtml" ></div>
         </div>
     </a>
 
     <a name="tip3">
-        <div class="tec_main">
+        <div class="tec_main" ng-show="show3 == 0 ">
             <div class="tec_tit">效果指标</div>
             <div class="tec_content" ng-bind-html="lists.xgzb|trustHtml" ></div>
         </div>
     </a>
 
     <a name="tip4">
-        <div class="tec_main">
+        <div class="tec_main" ng-show="show4 == 0 ">
             <div class="tec_tit">应用案例</div>
             <div class="tec_content" ng-bind-html="lists.yyal|trustHtml" ></div>
         </div>
-    </a> -->
-  <a name="tip1">
-      <div class="tec_main">
-          <div class="tec_tit">技术详述</div>
-          <div class="tec_content">12技术详述</div>
-      </div>
-  </a>
-
-  <a name="tip2">
-      <div class="tec_main">
-          <div class="tec_tit">技术优势</div>
-          <div class="tec_content">技术详述12</div>
-      </div>
-  </a>
-
-  <a name="tip3">
-      <div class="tec_main">
-          <div class="tec_tit">效果指标</div>
-          <div class="tec_content"></div>
-      </div>
-  </a>
-
-  <a name="tip4">
-      <div class="tec_main">
-          <div class="tec_tit">应用案例</div>
-          <div class="tec_content"></div>
-      </div>
-  </a>
-
- <!-- ng-show="lists.jsys !=''" -->
+    </a>
     <p class="advert">
         庖丁众包·专业科技服务平台
     </p>
@@ -194,6 +165,7 @@
     })
     app.controller("detail_tecCtrl",function ($scope,$http){
         $scope.status = 1; 
+
         // 判断本技术是否已经收藏
         $http({
             method:'GET',
@@ -213,7 +185,33 @@
             params: {data_id:data_id},
             url:'/api.php/ChannelIndex/index/action/dataDetail/channel/js/type/1'
         }).then(function successCallback(response) {                    
-                $scope.lists = response.data.data;                        
+                $scope.lists = response.data.data; 
+                console.log($scope.lists.content!="");
+                if( $scope.lists.content != ""){
+                  $scope.show1 = 0; 
+                }else{
+                  $scope.show1 = 1;
+                };
+                // console.log( $scope.show1);
+                
+                if( $scope.lists.jsys != ""){
+                  $scope.show2 = 0;
+                }else{
+                  $scope.show2 = 1;
+                };
+                console.log( $scope.show2);
+                if( $scope.lists.xgzb != ""){
+                  $scope.show3 = 0;
+                }else{
+                  $scope.show3 = 1;
+                };
+                console.log( $scope.show3);
+                if( $scope.lists.yyal != ""){
+                  $scope.show4 = 0;
+                }else{
+                  $scope.show4 = 1;
+                }  
+                console.log( $scope.show4);                        
             }, function errorCallback(response) {
                 console.log(response);
             });
@@ -336,12 +334,11 @@
              getContackWay();
           };
           // iOS无法隐藏空标签处理;
-          $(".tec_content").each(function(){
-              // alert($(this).text());
-              if($(this).text() === "" || $(this).text() === null){
-                  $(this).parent().hide();
-              }
-          })        
+          // $(".tec_content").each(function(){
+          //     if($(this).text() === "" || $(this).text() === null){
+          //         $(this).parent().hide();
+          //     }
+          // })        
     };
 
     function goBack(){
