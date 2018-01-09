@@ -48,12 +48,12 @@
 
 <!-- 最近举办 -->
 <div class="activity_lately">
-    <div class="activity_lately_tit clear" ng-show="lists[0].have=='1'" ng-cloak>
+    <div class="activity_lately_tit clear" ng-show="have == 1" ng-cloak>
         <div class="activity_tit_icon fl" style="background: url({$Think.MOBILE}/images/icon-activity-previous.png);"></div>
         <span class="activity_lately_span fl">最近举办</span>
     </div>
 
-    <div ng-repeat="list in lists" ng-hide="list.status=='0'">
+    <div ng-repeat="list in lists" ng-hide="status == 0">
         <a href="__CONTROLLER__/detail.html?data_id={{list.id}}" >
             <div class="activity_main">
                 <img class="activity_main_img" ng-cloak ng-src="{{list.cover_url}}" alt="">
@@ -179,12 +179,11 @@
                     $scope.status = 0;
                     // data[i]['status']="0";//已经举办过了
                 }else{
-                    $scope.status = 1
-                    $scope.have = "1"
+                    $scope.status = 1;
+                    $scope.have = 1;
                     // data[i]['status']="1";//未举办
                     // data[0]['have']="1";
-                }
-                
+                }                
             };
             $scope.lists = data;
             // console.log( $scope.lists);
