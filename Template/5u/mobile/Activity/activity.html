@@ -173,14 +173,15 @@
             }
         }).then(function successCallback(response){
             var data=response.data.data;
-            alert(Date.parse(new Date()));
-            var actTime = data[1].formal_end_time;
-            var changeTime = actTime.replace(/-/g, '/');  
-            alert(Date.parse(changeTime));
-            // alert(new Date(data[1].formal_end_time).getTime() );//iOS   NaN
-            // alert(Date.parse(data[1].formal_end_time));     //iOS   NaN
+            
+            // alert(Date.parse(new Date()));
+            // var actTime = data[1].formal_end_time;
+            // var changeTime = actTime.replace(/-/g, '/');  
+            // alert(Date.parse(changeTime)); //iOS  正确
+
             for (var i = 0; i < data.length; i++) {
-                if(Date.parse(new Date()) > (new Date(data[i].formal_end_time)).getTime()){
+                data[i].formal_end_time = data[i].formal_end_time).replace(/-/g,'/');
+                if( Date.parse(new Date()) > (Date.parse(data[i].formal_end_time)) ){
                     $scope.status = 0;
                     // data[i]['status']="0";//已经举办过了
                 }else{
