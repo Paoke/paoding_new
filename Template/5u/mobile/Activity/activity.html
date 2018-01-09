@@ -47,6 +47,7 @@
 <div class="activity_grey"></div>
 
 <!-- 最近举办 -->
+<!-- have判断，如果有近期举办的活动才显示 -->
 <div class="activity_lately">
     <div class="activity_lately_tit clear" ng-show="have == 1" ng-cloak>
         <div class="activity_tit_icon fl" style="background: url({$Think.MOBILE}/images/icon-activity-previous.png);"></div>
@@ -172,8 +173,8 @@
             }
         }).then(function successCallback(response){
             var data=response.data.data;
-            console.log(Date.parse(new Date()));
-            console.log( Date.parse(data[1].formal_end_time) );
+            alert(Date.parse(new Date()));
+            alert( Date.parse(data[1].formal_end_time) );
             for (var i = 0; i < data.length; i++) {
                 if(Date.parse(new Date()) > (new Date(data[i].formal_end_time)).getTime()){
                     $scope.status = 0;
@@ -182,7 +183,7 @@
                     $scope.status = 1;
                     $scope.have = 1;
                     // data[i]['status']="1";//未举办
-                    // data[0]['have']="1";
+                    // data[0]['have']="1"; //近期举办
                 }                
             };
             $scope.lists = data;
