@@ -173,14 +173,14 @@
             }
         }).then(function successCallback(response){
             var data=response.data.data;
-            
+
             // alert(Date.parse(new Date()));
             // var actTime = data[1].formal_end_time;
             // var changeTime = actTime.replace(/-/g, '/');  
             // alert(Date.parse(changeTime)); //iOS  正确
 
             for (var i = 0; i < data.length; i++) {
-                data[i].formal_end_time = data[i].formal_end_time).replace(/-/g,'/');
+                data[i].formal_end_time = data[i].formal_end_time.replace(/-/g,'/');
                 if( Date.parse(new Date()) > (Date.parse(data[i].formal_end_time)) ){
                     $scope.status = 0;
                     // data[i]['status']="0";//已经举办过了
