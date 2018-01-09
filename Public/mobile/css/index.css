@@ -1099,3 +1099,9 @@
 #swiper-container4 .swiper-slide{
 	height: 292px;
 }
+.white_div{
+	width: 750px;
+	height: 40px;
+	background: #fff;
+	margin: 0 auto;
+}

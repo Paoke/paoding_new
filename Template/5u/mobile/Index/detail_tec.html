@@ -156,13 +156,19 @@
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script>
+
     window.onload = function(){
-    // onload事件在加载的时候判断url,如果包含show=1显示联系方式
+      // onload事件在加载的时候判断url,如果包含show=1显示联系方式
         var urlStr = location.href; 
           if (urlStr.indexOf('show=1') > -1 && urlStr.indexOf('show=1')!='') { 
              getContackWay();
-            
+          };
 
+          // iOS无法隐藏空标签处理;
+          for(var i = 0 ;i < $(".tec_content").length ; i++){          
+            if( $(".tec_content").eq(i).html() == ""){              
+              $(".tec_content").eq(i).parent(".tec_main").hide();
+            }
           }          
     }
     var dv;//二级导航
@@ -313,6 +319,8 @@
              }
          });
      });
+
+
 
     function goBack(){
         window.location.href='/index.php/Mobile/Index/tec_list.html';

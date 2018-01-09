@@ -24,7 +24,7 @@
         <div class="close">关闭</div>
     </div>
     <div class="act_details_banner">
-        <img src="{$Think.MOBILE}/images/hd-xqy-banner1.png" alt="">
+        <img ng-cloak ng-src="{{details.cover_url}}" alt="">
     </div>
 
     <div class="act_details_article">
@@ -176,10 +176,8 @@
                          url:'/api.php/user/check_phone'
                      }).then(function successCallback(response) {                  
                          // 已经绑定
-                         if(response.data.result==1){
-                                tip_ct = "报名成功";
-                                tip_url = '/index.php/Mobile/Activity/activity';
-                                tips.addtips(tip_ct,tip_url);
+                         if(response.data.result==1){      
+                            window.location.href = 'http://www.paoding.cc/index.php/Mobile/Activity/enter';
                          // 没有绑定
                          }else{
                              window.location.href="/index.php/Mobile/User/binding.html";
