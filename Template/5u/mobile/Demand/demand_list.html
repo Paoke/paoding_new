@@ -81,7 +81,7 @@
                         <span class="sec_data_span">{{detail.clicks}}</span>
                     </div>
                     <p class="sec_data_p">
-                        发布时间: <span class="sec_data_span">{{times | date:'yyyy-MM-dd'}}</span>
+                        发布时间: <span class="sec_data_span">{{detail.create_time | formatDate}}</span>
                         投入预算：<span>{{detail.yfys}}</span>
                     </p>
                 </div>
@@ -209,20 +209,19 @@
             page = response.data.data.page.page;
             page_total = response.data.data.page.page_total;
             $scope.details = response.data.data.info;
-
-            for(var i = 0 ;i < $scope.details.length;i++){
-                $scope.times = Date.parse($scope.details[i].create_time);//转成时间戳
-                // console.log($scope.details[i].xpyf);
-            };            
+            // $scope.times = response.data.data.create_time;
+            // console.log(substrDate(response.data.data.info[1].create_time));
+            // for(var i = 0 ;i < $scope.details.length;i++){
+            //     $scope.times = Date.parse($scope.details[i].create_time);//转成时间戳               
+            // };            
         }, function errorCallback(response) {
         });
     });
     
     // 1.9时间过滤
     app.filter('formatDate',function(){
-        return function(input){
-            var date = new Date(input);
-            return date;
+        return function(date){
+            return date = date.substr(0,10);
         };
     });
 
@@ -303,10 +302,10 @@
                 // 新品研发标签判断
                 var img_src;  
                 for (var i = 0; i < info.length; i++) {
-                    // 时间格式转换
+                    // 时间格式转换 iOS bug
                     // info[i].create_time = formatDate(new Date(Date.parse(info[i].create_time))); 
-                    // 1.9时间过滤 将日期格式2017-02-19改为2017/02/19 格式
-                    info[i].create_time = new Date(Date.parse(info[i].create_time.replace(/-/g, "/")));  
+                    // 时间截取
+                    info[i].create_time = substrDate(info[i].create_time);
                     // 新品研发标签判断
                     if(info[i]['xpyf'] == "新品研发") {
                         img_src = "icon-research.png";
@@ -360,9 +359,7 @@
                 }
             }
         });
-
         return result;
-
     }
 
     //js方法返回值：2015-03-19
@@ -374,6 +371,12 @@
         d = d < 10 ? ('0' + d) : d;  
         return y + '-' + m + '-' + d;  
     };  
+
+    // 日期截取:
+    var substrDate = function (date) {
+        var date = date.substr(0,10);
+        return date;
+    }
  
 
 </script>
