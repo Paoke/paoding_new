@@ -174,8 +174,11 @@
         }).then(function successCallback(response){
             var data=response.data.data;
             alert(Date.parse(new Date()));
+            var actTime = data[1].formal_end_time;
+            var changeTime = actTime.replace(/-/g, '/');  
+            alert(Date.parse(changeTime));
             // alert(new Date(data[1].formal_end_time).getTime() );//iOS   NaN
-            alert(Date.parse(data[1].formal_end_time));
+            // alert(Date.parse(data[1].formal_end_time));     //iOS   NaN
             for (var i = 0; i < data.length; i++) {
                 if(Date.parse(new Date()) > (new Date(data[i].formal_end_time)).getTime()){
                     $scope.status = 0;
