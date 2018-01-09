@@ -122,7 +122,7 @@
 
     <a name="tip2">
         <div class="tec_main">
-            <div class="tec_tit" >技术优势</div>
+            <div class="tec_tit">技术优势</div>
             <div class="tec_content" ng-bind-html="lists.jsys|trustHtml" ></div>
         </div>
     </a>
@@ -136,7 +136,7 @@
 
     <a name="tip4">
         <div class="tec_main">
-            <div class="tec_tit" >应用案例</div>
+            <div class="tec_tit">应用案例</div>
             <div class="tec_content" ng-bind-html="lists.yyal|trustHtml" ></div>
         </div>
     </a>
@@ -165,13 +165,13 @@
           };
 
           // iOS无法隐藏空标签处理;
-          for(var i = 0 ;i < $(".tec_content").length ; i++){          
-            if( $(".tec_content").eq(i).html() == ""){    
-              alert($(".tec_content").eq(i).html());         
+          for(var i = 0 ;i < $(".tec_content").length ; i++){ 
+          alert($(".tec_content")[i].innerHTML);         
+            if( $(".tec_content")[i].innerHTML == ""){      
               $(".tec_content").eq(i).parent().hide();
             }
           }          
-    };
+    }
     var dv;//二级导航
     var data_id = GetQueryString('data_id');  
    
