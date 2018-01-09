@@ -115,28 +115,28 @@
 
     <a name="tip1">
         <div class="tec_main">
-            <div class="tec_tit" ng-show="lists.content!=''">技术详述</div>
+            <div class="tec_tit">技术详述</div>
             <div class="tec_content" ng-bind-html="lists.content|trustHtml" ></div>
         </div>
     </a>
 
     <a name="tip2">
         <div class="tec_main">
-            <div class="tec_tit" ng-show="lists.jsys !=''">技术优势</div>
+            <div class="tec_tit" >技术优势</div>
             <div class="tec_content" ng-bind-html="lists.jsys|trustHtml" ></div>
         </div>
     </a>
 
     <a name="tip3">
         <div class="tec_main">
-            <div class="tec_tit" ng-show="lists.xgzb !=''">效果指标</div>
+            <div class="tec_tit">效果指标</div>
             <div class="tec_content" ng-bind-html="lists.xgzb|trustHtml" ></div>
         </div>
     </a>
 
     <a name="tip4">
         <div class="tec_main">
-            <div class="tec_tit" ng-show="lists.yyal !=''">应用案例</div>
+            <div class="tec_tit" >应用案例</div>
             <div class="tec_content" ng-bind-html="lists.yyal|trustHtml" ></div>
         </div>
     </a>
@@ -166,7 +166,8 @@
 
           // iOS无法隐藏空标签处理;
           for(var i = 0 ;i < $(".tec_content").length ; i++){          
-            if( $(".tec_content").eq(i).html() == ""){              
+            if( $(".tec_content").eq(i).html() == ""){    
+            console.log(i);          
               $(".tec_content").eq(i).parent(".tec_main").hide();
             }
           }          
