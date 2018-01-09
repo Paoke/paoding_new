@@ -168,7 +168,7 @@
           for(var i = 0 ;i < $(".tec_content").length ; i++){          
             if( $(".tec_content").eq(i).html() == ""){    
             console.log(i);          
-              $(".tec_content").eq(i).parent(".tec_main").hide();
+              $(".tec_content").eq(i).parent().hide();
             }
           }          
     }
