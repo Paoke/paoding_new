@@ -167,11 +167,11 @@
           // iOS无法隐藏空标签处理;
           for(var i = 0 ;i < $(".tec_content").length ; i++){          
             if( $(".tec_content").eq(i).html() == ""){    
-            console.log(i);          
+              alert($(".tec_content").eq(i).html());         
               $(".tec_content").eq(i).parent().hide();
             }
           }          
-    }
+    };
     var dv;//二级导航
     var data_id = GetQueryString('data_id');  
    
