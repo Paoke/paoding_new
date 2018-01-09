@@ -186,32 +186,28 @@
             url:'/api.php/ChannelIndex/index/action/dataDetail/channel/js/type/1'
         }).then(function successCallback(response) {                    
                 $scope.lists = response.data.data; 
-                console.log($scope.lists.content!="");
                 if( $scope.lists.content != ""){
-                  $scope.show1 = 0; 
+                    $scope.show1 = 0; 
                 }else{
-                  $scope.show1 = 1;
-                };
-                // console.log( $scope.show1);
+                    $scope.show1 = 1;                };            
                 
                 if( $scope.lists.jsys != ""){
-                  $scope.show2 = 0;
+                    $scope.show2 = 0;
                 }else{
-                  $scope.show2 = 1;
+                    $scope.show2 = 1;
                 };
-                console.log( $scope.show2);
+             
                 if( $scope.lists.xgzb != ""){
-                  $scope.show3 = 0;
+                    $scope.show3 = 0;
                 }else{
-                  $scope.show3 = 1;
+                    $scope.show3 = 1;
                 };
-                console.log( $scope.show3);
+
                 if( $scope.lists.yyal != ""){
-                  $scope.show4 = 0;
+                   $scope.show4 = 0;
                 }else{
-                  $scope.show4 = 1;
-                }  
-                console.log( $scope.show4);                        
+                   $scope.show4 = 1;
+                }                                     
             }, function errorCallback(response) {
                 console.log(response);
             });
@@ -332,13 +328,7 @@
         var urlStr = location.href; 
           if (urlStr.indexOf('show=1') > -1 && urlStr.indexOf('show=1')!='') { 
              getContackWay();
-          };
-          // iOS无法隐藏空标签处理;
-          // $(".tec_content").each(function(){
-          //     if($(this).text() === "" || $(this).text() === null){
-          //         $(this).parent().hide();
-          //     }
-          // })        
+          };       
     };
 
     function goBack(){

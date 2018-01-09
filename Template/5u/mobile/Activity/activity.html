@@ -69,12 +69,12 @@
 
 <!-- 往期活动 -->
 <div class="activity_lately">
-    <div class="activity_lately_tit clear"  ng-show="lists[0].have!='1'">
+    <div class="activity_lately_tit clear"  ng-show="have != 1">
         <div class="activity_tit_icon fl"  style="background: url({$Think.MOBILE}/images/icon-activity-previous.png) center 0 no-repeat;"></div>
         <span class="activity_lately_span fl">往期活动</span>
     </div>
 
-    <div ng-repeat="list in lists" ng-hide="list.status=='1'">
+    <div ng-repeat="list in lists" ng-hide="status == 1">
         <a href="__CONTROLLER__/detail.html?data_id={{list.id}}" >
             <div class="activity_lately_section clear">
                 <div class="activity_section_left fl">
@@ -176,10 +176,13 @@
             console.log( Date.parse(data[1].formal_end_time) );
             for (var i = 0; i < data.length; i++) {
                 if(Date.parse(new Date()) > (new Date(data[i].formal_end_time)).getTime()){
-                    data[i]['status']="0";//已经举办过了
+                    $scope.status = 0;
+                    // data[i]['status']="0";//已经举办过了
                 }else{
-                    data[i]['status']="1";//未举办
-                    data[0]['have']="1";
+                    $scope.status = 1
+                    $scope.have = "1"
+                    // data[i]['status']="1";//未举办
+                    // data[0]['have']="1";
                 }
                 
             };
