@@ -14,7 +14,7 @@
 <div class="mask" style="display: none;"></div>
 <div class="psw_reset" style="display: none;">
     <p>密码重置成功</p>
-    <a href="">马上去登录...</a>
+    <a href="/index.php/Mobile/Login/login.html">马上去登录...</a>
 </div>
 
 <form id="formID">
@@ -77,7 +77,6 @@
                         return str.join("&");    
                     } 
                 }).then(function successCallback(response) {
-                     console.log(response);
                     }, function errorCallback(response) {
 
                 });
@@ -113,7 +112,10 @@
                         return str.join("&");    
                     } 
                 }).then(function successCallback(response) {
-                     console.log(response);
+                    if(response.data.result == 1){
+                        $(".mask").show();
+                        $(".psw_reset").show();
+                     }
                     }, function errorCallback(response) {
 
                 });

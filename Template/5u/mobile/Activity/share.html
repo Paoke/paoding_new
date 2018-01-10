@@ -45,22 +45,24 @@
         </div>
         <!-- 举办活动 -->
         <div ng-repeat="list in lists">
-            <div class="activity_lately_section clear">
-                <div class="activity_section_left fl">
-                    <img ng-cloak class="activity_logo" ng-src="{{list.sponsor_logo_url}}" alt="">
+            <a href="__CONTROLLER__/detail.html?data_id={{list.id}}" >
+                <div class="activity_lately_section clear">
+                    <div class="activity_section_left fl">
+                        <img ng-cloak class="activity_logo" ng-src="{{list.sponsor_logo_url}}" alt="">
+                    </div>
+                    <div class="activity_section_right fr">
+                        <p class="activity_right_tit" ng-cloak>{{list.title}}</p>
+                        <p class="activity_right_p" ng-cloak>
+                            <span class="activity_right_span" ng-cloak >{{list.diqu}}</span>
+                            <span ng-cloak>{{list.formal_start_time}}</span>
+                        </p>
+                        <p  class="activity_right_p">
+                            浏览<span ng-cloak class="activity_right_span">{{list.clicks}}</span>
+                            收藏<span ng-cloak>{{list.shoucang}}</span>
+                        </p>
+                    </div>
                 </div>
-                <div class="activity_section_right fr">
-                    <p class="activity_right_tit" ng-cloak>{{list.title}}</p>
-                    <p class="activity_right_p" ng-cloak>
-                        <span class="activity_right_span" ng-cloak >{{list.diqu}}</span>
-                        <span ng-cloak>{{list.formal_start_time}}</span>
-                    </p>
-                    <p  class="activity_right_p">
-                        浏览<span ng-cloak class="activity_right_span">{{list.clicks}}</span>
-                        收藏<span ng-cloak>{{list.shoucang}}</span>
-                    </p>
-                </div>
-            </div>
+            </a>
         </div>
     </div>
 </div>

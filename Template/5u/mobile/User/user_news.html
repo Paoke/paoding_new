@@ -11,6 +11,10 @@
     <include file="./Template/5u/common/common.html" />
 </head>
 <body ng-controller="newsCtrl">
+    <div ng-show="tecStatus == 0" class="sky_div">
+        <img src="{$Think.MOBILE}/images/sky.png" alt="">
+        <p>您目前没有收到任何消息</p>
+    </div>
     <div ng-repeat="new in news">
         <a href="/index.php/Mobile/User/new_detail.html?data_id={{new.id}}">
             <div class="news_div clear">
@@ -35,7 +39,7 @@
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script>
     var app = angular.module('user_news', []);
-    app.controller('newsCtrl', function($scope,$http) {
+    app.controller('newsCtrl', function ($scope,$http) {
         $scope.status = 0;
         var data = {
             page : 1,
@@ -57,7 +61,12 @@
                      return str.join("&");
                  }
         }).then(function successCallback(response) {             
-            $scope.news = response.data.data.info;       
+            $scope.news = response.data.data.info;   
+            // 无收藏
+            console.log(response.data.data.info=="")
+            if(response.data.data.info==""){
+                $scope.tecStatus = 0;
+            };    
             }, function errorCallback(response) {
 
         });

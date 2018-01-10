@@ -26,6 +26,10 @@
 
 <!-- 技术 -->
 <div class="tab_body" style="display:block">
+    <div ng-show="tecStatus == 0" class="sky_div">
+        <img src="{$Think.MOBILE}/images/sky.png" alt="">
+        <p>您目前没有任何技术项目收藏</p>
+    </div>
     <div class="advancedWrap">
         <a href="__MODULE__/Index/detail_tec.html?data_id={{tecList.id}}" ng-repeat="tecList in tecLists">
             <div class="main_section clear">
@@ -54,6 +58,10 @@
 </div>
 <!-- 需求 -->
 <div class="tab_body">
+    <div ng-show="DemStatus == 0" class="sky_div">
+        <img src="{$Think.MOBILE}/images/sky.png" alt="">
+        <p>您目前没有任何需求项目收藏</p>
+    </div>
     <div class="main" ng-repeat="demandList in demandLists">
         <div class="section">
             <p class="sec_title clear">
@@ -72,7 +80,7 @@
                         <span class="sec_data_span" ng-cloak>{{ demandList.clicks }}</span>
                     </div>
                     <p class="sec_data_p">
-                        发布时间: <span class="sec_data_span" ng-cloak>{{ demandList.create_time }}</span>
+                        发布时间: <span class="sec_data_span" ng-cloak>{{ demandList.create_time | formatDate}}</span>
                         投入预算：<span ng-cloak>{{ demandList.yfys }}</span>
                     </p>
                 </div>
@@ -91,6 +99,10 @@
 
 <!-- 活动 -->
 <div class="tab_body">
+    <div ng-show="ActStatus == 0" class="sky_div">
+        <img src="{$Think.MOBILE}/images/sky.png" alt="">
+        <p>您目前没有任何活动收藏</p>
+    </div>
     <div class="activity_lately_section clear" ng-repeat="activityList in activityLists">
         <a href="__MODULE__/Activity/detail.html?data_id={{activityList.id}}">
             <div class="activity_section_left fl">
@@ -100,7 +112,7 @@
                 <p class="activity_right_tit" ng-cloak>{{ activityList.title }}</p>
                 <p class="activity_right_p">
                     <span class="activity_right_span" ng-cloak>{{ activityList.diqu }}</span>
-                    <span ng-cloak>{{ activityList.formal_start_time }}</span>
+                    <span ng-cloak>{{ activityList.formal_start_time | formatDate}}</span>
                 </p>
                 <p class="activity_right_p">
                     浏览<span class="activity_right_span" ng-cloak>{{ activityList.clicks }}</span>
@@ -120,6 +132,10 @@
         <p class="fl">企业</p>
     </div>
     <div class="index_coop_swiper clear" style="display:block">
+        <div ng-show="AssoStatus == 0" class="sky_div">
+            <img src="{$Think.MOBILE}/images/sky.png" alt="">
+            <p>您目前没有任何单位收藏</p>
+        </div>
         <a href="__MODULE__/Partner/association_detail.html?data_id={{ assoList.id }}"
            ng-repeat="assoList in assoLists">
             <div class="coop_section fl">
@@ -130,6 +146,10 @@
     </div>
 
     <div class="index_coop_swiper clear">
+        <div ng-show="ComStatus == 0" class="sky_div">
+            <img src="{$Think.MOBILE}/images/sky.png" alt="">
+            <p>您目前没有任何单位收藏</p>
+        </div>
         <a href="__MODULE__/Partner/company_detail.html?data_id={{ companyList.id }}"
            ng-repeat="companyList in companyLists">
             <div class="coop_section fl">
@@ -150,21 +170,23 @@
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script>
     var app = angular.module('user_collect', []);
-    // 技术
+    app.filter('formatDate',function(){
+        return function(date){
+            return date = date.substr(0,10);
+        };
+    });
+   
     app.controller("advancedCtrl", function ($scope, $http) {
-        // var data = {
-        //     page:1,
-        //     page_num:2,
-        //     order_field:'create_time',
-        //     category_id:0,
-        //     tag_id:0,
-        //     order_by:'DESC'
-        // };
+        // 技术
         $http({
             method: "GET",
             url: "/index.php/Mobile/Article/collect_list?channel=js",
         }).then(function successCallback(response) {
             $scope.tecLists = response.data.data;
+            // 无收藏
+            if(response.data.result == 0){
+                $scope.tecStatus = 0;
+            };
         }, function errorCallback(response) {
             // console.log(response)
         });
@@ -175,6 +197,9 @@
             url: "/index.php/Mobile/Article/collect_list?channel=xq",
         }).then(function successCallback(response) {
             $scope.demandLists = response.data.data;
+            if(response.data.result == 0){
+                $scope.DemStatus = 0;
+            }
         }, function errorCallback(response) {
             // console.log(response)
         });
@@ -185,6 +210,9 @@
             url: "/index.php/Mobile/Activity/collect_list",
         }).then(function successCallback(response) {
             $scope.activityLists = response.data.data;
+            if(response.data.result == 0){
+                $scope.ActStatus = 0;
+            }
         }, function errorCallback(response) {
             // console.log(response)
         });
@@ -195,6 +223,9 @@
             url: "/index.php/Mobile/Article/collect_list?channel=hz&type=jtgs",
         }).then(function successCallback(response) {
             $scope.assoLists = response.data.data;
+            if(response.data.result == 0){
+                $scope.AssoStatus = 0;
+            }
         }, function errorCallback(response) {
             // console.log(response)
         });
@@ -205,6 +236,9 @@
             url: "/index.php/Mobile/Article/collect_list?channel=hz&type=hzjg",
         }).then(function successCallback(response) {
             $scope.companyLists = response.data.data;
+            if(response.data.result == 0){
+                $scope.ComStatus = 0;
+            }
         }, function errorCallback(response) {
             // console.log(response)
         });

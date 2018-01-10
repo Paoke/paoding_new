@@ -12,31 +12,35 @@
     <include file="./Template/5u/common/common.html" />
 </head>
 <body ng-controller="advancedCtrl">
-<a href="__CONTROLLER__/demand_detail.html?data_id={{ demandList.id }}" ng-repeat="demandList in demandLists">
-    <div class="index_div"></div>
-    <div class="section">
-        <div class="sec_title clear">
-            <div class="left_option fl">
-                <p class="callForBids" ng-show="demandList.status==1" ng-cloak>【审核中】</p>
-                <p class="callForBids" ng-show="demandList.status==0 && demandList.is_active==1" ng-cloak>【已通过】</p>
-                <p class="callForBids" ng-show="demandList.is_active==0 && demandList.status==0" ng-cloak>【已下架】</p>
-                <img src="{$Think.MOBILE}/images/icon-wodexq.png" alt="" ng-show="demandList.status==1" ng-cloak>
-                <img src="{$Think.MOBILE}/images/icon-wodexq.png" alt="" ng-show="demandList.status==0 && demandList.is_active==1" ng-cloak>
-                <img src="{$Think.MOBILE}/images/icon-wodexq-yqx.png" alt="" ng-show="demandList.is_active==0 && demandList.status==0" ng-cloak>
-            </div>
+    <div ng-show="tecStatus == 0" class="sky_div">
+        <img src="{$Think.MOBILE}/images/sky.png" alt="">
+        <p>您目前没有发布任何需求项目</p>
+    </div>
+    <a href="__CONTROLLER__/demand_detail.html?data_id={{ demandList.id }}" ng-repeat="demandList in demandLists">
+        <div class="index_div"></div>
+        <div class="section">
+            <div class="sec_title clear">
+                <div class="left_option fl">
+                    <p class="callForBids" ng-show="demandList.status==1" ng-cloak>【审核中】</p>
+                    <p class="callForBids" ng-show="demandList.status==0 && demandList.is_active==1" ng-cloak>【已通过】</p>
+                    <p class="callForBids" ng-show="demandList.is_active==0 && demandList.status==0" ng-cloak>【已下架】</p>
+                    <img src="{$Think.MOBILE}/images/icon-wodexq.png" alt="" ng-show="demandList.status==1" ng-cloak>
+                    <img src="{$Think.MOBILE}/images/icon-wodexq.png" alt="" ng-show="demandList.status==0 && demandList.is_active==1" ng-cloak>
+                    <img src="{$Think.MOBILE}/images/icon-wodexq-yqx.png" alt="" ng-show="demandList.is_active==0 && demandList.status==0" ng-cloak>
+                </div>
 
-            <div class="right_option fl">
-                <span class="materials2" ng-cloak>{{ demandList.title }}</span>
-                <p class="sec_content" ng-cloak>{{ demandList.content }}</p>
-                <p class="sec_data_p">
-                    需求领域：<span class="sec_data_span" ng-cloak>{{ demandList.jsly }}</span>
-                    <!--咨询数<span class="sec_data_span">111</span>-->
-                <p class="marginT">发布时间: <span class="sec_data_span" ng-cloak="">{{ demandList.create_time }}</span>	</p>
-                </p>
+                <div class="right_option fl">
+                    <span class="materials2" ng-cloak>{{ demandList.title }}</span>
+                    <p class="sec_content" ng-cloak>{{ demandList.content }}</p>
+                    <p class="sec_data_p">
+                        需求领域：<span class="sec_data_span" ng-cloak>{{ demandList.jsly }}</span>
+                        <!--咨询数<span class="sec_data_span">111</span>-->
+                    <p class="marginT">发布时间: <span class="sec_data_span" ng-cloak="">{{ demandList.create_time }}</span>	</p>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</a>
+    </a>
 <div class="index_div"></div>
 
 <div class="sec_return">
@@ -61,6 +65,11 @@
             url: "/index.php/Mobile/Article/my_project?channel=xq&action=datalist",
         }).then(function successCallback(response) {
             $scope.demandLists = response.data.data;
+            // 空现象判断
+            if(response.data.result != 1){
+                 $scope.tecStatus = 0;
+            };
+          
         }, function errorCallback(response) {
             console.log(response)
         });

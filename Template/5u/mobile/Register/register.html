@@ -165,24 +165,5 @@
 			}
 		});
 	});
-
-
-
-	function goTime() {
-		if (countdown == 0) {  			
-			$('.getIdentify').attr("disabled",false);    
-			$('.getIdentify').val("重新发送"); 			
-			countdown = 60;   
-		} else {  			
-			$('.getIdentify').attr("disabled",true); 
-			$('.getIdentify').css('background','#fff');
-			$('.getIdentify').val("重新发送(" + countdown + ")"); 
-			countdown--;   
-			setTimeout(function() {   
-				goTime()   
-			},1000);   
-		}   
-	};  
-
 </script>
 </html>

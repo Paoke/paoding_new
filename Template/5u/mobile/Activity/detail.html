@@ -109,10 +109,10 @@
             <img class="return_icon" src="{$Think.MOBILE}/images/icon-common-return.png" alt="">
         </a>
         <img class="act_love_icon" src="{$Think.MOBILE}/images/icon-activity-collect-default.png" alt="">
-        <a class="act_det_btn" id="act_det_btn" ng-show="details.status=='1'">
+        <a class="act_det_btn" id="act_det_btn" ng-show="status == 1">
             立即报名
         </a>
-        <a class="act_det_btn" style="background:#999;" ng-show="details.status=='0'">
+        <a class="act_det_btn" style="background:#999;" ng-show="status == 0">
             活动已结束
         </a>
     </div>
@@ -132,10 +132,13 @@
         }).then(function successCallback(response) {                      
                 $scope.details = response.data.data;     
                  var startTime = $scope.details.formal_start_time;
-                 if(Date.parse(new Date()) > Date.parse(startTime)){   
-                    $scope.details['status']="0";//已结束
+                 var changeTime = startTime.replace(/-/g,'/');
+                 if(Date.parse(new Date()) > Date.parse(changeTime)){   
+                    $scope.status = 0;//已结束
+                    // $scope.details['status']="0";//已结束
                 }else{
-                    $scope.details['status']="1";//未举办
+                    $scope.status = 1;//未举办
+                    // $scope.details['status']="1";//未举办
                 }
             }, function errorCallback(response) {
             });

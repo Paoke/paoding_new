@@ -82,16 +82,16 @@
 }
 .news_circle{
 	position: absolute;
-	bottom: 25px;
-	right: 30px;
-	width: 30px;
-	height: 30px;
+	bottom: 30px;
+	right: 45px;
+	width: 12px;
+	height: 12px;
 	border-radius: 100%;
 	background: #ff981c;
 	text-align: center;
-	line-height: 32px;
+	line-height: 12px;
 	color: #fff;
-	font-size: 16px;
+	font-size: 12px;
 }
 .my_project .a_project{
 	width: 174px;
@@ -969,6 +969,15 @@ html,body{
 }
 .fileZm,.fileFm{
 	max-width: 336px;
+}
+.sky_div{
+	text-align: center;
+}
+.sky_div p{
+	margin-top: 82px;
+	font-size: 26px;
+	color: #999;
+	text-align: center;
 }
 
 

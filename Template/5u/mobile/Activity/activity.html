@@ -54,28 +54,29 @@
         <span class="activity_lately_span fl">最近举办</span>
     </div>
 
-    <div ng-repeat="list in lists" ng-hide="status == 0">
+<!--     <div ng-repeat="list in lists" ng-hide="status == 0"> -->
+    <div ng-repeat="list in lists" ng-show="list.status == 1">
         <a href="__CONTROLLER__/detail.html?data_id={{list.id}}" >
             <div class="activity_main">
                 <img class="activity_main_img" ng-cloak ng-src="{{list.cover_url}}" alt="">
                 <div class="activity_main_time clear">
-                    <p class="fl" ng-cloak>{{list.plan_end_time}}</p>
+                    <p class="fl" ng-cloak>{{list.plan_end_time | formatDate}}</p>
                     <p class="fr">了解详情<img src="{$Think.MOBILE}/images/icon-right.png" alt=""></p>
                 </div>
             </div>
         </a>
     </div>
 </div>
-<div class="activity_grey"></div>
 
 <!-- 往期活动 -->
 <div class="activity_lately">
-    <div class="activity_lately_tit clear"  ng-show="have != 1">
+    <div class="activity_lately_tit clear">
+    <!-- <div class="activity_lately_tit clear"  ng-show="have != 1"> -->
         <div class="activity_tit_icon fl"  style="background: url({$Think.MOBILE}/images/icon-activity-previous.png) center 0 no-repeat;"></div>
         <span class="activity_lately_span fl">往期活动</span>
     </div>
 
-    <div ng-repeat="list in lists" ng-hide="status == 1">
+    <div ng-repeat="list in lists" ng-show="list.status == 0">
         <a href="__CONTROLLER__/detail.html?data_id={{list.id}}" >
             <div class="activity_lately_section clear">
                 <div class="activity_section_left fl">
@@ -85,7 +86,7 @@
                     <p class="activity_right_tit" ng-cloak>{{list.title}}</p>
                     <p class="activity_right_p">
                         <span class="activity_right_span" ng-cloak>{{list.diqu}}</span>
-                        <span ng-cloak>{{list.formal_start_time}}</span>
+                        <span ng-cloak>{{list.formal_start_time | formatDate}}</span>
                     </p>
                     <p  class="activity_right_p">
                         浏览<span class="activity_right_span" ng-cloak> {{list.clicks}}</span>
@@ -136,6 +137,11 @@
     }
 
     var app = angular.module("activity",[]);
+    app.filter('formatDate',function(){
+        return function(date){
+            return date = date.substr(0,10);
+        };
+    });
     app.controller("actCtrl",function ($scope,$http){
         // 轮播图
         $http({
@@ -143,7 +149,6 @@
             url:'/api.php/Index/banner?module=4'
         }).then(function successCallback(response){
             $scope.banners = response.data.data;
-            console.log(response.data.data)
             // console.log( $scope.options[1].tag_name);
         },function errorCallback(){
         });
@@ -173,22 +178,16 @@
             }
         }).then(function successCallback(response){
             var data=response.data.data;
-
-            // alert(Date.parse(new Date()));
-            // var actTime = data[1].formal_end_time;
-            // var changeTime = actTime.replace(/-/g, '/');  
-            // alert(Date.parse(changeTime)); //iOS  正确
-
             for (var i = 0; i < data.length; i++) {
+                // 苹果不支持2010-10-12格式，需转换
                 data[i].formal_end_time = data[i].formal_end_time.replace(/-/g,'/');
                 if( Date.parse(new Date()) > (Date.parse(data[i].formal_end_time)) ){
-                    $scope.status = 0;
-                    // data[i]['status']="0";//已经举办过了
+                    // $scope.status[i] = 0;//已经举办过了
+                    data[i]['status'] = 0;
                 }else{
-                    $scope.status = 1;
-                    $scope.have = 1;
-                    // data[i]['status']="1";//未举办
-                    // data[0]['have']="1"; //近期举办
+                    // $scope.status[i] = 1;//未举办
+                    data[i]['status'] = 1;     
+                    $scope.have = 1;//近期举办
                 }                
             };
             $scope.lists = data;

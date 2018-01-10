@@ -125,8 +125,7 @@
                 return str.join("&");    
             } 
         }).then(function successCallback(response) {    
-             $scope.user = response.data.data;
-             console.log($scope.user.status); 
+             $scope.user = response.data.data;                 
              if($scope.user.status == 1){
                 $scope.sta = "审核中";
              }else if($scope.user.status == null){
