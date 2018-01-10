@@ -71,6 +71,7 @@ html,body{
 #demand_type{
 	-webkit-appearance: none;  	
 	font-size: 30px;
+	color: #999;
 }
 
 .click_search{

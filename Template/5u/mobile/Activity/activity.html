@@ -182,11 +182,9 @@
                 // 苹果不支持2010-10-12格式，需转换
                 data[i].formal_end_time = data[i].formal_end_time.replace(/-/g,'/');
                 if( Date.parse(new Date()) > (Date.parse(data[i].formal_end_time)) ){
-                    // $scope.status[i] = 0;//已经举办过了
-                    data[i]['status'] = 0;
+                    data[i]['status'] = 0;//已经举办过了
                 }else{
-                    // $scope.status[i] = 1;//未举办
-                    data[i]['status'] = 1;     
+                    data[i]['status'] = 1; //未举办  
                     $scope.have = 1;//近期举办
                 }                
             };
