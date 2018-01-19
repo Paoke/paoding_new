@@ -38,7 +38,6 @@
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
-<!-- <script src='{$Think.MOBILE}/js/common.js'></script> -->
 <script>
     var url_ref = document.referrer;
     var mobile,password;
@@ -74,7 +73,7 @@
                 return str.join("&");    
             } 
         }).then(function successCallback(response) {
-            // 登陆成功跳转到my.html
+
             if(response.data.result==1){
                 tip_ct = "登录成功";
                 // tip_url = '/index.php/Mobile/User/user_center.html';

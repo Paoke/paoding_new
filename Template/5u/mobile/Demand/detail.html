@@ -93,7 +93,7 @@
         庖丁众包·专业科技服务平台
     </p>
     <div class="sec_return">
-        <a onclick="javascript:history.go(-1);">
+        <a onclick="goBack();">
             <img class="return_icon" src="{$Think.MOBILE}/images/icon-common-return.png" alt="">
         </a>
         <p class="collect" id="collect" ng-show="status == 1" ng-cloak>收藏</p>
@@ -225,7 +225,10 @@
     $(".mask").on("click",function(){
         $(".mask").hide();
         $(".alert").hide();
-    })
+    });
+    function goBack(){
+        window.location.href='/index.php/Mobile/Demand/demand_list';
+    };
 
 
 
