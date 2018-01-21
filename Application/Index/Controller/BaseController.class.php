@@ -1,6 +1,6 @@
 <?php
 
-namespace Pc\Controller;
+namespace Index\Controller;
 
 use Think\Controller;
 use Think\Model;
@@ -39,10 +39,9 @@ class BaseController extends Controller
     public function checkSite()
     {
         $site_name = session('site_name');
-        var_dump(session('site_name'));exit;
 
         if (!empty($site_name)) {
-            return site_template_config($site_name, 0);
+            return site_template_config($site_name, 2);
         }
         return false;
     }

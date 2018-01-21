@@ -5,7 +5,7 @@ require_once('constant.php');
 return array(
     /* 加载公共函数 */
     'DEFAULT_DOMAIN_SUFFIX' => '.dream5u.com',
-    'TEMPLATE_THEME_MODULE' => 'Home,Mobile,Pc',
+    'TEMPLATE_THEME_MODULE' => 'Home,Mobile,Pc,Index',
     'DEFAULT_SITE_NAME' => '5u',
     'LOAD_EXT_FILE' =>'common',
 
@@ -115,8 +115,8 @@ return array(
      */
 
     // 'site_url'=>'http://www.gemmap.cn', // tpshop 网站域名 已经改写入数据库
-    'DEFAULT_MODULE'        =>  'Pc',  // 默认模块
-    //'DEFAULT_MODULE'        =>  'Index',  // 默认模块
+//    'DEFAULT_MODULE'        =>  'Pc',  // 默认模块
+    'DEFAULT_MODULE'        =>  'Index',  // 默认模块
     'DEFAULT_CONTROLLER'    =>  'Index', // 默认控制器名称
     'DEFAULT_ACTION'        =>  'index', // 默认操作名称    
     
