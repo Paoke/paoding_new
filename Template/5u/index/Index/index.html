@@ -5,93 +5,29 @@
     <title>庖丁技术</title>
     <meta name="description" content="庖丁科技众包服务平台携手国内外先进技术科研院所、顶级技术专家，以实现科技成果市场化为核心，为企业提供快速精准的需求匹配服务，从而实现企业以及科技资源的有效对接，帮助企业实现产业技术升级，助力先进技术完成产业化发展。" />
     <meta name="keywords" content="庖丁众包、智能技术、机械制造、健康医疗、材料科学、能源环保、生产流程优化"/>
-    <link rel="preload" href="../../css/index.css" as="style">
-    <link rel="stylesheet" href="../../css/common_new.css">
-    <link rel="stylesheet" href="../../css/index.css">
-    <link rel="stylesheet" href="../../css/swiper.css">
+    <link rel="shortcut icon" href="{$Think.INDEX}/images/favicon.ico">
+    <link rel="preload" href="{$Think.INDEX}/css/index.css" as="style">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/common_new.css">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/swiper.css">
 </head>
 <body>
 <!-- 导航开始 -->
-<div class="nav_wrap">
-    <div class="nav">
-        <a href="/index.php/Pc/Index/index" class="head_logo"><img style="padding-top: 12px;" src="../../images/icon-logo.png"/></a>
-        <ul class="navigation-list ul-reset">
-            <li class="navigation-item ib">
-                <a href="/index.php/Pc/Index/index" class='navigation-link selected-link'>
-                    首页
-                </a>
-            </li>
-            <li class="navigation-item ib">
-                <a href="/index.php/Pc/Article/data_list/channel/js" class='navigation-link'>
-                    技术
-                </a>
-            </li>
-            <li class="navigation-item ib">
-                <a href="/index.php/Pc/Article/data_list/channel/hzjg" class='navigation-link'>
-                    需求
-                </a>
-            </li>
-            <li class="navigation-item ib">
-                <a href="/index.php/Pc/Article/data_list/channel/xq" class='navigation-link'>
-                    机构
-                </a>
-            </li>
-            <li class="navigation-item ib">
-                <a href="/index.php/Pc/Activity/data_list/channel/hd" class='navigation-link'>
-                    活动
-                </a>
-            </li>
-            <li class="navigation-item ib">
-                <a href="/index.php/Pc/Article/data_list/channel/zx" class='navigation-link'>
-                    资讯
-                </a>
-            </li>
-        </ul>
-
-        <ul class="head_nav_right">
-            <li class="head_navLi head_searchLI">
-                <form action="/index.php/Pc/Index/search">
-                    <div class="head_search">
-                        <input class="head_input" type="text" name="keyword" id="" value="" placeholder="请输入您要搜索的内容"/>
-                    </div>
-                    <input class="head_searchImg" type="submit" name="" id="" value="" />
-                    <!-- <input type="hidden" name="__hash__" value="6666cd76f96956469e7be39d750cc7d9_72ed499d77763a6da7ba469131b0b843" /> -->
-                </form>
-            </li>
-            <li class="head_navLi">
-                <div id="wechatModal" class="wechat-modal">
-                    <img src="../../images/icon-fbxq.png"/>
-                </div>
-                <a href="javascript:;" class="modal-wechat">发布需求</a>
-            </li>
-            <li class="head_navLi">
-                <div id="wechatModal" class="wechat-modal">
-                    <img src="../../images/icon-fbjs.png"/>
-                </div>
-                <a href="javascript:;" class="modal-wechat">发布技术</a>
-            </li>
-            <li class="head_navLi head_user">
-                <div id="wechatModal" class="wechat-modal">
-                    <img src="../../images/icon-dl.png"/>
-                </div>
-                <a class="head_login" href="javascript:;">登录</a>
-            </li>
-        </ul>
-    </div>
-</div>
+<include file="./Template/5u/index/public/nav.html" />
 <!-- 导航结束 -->
 
 <!-- 轮播 -->
 <div class="banner">
-    <div class="swiper-container">
+    <div class="swiper-container" id="swiper1">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img class="" src="../../images/index-banner1.jpg" alt="">
+                <img class="" src="{$Think.INDEX}/images/index-banner1.jpg" alt="">
             </div>
             <div class="swiper-slide">
-                <img class="" src="../../images/index-banner2.jpg" alt="">
+                <img class="" src="{$Think.INDEX}/images/index-banner2.jpg" alt="">
             </div>
         </div>
+        <div class="swiper-pagination"></div>
     </div>
 </div>
 
@@ -100,28 +36,28 @@
     <div class="section clear">
         <div class="int_part fl">
             <div class="int_icon">
-                <img src="../../images/index-icon1.png" alt="">
+                <img src="{$Think.INDEX}/images/index-icon1.png" alt="">
             </div>
             <span>国家级高新技术企业</span>
         </div>
 
         <div class="int_part fl">
             <div class="int_icon">
-                <img src="../../images/index-icon2.png" alt="">
+                <img src="{$Think.INDEX}/images/index-icon2.png" alt="">
             </div>
             <span>广东省省级科研众包平台</span>
         </div>
 
         <div class="int_part fl">
             <div class="int_icon">
-                <img src="../../images/index-icon3.png" alt="">
+                <img src="{$Think.INDEX}/images/index-icon3.png" alt="">
             </div>
             <span>专业的科技众包平台</span>
         </div>
 
         <div class="int_part fl">
             <div class="int_icon">
-                <img src="../../images/index-icon4.png" alt="">
+                <img src="{$Think.INDEX}/images/index-icon4.png" alt="">
             </div>
             <span>1096次科技服务对接</span>
         </div>
@@ -134,14 +70,14 @@
     <p class="tit2">1000+需求项目正在推广中</p>
 </div>
 
-<div class="index_tab clear">
+<div class="index_tab clear" id="tab_dem">
     <ul class="fl clear">
         <li style="margin-left:0">智能技术</li>
         <li>先进制造</li>
         <li>材料科学</li>
         <li>能源节能</li>
         <li>健康医疗</li>
-        <img class="slide_div"src="../../images/index-bar.png" alt="">
+        <img class="slide_div" id="slide_div1" src="{$Think.INDEX}/images/index-bar.png" alt="">
     </ul>
     <a class="more fr" href="#">更多需求>></a>
 </div>
@@ -149,112 +85,185 @@
 <!-- 需求列表 -->
 <div class="section clear">
     <div class="demand_wrap" style="margin-left:-20px";>
-        <div class="demand_part shadow fl">
-            <p class="demand_status">招标中</p>
-            <p class="demand_time">2017-10-16</p>
-            <p class="demand_title oneline">防静电限制一行</p>
-            <p class="demand_ct threeline">限制三行</p>
-            <div class="demand_bottom clear">
-                <p class="fl no_margin">
-                    <img src="../../images/index-icon-industry.png" alt="">
-                    <span>材料科学</span>
-                </p>
-                <p class="fl">
-                    <img src="../../images/index-icon-price.png" alt="">
-                    <span>面议</span>
-                </p>
-                <p  class="fl">
-                    <img src="../../images/index-icon-time.png" alt="">
-                    <span>12个月</span>
-                </p>
-            </div>
-        </div>
+        <div class="swiper-container" id="swiper_dem" style="padding-top: 6px;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="demand_part shadow fl">
+                        <p class="demand_status">招标中</p>
+                        <p class="demand_time">2017-10-16</p>
+                        <p class="demand_title oneline">防静电限制一行</p>
+                        <p class="demand_ct threeline">限制三行</p>
+                        <div class="demand_bottom clear">
+                            <p class="fl no_margin">
+                                <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
+                                <span>材料科学</span>
+                            </p>
+                            <p class="fl">
+                                <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
+                                <span>面议</span>
+                            </p>
+                            <p  class="fl">
+                                <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
+                                <span>12个月</span>
+                            </p>
+                        </div>
+                    </div>
 
-        <div class="demand_part shadow fl">
-            <p class="demand_status">招标中</p>
-            <p class="demand_time">2017-10-16</p>
-            <p class="demand_title oneline">防静电限制一行</p>
-            <p class="demand_ct threeline">限制三行</p>
-            <div class="demand_bottom clear">
-                <p class="fl no_margin">
-                    <img src="../../images/index-icon-industry.png" alt="">
-                    <span>材料科学</span>
-                </p>
-                <p class="fl">
-                    <img src="../../images/index-icon-price.png" alt="">
-                    <span>面议</span>
-                </p>
-                <p  class="fl">
-                    <img src="../../images/index-icon-time.png" alt="">
-                    <span>12个月</span>
-                </p>
-            </div>
-        </div>
+                    <div class="demand_part shadow fl">
+                        <p class="demand_status">招标中</p>
+                        <p class="demand_time">2017-10-16</p>
+                        <p class="demand_title oneline">防静电限制一行</p>
+                        <p class="demand_ct threeline">限制三行</p>
+                        <div class="demand_bottom clear">
+                            <p class="fl no_margin">
+                                <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
+                                <span>材料科学</span>
+                            </p>
+                            <p class="fl">
+                                <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
+                                <span>面议</span>
+                            </p>
+                            <p  class="fl">
+                                <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
+                                <span>12个月</span>
+                            </p>
+                        </div>
+                    </div>
 
-        <div class="demand_part shadow fl">
-            <p class="demand_status">招标中</p>
-            <p class="demand_time">2017-10-16</p>
-            <p class="demand_title oneline">防静电限制一行</p>
-            <p class="demand_ct threeline">限制三行</p>
-            <div class="demand_bottom clear">
-                <p class="fl no_margin">
-                    <img src="../../images/index-icon-industry.png" alt="">
-                    <span>材料科学</span>
-                </p>
-                <p class="fl">
-                    <img src="../../images/index-icon-price.png" alt="">
-                    <span>面议</span>
-                </p>
-                <p  class="fl">
-                    <img src="../../images/index-icon-time.png" alt="">
-                    <span>12个月</span>
-                </p>
-            </div>
-        </div>
+                    <div class="demand_part shadow fl">
+                        <p class="demand_status">招标中</p>
+                        <p class="demand_time">2017-10-16</p>
+                        <p class="demand_title oneline">防静电限制一行</p>
+                        <p class="demand_ct threeline">限制三行</p>
+                        <div class="demand_bottom clear">
+                            <p class="fl no_margin">
+                                <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
+                                <span>材料科学</span>
+                            </p>
+                            <p class="fl">
+                                <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
+                                <span>面议</span>
+                            </p>
+                            <p  class="fl">
+                                <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
+                                <span>12个月</span>
+                            </p>
+                        </div>
+                    </div>
 
-        <div class="demand_part shadow fl">
-            <p class="demand_status">招标中</p>
-            <p class="demand_time">2017-10-16</p>
-            <p class="demand_title oneline">防静电限制一行</p>
-            <p class="demand_ct threeline">限制三行</p>
-            <div class="demand_bottom clear">
-                <p class="fl no_margin">
-                    <img src="../../images/index-icon-industry.png" alt="">
-                    <span>材料科学</span>
-                </p>
-                <p class="fl">
-                    <img src="../../images/index-icon-price.png" alt="">
-                    <span>面议</span>
-                </p>
-                <p  class="fl">
-                    <img src="../../images/index-icon-time.png" alt="">
-                    <span>12个月</span>
-                </p>
-            </div>
-        </div>
+                    <div class="demand_part shadow fl">
+                        <p class="demand_status">招标中</p>
+                        <p class="demand_time">2017-10-16</p>
+                        <p class="demand_title oneline">防静电限制一行</p>
+                        <p class="demand_ct threeline">限制三行</p>
+                        <div class="demand_bottom clear">
+                            <p class="fl no_margin">
+                                <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
+                                <span>材料科学</span>
+                            </p>
+                            <p class="fl">
+                                <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
+                                <span>面议</span>
+                            </p>
+                            <p  class="fl">
+                                <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
+                                <span>12个月</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="demand_part shadow fl">
+                        <p class="demand_status">招标中</p>
+                        <p class="demand_time">2017-10-16</p>
+                        <p class="demand_title oneline">防静电限制一行</p>
+                        <p class="demand_ct threeline">限制三行</p>
+                        <div class="demand_bottom clear">
+                            <p class="fl no_margin">
+                                <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
+                                <span>材料科学</span>
+                            </p>
+                            <p class="fl">
+                                <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
+                                <span>面议</span>
+                            </p>
+                            <p  class="fl">
+                                <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
+                                <span>12个月</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="demand_part shadow fl">
+                        <p class="demand_status">招标中</p>
+                        <p class="demand_time">2017-10-16</p>
+                        <p class="demand_title oneline">防静电限制一行</p>
+                        <p class="demand_ct threeline">限制三行</p>
+                        <div class="demand_bottom clear">
+                            <p class="fl no_margin">
+                                <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
+                                <span>材料科学</span>
+                            </p>
+                            <p class="fl">
+                                <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
+                                <span>面议</span>
+                            </p>
+                            <p  class="fl">
+                                <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
+                                <span>12个月</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="demand_part shadow fl">
+                        <p class="demand_status">招标中</p>
+                        <p class="demand_time">2017-10-16</p>
+                        <p class="demand_title oneline">防静电限制一行</p>
+                        <p class="demand_ct threeline">限制三行</p>
+                        <div class="demand_bottom clear">
+                            <p class="fl no_margin">
+                                <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
+                                <span>材料科学</span>
+                            </p>
+                            <p class="fl">
+                                <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
+                                <span>面议</span>
+                            </p>
+                            <p  class="fl">
+                                <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
+                                <span>12个月</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="demand_part shadow fl">
+                        <p class="demand_status">招标中</p>
+                        <p class="demand_time">2017-10-16</p>
+                        <p class="demand_title oneline">防静电限制一行</p>
+                        <p class="demand_ct threeline">限制三行</p>
+                        <div class="demand_bottom clear">
+                            <p class="fl no_margin">
+                                <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
+                                <span>材料科学</span>
+                            </p>
+                            <p class="fl">
+                                <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
+                                <span>面议</span>
+                            </p>
+                            <p  class="fl">
+                                <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
+                                <span>12个月</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="demand_part shadow fl">
-            <p class="demand_status">招标中</p>
-            <p class="demand_time">2017-10-16</p>
-            <p class="demand_title oneline">防静电限制一行</p>
-            <p class="demand_ct threeline">限制三行</p>
-            <div class="demand_bottom clear">
-                <p class="fl no_margin">
-                    <img src="../../images/index-icon-industry.png" alt="">
-                    <span>材料科学</span>
-                </p>
-                <p class="fl">
-                    <img src="../../images/index-icon-price.png" alt="">
-                    <span>面议</span>
-                </p>
-                <p  class="fl">
-                    <img src="../../images/index-icon-time.png" alt="">
-                    <span>12个月</span>
-                </p>
             </div>
         </div>
     </div>
-
 </div>
 
 <!-- 技术 -->
@@ -263,86 +272,124 @@
     <p class="tit2">汇聚前沿技术，助力企业升级</p>
 </div>
 
-<div class="index_tab clear">
+<div class="index_tab clear" id="tab_tec">
     <ul class="fl clear">
         <li style="margin-left:0">智能技术</li>
         <li>先进制造</li>
         <li>材料科学</li>
         <li>能源节能</li>
         <li>健康医疗</li>
-        <img class="slide_div"src="../../images/index-bar.png" alt="">
+        <img class="slide_div"  id="slide_div2" src="{$Think.INDEX}/images/index-bar.png" alt="">
     </ul>
     <a class="more fr" href="#">更多需求>></a>
 </div>
 
 <!-- 技术列表 -->
+
 <div class="section">
     <div class="project_wrap clear">
-        <div class="tec_option fl">
-            <img class="tec_img" src="../../images/tech-technology1.jpg" alt="">
-            <p class="tec_list_tit">技术标题</p>
-            <div class="publish_time">
-                发布于
-                <span>2017-10-25</span>
-            </div>
-            <div class="clear">
-                <img class="tac_icon fl" src="../../images/tech-icon-industry.jpg" alt="">
-                <span class="tec_type fl">涂装工业</span>
-            </div>
-            <div class="adhi_print">
-                <span class="adhibition">应用类</span>
-                <span class="print">成熟方案</span>
-            </div>
-        </div>
-
-        <div class="tec_option fl">
-            <img class="tec_img" src="../../images/tech-technology2.jpg" alt="">
-            <p class="tec_list_tit">技术标题</p>
-            <div class="publish_time">
-                发布于
-                <span>2017-10-25</span>
-            </div>
-            <div class="clear">
-                <img class="tac_icon fl" src="../../images/tech-icon-industry.jpg" alt="">
-                <span class="tec_type fl">涂装工业</span>
-            </div>
-            <div class="adhi_print">
-                <span class="adhibition">应用类</span>
-                <span class="print">成熟方案</span>
-            </div>
-        </div>
-
-        <div class="tec_option fl">
-            <img class="tec_img" src="../../images/tech-technology3.jpg" alt="">
-            <p class="tec_list_tit">技术标题</p>
-            <div class="publish_time">
-                发布于
-                <span>2017-10-25</span>
-            </div>
-            <div class="clear">
-                <img class="tac_icon fl" src="../../images/tech-icon-industry.jpg" alt="">
-                <span class="tec_type fl">涂装工业</span>
-            </div>
-            <div class="adhi_print">
-                <span class="adhibition">应用类</span>
-                <span class="print">成熟方案</span>
-            </div>
-        </div>
-
-        <div class="tec_option fl">
-            <img class="tec_img" src="../../images/tech-technology4.jpg" alt="">
-            <p class="tec_list_tit">技术标题</p>
-            <div class="publish_time">
-                发布于
-                <span>2017-10-25</span>
-            </div>
-            <div class="clear">
-                <img class="tac_icon fl" src="../../images/tech-icon-industry.jpg" alt="">
-                <span class="tec_type fl">涂装工业</span>
-            </div>
-            <div class="adhi_print">
-                <span class="adhibition">应用类</span>
-                <span class="print">成熟方案</span>
+        <div class="swiper-container" id="swiper_tec">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="tec_option shadow fl">
+                        <img class="tec_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
+                        <p class="tec_list_tit">技术标题</p>
+                        <div class="publish_time">
+                            发布于
+                            <span>2017-10-25</span>
+                        </div>
+                        <div class="clear">
+                            <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
+                            <span class="tec_type fl">涂装工业</span>
+                        </div>
+                        <div class="adhi_print">
+                            <span class="adhibition">应用类</span>
+                            <span class="print">成熟方案</span>
+                        </div>
+                    </div>
+                    <div class="tec_option shadow fl">
+                        <img class="tec_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
+                        <p class="tec_list_tit">技术标题</p>
+                        <div class="publish_time">
+                            发布于
+                            <span>2017-10-25</span>
+                        </div>
+                        <div class="clear">
+                            <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
+                            <span class="tec_type fl">涂装工业</span>
+                        </div>
+                        <div class="adhi_print">
+                            <span class="adhibition">应用类</span>
+                            <span class="print">成熟方案</span>
+                        </div>
+                    </div>
+                    <div class="tec_option shadow fl">
+                        <img class="tec_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
+                        <p class="tec_list_tit">技术标题</p>
+                        <div class="publish_time">
+                            发布于
+                            <span>2017-10-25</span>
+                        </div>
+                        <div class="clear">
+                            <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
+                            <span class="tec_type fl">涂装工业</span>
+                        </div>
+                        <div class="adhi_print">
+                            <span class="adhibition">应用类</span>
+                            <span class="print">成熟方案</span>
+                        </div>
+                    </div>
+                    <div class="tec_option shadow fl">
+                        <img class="tec_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
+                        <p class="tec_list_tit">技术标题</p>
+                        <div class="publish_time">
+                            发布于
+                            <span>2017-10-25</span>
+                        </div>
+                        <div class="clear">
+                            <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
+                            <span class="tec_type fl">涂装工业</span>
+                        </div>
+                        <div class="adhi_print">
+                            <span class="adhibition">应用类</span>
+                            <span class="print">成熟方案</span>
+                        </div>
+                    </div>
+                    <div class="tec_option shadow fl">
+                        <img class="tec_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
+                        <p class="tec_list_tit">技术标题</p>
+                        <div class="publish_time">
+                            发布于
+                            <span>2017-10-25</span>
+                        </div>
+                        <div class="clear">
+                            <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
+                            <span class="tec_type fl">涂装工业</span>
+                        </div>
+                        <div class="adhi_print">
+                            <span class="adhibition">应用类</span>
+                            <span class="print">成熟方案</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="tec_option shadow fl">
+                        <img class="tec_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
+                        <p class="tec_list_tit">技术标题</p>
+                        <div class="publish_time">
+                            发布于
+                            <span>2017-10-25</span>
+                        </div>
+                        <div class="clear">
+                            <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
+                            <span class="tec_type fl">涂装工业</span>
+                        </div>
+                        <div class="adhi_print">
+                            <span class="adhibition">应用类</span>
+                            <span class="print">成熟方案</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -357,7 +404,7 @@
 <div class="recent_news clear">
     <div class="part_rec fl">
         <p class="hot_act">热门活动</p>
-        <img class="news_pic" src="../../images/index-activity.jpg" alt="">
+        <img class="news_pic" src="{$Think.INDEX}/images/index-activity.jpg" alt="">
     </div>
 
     <div class="part_rec fl r_line">
@@ -365,15 +412,15 @@
         <p class="rec_title twoline">限制两行标题</p>
         <div class="recent_bottom">
             <p class="clear">
-                <img class="fl" src="../../images/index-icon-time.png" alt="">
+                <img class="fl" src="{$Think.INDEX}/images/index-icon-time.png" alt="">
                 <span class="fl">2017/11/23</span>
             </p>
             <p class="clear">
-                <img class="fl" src="../../images/index-icon-location.png" alt="">
+                <img class="fl" src="{$Think.INDEX}/images/index-icon-location.png" alt="">
                 <span class="fl address">广州市海珠区滨江东路548-1号中大创新谷三楼</span>
             </p>
             <p class="clear">
-                <img class="fl" src="../../images/index-icon-price.png" alt="">
+                <img class="fl" src="{$Think.INDEX}/images/index-icon-price.png" alt="">
                 <span class="fl">免费</span>
             </p>
         </div>
@@ -410,27 +457,27 @@
 <div class="section">
     <div class="coop_wrap clear">
         <div class="coop_part shadow fl">
-            <img src="../../images/index-organization1.jpg" alt="">
+            <img src="{$Think.INDEX}/images/index-organization1.jpg" alt="">
             <p class="oneline">广州中国科学院先进技术研究院一行</p>
         </div>
 
         <div class="coop_part shadow fl">
-            <img src="../../images/index-organization1.jpg" alt="">
+            <img src="{$Think.INDEX}/images/index-organization1.jpg" alt="">
             <p class="oneline">广州中国科学院先进技术研究院一行</p>
         </div>
 
         <div class="coop_part shadow fl">
-            <img src="../../images/index-organization1.jpg" alt="">
+            <img src="{$Think.INDEX}/images/index-organization1.jpg" alt="">
             <p class="oneline">广州中国科学院先进技术研究院一行</p>
         </div>
 
         <div class="coop_part shadow fl">
-            <img src="../../images/index-organization1.jpg" alt="">
+            <img src="{$Think.INDEX}/images/index-organization1.jpg" alt="">
             <p class="oneline">广州中国科学院先进技术研究院一行</p>
         </div>
 
         <div class="coop_part shadow fl">
-            <img src="../../images/index-organization1.jpg" alt="">
+            <img src="{$Think.INDEX}/images/index-organization1.jpg" alt="">
             <p class="oneline">广州中国科学院先进技术研究院一行</p>
         </div>
     </div>
@@ -443,29 +490,101 @@
 
 <div class="section">
     <div class="coop_wrap clear">
-        <div class="coop_part shadow fl">
-            <img src="../../images/index-organization2.jpg" alt="">
-            <p class="oneline">广州中国科学院先进技术研究院一行</p>
+        <div class="coop_part2 shadow fl">
+            <img src="{$Think.INDEX}/images/index-company1.jpg" alt="">
         </div>
 
-        <div class="coop_part shadow fl">
-            <img src="../../images/index-organization2.jpg" alt="">
-            <p class="oneline">广州中国科学院先进技术研究院一行</p>
+        <div class="coop_part2 shadow fl">
+            <img src="{$Think.INDEX}/images/index-company1.jpg" alt="">
         </div>
 
-        <div class="coop_part shadow fl">
-            <img src="../../images/index-organization2.jpg" alt="">
-            <p class="oneline">广州中国科学院先进技术研究院一行</p>
+        <div class="coop_part2 shadow fl">
+            <img src="{$Think.INDEX}/images/index-company1.jpg" alt="">
         </div>
 
-        <div class="coop_part shadow fl">
-            <img src="../../images/index-organization2.jpg" alt="">
-            <p class="oneline">广州中国科学院先进技术研究院一行</p>
+        <div class="coop_part2 shadow fl">
+            <img src="{$Think.INDEX}/images/index-company1.jpg" alt="">
         </div>
 
-        <div class="coop_part shadow fl">
-            <img src="../../images/index-organization2.jpg" alt="">
-            <p class="oneline">广州中国科学院先进技术研究院一行</p>
+        <div class="coop_part2 shadow fl">
+            <img src="{$Think.INDEX}/images/index-company1.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+<!-- 合作媒体 -->
+<div class="index_tit">
+    <p class="tit1">合作媒体</p>
+</div>
+
+<!-- 合作媒体轮播 -->
+<div class="section">
+    <div class="coop_wrap clear">
+        <div class="swiper-container" id="swiper_cop">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="coop_part2 shadow fl">
+                        <img src="{$Think.INDEX}/images/1.png" alt="">
+                    </div>
+                    <div class="coop_part2 shadow fl">
+                        <img src="{$Think.INDEX}/images/2.png" alt="">
+                    </div>
+
+                    <div class="coop_part2 shadow fl">
+                        <img src="{$Think.INDEX}/images/3.png" alt="">
+                    </div>
+
+                    <div class="coop_part2 shadow fl">
+                        <img src="{$Think.INDEX}/images/4.png" alt="">
+                    </div>
+
+                    <div class="coop_part2 shadow fl">
+                        <img src="{$Think.INDEX}/images/5.png" alt="">
+                    </div>
+
+                    <div class="coop_part2 shadow fl">
+                        <img src="{$Think.INDEX}/images/6.png" alt="">
+                    </div>
+
+                    <div class="coop_part2 shadow fl">
+                        <img src="{$Think.INDEX}/images/7.png" alt="">
+                    </div>
+
+                    <div class="coop_part2 shadow fl">
+                        <img src="{$Think.INDEX}/images/8.png" alt="">
+                    </div>
+
+                    <div class="coop_part2 shadow fl">
+                        <img src="{$Think.INDEX}/images/9.png" alt="">
+                    </div>
+
+                    <div class="coop_part2 shadow fl">
+                        <img src="{$Think.INDEX}/images/10.png" alt="">
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="coop_part2 shadow fl">
+                        <img src="{$Think.INDEX}/images/11.png" alt="">
+                    </div>
+                    <div class="coop_part2 shadow fl">
+                        <img src="{$Think.INDEX}/images/12.png" alt="">
+                    </div>
+                    <div class="coop_part2 shadow fl">
+                        <img src="{$Think.INDEX}/images/13.png" alt="">
+                    </div>
+                    <div class="coop_part2 shadow fl">
+                        <img src="{$Think.INDEX}/images/14.png" alt="">
+                    </div>
+                    <div class="coop_part2 shadow fl">
+                        <img src="{$Think.INDEX}/images/15.png" alt="">
+                    </div>
+                    <div class="coop_part2 shadow fl">
+                        <img src="{$Think.INDEX}/images/16.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
     </div>
 </div>
@@ -481,7 +600,7 @@
 <div class="footer_wrap">
     <div class="footer clear">
         <div class="service fl">
-            <img src="../../images/icon-phone.png" alt="">
+            <img src="{$Think.INDEX}/images/icon-phone.png" alt="">
             <p class="phone">客服电话<br>020-34031992</p>
         </div>
 
@@ -499,17 +618,58 @@
         </div>
 
         <div class="QR_code fl">
-            <img src="../../images/sy-erweima.png" alt="">
+            <img src="{$Think.INDEX}/images/sy-erweima.png" alt="">
         </div>
     </div>
 </div>
 
 
 </body>
-<script src="../../js/swiper.min.js"></script>
+<script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
+<script src="{$Think.INDEX}/js/swiper.min.js"></script>
 <script>
-    var mySwiper = new Swiper('.swiper-container', {
+    var Swiper1 = new Swiper('#swiper1', {
         loop:true,
+        pagination : '.swiper-pagination',
+    });
+
+    var swiper_cop = new Swiper('#swiper_cop', {
+        loop:true,
+        pagination : '.swiper-pagination',
+    });
+
+    var Swiper2 = new Swiper('#swiper_dem', {
+        paginationClickable :true,
+        autoplay: 3000,
+        onSlideChangeStart: function(){
+            var index = Swiper2.activeIndex;
+            var num = index*86;
+            $('#slide_div1').css('left',''+num+'px');
+        },
+    });
+
+    var Swiper3 = new Swiper('#swiper_tec', {
+        paginationClickable :true,
+        autoplay: 3000,
+        onSlideChangeStart: function(){
+            var index = Swiper3.activeIndex;
+            var num = index*86;
+            $('#slide_div2').css('left',''+num+'px');
+        }
+    });
+
+    $("#tab_dem li").on("click",function(){
+        var index = $(this).index();
+        var num = index*86;
+        $('#slide_div1').css('left',''+num+'px');
+        Swiper2.slideTo(index, 500, false);
+    }) ;
+
+    $("#tab_tec li").on("click",function(){
+        var index = $(this).index();
+        var num = index*86;
+        $('#slide_div2').css('left',''+num+'px');
+        Swiper3.slideTo(index, 500, false);
     })
 </script>
 </html>

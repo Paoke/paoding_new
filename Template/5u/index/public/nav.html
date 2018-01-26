@@ -1,0 +1,67 @@
+<div class="nav_wrap">
+    <div class="nav">
+        <a href="/index.php/Pc/Index/index" class="head_logo"><img style="padding-top: 12px;" src="{$Think.INDEX}/images/icon-logo.png"/></a>
+        <ul class="navigation-list ul-reset">
+            <li class="navigation-item ib">
+                <a href="__MODULE__/Index/index.html" class='navigation-link selected-link'>
+                    首页
+                </a>
+            </li>
+            <li class="navigation-item ib">
+                <a href="__MODULE__/Tec/tec_show.html" class='navigation-link'>
+                    技术
+                </a>
+            </li>
+            <li class="navigation-item ib">
+                <a href="__MODULE__/Demand/demand_show.html" class='navigation-link'>
+                    需求
+                </a>
+            </li>
+            <li class="navigation-item ib">
+                <a href="__MODULE__/Partner/partner_show.html" class='navigation-link'>
+                    机构
+                </a>
+            </li>
+            <li class="navigation-item ib">
+                <a href="__MODULE__/Activity/activity_show.html" class='navigation-link'>
+                    活动
+                </a>
+            </li>
+            <li class="navigation-item ib">
+                <a href="/index.php/Pc/Article/data_list/channel/zx" class='navigation-link'>
+                    资讯
+                </a>
+            </li>
+        </ul>
+
+        <ul class="head_nav_right">
+            <li class="head_navLi head_searchLI">
+                <form action="/index.php/Pc/Index/search">
+                    <div class="head_search">
+                        <input class="head_input" type="text" name="keyword" id="" value="" placeholder="请输入您要搜索的内容"/>
+                    </div>
+                    <input class="head_searchImg" type="submit" name="" id="" value="" />
+                    <!-- <input type="hidden" name="__hash__" value="6666cd76f96956469e7be39d750cc7d9_72ed499d77763a6da7ba469131b0b843" /> -->
+                </form>
+            </li>
+            <li class="head_navLi">
+                <div id="wechatModal" class="wechat-modal">
+                    <img src="{$Think.INDEX}/images/icon-fbxq.png"/>
+                </div>
+                <a href="__MODULE__/Demand/demand_release.html" class="modal-wechat">发布需求</a>
+            </li>
+            <li class="head_navLi">
+                <div id="wechatModal" class="wechat-modal">
+                    <img src="{$Think.INDEX}/images/icon-fbjs.png"/>
+                </div>
+                <a href="__MODULE__/Tec/tec_release.html" class="modal-wechat">发布技术</a>
+            </li>
+            <li class="head_navLi head_user">
+                <div id="wechatModal" class="wechat-modal">
+                    <img src="{$Think.INDEX}/images/icon-dl.png"/>
+                </div>
+                <a class="head_login" href="javascript:;">登录</a>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -46,6 +46,7 @@ define("ICON", "/Public/icon");
 define("P", "/Public/bootstrap");
 define("LOGIN", "/Public/login");
 define("MOBILE","/Public/mobile");
+define("INDEX","/Public/index");
 
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';

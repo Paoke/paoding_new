@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" ng-app="tec">
+<head>
+    <meta charset="UTF-8">
+    <title>庖丁技术</title>
+    <meta name="description" content="庖丁科技众包服务平台携手国内外先进技术科研院所、顶级技术专家，以实现科技成果市场化为核心，为企业提供快速精准的需求匹配服务，从而实现企业以及科技资源的有效对接，帮助企业实现产业技术升级，助力先进技术完成产业化发展。" />
+    <meta name="keywords" content="庖丁众包、智能技术、机械制造、健康医疗、材料科学、能源环保、生产流程优化"/>
+    <link rel="shortcut icon" href="{$Think.INDEX}/images/favicon.ico">
+    <link rel="preload" href="{$Think.INDEX}/css/index.css" as="style">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/common_new.css">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
+    <!--<include file="./Template/5u/common/common.html" />   上线开启-百度统计-->
+</head>
+<style>
+    ::-webkit-input-placeholder {font-size: 16px; color:#ccc;font-family:"微软雅黑",Helvetica;}
+</style>
+<body id="release_tec">
+<!-- 提交成功提示 -->
+<!-- 	<div class="mask"></div>
+	<div class="alert_tip">
+		<div class="alert_top clear">
+			<span class="fl">提示</span>
+			<img class="fr" src="{$Think.INDEX}/images/issue-demand-close.png" alt="">
+		</div>
+		<img class="success_img" src="{$Think.INDEX}/images/issue-demand-done.png" alt="">
+		<p class="success_tip">提交成功</p>	
+		<p class="success_kep">您发布的技术在审核中，<br>请保持电话畅通</p>
+	</div> -->
+
+<!-- 导航开始 -->
+<include file="./Template/5u/index/public/nav.html" />
+<!-- 导航结束 -->
+<form id="formID">
+    <div class="form_wrap">
+        <p class="release_demand">发布需求</p>
+        <div class="release_wrap">
+            <div class="form_part clear">
+                <p class="form_p fl">
+                    *<span class="form_span">需求名称：</span>
+                </p>
+                <input type="text" class="form_inp fl" placeholder="请输入技术项目名">
+            </div>
+
+            <div class="form_part clear">
+                <p class="form_p fl">
+                    *<span class="form_span">需求说明：</span>
+                </p>
+                <div class="advice_area fl">
+                    <textarea class="advice_text" ng-model="text" ng-change="tolCount();" maxlength="200" placeholder="请输入目前主要的技术问题、需求场景、指标参数等"></textarea >
+                    <p class="advice_numlim">
+                        <span class="advice_count" ng-cloak>{{count}}</span>
+                        | 200字
+                    </p>
+                </div>
+            </div>
+
+            <div class="form_part clear">
+                <p class="form_p fl">
+                    *<span class="form_span">需求领域：</span>
+                </p>
+
+                <div class="areas_main clear fl">
+                    <li class="areas_default" style="margin-left:0;margin-top:0">电子信息</li>
+                    <li class="areas_default" style="margin-top:0">先进制造</li>
+                    <li class="areas_default" style="margin-top:0">新材料</li>
+                    <li class="areas_default" style="margin-top:0">新能源与节能</li>
+                    <li class="areas_default" style="margin-left:0">环境保护</li>
+                    <li class="areas_default">健康医疗</li>
+                    <li class="areas_default">智能技术</li>
+                </div>
+            </div>
+
+            <div class="form_part clear">
+                <p class="form_p fl">
+                    *<span class="form_span">需求程度：</span>
+                </p>
+
+                <div class="areas_main clear fl">
+                    <li class="areas_default" style="margin-left:0;margin-top:0">电子信息</li>
+                    <li class="areas_default" style="margin-top:0">先进制造</li>
+                    <li class="areas_default" style="margin-top:0">新材料</li>
+                </div>
+            </div>
+
+            <div class="form_part clear">
+                <p class="form_p fl">
+                    *<span class="form_span">期限要求：</span>
+                </p>
+                <input type="text" class="mouth fl">
+                <p class="form_p fl">
+                    <span class="form_span fl">（月）</span>
+                </p>
+            </div>
+
+            <div class="form_part clear">
+                <p class="form_p fl">
+                    *<span class="form_span">投入预算：</span>
+                </p>
+                <div class="fl demand_name">
+                    <label><input  name="patent" class="inp_radio" type="radio" value="最低预算" />最低预算</label>
+                    <label><input  name="patent" class="inp_radio" type="radio" value="最高预算" />最高预算</label>
+                </div>
+            </div>
+
+            <div class="form_part clear">
+                <p class="form_p fl" style="visibility:hidden;">
+                    *<span class="form_span">需求名称：</span>
+                </p>
+
+                <div class="price_div fl">
+                    <input type="number" placeholder="最低价" oninput="if(value.length>4)value=value.slice(0,4)"> -
+                    <input type="number" placeholder="最高价" oninput="if(value.length>4)value=value.slice(0,4)">
+                </div>
+            </div>
+
+            <div class="form_part clear">
+                <p class="form_p fl">
+                    *<span class="form_span">企业名称：</span>
+                </p>
+                <input type="text" class="form_inp fl" placeholder="请输入企业名称">
+            </div>
+
+            <div class="form_part clear">
+                <p class="form_p fl">
+                    *<span class="form_span">主营业务：</span>
+                </p>
+                <input type="text" class="form_inp fl" placeholder="请输入主营业务">
+            </div>
+
+            <div class="form_part clear">
+                <p class="form_p fl">
+                    &nbsp;<span class="form_span"><span class="star">*</span>联系人：</span>
+                </p>
+                <input type="text" class="form_inp fl" placeholder="请输入联系人真实姓名">
+            </div>
+
+            <div class="form_part clear">
+                <p class="form_p fl">
+                    *<span class="form_span">联系号码：</span>
+                </p>
+                <input type="text" class="form_inp fl" placeholder="请输入联系人手机号">
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="submit">提交</div>
+            <p class="submit_tip">
+                提示：尊敬的用户，您发布的需求材料，平台将在48小时内进行专家评审，届时以手机短信、站内信形式发送审核结果
+            </p>
+        </div>
+    </div>
+</form>
+<!-- 页脚 -->
+<!-- <div ng-include="../common/footer.html"></div> -->
+
+<include file="./Template/5u/index/public/footer.html" />
+<script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
+<script src="{$Think.INDEX}/js/common.js"></script>
+</body>
+</html>
