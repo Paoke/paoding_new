@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en" ng-app="tec_list">
+<head>
+    <meta charset="UTF-8">
+    <title>科技沙龙</title>
+    <meta name="description" content="庖丁科技众包服务平台携手国内外先进技术科研院所、顶级技术专家，以实现科技成果市场化为核心，为企业提供快速精准的需求匹配服务，从而实现企业以及科技资源的有效对接，帮助企业实现产业技术升级，助力先进技术完成产业化发展。" />
+    <meta name="keywords" content="庖丁众包、智能技术、机械制造、健康医疗、材料科学、能源环保、生产流程优化"/>
+    <link rel="shortcut icon" href="{$Think.INDEX}/images/favicon.ico">
+    <link rel="preload" href="{$Think.INDEX}/css/index.css" as="style">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/common_new.css">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/idangerous.swiper.css">
+    <!--<include file="./Template/5u/common/common.html" />   上线开启-百度统计-->
+</head>
+<style>
+    .event-card {
+        position: relative;
+        width: 386px;
+        height: 467px;
+        margin: 0 0 20px 20px;
+        background: #fff;
+        border: 1px solid transparent;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+        box-shadow: 0 5px 12px rgba(0,0,0,.2);
+
+    }
+    .event-card:hover{
+        transform:translateY(-6px);
+        box-shadow: 0 5px 12px rgba(0,0,0,.2);
+        border: 1px solid #ff971d;
+    }
+    .pc-slide {
+        width: 720px;
+        margin: 0 auto;
+        padding-bottom: 60px;
+    }
+
+    .view .swiper-container {
+        width: 720px;
+        height: 720px;
+    }
+
+    .view .arrow-left {
+        background: url({$Think.INDEX}/images/activity-salon-left.png) no-repeat left top;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        margin-top: -25px;
+        width: 45px;
+        height: 51px;
+        z-index: 10;
+    }
+
+    .view .arrow-right {
+        background: url({$Think.INDEX}/images/activity-salon-right.png) no-repeat left bottom;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -25px;
+        width: 45px;
+        height: 51px;
+        z-index: 10;
+    }
+
+    .preview {
+        width: 720px;
+        margin: 10px auto 0;
+        position: relative;
+    }
+
+    .preview .slide6 {
+        width: 82px;
+    }
+
+    .preview .arrow-left {
+        background: url({$Think.INDEX}/images/feel3.png) no-repeat left top;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        margin-top: -9px;
+        width: 9px;
+        height: 18px;
+        z-index: 10;
+    }
+
+    .preview .arrow-right {
+        background: url({$Think.INDEX}/images/feel4.png) no-repeat left bottom;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -9px;
+        width: 9px;
+        height: 18px;
+        z-index: 10;
+    }
+
+    .a2{
+        width: 120px;
+        height: 120px;
+        text-align: center;
+    }
+    .a2 img{
+        width: 118px;
+    }
+
+    .preview .active-nav img {
+        border: 1px solid #F00;
+    }
+    .preview img {
+        border: 1px solid transparent;
+    }
+    .a1{
+        width: 720px;
+    }
+</style>
+<body>
+<!-- 导航开始 -->
+<include file="./Template/5u/index/public/nav.html" />
+<!-- 导航结束 -->
+<div class="meet_banner">
+    <img class="meet_bn" src="{$Think.INDEX}/images/activity-salon-banner.jpg" alt="">
+</div>
+<div class="about_meeting">
+    <p class="about_forum">
+        <img src="{$Think.INDEX}/images/activity-salon-introduce1.png" alt="">
+    </p>
+    <div class="clear about_forum_ct">
+        <div class="forum_left fl">
+            <img class="forum_left_img" src="{$Think.INDEX}/images/activity-salon-introduce2.png" alt="">
+        </div>
+        <div class="forum_right fr">
+            科技沙龙是庖丁科技众包平台长期举行的固定活动。与行业协会联手合作，每期针对行业技术痛点，选定一个主题，邀请3-5家科技企业进行分享，并邀请需求企业如制造业企业等参与交流提出问题。沙龙主要面向需求企业、投资机构等，帮助科技企业推广前沿技术，凸显技术应用先进性，扩大市场知名度；帮忙需求企业启发技术升级方向，了解前沿技术发展情况。
+        </div>
+    </div>
+    <ul class="salon_nav clear">
+        <li>
+            <img src="{$Think.INDEX}/images/activity-salon-icon1.png" alt="">
+            <p class="salon_p">技术主题分享</p>
+        </li>
+        <li>
+            <img src="{$Think.INDEX}/images/activity-salon-icon2.png" alt="">
+            <p class="salon_p">企业需求提出及交流</p>
+        </li>
+        <li>
+            <img src="{$Think.INDEX}/images/activity-salon-icon3.png" alt="">
+            <p class="salon_p">专家与投资机构点评</p>
+        </li>
+    </ul>
+
+    <p class="about_forum" style="margin-bottom:60px;">
+        <img src="{$Think.INDEX}/images/activity-salon-review.png" alt="">
+    </p>
+    <!--  小轮播-->
+    <div class="pc-slide">
+        <div class="view">
+            <div class="swiper-container">
+                <a class="arrow-left" href="#"></a>
+                <a class="arrow-right" href="#"></a>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="a1" src="{$Think.INDEX}/images/b1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="a1" src="{$Think.INDEX}/images/b2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="a1" src="{$Think.INDEX}/images/b3.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="a1" src="{$Think.INDEX}/images/b4.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="a1" src="{$Think.INDEX}/images/b5.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="a1" src="{$Think.INDEX}/images/b6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="preview">
+            <!-- <a class="arrow-left" href="#"></a> -->
+            <!-- <a class="arrow-right" href="#"></a> -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide active-nav a2">
+                        <img src="{$Think.INDEX}/images/s1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide a2">
+                        <img src="{$Think.INDEX}/images/s2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide a2">
+                        <img src="{$Think.INDEX}/images/s3.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide a2">
+                        <img src="{$Think.INDEX}/images/s4.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide a2">
+                        <img src="{$Think.INDEX}/images/s5.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide slide6 a2">
+                        <img src="{$Think.INDEX}/images/s6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="event_wrap clear">
+    <p class="last_review">往期回顾</p>
+    <div class="event-card fl">
+        <a href='#' target="_blank">
+            <img class="lazyimg" src="{$Think.INDEX}/images/activity-activity1.png"/>
+        </a>
+        <div class="pl20">
+            <h3 class='ec-title'>
+                <a href="##" target="_blank">
+                    【HELLO DAY】深圳专场
+                </a>
+            </h3>
+            <div class='ec-time clear lh26'>
+                <p class="fl term1"><i class="iconfont icon-naozhong">&nbsp;</i></p>
+                <p class="fl term2">
+						<span>
+							2018/ 01/02/   -
+							2018/ 12/31/
+						</span>
+                </p>
+            </div>
+            <div class='ec-time clear'>
+                <p class="fl term1"><i class="iconfont icon-dingwei">&nbsp;</i></p>
+                <p class="fl term2">
+                    深圳市软件产业基地4栋C座205
+                </p>
+            </div>
+            <div class="ec-sign">
+                <a href='##' class="sign-btn" title="立即报名" target="_blank">立即报名</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="event-card fl">
+        <a href='#' target="_blank">
+            <img class="lazyimg" src="{$Think.INDEX}/images/activity-activity1.png" />
+        </a>
+        <div class="pl20">
+            <h3 class='ec-title'>
+                <a href="##" target="_blank">
+                    【HELLO DAY】深圳专场
+                </a>
+            </h3>
+            <div class='ec-time clear lh26'>
+                <p class="fl term1"><i class="iconfont icon-naozhong">&nbsp;</i></p>
+                <p class="fl term2">
+						<span>
+							2018/ 01/02/   -
+							2018/ 12/31/
+						</span>
+                </p>
+            </div>
+            <div class='ec-time clear'>
+                <p class="fl term1"><i class="iconfont icon-dingwei">&nbsp;</i></p>
+                <p class="fl term2">
+                    深圳市软件产业基地4栋C座205
+                </p>
+            </div>
+            <div class="ec-sign">
+                <a href='##' class="sign-btn" title="立即报名" target="_blank">立即报名</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="event-card fl">
+        <a href='#' target="_blank">
+            <img class="lazyimg" src="{$Think.INDEX}/images/activity-activity1.png" />
+        </a>
+        <div class="pl20">
+            <h3 class='ec-title'>
+                <a href="##" target="_blank">
+                    【HELLO DAY】深圳专场
+                </a>
+            </h3>
+            <div class='ec-time clear lh26'>
+                <p class="fl term1"><i class="iconfont icon-naozhong">&nbsp;</i></p>
+                <p class="fl term2">
+						<span>
+							2018/ 01/02/   -
+							2018/ 12/31/
+						</span>
+                </p>
+            </div>
+            <div class='ec-time clear'>
+                <p class="fl term1"><i class="iconfont icon-dingwei">&nbsp;</i></p>
+                <p class="fl term2">
+                    深圳市软件产业基地4栋C座205
+                </p>
+            </div>
+            <div class="ec-sign">
+                <a href='##' class="sign-btn" title="立即报名" target="_blank">立即报名</a>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="./Template/5u/index/public/footer.html" />
+</body>
+<script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
+<script src="{$Think.INDEX}/js/common.js"></script>
+<script src="{$Think.INDEX}/js/idangerous.swiper.min.js"></script>
+<script>
+    var viewSwiper = new Swiper('.view .swiper-container', {
+        onSlideChangeStart: function() {
+            updateNavPosition()
+        }
+    })
+
+    $('.view .arrow-left,.preview .arrow-left').on('click', function(e) {
+        e.preventDefault()
+        if (viewSwiper.activeIndex == 0) {
+            viewSwiper.swipeTo(viewSwiper.slides.length - 1, 1000);
+            return
+        }
+        viewSwiper.swipePrev()
+    })
+    $('.view .arrow-right,.preview .arrow-right').on('click', function(e) {
+        e.preventDefault()
+        if (viewSwiper.activeIndex == viewSwiper.slides.length - 1) {
+            viewSwiper.swipeTo(0, 1000);
+            return
+        }
+        viewSwiper.swipeNext()
+    })
+
+    var previewSwiper = new Swiper('.preview .swiper-container', {
+        visibilityFullFit: true,
+        slidesPerView: 'auto',
+        onlyExternal: true,
+        onSlideClick: function() {
+            viewSwiper.swipeTo(previewSwiper.clickedSlideIndex)
+        }
+    })
+
+    function updateNavPosition() {
+        $('.preview .active-nav').removeClass('active-nav')
+        var activeNav = $('.preview .swiper-slide').eq(viewSwiper.activeIndex).addClass('active-nav')
+        if (!activeNav.hasClass('swiper-slide-visible')) {
+            if (activeNav.index() > previewSwiper.activeIndex) {
+                var thumbsPerNav = Math.floor(previewSwiper.width / activeNav.width()) - 1
+                previewSwiper.swipeTo(activeNav.index() - thumbsPerNav)
+            } else {
+                previewSwiper.swipeTo(activeNav.index())
+            }
+        }
+    }
+</script>
+</html>

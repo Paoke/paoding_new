@@ -33,4 +33,9 @@ class TecController extends BaseController
         $this->display();
     }
 
+    public function tec_detail()
+    {
+        $this->display();
+    }
+
 }

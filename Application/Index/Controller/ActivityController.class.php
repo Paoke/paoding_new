@@ -17,4 +17,24 @@ class ActivityController extends BaseController
         $this->display();
     }
 
+    public function activity_detail()
+    {
+        $this->display();
+    }
+
+    public function activity_release()
+    {
+        $this->display();
+    }
+
+    public function activity_meeting()
+    {
+        $this->display();
+    }
+
+    public function activity_salon()
+    {
+        $this->display();
+    }
+
 }
