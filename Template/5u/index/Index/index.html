@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="tec">
+<html lang="en" ng-app="index">
 <head>
     <meta charset="UTF-8">
     <title>庖丁技术</title>
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
     <link rel="stylesheet" href="{$Think.INDEX}/css/swiper.css">
 </head>
-<body>
+<body ng-controller="bannerCtrl">
 <!-- 导航开始 -->
 <include file="./Template/5u/index/public/nav.html" />
 <!-- 导航结束 -->
@@ -20,11 +20,8 @@
 <div class="banner">
     <div class="swiper-container" id="swiper1">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img class="" src="{$Think.INDEX}/images/index-banner1.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img class="" src="{$Think.INDEX}/images/index-banner2.jpg" alt="">
+            <div class="swiper-slide" ng-repeat="banner in banners">
+                <img ng-src="{{banner.ad_code}}" alt="">
             </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -59,7 +56,7 @@
             <div class="int_icon">
                 <img src="{$Think.INDEX}/images/index-icon4.png" alt="">
             </div>
-            <span>1096次科技服务对接</span>
+            <span ng-cloak>{{serve}}次科技服务对接</span>
         </div>
     </div>
 </div>
@@ -71,15 +68,12 @@
 </div>
 
 <div class="index_tab clear" id="tab_dem">
-    <ul class="fl clear">
-        <li style="margin-left:0">智能技术</li>
-        <li>先进制造</li>
-        <li>材料科学</li>
-        <li>能源节能</li>
-        <li>健康医疗</li>
+    <ul class="fl clear" ng-controller="demandCtrl">
+        <li ng-repeat="demandType in demandTypes" ng-value="demandType.id" ng-cloak>{{demandType.cat_name}}</li>
+
         <img class="slide_div" id="slide_div1" src="{$Think.INDEX}/images/index-bar.png" alt="">
     </ul>
-    <a class="more fr" href="#">更多需求>></a>
+    <a class="more fr" href="__MODULE__/Demand/demand_show.html">更多需求>></a>
 </div>
 
 <!-- 需求列表 -->
@@ -260,7 +254,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -273,15 +266,11 @@
 </div>
 
 <div class="index_tab clear" id="tab_tec">
-    <ul class="fl clear">
-        <li style="margin-left:0">智能技术</li>
-        <li>先进制造</li>
-        <li>材料科学</li>
-        <li>能源节能</li>
-        <li>健康医疗</li>
+    <ul class="fl clear" ng-controller="tecCtrl">
+        <li ng-repeat="tecType in tecTypes" ng-value="tecType.id" ng-cloak>{{tecType.tag_name}}</li>
         <img class="slide_div"  id="slide_div2" src="{$Think.INDEX}/images/index-bar.png" alt="">
     </ul>
-    <a class="more fr" href="#">更多技术>></a>
+    <a class="more fr" href="__MODULE__/Tec/tec_show.html">更多技术>></a>
 
 </div>
 
@@ -405,48 +394,38 @@
 </div>
 
 <div class="recent_news clear">
-    <div class="part_rec fl">
+    <div class="part_rec fl" ng-repeat="activity in activities">
         <p class="hot_act">热门活动</p>
-        <img class="news_pic" src="{$Think.INDEX}/images/index-activity.jpg" alt="">
+        <img class="news_pic" src="{{activity.sponsor_logo_url}}" alt="">
     </div>
 
-    <div class="part_rec fl r_line">
-        <a class="rec_more" href="#">更多>></a>
-        <p class="rec_title twoline">限制两行标题</p>
+    <div class="part_rec fl r_line" ng-repeat="activity in activities">
+        <a class="rec_more" href="__MODULE__/Activity/activity_show.html">更多>></a>
+        <p class="rec_title twoline" ng-cloak>{{activity.title}}</p>
         <div class="recent_bottom">
             <p class="clear">
                 <img class="fl" src="{$Think.INDEX}/images/index-icon-time.png" alt="">
-                <span class="fl">2017/11/23</span>
+                <span class="fl" ng-cloak>{{activity.formal_start_time}}</span>
             </p>
             <p class="clear">
                 <img class="fl" src="{$Think.INDEX}/images/index-icon-location.png" alt="">
-                <span class="fl address">广州市海珠区滨江东路548-1号中大创新谷三楼</span>
+                <span class="fl address" ng-cloak>{{ activity.address }}</span>
             </p>
             <p class="clear">
                 <img class="fl" src="{$Think.INDEX}/images/index-icon-price.png" alt="">
-                <span class="fl">免费</span>
+                <span class="fl" ng-cloak>{{activity.cost}}</span>
             </p>
         </div>
         <p class="apply">立即报名</p>
     </div>
 
-    <div class="part_rec r_box fl">
+    <div class="part_rec r_box fl" ng-controller="newCtrl">
         <a class="rec_more2" href="#">更多>></a>
         <p class="hot_act">行业资讯</p>
-        <div class="industry_news">
+        <div class="industry_news" ng-repeat="new in news">
             <div class="news_part clear">
-                <p class="fl news_tit">平衡机器人</p>
-                <p class="fr news_time">2017-12-12</p>
-            </div>
-
-            <div class="news_part clear">
-                <p class="fl news_tit">平衡机器人</p>
-                <p class="fr news_time">2017-12-12</p>
-            </div>
-
-            <div class="news_part clear">
-                <p class="fl news_tit">平衡机器人</p>
-                <p class="fr news_time">2017-12-12</p>
+                <p class="fl news_tit" ng-cloak>{{new.title}}</p>
+                <p class="fr news_time" ng-cloak>{{new.create_time | formatDate}}</p>
             </div>
         </div>
     </div>
@@ -457,32 +436,13 @@
     <p class="tit1">合作单位</p>
 </div>
 
-<div class="section">
+<div class="section" ng-controller="partnerCtrl">
     <div class="coop_wrap clear">
-        <div class="coop_part shadow fl">
-            <img src="{$Think.INDEX}/images/index-organization1.jpg" alt="">
-            <p class="oneline">广州中国科学院先进技术研究院一行</p>
+        <div class="coop_part shadow fl" ng-repeat="partner in partners">
+            <img src="{{partner.cover_url}}" alt="">
+            <p class="oneline" ng-cloak>{{partner.title}}</p>
         </div>
 
-        <div class="coop_part shadow fl">
-            <img src="{$Think.INDEX}/images/index-organization1.jpg" alt="">
-            <p class="oneline">广州中国科学院先进技术研究院一行</p>
-        </div>
-
-        <div class="coop_part shadow fl">
-            <img src="{$Think.INDEX}/images/index-organization1.jpg" alt="">
-            <p class="oneline">广州中国科学院先进技术研究院一行</p>
-        </div>
-
-        <div class="coop_part shadow fl">
-            <img src="{$Think.INDEX}/images/index-organization1.jpg" alt="">
-            <p class="oneline">广州中国科学院先进技术研究院一行</p>
-        </div>
-
-        <div class="coop_part shadow fl">
-            <img src="{$Think.INDEX}/images/index-organization1.jpg" alt="">
-            <p class="oneline">广州中国科学院先进技术研究院一行</p>
-        </div>
     </div>
 </div>
 
@@ -491,26 +451,10 @@
     <p class="tit1">合作企业</p>
 </div>
 
-<div class="section">
+<div class="section" ng-controller="companyCtrl">
     <div class="coop_wrap clear">
-        <div class="coop_part2 shadow fl">
-            <img src="{$Think.INDEX}/images/index-company1.jpg" alt="">
-        </div>
-
-        <div class="coop_part2 shadow fl">
-            <img src="{$Think.INDEX}/images/index-company1.jpg" alt="">
-        </div>
-
-        <div class="coop_part2 shadow fl">
-            <img src="{$Think.INDEX}/images/index-company1.jpg" alt="">
-        </div>
-
-        <div class="coop_part2 shadow fl">
-            <img src="{$Think.INDEX}/images/index-company1.jpg" alt="">
-        </div>
-
-        <div class="coop_part2 shadow fl">
-            <img src="{$Think.INDEX}/images/index-company1.jpg" alt="">
+        <div class="coop_part2 shadow fl" ng-repeat="company in companys">
+            <img src="{{ company.cover_url }}" alt="" height="135">
         </div>
     </div>
 </div>
@@ -599,38 +543,140 @@
 </div>
 
 <!-- 页脚 -->
-<!-- <div ng-include="../common/footer.html"></div> -->
-<div class="footer_wrap">
-    <div class="footer clear">
-        <div class="service fl">
-            <img src="{$Think.INDEX}/images/icon-phone.png" alt="">
-            <p class="phone">客服电话<br>020-34031992</p>
-        </div>
-
-        <div class="links fl">
-            <ul class="links_list">
-                <li>关于庖丁</li>
-                <li>服务协议</li>
-                <li>联系方式</li>
-                <li>加入我们</li>
-            </ul>
-            <div class="adress">
-                <p>广东省海珠区滨江东路550号中大创新谷三楼</p>
-                <p class="icp">广东庖丁技术开发股份有限公司.ALL Rights Reaerved.粤ICP14074540号-1</p>
-            </div>
-        </div>
-
-        <div class="QR_code fl">
-            <img src="{$Think.INDEX}/images/sy-erweima.png" alt="">
-        </div>
-    </div>
-</div>
-
-
+<include file="./Template/5u/index/public/footer.html" />
 </body>
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script src="{$Think.INDEX}/js/swiper.min.js"></script>
 <script>
+    var app = angular.module('index',[]);
+    app.filter('formatDate',function(){
+        return function(date){
+            return date = date.substr(0,10);
+        };
+    });
+
+    app.controller("bannerCtrl",function ($scope,$http){
+        //轮播图
+        $http({
+            method:"GET",
+            url:"/api.php/Index/banner?module=1"
+        }).then(function successCallback(response) {
+            $scope.banners = response.data.data;
+        }, function errorCallback(response) {
+        });
+
+        //服务对接次数
+        $http({
+            method:"GET",
+            url:"/api.php/ChannelIndex/index/action/count/channel/fwdj/type/1"
+        }).then(function successCallback(response) {
+            $scope.serve = response.data.data;
+        }, function errorCallback(response) {
+        });
+
+        //最新活动
+        var data={
+            page:1,
+            page_num:1,
+            order_field:'create_time',
+            category_id:0,
+            tag_id:0,
+            order_by:'DESC'
+        };
+        $http({
+            method: 'POST',
+            data: data,
+            url: '/api.php/ChannelIndex/index/action/dataList/channel/hd/type/1',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            transformRequest: function (obj) {
+                var str = [];
+                for (var p in obj) {
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                }
+                return str.join("&");
+            }
+        }).then(function successCallback(response){
+            $scope.activities=response.data.data;
+        },function errorCallback(){
+
+        })
+    });
+
+    app.controller("demandCtrl",function ($scope,$http){
+        //最新需求
+        // 需求类别栏目
+        $http({
+            method: 'GET',
+            url: '/api.php/ChannelIndex/index/action/dataList/channel/xq/type/2',
+        }).then(function successCallback(response) {
+            $scope.demandTypes = response.data.data;
+        }, function errorCallback(response) {
+        });
+    });
+
+    app.controller("tecCtrl",function ($scope,$http){
+        //最新技术
+        //技术类别栏目
+        $http({
+            method: 'GET',
+            url: '/api.php/ChannelIndex/index/action/dataList/channel/js/type/4',
+        }).then(function successCallback(response) {
+            $scope.tecTypes = response.data.data;
+        }, function errorCallback(response) {
+        });
+    });
+
+    app.controller("newCtrl",function ($scope,$http){
+        //资讯
+        var data={
+            page:1,
+            page_num:7,
+            order_field:'create_time',
+            order_by:'DESC'
+        };
+        $http({
+            method: 'POST',
+            data: data,
+            url: '/api.php/ChannelIndex/index/action/dataList/channel/zx/type/1',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            transformRequest: function (obj) {
+                var str = [];
+                for (var p in obj) {
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                }
+                return str.join("&");
+            }
+        }).then(function successCallback(response) {
+            $scope.news = response.data.data;
+        }, function errorCallback(response) {
+        });
+    });
+
+    app.controller("partnerCtrl",function ($scope,$http){
+        //合作单位
+
+        $http({
+            method: 'GET',
+            url: '/api.php/ChannelIndex/index/action/dataList/channel/jtgs/type/1/page/1?page_num=5',
+        }).then(function successCallback(response) {
+            $scope.partners = response.data.data;
+        }, function errorCallback(response) {
+        });
+    });
+
+    app.controller("companyCtrl",function ($scope,$http){
+        //合作企业
+
+        $http({
+            method: 'GET',
+            url: '/api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1/page/1?page_num=5',
+        }).then(function successCallback(response) {
+            $scope.companys = response.data.data;
+        }, function errorCallback(response) {
+        });
+    });
+
     var Swiper1 = new Swiper('#swiper1', {
         loop:true,
         pagination : '.swiper-pagination',
@@ -661,7 +707,7 @@
         }
     });
 
-    $("#tab_dem li").on("click",function(){
+    $("#tab_dem").on("click","li",function(){
         var index = $(this).index();
         var num = index*86;
         $('#slide_div1').css('left',''+num+'px');
