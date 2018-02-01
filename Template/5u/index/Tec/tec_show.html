@@ -1,220 +1,378 @@
 <!doctype html>
-<html lang="en" ng-app="tec">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>庖丁技术</title>
-    <meta name="description" content="庖丁科技众包服务平台携手国内外先进技术科研院所、顶级技术专家，以实现科技成果市场化为核心，为企业提供快速精准的需求匹配服务，从而实现企业以及科技资源的有效对接，帮助企业实现产业技术升级，助力先进技术完成产业化发展。" />
+    <meta name="description"
+          content="庖丁科技众包服务平台携手国内外先进技术科研院所、顶级技术专家，以实现科技成果市场化为核心，为企业提供快速精准的需求匹配服务，从而实现企业以及科技资源的有效对接，帮助企业实现产业技术升级，助力先进技术完成产业化发展。"/>
     <meta name="keywords" content="庖丁众包、智能技术、机械制造、健康医疗、材料科学、能源环保、生产流程优化"/>
     <link rel="shortcut icon" href="{$Think.INDEX}/images/favicon.ico">
+    <link rel="stylesheet" href="{$Think.CSS}/bootstrap.min.css">
     <link rel="preload" href="{$Think.INDEX}/css/index.css" as="style">
     <link rel="stylesheet" href="{$Think.INDEX}/css/common_new.css">
     <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
     <!--<include file="./Template/5u/common/common.html" />   上线开启-百度统计-->
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+
+        .activity_listpage{
+            width: 100%;
+            height: 45px;
+            padding-bottom: 30px;
+            text-align: right;
+            margin-top: 30px;
+        }
+        .activity_listpage a{
+            display: inline-block;
+            font-size: 14px;
+            color: #666666;
+            padding: 10px 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background: #FFF;
+            margin: 0 2px;
+            height: 42px;
+        }
+        .activity_listpage .current{
+            display: inline-block;
+            font-size: 14px;
+            color: #fff;
+            padding: 10px 15px;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            background: #ff6d00;
+            margin: 0 2px;
+        }
+    </style>
 </head>
-<body ng-controller="themeCtrl">
+<body>
 <!-- 导航开始 -->
-<include file="./Template/5u/index/public/nav.html" />
+<include file="./Template/5u/index/public/nav.html"/>
 <!-- 导航结束 -->
 
 <div class="section">
     <img class="is_publish" src="{$Think.INDEX}/images/tech-issue-require.jpg" alt="">
 </div>
 
-<!-- 专题 -->
-<div class="section clear">
-    <div class="project_wrap clear">
-        <a href="__CONTROLLER__/tec_list.html" ng-repeat="theme in themes">
-            <div class="project_option shadow fl">
-                <img class="project_img" src="{{ theme.cover_url }}" alt="" width="282" height="180">
-                <p class="topic" ng-cloak>{{ theme.title }}</p>
-                <p class="count" ng-cloak>{{ theme.count }}项技术</p>
-            </div>
-        </a>
+<section id="template">
+    <div class="section clear" v-cloak>
+        <div class="project_wrap clear">
+            <a href="__CONTROLLER__/tec_list.html" v-for="theme in themeData">
+                <div class="project_option shadow fl">
+                    <img class="project_img" v-bind:src="theme.cover_url" alt="" width="282" height="180">
+                    <p class="topic">{{ theme.title }}</p>
+                    <p class="count">{{ theme.count }}项技术</p>
+                </div>
+            </a>
 
-        <a href="__CONTROLLER__/tec_theme.html">
-            <div class="project_option shadow fl">
-                <img class="project_img" src="{$Think.INDEX}/images/tech-topic1.jpg" alt="">
-                <p class="look_more">查看更多专题</p>
-            </div>
-        </a>
-    </div>
-</div>
-
-<!-- 二级导航 -->
-<div class="subnav">
-    <div class="sub_class clear">
-        <p class="sub_p fl">技术类型：</p>
-        <ul class="sub_list fr">
-            <li class="subnav_selected">全部</li>
-            <li ng-repeat="option in options" ng-cloak>{{ option.cat_name }}</li>
-        </ul>
-    </div>
-    <div class="sub_class clear" style="border-top:none;">
-        <p class="sub_p fl" style="border-bottom:none;">技术领域：</p>
-        <ul class="sub_list fr">
-            <li class="subnav_selected">全部</li>
-            <li ng-repeat="list in lists" ng-cloak>{{ list.tag_name }}</li>
-        </ul>
-    </div>
-</div>
-
-<!-- 技术列表 -->
-<div class="section">
-    <div class="project_wrap clear">
-        <div class="tec_option shadow fl">
-            <img class="tec_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
-            <p class="tec_list_tit">技术标题</p>
-            <div class="publish_time">
-                发布于
-                <span>2017-10-25</span>
-            </div>
-            <div class="clear">
-                <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
-                <span class="tec_type fl">涂装工业</span>
-            </div>
-            <div class="adhi_print">
-                <span class="adhibition">应用类</span>
-                <span class="print">成熟方案</span>
-            </div>
+            <a href="__CONTROLLER__/tec_theme.html">
+                <div class="project_option shadow fl">
+                    <img class="project_img" src="{$Think.INDEX}/images/tech-topic1.jpg" alt="">
+                    <p class="look_more">查看更多专题</p>
+                </div>
+            </a>
         </div>
+    </div>
 
-        <div class="tec_option shadow fl">
-            <img class="tec_img" src="{$Think.INDEX}/images/tech-technology2.jpg" alt="">
-            <p class="tec_list_tit">技术标题</p>
-            <div class="publish_time">
-                发布于
-                <span>2017-10-25</span>
-            </div>
-            <div class="clear">
-                <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
-                <span class="tec_type fl">涂装工业</span>
-            </div>
-            <div class="adhi_print">
-                <span class="adhibition">应用类</span>
-                <span class="print">成熟方案</span>
-            </div>
+    <!-- 二级导航 -->
+    <div class="subnav" v-cloak>
+        <div class="sub_class clear">
+            <p class="sub_p fl">技术类型：</p>
+            <ul class="sub_list fr">
+                <li class="subnav_selected" @click="getJump(0)">全部</li>
+                <li v-for="category in categoryData" v-text="category.cat_name" v-bind:id="category.id+'ca'" @click="getDataByCategory(category.id)"></li>
+            </ul>
         </div>
-
-        <div class="tec_option shadow fl">
-            <img class="tec_img" src="{$Think.INDEX}/images/tech-technology3.jpg" alt="">
-            <p class="tec_list_tit">技术标题</p>
-            <div class="publish_time">
-                发布于
-                <span>2017-10-25</span>
-            </div>
-            <div class="clear">
-                <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
-                <span class="tec_type fl">涂装工业</span>
-            </div>
-            <div class="adhi_print">
-                <span class="adhibition">应用类</span>
-                <span class="print">成熟方案</span>
-            </div>
+        <div class="sub_class clear" style="border-top:none;">
+            <p class="sub_p fl" style="border-bottom:none;">技术领域：</p>
+            <ul class="sub_list fr">
+                <li class="subnav_selected" @click="getfield(0)">全部</li>
+                <li v-for="tag in tagData" v-text="tag.tag_name" v-bind:id="tag.id+'ta'" @click="getDataByTag(tag.id)"></li>
+            </ul>
         </div>
+    </div>
 
-        <div class="tec_option shadow fl">
-            <img class="tec_img" src="{$Think.INDEX}/images/tech-technology4.jpg" alt="">
-            <p class="tec_list_tit">技术标题</p>
-            <div class="publish_time">
-                发布于
-                <span>2017-10-25</span>
+    <!-- 技术列表 -->
+    <div class="section">
+        <div class="project_wrap clear" v-cloak>
+            <div class="tec_option shadow fl" v-for="list in listData">
+                <img class="tec_img" v-bind:src="list.cover_url" alt="" width="256" height="190">
+                <p class="tec_list_tit">{{list.title}}</p>
+                <div class="publish_time">
+                    发布于
+                    <span>{{list.create_time}}</span>
+                </div>
+                <div class="clear">
+                    <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
+                    <span class="tec_type fl">{{ list.yyxy }}</span>
+                </div>
+                <div class="adhi_print">
+                    <span class="adhibition">{{ list.cat_name }}</span>
+                    <span class="print">{{list.csd}}</span>
+                </div>
             </div>
-            <div class="clear">
-                <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
-                <span class="tec_type fl">涂装工业</span>
-            </div>
-            <div class="adhi_print">
-                <span class="adhibition">应用类</span>
-                <span class="print">成熟方案</span>
+
+        </div>
+    </div>
+    <div class="page">
+        <div class="activity_listpage">
+            <div>
+                <a class="first" @click="go_page(1)" v-if="show_first">1...</a>
+                <a class="prev" @click="go_page(page-1)" v-if="show_prex">&lt;&lt;</a>
+                <a v-for="index in pages" @click="go_page(index)" v-bind:class="{current: index==page}">{{index}}</a>
+                <a class="next" @click="go_page(page+1)" v-if="show_next">&gt;&gt;</a>
+                <a class="end" @click="go_page(page_total)" v-if="show_end">{{page_total}}</a>
             </div>
         </div>
     </div>
-</div>
-
-<!-- 页码 -->
-<div class="page">
-
-</div>
+</section>
+<!-- 分页 -->
 
 <!-- 页脚 -->
 <!-- <div ng-include="../common/footer.html"></div> -->
-<include file="./Template/5u/index/public/footer.html" />
+<include file="./Template/5u/index/public/footer.html"/>
 </body>
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
 <script src="{$Think.INDEX}/js/common.js"></script>
-<script src="{$Think.INDEX}/js/angular.min.js"></script>
-<script>
-
-    var page = "";//页码
-    var page_total = "";//总页数
-    var data = {
-        "page": "1",
-        "page_num": "16",
-        "order_field": "create_time",
-        "order_by": "DESC",
-        "category_id": "0",
-        "tag_id": "0",
-        "get_page":"true",
-        "search":""
-    };
-
-    var app = angular.module('tec',[]);
-
-    app.controller("themeCtrl",function ($scope,$http){
-        //专题
-        $http({
-            method:"GET",
-            url:"/api.php/Paoding/getIndex?page_num=3"
-        }).then(function successCallback(response) {
-            $scope.themes = response.data.data;
-        }, function errorCallback(response) {
-        });
-
-        // 获取需求业务范围
-        $http({
-            method:'GET',
-            url: '/api.php/ChannelIndex/index/action/dataList/channel/js/type/2'
-        }).then(function successCallback(response) {
-            $scope.options = response.data.data;
-        }, function errorCallback() {
-        });
-
-        // 技术领域
-        $http({
-            method:'GET',
-            url:'/api.php/ChannelIndex/index/action/dataList/channel/js/type/4',
-        }).then(function successCallback(response) {
-            $scope.lists = response.data.data;
-        }, function errorCallback() {
-        });
-
-    });
-
-    app.controller("dataCtrl",function ($scope,$http){
-        //技术项目
-        $http({
-            method:'POST',
-            data:data,
-            url: '/api.php/ChannelIndex/index/action/dataList/channel/js/type/1',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            transformRequest: function(obj) {
-                var str = [];
-                for (var p in obj) {
-                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+<script src="__PUBLIC__/js/vue.js"></script>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: '#template',
+        data: {
+            themeData: '',
+            listData: '', //列表数据
+            categoryData: '',
+            dataData: '',
+            tagData: '',
+            ztData: '',
+            configData: '',
+            countData: '',
+            page: 1,
+            page_total: 0,
+            show_first: false,
+            show_end: false,
+            show_prex: false,
+            show_next: false,
+            show_item: 5,
+            bool: 'true',
+            category_id: 0,
+            click_category_id: 0,
+            click_tag_id: 0,
+        },
+        computed: {
+            pages: function () {
+                var pag = [];
+                if (this.page < this.show_item) {
+                    //如果当前的激活的项 小于要显示的条数
+                    //总页数和要显示的条数那个大就显示多少条
+                    var i = Math.min(this.show_item, this.page_total);
+                    while (i) {
+                        pag.unshift(i--);
+                    }
+                } else { //当前页数大于显示页数了
+                    var middle = this.page - Math.floor(this.show_item / 2),//从哪里开始
+                        i = this.show_item;
+                    if (middle > (this.page_total - this.show_item)) {
+                        middle = (this.page_total - this.show_item) + 1
+                    }
+                    while (i--) {
+                        pag.push(middle++);
+                    }
                 }
-                return str.join("&");
+                return pag
             }
-        }).then(function successCallback(response) {
-            $scope.tecLists = response.data.data.info;
-            page = response.data.data.page.page;
-            page_total = response.data.data.page.page_total;
-        }, function errorCallback() {
-        });
+        },
+        mounted: function () {
+            this.$nextTick(function () {
+                this.getData();
+                this.getCategoryData();
+                this.getThemeData();
+                this.getTagData();
+                this.getConfigData();
+                this.getCount();
+                this.getNew();
+                this.getZt();
+            })
+        },
+        updated: function () {
+        },
+        filters: {},
+        methods: {
+            getCount: function () {
+                var _this = this;
+                var url = "__ROOT__/{$Think.const.API_PATH}/ChannelIndex/index/action/count/channel/{$channel}/type/1";
+                $.get(url, function (res) {
+                    _this.countData = res.data;
+                })
+            },
+            getZt: function () {
+                var _this = this;
+                var url = "__ROOT__/{$Think.const.API_PATH}/Paoding/getIndex";
+                $.post(url, function (res) {
+                    _this.ztData = res.data;
+                })
+            },
+            getNew: function () {
+                var _this = this;
+                var url = "/api.php/ChannelIndex/index/action/dataList/channel/js/type/1";
+                var data = {
+                    "page": 1,
+                    "page_num": 16,
+                    "order_field": "create_time",
+                    "category_id": vm.category_id,
+                    "tag_id": vm.tag_id,
+                    "order_by": "DESC"
+                };
+                $.post(url, data, function (res) {
+                    _this.listData = res.data;
+                }, 'json');
+            },
+            getJump: function (id) {
+                var _this = this;
+                vm.click_category_id = id;
+                vm.click_tag_id = id;
+                this.search(id, vm.tag_id);
+                var data = {
+                    "page": 1,
+                    "page_num": 16,
+                    "category_id": id,
+                    "tag_id": id,
+                    "order_field": "create_time",
+                    "order_by": "DESC"
+                };
+                var url = "/api.php/ChannelIndex/index/action/dataList/channel/js/type/1";
+                $.post(url, data, function (res) {
+                    _this.listData = res.data;
+                })
+            },
+            getfield: function (id) {
+                var _this = this;
+                vm.click_category_id = id;
+                vm.click_tag_id = id;
+                this.search(vm.category_id, id);
+                var data = {
+                    "page": 1,
+                    "page_num": 16,
+                    "tag_id": id,
+                    "category_id": id,
+                    "order_field": "create_time",
+                    "order_by": "DESC"
+                };
+                var url = "/api.php/ChannelIndex/index/action/dataList/channel/js/type/1";
+                $.post(url, data, function (res) {
+                    _this.listData = res.data;
+                })
+            },
+            getData: function () {
+                vm.page = 1;
+                vm.page_total = 0;
+                this.search(0, 0);
+            },
+            getThemeData: function () {
+                var _this = this;
+                var url = "/api.php/Paoding/getIndex?page_num=3";
+                $.get(url, function (res) {
+                    _this.themeData = res.data;
+                })
+            },
+            getTagData: function () {
+                var _this = this;
+                var url = "/api.php/ChannelIndex/index/action/dataList/channel/js/type/4";
+                $.get(url, function (res) {
+                    _this.tagData = res.data;
+                })
+            },
+            getCategoryData: function () {
+                var _this = this;
+                var url = "/api.php/ChannelIndex/index/action/dataList/channel/js/type/2";
+                $.get(url, function (res) {
+                    _this.categoryData = res.data;
+                })
+            },
+            getConfigData: function () {
+                var _this = this;
+                var url = "__ROOT__/{$Think.const.API_PATH}/Setting/settingAbout";
+                $.post(url, "", function (res) {
+                    _this.configData = res.data;
+                })
+            },
+            getDetail: function (id) {
+                window.location.href = "__MODULE__/Article/detail/channel/{$channel}/type/1/data_id/" + id;
+            },
+            getZtDetail: function (id) {
+                window.location.href = "__MODULE__/Article/top/channel/top/type/1/data_id/" + id;
+            },
+            showDetail: function (url) {
+                window.location.href = url;
+            },
+            getDataByCategory: function (category_id) {
+                vm.page = 1;
+                vm.page_total = 0;
+                vm.category_id = category_id;
+                this.search(category_id, 0);
+                $('#category_list a').removeClass('science_tabLi_a_active');
+                $('#' + category_id + 'ca').addClass('science_tabLi_a_active');
+            },
+            getDataByTag: function (tag_id) {
+                vm.page = 1;
+                vm.page_total = 0;
+                vm.tag_id = tag_id;
+                this.search(0, tag_id);
+                $("#tag_list a").removeClass('science_tabLi_a_active');
+                $('#' + tag_id + 'ta').addClass('science_tabLi_a_active');
+            },
+            search: function (category_id, tag_id) {
+                var categoryId = 0;
+                var tagId = 0;
+                if (category_id == 0) {
+                    categoryId = vm.click_category_id;
+                    vm.click_tag_id = tag_id;
+                    tagId = tag_id;
+                } else if (tag_id == 0) {
+                    tagId = vm.click_tag_id;
+                    vm.click_category_id = category_id;
+                    categoryId = category_id;
+                }
 
+                var url = "/api.php/ChannelIndex/index/action/dataList/channel/js/type/1";
+                if (category_id > -1) {
+                    vm.category_id = category_id;
+                    url += "/category_id/" + vm.click_category_id + "/tag_id/" + vm.click_tag_id;
+                }
+                var _this = this;
+                var data = {
+                    "order_field": "create_time",
+                    "order_by": "DESC",
+                    "get_page": true,
+                    "page": vm.page,
+                    "page_num": 16
+                };
+                $.post(url, data, function (res) {
+                    _this.listData = res.data.info;
+                    var page = res.data.page;
+                    vm.page = parseInt(page.page);
+                    vm.page_total = parseInt(page.page_total);
+                    vm.show_first = (vm.page - 1 > 1);
+                    vm.show_prex = (vm.page - 1 > 0);
+                    vm.show_next = (vm.page_total - vm.page > 0);
+                    vm.show_end = (vm.page_total - vm.page > 1);
+                })
+            },
+            go_page: function (page) {
+                if (page == vm.page) {
+                    return;
+                }
+                vm.page = parseInt(page);
+                this.search(vm.click_category_id, vm.click_tag_id);
+                window.scrollTo(0, document.body.scrollHeight);
+                window.scrollTo(0, 0);
+            }
+        }
     });
-
     $(".sub_class").on("click",".sub_list li",function(){
         $(this).addClass('subnav_selected').siblings('.sub_list li').removeClass('subnav_selected');
-    })
+    });
 </script>
 </html>

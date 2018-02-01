@@ -15,6 +15,11 @@ class TecController extends BaseController
 
     public function tec_show()
     {
+        $where['is_deleted'] = 0;
+        $where['is_active'] = 1;
+        $where['status'] = 0;
+        $count=M('article_js')->where($where)->count();
+        $this->assign(compact('count'));
         $this->display();
     }
 

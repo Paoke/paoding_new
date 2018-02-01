@@ -96,8 +96,10 @@ class ChannelLogic extends BaseRestLogic
             $pageTotal = ($count / $page_num) > intval($count / $page_num) ? intval($count / $page_num + 1) : intval($count / $page_num);
             $pageInfo['page'] = $page;
             $pageInfo['page_total'] = $pageTotal;
+            $pageInfo['count']=$count;
             $data['info'] = $info;
             $data['page'] = $pageInfo;
+
         }else{
             $data = $info;
         }
