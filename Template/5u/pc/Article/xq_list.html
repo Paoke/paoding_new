@@ -457,164 +457,164 @@
 	}
 </script>
 <script>
-	var vm = new Vue({
-		el:'#template',
-		data:{
-			listData: '', //列表数据
-			categoryData: '',
-			configData:'',
-			countData:'',
-			page : 1,
-			page_total:0,
-			show_first:false,
-			show_end:false,
-			show_prex:false,
-			show_next:false,
-			show_item:5,
-			category_id: 0
-		},
-		computed:{
-			pages:function(){
-				var pag = [];
-				if( this.page < this.show_item ){
-					//如果当前的激活的项 小于要显示的条数
-					//总页数和要显示的条数那个大就显示多少条
-					var i = Math.min(this.show_item,this.page_total);
-					while(i){
-						pag.unshift(i--);
-					}
-				}else{ //当前页数大于显示页数了
-					var middle = this.page - Math.floor(this.show_item / 2 ),//从哪里开始
-							i = this.show_item;
-					if( middle >  (this.page_total - this.show_item)  ){
-						middle = (this.page_total - this.show_item) + 1
-					}
-					while(i--){
-						pag.push( middle++ );
-					}
-				}
-				return pag
-			}
-		},
-		mounted: function () {
-			this.$nextTick(function () {
-				this.getNew();
-				this.getCategoryData();
-				this.getConfigData();
-				this.getCount();
-				this.getListData();
-			})
-		},
-		updated:function(){
-		},
-		filters: {
-		},
-		methods:{
-			getCount:function () {
-				var _this=this;
-				var url="__ROOT__/{$Think.const.API_PATH}/ChannelIndex/index/action/count/channel/{$channel}/type/1/";
-				$.get(url,function(res){
-					_this.countData=res.data;
-				})
-			},
-			getListData:function (){
-				vm.page=1;
-				vm.page_total=0;
-				this.search(0);
-			},
-			getNew:function () {
-				var _this=this;
-				var url="__ROOT__/{$Think.const.API_PATH}/ChannelIndex/index/action/dataList/channel/{$channel}/type/1/";
-				var data={
-					'order_field':"create_time",
-					'order_by':"DESC",
-					"page": 1,
-					"category_id":vm.category_id,
-					"page_num":10
-				};
-				$.post(url, data, function(res){
-					_this.listData=res.data;
-				}, 'json');
-			},
+    var vm = new Vue({
+        el:'#template',
+        data:{
+            listData: '', //列表数据
+            categoryData: '',
+            configData:'',
+            countData:'',
+            page : 1,
+            page_total:0,
+            show_first:false,
+            show_end:false,
+            show_prex:false,
+            show_next:false,
+            show_item:5,
+            category_id: 0
+        },
+        computed:{
+            pages:function(){
+                var pag = [];
+                if( this.page < this.show_item ){
+                    //如果当前的激活的项 小于要显示的条数
+                    //总页数和要显示的条数那个大就显示多少条
+                    var i = Math.min(this.show_item,this.page_total);
+                    while(i){
+                        pag.unshift(i--);
+                    }
+                }else{ //当前页数大于显示页数了
+                    var middle = this.page - Math.floor(this.show_item / 2 ),//从哪里开始
+                        i = this.show_item;
+                    if( middle >  (this.page_total - this.show_item)  ){
+                        middle = (this.page_total - this.show_item) + 1
+                    }
+                    while(i--){
+                        pag.push( middle++ );
+                    }
+                }
+                return pag
+            }
+        },
+        mounted: function () {
+            this.$nextTick(function () {
+                this.getNew();
+                this.getCategoryData();
+                this.getConfigData();
+                this.getCount();
+                this.getListData();
+            })
+        },
+        updated:function(){
+        },
+        filters: {
+        },
+        methods:{
+            getCount:function () {
+                var _this=this;
+                var url="__ROOT__/{$Think.const.API_PATH}/ChannelIndex/index/action/count/channel/{$channel}/type/1/";
+                $.get(url,function(res){
+                    _this.countData=res.data;
+                })
+            },
+            getListData:function (){
+                vm.page=1;
+                vm.page_total=0;
+                this.search(0);
+            },
+            getNew:function () {
+                var _this=this;
+                var url="__ROOT__/{$Think.const.API_PATH}/ChannelIndex/index/action/dataList/channel/{$channel}/type/1/";
+                var data={
+                    'order_field':"create_time",
+                    'order_by':"DESC",
+                    "page": 1,
+                    "category_id":vm.category_id,
+                    "page_num":10
+                };
+                $.post(url, data, function(res){
+                    _this.listData=res.data;
+                }, 'json');
+            },
 
-			getConfigData:function () {
-				var _this = this;
-				var url = "__ROOT__/{$Think.const.API_PATH}/Setting/settingAbout/channel/{$channel}/type/1";
-				$.get(url, function (res) {
-					_this.configData = res.data;
-				})
-			},
-			getCategoryData:function () {
-				var _this = this;
-				var url = "__ROOT__/{$Think.const.API_PATH}/ChannelIndex/index/action/dataList/channel/{$channel}/type/2";
-				$.get(url,function (res) {
-					_this.categoryData = res.data;
-				})
-			},
-			showDetail:function (url) {
-				window.location.href=url;
-			},
-			getDataDetail:function (id) {
-				window.location.href="__MODULE__/Article/detail/channel/{$channel}/type/1/data_id/"+id;
-			},
-			getDataByCategory:function(category_id){
-				vm.page = 1;
-				vm.page_total=0;
-				vm.category_id=category_id;
-				this.search(category_id);
-				$('.science_tabLi a').removeClass('science_tabLi_a_active');
-				$('#' + category_id).addClass('science_tabLi_a_active');
-			},
-			getHot:function () {
-				var _this=this;
-				var url="__ROOT__/{$Think.const.API_PATH}/ChannelIndex/index/action/dataList/channel/{$channel}/type/1/";
-				var data={
-					'order_field':"clicks",
-					'order_by':"DESC",
-					"page": 1,
-					"category_id":vm.category_id,
-					"page_num":10
-				};
-				$.post(url, data, function(res){
-					_this.listData=res.data;
-				}, 'json');
-			},
-			search:function(category_id){
-				var url = "__ROOT__/{$Think.const.API_PATH}/ChannelIndex/index/action/dataList/channel/{$channel}/type/1";
-				if(category_id > 0){
-					vm.category_id = category_id;
-					url += "/category_id/"+category_id;
-				}
-				var _this = this;
-				var data={
-					'order_field':"create_time",
-					'order_by':"DESC",
-					"get_page": true,
-					"page": vm.page,
-					"page_num":10
-				};
-				$.post(url,data ,function (res) {
-					_this.listData = res.data.info;
-					var page = res.data.page;
-					vm.page = parseInt(page.page);
-					vm.page_total = parseInt(page.page_total);
-					vm.show_first = (vm.page-1 > 1);
-					vm.show_prex = (vm.page-1 > 0);
-					vm.show_next = (vm.page_total-vm.page > 0);
-					vm.show_end = (vm.page_total-vm.page > 1);
+            getConfigData:function () {
+                var _this = this;
+                var url = "__ROOT__/{$Think.const.API_PATH}/Setting/settingAbout/channel/{$channel}/type/1";
+                $.get(url, function (res) {
+                    _this.configData = res.data;
+                })
+            },
+            getCategoryData:function () {
+                var _this = this;
+                var url = "__ROOT__/{$Think.const.API_PATH}/ChannelIndex/index/action/dataList/channel/{$channel}/type/2";
+                $.get(url,function (res) {
+                    _this.categoryData = res.data;
+                })
+            },
+            showDetail:function (url) {
+                window.location.href=url;
+            },
+            getDataDetail:function (id) {
+                window.location.href="__MODULE__/Article/detail/channel/{$channel}/type/1/data_id/"+id;
+            },
+            getDataByCategory:function(category_id){
+                vm.page = 1;
+                vm.page_total=0;
+                vm.category_id=category_id;
+                this.search(category_id);
+                $('.science_tabLi a').removeClass('science_tabLi_a_active');
+                $('#' + category_id).addClass('science_tabLi_a_active');
+            },
+            getHot:function () {
+                var _this=this;
+                var url="__ROOT__/{$Think.const.API_PATH}/ChannelIndex/index/action/dataList/channel/{$channel}/type/1/";
+                var data={
+                    'order_field':"clicks",
+                    'order_by':"DESC",
+                    "page": 1,
+                    "category_id":vm.category_id,
+                    "page_num":10
+                };
+                $.post(url, data, function(res){
+                    _this.listData=res.data;
+                }, 'json');
+            },
+            search:function(category_id){
+                var url = "__ROOT__/{$Think.const.API_PATH}/ChannelIndex/index/action/dataList/channel/{$channel}/type/1";
+                if(category_id > 0){
+                    vm.category_id = category_id;
+                    url += "/category_id/"+category_id;
+                }
+                var _this = this;
+                var data={
+                    'order_field':"create_time",
+                    'order_by':"DESC",
+                    "get_page": true,
+                    "page": vm.page,
+                    "page_num":10
+                };
+                $.post(url,data ,function (res) {
+                    _this.listData = res.data.info;
+                    var page = res.data.page;
+                    vm.page = parseInt(page.page);
+                    vm.page_total = parseInt(page.page_total);
+                    vm.show_first = (vm.page-1 > 1);
+                    vm.show_prex = (vm.page-1 > 0);
+                    vm.show_next = (vm.page_total-vm.page > 0);
+                    vm.show_end = (vm.page_total-vm.page > 1);
 
-				})
-			},
-			go_page: function(page){
-				if(page == vm.page){
-					return;
-				}
-				vm.page = parseInt(page);
-				this.search(vm.category_id);
-				window.scrollTo(0,document.body.scrollHeight);
-				window.scrollTo(0,0);
-			}
-		}
-	});
+                })
+            },
+            go_page: function(page){
+                if(page == vm.page){
+                    return;
+                }
+                vm.page = parseInt(page);
+                this.search(vm.category_id);
+                window.scrollTo(0,document.body.scrollHeight);
+                window.scrollTo(0,0);
+            }
+        }
+    });
 
 </script>

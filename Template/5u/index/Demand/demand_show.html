@@ -31,20 +31,20 @@
 
 <div class="ad"></div>
 
-<section id="templates">
+<section id="template">
     <div class="section" style="margin-top:0">
         <div class="sub_class clear">
             <p class="sub_p fl">技术类型：</p>
             <ul class="sub_list fr">
                 <li class="subnav_selected">全部</li>
-                <li></li>
+                <li v-for="tag in tagData" v-text="tag.tag_name"></li>
             </ul>
         </div>
         <div class="sub_class clear" style="border-top:none;">
             <p class="sub_p fl" style="border-bottom:none;">技术领域：</p>
             <ul class="sub_list fr">
                 <li class="subnav_selected">全部</li>
-                <li></li>
+                <li v-for="category in categoryData" v-text="category.cat_name"></li>
             </ul>
         </div>
         <div class="sub_bot clear">
@@ -55,7 +55,7 @@
 
     <!-- 需求列表 -->
     <div class="section">
-        <div class="demand_wrap2 clear" style="margin-left:-20px" ;>
+        <div class="demand_wrap2 clear" style="margin-left:-20px;">
             <a href="__CONTROLLER__/demand_detail">
                 <div class="demand_part2 shadow fl">
                     <p class="demand_status2">招标中</p>
@@ -85,65 +85,10 @@
                     </div>
                 </div>
             </a>
-
-            <div class="demand_part2 shadow fl">
-                <p class="demand_status2">招标中</p>
-                <p class="demand_time2">2017-10-16</p>
-                <p class="demand_title2 oneline">防静电限制一行</p>
-                <p class="demand_ct2 twoline">限制2行</p>
-                <div class="demand_bottom2 clear">
-                    <p class="fl no_margin2">
-                        <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
-                        <span>材料科学</span>
-                    </p>
-                    <p class="fl">
-                        <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
-                        <span>面议</span>
-                    </p>
-                    <p class="fl">
-                        <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
-                        <span>12个月</span>
-                    </p>
-                    <p class="fl">
-                        <img src="{$Think.INDEX}/images/demand-icon-browse.png" alt="">
-                        <span>123</span>
-                    </p>
-                    <p class="fr">
-                        查看详情&nbsp;＞
-                    </p>
-                </div>
-            </div>
-
-            <div class="demand_part2 shadow fl">
-                <p class="demand_status2">招标中</p>
-                <p class="demand_time2">2017-10-16</p>
-                <p class="demand_title2 oneline">防静电限制一行</p>
-                <p class="demand_ct2 twoline">限制2行</p>
-                <div class="demand_bottom2 clear">
-                    <p class="fl no_margin2">
-                        <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
-                        <span>材料科学</span>
-                    </p>
-                    <p class="fl">
-                        <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
-                        <span>面议</span>
-                    </p>
-                    <p class="fl">
-                        <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
-                        <span>12个月</span>
-                    </p>
-                    <p class="fl">
-                        <img src="{$Think.INDEX}/images/demand-icon-browse.png" alt="">
-                        <span>123</span>
-                    </p>
-                    <p class="fr">
-                        查看详情&nbsp;＞
-                    </p>
-                </div>
-            </div>
         </div>
     </div>
 </section>
+
 <include file="./Template/5u/index/public/footer.html"/>
 </body>
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
@@ -152,7 +97,240 @@
 <script type="text/javascript">
     var vm = new Vue({
         el: '#template',
+        data: {
+            themeData: '',
+            listData: '', //列表数据
+            categoryData: '',
+            dataData: '',
+            tagData: '',
+            ztData: '',
+            configData: '',
+            countData: '',
+            page: 1,
+            page_total: 0,
+            show_first: false,
+            show_end: false,
+            show_prex: false,
+            show_next: false,
+            show_item: 5,
+            bool: 'true',
+            category_id: 0,
+            click_category_id: 0,
+            click_tag_id: 0,
+        },
+        computed: {
+            pages: function () {
+                var pag = [];
+                if (this.page < this.show_item) {
+                    //如果当前的激活的项 小于要显示的条数
+                    //总页数和要显示的条数那个大就显示多少条
+                    var i = Math.min(this.show_item, this.page_total);
+                    while (i) {
+                        pag.unshift(i--);
+                    }
+                } else { //当前页数大于显示页数了
+                    var middle = this.page - Math.floor(this.show_item / 2),//从哪里开始
+                        i = this.show_item;
+                    if (middle > (this.page_total - this.show_item)) {
+                        middle = (this.page_total - this.show_item) + 1
+                    }
+                    while (i--) {
+                        pag.push(middle++);
+                    }
+                }
+                return pag;
+            }
+        },
+        mounted: function () {
+            this.$nextTick(function () {
+                this.getData();
+                this.getCategoryData();
+                this.getThemeData();
+                this.getTagData();
+                this.getConfigData();
+                this.getCount();
+                this.getNew();
+                this.getZt();
+            })
+        },
+        updated: function () {
+        },
+        filters: {},
+        methods: {
+            getCount: function () {
+                var _this = this;
+                var url = "__ROOT__/{$Think.const.API_PATH}/ChannelIndex/index/action/count/channel/{$channel}/type/1";
+                $.get(url, function (res) {
+                    _this.countData = res.data;
+                })
+            },
+            getZt: function () {
+                var _this = this;
+                var url = "__ROOT__/{$Think.const.API_PATH}/Paoding/getIndex";
+                $.post(url, function (res) {
+                    _this.ztData = res.data;
+                })
+            },
+            getNew: function () {
+                var _this = this;
+                var url = "/api.php/ChannelIndex/index/action/dataList/channel/js/type/1";
+                var data = {
+                    "page": 1,
+                    "page_num": 16,
+                    "order_field": "create_time",
+                    "category_id": vm.category_id,
+                    "tag_id": vm.tag_id,
+                    "order_by": "DESC"
+                };
+                $.post(url, data, function (res) {
+                    _this.listData = res.data;
+                }, 'json');
+            },
+            getJump: function (id) {
+                var _this = this;
+                vm.click_category_id = id;
+                vm.click_tag_id = id;
+                this.search(id, vm.tag_id);
+                var data = {
+                    "page": 1,
+                    "page_num": 16,
+                    "category_id": id,
+                    "tag_id": id,
+                    "order_field": "create_time",
+                    "order_by": "DESC"
+                };
+                var url = "/api.php/ChannelIndex/index/action/dataList/channel/js/type/1";
+                $.post(url, data, function (res) {
+                    _this.listData = res.data;
+                })
+            },
+            getfield: function (id) {
+                var _this = this;
+                vm.click_category_id = id;
+                vm.click_tag_id = id;
+                this.search(vm.category_id, id);
+                var data = {
+                    "page": 1,
+                    "page_num": 16,
+                    "tag_id": id,
+                    "category_id": id,
+                    "order_field": "create_time",
+                    "order_by": "DESC"
+                };
+                var url = "/api.php/ChannelIndex/index/action/dataList/channel/js/type/1";
+                $.post(url, data, function (res) {
+                    _this.listData = res.data;
+                })
+            },
+            getData: function () {
+                vm.page = 1;
+                vm.page_total = 0;
+                this.search(0, 0);
+            },
+            getThemeData: function () {
+                var _this = this;
+                var url = "/api.php/Paoding/getIndex?page_num=3";
+                $.get(url, function (res) {
+                    _this.themeData = res.data;
+                })
+            },
+            getTagData: function () {
+                var _this = this;
+                var url = "/api.php/ChannelIndex/index/action/dataList/channel/xq/type/4";
+                $.get(url, function (res) {
+                    _this.tagData = res.data;
+                })
+            },
+            getCategoryData: function () {
+                var _this = this;
+                var url = "/api.php/ChannelIndex/index/action/dataList/channel/xq/type/2";
+                $.get(url, function (res) {
+                    _this.categoryData = res.data;
+                })
+            },
+            getConfigData: function () {
+                var _this = this;
+                var url = "__ROOT__/{$Think.const.API_PATH}/Setting/settingAbout";
+                $.post(url, "", function (res) {
+                    _this.configData = res.data;
+                })
+            },
+            getDetail: function (id) {
+                window.location.href = "__MODULE__/Article/detail/channel/{$channel}/type/1/data_id/" + id;
+            },
+            getZtDetail: function (id) {
+                window.location.href = "__MODULE__/Article/top/channel/top/type/1/data_id/" + id;
+            },
+            showDetail: function (url) {
+                window.location.href = url;
+            },
+            getDataByCategory: function (category_id) {
+                vm.page = 1;
+                vm.page_total = 0;
+                vm.category_id = category_id;
+                this.search(category_id, 0);
+                $('#category_list a').removeClass('science_tabLi_a_active');
+                $('#' + category_id + 'ca').addClass('science_tabLi_a_active');
+            },
+            getDataByTag: function (tag_id) {
+                vm.page = 1;
+                vm.page_total = 0;
+                vm.tag_id = tag_id;
+                this.search(0, tag_id);
+                $("#tag_list a").removeClass('science_tabLi_a_active');
+                $('#' + tag_id + 'ta').addClass('science_tabLi_a_active');
+            },
+            search: function (category_id, tag_id) {
+                var categoryId = 0;
+                var tagId = 0;
+                if (category_id == 0) {
+                    categoryId = vm.click_category_id;
+                    vm.click_tag_id = tag_id;
+                    tagId = tag_id;
+                } else if (tag_id == 0) {
+                    tagId = vm.click_tag_id;
+                    vm.click_category_id = category_id;
+                    categoryId = category_id;
+                }
+
+                var url = "/api.php/ChannelIndex/index/action/dataList/channel/js/type/1";
+                if (category_id > -1) {
+                    vm.category_id = category_id;
+                    url += "/category_id/" + vm.click_category_id + "/tag_id/" + vm.click_tag_id;
+                }
+                var _this = this;
+                var data = {
+                    "order_field": "create_time",
+                    "order_by": "DESC",
+                    "get_page": true,
+                    "page": vm.page,
+                    "page_num": 16
+                };
+                $.post(url, data, function (res) {
+                    _this.listData = res.data.info;
+                    var page = res.data.page;
+                    vm.page = parseInt(page.page);
+                    vm.page_total = parseInt(page.page_total);
+                    vm.show_first = (vm.page - 1 > 1);
+                    vm.show_prex = (vm.page - 1 > 0);
+                    vm.show_next = (vm.page_total - vm.page > 0);
+                    vm.show_end = (vm.page_total - vm.page > 1);
+                })
+            },
+            go_page: function (page) {
+                if (page == vm.page) {
+                    return;
+                }
+                vm.page = parseInt(page);
+                this.search(vm.click_category_id, vm.click_tag_id);
+                window.scrollTo(0, document.body.scrollHeight);
+                window.scrollTo(0, 0);
+            }
+        }
     });
 
+    $(".sub_class").on("click",".sub_list li",function(){
+        $(this).addClass('subnav_selected').siblings('.sub_list li').removeClass('subnav_selected');
+    });
 </script>
 </html>
