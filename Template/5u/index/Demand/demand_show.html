@@ -10,6 +10,7 @@
     <link rel="preload" href="{$Think.INDEX}/css/index.css" as="style">
     <link rel="stylesheet" href="{$Think.INDEX}/css/common_new.css">
     <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/page.css">
     <!--<include file="./Template/5u/common/common.html" />   上线开启-百度统计-->
 </head>
 <style>
@@ -22,6 +23,9 @@
         margin-left: 20px;
         margin-bottom: 20px;
         transition: all 0.3s;
+    }
+    [v-cloak] {
+        display: none;
     }
 </style>
 <body>
@@ -36,15 +40,15 @@
         <div class="sub_class clear">
             <p class="sub_p fl">技术类型：</p>
             <ul class="sub_list fr">
-                <li class="subnav_selected">全部</li>
-                <li v-for="tag in tagData" v-text="tag.tag_name"></li>
+                <li class="subnav_selected" @click="getfield(0)">全部</li>
+                <li v-for="tag in tagData" v-text="tag.tag_name" v-bind:id="tag.id" @click="getDataByTag(tag.id)"></li>
             </ul>
         </div>
         <div class="sub_class clear" style="border-top:none;">
             <p class="sub_p fl" style="border-bottom:none;">技术领域：</p>
             <ul class="sub_list fr">
-                <li class="subnav_selected">全部</li>
-                <li v-for="category in categoryData" v-text="category.cat_name"></li>
+                <li class="subnav_selected" @click="getJump(0)">全部</li>
+                <li v-for="category in categoryData" v-text="category.cat_name" v-bind:id="category.id" @click="getDataByCategory(category.id)"></li>
             </ul>
         </div>
         <div class="sub_bot clear">
@@ -54,30 +58,30 @@
     </div>
 
     <!-- 需求列表 -->
-    <div class="section">
+    <div class="section" v-cloak>
         <div class="demand_wrap2 clear" style="margin-left:-20px;">
-            <a href="__CONTROLLER__/demand_detail">
+            <a href="__CONTROLLER__/demand_detail" v-for="list in listData">
                 <div class="demand_part2 shadow fl">
-                    <p class="demand_status2">招标中</p>
-                    <p class="demand_time2">2017-10-16</p>
-                    <p class="demand_title2 oneline">防静电限制一行</p>
-                    <p class="demand_ct2 twoline">限制2行</p>
+                    <p class="demand_status2">{{ list.hzxs }}</p>
+                    <p class="demand_time2">{{ list.create_time }}</p>
+                    <p class="demand_title2 oneline">{{ list.title }}</p>
+                    <p class="demand_ct2 twoline">{{ list.desc }}</p>
                     <div class="demand_bottom2 clear">
                         <p class="fl no_margin2">
                             <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
-                            <span>材料科学</span>
+                            <span>{{ list.cat_name }}</span>
                         </p>
                         <p class="fl">
                             <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
-                            <span>面议</span>
+                            <span>{{ list.yfys }}</span>
                         </p>
                         <p class="fl">
                             <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
-                            <span>12个月</span>
+                            <span>{{ list.yfys }}</span>
                         </p>
                         <p class="fl">
                             <img src="{$Think.INDEX}/images/demand-icon-browse.png" alt="">
-                            <span>123</span>
+                            <span>{{ list.clicks }}</span>
                         </p>
                         <p class="fr">
                             查看详情&nbsp;＞
@@ -85,6 +89,18 @@
                     </div>
                 </div>
             </a>
+        </div>
+    </div>
+
+    <div class="page" v-cloak>
+        <div class="activity_listpage">
+            <div>
+                <a class="first" @click="go_page(1)" v-if="show_first">1...</a>
+                <a class="prev" @click="go_page(page-1)" v-if="show_prex">&lt;&lt;</a>
+                <a v-for="index in pages" @click="go_page(index)" v-bind:class="{current: index==page}">{{index}}</a>
+                <a class="next" @click="go_page(page+1)" v-if="show_next">&gt;&gt;</a>
+                <a class="end" @click="go_page(page_total)" v-if="show_end">{{page_total}}</a>
+            </div>
         </div>
     </div>
 </section>
@@ -145,38 +161,20 @@
             this.$nextTick(function () {
                 this.getData();
                 this.getCategoryData();
-                this.getThemeData();
                 this.getTagData();
-                this.getConfigData();
-                this.getCount();
                 this.getNew();
-                this.getZt();
             })
         },
         updated: function () {
         },
         filters: {},
         methods: {
-            getCount: function () {
-                var _this = this;
-                var url = "__ROOT__/{$Think.const.API_PATH}/ChannelIndex/index/action/count/channel/{$channel}/type/1";
-                $.get(url, function (res) {
-                    _this.countData = res.data;
-                })
-            },
-            getZt: function () {
-                var _this = this;
-                var url = "__ROOT__/{$Think.const.API_PATH}/Paoding/getIndex";
-                $.post(url, function (res) {
-                    _this.ztData = res.data;
-                })
-            },
             getNew: function () {
                 var _this = this;
-                var url = "/api.php/ChannelIndex/index/action/dataList/channel/js/type/1";
+                var url = "/api.php/ChannelIndex/index/action/dataList/channel/xq/type/1";
                 var data = {
                     "page": 1,
-                    "page_num": 16,
+                    "page_num": 10,
                     "order_field": "create_time",
                     "category_id": vm.category_id,
                     "tag_id": vm.tag_id,
@@ -193,13 +191,13 @@
                 this.search(id, vm.tag_id);
                 var data = {
                     "page": 1,
-                    "page_num": 16,
+                    "page_num": 10,
                     "category_id": id,
                     "tag_id": id,
                     "order_field": "create_time",
                     "order_by": "DESC"
                 };
-                var url = "/api.php/ChannelIndex/index/action/dataList/channel/js/type/1";
+                var url = "/api.php/ChannelIndex/index/action/dataList/channel/xq/type/1";
                 $.post(url, data, function (res) {
                     _this.listData = res.data;
                 })
@@ -211,13 +209,13 @@
                 this.search(vm.category_id, id);
                 var data = {
                     "page": 1,
-                    "page_num": 16,
+                    "page_num": 10,
                     "tag_id": id,
                     "category_id": id,
                     "order_field": "create_time",
                     "order_by": "DESC"
                 };
-                var url = "/api.php/ChannelIndex/index/action/dataList/channel/js/type/1";
+                var url = "/api.php/ChannelIndex/index/action/dataList/channel/xq/type/1";
                 $.post(url, data, function (res) {
                     _this.listData = res.data;
                 })
@@ -226,13 +224,6 @@
                 vm.page = 1;
                 vm.page_total = 0;
                 this.search(0, 0);
-            },
-            getThemeData: function () {
-                var _this = this;
-                var url = "/api.php/Paoding/getIndex?page_num=3";
-                $.get(url, function (res) {
-                    _this.themeData = res.data;
-                })
             },
             getTagData: function () {
                 var _this = this;
@@ -246,13 +237,6 @@
                 var url = "/api.php/ChannelIndex/index/action/dataList/channel/xq/type/2";
                 $.get(url, function (res) {
                     _this.categoryData = res.data;
-                })
-            },
-            getConfigData: function () {
-                var _this = this;
-                var url = "__ROOT__/{$Think.const.API_PATH}/Setting/settingAbout";
-                $.post(url, "", function (res) {
-                    _this.configData = res.data;
                 })
             },
             getDetail: function (id) {
@@ -293,7 +277,7 @@
                     categoryId = category_id;
                 }
 
-                var url = "/api.php/ChannelIndex/index/action/dataList/channel/js/type/1";
+                var url = "/api.php/ChannelIndex/index/action/dataList/channel/xq/type/1";
                 if (category_id > -1) {
                     vm.category_id = category_id;
                     url += "/category_id/" + vm.click_category_id + "/tag_id/" + vm.click_tag_id;
@@ -304,7 +288,7 @@
                     "order_by": "DESC",
                     "get_page": true,
                     "page": vm.page,
-                    "page_num": 16
+                    "page_num": 10
                 };
                 $.post(url, data, function (res) {
                     _this.listData = res.data.info;
