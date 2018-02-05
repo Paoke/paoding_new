@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en" ng-app="register">
+<head>
+    <meta charset="UTF-8">
+    <title>庖丁技术</title>
+    <meta name="description" content="庖丁科技众包服务平台携手国内外先进技术科研院所、顶级技术专家，以实现科技成果市场化为核心，为企业提供快速精准的需求匹配服务，从而实现企业以及科技资源的有效对接，帮助企业实现产业技术升级，助力先进技术完成产业化发展。" />
+    <meta name="keywords" content="庖丁众包、智能技术、机械制造、健康医疗、材料科学、能源环保、生产流程优化"/>
+    <link rel="preload" href="{$Think.INDEX}/css/index.css" as="style">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/common_new.css">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/swiper.css">
+    <!--<include file="./Template/5u/common/common.html" />-->
+</head>
+<body class="login_bg" ng-controller="myReg">
+<!-- 导航开始 -->
+<include file="./Template/5u/index/public/nav.html"/>
+
+<form id="formID">
+    <div class="login_box">
+    <div class="clear">
+        <a href="regiest.html">
+            <p class="log_top log_select fl">
+                注册
+            </p>
+        </a>
+        <a href="__MODULE__/Login/login">
+            <p class="log_top fl">
+                登&nbsp;录
+            </p>
+        </a>
+    </div>
+
+    <div class="login_cl clear">
+        <input class="log_input fl" type="text" placeholder="手机号" id="mobile" name="mobile">
+        <div class="login_r fl clear">
+            <img class="te_status fl" src="{$Think.INDEX}/images/login-right.png" alt="">
+            <p class="te_word fl">请输入正确的手机号</p>
+        </div>
+    </div>
+
+    <div class="login_cl clear">
+        <input class="msg_input fl" type="text" placeholder="短信验证码" name="code" id="code">
+        <input class="get_code fl" type="button" value="获取验证码">
+        <div class="login_r fl clear">
+            <img class="te_status fl" src="{$Think.INDEX}/images/login-wrong.png" alt="">
+            <p class="te_word fl">验证码无效或已过期，请重新获取</p>
+        </div>
+    </div>
+
+    <div class="login_cl clear">
+        <input class="log_input fl" type="password" placeholder="请设置密码" name="password" id="password">
+        <div class="login_r fl clear">
+            <img class="te_status fl" src="{$Think.INDEX}/images/login-wrong.png" alt="">
+            <p class="te_word fl">密码必须由6-16个字符组成，区分大小写</p>
+        </div>
+    </div>
+
+    <div class="login_cl clear">
+        <input class="log_input fl" type="text" placeholder="昵称" name="nickname" id="nickname">
+        <div class="login_r fl clear">
+            <img class="te_status fl" src="{$Think.INDEX}/images/login-wrong.png" alt="">
+            <p class="te_word fl">昵称必须由3-11个字符组成</p>
+        </div>
+    </div>
+
+    <div class="login_cl2 clear">
+        <div class="fl regist_tip_icon2"></div>
+        <p class="fl agree_tip"><span>我已阅读并同意</span><span>《用户注册协议》</span></p>
+    </div>
+    <div class="reg_btn">注册</div>
+</div>
+</form>
+
+
+<!-- 协议 -->
+
+<div class="mask" style="display:none"></div>
+<div class="protocol">
+    <p  class="pro_close fr">
+        ×
+    </p>
+    <h2 class="pro_tit">用户注册协议</h2>
+    <p>
+        <span>一、总则</span>
+        <span>1.1&nbsp;&nbsp;&nbsp;庖丁技术众包平台（以下简称“本平台”）的所有权和运营权归广东庖丁技术开发股份有限公司所有。</span>
+        <span>1.2&nbsp;&nbsp;&nbsp;用户在注册之前，应当仔细阅读本协议，并同意遵守本协议后方可成发布。一旦发布成功，则用户与本平台之间自动形成协议关系，用户应当受本协议的约束。用户在使用特殊的服务或产品时，应当同意接受相关协议后方能使用。</span>
+        <span>1.3&nbsp;&nbsp;&nbsp;本协议则可由本平台随时更新，用户应当及时关注并同意，本平台不承担通知义务。本平台的通知、公告、声明或其它类似内容是本协议的一部分。</span>
+    </p>
+
+    <p>
+        <span>二、服务内容</span>
+        <span>2.1&nbsp;&nbsp;&nbsp;平台的具体内容由本平台根据实际情况提供。
+			</span>
+        <span>2.2&nbsp;&nbsp;&nbsp;本平台仅提供相关的网络服务，除此之外与相关网络服务有关的设备(如个人电脑、手机、及其他与接入互联网或移动网有关的装置)及所需的费用(如为接入互联网而支付的电话费及上网费、为使用移动网而支付的手机费)均应由用户自行负担。</span>
+    </p>
+    <p>
+        <span>三、用户帐号</span>
+        <span>
+				3.1&nbsp;&nbsp;&nbsp;经本平台注册系统完成注册程序并通过身份认证的用户即成为正式用户，可以获得本平台规定用户所应享有的一切权限；未经认证仅享有本平台规定的部分会员权限。本平台有权对会员的权限设计进行变更。
+			</span>
+        <span>
+				3.21&nbsp;&nbsp;&nbsp;用户只能按照注册要求使用真实姓名，及身份证号注册。用户有义务保证密码和帐号的安全，用户利用该密码和帐号所进行的一切活动引起的任何损失或损害，由用户自行承担全部责任，本平台不承担任何责任。如用户发现帐号遭到未授权的使用或发生其他任何安全问题，应立即修改帐号密码并妥善保管，如有必要，请通知本平台。因黑客行为或用户的保管疏忽导致帐号非法使用，本平台不承担任何责任。
+			</span>
+    </p>
+    <p>
+        <span>四、使用规则</span>
+        <span>
+				4.1   遵守中华人民共和国相关法律法规，包括但不限于《中华人民共和国计算机信息系统安全保护条例》、《计算机软件保护条例》、《最高人民法院关于审理涉及计算机网络著作权纠纷案件适用法律若干问题的解释(法释[2004]1号)》、《全国人大常委会关于维护互联网安全的决定》、《互联网电子公告服务管理规定》、《互联网新闻信息服务管理规定》、《互联网著作权行政保护办法》和《信息网络传播权保护条例》等有关计算机互联网规定和知识产权的法律和法规、实施办法。
+			</span>
+        <span>
+				4.2   用户对其自行发表、上传或传送的内容负全部责任，所有用户不得在本平台任何页面发布、转载、传送含有下列内容之一的信息，否则本平台有权自行处理并不通知用户：<br>
+				(1)   违反宪法确定的基本原则的；<br>
+				(2)   危害国家安全，泄漏国家机密，颠覆国家政权，破坏国家统一的；<br>
+				(3)   损害国家荣誉和利益的；<br>
+				(4)   煽动民族仇恨、民族歧视，破坏民族团结的；<br>
+				(5)   破坏国家宗教政策，宣扬邪教和封建迷信的；<br>
+				(6)   散布谣言，扰乱社会秩序，破坏社会稳定的；<br>
+				(7)   散布淫秽、色情、赌博、暴力、恐怖或者教唆犯罪的；<br>
+				(8)   侮辱或者诽谤他人，侵害他人合法权益的；<br>
+				(9)   煽动非法集会、结社、游行、示威、聚众扰乱社会秩序的；<br>
+				(10) 以非法民间组织名义活动的；<br>
+				(11) 含有法律、行政法规禁止的其他内容的。
+			</span>
+        <span>4.3   用户承诺对其发表或者上传于本平台的所有信息(即属于《中华人民共和国著作权法》规定的作品，包括但不限于文字、图片、音乐、电影、表演和录音录像制品和电脑程序等)均享有完整的知识产权，或者已经得到相关权利人的合法授权；如用户违反本条规定造成本平台被第三人索赔的，用户应全额补偿本平台一切费用(包括但不限于各种赔偿费、诉讼代理费及为此支出的其它合理费用)；</span>
+        <span>
+				4.4   当第三方认为用户发表或者上传于本平台的信息侵犯其权利，并根据《信息网络传播权保护条例》或者相关法律规定向本平台发送权利通知书时，用户同意本平台可以自行判断决定删除涉嫌侵权信息，除非用户提交书面证据材料排除侵权的可能性，本平台将不会自动恢复上述删除的信息；<br>
+				(1)    不得为任何非法目的而使用网络服务系统；<br>
+				(2)    遵守所有与网络服务有关的网络协议、规定和程序；<br>
+				(3)    不得利用本平台进行任何可能对互联网的正常运转造成不利影响的行为；<br>
+				(4)    不得利用本平台进行任何不利于本平台的行为。
+			</span>
+        <span>
+				4.5   如用户在使用网络服务时违反上述任何规定，本平台有权要求用户改正或直接采取一切必要的措施(包括但不限于删除用户张贴的内容、暂停或终止用户使用网络服务的权利)以减轻用户不当行为而造成的影响。
+			</span>
+    </p>
+    <p>
+        <span>五、隐私保护</span>
+        <span>
+				5.1   本平台不对外公开或向第三方提供单个用户的注册资料及用户在使用网络服务时存储在本平台的非公开内容，但下列情况除外：<br>
+				(1)   事先获得用户的明确授权；<br>
+				(2)   根据有关的法律法规要求；<br>
+				(3)   按照相关政府主管部门的要求；<br>
+				(4)   为维护社会公众的利益。
+			</span>
+        <span>
+				5.2   本平台可能会与第三方合作向用户提供相关的网络服务，在此情况下，如该第三方同意承担与本平台同等的保护用户隐私的责任，则本平台有权将用户的注册资料等提供给该第三方。
+			</span>
+        <span>
+				5.3   在不透露单个用户隐私资料的前提下，本平台有权对整个用户数据库进行分析并对用户数据库进行商业上的利用。
+			</span>
+    </p>
+    <p>
+        <span>六、版权声明</span>
+        <span>6.1   本平台的文字、图片、音频、视频等版权均归广东庖丁技术开发股份有限公司享有或与作者共同享有，未经本平台许可，不得任意转载。</span>
+        <span>
+				6.2   本平台特有的标识、版面设计、编排方式等版权均属广东庖丁技术开发股份有限公司享有，未经本平台许可，不得任意复制或转载。
+			</span>
+        <span>
+				6.3   使用本平台的任何内容均应注明“来源于庖丁技术”及署上作者姓名，按法律规定需要支付稿酬的，应当通知本平台及作者及支付稿酬，并独立承担一切法律责任。
+			</span>
+        <span>
+				6.4   本平台享有所有作品用于其它用途的优先权，包括但不限于网站、电子杂志、平面出版等，但在使用前会通知作者，并按同行业的标准支付稿酬。
+			</span>
+        <span>
+				6.5   本平台所有内容仅代表作者自己的立场和观点，与本平台无关，由作者本人承担一切法律责任。
+			</span>
+        <span>
+				6.6   恶意转载本平台内容的，本平台保留将其诉诸法律的权利。
+			</span>
+
+    </p>
+
+</div>
+
+</body>
+<script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
+<script src="{$Think.INDEX}/js/common.js"></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
+<script>
+
+    var app = angular.module('register', []);
+    app.controller('myReg', function($scope,$http) {
+        $('.reg_btn').on("click",function(){
+            var regPsw = /^.{6,}$/;
+            var regName = /^[\u4E00-\u9FA5A-Za-z]+$/;
+            var data = {};
+            var t = $('#formID').serializeArray();
+            $.each(t, function () {
+                data[this.name] = this.value;
+            });
+
+            if( data['password']=="" || data['code']=="" || data['nickname']=="" || data['mobile']=="" ){
+                alert("请完善信息再注册");
+                return false;
+            }
+
+            if(!regPsw.test(data['password'])){
+                alert("密码不少于6位数");
+                return false;
+            }
+
+            if(!regName.test(data['nickname'])){
+                alert("昵称只能输入中文和英文");
+                return false;
+            }
+
+            $http({
+                method: 'POST',
+                data:data,
+                url: '/api.php/User/register',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                transformRequest: function(obj) {
+                    var str = [];
+                    for (var p in obj) {
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    }
+                    return str.join("&");
+                }
+            }).then(function successCallback(response) {
+
+                if(response.data.result == '1'){
+                    alert('注册成功');
+                    window.location.href="/index.php/Index/Index/index.html";
+                }else{
+                    alert(response.data.msg);
+                    return false;
+                }
+
+            }, function errorCallback(response) {
+
+            });
+
+        });
+
+        $(".get_code").on("click",function(){
+            var regTel = /^[1][3,4,5,7,8][0-9]{9}$/;
+            var mobile = $('#mobile').val();
+            if(!regTel.test(mobile)){
+                alert("请输入正确的手机号码");
+                return false;
+            }else{
+                $http({
+                    method: 'POST',
+                    data:{mobile:mobile},
+                    url: '/api.php/Sms/sendMessage',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    transformRequest: function(obj) {
+                        var str = [];
+                        for (var p in obj) {
+                            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                        }
+                        return str.join("&");
+                    }
+                }).then(function successCallback(response) {
+                    time($(".get_code"));
+                }, function errorCallback(response) {
+
+                });
+            }
+        });
+    });
+
+
+    $(".pro_close").on("click",function(){
+        $(".protocol").hide();
+        $(".mask").hide();
+    })
+
+    $(".agree_tip").on("click",function(){
+        $(".protocol").show();
+        $(".mask").show();
+    })
+</script>
+</html>

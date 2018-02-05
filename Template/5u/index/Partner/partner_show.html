@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="tec">
+<html lang="en" ng-app="partner">
 <head>
     <meta charset="UTF-8">
     <title>庖丁技术</title>
@@ -22,7 +22,7 @@
         background: #fff;
     }
 </style>
-<body style="background:#f4f4f4;">
+<body style="background:#f4f4f4;" ng-controller="advancedCtrl">
 <!-- 导航开始 -->
 <include file="./Template/5u/index/public/nav.html" />
 <!-- 导航结束 -->
@@ -44,9 +44,9 @@
 <!-- 机构列表 -->
 <div class="section">
     <div class="partner_wrap clear">
-        <div class="part_option fl shadow">
-            <img class="part_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
-            <p class="part_list_tit twoline">技术标题</p>
+        <div class="part_option fl shadow" ng-repeat="assoList in assoLists">
+            <img class="part_img" ng-src="{{ assoList.cover_url }}" alt="">
+            <p class="part_list_tit twoline">{{ assoList.title }}</p>
 
             <div class="part_bottom clear">
                 <div class="fl clear">
@@ -59,57 +59,9 @@
                 </div>
             </div>
         </div>
-
-        <div class="part_option fl shadow">
-            <img class="part_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
-            <p class="part_list_tit twoline">技术标题</p>
-
-            <div class="part_bottom clear">
-                <div class="fl clear">
-                    <img class="tac_icon fl" src="{$Think.INDEX}/images/icon-bs.png" alt="">
-                    <span class="part_num fl">16项目</span>
-                </div>
-                <div class="fr part_bo_ri">
-                    <img class="part_lable" src="{$Think.INDEX}/images/organization-authenticated.png" alt="">
-                    <img  src="{$Think.INDEX}/images/organization-integrity.png" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="part_option fl shadow">
-            <img class="part_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
-            <p class="part_list_tit twoline">技术标题</p>
-
-            <div class="part_bottom clear">
-                <div class="fl clear">
-                    <img class="tac_icon fl" src="{$Think.INDEX}/images/icon-bs.png" alt="">
-                    <span class="part_num fl">16项目</span>
-                </div>
-                <div class="fr part_bo_ri">
-                    <img class="part_lable" src="{$Think.INDEX}/images/organization-authenticated.png" alt="">
-                    <img  src="{$Think.INDEX}/images/organization-integrity.png" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div class="part_option fl shadow">
-            <img class="part_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
-            <p class="part_list_tit twoline">技术标题</p>
-
-            <div class="part_bottom clear">
-                <div class="fl clear">
-                    <img class="tac_icon fl" src="{$Think.INDEX}/images/icon-bs.png" alt="">
-                    <span class="part_num fl">16项目</span>
-                </div>
-                <div class="fr part_bo_ri">
-                    <img class="part_lable" src="{$Think.INDEX}/images/organization-authenticated.png" alt="">
-                    <img  src="{$Think.INDEX}/images/organization-integrity.png" alt="">
-                </div>
-            </div>
-        </div>
-        <div class="part_option fl shadow">
-            <img class="part_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
-            <p class="part_list_tit twoline">技术标题</p>
+        <div class="part_option fl shadow" ng-repeat="qyList in qyLists">
+            <img class="part_img" ng-src="{{ qyList.cover_url }}" alt="" width="283" height="176">
+            <p class="part_list_tit twoline">{{ qyList.title }}</p>
 
             <div class="part_bottom clear">
                 <div class="fl clear">
@@ -127,8 +79,44 @@
 <include file="./Template/5u/index/public/footer.html" />
 </body>
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script src="{$Think.INDEX}/js/common.js"></script>
 <script>
+
+    var app = angular.module('partner',[]);
+
+    app.controller("advancedCtrl", function ($scope, $http) {
+        //协会
+        $http({
+            method:'GET',
+            params:{page_num:500},
+            url:'/api.php/ChannelIndex/index/action/dataList/channel/jtgs/type/1/page/1',
+        }).then(function successCallback(response){
+            $scope.assoLists = response.data.data;
+        },function errorCallback(){
+        });
+
+        var data={data_by:'is_red desc,create_time desc', get_page:true, page:1, page_num:500};
+        //企业
+        $http({
+            method:'POST',
+            data: data,
+            url:'/api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1/page/1',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            transformRequest: function (obj) {
+                var str = [];
+                for (var p in obj) {
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                }
+                return str.join("&");
+            }
+        }).then(function successCallback(response){
+            $scope.qyLists=response.data.data.info;
+        },function errorCallback(){
+
+        });
+    });
+
     $(".sub_class").on("click",".sub_list li",function(){
         $(this).addClass('subnav_selected').siblings('.sub_list li').removeClass('subnav_selected');
     })
