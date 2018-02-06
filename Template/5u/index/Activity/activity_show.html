@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="tec_list">
+<html lang="en" ng-app="activity">
 <head>
     <meta charset="UTF-8">
     <title>庖丁技术</title>
@@ -28,7 +28,7 @@
         border: 1px solid #ff971d;
     }
 </style>
-<body style="background:#f4f4f4;">
+<body style="background:#f4f4f4;" ng-controller="actCtrl" ng-cloak>
 <!-- 导航开始 -->
 <include file="./Template/5u/index/public/nav.html" />
 <!-- 导航结束 -->
@@ -52,101 +52,89 @@
 </div>
 <div class="event_wrap clear">
 
-    <div class="event-card fl">
-        <a href='__CONTROLLER__/activity_detail.html' target="_blank">
-            <img class="lazyimg" src="{$Think.INDEX}/images/activity-activity1.png"/>
+    <div class="event-card fl" ng-repeat="list in lists">
+        <a href='__CONTROLLER__/activity_detail.html?data_id={{list.id}}' target="_blank">
+            <img class="lazyimg" ng-src="{{list.sponsor_logo_url}}" width="386" height="286"/>
         </a>
         <div class="pl20">
             <h3 class='ec-title'>
-                <a href="##" target="_blank">
-                    【HELLO DAY】深圳专场
+                <a href='__CONTROLLER__/activity_detail.html?data_id={{list.id}}' target="_blank">
+                    {{list.title}}
                 </a>
             </h3>
             <div class='ec-time clear lh26'>
                 <p class="fl term1"><i class="iconfont icon-naozhong">&nbsp;</i></p>
                 <p class="fl term2">
 						<span>
-							2018/ 01/02/   -
-							2018/ 12/31/
+							{{list.formal_start_time | formatDate}}
 						</span>
                 </p>
             </div>
             <div class='ec-time clear'>
                 <p class="fl term1"><i class="iconfont icon-dingwei">&nbsp;</i></p>
                 <p class="fl term2">
-                    深圳市软件产业基地4栋C座205
+                    {{list.address}}
                 </p>
             </div>
             <div class="ec-sign">
-                <a href='__CONTROLLER__/activity_release.html' class="sign-btn" title="立即报名" target="_blank">立即报名</a>
+
+                <a href='__CONTROLLER__/activity_release.html' class="sign-btn" title="立即报名" target="_blank" ng-show="list.status == 1">立即报名</a>
+                <a  class="sign-btn"  ng-show="list.status == 0">活动已结束</a>
             </div>
         </div>
     </div>
 
-    <div class="event-card fl">
-        <a href='#' target="_blank">
-            <img class="lazyimg" src="{$Think.INDEX}/images/activity-activity1.png" />
-        </a>
-        <div class="pl20">
-            <h3 class='ec-title'>
-                <a href="##" target="_blank">
-                    【HELLO DAY】深圳专场
-                </a>
-            </h3>
-            <div class='ec-time clear lh26'>
-                <p class="fl term1"><i class="iconfont icon-naozhong">&nbsp;</i></p>
-                <p class="fl term2">
-						<span>
-							2018/ 01/02/   -
-							2018/ 12/31/
-						</span>
-                </p>
-            </div>
-            <div class='ec-time clear'>
-                <p class="fl term1"><i class="iconfont icon-dingwei">&nbsp;</i></p>
-                <p class="fl term2">
-                    深圳市软件产业基地4栋C座205
-                </p>
-            </div>
-            <div class="ec-sign">
-                <a href='##' class="sign-btn" title="立即报名" target="_blank">立即报名</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="event-card fl">
-        <a href='#' target="_blank">
-            <img class="lazyimg" src="{$Think.INDEX}/images/activity-activity1.png" />
-        </a>
-        <div class="pl20">
-            <h3 class='ec-title'>
-                <a href="##" target="_blank">
-                    【HELLO DAY】深圳专场
-                </a>
-            </h3>
-            <div class='ec-time clear lh26'>
-                <p class="fl term1"><i class="iconfont icon-naozhong">&nbsp;</i></p>
-                <p class="fl term2">
-						<span>
-							2018/ 01/02/   -
-							2018/ 12/31/
-						</span>
-                </p>
-            </div>
-            <div class='ec-time clear'>
-                <p class="fl term1"><i class="iconfont icon-dingwei">&nbsp;</i></p>
-                <p class="fl term2">
-                    深圳市软件产业基地4栋C座205
-                </p>
-            </div>
-            <div class="ec-sign">
-                <a href='##' class="sign-btn" title="立即报名" target="_blank">立即报名</a>
-            </div>
-        </div>
-    </div>
 </div>
 <include file="./Template/5u/index/public/footer.html" />
 </body>
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
 <script src="{$Think.INDEX}/js/common.js"></script>
+<script src="{$Think.MOBILE}/js/angular.min.js"></script>
+<script>
+
+    var data={
+        page:1,
+        page_num: 6,
+        order_field:"create_time",
+        category_id:0,
+        tag_id:0,
+        order_by:"DESC"
+    }
+    var app = angular.module("activity",[]);
+    app.filter('formatDate',function(){
+        return function(date){
+            return date = date.substr(0,16);
+        };
+    });
+    app.controller("actCtrl",function ($scope,$http){
+        //  获取活动列表接口
+        $http({
+            method: 'POST',
+            data: data,
+            url: '/api.php/ChannelIndex/index/action/dataList/channel/hd/type/1',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            transformRequest: function (obj) {
+                var str = [];
+                for (var p in obj) {
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                }
+                return str.join("&");
+            }
+        }).then(function successCallback(response){
+            var listData = response.data.data;
+            for (var i=0;i<listData.length;i++){
+                var startTime = listData[i]['formal_start_time'];
+                var changeTime = startTime.replace(/-/g,'/');
+                if(Date.parse(new Date()) > Date.parse(changeTime)){
+                    listData[i]['status'] = 0;//已结束
+                }else{
+                    listData[i]['status'] = 1;//未举办
+                }
+            }
+            $scope.lists = listData;
+        },function errorCallback(){
+
+        })
+    });
+</script>
 </html>

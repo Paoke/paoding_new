@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="tec_list">
+<html lang="en" ng-app="detail">
 <head>
     <meta charset="UTF-8">
     <title>庖丁技术</title>
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
     <!--<include file="./Template/5u/common/common.html" />   上线开启-百度统计-->
 </head>
-<body style="background:#f4f4f4;">
+<body style="background:#f4f4f4;" ng-controller="detailCtrl" ng-cloak>
 <!-- 导航开始 -->
 <include file="./Template/5u/index/public/nav.html" />
 <!-- 导航结束 -->
@@ -20,66 +20,61 @@
 <div class="section">
     <div class="demand_left clear">
         <div class="tec_info fl clear" style="width:750px;background:#fff">
-            <p class="number_dem">编号：26</p>
+            <p class="number_dem">编号：{{detail.id}}</p>
             <div class="operate_dem">
-                发布于：<span class="operate_ml">2017-10-14</span>
-                浏览&nbsp;&nbsp;<span>167</span>
+                发布于：<span class="operate_ml">{{detail.create_time | formatDate}}</span>
+                浏览&nbsp;&nbsp;<span>{{detail.clicks}}</span>
                 <img class="operate_ml" src="{$Think.INDEX}/images/icon-collect.png" alt="">
                 <img  src="{$Think.INDEX}/images/icon-wechat.png" alt="">
             </div>
-            <p class="tec_title">机械材料</p>
+            <p class="tec_title">{{detail.title}}</p>
             <div class="clear">
                 <ul class="tec_detail fl">
                     <li>
                         <span class="tec_way">需求领域</span>
-                        <span class="tec_ans">材料科学</span>
+                        <span class="tec_ans">{{detail.cat_name}}</span>
                     </li>
                     <li>
                         <span class="tec_way">姓名</span>
-                        <span class="tec_ans">张东</span>
+                        <span class="tec_ans">{{detail.lxrxm}}</span>
                     </li>
                     <li>
                         <span class="tec_way">手机</span>
-                        <span class="tec_ans">13256432154</span>
+                        <span class="tec_ans">{{detail.dhhm}}</span>
                     </li>
                     <li>
                         <span class="tec_way">邮箱</span>
-                        <span class="tec_ans">asdf@qq.cc</span>
+                        <span class="tec_ans">{{detail.dzyx}}</span>
                     </li>
                     <li>
                         <span class="tec_way">公司名</span>
-                        <span class="tec_ans">士大夫士大夫苏打公司</span>
+                        <span class="tec_ans">{{detail.gsm}}</span>
                     </li>
                 </ul>
 
                 <ul class="tec_detail fl">
                     <li>
                         <span class="tec_way">投入预算</span>
-                        <span class="tec_ans">12万</span>
+                        <span class="tec_ans">{{detail.yfys}}</span>
                     </li>
                 </ul>
 
                 <ul class="tec_detail fl" style="margin-left:40px;">
                     <li>
                         <span class="tec_way">研发周期</span>
-                        <span class="tec_ans">10个月</span>
+                        <span class="tec_ans">{{detail.yfzq}}</span>
                     </li>
                 </ul>
                 <ul class="tec_detail fl" style="margin-left:40px;">
                     <li>
                         <span class="tec_way">需求程度</span>
-                        <span class="tec_ans">新品研发</span>
+                        <span class="tec_ans">{{detail.xpyf}}</span>
                     </li>
                 </ul>
             </div>
 
             <!-- 内容 -->
-            <div class="demand_ct_det">
-                水电费第三方士士大夫但是苏打放多少发送到发送到发送到苏打是大夫士大夫
-                电费第三方士士大夫但是苏打放多少发送到发送到发送到苏打是大夫士大夫<Br>
-                电费第三方士士大夫但是苏打放多少发送到发送到发送到苏打是大夫士大夫<Br>
-                电费第三方士士大夫但是苏打放多少发送到发送到发送到苏打是大夫士大夫<Br>
-            </div>
+            <div class="demand_ct_det2" ng-bind-html="detail.content|trustHtml"></div>
         </div>
 
         <div class="demand_r fl">
@@ -89,16 +84,15 @@
                     <div class="div2"></div>
                 </div>
 
-                <div class="main_r_section">
-                    <p class="tec_tit_p">喷涂</p>
-                    <p class="tec_time_p">发布于：<span>2017-10-25</span></p>
-                </div>
 
-                <div class="main_r_section">
-                    <p class="tec_tit_p">喷涂</p>
-                    <p class="tec_time_p">发布于：<span>2017-10-25</span></p>
-                </div>
-                <p class="publish_tec">发布技术</p>
+                    <div class="main_r_section" ng-repeat="demandList in demandLists">
+                        <a href="__CONTROLLER__/demand_detail.html?data_id={{demandList.id}}">
+                            <p class="tec_tit_p">{{demandList.title}}</p>
+                            <p class="tec_time_p">发布于：<span>{{demandList.create_time|formatDate}}</span></p>
+                        </a>
+                    </div>
+
+                <a href="__MODULE__/Tec/tec_release.html"><p class="publish_tec">发布技术</p></a>
             </div>
 
         </div>
@@ -107,5 +101,67 @@
 <include file="./Template/5u/index/public/footer.html" />
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
 <script src="{$Think.INDEX}/js/common.js"></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
+<script>
+    var data_id = GetQueryString("data_id");
+    var app = angular.module("detail",[]);
+
+    app.filter('trustHtml',function ($sce){
+        return function(val) {
+            return $sce.trustAsHtml(val);
+        }
+    });
+
+    app.filter('formatDate',function(){
+        return function(date){
+            return date = date.substr(0,10);
+        };
+    });
+
+    //需求详情
+    app.controller("detailCtrl",function ($scope,$http) {
+
+        //需求详情
+        $http({
+            method: 'GET',
+            params: {data_id: data_id},
+            //获取需求详情接口
+            url: '/api.php/ChannelIndex/index/action/dataDetail/channel/xq/type/1',
+        }).then(function successCallback(response) {
+            $scope.detail = response.data.data;
+        }, function errorCallback() {
+        });
+
+        //需求推荐
+        var data = {
+            "page": "1",
+            "page_num": "2",
+            "order_field": "create_time",
+            "order_by": "DESC",
+            "category_id": "0",
+            "tag_id": "0",
+            "get_page":"true",
+            "search":""
+        };
+        $http({
+            method: 'POST',
+            data: data,
+            url: '/api.php/ChannelIndex/index/action/dataList/channel/xq/type/1',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            transformRequest: function (obj) {
+                var str = [];
+                for (var p in obj) {
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                }
+                return str.join("&");
+            }
+        }).then(function successCallback(response) {
+            $scope.demandLists = response.data.data.info;
+        }, function errorCallback(response) {
+        });
+    });
+
+
+</script>
 </body>
 </html>

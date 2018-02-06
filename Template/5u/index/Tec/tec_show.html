@@ -69,23 +69,24 @@
     <!-- 技术列表 -->
     <div class="section">
         <div class="project_wrap clear" v-cloak>
-            <div class="tec_option shadow fl" v-for="list in listData">
-                <img class="tec_img" v-bind:src="list.cover_url" alt="" width="256" height="190">
-                <p class="tec_list_tit">{{list.title}}</p>
-                <div class="publish_time">
-                    发布于
-                    <span>{{list.create_time}}</span>
+            <a @click="getDetail(list.id)" v-for="list in listData">
+                <div class="tec_option shadow fl">
+                    <img class="tec_img" v-bind:src="list.cover_url" alt="" width="256" height="190">
+                    <p class="tec_list_tit">{{list.title}}</p>
+                    <div class="publish_time">
+                        发布于
+                        <span>{{list.create_time}}</span>
+                    </div>
+                    <div class="clear">
+                        <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
+                        <span class="tec_type fl">{{ list.yyxy }}</span>
+                    </div>
+                    <div class="adhi_print">
+                        <span class="adhibition">{{ list.cat_name }}</span>
+                        <span class="print">{{list.csd}}</span>
+                    </div>
                 </div>
-                <div class="clear">
-                    <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
-                    <span class="tec_type fl">{{ list.yyxy }}</span>
-                </div>
-                <div class="adhi_print">
-                    <span class="adhibition">{{ list.cat_name }}</span>
-                    <span class="print">{{list.csd}}</span>
-                </div>
-            </div>
-
+            </a>
         </div>
     </div>
     <div class="page" v-cloak>
@@ -272,7 +273,7 @@
                 })
             },
             getDetail: function (id) {
-                window.location.href = "__MODULE__/Article/detail/channel/{$channel}/type/1/data_id/" + id;
+                window.location.href = "__CONTROLLER__/tec_detail.html?data_id=" + id;
             },
             getZtDetail: function (id) {
                 window.location.href = "__CONTROLLER__/tec_list.html?id=" + id;

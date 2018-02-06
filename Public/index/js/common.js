@@ -1,12 +1,12 @@
 // 导航栏高亮
 var urlStr = location.href;
-// 截取"-"之前的字段
-var reg = /([-][^/]+)$/;
-$("#ul_a a").each(function () {
-    // 截取最后一个"/"之后的字段
-    var index = $(this).attr('href').lastIndexOf("\/");
+// console.log(urlStr);
+var reg = /([_][^/]+)$/;
+$(".navigation-list a").each(function () {
+    // 截取"-"之前的字段
+    var index=$(this).attr('href').lastIndexOf("\/");
     var thisUrl = $(this).attr('href') .substring(index + 1, $(this).attr('href') .length).replace(reg, "");
-    	// console.log(thisUrl);
+    thisUrl = thisUrl.substring(0,1).toUpperCase()+thisUrl.substring(1);
     if ((urlStr + '/').indexOf(thisUrl) > -1 && thisUrl != '') {
         $(this).addClass('selected-link');
     } else {

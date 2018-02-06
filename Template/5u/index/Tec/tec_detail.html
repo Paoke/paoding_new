@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="tec_list">
+<html lang="en" ng-app="detail_tec">
 <head>
     <meta charset="UTF-8">
     <title>庖丁技术</title>
@@ -11,55 +11,55 @@
     <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
     <!--<include file="./Template/5u/common/common.html" />   上线开启-百度统计-->
 </head>
-<body>
+<body ng-controller="detail_tecCtrl" ng-cloak>
 <!-- 导航开始 -->
 <include file="./Template/5u/index/public/nav.html" />
 <!-- 导航结束 -->
 <div class="section clear" style="padding-bottom:30px;">
     <div class="fl">
-        <img class="tec_left_img" src="{$Think.INDEX}/images/tech-technology1-technology2l.jpg" alt="">
+        <img class="tec_left_img" ng-src="{{lists.lbxt}}" alt="">
     </div>
     <div class="tec_info fl">
-        <p class="number">编号：26</p>
+        <p class="number">编号：{{lists.id}}</p>
         <div class="operate">
-            发布于：<span class="operate_ml">2017-10-14</span>
-            浏览&nbsp;&nbsp;<span>167</span>
+            发布于：<span class="operate_ml" ng-cloak>{{lists.create_time | formatDate}}</span>
+            浏览&nbsp;&nbsp;<span>{{lists.clicks}}</span>
             <img class="operate_ml" src="{$Think.INDEX}/images/icon-collect.png" alt="">
             <img  src="{$Think.INDEX}/images/icon-wechat.png" alt="">
         </div>
-        <p class="tec_title">机械材料</p>
+        <p class="tec_title">{{lists.title}}</p>
         <div class="clear">
             <ul class="tec_detail fl">
                 <li>
                     <span class="tec_way">合作方式</span>
-                    <span class="tec_ans">技术转让</span>
+                    <span class="tec_ans">{{lists.hzxs}}</span>
                 </li>
                 <li>
                     <span class="tec_way">交付形式</span>
-                    <span class="tec_ans">整体交付</span>
+                    <span class="tec_ans">{{lists.jfxs}}</span>
                 </li>
                 <li>
                     <span class="tec_way">成熟度</span>
-                    <span class="tec_ans">批量销售</span>
+                    <span class="tec_ans">{{lists.csd}}</span>
                 </li>
                 <li>
                     <span class="tec_way">应用行列</span>
-                    <span class="tec_ans">室内装修、消防安全</span>
+                    <span class="tec_ans">{{lists.yyxy}}</span>
                 </li>
                 <p class="get_contack">获取联系方式</p>
                 <!-- 联系方式 -->
                 <div class="contack">
                     <li>
                         <span class="tec_way">联系人</span>
-                        <span class="tec_ans">郭小平</span>
+                        <span class="tec_ans">{{lists.lxrxm}}</span>
                     </li>
                     <li>
                         <span class="tec_way">手机号</span>
-                        <span class="tec_ans">32132154311</span>
+                        <span class="tec_ans">{{lists.dhhm}}</span>
                     </li>
                     <li>
                         <span class="tec_way">邮箱号</span>
-                        <span class="tec_ans">guosd#qq.com</span>
+                        <span class="tec_ans">{{lists.dzyx}}</span>
                     </li>
                 </div>
             </ul>
@@ -67,15 +67,11 @@
             <ul class="tec_detail fl">
                 <li>
                     <span class="tec_way">合作价格</span>
-                    <span class="tec_ans">11w</span>
+                    <span class="tec_ans">{{lists.hzjg}}</span>
                 </li>
                 <li>
                     <span class="tec_way">技术领域</span>
-                    <span class="tec_ans">应用类</span>
-                </li>
-                <li>
-                    <span class="tec_way">专利</span>
-                    <span class="tec_ans">8项</span>
+                    <span class="tec_ans">{{lists.lingyu}}</span>
                 </li>
 
             </ul>
@@ -107,22 +103,22 @@
             <div class="main_part">
                 <a name="tip1">
                     <p class="part_title">技术讲述</p>
-                    <div class="main_ct">水电费打算发水电费打算发水电费打算发士大夫苏打水电费打算发士大夫苏打水电费打算发士大夫苏打水电费打算发士大夫苏打水电费打算发士大夫苏打士大夫苏打士大夫苏打</div>
+                    <div class="main_ct" ng-bind-html="lists.content|trustHtml"></div>
                 </a>
 
                 <a name="tip2">
                     <p class="part_title">技术优势</p>
-                    <div class="main_ct">水电费打算发水电费打算发水电费打算发士大夫苏打水电费打算发士大夫苏打水电费打算发士大夫苏打水电费打算发士大夫苏打水电费打算发士大夫苏打士大夫苏打士大夫苏打</div>
+                    <div class="main_ct" ng-bind-html="lists.jsys|trustHtml"></div>
                 </a>
 
                 <a name="tip3">
                     <p class="part_title">效果指标</p>
-                    <div class="main_ct">水电费打算发水电费打算发水电费打算发士大夫苏打水电费打算发士大夫苏打水电费打算发士大夫苏打水电费打算发士大夫苏打水电费打算发士大夫苏打士大夫苏打士大夫苏打</div>
+                    <div class="main_ct" ng-bind-html="lists.xgzb|trustHtml"></div>
                 </a>
 
                 <a name="tip4">
                     <p class="part_title">应用案例</p>
-                    <div class="main_ct">水电费打算发水电费打算发水电费打算发士大夫苏打水电费打算发士大夫苏打水电费打算发士大夫苏打水电费打算发士大夫苏打水电费打算发士大夫苏打士大夫苏打士大夫苏打</div>
+                    <div class="main_ct" ng-bind-html="lists.yyal|trustHtml"></div>
                 </a>
             </div>
         </div>
@@ -134,17 +130,14 @@
                     <div class="div2"></div>
                 </div>
 
-                <div class="main_r_section">
-                    <img class="tec_right_pic" src="{$Think.INDEX}/images/tech-technology1-technology2l.jpg" alt="">
-                    <p class="tec_tit_p">喷涂</p>
-                    <p class="tec_time_p">发布于：<span>2017-10-25</span></p>
+                <div class="main_r_section" ng-repeat="tecList in tecLists">
+                    <a href="__CONTROLLER__/tec_detail.html?data_id={{tecList.id}}">
+                        <img class="tec_right_pic" ng-src="{{tecList.cover_url}}" alt="">
+                        <p class="tec_tit_p">{{tecList.title}}</p>
+                        <p class="tec_time_p">发布于：<span>{{tecList.create_time | formatDate}}</span></p>
+                    </a>
                 </div>
 
-                <div class="main_r_section">
-                    <img class="tec_right_pic" src="{$Think.INDEX}/images/tech-technology1-technology2l.jpg" alt="">
-                    <p class="tec_tit_p">喷涂</p>
-                    <p class="tec_time_p">发布于：<span>2017-10-25</span></p>
-                </div>
             </div>
         </div>
     </div>
@@ -156,4 +149,62 @@
 </body>
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
 <script src="{$Think.INDEX}/js/common.js"></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
+<script>
+    var data_id = GetQueryString('data_id');
+    var app = angular.module('detail_tec',[]);
+
+    app.filter("trustHtml",function ($sce){
+        return function(val) {
+            return $sce.trustAsHtml(val);
+        }
+    });
+
+    app.filter('formatDate',function(){
+        return function(date){
+            return date = date.substr(0,10);
+        };
+    });
+
+    app.controller("detail_tecCtrl",function ($scope,$http){
+
+        //技术详情
+        $http({
+            method:'GET',
+            params: {data_id:data_id},
+            url:'/api.php/ChannelIndex/index/action/dataDetail/channel/js/type/1'
+        }).then(function successCallback(response) {
+            $scope.lists = response.data.data;
+        },function errorCallback(response) {
+            console.log(response);
+        });
+
+        //推荐技术
+        var data = {
+            page:1,
+            page_num:2,
+            order_field:'create_time',
+            category_id:0,
+            tag_id:0,
+            order_by:'DESC'
+        };
+        $http({
+            method:"POST",
+            data:data,
+            url:"/api.php/ChannelIndex/index/action/dataList/channel/js/type/1",
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            transformRequest: function(obj) {
+                var str = [];
+                for (var p in obj) {
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                }
+                return str.join("&");
+            }
+        }).then(function successCallback(response) {
+            $scope.tecLists = response.data.data;
+        }, function errorCallback(response) {
+
+        });
+    });
+</script>
 </html>

@@ -60,7 +60,7 @@
     <!-- 需求列表 -->
     <div class="section" v-cloak>
         <div class="demand_wrap2 clear" style="margin-left:-20px;">
-            <a href="__CONTROLLER__/demand_detail" v-for="list in listData">
+            <a @click="getDetail(list.id)" v-for="list in listData">
                 <div class="demand_part2 shadow fl">
                     <p class="demand_status2">{{ list.hzxs }}</p>
                     <p class="demand_time2">{{ list.create_time }}</p>
@@ -241,7 +241,7 @@
                 })
             },
             getDetail: function (id) {
-                window.location.href = "__MODULE__/Article/detail/channel/{$channel}/type/1/data_id/" + id;
+                window.location.href = "__CONTROLLER__/demand_detail?data_id=" + id;
             },
             getZtDetail: function (id) {
                 window.location.href = "__MODULE__/Article/top/channel/top/type/1/data_id/" + id;
