@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="{$Think.INDEX}/css/common_new.css">
     <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
     <link rel="stylesheet" href="{$Think.INDEX}/css/swiper.css">
-    <!--<include file="./Template/5u/common/common.html" />   上线开启-百度统计-->
 </head>
 <body ng-controller="bannerCtrl">
 <!-- 导航开始 -->
@@ -547,7 +546,8 @@
 <include file="./Template/5u/index/public/footer.html" />
 </body>
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
-<script src='{$Think.MOBILE}/js/angular.min.js'></script>
+<script src='{$Think.INDEX}/js/angular.min.js'></script>
+<script src='{$Think.INDEX}/js/common.js'></script>
 <script src="{$Think.INDEX}/js/swiper.min.js"></script>
 <script>
     var app = angular.module('index',[]);
@@ -711,13 +711,19 @@
     $("#tab_dem").on("click","li",function(){
         var index = $(this).index();
         var num = index*86;
+        if(index==7){
+            num = 586;
+        };
         $('#slide_div1').css('left',''+num+'px');
         Swiper2.slideTo(index, 500, false);
     }) ;
 
-    $("#tab_tec li").on("click",function(){
+    $("#tab_tec").on("click","li",function(){
         var index = $(this).index();
         var num = index*86;
+        if(index==7){
+            num = 586;
+        };
         $('#slide_div2').css('left',''+num+'px');
         Swiper3.slideTo(index, 500, false);
     })

@@ -1,9 +1,9 @@
 <div class="nav_wrap">
     <div class="nav">
         <a href="/index.php/Pc/Index/index" class="head_logo"><img style="padding-top: 12px;" src="{$Think.INDEX}/images/icon-logo.png"/></a>
-        <ul class="navigation-list ul-reset">
+        <ul class="navigation-list ul-reset" id="ul_a">
             <li class="navigation-item ib">
-                <a href="__MODULE__/Index/index.html" class='navigation-link selected-link'>
+                <a href="__MODULE__/Index/index.html" class='navigation-link'>
                     首页
                 </a>
             </li>
@@ -28,7 +28,7 @@
                 </a>
             </li>
             <li class="navigation-item ib">
-                <a href="/index.php/Pc/Article/data_list/channel/zx" class='navigation-link'>
+                <a href="#" class='navigation-link'>
                     资讯
                 </a>
             </li>
@@ -60,8 +60,29 @@
                 <div id="wechatModal" class="wechat-modal">
                     <img src="{$Think.INDEX}/images/icon-dl.png"/>
                 </div>
-                <a href="__MODULE__/Login/login" class="head_login" href="javascript:;">登录</a>
+                <a href="__MODULE__/Login/login" class="head_login">登录</a>
             </li>
         </ul>
+    </div>
+</div>
+
+<!-- 侧边导航 -->
+<div id="sideBar">
+    <div class="Bar_icon" id="suggest">
+        <img src="{$Think.INDEX}/images/icon-1liuyan.png" alt="">
+    </div>
+    <div class="Bar_icon">
+        <img src="{$Think.INDEX}/images/icon-2kefu.png" alt="">
+    </div>    <div class="Bar_icon" id="show_phone">
+        <img src="{$Think.INDEX}/images/icon-3dianhua.png" alt="">
+        <div class="Bar_phone">
+            <p>日常咨询：</p>
+            <p>020-34031922</p>
+            <p>项目合作：</p>
+            <p>185 6519 0690</p>
+        </div>
+    </div>
+    <div class="Bar_icon" id="go_top">
+        <img src="{$Think.INDEX}/images/icon-4huidaodb.png" alt="">
     </div>
 </div>
