@@ -15,13 +15,13 @@
 <!-- 导航开始 -->
 <include file="./Template/5u/index/public/nav.html" />
 <!-- 导航结束 -->
-
 <!-- 轮播 -->
 <div class="banner">
     <div class="swiper-container" id="swiper1">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" ng-repeat="banner in banners">
-                <img ng-src="{{banner.ad_code}}" alt="">
+            <div class="swiper-slide" ng-repeat="banner in banners" >
+                <img data-src="{{banner.ad_code}}" alt="" class="swiper-lazy">
+                <div class="swiper-lazy-preloader"></div>
             </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -439,7 +439,7 @@
 <div class="section" ng-controller="partnerCtrl">
     <div class="coop_wrap clear">
         <div class="coop_part shadow fl" ng-repeat="partner in partners">
-            <img src="{{partner.cover_url}}" alt="">
+            <img lazy-src="{{partner.cover_url}}" alt="">
             <p class="oneline" ng-cloak>{{partner.title}}</p>
         </div>
 
@@ -454,7 +454,7 @@
 <div class="section" ng-controller="companyCtrl">
     <div class="coop_wrap clear">
         <div class="coop_part2 shadow fl" ng-repeat="company in companys">
-            <img src="{{ company.cover_url }}" alt="" height="135">
+            <img lazy-src="{{ company.cover_url }}" alt="" height="135">
         </div>
     </div>
 </div>
@@ -547,10 +547,11 @@
 </body>
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
 <script src='{$Think.INDEX}/js/angular.min.js'></script>
+<script src='{$Think.INDEX}/js/me-lazyload.js'></script>
 <script src='{$Think.INDEX}/js/common.js'></script>
 <script src="{$Think.INDEX}/js/swiper.min.js"></script>
 <script>
-    var app = angular.module('index',[]);
+    var app = angular.module('index',['me-lazyload']);
     app.filter('formatDate',function(){
         return function(date){
             return date = date.substr(0,10);
@@ -679,8 +680,13 @@
     });
 
     var Swiper1 = new Swiper('#swiper1', {
-        loop:true,
+        lazyLoading : true,
+        // loop:true,
         pagination : '.swiper-pagination',
+        paginationClickable :true,
+        autoplay:2000,
+        observer:true,//修改swiper自己或子元素时，自动初始化swiper
+        observeParents:true//修改swiper的父元素时，自动初始化swiper
     });
 
     var swiper_cop = new Swiper('#swiper_cop', {

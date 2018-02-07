@@ -9,17 +9,22 @@
     <link rel="preload" href="{$Think.INDEX}/css/index.css" as="style">
     <link rel="stylesheet" href="{$Think.INDEX}/css/common_new.css">
     <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
-    <!--<include file="./Template/5u/common/common.html" />   上线开启-百度统计-->
 </head>
 <style>
     .part_option{
         margin-left: 20px;
         margin-top: 20px;
         width: 285px;
+        height: 268px;
         border: 1px solid transparent;
         padding-bottom: 10px;
         transition:all .3s;
         background: #fff;
+        overflow: hidden;
+       
+    }
+    .partner_wrap{
+        display: none;
     }
 </style>
 <body style="background:#f4f4f4;" ng-controller="advancedCtrl">
@@ -42,35 +47,160 @@
 </div>
 
 <!-- 机构列表 -->
-<div class="section">
-    <div class="partner_wrap clear">
-        <div class="part_option fl shadow" ng-repeat="assoList in assoLists">
-            <img class="part_img" ng-src="{{ assoList.cover_url }}" alt="">
-            <p class="part_list_tit twoline">{{ assoList.title }}</p>
+   <div class="section">
+        <!-- 全部 -->
+        <div class="partner_wrap clear" style="display:block">
+            <div class="part_option fl shadow" ng-repeat="assoList in assoLists">
+                <img class="part_img" lazy-src="{{ assoList.cover_url }}" alt="">
+                <p class="part_list_tit twoline">{{ assoList.title }}</p>
 
-            <div class="part_bottom clear">
-                <div class="fl clear">
-                    <img class="tac_icon fl" src="{$Think.INDEX}/images/icon-bs.png" alt="">
-                    <span class="part_num fl">16项目</span>
+                <div class="part_bottom clear">
+                    <div class="fl clear">
+                        <img class="tac_icon fl" src="{$Think.INDEX}/images/icon-bs.png" alt="">
+                        <span class="part_num fl">16项目</span>
+                    </div>
+                    <div class="fr part_bo_ri">
+                        <img class="part_lable" src="{$Think.INDEX}/images/organization-authenticated.png" alt="">
+                        <img  src="{$Think.INDEX}/images/organization-integrity.png" alt="">
+                    </div>
                 </div>
-                <div class="fr part_bo_ri">
-                    <img class="part_lable" src="{$Think.INDEX}/images/organization-authenticated.png" alt="">
-                    <img  src="{$Think.INDEX}/images/organization-integrity.png" alt="">
+            </div>
+
+            <div class="part_option fl shadow" ng-repeat="ysList in ysLists">
+                <img class="part_img" lazy-src="{{ ysList.cover_url }}" alt="">
+                <p class="part_list_tit twoline">{{ ysList.title }}</p>
+                <div class="part_bottom clear">
+                    <div class="fl clear">
+                        <img class="tac_icon fl" src="{$Think.INDEX}/images/icon-bs.png" alt="">
+                        <span class="part_num fl">16项目</span>
+                    </div>
+                    <div class="fr part_bo_ri">
+                        <img class="part_lable" src="{$Think.INDEX}/images/organization-authenticated.png" alt="">
+                        <img  src="{$Think.INDEX}/images/organization-integrity.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="part_option fl shadow" ng-repeat="assoList in assoLists">
+                <img class="part_img" lazy-src="{{ assoList.cover_url }}" alt="">
+                <p class="part_list_tit twoline">{{ assoList.title }}</p>
+
+                <div class="part_bottom clear">
+                    <div class="fl clear">
+                        <img class="tac_icon fl" src="{$Think.INDEX}/images/icon-bs.png" alt="">
+                        <span class="part_num fl">16项目</span>
+                    </div>
+                    <div class="fr part_bo_ri">
+                        <img class="part_lable" src="{$Think.INDEX}/images/organization-authenticated.png" alt="">
+                        <img  src="{$Think.INDEX}/images/organization-integrity.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="part_option fl shadow" ng-repeat="qyList in qyLists">
+                <img class="part_img" lazy-src="{{ qyList.cover_url }}" alt="">
+                <p class="part_list_tit twoline">{{ qyList.title }}</p>
+
+                <div class="part_bottom clear">
+                    <div class="fl clear">
+                        <img class="tac_icon fl" src="{$Think.INDEX}/images/icon-bs.png" alt="">
+                        <span class="part_num fl">16项目</span>
+                    </div>
+                    <div class="fr part_bo_ri">
+                        <img class="part_lable" src="{$Think.INDEX}/images/organization-authenticated.png" alt="">
+                        <img  src="{$Think.INDEX}/images/organization-integrity.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="part_option fl shadow" ng-repeat="qtLis in qtLists">
+                <img class="part_img" lazy-src="{{ qtLis.cover_url }}" alt="" >
+                <p class="part_list_tit twoline">{{ qtLis.title }}</p>
+
+                <div class="part_bottom clear">
+                    <div class="fl clear">
+                        <img class="tac_icon fl" src="{$Think.INDEX}/images/icon-bs.png" alt="">
+                        <span class="part_num fl">16项目</span>
+                    </div>
+                    <div class="fr part_bo_ri">
+                        <img class="part_lable" src="{$Think.INDEX}/images/organization-authenticated.png" alt="">
+                        <img  src="{$Think.INDEX}/images/organization-integrity.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="part_option fl shadow" ng-repeat="qyList in qyLists">
-            <img class="part_img" ng-src="{{ qyList.cover_url }}" alt="" width="283" height="176">
-            <p class="part_list_tit twoline">{{ qyList.title }}</p>
-
-            <div class="part_bottom clear">
-                <div class="fl clear">
-                    <img class="tac_icon fl" src="{$Think.INDEX}/images/icon-bs.png" alt="">
-                    <span class="part_num fl">16项目</span>
+        
+        <!-- 院所 -->
+        <div class="partner_wrap clear">
+            <div class="part_option fl shadow" ng-repeat="ysList in ysLists">
+                <img class="part_img" lazy-src="{{ ysList.cover_url }}" alt="">
+                <p class="part_list_tit twoline">{{ ysList.title }}</p>
+                <div class="part_bottom clear">
+                    <div class="fl clear">
+                        <img class="tac_icon fl" src="{$Think.INDEX}/images/icon-bs.png" alt="">
+                        <span class="part_num fl">16项目</span>
+                    </div>
+                    <div class="fr part_bo_ri">
+                        <img class="part_lable" src="{$Think.INDEX}/images/organization-authenticated.png" alt="">
+                        <img  src="{$Think.INDEX}/images/organization-integrity.png" alt="">
+                    </div>
                 </div>
-                <div class="fr part_bo_ri">
-                    <img class="part_lable" src="{$Think.INDEX}/images/organization-authenticated.png" alt="">
-                    <img  src="{$Think.INDEX}/images/organization-integrity.png" alt="">
+            </div>
+        </div>
+
+        <!-- 协会 -->
+        <div class="partner_wrap clear">
+            <div class="part_option fl shadow" ng-repeat="assoList in assoLists">
+                <img class="part_img" lazy-src="{{ assoList.cover_url }}" alt="">
+                <p class="part_list_tit twoline">{{ assoList.title }}</p>
+
+                <div class="part_bottom clear">
+                    <div class="fl clear">
+                        <img class="tac_icon fl" src="{$Think.INDEX}/images/icon-bs.png" alt="">
+                        <span class="part_num fl">16项目</span>
+                    </div>
+                    <div class="fr part_bo_ri">
+                        <img class="part_lable" src="{$Think.INDEX}/images/organization-authenticated.png" alt="">
+                        <img  src="{$Think.INDEX}/images/organization-integrity.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 企业 -->
+        <div class="partner_wrap clear">
+            <div class="part_option fl shadow" ng-repeat="qyList in qyLists">
+                <img class="part_img" lazy-src="{{ qyList.cover_url }}" alt="">
+                <p class="part_list_tit twoline">{{ qyList.title }}</p>
+
+                <div class="part_bottom clear">
+                    <div class="fl clear">
+                        <img class="tac_icon fl" src="{$Think.INDEX}/images/icon-bs.png" alt="">
+                        <span class="part_num fl">16项目</span>
+                    </div>
+                    <div class="fr part_bo_ri">
+                        <img class="part_lable" src="{$Think.INDEX}/images/organization-authenticated.png" alt="">
+                        <img  src="{$Think.INDEX}/images/organization-integrity.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 其他 -->
+        <div class="partner_wrap clear">
+            <div class="part_option fl shadow" ng-repeat="qtLis in qtLists">
+                <img class="part_img" lazy-src="{{ qtLis.cover_url }}" alt="" width="283" height="176">
+                <p class="part_list_tit twoline">{{ qtLis.title }}</p>
+
+                <div class="part_bottom clear">
+                    <div class="fl clear">
+                        <img class="tac_icon fl" src="{$Think.INDEX}/images/icon-bs.png" alt="">
+                        <span class="part_num fl">16项目</span>
+                    </div>
+                    <div class="fr part_bo_ri">
+                        <img class="part_lable" src="{$Think.INDEX}/images/organization-authenticated.png" alt="">
+                        <img src="{$Think.INDEX}/images/organization-integrity.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,45 +209,69 @@
 <include file="./Template/5u/index/public/footer.html" />
 </body>
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
-<script src='{$Think.MOBILE}/js/angular.min.js'></script>
+<script src='{$Think.INDEX}/js/angular.min.js'></script>
+<script src='{$Think.INDEX}/js/me-lazyload.js'></script>
 <script src="{$Think.INDEX}/js/common.js"></script>
 <script>
 
-    var app = angular.module('partner',[]);
+    var app = angular.module('partner',['me-lazyload']);
 
     app.controller("advancedCtrl", function ($scope, $http) {
-        //协会
-        $http({
-            method:'GET',
-            params:{page_num:500},
-            url:'/api.php/ChannelIndex/index/action/dataList/channel/jtgs/type/1/page/1',
-        }).then(function successCallback(response){
-            $scope.assoLists = response.data.data;
-        },function errorCallback(){
-        });
+      //协会
+      $http({
+          method:'GET',
+          params:{page_num:500},
+          url:'/api.php/ChannelIndex/index/action/dataList/channel/jtgs/type/1/page/1',
+      }).then(function successCallback(response){
+          $scope.assoLists = response.data.data;
+      },function errorCallback(){
+      });
 
-        var data={data_by:'is_red desc,create_time desc', get_page:true, page:1, page_num:500};
-        //企业
-        $http({
-            method:'POST',
-            data: data,
-            url:'/api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1/page/1',
-            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-            transformRequest: function (obj) {
-                var str = [];
-                for (var p in obj) {
-                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                }
-                return str.join("&");
-            }
-        }).then(function successCallback(response){
-            $scope.qyLists=response.data.data.info;
-        },function errorCallback(){
+      //公司
+      $http({
+          method:'GET',
+          params:{page_num:500,data_by:'is_red desc,create_time desc'},
+          url:'/api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1/page/1',
+      }).then(function successCallback(response){
+          $scope.companyLists = response.data.data;
+      },function errorCallback(){
+      });
 
-        });
+      //院所
+      $http({
+          method:'GET',
+          params:{page_num:500,tag_id:1},
+          url:'/api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1/page/1',
+      }).then(function successCallback(response){
+          $scope.ysLists = response.data.data;
+      },function errorCallback(){
+      });
+
+      //企业
+      $http({
+          method:'GET',
+          params:{page_num:500,tag_id:2},
+          url:'/api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1/page/1',
+      }).then(function successCallback(response){
+          $scope.qyLists = response.data.data;
+      },function errorCallback(){
+      });
+
+      //其他
+      $http({
+          method:'GET',
+          params:{page_num:500,tag_id:3},
+          url:'/api.php/ChannelIndex/index/action/dataList/channel/hzjg/type/1/page/1',
+      }).then(function successCallback(response){
+          $scope.qtLists = response.data.data;
+      },function errorCallback(){
+      });
     });
 
-    $(".sub_class").on("click",".sub_list li",function(){
+
+    $(".sub_list li").on("click",function(){
+        var index = $(this).index();
+        $(".partner_wrap").eq(index).show().siblings('.partner_wrap').hide();
         $(this).addClass('subnav_selected').siblings('.sub_list li').removeClass('subnav_selected');
     })
 </script>
