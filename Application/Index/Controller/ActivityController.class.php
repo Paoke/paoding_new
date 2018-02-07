@@ -24,6 +24,7 @@ class ActivityController extends BaseController
 
     public function activity_release()
     {
+        $this->checkReg();
         $this->display();
     }
 

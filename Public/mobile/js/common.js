@@ -1,18 +1,3 @@
-// 美洽
-(function(m, ei, q, i, a, j, s) {
-    m[i] = m[i] || function() {
-                (m[i].a = m[i].a || []).push(arguments)
-            };
-    j = ei.createElement(q),
-            s = ei.getElementsByTagName(q)[0];
-    j.async = true;
-    j.charset = 'UTF-8';
-    j.src = '//static.meiqia.com/dist/meiqia.js';
-    s.parentNode.insertBefore(j, s);
-})(window, document, 'script', '_MEIQIA');
-_MEIQIA('entId', 10556);
-_MEIQIA('withoutBtn');
-_MEIQIA('init');
 // 导航栏高亮
 var urlStr = location.href;
 // console.log(urlStr);
@@ -127,7 +112,7 @@ $("body").on("click",".close",function(){
 });
 $("body").on("click",".sug_inp3",function(){
     time($('.sug_inp3'));
-});
+})
 
 //退出登录
 $("#logout").on("click",function() {
@@ -138,7 +123,4 @@ $("#logout").on("click",function() {
     alert("退出成功");
     window.location.href="/index.php/index/index/index.html";
 });
-
-
-
 

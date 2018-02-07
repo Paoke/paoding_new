@@ -35,6 +35,7 @@ class TecController extends BaseController
 
     public function tec_release()
     {
+        $this->checkReg();
         $this->display();
     }
 

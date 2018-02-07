@@ -56,12 +56,29 @@
                 </div>
                 <a href="__MODULE__/Tec/tec_release.html" class="modal-wechat">发布技术</a>
             </li>
+            <if condition="session('userArr') neq null" >
+                <li id="user_dropdown">
+                    <div class="nav_head">
+                        <img src="{:session('headPic')}" alt="">
+                    </div>
+                    <ul class="nav_user">
+                        <a href="__MODULE__/User/user_demand.html"><li>我的需求</li></a>
+                        <a href="__MODULE__/User/user_tec.html"><li>我的技术</li></a>
+                        <a href="__MODULE__/User/user_msg.html"><li>我的消息</li></a>
+                        <a href="__MODULE__/User/user_collect.html"><li>我的收藏</li></a>
+                        <a href="__MODULE__/User/user_project.html"><li>对接项目</li></a>
+                        <a href="__MODULE__/User/user_info.html"><li>个人资料</li></a>
+                        <a id="logout"><li>退出登录</li></a>
+                    </ul>
+                </li>
+                <else />
             <li class="head_navLi head_user">
                 <div id="wechatModal" class="wechat-modal">
                     <img src="{$Think.INDEX}/images/icon-dl.png"/>
                 </div>
                 <a href="__MODULE__/Login/login" class="head_login">登录</a>
             </li>
+            </if>
         </ul>
     </div>
 </div>

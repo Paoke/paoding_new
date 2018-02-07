@@ -25,6 +25,7 @@ class DemandController extends BaseController
 
     public function demand_release()
     {
+        $this->checkReg();
         $this->display();
     }
 }

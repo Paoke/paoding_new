@@ -8,6 +8,7 @@
     <link rel="preload" href="{$Think.INDEX}/css/index.css" as="style">
     <link rel="stylesheet" href="{$Think.INDEX}/css/common_new.css">
     <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/page.css">
 </head>
 <body style="background:#f4f4f4;">
 <!-- 导航开始 -->
@@ -19,15 +20,24 @@
         <div class="sub_class2 clear" style="border:none;">
             <div class="fl">
                 <ul class="sub_list2">
-                    <li class="subnav_selected">全部</li>
-                    <li v-for="category in categoryData" v-text="category.cat_name"></li>
+                    <li class="subnav_selected" onclick="window.location.reload()">全部</li>
+                    <li v-for="category in categoryData" v-text="category.cat_name" v-bind:id="category.id" @click="getDataByCategory(category.id)"></li>
                 </ul>
                 <div class="info_lists clear">
-                    <li class="article_listLi shadow fl" v-for="list in listData">
+                    <li class="article_listLi shadow fl" v-for="list in listData" @click="showDetail(list.link)">
                         <img v-bind:src="list.cover_url" class="article_listLi_img">
                         <h3 class="article_listLi_title twoline" v-text="list.title"></h3>
                         <p class="article_listLi_tab" v-text="list.create_time"></p>
                     </li>
+                </div>
+                <div class="activity_listpage">
+                    <div>
+                        <a class="first" @click="go_page(1)" v-if="show_first">1...</a>
+                        <a class="prev" @click="go_page(page-1)" v-if="show_prex">&lt;&lt;</a>
+                        <a v-for="index in pages" @click="go_page(index)" v-bind:class="{current: index==page}">{{index}}</a>
+                        <a class="next" @click="go_page(page+1)" v-if="show_next">&gt;&gt;</a>
+                        <a class="end" @click="go_page(page_total)" v-if="show_end">{{page_total}}</a>
+                    </div>
                 </div>
             </div>
 
@@ -37,32 +47,21 @@
                         <span class="hot_art">热门文章</span>
                     </p>
 
-                    <div class="info_right_list">
-                        <p class="info_ct twoline">内容两行<br>高度</p>
-                        <p class="info_ti">2017-10-18</p>
+                    <div class="info_right_list" v-for="hot in hotData" @click="showDetail(hot.link)">
+                        <p class="info_ct twoline" v-text="hot.title"></p>
+                        <p class="info_ti" v-text="hot.create_time"></p>
                     </div>
 
-                    <div class="info_right_list">
-                        <p class="info_ct twoline">内容两行<br>高度</p>
-                        <p class="info_ti">2017-10-18</p>
-                    </div>
                 </div>
 
 
             </div>
-            <div class="activity_listpage">
-                <div>
-                    <a class="first" @click="go_page(1)" v-if="show_first">1...</a>
-                    <a class="prev" @click="go_page(page-1)" v-if="show_prex">&lt;&lt;</a>
-                    <a v-for="index in pages" @click="go_page(index)" v-bind:class="{current: index==page}">{{index}}</a>
-                    <a class="next" @click="go_page(page+1)" v-if="show_next">&gt;&gt;</a>
-                    <a class="end" @click="go_page(page_total)" v-if="show_end">{{page_total}}</a>
-                </div>
-            </div>
+
         </div>
     </div>
 </section>
-
+<!-- 页脚 -->
+<include file="./Template/5u/index/public/footer.html"/>
 </body>
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
 <script src="{$Think.INDEX}/js/common.js"></script>
@@ -73,6 +72,7 @@
         el:'#template',
         data:{
             listData: '', //列表数据
+            hotData:'',
             categoryData:'',
             page : 1,
             page_total:0,
@@ -82,6 +82,8 @@
             show_next:false,
             show_item:5,
             bool : 'true',
+            category_id: 0,
+            click_category_id: 0,
         },
         computed:{
             pages:function(){
@@ -110,7 +112,7 @@
             this.$nextTick(function () {
                 this.getData();
                 this.getCategoryData();
-                this.getNew();
+                this.getHotData();
             })
         },
         updated:function(){
@@ -125,25 +127,76 @@
                     _this.categoryData = res.data;
                 })
             },
-            getNew:function(){
+            getHotData:function(){
                 var _this=this;
                 var url="/api.php/ChannelIndex/index/action/dataList/channel/zx/type/1";
                 var data={
                     "get_page": true,
                     "page": 1,
-                    "page_num":12,
+                    "page_num":2,
                     "order_field":"create_time",
-                    "order_by":"DESC"
+                    "order_by":"DESC",
+                    "category_id": 0,
                 };
                 $.post(url, data, function(res){
                     console.log(res.data);
-                    _this.listData=res.data.info;
+                    _this.hotData=res.data.info;
                 }, 'json');
             },
             getData:function () {
                 vm.page = 1;
                 vm.page_total = 0;
-                this.search(0,0);
+                this.search(0);
+            },
+            getDataByCategory: function (category_id) {
+                vm.page = 1;
+                vm.page_total = 0;
+                vm.category_id = category_id;
+                this.search(category_id);
+            },
+            search:function(category_id){
+                var categoryId = 0;
+                if (category_id == 0) {
+                    categoryId = vm.click_category_id;
+                }else{
+                    vm.click_category_id = category_id;
+                    categoryId = category_id;
+                }
+                var url = "/api.php/ChannelIndex/index/action/dataList/channel/zx/type/1";
+                if (category_id > -1) {
+                    vm.category_id = category_id;
+                    url += "/category_id/" + vm.click_category_id ;
+                }
+                var _this = this;
+                var data={
+                    "order_field":"create_time",
+                    "order_by":"DESC",
+                    "get_page": true,
+                    "page": vm.page,
+                    "page_num":12
+                };
+                $.post(url, data,function (res) {
+                    _this.listData = res.data.info;
+                    var page = res.data.page;
+                    vm.page = parseInt(page.page);
+                    vm.page_total = parseInt(page.page_total);
+                    vm.show_first = (vm.page-1 > 1);
+                    vm.show_prex = (vm.page-1 > 0);
+                    vm.show_next = (vm.page_total-vm.page > 0);
+                    vm.show_end = (vm.page_total-vm.page > 1);
+                });
+            },
+            go_page: function (page) {
+                if (page == vm.page) {
+                    return;
+                }
+                vm.page = parseInt(page);
+                this.search(vm.click_category_id);
+                window.scrollTo(0, document.body.scrollHeight);
+                window.scrollTo(0, 0);
+            },
+            showDetail:function (url) {
+                window.location.href=url;
             },
         }
     });
