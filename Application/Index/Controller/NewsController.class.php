@@ -13,7 +13,7 @@ class NewsController extends BaseController
         parent::checkSite();
     }
 
-    public function index()
+    public function news_index()
     {
         $this->display();
     }
