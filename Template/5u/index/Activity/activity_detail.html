@@ -21,8 +21,11 @@
     <div class="tec_info fl" style="height:280px;">
         <div class="operate" style="bottom:28px;">
             浏览&nbsp;&nbsp;<span>167</span>
-            <img class="operate_ml" src="{$Think.INDEX}/images/icon-collect.png" alt="">
-            <img  src="{$Think.INDEX}/images/icon-wechat.png" alt="">
+            <img id="collect" class="operate_ml" src="{$Think.INDEX}/images/icon-collect.png" alt="">
+            <div class="bdsharebuttonbox fr">
+                <img class="iconwc" src="{$Think.INDEX}/images/icon-wechat.png" alt="">
+                <a class="bds_weixin" data-cmd="weixin"></a>
+            </div>
         </div>
         <p class="tec_title">机械材料</p>
         <div class="clear">
@@ -115,6 +118,9 @@
 <script src="{$Think.INDEX}/js/common.js"></script>
 <script src="{$Think.MOBILE}/js/angular.min.js"></script>
 <script>
-
+// 收藏/取消收藏
+$("#collect").on("click",function(){
+    $("#collect").attr("src","{$Think.INDEX}/images/icon-collect2.png"); 
+});
 </script>
 </html>

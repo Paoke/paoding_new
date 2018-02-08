@@ -19,13 +19,16 @@
 
 <div class="section">
     <div class="demand_left clear">
-        <div class="tec_info fl clear" style="width:750px;background:#fff">
+        <div class="tec_info fl clear" style="width:750px;height:auto;background:#fff">
             <p class="number_dem">编号：{{detail.id}}</p>
             <div class="operate_dem">
                 发布于：<span class="operate_ml">{{detail.create_time | formatDate}}</span>
                 浏览&nbsp;&nbsp;<span>{{detail.clicks}}</span>
-                <img class="operate_ml" src="{$Think.INDEX}/images/icon-collect.png" alt="">
-                <img  src="{$Think.INDEX}/images/icon-wechat.png" alt="">
+                <img id="collect" class="operate_ml" src="{$Think.INDEX}/images/icon-collect.png" alt="">
+               <div class="bdsharebuttonbox fr">
+                   <img class="iconwc" src="{$Think.INDEX}/images/icon-wechat.png" alt="">
+                   <a class="bds_weixin" data-cmd="weixin"></a>
+               </div>
             </div>
             <p class="tec_title">{{detail.title}}</p>
             <div class="clear">
@@ -158,6 +161,11 @@
         }).then(function successCallback(response) {
             $scope.demandLists = response.data.data.info;
         }, function errorCallback(response) {
+        });
+
+        // 收藏/取消收藏
+        $("#collect").on("click",function(){
+            $("#collect").attr("src","{$Think.INDEX}/images/icon-collect2.png"); 
         });
     });
 

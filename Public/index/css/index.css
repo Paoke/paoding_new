@@ -108,6 +108,7 @@
 
 }
 .tec_option{
+	height: 346px;
 	width: 284px;
 	border: 1px solid #ccc;
 	margin-left: 20px;
@@ -534,8 +535,8 @@
 	margin-top: 20px;
 }
 .form_p{
-	height: 60px;
-	line-height: 60px;
+	height: 50px;
+	line-height: 50px;
 	margin-right: 20px;
 	color: #ff0101;
 }
@@ -1172,7 +1173,8 @@
 	margin-top: 18px;
 }
 .alert_top img{
-	margin-top: 20px;
+	margin-top: 10px;
+	padding: 10px;
 }
 .success_img{
 	margin-top: 40px;
@@ -1241,6 +1243,7 @@
 	line-height: 40px;
 	text-align: center;
 	margin: 28px 0 0 102px;
+	cursor: pointer;
 }
 .we_chat{
 	position: absolute;
@@ -1290,15 +1293,7 @@
    left: 0%;
    width: 100%;
 }
-.sideDiv{
-	width: 100%;
-	height: 3px;
-	background: #1e1e1e;
-	position: absolute;
-	bottom: -15px;
-	left: 0%;
-	display: none;
-}
+
 .topic_ct{
 	width: 1200px;
 	margin:0 auto;
@@ -1580,7 +1575,7 @@
 	margin-top: 40px;
 }
 .event_wrap{
-	width: 1220px;
+	width: 1200px;
 	margin: 0 auto;
 }
 .ec-title{
@@ -2640,11 +2635,13 @@
 	margin:12px 0;
 }
 .article_listLi_img {
-    width: 280px;
+    width: 278px;
     height: 210px;
 }
 .article_listLi_title {
+	box-sizing: border-box;
 	width: 240px;
+	height: 60px;
     font-size: 16px;
     color: #3a3a3a;
     padding: 18px 10px 0;
@@ -2662,6 +2659,7 @@
 .article_listLi{
 	border: 1px solid transparent;
 	width: 280px;
+	height: 319px;
 	margin-left:35px;
 	background: #fff;
 	margin-top: 20px;
@@ -2670,6 +2668,30 @@
 .article_listLi:nth-child(3n+1){
 	margin-left: 0
 }
+.event-card:nth-child(3n+1){
+	margin-left: 0
+}
 .wrong_tip{
 	display: none;
 }
+.bdsharebuttonbox{
+    position: relative;
+}
+.bdsharebuttonbox .bds_weixin {
+    width: 22px;
+    height: 22px;
+    background: url(../images/icon-wechat.png) no-repeat;
+    background-position: 0 0 !important;
+    position: relative;
+    opacity: 0;
+}
+.bdshare-button-style0-32 a:hover {
+    color: #333;
+    opacity: 0 !important;
+}
+.iconwc{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+

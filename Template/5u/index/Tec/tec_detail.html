@@ -8,8 +8,7 @@
     <link rel="shortcut icon" href="{$Think.INDEX}/images/favicon.ico">
     <link rel="preload" href="{$Think.INDEX}/css/index.css" as="style">
     <link rel="stylesheet" href="{$Think.INDEX}/css/common_new.css">
-    <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
-    <!--<include file="./Template/5u/common/common.html" />   上线开启-百度统计-->
+    <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">   
 </head>
 <body ng-controller="detail_tecCtrl" ng-cloak>
 <!-- 导航开始 -->
@@ -24,8 +23,11 @@
         <div class="operate">
             发布于：<span class="operate_ml" ng-cloak>{{lists.create_time | formatDate}}</span>
             浏览&nbsp;&nbsp;<span>{{lists.clicks}}</span>
-            <img class="operate_ml" src="{$Think.INDEX}/images/icon-collect.png" alt="">
-            <img  src="{$Think.INDEX}/images/icon-wechat.png" alt="">
+            <img id="collect" class="operate_ml" src="{$Think.INDEX}/images/icon-collect.png" alt="">
+            <div class="bdsharebuttonbox fr">
+                <img class="iconwc" src="{$Think.INDEX}/images/icon-wechat.png" alt="">
+                <a class="bds_weixin" data-cmd="weixin"></a>
+            </div>
         </div>
         <p class="tec_title">{{lists.title}}</p>
         <div class="clear">
@@ -86,7 +88,7 @@
             <div class="tab">
                 <div class="title">
                     <a href="#tip1">
-                        <li style="color:#1e1e1e">技术讲述<div class="sideDiv" style="display:block;"></div></li>
+                        <li style="color:#1e1e1e">技术讲述<div class="sideDiv"></div></li>
                     </a>
                     <a href="#tip2">
                         <li>技术优势<div class="sideDiv"></div></li>
@@ -205,6 +207,19 @@
         }, function errorCallback(response) {
 
         });
+
+        // 收藏/取消收藏
+        $("#collect").on("click",function(){
+            $("#collect").attr("src","{$Think.INDEX}/images/icon-collect2.png"); 
+        });
     });
+
+
+    $(".get_contack").on("click",function() {
+        $(this).hide();
+        $(".contack").show();
+    });
+
+
 </script>
 </html>

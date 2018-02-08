@@ -20,8 +20,7 @@
     <div class="swiper-container" id="swiper1">
         <div class="swiper-wrapper">
             <div class="swiper-slide" ng-repeat="banner in banners" >
-                <img data-src="{{banner.ad_code}}" alt="" class="swiper-lazy">
-                <div class="swiper-lazy-preloader"></div>
+                <img src="{{banner.ad_code}}" alt="">
             </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -471,42 +470,42 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <div class="coop_part2 shadow fl">
-                        <img src="{$Think.INDEX}/images/1.png" alt="">
+                        <img lazy-src="{$Think.INDEX}/images/1.png" alt="">
                     </div>
                     <div class="coop_part2 shadow fl">
-                        <img src="{$Think.INDEX}/images/2.png" alt="">
-                    </div>
-
-                    <div class="coop_part2 shadow fl">
-                        <img src="{$Think.INDEX}/images/3.png" alt="">
+                        <img lazy-src="{$Think.INDEX}/images/2.png" alt="">
                     </div>
 
                     <div class="coop_part2 shadow fl">
-                        <img src="{$Think.INDEX}/images/4.png" alt="">
+                        <img lazy-src="{$Think.INDEX}/images/3.png" alt="">
                     </div>
 
                     <div class="coop_part2 shadow fl">
-                        <img src="{$Think.INDEX}/images/5.png" alt="">
+                        <img lazy-src="{$Think.INDEX}/images/4.png" alt="">
                     </div>
 
                     <div class="coop_part2 shadow fl">
-                        <img src="{$Think.INDEX}/images/6.png" alt="">
+                        <img lazy-src="{$Think.INDEX}/images/5.png" alt="">
                     </div>
 
                     <div class="coop_part2 shadow fl">
-                        <img src="{$Think.INDEX}/images/7.png" alt="">
+                        <img lazy-src="{$Think.INDEX}/images/6.png" alt="">
                     </div>
 
                     <div class="coop_part2 shadow fl">
-                        <img src="{$Think.INDEX}/images/8.png" alt="">
+                        <img lazy-src="{$Think.INDEX}/images/7.png" alt="">
                     </div>
 
                     <div class="coop_part2 shadow fl">
-                        <img src="{$Think.INDEX}/images/9.png" alt="">
+                        <img lazy-src="{$Think.INDEX}/images/8.png" alt="">
                     </div>
 
                     <div class="coop_part2 shadow fl">
-                        <img src="{$Think.INDEX}/images/10.png" alt="">
+                        <img lazy-src="{$Think.INDEX}/images/9.png" alt="">
+                    </div>
+
+                    <div class="coop_part2 shadow fl">
+                        <img lazy-src="{$Think.INDEX}/images/10.png" alt="">
                     </div>
                 </div>
 
@@ -680,7 +679,6 @@
     });
 
     var Swiper1 = new Swiper('#swiper1', {
-        lazyLoading : true,
         // loop:true,
         pagination : '.swiper-pagination',
         paginationClickable :true,
