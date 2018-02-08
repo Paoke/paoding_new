@@ -16,8 +16,8 @@
 </style>
 <body>
 <!-- 提交成功提示 -->
-<!-- 	<div class="mask"></div>
-	<div class="alert_tip">
+	<div class="mask" style="display:none"></div>
+	<div class="alert_tip" style="display:none">
 		<div class="alert_top clear">
 			<span class="fl">提示</span>
 			<img class="fr dem_close" src="{$Think.INDEX}/images/issue-demand-close.png" alt="">
@@ -25,11 +25,11 @@
 		<img class="success_img" src="{$Think.INDEX}/images/issue-demand-done.png" alt="">
 		<p class="success_tip">提交成功</p>
 		<p class="success_kep">您发布的需求在审核中，<br>请保持电话畅通</p>
-	</div> -->
+	</div>
 <!-- 导航开始 -->
 <include file="./Template/5u/index/public/nav.html" />
 <!-- 导航结束 -->
-<input type="hidden" id="user_id" name="user_id" value="{$user_id}">
+<input type="hidden" id="userId" value="{:session('userId')}">
 <form id="formID">
     <div class="form_wrap">
         <p class="release_demand">发布技术</p>
@@ -207,7 +207,7 @@
             };
 
             // 获取需提交的值
-            var user_id = $("#user_id").val(),
+            var user_id = $("#userId").val(),
                 title = $("#title").val(),
                 content = $("#content").val(),
                 lingyu = lingyu_html,
@@ -234,9 +234,11 @@
                 dataType: 'json',
                 success: function (res) {                    
                   if(res.result == 1){
-                    tip_ct = "发布成功",
-                    tip_url = "/index.php/Mobile";
-                    tips.addtips(tip_ct,tip_url);
+                    $(".mask").show();
+                    $(".alert_tip").show();
+                    // tip_ct = "发布成功",
+                    // tip_url = "/index.php/Mobile";
+                    // tips.addtips(tip_ct,tip_url);
                   }
                 }
             })
