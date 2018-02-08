@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Template/5u/index/Tec/tec_detail.html" line="13" />
+    <bookmark url="file://$PROJECT_DIR$/Template/5u/index/Tec/tec_detail.html" line="12" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bec21b47-bce5-4136-915d-129d4ee686a1" name="默认" comment="" />
@@ -14,7 +14,58 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="activity_show.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Template/5u/index/Activity/activity_show.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2268">
+              <caret line="125" column="64" lean-forward="false" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Template/5u/index/Index/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="809">
+              <caret line="680" column="15" lean-forward="false" selection-start-line="680" selection-start-column="15" selection-end-line="680" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demand_show.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Template/5u/index/Demand/demand_show.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="49" column="129" lean-forward="false" selection-start-line="49" selection-start-column="121" selection-end-line="49" selection-end-column="129" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demand_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Demand/demand_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="683">
+              <caret line="217" column="11" lean-forward="true" selection-start-line="195" selection-start-column="8" selection-end-line="217" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="partner_show.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Template/5u/index/Partner/partner_show.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="665">
+              <caret line="132" column="80" lean-forward="false" selection-start-line="132" selection-start-column="40" selection-end-line="132" selection-end-column="80" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -26,7 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tec</find>
       <find>myLogin</find>
       <find>get_code</find>
       <find>mobile</find>
@@ -56,6 +106,7 @@
       <find>changeName</find>
       <find>../..</find>
       <find>count</find>
+      <find>status</find>
     </findStrings>
     <replaceStrings>
       <replace>$_SESSION[&quot;userArr&quot;][&quot;user_id&quot;]</replace>
@@ -93,7 +144,6 @@
         <option value="$PROJECT_DIR$/Template/5u/index/Demand/demand_show.html" />
         <option value="$PROJECT_DIR$/Template/5u/index/Demand/demand_detail.html" />
         <option value="$PROJECT_DIR$/Template/5u/index/Tec/tec_detail.html" />
-        <option value="$PROJECT_DIR$/Template/5u/index/Index/index.html" />
         <option value="$PROJECT_DIR$/Template/5u/index/News/index.html" />
         <option value="$PROJECT_DIR$/Application/Index/Controller/NewsController.class.php" />
         <option value="$PROJECT_DIR$/Template/5u/index/News/news_index.html" />
@@ -122,6 +172,7 @@
         <option value="$PROJECT_DIR$/Template/5u/index/Partner/partner_topic.html" />
         <option value="$PROJECT_DIR$/Template/5u/index/Activity/activity_show.html" />
         <option value="$PROJECT_DIR$/Template/5u/index/Activity/activity_detail.html" />
+        <option value="$PROJECT_DIR$/Template/5u/index/Index/index.html" />
       </list>
     </option>
   </component>
@@ -203,11 +254,33 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="index" />
+              <option name="myItemId" value="mobile" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paoding_new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paoding_new" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="User" />
+              <option name="myItemId" value="Template" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="5u" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Demand" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -230,6 +303,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paoding_new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="paoding_new" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Template" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="5u" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="index" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Demand" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -485,17 +584,17 @@
       <workItem from="1517793805273" duration="19136000" />
       <workItem from="1517880683345" duration="18342000" />
       <workItem from="1517967273315" duration="21618000" />
-      <workItem from="1518053468594" duration="19318000" />
+      <workItem from="1518053468594" duration="21821000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="575839000" />
+    <option name="totallyTimeSpent" value="578342000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1369936" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1369936" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -552,7 +651,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Template/5u/index/Tec/tec_show.html</url>
-          <line>113</line>
+          <line>112</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -561,34 +660,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Template/5u/index/News/news_index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="49" column="94" lean-forward="false" selection-start-line="49" selection-start-column="94" selection-end-line="49" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Template/5u/index/Login/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Template/5u/index/Index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="544" column="0" lean-forward="false" selection-start-line="544" selection-start-column="0" selection-end-line="545" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Template/5u/mobile/User/user_set.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="23" column="14" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="27" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Api/Logic/UserLogic.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -779,9 +850,9 @@
         <state relative-caret-position="434">
           <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="54" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -791,15 +862,15 @@
         <state relative-caret-position="567">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#0;n#div#0;n#div#6;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#1;n#div#0;n#div#6;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#2;n#div#0;n#div#6;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#3;n#div#0;n#div#6;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#4;n#div#0;n#div#6;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#7;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#0;n#div#7;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#li#0;n#div#0;n#div#6;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#li#1;n#div#0;n#div#6;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#li#2;n#div#0;n#div#6;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#li#3;n#div#0;n#div#6;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#li#4;n#div#0;n#div#6;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#7;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#1;n#div#0;n#div#7;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -863,14 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Template/5u/index/Partner/partner_show.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Partner/company_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -914,38 +977,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Activity/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="49" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Template/5u/index/Activity/activity_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="63" lean-forward="false" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Template/5u/index/Activity/activity_show.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="729">
-          <caret line="107" column="7" lean-forward="false" selection-start-line="103" selection-start-column="4" selection-end-line="107" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Template/5u/index/User/change_phone.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="54" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -980,8 +1019,8 @@
         <state relative-caret-position="1026">
           <caret line="38" column="17" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -999,9 +1038,73 @@
         <state relative-caret-position="324">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="62" />
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Template/5u/index/Activity/activity_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2214">
+          <caret line="41" column="74" lean-forward="false" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Template/5u/index/Activity/activity_show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2268">
+          <caret line="125" column="64" lean-forward="false" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Activity/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3529">
+          <caret line="26" column="49" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Template/5u/index/News/news_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="49" column="99" lean-forward="false" selection-start-line="49" selection-start-column="95" selection-end-line="49" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Template/5u/index/Partner/partner_show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="132" column="80" lean-forward="false" selection-start-line="132" selection-start-column="40" selection-end-line="132" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Template/5u/index/Demand/demand_show.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="49" column="129" lean-forward="false" selection-start-line="49" selection-start-column="121" selection-end-line="49" selection-end-column="129" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Demand/demand_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="683">
+          <caret line="217" column="11" lean-forward="true" selection-start-line="195" selection-start-column="8" selection-end-line="217" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Template/5u/index/Index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="809">
+          <caret line="680" column="15" lean-forward="false" selection-start-line="680" selection-start-column="15" selection-end-line="680" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>

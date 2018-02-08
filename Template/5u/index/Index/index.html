@@ -400,32 +400,37 @@
 
     <div class="part_rec fl r_line" ng-repeat="activity in activities">
         <a class="rec_more" href="__MODULE__/Activity/activity_show.html">更多>></a>
-        <p class="rec_title twoline" ng-cloak>{{activity.title}}</p>
-        <div class="recent_bottom">
-            <p class="clear">
-                <img class="fl" src="{$Think.INDEX}/images/index-icon-time.png" alt="">
-                <span class="fl" ng-cloak>{{activity.formal_start_time}}</span>
-            </p>
-            <p class="clear">
-                <img class="fl" src="{$Think.INDEX}/images/index-icon-location.png" alt="">
-                <span class="fl address" ng-cloak>{{ activity.address }}</span>
-            </p>
-            <p class="clear">
-                <img class="fl" src="{$Think.INDEX}/images/index-icon-price.png" alt="">
-                <span class="fl" ng-cloak>{{activity.cost}}</span>
-            </p>
-        </div>
-        <p class="apply">立即报名</p>
+        <a href="__MODULE__/Activity/activity_detail.html?data_id={{activity.id}}">
+            <p class="rec_title twoline" ng-cloak>{{activity.title}}</p>
+            <div class="recent_bottom">
+                <p class="clear">
+                    <img class="fl" src="{$Think.INDEX}/images/index-icon-time.png" alt="">
+                    <span class="fl" ng-cloak>{{activity.formal_start_time}}</span>
+                </p>
+                <p class="clear">
+                    <img class="fl" src="{$Think.INDEX}/images/index-icon-location.png" alt="">
+                    <span class="fl address" ng-cloak>{{ activity.address }}</span>
+                </p>
+                <p class="clear">
+                    <img class="fl" src="{$Think.INDEX}/images/index-icon-price.png" alt="">
+                    <span class="fl" ng-cloak>{{activity.cost}}</span>
+                </p>
+            </div>
+        </a>
+        <p class="apply" ng-show="status==1">立即报名</p>
+        <p class="apply" ng-show="status==0">活动已结束</p>
     </div>
 
     <div class="part_rec r_box fl" ng-controller="newCtrl">
         <a class="rec_more2" href="#">更多>></a>
         <p class="hot_act">行业资讯</p>
         <div class="industry_news" ng-repeat="new in news">
-            <div class="news_part clear">
-                <p class="fl news_tit" ng-cloak>{{new.title}}</p>
-                <p class="fr news_time" ng-cloak>{{new.create_time | formatDate}}</p>
-            </div>
+            <a href="{{new.link}}" target="_blank">
+                <div class="news_part clear">
+                    <p class="fl news_tit" ng-cloak>{{new.title}}</p>
+                    <p class="fr news_time" ng-cloak>{{new.create_time | formatDate}}</p>
+                </div>
+            </a>
         </div>
     </div>
 </div>
@@ -438,8 +443,10 @@
 <div class="section" ng-controller="partnerCtrl">
     <div class="coop_wrap clear">
         <div class="coop_part shadow fl" ng-repeat="partner in partners">
-            <img lazy-src="{{partner.cover_url}}" alt="">
-            <p class="oneline" ng-cloak>{{partner.title}}</p>
+            <a href="__MODULE__/Partner/partner_asso.html?data_id={{partner.id}}">
+                <img lazy-src="{{partner.cover_url}}" alt="">
+                <p class="oneline" ng-cloak>{{partner.title}}</p>
+            </a>
         </div>
 
     </div>
@@ -453,7 +460,9 @@
 <div class="section" ng-controller="companyCtrl">
     <div class="coop_wrap clear">
         <div class="coop_part2 shadow fl" ng-repeat="company in companys">
-            <img lazy-src="{{ company.cover_url }}" alt="" height="135">
+            <a href="__MODULE__/Partner/partner_topic.html?data_id={{company.id}}">
+                <img lazy-src="{{ company.cover_url }}" alt="" height="135">
+            </a>
         </div>
     </div>
 </div>
@@ -599,6 +608,16 @@
             }
         }).then(function successCallback(response){
             $scope.activities=response.data.data;
+            var activities = response.data.data;
+            var startTime = activities[0]['formal_start_time'];
+            var changeTime = startTime.replace(/-/g, '/');
+            if (Date.parse(new Date()) > Date.parse(changeTime)) {
+                $scope.status = 0;//已结束
+                // $scope.details['status']="0";//已结束
+            } else {
+                $scope.status = 1;//未举办
+                // $scope.details['status']="1";//未举办
+            }
         },function errorCallback(){
 
         })
@@ -626,6 +645,42 @@
             $scope.tecTypes = response.data.data;
         }, function errorCallback(response) {
         });
+
+        var data = {
+            "page": "1",
+            "page_num": "4",
+            "order_field": "create_time",
+            "order_by": "DESC",
+            "category_id": "0",
+            "tag_id": "0",
+        };
+        
+        function getByCategory() {
+            $http({
+                method: 'POST',
+                data: data,
+                url: '/api.php/ChannelIndex/index/action/dataList/channel/xq/type/1',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj) {
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    }
+                    return str.join("&");
+                }
+            }).then(function successCallback(response) {
+                page = response.data.data.page.page;
+                page_total = response.data.data.page.page_total;
+                $scope.details = response.data.data.info;
+                // $scope.times = response.data.data.create_time;
+                // console.log(substrDate(response.data.data.info[1].create_time));
+                // for(var i = 0 ;i < $scope.details.length;i++){
+                //     $scope.times = Date.parse($scope.details[i].create_time);//转成时间戳
+                // };
+            }, function errorCallback(response) {
+            });
+        }
+
     });
 
     app.controller("newCtrl",function ($scope,$http){
