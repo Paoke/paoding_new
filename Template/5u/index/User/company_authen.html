@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en" ng-app="tec">
+<head>
+    <meta charset="UTF-8">
+    <title>庖丁技术</title>
+    <meta name="description" content="庖丁科技众包服务平台携手国内外先进技术科研院所、顶级技术专家，以实现科技成果市场化为核心，为企业提供快速精准的需求匹配服务，从而实现企业以及科技资源的有效对接，帮助企业实现产业技术升级，助力先进技术完成产业化发展。" />
+    <meta name="keywords" content="庖丁众包、智能技术、机械制造、健康医疗、材料科学、能源环保、生产流程优化"/>
+    <link rel="preload" href="{$Think.INDEX}/css/index.css" as="style">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/common_new.css">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/swiper.css">
+</head>
+<style>
+    .form_inp2::-webkit-input-placeholder{
+        font-size: 18px!important;
+    }
+</style>
+<body style="background:#f4f4f4">
+<!-- 导航开始 -->
+<include file="./Template/5u/index/public/nav.html" />
+
+<div class="section clear">
+    <div class="user_list fl">
+        <div class="user_top">
+            <div class="head">
+                <img src="{$Think.INDEX}/images/my-portrait.png" alt="">
+            </div>
+            <p class="user_name">用户名</p>
+            <div class="user_sta">
+                <img class="user_status" src="{$Think.INDEX}/images/my-apply.png" alt="">
+                <span class="user_status_w">合格认证</span>
+            </div>
+        </div>
+        <ul class="my_msg">
+            <a href="User-demand.html"><li>我的需求</li></a>
+            <a href="User-tec.html"><li>我的技术</li></a>
+            <a href="User-msg.html"><li>我的消息</li></a>
+            <a href="User-collect.html"><li>我的收藏</li></a>
+            <a href="User-project.html"><li>对接项目</li></a>
+            <a href="User-info.html"><li class="my_select">个人信息</li></a>
+        </ul>
+    </div>
+
+    <div class="user_detail fl" style="height:auto">
+        <div class="collect_list">
+            <p class="col_btn">个人资料</p>
+            <p class="col_btn col_active">认证中心</p>
+        </div>
+
+        <!-- 表单 -->
+        <div class="identify clear ml">
+            <form id="formID">
+                <div class="form_part clear">
+                    <p class="form_p fl">
+                        <span class="form_span">联系人：</span>
+                    </p>
+                    <input type="text" class="form_inp2 fl" placeholder="真实姓名" name="user_name">
+                </div>
+
+                <div class="form_part clear">
+                    <p class="form_p fl">
+                        <span class="form_span">手机号：</span>
+                    </p>
+                    <input type="text" class="form_inp2 fl" placeholder="请输入手机号" name="phone" id="phone">
+                </div>
+
+                <div class="form_part clear">
+                    <p class="form_p fl">
+                        <span class="form_span">单位名：</span>
+                    </p>
+                    <input type="text" class="form_inp2 fl" placeholder="请输入单位名称" name="company_name">
+                </div>
+
+                <div class="form_part clear">
+                    <p class="form_p fl">
+                        <span class="form_span">主营业务：</span>
+                    </p>
+                    <input type="text" class="form_inp2 fl" placeholder="请输入主营业务" name="zyyw">
+                </div>
+
+                <div class="form_part clear">
+                    <p class="form_p fl">
+                        <span class="form_span">企业地址：</span>
+                    </p>
+                    <input type="text" class="form_inp2 fl" placeholder="省--市--区--街" name="address">
+                </div>
+
+                <div class="form_part clear">
+                    <p class="form_p fl">
+                        <span class="form_span">关注领域：</span>
+                    </p>
+
+                    <div class="areas_main clear fl">
+                        <li class="areas_default" style="margin-left:0;margin-top:0">电子信息</li>
+                        <li class="areas_default" style="margin-top:0">先进制造</li>
+                        <li class="areas_default" style="margin-top:0">新材料</li>
+                        <li class="areas_default" style="margin-top:0">能源节能</li>
+                        <li class="areas_default" style="margin-left:0">环境保护</li>
+                        <li class="areas_default">健康医疗</li>
+                        <li class="areas_default">智能技术</li>
+                    </div>
+                </div>
+
+                <div class="cer-middle">
+                    <p class="form_p fl">
+                        <span class="form_span">营业执照：</span>
+                    </p>
+                    <div class="IDcardDiv clear">
+                        <input type="file" name="pic" class="picZM" style='display:none'/>
+
+                        <img class='fl fileZm' src="{$Think.INDEX}/images/my-person-AC-image3.png" alt="">
+
+                    </div>
+                </div>
+
+                <div class="clear">
+                    <div class="bottom_div fr">
+                        <p class="cancle">取消</p>
+                        <p class="save">保存</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- 提交成功 -->
+        <!-- 			<div class="identify ml">
+                        <img class="icon_suc" src="{$Think.INDEX}/images/my-person-AC-submit.png" alt="">
+                        <p class="inde_tip1">认证资料已提交，审核中...</p>
+                        <p class="inde_tip2">平台将两个工作日内以站内信形式发送审核结果，届时请留意，谢谢！</p>
+                        <a href="#"><p class="return">返回</p></a>
+                    </div> -->
+
+
+    </div>
+</div>
+</body>
+<script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
+<script src="{$Think.INDEX}/js/common.js"></script>
+<script>
+    var head_pic;
+    var data = {
+        tech_field:'',
+        company_pic:'',
+        type:'企业'
+    };
+    $(".col_btn").on("click",function(){
+        var index = $(this).index();
+        $(this).addClass('col_active').siblings('.col_btn').removeClass('col_active');
+        $(".tab_colbody").eq(index).show().siblings(".tab_colbody").hide();
+    });
+
+    // 需求领域  单选
+    $(".areas_default").on("click",function(){
+        $(this).addClass('areas_selected').removeClass('areas_default').siblings().addClass('areas_default').removeClass('areas_selected');
+    });
+
+    $(".save").on("click",function(){
+        getMsg();
+    });
+
+    function getMsg(){
+        var regName = /^([\u4e00-\u9fa5]){2,5}$/;
+        var regTel = /^[1][3,4,5,7,8][0-9]{9}$/;
+        var count = $(".areas_selected").length;
+        var picFM = $(".picFM").val();
+        var user_name = $("#user_name").val();
+        var phone =  $("#phone").val();
+        var li = $(".areas_main li");
+        for(var i = 0;i < li.length ; i++){
+            if( li.eq(i).hasClass('areas_selected') ){
+                lingyu_html = li.eq(i).html();
+            }
+        };
+        for(var j = 0 ;j < $(".form_inp2").length;j++){
+            if($(".form_inp2").eq(j).val()==""){
+                $(".form_inp2").eq(j).focus();
+                tip_ct = "请填写完毕再提交";
+                tips.addtips(tip_ct);
+                return false;
+            }
+        };
+        if(count < 1){
+            tip_ct = "请选择关注领域";
+            tips.addtips(tip_ct);
+            return false;
+        }
+        else if(!regName.test(user_name)){
+            tip_ct = "请输入2—5位的中文姓名";
+            tips.addtips(tip_ct);
+
+        }
+        else if(!regTel.test(phone)){
+            tip_ct = "请输入11位的手机号码";
+            tips.addtips(tip_ct);
+
+        }
+        else if(picFM == ""){
+            tip_ct = "请上传营业执照";
+            tips.addtips(tip_ct);
+            return false;
+        }
+        else{
+            //异步提交表单数据
+            var t = $("#formID").serializeArray();
+            $.each(t, function() {
+                data[this.name] = this.value;
+            });
+            data['tech_field'] = lingyu_html;
+            data['company_pic'] = head_pic;
+            data['type']="企业";
+            $.ajax({
+                type: "post",
+                url: '/api.php/User/user_authen/action/edit',
+                data: data,
+                dataType: 'json',
+                success: function (res) {
+                    if(res.result == 1){
+                        $(".alert").show();
+                        $(".mask").show();
+                    }
+                }
+            })
+        }
+    };
+
+    // 上传照片
+    $('.picFM').change(function() {
+        var file = document.getElementById('picFM').files[0];
+        var reader = new FileReader(); //声明一个FileReader实例
+        reader.readAsDataURL(file);
+        reader.onload = function(){
+            dataPic = this.result;
+            $.ajax({
+                type: "post",
+                url: '/api.php/User/user_authen/action/update_head',
+                data: {head_pic:dataPic},
+                dataType: 'json',
+                success: function (res) {
+                    if(res.result == 1){
+                        console.log(res.data);
+                        head_pic = res.data;  //获取返回图片路径
+                        tip_ct = "提交身份证照片成功";
+                        $(".fileFm").attr({
+                            src:head_pic
+                        });
+                        tips.addtips(tip_ct);
+                        return false;
+                    }
+                }
+            })
+        }
+    });
+
+    // 点击触发拍照上传功能
+    $('.fileZm').on('click',function(){
+        $('.picZM').click();
+    })
+    $('.fileFm').on('click',function(){
+        $('.picFM').click();
+    });
+</script>
+</html>

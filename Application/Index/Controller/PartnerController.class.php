@@ -17,5 +17,15 @@ class PartnerController extends BaseController
         $this->display();
     }
 
+    public function partner_asso()
+    {
+        $this->display();
+    }
+
+    public function partner_topic()
+    {
+        $this->display();
+    }
+
 
 }

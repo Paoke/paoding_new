@@ -49,6 +49,26 @@ class UserController extends BaseController
         $this->display();
     }
 
+    public function change_phone()
+    {
+        $this->display();
+    }
+
+    public function change_psw()
+    {
+        $this->display();
+    }
+
+    public function company_authen()
+    {
+        $this->display();
+    }
+
+    public function person_authen()
+    {
+        $this->display();
+    }
+
 
 
 }

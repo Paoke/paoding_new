@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="tec_list">
+<html lang="en" ng-app="detail">
 <head>
     <meta charset="UTF-8">
     <title>庖丁技术</title>
@@ -11,38 +11,36 @@
     <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
     <!--<include file="./Template/5u/common/common.html" />   上线开启-百度统计-->
 </head>
-<body>
+<body ng-controller="detailCtrl" ng-cloak>
 <!-- 导航开始 -->
 <include file="./Template/5u/index/public/nav.html" />
 <div class="section clear" style="padding-bottom:30px;">
     <div class="fl">
-        <img class="tec_left_img" src="{$Think.INDEX}/images/tech-technology1-technology2l.jpg" alt="">
+        <img class="tec_left_img" ng-src="{{details.cover_url}}" alt="">
     </div>
     <div class="tec_info fl" style="height:280px;">
         <div class="operate" style="bottom:28px;">
-            浏览&nbsp;&nbsp;<span>167</span>
-            <img id="collect" class="operate_ml" src="{$Think.INDEX}/images/icon-collect.png" alt="">
-            <div class="bdsharebuttonbox fr">
-                <img class="iconwc" src="{$Think.INDEX}/images/icon-wechat.png" alt="">
-                <a class="bds_weixin" data-cmd="weixin"></a>
-            </div>
+            浏览&nbsp;&nbsp;<span>{{details.clicks}}</span>
+            <img class="operate_ml" src="{$Think.INDEX}/images/icon-collect.png" alt="">
+            <img  src="{$Think.INDEX}/images/icon-wechat.png" alt="">
         </div>
-        <p class="tec_title">机械材料</p>
+        <p class="tec_title">{{details.title}}</p>
         <div class="clear">
             <p class="active_det clear">
                 <img class="active_det_icon fl" src="{$Think.INDEX}/images/activity--icon-time.png" alt="">
-                <span class="active_det_span">2012.1.12</span>
+                <span class="active_det_span">{{details.formal_start_time}}</span>
             </p>
             <p class="active_det clear">
                 <img class="active_det_icon fl" src="{$Think.INDEX}/images/activity-icon-location.png" alt="">
-                <span class="active_det_span fl">广州市天河区</span>
+                <span class="active_det_span fl">{{details.address}}</span>
             </p>
             <p class="active_det clear">
                 <img class="active_det_icon fl" src="{$Think.INDEX}/images/activity-icon-price.png" alt="">
-                <span class="active_det_span fl">免费</span>
+                <span class="active_det_span fl">{{details.cost}}</span>
             </p>
         </div>
-        <a href="__CONTROLLER__/activity_release.html"><div class="act_apply">我要报名</div></a>
+        <a href="__CONTROLLER__/activity_release.html" ng-show="status==1"><div class="act_apply">我要报名</div></a>
+        <a  ng-show="status==0"><div class="act_apply">活动已结束</div></a>
     </div>
 </div>
 
@@ -58,7 +56,7 @@
                 <img class="fl mt" src="{$Think.INDEX}/images/icon-title-hdxq.png" alt="">
                 <span class="fl act_det_part_span">会议目的</span>
             </p>
-            <div class="act_ct">会议内容打扫房间拉卡士大夫就是拉到会计法杀了妲己放 拉设计费了</div>
+            <div class="act_ct">{{details.desc}}</div>
         </div>
 
         <div class="act_det_part">
@@ -66,7 +64,7 @@
                 <img class="fl mt" src="{$Think.INDEX}/images/icon-title-hdxq.png" alt="">
                 <span class="fl act_det_part_span">会议内容</span>
             </p>
-            <div class="act_ct">会议内容打扫房间拉卡士大夫就是拉到会计法杀了妲己放 拉设计费了</div>
+            <div class="act_ct">{{details.hynr}}</div>
         </div>
 
         <div class="act_det_part">
@@ -74,7 +72,7 @@
                 <img class="fl mt" src="{$Think.INDEX}/images/icon-title-hdxq.png" alt="">
                 <span class="fl act_det_part_span">会议嘉宾</span>
             </p>
-            <div class="act_ct">会议内容打扫房间拉卡士大夫就是拉到会计法杀了妲己放 拉设计费了</div>
+            <div class="act_ct"><img class="act_main_pic" ng-cloak ng-src="{{details.chjb}}" alt=""></div>
         </div>
 
         <div class="act_det_part">
@@ -82,7 +80,15 @@
                 <img class="fl mt" src="{$Think.INDEX}/images/icon-title-hdxq.png" alt="">
                 <span class="fl act_det_part_span">会议流程</span>
             </p>
-            <div class="act_ct">会议内容打扫房间拉卡士大夫就是拉到会计法杀了妲己放 拉设计费了</div>
+            <div class="act_ct"><img class="act_main_pic" ng-cloak ng-src="{{details.hylc}}" alt=""></div>
+        </div>
+
+        <div class="act_det_part">
+            <p class="clear act_det_part_p">
+                <img class="fl mt" src="{$Think.INDEX}/images/icon-title-hdxq.png" alt="">
+                <span class="fl act_det_part_span">组织形式</span>
+            </p>
+            <div class="act_ct"><img class="act_main_pic" ng-cloak ng-src="{{details.zzxs}}" alt=""></div>
         </div>
 
         <div class="act_det_inp">
@@ -99,15 +105,12 @@
                 <div class="div2"></div>
             </div>
 
-            <div class="main_r_section">
-                <img class="tec_right_pic" src="{$Think.INDEX}/images/tech-technology1-technology2l.jpg" alt="">
-                <p class="tec_tit_p">喷涂</p>
+            <div class="main_r_section" ng-repeat="tecList in tecLists">
+                <img class="tec_right_pic" ng-src="{{tecList.cover_url}}" alt="">
+                <p class="tec_tit_p">{{tecList.title}}</p>
+                <p class="tec_time_p">发布于：<span>{{tecList.create_time | formatDate}}</span></p>
             </div>
 
-            <div class="main_r_section">
-                <img class="tec_right_pic" src="{$Think.INDEX}/images/tech-technology1-technology2l.jpg" alt="">
-                <p class="tec_tit_p">喷涂</p>
-            </div>
         </div>
     </div>
 
@@ -118,9 +121,59 @@
 <script src="{$Think.INDEX}/js/common.js"></script>
 <script src="{$Think.MOBILE}/js/angular.min.js"></script>
 <script>
-// 收藏/取消收藏
-$("#collect").on("click",function(){
-    $("#collect").attr("src","{$Think.INDEX}/images/icon-collect2.png"); 
-});
+    var data_id = GetQueryString('data_id');
+
+    var app = angular.module("detail",[]);
+    app.filter('formatDate',function(){
+        return function(date){
+            return date = date.substr(0,16);
+        };
+    });
+    app.controller("detailCtrl",function ($scope,$http) {
+        $http({
+            method: "GET",
+            params: {data_id: data_id},
+            url: "/api.php/ChannelIndex/index/action/dataDetail/channel/hd/type/1/"
+        }).then(function successCallback(response) {
+            $scope.details = response.data.data;
+            var startTime = $scope.details.formal_start_time;
+            var changeTime = startTime.replace(/-/g, '/');
+            if (Date.parse(new Date()) > Date.parse(changeTime)) {
+                $scope.status = 0;//已结束
+                // $scope.details['status']="0";//已结束
+            } else {
+                $scope.status = 1;//未举办
+                // $scope.details['status']="1";//未举办
+            }
+        }, function errorCallback(response) {
+        });
+
+        //推荐技术
+        var data = {
+            page:1,
+            page_num:2,
+            order_field:'create_time',
+            category_id:0,
+            tag_id:0,
+            order_by:'DESC'
+        };
+        $http({
+            method:"POST",
+            data:data,
+            url:"/api.php/ChannelIndex/index/action/dataList/channel/js/type/1",
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            transformRequest: function(obj) {
+                var str = [];
+                for (var p in obj) {
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                }
+                return str.join("&");
+            }
+        }).then(function successCallback(response) {
+            $scope.tecLists = response.data.data;
+        }, function errorCallback(response) {
+
+        });
+    });
 </script>
 </html>

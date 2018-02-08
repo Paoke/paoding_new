@@ -43,7 +43,7 @@
             <a href="__CONTROLLER__/user_tec.html"><li>我的技术</li></a>
             <a href="__CONTROLLER__/user_msg.html"><li class="my_select">我的消息</li></a>
             <a href="__CONTROLLER__/user_collect.html"><li>我的收藏</li></a>
-            <a href="__CONTROLLER__/user_project.html"><li>对接项目</li></a>
+            <!--<a href="__CONTROLLER__/user_project.html"><li>对接项目</li></a>-->
             <a href="__CONTROLLER__/user_info.html"><li>个人信息</li></a>
         </ul>
     </div>
@@ -52,39 +52,50 @@
         <div class="user_det_ct margL" style="border:none;height:960px;">
             <p class="get_msg">收到信息<span>(1)</span></p>
             <div class="msg_list">
-                <div class="msg_part clear">
+                <div class="msg_part clear" ng-repeat="msg in msgs">
                     <div class="msg_pic fl">
                         <img src="{$Think.INDEX}/images/my-message1.png" alt="">
                     </div>
                     <div class="msg_part_r fl">
                         <p class="sys_tip">系统提示：</p>
-                        <p class="twoline msg_ct">庖丁众包<br>联系</p>
+                        <p class="twoline msg_ct">{{msg.content}}</p>
                     </div>
                     <input class="readed fr" type="button" value="我知道了">
-                </div>
-
-                <div class="msg_part clear">
-                    <div class="msg_pic fl">
-                        <img src="{$Think.INDEX}/images/my-message.png" alt="">
-                    </div>
-                    <div class="msg_part_r fl">
-                        <p class="sys_tip">系统提示：</p>
-                        <p class="twoline msg_ct">庖丁众包<br>联系</p>
-                    </div>
                 </div>
             </div>
         </div>
 
     </div>
 </div>
-<include file="./Template/5u/index/public/footer.html" />
 </body>
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
 <script src="{$Think.INDEX}/js/common.js"></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script>
     var app = angular.module('user_msgs', []);
     app.controller('magsCtrl', function ($scope,$http) {
-
+        var data = {
+            page : 1,
+            page_num : 10,
+            order_field : 'status',
+            order_by : 'ASC',
+            get_page : true
+        };
+        $http({
+            method: 'POST',
+            data:data,
+            url: '/api.php/User/user_news/action/data_list',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            transformRequest: function(obj) {
+                var str = [];
+                for (var p in obj) {
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                }
+                return str.join("&");
+            }
+        }).then(function successCallback(response) {
+            $scope.msgs = response.data.data.info;
+        });
     });
 </script>
 </html>

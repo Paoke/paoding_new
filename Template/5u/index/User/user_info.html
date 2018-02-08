@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="tec">
+<html lang="en" ng-app="user_info">
 <head>
     <meta charset="UTF-8">
     <title>庖丁技术</title>
@@ -15,7 +15,8 @@
         font-size: 18px!important;
     }
 </style>
-<body style="background:#f4f4f4">
+<body style="background:#f4f4f4" ng-controller="infoCtrl" ng-cloak>
+<input type="hidden" id="userId" value="{:session('userId')}">
 <!-- 导航开始 -->
 <include file="./Template/5u/index/public/nav.html" />
 
@@ -48,7 +49,7 @@
             <a href="__CONTROLLER__/user_tec.html"><li>我的技术</li></a>
             <a href="__CONTROLLER__/user_msg.html"><li>我的消息</li></a>
             <a href="__CONTROLLER__/user_collect.html"><li>我的收藏</li></a>
-            <a href="__CONTROLLER__/user_project.html"><li>对接项目</li></a>
+            <!--<a href="__CONTROLLER__/user_project.html"><li>对接项目</li></a>-->
             <a href="__CONTROLLER__/user_info.html"><li class="my_select">个人信息</li></a>
         </ul>
     </div>
@@ -65,7 +66,7 @@
                 <p class="form_p fl">
                     <span class="form_span">昵称：</span>
                 </p>
-                <input type="text" class="form_inp2 fl" value="阿柯">
+                <input type="text" class="form_inp2 fl" ng-value="user.nickname">
                 <p class="change fl" id="changeName">修 改</p>
                 <p class="confirm fl">确 定</p>
             </div>
@@ -74,17 +75,22 @@
                 <p class="form_p fl">
                     <span class="form_span">手机号：</span>
                 </p>
-                <input type="text" class="form_inp2 fl" value="1854213244" readonly=readonly>
+                <input type="text" class="form_inp2 fl" ng-value="user.mobile" readonly=readonly>
                 <p class="change fl">
                     <img class="per_icon" src="{$Think.INDEX}/images/my-person-correct.png">
-                    <span class="al_bind">已绑定</span>
+                    <span class="al_bind" ng-show="user.mobile==null">未绑定</span>
+                    <span class="al_bind" ng-show="user.mobile!=null">已绑定</span>
                     <span class="changePhone">|</span>
-                    <a href="User-change-phone.html">
+
+                    <a href="change_phone.html" ng-if="user.mobile!=null">
                         <span class="changePhone"> 修 改</span>
+                    </a>
+                    <a href="User-change-phone.html" ng-if="user.mobile==null">
+                        <span class="changePhone"> 绑 定</span>
                     </a>
                 </p>
             </div>
-            <a href="User-change-psw.html">
+            <a href="change_psw.html" ng-if="user.mobile!=null">
                 <div class="form_part clear">
                     <p class="form_p fl">
                         <span class="form_span">密码：</span>
@@ -97,7 +103,7 @@
         <!-- 认证 -->
         <div class="tab_colbody">
             <div class="identify clear">
-                <a href="User-company-authentication.html">
+                <a href="company_authen.html">
                     <div class="gradi_p person_itf fl">
                         <img class="per_icon" src="{$Think.INDEX}/images/my-person-AC-enterprise-certificate.png" alt="">
 
@@ -106,7 +112,7 @@
                     </div>
                 </a>
 
-                <a href="User-person-authentication.html">
+                <a href="person_authen.html">
                     <div class="gradi_c person_itf fl">
                         <img class="per_icon" src="{$Think.INDEX}/images/my-person-AC-certificate.png" alt="">
                         <span class="person_span">个人认证</span>
@@ -123,7 +129,23 @@
 </body>
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
 <script src="{$Think.INDEX}/js/common.js"></script>
+<script src="{$Think.MOBILE}/js/angular.min.js"></script>
 <script>
+
+    var app = angular.module("user_info",[]);
+    app.controller("infoCtrl",function ($scope,$http){
+        var id = $("#userId").val();
+        $http({
+            method: 'GET',
+            url: '/api.php/User/user_info/action/detail?id='+id,
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+
+        }).then(function successCallback(response) {
+            $scope.user = response.data.data;
+        }, function errorCallback(response) {
+        });
+    });
+
     $(".col_btn").on("click",function(){
         var index = $(this).index();
         $(this).addClass('col_active').siblings('.col_btn').removeClass('col_active');

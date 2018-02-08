@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="tec">
+<html lang="en" ng-app="user_collect">
 <head>
     <meta charset="UTF-8">
     <title>庖丁技术</title>
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
     <link rel="stylesheet" href="{$Think.INDEX}/css/swiper.css">
 </head>
-<body style="background:#f4f4f4">
+<body style="background:#f4f4f4" ng-controller="collectCtrl" ng-cloak>
 <!-- 导航开始 -->
 <include file="./Template/5u/index/public/nav.html"/>
 
@@ -53,9 +53,9 @@
             <a href="__CONTROLLER__/user_collect.html">
                 <li class="my_select">我的收藏</li>
             </a>
-            <a href="__CONTROLLER__/user_project.html">
-                <li>对接项目</li>
-            </a>
+            <!--<a href="__CONTROLLER__/user_project.html">-->
+                <!--<li>对接项目</li>-->
+            <!--</a>-->
             <a href="__CONTROLLER__/user_info.html">
                 <li>个人信息</li>
             </a>
@@ -72,44 +72,23 @@
 
         <!-- 技术 -->
         <div class="tab_colbody" style="display:block">
-            <div class="col_option clear">
+            <div class="col_option clear" ng-repeat="tecList in tecLists">
                 <div class="fl">
-                    <img class="col_img" src="{$Think.INDEX}/images/my-collect-activity-.jpg" alt="">
+                    <img class="col_img" ng-src="{{tecList.cover_url}}" alt="">
                 </div>
                 <div class="fl col_right">
-                    <p class="col_list_tit">技术标题</p>
+                    <p class="col_list_tit">{{tecList.title}}</p>
                     <div class="publish_time">
                         发布于
-                        <span>2017-10-25</span>
+                        <span>{{tecList.create_time | formatDate}}</span>
                     </div>
                     <div class="clear">
                         <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
-                        <span class="tec_type fl">涂装工业</span>
+                        <span class="tec_type fl">{{tecList.yyxy}}</span>
                     </div>
                     <div class="adhi_print">
-                        <span class="adhibition">应用类</span>
-                        <span class="print">成熟方案</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col_option clear">
-                <div class="fl">
-                    <img class="col_img" src="{$Think.INDEX}/images/my-collect-activity-.jpg" alt="">
-                </div>
-                <div class="fl col_right">
-                    <p class="col_list_tit">技术标题</p>
-                    <div class="publish_time">
-                        发布于
-                        <span>2017-10-25</span>
-                    </div>
-                    <div class="clear">
-                        <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
-                        <span class="tec_type fl">涂装工业</span>
-                    </div>
-                    <div class="adhi_print">
-                        <span class="adhibition">应用类</span>
-                        <span class="print">成熟方案</span>
+                        <span class="adhibition">{{tecList.cat_name}}</span>
+                        <span class="print">{{tecList.csd}}</span>
                     </div>
                 </div>
             </div>
@@ -117,67 +96,38 @@
 
         <!-- 需求 -->
         <div class="tab_colbody">
-            <div class="col_dem">
+            <div class="col_dem" ng-repeat="demandList in demandLists">
                 <div class="clear">
-                    <p class="dem_sta fl">招标中</p>
-                    <p class="dem_tit fl">防静电扶手</p>
+                    <p class="dem_sta fl">{{demandList.hzxs}}</p>
+                    <p class="dem_tit fl">{{demandList.title}}</p>
                 </div>
-                <p>发布时间：<span>2017-10-16</span></p>
-            </div>
-            <div class="col_dem">
-                <div class="clear">
-                    <p class="dem_sta fl">招标中</p>
-                    <p class="dem_tit fl">防静电扶手</p>
-                </div>
-                <p class="col_time">发布时间：<span>2017-10-16</span></p>
+                <p>发布时间：<span>{{demandList.create_time | formatDate}}</span></p>
             </div>
         </div>
 
         <!-- 活动 -->
         <div class="tab_colbody">
-            <div class="col_option clear">
+            <div class="col_option clear" ng-repeat="activityList in activityLists">
                 <div class="fl">
-                    <img class="col_img" src="{$Think.INDEX}/images/my-collect-activity-.jpg" alt="">
+                    <img class="col_img" ng-src="{{activityList.sponsor_logo_url}}" alt="">
                 </div>
                 <div class="fl col_right">
-                    <p class="col_apply">立即报名</p>
-                    <p class="col_list_tit">技术标题</p>
+                    <p class="col_apply"  ng-show="activityList.status == 1">立即报名</p>
+                    <p class="col_apply"  ng-show="activityList.status == 0">活动已结束</p>
+                    <p class="col_list_tit">{{activityList.title}}</p>
                     <div class="clear as_top">
                         <img class="tac_icon fl" src="{$Think.INDEX}/images/activity--icon-time.png" alt="">
-                        <span class="tec_type fl">2017-11-13</span>
+                        <span class="tec_type fl">{{activityList.formal_start_time | formatDate}}</span>
                     </div>
 
                     <div class="clear as_top">
                         <img class="tac_icon fl" src="{$Think.INDEX}/images/activity-icon-location.png" alt="">
-                        <span class="tec_type fl">涂装工业</span>
+                        <span class="tec_type fl">{{activityList.address}}</span>
                     </div>
 
                     <div class="clear as_top">
                         <img class="tac_icon fl" src="{$Think.INDEX}/images/activity-icon-price.png" alt="">
-                        <span class="tec_type fl">免费</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col_option clear">
-                <div class="fl">
-                    <img class="col_img" src="{$Think.INDEX}/images/my-collect-activity-.jpg" alt="">
-                </div>
-                <div class="fl col_right">
-                    <p class="col_apply">立即报名</p>
-                    <p class="col_list_tit">技术标题</p>
-                    <div class="clear as_top">
-                        <img class="tac_icon fl" src="{$Think.INDEX}/images/activity--icon-time.png" alt="">
-                        <span class="tec_type fl">2017-11-13</span>
-                    </div>
-
-                    <div class="clear as_top">
-                        <img class="tac_icon fl" src="{$Think.INDEX}/images/activity-icon-location.png" alt="">
-                        <span class="tec_type fl">涂装工业</span>
-                    </div>
-
-                    <div class="clear as_top">
-                        <img class="tac_icon fl" src="{$Think.INDEX}/images/activity-icon-price.png" alt="">
-                        <span class="tec_type fl">免费</span>
+                        <span class="tec_type fl">{{activityList.cost}}</span>
                     </div>
                 </div>
             </div>
@@ -185,16 +135,16 @@
 
         <!-- 单位 -->
         <div class="tab_colbody">
-            <div class="col_option clear">
+            <div class="col_option clear" ng-repeat="assoList in assoLists">
                 <div class="fl">
-                    <img class="coor_img" src="{$Think.INDEX}/images/my-collect-organization1.jpg" alt="">
+                    <img class="coor_img" ng-src="{{assoList.cover_url}}" alt="">
                 </div>
                 <div class="fl col_right">
-                    <p class="col_list_tit">技术标题</p>
-                    <div class="col_time">
-                        技术
-                        <span>16项</span>
-                    </div>
+                    <p class="col_list_tit">{{assoList.title}}</p>
+                    <!--<div class="col_time">-->
+                        <!--技术-->
+                        <!--<span>16项</span>-->
+                    <!--</div>-->
                     <div class="coop_log">
                         <img src="{$Think.INDEX}/images/organization-authenticated.png" alt="">
                         <img src="{$Think.INDEX}/images/organization-company-authenticated.png" alt="">
@@ -202,16 +152,16 @@
                 </div>
             </div>
 
-            <div class="col_option clear">
+            <div class="col_option clear" ng-repeat="companyList in companyLists">
                 <div class="fl">
-                    <img class="coor_img" src="{$Think.INDEX}/images/my-collect-organization1.jpg" alt="">
+                    <img class="coor_img" ng-src="{{companyList.cover_url}}" alt="">
                 </div>
                 <div class="fl col_right">
-                    <p class="col_list_tit">技术标题</p>
-                    <div class="col_time">
-                        技术
-                        <span>16项</span>
-                    </div>
+                    <p class="col_list_tit">{{companyList.title}}</p>
+                    <!--<div class="col_time">-->
+                        <!--技术-->
+                        <!--<span>16项</span>-->
+                    <!--</div>-->
                     <div class="coop_log">
                         <img src="{$Think.INDEX}/images/organization-authenticated.png" alt="">
                         <img src="{$Think.INDEX}/images/organization-company-authenticated.png" alt="">
@@ -225,7 +175,92 @@
 </body>
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
 <script src="{$Think.INDEX}/js/common.js"></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script>
+    var app = angular.module('user_collect', []);
+    app.filter('formatDate',function(){
+        return function(date){
+            return date = date.substr(0,10);
+        };
+    });
+
+    app.controller("collectCtrl", function ($scope, $http) {
+        // 技术
+        $http({
+            method: "GET",
+            url: "/index.php/Mobile/Article/collect_list?channel=js",
+        }).then(function successCallback(response) {
+            $scope.tecLists = response.data.data;
+            // 无收藏
+            if(response.data.result == 0){
+                $scope.tecStatus = 0;
+            };
+        }, function errorCallback(response) {
+        });
+
+        //需求
+        $http({
+            method: "GET",
+            url: "/index.php/Mobile/Article/collect_list?channel=xq",
+        }).then(function successCallback(response) {
+            $scope.demandLists = response.data.data;
+            if(response.data.result == 0){
+                $scope.DemStatus = 0;
+            }
+        }, function errorCallback(response) {
+            // console.log(response)
+        });
+
+        //活动
+        $http({
+            method: "GET",
+            url: "/index.php/Mobile/Activity/collect_list",
+        }).then(function successCallback(response) {
+            var listData = response.data.data;
+            for (var i=0;i<listData.length;i++){
+                var startTime = listData[i]['formal_start_time'];
+                var changeTime = startTime.replace(/-/g,'/');
+                if(Date.parse(new Date()) > Date.parse(changeTime)){
+                    listData[i]['status'] = 0;//已结束
+                }else{
+                    listData[i]['status'] = 1;//未举办
+                }
+            }
+            $scope.activityLists = listData;
+            if(response.data.result == 0){
+                $scope.ActStatus = 0;
+            }
+        }, function errorCallback(response) {
+            // console.log(response)
+        });
+
+        //单位->协会
+        $http({
+            method: "GET",
+            url: "/index.php/Mobile/Article/collect_list?channel=hz&type=jtgs",
+        }).then(function successCallback(response) {
+            $scope.assoLists = response.data.data;
+            if(response.data.result == 0){
+                $scope.AssoStatus = 0;
+            }
+        }, function errorCallback(response) {
+            // console.log(response)
+        });
+
+        //单位->企业
+        $http({
+            method: "GET",
+            url: "/index.php/Mobile/Article/collect_list?channel=hz&type=hzjg",
+        }).then(function successCallback(response) {
+            $scope.companyLists = response.data.data;
+            if(response.data.result == 0){
+                $scope.ComStatus = 0;
+            }
+        }, function errorCallback(response) {
+            // console.log(response)
+        });
+    });
+
     $(".col_btn").on("click", function () {
         var index = $(this).index();
         $(this).addClass('col_active').siblings('.col_btn').removeClass('col_active');
