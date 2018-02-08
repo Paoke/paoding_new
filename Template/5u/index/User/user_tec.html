@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en" ng-app="user_tec">
+<head>
+    <meta charset="UTF-8">
+    <title>庖丁技术</title>
+    <meta name="description" content="庖丁科技众包服务平台携手国内外先进技术科研院所、顶级技术专家，以实现科技成果市场化为核心，为企业提供快速精准的需求匹配服务，从而实现企业以及科技资源的有效对接，帮助企业实现产业技术升级，助力先进技术完成产业化发展。" />
+    <meta name="keywords" content="庖丁众包、智能技术、机械制造、健康医疗、材料科学、能源环保、生产流程优化"/>
+    <link rel="preload" href="{$Think.INDEX}/css/index.css" as="style">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/common_new.css">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/swiper.css">
+</head>
+<body style="background:#f4f4f4" ng-controller="tecCtrl" ng-cloak>
+<!-- 导航开始 -->
+<include file="./Template/5u/index/public/nav.html" />
+
+<div class="section clear">
+    <div class="user_list fl">
+        <div class="user_top">
+            <div class="head">
+                <img src="{:session('headPic')}" alt="">
+            </div>
+            <p class="user_name">{:session('nickName')}</p>
+            <if condition="$Think.session.status eq 0">
+                <div class="user_sta">
+                    <img class="user_status" src="{$Think.INDEX}/images/my-apply.png" alt="">
+                    <span class="user_status_w">合格认证</span>
+                </div>
+                <elseif condition="$Think.session.status eq 1"/>
+                <div class="user_sta">
+                    <img class="user_status" src="{$Think.INDEX}/images/my-apply.png" alt="">
+                    <span class="user_status_w">审核中</span>
+                </div>
+                <else />
+                <div class="user_sta">
+                    <img class="user_status" src="{$Think.INDEX}/images/my-apply.png" alt="">
+                    <span class="user_status_w">未审核</span>
+                </div>
+            </if>
+        </div>
+        <ul class="my_msg">
+            <a href="__CONTROLLER__/user_demand.html"><li>我的需求</li></a>
+            <a href="__CONTROLLER__/user_tec.html"><li class="my_select">我的技术</li></a>
+            <a href="__CONTROLLER__/user_msg.html"><li>我的消息</li></a>
+            <a href="__CONTROLLER__/user_collect.html"><li>我的收藏</li></a>
+            <a href="__CONTROLLER__/user_project.html"><li>对接项目</li></a>
+            <a href="__CONTROLLER__/user_info.html"><li>个人信息</li></a>
+        </ul>
+    </div>
+
+    <div class="user_detail fl">
+        <div class="user_det_top">
+            <div class="fl top_select user_top_part">
+                <p class="top_num">全部({{count}})</p>
+                <div class="triangle tri_select"></div>
+            </div>
+            <div class="fl user_top_part">
+                <p class="top_num">审核中({{count1}})</p>
+                <div class="triangle"></div>
+            </div>
+            <div class="fl user_top_part">
+                <p class="top_num">已通过({{count2}})</p>
+                <div class="triangle"></div>
+            </div>
+            <div class="fl user_top_part">
+                <p class="top_num">已取消({{count3}})</p>
+                <div class="triangle"></div>
+            </div>
+        </div>
+
+        <div class="user_det_ct2">
+            <div class="user_det_ct1 clear" style="display:block">
+                <div class="user_det_part fl" ng-repeat="tecList in tecLists">
+                    <p class="user_det_status" ng-show="tecList.status==1">【审核中】</p>
+                    <p class="user_det_status" ng-show="tecList.status==0 && tecList.is_active==1">【已通过】</p>
+                    <p class="user_det_status" ng-show="tecList.is_active==0 && tecList.status==0">【已取消】</p>
+                    <p class="user_det_tit oneline">{{tecList.title}}</p>
+                    <p class="user_det_p">
+                        <span>提交于</span>
+                        <span class="ind_sumtime">{{tecList.create_time | formatDate}}</span>
+                        <img class="icon_industry" src="{$Think.INDEX}/images/demand-icon-industry.png" alt="">
+                        <span class="ind_type">{{tecList.lingyu}}</span>
+                    </p>
+                </div>
+            </div>
+            <div class="user_det_ct1 clear">
+                <div class="user_det_part fl" ng-repeat="tecList in tecLists" ng-show="tecList.status==1">
+                    <p class="user_det_status" ng-show="tecList.status==1">【审核中】</p>
+                    <p class="user_det_tit oneline">{{tecList.title}}</p>
+                    <p class="user_det_p">
+                        <span>提交于</span>
+                        <span class="ind_sumtime">{{tecList.create_time | formatDate}}</span>
+                        <img class="icon_industry" src="{$Think.INDEX}/images/demand-icon-industry.png" alt="">
+                        <span class="ind_type">{{tecList.lingyu}}</span>
+                    </p>
+                </div>
+            </div>
+            <div class="user_det_ct1 clear">
+                <div class="user_det_part fl" ng-repeat="tecList in tecLists" ng-show="tecList.status==0 && tecList.is_active==1">
+                    <p class="user_det_status" ng-show="tecList.status==0 && tecList.is_active==1">【已通过】</p>
+                    <p class="user_det_tit oneline">{{tecList.title}}</p>
+                    <p class="user_det_p">
+                        <span>提交于</span>
+                        <span class="ind_sumtime">{{tecList.create_time | formatDate}}</span>
+                        <img class="icon_industry" src="{$Think.INDEX}/images/demand-icon-industry.png" alt="">
+                        <span class="ind_type">{{ tecList.lingyu }}</span>
+                    </p>
+                </div>
+            </div>
+            <div class="user_det_ct1 clear">
+                <div class="user_det_part fl" ng-repeat="tecList in tecLists" ng-show="tecList.is_active==0 && tecList.status==0">
+                    <p class="user_det_status" ng-show="tecList.is_active==0 && tecList.status==0">【已取消】</p>
+                    <p class="user_det_tit oneline">{{tecList.title}}</p>
+                    <p class="user_det_p">
+                        <span>提交于</span>
+                        <span class="ind_sumtime">{{tecList.create_time | formatDate}}</span>
+                        <img class="icon_industry" src="{$Think.INDEX}/images/demand-icon-industry.png" alt="">
+                        <span class="ind_type">{{tecList.lingyu}}</span>
+                    </p>
+                </div>
+            </div>
+            <!-- 空现象 -->
+            <!-- 				<div class="sky">
+                                <img src="{$Think.INDEX}/images/my-empty.png" alt="">
+                                <p class="sky_t">暂时没有项目</p>
+                            </div> -->
+        </div>
+
+    </div>
+</div>
+<include file="./Template/5u/index/public/footer.html" />
+</body>
+<script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
+<script src="{$Think.INDEX}/js/common.js"></script>
+<script src="{$Think.MOBILE}/js/angular.min.js"></script>
+<script>
+    var app = angular.module("user_tec",[]);
+    app.filter('formatDate',function(){
+        return function(date){
+            return date = date.substr(0,16);
+        };
+    });
+
+    app.controller("tecCtrl",function ($scope,$http){
+        $http({
+            method: "GET",
+            url: "/index.php/Mobile/Article/my_project?channel=js&action=datalist",
+        }).then(function successCallback(response) {
+            var data=response.data.data;
+            var count1=0;
+            var count2=0;
+            var count3=0;
+            for(var i=0;i<response.data.data.length;i++){
+                if(data[i]['status']==1){
+                    count1=++count1;
+                }
+                if(data[i]['status']==0 && data[i]['is_active']==1){
+                    count2=++count2;
+                }
+                if(data[i]['status']==0 && data[i]['is_active']==0){
+                    count3=++count3;
+                }
+            }
+            $scope.count = response.data.data.length;
+            $scope.tecLists = response.data.data;
+            $scope.count1 = count1;
+            $scope.count2 = count2;
+            $scope.count3 = count3;
+        });
+    });
+
+    $(".user_top_part").on("click",function(){
+        var index = $(this).index();
+        $(this).addClass('top_select').siblings('.user_top_part').removeClass('top_select');
+        $(this).find("div").addClass('tri_select');
+        $(this).siblings('.user_top_part').find("div").removeClass('tri_select');
+        $(".user_det_ct1").eq(index).show().siblings().hide();
+    });
+</script>
+</html>
