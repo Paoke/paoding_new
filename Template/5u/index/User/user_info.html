@@ -90,15 +90,15 @@
                     </a>
                 </p>
             </div>
-            <a href="change_psw.html" ng-if="user.mobile!=null">
-                <div class="form_part clear">
-                    <p class="form_p fl">
-                        <span class="form_span">密码：</span>
-                    </p>
-                    <input type="password" class="form_inp2 fl" placeholder="********">
-                    <p class="change fl">重置密码</p>
-                </div>
-            </a>
+           
+            <div class="form_part clear">
+                <p class="form_p fl">
+                    <span class="form_span">密码：</span>
+                </p>
+                <input type="password" class="form_inp2 fl" placeholder="********">
+                 <a href="change_psw.html" ng-if="user.mobile!=null"><p class="change fl">重置密码</p></a>
+            </div>
+            
         </div>
         <!-- 认证 -->
         <div class="tab_colbody">

@@ -13,11 +13,14 @@
     <!--<include file="./Template/5u/common/common.html" />   上线开启-百度统计-->
 </head>
 <style>
+/*    .event-card:nth-child(3n+1) {
+        margin-left: 20px!important;
+    }*/
     .event-card {
         position: relative;
         width: 386px;
         height: 467px;
-        margin: 0 0 20px 20px;
+        margin-left: 20px;
         background: #fff;
         border: 1px solid transparent;
         -webkit-transition: all .3s;
@@ -209,7 +212,7 @@
 </div>
 <div class="event_wrap clear">
     <p class="last_review">往期回顾</p>
-    <div class="event-card fl">
+    <div class="event-card fl" style="margin-left:0">
         <a href='#' target="_blank">
             <img class="lazyimg" src="{$Think.INDEX}/images/activity-activity1.png"/>
         </a>
@@ -271,7 +274,7 @@
         </div>
     </div>
 
-    <div class="event-card fl">
+    <div class="event-card fl" style="margin-left: 20px">
         <a href='#' target="_blank">
             <img class="lazyimg" src="{$Think.INDEX}/images/activity-activity1.png" />
         </a>

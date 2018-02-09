@@ -16,20 +16,21 @@
 </style>
 <body id="release_tec">
 <!-- 提交成功提示 -->
-<!-- 	<div class="mask"></div>
-	<div class="alert_tip">
+	<div class="mask" style="display:none"></div>
+	<div class="alert_tip" style="display:none">
 		<div class="alert_top clear">
 			<span class="fl">提示</span>
 			<img class="fr" src="{$Think.INDEX}/images/issue-demand-close.png" alt="">
 		</div>
 		<img class="success_img" src="{$Think.INDEX}/images/issue-demand-done.png" alt="">
 		<p class="success_tip">提交成功</p>	
-		<p class="success_kep">您发布的技术在审核中，<br>请保持电话畅通</p>
-	</div> -->
+		<p class="success_kep">您发布的需求在审核中，<br>请保持电话畅通</p>
+	</div>
 
 <!-- 导航开始 -->
 <include file="./Template/5u/index/public/nav.html" />
 <!-- 导航结束 -->
+<input type="hidden" id="userId" value="{:session('userId')}">
 <form id="formID">
     <div class="form_wrap">
         <p class="release_demand">发布需求</p>
@@ -38,7 +39,7 @@
                 <p class="form_p fl">
                     *<span class="form_span">需求名称：</span>
                 </p>
-                <input type="text" class="form_inp fl" placeholder="请输入技术项目名">
+                <input type="text" class="form_inp fl" placeholder="请输入技术项目名" id="title">
             </div>
 
             <div class="form_part clear">
@@ -46,7 +47,7 @@
                     *<span class="form_span">需求说明：</span>
                 </p>
                 <div class="advice_area fl">
-                    <textarea class="advice_text" ng-model="text" ng-change="tolCount();" maxlength="200" placeholder="请输入目前主要的技术问题、需求场景、指标参数等"></textarea >
+                    <textarea class="advice_text" ng-model="text" ng-change="tolCount();" maxlength="200" placeholder="请输入目前主要的技术问题、需求场景、指标参数等" id="content"></textarea >
                     <p class="advice_numlim">
                         <span class="advice_count" ng-cloak>{{count}}</span>
                         | 200字
@@ -59,7 +60,7 @@
                     *<span class="form_span">需求领域：</span>
                 </p>
 
-                <div class="areas_main clear fl">
+                <div class="areas_main clear fl" id="yyly">
                     <li class="areas_default" style="margin-left:0;margin-top:0">电子信息</li>
                     <li class="areas_default" style="margin-top:0">先进制造</li>
                     <li class="areas_default" style="margin-top:0">新材料</li>
@@ -75,7 +76,7 @@
                     *<span class="form_span">需求程度：</span>
                 </p>
 
-                <div class="areas_main clear fl">
+                <div class="areas_main clear fl" id="csd">
                     <li class="areas_default" style="margin-left:0;margin-top:0">电子信息</li>
                     <li class="areas_default" style="margin-top:0">先进制造</li>
                     <li class="areas_default" style="margin-top:0">新材料</li>
@@ -86,7 +87,7 @@
                 <p class="form_p fl">
                     *<span class="form_span">期限要求：</span>
                 </p>
-                <input type="text" class="mouth fl">
+                <input id="date" class="mouth fl" type="number" oninput="if(value.length>2)value=value.slice(0,2)">
                 <p class="form_p fl">
                     <span class="form_span fl">（月）</span>
                 </p>
@@ -97,8 +98,8 @@
                     *<span class="form_span">投入预算：</span>
                 </p>
                 <div class="fl demand_name">
-                    <label><input  name="patent" class="inp_radio" type="radio" value="最低预算" />最低预算</label>
-                    <label><input  name="patent" class="inp_radio" type="radio" value="最高预算" />最高预算</label>
+                    <label><input  name="price" class="inp_radio" type="radio" value="最低预算" />最低预算</label>
+                    <label><input  name="price" class="inp_radio" type="radio" value="最高预算" />最高预算</label>
                 </div>
             </div>
 
@@ -117,32 +118,32 @@
                 <p class="form_p fl">
                     *<span class="form_span">企业名称：</span>
                 </p>
-                <input type="text" class="form_inp fl" placeholder="请输入企业名称">
+                <input type="text" id="company" class="form_inp fl" placeholder="请输入企业名称">
             </div>
 
             <div class="form_part clear">
                 <p class="form_p fl">
                     *<span class="form_span">主营业务：</span>
                 </p>
-                <input type="text" class="form_inp fl" placeholder="请输入主营业务">
+                <input type="text" id="business" class="form_inp fl" placeholder="请输入主营业务">
             </div>
 
             <div class="form_part clear">
                 <p class="form_p fl">
                     &nbsp;<span class="form_span"><span class="star">*</span>联系人：</span>
                 </p>
-                <input type="text" class="form_inp fl" placeholder="请输入联系人真实姓名">
+                <input type="text" id="people" class="form_inp fl" placeholder="请输入联系人真实姓名">
             </div>
 
             <div class="form_part clear">
                 <p class="form_p fl">
                     *<span class="form_span">联系号码：</span>
                 </p>
-                <input type="text" class="form_inp fl" placeholder="请输入联系人手机号">
+                <input type="text" id="phone" class="form_inp fl" placeholder="请输入联系人手机号">
             </div>
         </div>
         <div class="bottom">
-            <div class="submit">提交</div>
+            <div class="submit" onclick="getMsg();">提交</div>
             <p class="submit_tip">
                 提示：尊敬的用户，您发布的需求材料，平台将在48小时内进行专家评审，届时以手机短信、站内信形式发送审核结果
             </p>
@@ -155,5 +156,83 @@
 <include file="./Template/5u/index/public/footer.html" />
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
 <script src="{$Think.INDEX}/js/common.js"></script>
+<script>
+    // 需求领域  单选
+    $(".areas_default").on("click",function(){
+        $(this).addClass('areas_selected').removeClass('areas_default').siblings().addClass('areas_default').removeClass('areas_selected');
+    });
+
+    function getMsg() {
+        // 资料填写完整判断反馈
+        var count = $(".areas_selected").length;    
+        if( 
+            $("#title").val()!="" && 
+            $("#content").val()!="" && 
+            count>=2 && 
+            $("input[name='price']:checked").val()!=undefined && 
+            $("#company").val()!="" && 
+            $("#business").val()!="" && 
+            $("#people").val()!="" &&
+             $("#phone").val()!=""
+        ){         
+                // 获取技术领域选中状态
+                var lyli = $("#yyly li");
+                var lingyu_html;
+                for(var i = 0;i < lyli.length ; i++){
+                    if( lyli.eq(i).hasClass('areas_selected') ){               
+                         lingyu_html = lyli.eq(i).html();
+                    }
+                };
+
+                // 获取技术成熟度选中状态
+                var csdli = $("#csd li");
+                var csd_html;
+                for(var i = 0;i < csdli.length ; i++){
+                    if( csdli.eq(i).hasClass('areas_selected') ){               
+                         csd_html = csdli.eq(i).html();
+                    }
+                };
+
+                // 获取需提交的值
+                var user_id = $("#userId").val(),
+                    title = $("#title").val(),
+                    content = $("#content").val(),
+                    lingyu = lingyu_html,
+                    csd = csd_html,
+                    yfzq = $("#date").val(),
+                    gsm = $("#company").val(),
+                    lxrxm = $("#people").val(),
+                    dhhm = $("#phone").val();
+
+                var data = {
+                    user_id : user_id,
+                    title : title,
+                    content : content,
+                    jsly : lingyu,
+                    yfys : csd,
+                    yfzq : yfzq,
+                    gsm : gsm,
+                    lxrxm : lxrxm,
+                    dhhm:dhhm
+                };
+                 //异步提交表单数据
+                 $.ajax({
+                     type: "post",
+                     url: '/index.php/Mobile/Article/add?channel=xq&type=1&iscopy=0',
+                     data: data,
+                     dataType: 'json',
+                     success: function (res) {
+                         if(res.result == 1){
+                            $(".mask").show();
+                            $(".alert_tip").show();
+                         }
+                     }
+                 })
+         }else{
+            tip_ct = "请完善资料在提交",
+            tips.addtips(tip_ct);
+         }
+    }
+</script>
 </body>
 </html>

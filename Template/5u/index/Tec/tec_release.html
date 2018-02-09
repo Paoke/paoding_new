@@ -236,14 +236,13 @@
                   if(res.result == 1){
                     $(".mask").show();
                     $(".alert_tip").show();
-                    // tip_ct = "发布成功",
-                    // tip_url = "/index.php/Mobile";
-                    // tips.addtips(tip_ct,tip_url);
                   }
                 }
             })
         }else{
-            console.log("请完善资料在提交");
+            tip_ct = "请完善资料在提交",
+            tip_url = "/index.php/Mobile";
+            tips.addtips(tip_ct,tip_url);
         }
     }
 
