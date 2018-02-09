@@ -14,6 +14,8 @@ class IndexController extends BaseController
 
     public function index()
     {
+        $code = $_GET['code'];
+        $this->assign("code", $code);
         $ifWeChatLogin = $_GET['ifWeChatLogin'];
         $this->assign("ifWeChatLogin", $ifWeChatLogin);
         $this->display();
