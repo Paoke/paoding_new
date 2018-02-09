@@ -965,5 +965,19 @@
     });
 
     $("#first").addClass('selected-link');
+
+    $(document).ready(function() {
+        getUser();
+    });
+
+    function getUser() {
+        var ifWeChatLogin = "{$ifWeChatLogin}";
+        if(ifWeChatLogin == 1) {
+            var url = "__ROOT__/{$Think.const.API_PATH}/User/WeChatLogin/code/{$code}";
+            $.get(url, function (res) {
+                window.location.href="__MODULE__/Index/index"
+            })
+        }
+    }
 </script>
 </html>
