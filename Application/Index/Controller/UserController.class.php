@@ -69,6 +69,11 @@ class UserController extends BaseController
         $this->display();
     }
 
+    public function user_binding()
+    {
+        $this->display();
+    }
+
 
 
 }

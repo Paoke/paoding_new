@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
     <link rel="stylesheet" href="{$Think.INDEX}/css/swiper.css">
 </head>
-<body ng-controller="bannerCtrl">
+<body ng-controller="bannerCtrl" ng-cloak>
 <!-- 导航开始 -->
 <include file="./Template/5u/index/public/nav.html" />
 <!-- 导航结束 -->
@@ -76,181 +76,200 @@
 </div>
 
 <!-- 需求列表 -->
-<div class="section clear">
+<div class="section clear" ng-controller="demandList">
     <div class="demand_wrap" style="margin-left:-20px";>
         <div class="swiper-container" id="swiper_dem" style="padding-top: 6px;">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="demand_part shadow fl">
-                        <p class="demand_status">招标中</p>
-                        <p class="demand_time">2017-10-16</p>
-                        <p class="demand_title oneline">防静电限制一行</p>
-                        <p class="demand_ct threeline">限制三行</p>
-                        <div class="demand_bottom clear">
-                            <p class="fl no_margin">
-                                <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
-                                <span>材料科学</span>
-                            </p>
-                            <p class="fl">
-                                <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
-                                <span>面议</span>
-                            </p>
-                            <p  class="fl">
-                                <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
-                                <span>12个月</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="demand_part shadow fl">
-                        <p class="demand_status">招标中</p>
-                        <p class="demand_time">2017-10-16</p>
-                        <p class="demand_title oneline">防静电限制一行</p>
-                        <p class="demand_ct threeline">限制三行</p>
-                        <div class="demand_bottom clear">
-                            <p class="fl no_margin">
-                                <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
-                                <span>材料科学</span>
-                            </p>
-                            <p class="fl">
-                                <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
-                                <span>面议</span>
-                            </p>
-                            <p  class="fl">
-                                <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
-                                <span>12个月</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="demand_part shadow fl">
-                        <p class="demand_status">招标中</p>
-                        <p class="demand_time">2017-10-16</p>
-                        <p class="demand_title oneline">防静电限制一行</p>
-                        <p class="demand_ct threeline">限制三行</p>
-                        <div class="demand_bottom clear">
-                            <p class="fl no_margin">
-                                <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
-                                <span>材料科学</span>
-                            </p>
-                            <p class="fl">
-                                <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
-                                <span>面议</span>
-                            </p>
-                            <p  class="fl">
-                                <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
-                                <span>12个月</span>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="demand_part shadow fl">
-                        <p class="demand_status">招标中</p>
-                        <p class="demand_time">2017-10-16</p>
-                        <p class="demand_title oneline">防静电限制一行</p>
-                        <p class="demand_ct threeline">限制三行</p>
-                        <div class="demand_bottom clear">
-                            <p class="fl no_margin">
-                                <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
-                                <span>材料科学</span>
-                            </p>
-                            <p class="fl">
-                                <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
-                                <span>面议</span>
-                            </p>
-                            <p  class="fl">
-                                <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
-                                <span>12个月</span>
-                            </p>
-                        </div>
+                    <div class="demand_part shadow fl" ng-repeat="demand1 in demands1">
+                        <a href="__MODULE__/Demand/demand_detail?data_id={{demand1.id}}">
+                            <p class="demand_status">{{demand1.hzxs}}</p>
+                            <p class="demand_time">{{demand1.create_time  | formatDate}}</p>
+                            <p class="demand_title oneline">{{demand1.title}}</p>
+                            <p class="demand_ct threeline">{{demand1.desc}}</p>
+                            <div class="demand_bottom clear">
+                                <p class="fl no_margin">
+                                    <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
+                                    <span>{{demand1.cat_name}}</span>
+                                </p>
+                                <p class="fl">
+                                    <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
+                                    <span>{{demand1.yfys}}</span>
+                                </p>
+                                <p  class="fl">
+                                    <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
+                                    <span>{{demand1.yfzq}}</span>
+                                </p>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="demand_part shadow fl">
-                        <p class="demand_status">招标中</p>
-                        <p class="demand_time">2017-10-16</p>
-                        <p class="demand_title oneline">防静电限制一行</p>
-                        <p class="demand_ct threeline">限制三行</p>
-                        <div class="demand_bottom clear">
-                            <p class="fl no_margin">
-                                <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
-                                <span>材料科学</span>
-                            </p>
-                            <p class="fl">
-                                <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
-                                <span>面议</span>
-                            </p>
-                            <p  class="fl">
-                                <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
-                                <span>12个月</span>
-                            </p>
-                        </div>
+                    <div class="demand_part shadow fl" ng-repeat="demand2 in demands2">
+                        <a href="__MODULE__/Demand/demand_detail?data_id={{demand2.id}}">
+                            <p class="demand_status">{{demand2.hzxs}}</p>
+                            <p class="demand_time">{{demand2.create_time  | formatDate}}</p>
+                            <p class="demand_title oneline">{{demand2.title}}</p>
+                            <p class="demand_ct threeline">{{demand2.desc}}</p>
+                            <div class="demand_bottom clear">
+                                <p class="fl no_margin">
+                                    <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
+                                    <span>{{demand2.cat_name}}</span>
+                                </p>
+                                <p class="fl">
+                                    <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
+                                    <span>{{demand2.yfys}}</span>
+                                </p>
+                                <p  class="fl">
+                                    <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
+                                    <span>{{demand2.yfzq}}</span>
+                                </p>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="demand_part shadow fl">
-                        <p class="demand_status">招标中</p>
-                        <p class="demand_time">2017-10-16</p>
-                        <p class="demand_title oneline">防静电限制一行</p>
-                        <p class="demand_ct threeline">限制三行</p>
-                        <div class="demand_bottom clear">
-                            <p class="fl no_margin">
-                                <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
-                                <span>材料科学</span>
-                            </p>
-                            <p class="fl">
-                                <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
-                                <span>面议</span>
-                            </p>
-                            <p  class="fl">
-                                <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
-                                <span>12个月</span>
-                            </p>
-                        </div>
+                    <div class="demand_part shadow fl" ng-repeat="demand3 in demands3">
+                        <a href="__MODULE__/Demand/demand_detail?data_id={{demand3.id}}">
+                            <p class="demand_status">{{demand3.hzxs}}</p>
+                            <p class="demand_time">{{demand3.create_time  | formatDate}}</p>
+                            <p class="demand_title oneline">{{demand3.title}}</p>
+                            <p class="demand_ct threeline">{{demand3.desc}}</p>
+                            <div class="demand_bottom clear">
+                                <p class="fl no_margin">
+                                    <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
+                                    <span>{{demand3.cat_name}}</span>
+                                </p>
+                                <p class="fl">
+                                    <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
+                                    <span>{{demand3.yfys}}</span>
+                                </p>
+                                <p  class="fl">
+                                    <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
+                                    <span>{{demand3.yfzq}}</span>
+                                </p>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="demand_part shadow fl">
-                        <p class="demand_status">招标中</p>
-                        <p class="demand_time">2017-10-16</p>
-                        <p class="demand_title oneline">防静电限制一行</p>
-                        <p class="demand_ct threeline">限制三行</p>
-                        <div class="demand_bottom clear">
-                            <p class="fl no_margin">
-                                <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
-                                <span>材料科学</span>
-                            </p>
-                            <p class="fl">
-                                <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
-                                <span>面议</span>
-                            </p>
-                            <p  class="fl">
-                                <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
-                                <span>12个月</span>
-                            </p>
-                        </div>
+                    <div class="demand_part shadow fl" ng-repeat="demand4 in demands4">
+                        <a href="__MODULE__/Demand/demand_detail?data_id={{demand4.id}}">
+                            <p class="demand_status">{{demand4.hzxs}}</p>
+                            <p class="demand_time">{{demand4.create_time  | formatDate}}</p>
+                            <p class="demand_title oneline">{{demand4.title}}</p>
+                            <p class="demand_ct threeline">{{demand4.desc}}</p>
+                            <div class="demand_bottom clear">
+                                <p class="fl no_margin">
+                                    <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
+                                    <span>{{demand4.cat_name}}</span>
+                                </p>
+                                <p class="fl">
+                                    <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
+                                    <span>{{demand4.yfys}}</span>
+                                </p>
+                                <p  class="fl">
+                                    <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
+                                    <span>{{demand4.yfzq}}</span>
+                                </p>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="demand_part shadow fl">
-                        <p class="demand_status">招标中</p>
-                        <p class="demand_time">2017-10-16</p>
-                        <p class="demand_title oneline">防静电限制一行</p>
-                        <p class="demand_ct threeline">限制三行</p>
-                        <div class="demand_bottom clear">
-                            <p class="fl no_margin">
-                                <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
-                                <span>材料科学</span>
-                            </p>
-                            <p class="fl">
-                                <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
-                                <span>面议</span>
-                            </p>
-                            <p  class="fl">
-                                <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
-                                <span>12个月</span>
-                            </p>
-                        </div>
+                    <div class="demand_part shadow fl" ng-repeat="demand5 in demands5">
+                        <a href="__MODULE__/Demand/demand_detail?data_id={{demand5.id}}">
+                            <p class="demand_status">{{demand5.hzxs}}</p>
+                            <p class="demand_time">{{demand5.create_time  | formatDate}}</p>
+                            <p class="demand_title oneline">{{demand5.title}}</p>
+                            <p class="demand_ct threeline">{{demand5.desc}}</p>
+                            <div class="demand_bottom clear">
+                                <p class="fl no_margin">
+                                    <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
+                                    <span>{{demand5.cat_name}}</span>
+                                </p>
+                                <p class="fl">
+                                    <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
+                                    <span>{{demand5.yfys}}</span>
+                                </p>
+                                <p  class="fl">
+                                    <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
+                                    <span>{{demand5.yfzq}}</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="demand_part shadow fl" ng-repeat="demand6 in demands6">
+                        <a href="__MODULE__/Demand/demand_detail?data_id={{demand6.id}}">
+                            <p class="demand_status">{{demand6.hzxs}}</p>
+                            <p class="demand_time">{{demand6.create_time  | formatDate}}</p>
+                            <p class="demand_title oneline">{{demand6.title}}</p>
+                            <p class="demand_ct threeline">{{demand6.desc}}</p>
+                            <div class="demand_bottom clear">
+                                <p class="fl no_margin">
+                                    <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
+                                    <span>{{demand6.cat_name}}</span>
+                                </p>
+                                <p class="fl">
+                                    <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
+                                    <span>{{demand6.yfys}}</span>
+                                </p>
+                                <p  class="fl">
+                                    <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
+                                    <span>{{demand6.yfzq}}</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="demand_part shadow fl" ng-repeat="demand7 in demands7">
+                        <a href="__MODULE__/Demand/demand_detail?data_id={{demand7.id}}">
+                            <p class="demand_status">{{demand7.hzxs}}</p>
+                            <p class="demand_time">{{demand7.create_time  | formatDate}}</p>
+                            <p class="demand_title oneline">{{demand7.title}}</p>
+                            <p class="demand_ct threeline">{{demand7.desc}}</p>
+                            <div class="demand_bottom clear">
+                                <p class="fl no_margin">
+                                    <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
+                                    <span>{{demand7.cat_name}}</span>
+                                </p>
+                                <p class="fl">
+                                    <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
+                                    <span>{{demand7.yfys}}</span>
+                                </p>
+                                <p  class="fl">
+                                    <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
+                                    <span>{{demand7.yfzq}}</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="demand_part shadow fl" ng-repeat="demand8 in demands8">
+                        <a href="__MODULE__/Demand/demand_detail?data_id={{demand8.id}}">
+                            <p class="demand_status">{{demand8.hzxs}}</p>
+                            <p class="demand_time">{{demand8.create_time  | formatDate}}</p>
+                            <p class="demand_title oneline">{{demand8.title}}</p>
+                            <p class="demand_ct threeline">{{demand8.desc}}</p>
+                            <div class="demand_bottom clear">
+                                <p class="fl no_margin">
+                                    <img src="{$Think.INDEX}/images/index-icon-industry.png" alt="">
+                                    <span>{{demand8.cat_name}}</span>
+                                </p>
+                                <p class="fl">
+                                    <img src="{$Think.INDEX}/images/index-icon-price.png" alt="">
+                                    <span>{{demand8.yfys}}</span>
+                                </p>
+                                <p  class="fl">
+                                    <img src="{$Think.INDEX}/images/index-icon-time.png" alt="">
+                                    <span>{{demand8.yfzq}}</span>
+                                </p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -275,111 +294,169 @@
 
 <!-- 技术列表 -->
 
-<div class="section">
+<div class="section" ng-controller="tecList">
     <div class="project_wrap clear">
         <div class="swiper-container" id="swiper_tec">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <a href="__MODULE__/Tec/tec_detail.html">
+                    <a href="__MODULE__/Tec/tec_detail.html?data_id={{tec1.id}}" ng-repeat="tec1 in tecs1">
                         <div class="tec_option shadow fl">
-                            <img class="tec_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
-                            <p class="tec_list_tit">技术标题</p>
+                            <img class="tec_img" ng-src="{{tec1.cover_url}}" width="256" height="190" alt="">
+                            <p class="tec_list_tit">{{tec1.title}}</p>
                             <div class="publish_time">
                                 发布于
-                                <span>2017-10-25</span>
+                                <span>{{tec1.create_time | formatDate}}</span>
                             </div>
                             <div class="clear">
                                 <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
-                                <span class="tec_type fl">涂装工业</span>
+                                <span class="tec_type fl">{{tec1.yyxy}}</span>
                             </div>
                             <div class="adhi_print">
-                                <span class="adhibition">应用类</span>
-                                <span class="print">成熟方案</span>
+                                <span class="adhibition">{{tec1.cat_name}}</span>
+                                <span class="print">{{tec1.csd}}</span>
                             </div>
                         </div>
                     </a>
-                    <div class="tec_option shadow fl">
-                        <img class="tec_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
-                        <p class="tec_list_tit">技术标题</p>
-                        <div class="publish_time">
-                            发布于
-                            <span>2017-10-25</span>
-                        </div>
-                        <div class="clear">
-                            <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
-                            <span class="tec_type fl">涂装工业</span>
-                        </div>
-                        <div class="adhi_print">
-                            <span class="adhibition">应用类</span>
-                            <span class="print">成熟方案</span>
-                        </div>
-                    </div>
-                    <div class="tec_option shadow fl">
-                        <img class="tec_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
-                        <p class="tec_list_tit">技术标题</p>
-                        <div class="publish_time">
-                            发布于
-                            <span>2017-10-25</span>
-                        </div>
-                        <div class="clear">
-                            <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
-                            <span class="tec_type fl">涂装工业</span>
-                        </div>
-                        <div class="adhi_print">
-                            <span class="adhibition">应用类</span>
-                            <span class="print">成熟方案</span>
-                        </div>
-                    </div>
-                    <div class="tec_option shadow fl">
-                        <img class="tec_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
-                        <p class="tec_list_tit">技术标题</p>
-                        <div class="publish_time">
-                            发布于
-                            <span>2017-10-25</span>
-                        </div>
-                        <div class="clear">
-                            <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
-                            <span class="tec_type fl">涂装工业</span>
-                        </div>
-                        <div class="adhi_print">
-                            <span class="adhibition">应用类</span>
-                            <span class="print">成熟方案</span>
-                        </div>
-                    </div>
-                    <div class="tec_option shadow fl">
-                        <img class="tec_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
-                        <p class="tec_list_tit">技术标题</p>
-                        <div class="publish_time">
-                            发布于
-                            <span>2017-10-25</span>
-                        </div>
-                        <div class="clear">
-                            <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
-                            <span class="tec_type fl">涂装工业</span>
-                        </div>
-                        <div class="adhi_print">
-                            <span class="adhibition">应用类</span>
-                            <span class="print">成熟方案</span>
-                        </div>
-                    </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="tec_option shadow fl">
-                        <img class="tec_img" src="{$Think.INDEX}/images/tech-technology1.jpg" alt="">
-                        <p class="tec_list_tit">技术标题</p>
-                        <div class="publish_time">
-                            发布于
-                            <span>2017-10-25</span>
+                    <a href="__MODULE__/Tec/tec_detail.html?data_id={{tec2.id}}" ng-repeat="tec2 in tecs2">
+                        <div class="tec_option shadow fl">
+                            <img class="tec_img" ng-src="{{tec2.cover_url}}" width="256" height="190" alt="">
+                            <p class="tec_list_tit">{{tec2.title}}</p>
+                            <div class="publish_time">
+                                发布于
+                                <span>{{tec2.create_time | formatDate}}</span>
+                            </div>
+                            <div class="clear">
+                                <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
+                                <span class="tec_type fl">{{tec2.yyxy}}</span>
+                            </div>
+                            <div class="adhi_print">
+                                <span class="adhibition">{{tec2.cat_name}}</span>
+                                <span class="print">{{tec2.csd}}</span>
+                            </div>
                         </div>
-                        <div class="clear">
-                            <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
-                            <span class="tec_type fl">涂装工业</span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="__MODULE__/Tec/tec_detail.html?data_id={{tec3.id}}" ng-repeat="tec3 in tecs3">
+                        <div class="tec_option shadow fl">
+                            <img class="tec_img" ng-src="{{tec3.cover_url}}" width="256" height="190" alt="">
+                            <p class="tec_list_tit">{{tec3.title}}</p>
+                            <div class="publish_time">
+                                发布于
+                                <span>{{tec3.create_time | formatDate}}</span>
+                            </div>
+                            <div class="clear">
+                                <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
+                                <span class="tec_type fl">{{tec3.yyxy}}</span>
+                            </div>
+                            <div class="adhi_print">
+                                <span class="adhibition">{{tec3.cat_name}}</span>
+                                <span class="print">{{tec3.csd}}</span>
+                            </div>
                         </div>
-                        <div class="adhi_print">
-                            <span class="adhibition">应用类</span>
-                            <span class="print">成熟方案</span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="__MODULE__/Tec/tec_detail.html?data_id={{tec4.id}}" ng-repeat="tec4 in tecs4">
+                        <div class="tec_option shadow fl">
+                            <img class="tec_img" ng-src="{{tec4.cover_url}}" width="256" height="190" alt="">
+                            <p class="tec_list_tit">{{tec4.title}}</p>
+                            <div class="publish_time">
+                                发布于
+                                <span>{{tec4.create_time | formatDate}}</span>
+                            </div>
+                            <div class="clear">
+                                <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
+                                <span class="tec_type fl">{{tec4.yyxy}}</span>
+                            </div>
+                            <div class="adhi_print">
+                                <span class="adhibition">{{tec4.cat_name}}</span>
+                                <span class="print">{{tec4.csd}}</span>
+                            </div>
                         </div>
-                    </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="__MODULE__/Tec/tec_detail.html?data_id={{tec5.id}}" ng-repeat="tec5 in tecs5">
+                        <div class="tec_option shadow fl">
+                            <img class="tec_img" ng-src="{{tec5.cover_url}}" width="256" height="190" alt="">
+                            <p class="tec_list_tit">{{tec5.title}}</p>
+                            <div class="publish_time">
+                                发布于
+                                <span>{{tec5.create_time | formatDate}}</span>
+                            </div>
+                            <div class="clear">
+                                <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
+                                <span class="tec_type fl">{{tec5.yyxy}}</span>
+                            </div>
+                            <div class="adhi_print">
+                                <span class="adhibition">{{tec5.cat_name}}</span>
+                                <span class="print">{{tec5.csd}}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="__MODULE__/Tec/tec_detail.html?data_id={{tec6.id}}" ng-repeat="tec6 in tecs6">
+                        <div class="tec_option shadow fl">
+                            <img class="tec_img" ng-src="{{tec6.cover_url}}" width="256" height="190" alt="">
+                            <p class="tec_list_tit">{{tec6.title}}</p>
+                            <div class="publish_time">
+                                发布于
+                                <span>{{tec6.create_time | formatDate}}</span>
+                            </div>
+                            <div class="clear">
+                                <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
+                                <span class="tec_type fl">{{tec6.yyxy}}</span>
+                            </div>
+                            <div class="adhi_print">
+                                <span class="adhibition">{{tec6.cat_name}}</span>
+                                <span class="print">{{tec6.csd}}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="__MODULE__/Tec/tec_detail.html?data_id={{tec7.id}}" ng-repeat="tec7 in tecs7">
+                        <div class="tec_option shadow fl">
+                            <img class="tec_img" ng-src="{{tec7.cover_url}}" width="256" height="190" alt="">
+                            <p class="tec_list_tit">{{tec7.title}}</p>
+                            <div class="publish_time">
+                                发布于
+                                <span>{{tec7.create_time | formatDate}}</span>
+                            </div>
+                            <div class="clear">
+                                <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
+                                <span class="tec_type fl">{{tec7.yyxy}}</span>
+                            </div>
+                            <div class="adhi_print">
+                                <span class="adhibition">{{tec7.cat_name}}</span>
+                                <span class="print">{{tec7.csd}}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="__MODULE__/Tec/tec_detail.html?data_id={{tec8.id}}" ng-repeat="tec8 in tecs8">
+                        <div class="tec_option shadow fl">
+                            <img class="tec_img" ng-src="{{tec8.cover_url}}" width="256" height="190" alt="">
+                            <p class="tec_list_tit">{{tec8.title}}</p>
+                            <div class="publish_time">
+                                发布于
+                                <span>{{tec8.create_time | formatDate}}</span>
+                            </div>
+                            <div class="clear">
+                                <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
+                                <span class="tec_type fl">{{tec8.yyxy}}</span>
+                            </div>
+                            <div class="adhi_print">
+                                <span class="adhibition">{{tec8.cat_name}}</span>
+                                <span class="print">{{tec8.csd}}</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -635,27 +712,25 @@
         });
     });
 
-    app.controller("tecCtrl",function ($scope,$http){
-        //最新技术
-        //技术类别栏目
-        $http({
-            method: 'GET',
-            url: '/api.php/ChannelIndex/index/action/dataList/channel/js/type/4',
-        }).then(function successCallback(response) {
-            $scope.tecTypes = response.data.data;
-        }, function errorCallback(response) {
-        });
-
-        var data = {
-            "page": "1",
-            "page_num": "4",
-            "order_field": "create_time",
-            "order_by": "DESC",
-            "category_id": "0",
-            "tag_id": "0",
-        };
-        
-        function getByCategory() {
+    app.controller("demandList",function ($scope,$http){
+       //需求列表
+        getByCategory(6,1);
+        getByCategory(4,2);
+        getByCategory(5,3);
+        getByCategory(1,4);
+        getByCategory(8,5);
+        getByCategory(3,6);
+        getByCategory(9,7);
+        getByCategory(7,8);
+        function getByCategory(category_id,num) {
+            var data = {
+                "page": "1",
+                "page_num": "4",
+                "order_field": "create_time",
+                "order_by": "DESC",
+                "category_id": category_id,
+                "tag_id": "0",
+            };
             $http({
                 method: 'POST',
                 data: data,
@@ -669,18 +744,114 @@
                     return str.join("&");
                 }
             }).then(function successCallback(response) {
-                page = response.data.data.page.page;
-                page_total = response.data.data.page.page_total;
-                $scope.details = response.data.data.info;
-                // $scope.times = response.data.data.create_time;
-                // console.log(substrDate(response.data.data.info[1].create_time));
-                // for(var i = 0 ;i < $scope.details.length;i++){
-                //     $scope.times = Date.parse($scope.details[i].create_time);//转成时间戳
-                // };
+                switch (num)
+                {
+                    case 1:
+                        $scope.demands1 = response.data.data;
+                        break;
+                    case 2:
+                        $scope.demands2 = response.data.data;
+                        break;
+                    case 3:
+                        $scope.demands3 = response.data.data;
+                        break;
+                    case 4:
+                        $scope.demands4 = response.data.data;
+                        break;
+                    case 5:
+                        $scope.demands5 = response.data.data;
+                        break;
+                    case 6:
+                        $scope.demands6 = response.data.data;
+                        break;
+                    case 7:
+                        $scope.demands7 = response.data.data;
+                        break;
+                    case 8:
+                        $scope.demands8 = response.data.data;
+                        break;
+                }
             }, function errorCallback(response) {
             });
         }
+    });
 
+
+    app.controller("tecCtrl",function ($scope,$http){
+        //最新技术
+        //技术类别栏目
+        $http({
+            method: 'GET',
+            url: '/api.php/ChannelIndex/index/action/dataList/channel/js/type/4',
+        }).then(function successCallback(response) {
+            $scope.tecTypes = response.data.data;
+        }, function errorCallback(response) {
+        });
+
+    });
+
+    app.controller("tecList",function ($scope,$http){
+        //技术列表
+        getByTag(12,1);
+        getByTag(2,2);
+        getByTag(3,3);
+        getByTag(4,4);
+        getByTag(10,5);
+        getByTag(7,6);
+        getByTag(13,7);
+        getByTag(8,8);
+        function getByTag(tag_id,num) {
+            var data = {
+                "page": "1",
+                "page_num": "8",
+                "order_field": "create_time",
+                "order_by": "DESC",
+                "category_id": 0,
+                "tag_id": tag_id,
+            };
+            $http({
+                method: 'POST',
+                data: data,
+                url: '/api.php/ChannelIndex/index/action/dataList/channel/js/type/1',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj) {
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    }
+                    return str.join("&");
+                }
+            }).then(function successCallback(response) {
+                switch (num)
+                {
+                    case 1:
+                        $scope.tecs1 = response.data.data;
+                        break;
+                    case 2:
+                        $scope.tecs2 = response.data.data;
+                        break;
+                    case 3:
+                        $scope.tecs3 = response.data.data;
+                        break;
+                    case 4:
+                        $scope.tecs4 = response.data.data;
+                        break;
+                    case 5:
+                        $scope.tecs5 = response.data.data;
+                        break;
+                    case 6:
+                        $scope.tecs6 = response.data.data;
+                        break;
+                    case 7:
+                        $scope.tecs7 = response.data.data;
+                        break;
+                    case 8:
+                        $scope.tecs8 = response.data.data;
+                        break;
+                }
+            }, function errorCallback(response) {
+            });
+        }
     });
 
     app.controller("newCtrl",function ($scope,$http){
@@ -745,11 +916,15 @@
     var swiper_cop = new Swiper('#swiper_cop', {
         loop:true,
         pagination : '.swiper-pagination',
+        observer:true,//修改swiper自己或子元素时，自动初始化swiper
+        observeParents:true,//修改swiper的父元素时，自动初始化swiper
     });
 
     var Swiper2 = new Swiper('#swiper_dem', {
         paginationClickable :true,
         autoplay: 3000,
+        observer:true,//修改swiper自己或子元素时，自动初始化swiper
+        observeParents:true,//修改swiper的父元素时，自动初始化swiper
         onSlideChangeStart: function(){
             var index = Swiper2.activeIndex;
             var num = index*86;
@@ -760,6 +935,8 @@
     var Swiper3 = new Swiper('#swiper_tec', {
         paginationClickable :true,
         autoplay: 3000,
+        observer:true,//修改swiper自己或子元素时，自动初始化swiper
+        observeParents:true,//修改swiper的父元素时，自动初始化swiper
         onSlideChangeStart: function(){
             var index = Swiper3.activeIndex;
             var num = index*86;

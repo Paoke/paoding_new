@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="tec_list">
+<html lang="en" ng-app="theme_list">
 <head>
     <meta charset="UTF-8">
     <title>庖丁技术</title>
@@ -17,67 +17,52 @@
 <!-- 导航结束 -->
 
 <!-- 最新专题 -->
-<div class="last_list_wrap">
-    <div class="last_list clear">
-        <div class="lastest fl">
-            <div class="lastest_bg">
-                本周专题
-                <span class="title">复杂有机物</span>
-            </div>
-            <ul class="new_list">
-                <li><span>有机物</span></li>
-                <li><span>有机物</span></li>
-                <li><span>有机物</span></li>
-                <li><span>有机物</span></li>
-                <li><span>有机物</span></li>
-            </ul>
-            <div class="see_more">
-                <a href="#">查看该专题更多项目</a>
-            </div>
-        </div>
+<!--<div class="last_list_wrap">-->
+    <!--<div class="last_list clear">-->
+        <!--<div class="lastest fl">-->
+            <!--<div class="lastest_bg">-->
+                <!--本周专题-->
+                <!--<span class="title">复杂有机物</span>-->
+            <!--</div>-->
+            <!--<ul class="new_list">-->
+                <!--<li><span>有机物</span></li>-->
+                <!--<li><span>有机物</span></li>-->
+                <!--<li><span>有机物</span></li>-->
+                <!--<li><span>有机物</span></li>-->
+                <!--<li><span>有机物</span></li>-->
+            <!--</ul>-->
+            <!--<div class="see_more">-->
+                <!--<a href="#">查看该专题更多项目</a>-->
+            <!--</div>-->
+        <!--</div>-->
 
-        <div class="next fl">
-            <div class="next_bg">
-                下期专题 征集中
-            </div>
-            <p class="next_title">AI机器语言处理</p>
-            <p class="send">
-                如果您有相关技术，快来发布吧！<br>
-                多个技术打包发送至info@paoding.cc
-            </p>
-            <div class="publish_tec">发布技术</div>
-        </div>
-    </div>
-</div>
+        <!--<div class="next fl">-->
+            <!--<div class="next_bg">-->
+                <!--下期专题 征集中-->
+            <!--</div>-->
+            <!--<p class="next_title">AI机器语言处理</p>-->
+            <!--<p class="send">-->
+                <!--如果您有相关技术，快来发布吧！<br>-->
+                <!--多个技术打包发送至info@paoding.cc-->
+            <!--</p>-->
+            <!--<div class="publish_tec">发布技术</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
 
 <!-- 往期专题 -->
 <div class="past_title">
     <p class="past_p">往期专题</p>
 </div>
 
-<div class="section clear">
+<div class="section clear" ng-controller="theme_listCtrl">
     <div class="project_wrap clear">
-        <div class="project_option fl">
-            <img class="project_img" src="{$Think.INDEX}/images/tech-topic1.jpg" alt="">
-            <p class="topic">复杂有机物、无机物检验</p>
-            <p class="count">14项技术</p>
-        </div>
-
-        <div class="project_option fl">
-            <img class="project_img" src="{$Think.INDEX}/images/tech-topic2.jpg" alt="">
-            <p class="topic">复杂有机物、无机物检验</p>
-            <p class="count">14项技术</p>
-        </div>
-
-        <div class="project_option fl">
-            <img class="project_img" src="{$Think.INDEX}/images/tech-topic3.jpg" alt="">
-            <p class="topic">复杂有机物、无机物检验</p>
-            <p class="count">14项技术</p>
-        </div>
-        <div class="project_option fl">
-            <img class="project_img" src="{$Think.INDEX}/images/tech-topic3.jpg" alt="">
-            <p class="topic">复杂有机物、无机物检验</p>
-            <p class="count">14项技术</p>
+        <div class="project_option fl" ng-repeat="list in lists">
+            <a href="__MODULE__/Tec/tec_list.html?id={{list.id}}">
+                <img class="project_img" ng-src="{{list.cover_url}}" width="282" height="179" alt="">
+                <p class="topic">{{list.title}}</p>
+                <p class="count">{{list.count}}项技术</p>
+            </a>
         </div>
     </div>
 </div>
@@ -93,9 +78,16 @@
 <script src="{$Think.INDEX}/js/angular.min.js"></script>
 <script src="{$Think.INDEX}/js/common.js"></script>
 <script>
-    // var app = angular.module("tec_list",[]);
-    // app.controller("tec_listCtrl",function ($scope,$http){
+    var app = angular.module('theme_list',[]);
+    app.controller("theme_listCtrl",function ($scope,$http){
+        $http({
+            method:"GET",
+            url:"/api.php/Paoding/getIndex"
+        }).then(function successCallback(response) {
+            $scope.lists = response.data.data;
+        }, function errorCallback(response) {
+        });
 
-    // })
+    })
 </script>
 </html>

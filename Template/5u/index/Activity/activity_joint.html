@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="tec_list">
+<html lang="en" ng-app="share">
 <head>
     <meta charset="UTF-8">
     <title>对接会</title>
@@ -54,104 +54,63 @@
     <img src="{$Think.INDEX}/images/activity-joint-flow.png" alt="">
 </div>
 
-<div class="event_wrap clear" >
+<div class="event_wrap clear" ng-controller="shareCtrl">
     <p class="last_review">往期回顾</p>
-    <div class="event-card fl" style="margin-left:0">
-        <a href='#' target="_blank">
-            <img class="lazyimg" src="{$Think.INDEX}/images/activity-activity1.png"/>
+    <div class="event-card fl" style="margin-left:0" ng-repeat="list in lists">
+        <a href='__CONTROLLER__/activity_detail?data_id={{list.id}}'>
+            <img class="lazyimg" ng-src="{{list.sponsor_logo_url}}" width="386" height="286"/>
         </a>
         <div class="pl20">
             <h3 class='ec-title'>
                 <a href="##" target="_blank">
-                    【HELLO DAY】深圳专场
+                    {{list.title}}
                 </a>
             </h3>
             <div class='ec-time clear lh26'>
                 <p class="fl term1"><i class="iconfont icon-naozhong">&nbsp;</i></p>
                 <p class="fl term2">
 						<span>
-							2018/ 01/02/   -
-							2018/ 12/31/
+							{{list.formal_start_time | formatDate}}
 						</span>
                 </p>
             </div>
             <div class='ec-time clear'>
                 <p class="fl term1"><i class="iconfont icon-dingwei">&nbsp;</i></p>
                 <p class="fl term2">
-                    深圳市软件产业基地4栋C座205
+                    {{list.address}}
                 </p>
             </div>
             <div class="ec-sign">
-                <a href='##' class="sign-btn" title="立即报名" target="_blank">立即报名</a>
-            </div>
-        </div>
-    </div>
 
-    <div class="event-card fl" >
-        <a href='#' target="_blank">
-            <img class="lazyimg" src="{$Think.INDEX}/images/activity-activity1.png" />
-        </a>
-        <div class="pl20">
-            <h3 class='ec-title'>
-                <a href="##" target="_blank">
-                    【HELLO DAY】深圳专场
-                </a>
-            </h3>
-            <div class='ec-time clear lh26'>
-                <p class="fl term1"><i class="iconfont icon-naozhong">&nbsp;</i></p>
-                <p class="fl term2">
-						<span>
-							2018/ 01/02/   -
-							2018/ 12/31/
-						</span>
-                </p>
-            </div>
-            <div class='ec-time clear'>
-                <p class="fl term1"><i class="iconfont icon-dingwei">&nbsp;</i></p>
-                <p class="fl term2">
-                    深圳市软件产业基地4栋C座205
-                </p>
-            </div>
-            <div class="ec-sign">
-                <a href='##' class="sign-btn" title="立即报名" target="_blank">立即报名</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="event-card fl" style="margin-left:20px">
-        <a href='#' target="_blank">
-            <img class="lazyimg" src="{$Think.INDEX}/images/activity-activity1.png" />
-        </a>
-        <div class="pl20">
-            <h3 class='ec-title'>
-                <a href="##" target="_blank">
-                    【HELLO DAY】深圳专场
-                </a>
-            </h3>
-            <div class='ec-time clear lh26'>
-                <p class="fl term1"><i class="iconfont icon-naozhong">&nbsp;</i></p>
-                <p class="fl term2">
-						<span>
-							2018/ 01/02/   -
-							2018/ 12/31/
-						</span>
-                </p>
-            </div>
-            <div class='ec-time clear'>
-                <p class="fl term1"><i class="iconfont icon-dingwei">&nbsp;</i></p>
-                <p class="fl term2">
-                    深圳市软件产业基地4栋C座205
-                </p>
-            </div>
-            <div class="ec-sign">
-                <a href='##' class="sign-btn" title="立即报名" target="_blank">立即报名</a>
+                <a href='__CONTROLLER__/activity_release.html' class="sign-btn" title="立即报名" ng-show="list.status == 1">立即报名</a>
+                <a  class="sign-btn"  ng-show="list.status == 0">活动已结束</a>
             </div>
         </div>
     </div>
 </div>
-<p class="seeMore">查看更多>></p>
+<!--<p class="seeMore">查看更多>></p>-->
 <include file="./Template/5u/index/public/footer.html" />
 </body>
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
 <script src="{$Think.INDEX}/js/common.js"></script>
+<script src="{$Think.MOBILE}/js/angular.min.js"></script>
+<script>
+    var app = angular.module("share",[]);
+    app.filter('formatDate',function(){
+        return function(date){
+            return date = date.substr(0,16);
+        };
+    });
+    app.controller("shareCtrl",function ($scope,$http){
+        $http({
+            method:'GET',
+            params:{tag_id:2},
+            url: '/api.php/ChannelIndex/index/action/dataList/channel/hd/type/1',
+        }).then(function successCallback(response){
+            $scope.lists = response.data.data;
+        },function errorCallback(){
+
+        });
+    });
+</script>
 </html>

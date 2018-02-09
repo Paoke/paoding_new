@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="tec_list">
+<html lang="en" ng-app="share">
 <head>
     <meta charset="UTF-8">
     <title>峰会论坛</title>
@@ -129,159 +129,98 @@
         </div>
     </div>
 </div>
-<div class="event_wrap clear">
+<div class="event_wrap clear" ng-controller="shareCtrl">
     <p class="last_review">往期回顾</p>
-    <div class="event-card fl" style="margin-left:0">
-        <a href='#' target="_blank">
-            <img class="lazyimg" src="{$Think.INDEX}/images/activity-activity1.png"/>
+    <div class="event-card fl" style="margin-left:0" ng-repeat="list in lists">
+        <a href='__CONTROLLER__/activity_detail?data_id={{list.id}}'>
+            <img class="lazyimg" ng-src="{{list.sponsor_logo_url}}" width="386" height="286"/>
         </a>
         <div class="pl20">
             <h3 class='ec-title'>
                 <a href="##" target="_blank">
-                    【HELLO DAY】深圳专场
+                    {{list.title}}
                 </a>
             </h3>
             <div class='ec-time clear lh26'>
                 <p class="fl term1"><i class="iconfont icon-naozhong">&nbsp;</i></p>
                 <p class="fl term2">
 						<span>
-							2018/ 01/02/   -
-							2018/ 12/31/
+							{{list.formal_start_time | formatDate}}
 						</span>
                 </p>
             </div>
             <div class='ec-time clear'>
                 <p class="fl term1"><i class="iconfont icon-dingwei">&nbsp;</i></p>
                 <p class="fl term2">
-                    深圳市软件产业基地4栋C座205
+                    {{list.address}}
                 </p>
             </div>
             <div class="ec-sign">
-                <a href='##' class="sign-btn" title="立即报名" target="_blank">立即报名</a>
-            </div>
-        </div>
-    </div>
 
-    <div class="event-card fl" >
-        <a href='#' target="_blank">
-            <img class="lazyimg" src="{$Think.INDEX}/images/activity-activity1.png" />
-        </a>
-        <div class="pl20">
-            <h3 class='ec-title'>
-                <a href="##" target="_blank">
-                    【HELLO DAY】深圳专场
-                </a>
-            </h3>
-            <div class='ec-time clear lh26'>
-                <p class="fl term1"><i class="iconfont icon-naozhong">&nbsp;</i></p>
-                <p class="fl term2">
-						<span>
-							2018/ 01/02/   -
-							2018/ 12/31/
-						</span>
-                </p>
-            </div>
-            <div class='ec-time clear'>
-                <p class="fl term1"><i class="iconfont icon-dingwei">&nbsp;</i></p>
-                <p class="fl term2">
-                    深圳市软件产业基地4栋C座205
-                </p>
-            </div>
-            <div class="ec-sign">
-                <a href='##' class="sign-btn" title="立即报名" target="_blank">立即报名</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="event-card fl" style="margin-left:20px">
-        <a href='#' target="_blank">
-            <img class="lazyimg" src="{$Think.INDEX}/images/activity-activity1.png" />
-        </a>
-        <div class="pl20">
-            <h3 class='ec-title'>
-                <a href="##" target="_blank">
-                    【HELLO DAY】深圳专场
-                </a>
-            </h3>
-            <div class='ec-time clear lh26'>
-                <p class="fl term1"><i class="iconfont icon-naozhong">&nbsp;</i></p>
-                <p class="fl term2">
-						<span>
-							2018/ 01/02/   -
-							2018/ 12/31/
-						</span>
-                </p>
-            </div>
-            <div class='ec-time clear'>
-                <p class="fl term1"><i class="iconfont icon-dingwei">&nbsp;</i></p>
-                <p class="fl term2">
-                    深圳市软件产业基地4栋C座205
-                </p>
-            </div>
-            <div class="ec-sign">
-                <a href='##' class="sign-btn" title="立即报名" target="_blank">立即报名</a>
+                <a href='__CONTROLLER__/activity_release.html' class="sign-btn" title="立即报名" ng-show="list.status == 1">立即报名</a>
+                <a  class="sign-btn"  ng-show="list.status == 0">活动已结束</a>
             </div>
         </div>
     </div>
 </div>
-<p class="seeMore">查看更多>></p>
-<p class="last_review">论坛现场</p>
+<!--<p class="seeMore">查看更多>></p>-->
+<!--<p class="last_review">论坛现场</p>-->
 
 <!--  小轮播-->
-<div class="pc-slide">
-    <div class="view">
-        <div class="swiper-container">
-            <a class="arrow-left" href="#"></a>
-            <a class="arrow-right" href="#"></a>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img class="a1" src="{$Think.INDEX}/images/b1.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img class="a1" src="{$Think.INDEX}/images/b2.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img class="a1" src="{$Think.INDEX}/images/b3.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img class="a1" src="{$Think.INDEX}/images/b4.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img class="a1" src="{$Think.INDEX}/images/b5.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img class="a1" src="{$Think.INDEX}/images/b6.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="preview">
-        <!-- <a class="arrow-left" href="#"></a> -->
-        <!-- <a class="arrow-right" href="#"></a> -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide active-nav a2">
-                    <img src="{$Think.INDEX}/images/s1.jpg" alt="">
-                </div>
-                <div class="swiper-slide a2">
-                    <img src="{$Think.INDEX}/images/s2.jpg" alt="">
-                </div>
-                <div class="swiper-slide a2">
-                    <img src="{$Think.INDEX}/images/s3.jpg" alt="">
-                </div>
-                <div class="swiper-slide a2">
-                    <img src="{$Think.INDEX}/images/s4.jpg" alt="">
-                </div>
-                <div class="swiper-slide a2">
-                    <img src="{$Think.INDEX}/images/s5.jpg" alt="">
-                </div>
-                <div class="swiper-slide slide6 a2">
-                    <img src="{$Think.INDEX}/images/s6.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div class="pc-slide">-->
+    <!--<div class="view">-->
+        <!--<div class="swiper-container">-->
+            <!--<a class="arrow-left" href="#"></a>-->
+            <!--<a class="arrow-right" href="#"></a>-->
+            <!--<div class="swiper-wrapper">-->
+                <!--<div class="swiper-slide">-->
+                    <!--<img class="a1" src="{$Think.INDEX}/images/b1.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="swiper-slide">-->
+                    <!--<img class="a1" src="{$Think.INDEX}/images/b2.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="swiper-slide">-->
+                    <!--<img class="a1" src="{$Think.INDEX}/images/b3.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="swiper-slide">-->
+                    <!--<img class="a1" src="{$Think.INDEX}/images/b4.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="swiper-slide">-->
+                    <!--<img class="a1" src="{$Think.INDEX}/images/b5.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="swiper-slide">-->
+                    <!--<img class="a1" src="{$Think.INDEX}/images/b6.jpg" alt="">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="preview">-->
+        <!--&lt;!&ndash; <a class="arrow-left" href="#"></a> &ndash;&gt;-->
+        <!--&lt;!&ndash; <a class="arrow-right" href="#"></a> &ndash;&gt;-->
+        <!--<div class="swiper-container">-->
+            <!--<div class="swiper-wrapper">-->
+                <!--<div class="swiper-slide active-nav a2">-->
+                    <!--<img src="{$Think.INDEX}/images/s1.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="swiper-slide a2">-->
+                    <!--<img src="{$Think.INDEX}/images/s2.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="swiper-slide a2">-->
+                    <!--<img src="{$Think.INDEX}/images/s3.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="swiper-slide a2">-->
+                    <!--<img src="{$Think.INDEX}/images/s4.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="swiper-slide a2">-->
+                    <!--<img src="{$Think.INDEX}/images/s5.jpg" alt="">-->
+                <!--</div>-->
+                <!--<div class="swiper-slide slide6 a2">-->
+                    <!--<img src="{$Think.INDEX}/images/s6.jpg" alt="">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
 
 <!-- 往期嘉宾 -->
 <div class="past_guest_wrap">
@@ -289,34 +228,49 @@
     <ul class="past_ul clear">
         <div class="marl">
             <li class="past_list">
-                <img src="{$Think.INDEX}/images/activity-forum-guest1.png" alt="">
-                <p class="past_li_name">张霞</p>
-                <p class="past_li_pst">海汇投资 投资总监</p>
+                <img src="{$Think.MOBILE}/images/forum1.png" alt="">
+                <p class="past_li_name">郭孔快</p>
+                <p class="past_li_pst">广州速威智能系统科技有限公司总经理</p>
             </li>
             <li class="past_list">
-                <img src="{$Think.INDEX}/images/activity-forum-guest1.png" alt="">
-                <p class="past_li_name">张霞</p>
-                <p class="past_li_pst">海汇投资 投资总监</p>
+                <img src="{$Think.MOBILE}/images/forum2.png" alt="">
+                <p class="past_li_name">童格明</p>
+                <p class="past_li_pst">深圳动进智能科技有限公司总经理</p>
             </li>
             <li class="past_list">
-                <img src="{$Think.INDEX}/images/activity-forum-guest1.png" alt="">
-                <p class="past_li_name">张霞</p>
-                <p class="past_li_pst">海汇投资 投资总监</p>
+                <img src="{$Think.MOBILE}/images/forum3.png" alt="">
+                <p class="past_li_name">王兆广</p>
+                <p class="past_li_pst">灵踪科技（深圳）有限公司创始人</p>
             </li>
             <li class="past_list">
-                <img src="{$Think.INDEX}/images/activity-forum-guest1.png" alt="">
-                <p class="past_li_name">张霞</p>
-                <p class="past_li_pst">海汇投资 投资总监</p>
+                <img src="{$Think.MOBILE}/images/forum4.png" alt="">
+                <p class="past_li_name">王悦翔</p>
+                <p class="past_li_pst">马路创新科技技术合伙人</p>
             </li>
             <li class="past_list">
-                <img src="{$Think.INDEX}/images/activity-forum-guest1.png" alt="">
-                <p class="past_li_name">张霞</p>
-                <p class="past_li_pst">海汇投资 投资总监</p>
+                <img src="{$Think.MOBILE}/images/forum5.png" alt="">
+                <p class="past_li_name">杨红宇</p>
+                <p class="past_li_pst">广州珐玛珈智能设备股份有限公司董事会董事、副总经理</p>
             </li>
             <li class="past_list">
-                <img src="{$Think.INDEX}/images/activity-forum-guest1.png" alt="">
-                <p class="past_li_name">张霞</p>
-                <p class="past_li_pst">海汇投资 投资总监</p>
+                <img src="{$Think.MOBILE}/images/forum6.png" alt="">
+                <p class="past_li_name">李  志</p>
+                <p class="past_li_pst">制造物联网技术国家地方联合工程实验室副主任</p>
+            </li>
+            <li class="past_list">
+                <img src="{$Think.MOBILE}/images/forum7.png" alt="">
+                <p class="past_li_name">陈浩城</p>
+                <p class="past_li_pst">广州珐玛珈智能装备股份有限公司产品管理部经理</p>
+            </li>
+            <li class="past_list">
+                <img src="{$Think.MOBILE}/images/forum8.png" alt="">
+                <p class="past_li_name">闫  研</p>
+                <p class="past_li_pst">珠海丹德图像技术有限公司市场总监</p>
+            </li>
+            <li class="past_list">
+                <img src="{$Think.MOBILE}/images/forum9.png" alt="">
+                <p class="past_li_name">杜  威</p>
+                <p class="past_li_pst">亮风台信息科技有限公司华南总监</p>
             </li>
         </div>
     </ul>
@@ -326,8 +280,27 @@
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
 <script src="{$Think.INDEX}/js/common.js"></script>
 <script src="{$Think.INDEX}/js/idangerous.swiper.min.js"></script>
+<script src="{$Think.MOBILE}/js/angular.min.js"></script>
 
 <script>
+    var app = angular.module("share",[]);
+    app.filter('formatDate',function(){
+        return function(date){
+            return date = date.substr(0,16);
+        };
+    });
+    app.controller("shareCtrl",function ($scope,$http){
+        $http({
+            method:'GET',
+            params:{tag_id:2},
+            url: '/api.php/ChannelIndex/index/action/dataList/channel/hd/type/1',
+        }).then(function successCallback(response){
+            $scope.lists = response.data.data;
+        },function errorCallback(){
+
+        });
+    });
+
     var viewSwiper = new Swiper('.view .swiper-container', {
         onSlideChangeStart: function() {
             updateNavPosition()
