@@ -16,8 +16,8 @@
 </style>
 <body>
 <!-- 提交成功提示 -->
-<!-- 	<div class="mask"></div>
-	<div class="alert_tip">
+	<div class="mask" style="display:none;"></div>
+	<div class="alert_tip" style="display:none;">
 		<div class="alert_top clear">
 			<span class="fl">提示</span>
 			<img class="fr" src="{$Think.INDEX}/images/issue-demand-close.png" alt="">
@@ -25,10 +25,11 @@
 		<img class="success_img" src="{$Think.INDEX}/images/issue-demand-done.png" alt="">
 		<p class="success_tip">提交成功</p>
 		<p class="success_kep">您发布的需求在审核中，<br>请保持电话畅通</p>
-	</div> -->
+	</div>
 <!-- 导航开始 -->
 <include file="./Template/5u/index/public/nav.html" />
 <!-- 导航结束 -->
+<input type="hidden" id="userId" value="{:session('userId')}">
 <form id="formID">
     <div class="form_wrap">
         <p class="release_demand">活动报名表</p>
@@ -37,28 +38,28 @@
                 <p class="form_p_sh fl">
                     *<span class="form_span_short">姓名：</span>
                 </p>
-                <input type="text" class="form_inp fl" placeholder="请输入您的真实姓名">
+                <input type="text" class="form_inp fl" name="name" placeholder="请输入您的真实姓名">
             </div>
 
             <div class="form_part clear">
                 <p class="form_p_sh fl">
                     *<span class="form_span_short">手机：</span>
                 </p>
-                <input type="text" class="form_inp fl" value="13657882321" readonly>
+                <input type="text" class="form_inp fl" name="mobile" value="13657882321" readonly>
             </div>
 
             <div class="form_part clear">
                 <p class="form_p_sh fl">
                     *<span class="form_span_short">公司：</span>
                 </p>
-                <input type="text" class="form_inp fl" placeholder="请输入公司名称">
+                <input type="text" class="form_inp fl" name="company" placeholder="请输入公司名称">
             </div>
 
             <div class="form_part clear">
                 <p class="form_p_sh fl">
                     *<span class="form_span_short">职务：</span>
                 </p>
-                <input type="text" class="form_inp fl" placeholder="请输入您所在公司职务">
+                <input type="text" class="form_inp fl" name="job" placeholder="请输入您所在公司职务">
             </div>
 
             <div class="form_part clear">
@@ -81,29 +82,29 @@
                 <p class="form_p fl">
                     *<span class="form_span">业务范围：</span>
                 </p>
-                <input type="text" class="form_inp fl" placeholder="请输入贵公司业务范围">
+                <input type="text" class="form_inp fl" placeholder="请输入贵公司业务范围" name="ywfw">
             </div>
 
             <div class="form_part clear">
                 <p class="form_p fl">
                     *<span class="form_span">研究方向：</span>
                 </p>
-                <input type="text" class="form_inp fl" placeholder="请输入您本人的研究方向">
+                <input type="text" class="form_inp fl" placeholder="请输入您本人的研究方向" name="js">
             </div>
 
             <div class="form_part clear">
                 <p class="form_p fl">
                     *<span class="form_span">对接需求：</span>
                 </p>
-                <input type="text" class="form_inp fl" placeholder="请输入您希望对接的技术或需求">
+                <input type="text" class="form_inp fl" placeholder="请输入您希望对接的技术或需求" name="xq">
             </div>
 
-            <div class="form_part clear">
+<!--             <div class="form_part clear">
                 <p class="form_p fl">
                     *<span class="form_span">技术难题：</span>
                 </p>
                 <input type="text" class="form_inp fl" placeholder="请简要描述您需要解决的技术难题">
-            </div>
+            </div> -->
         </div>
         <div class="bottom">
             <div class="submit">提交</div>
@@ -115,4 +116,56 @@
 </body>
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
 <script src="{$Think.INDEX}/js/common.js"></script>
+<script>
+    $(".areas_default").on("click",function(){
+        $(this).addClass('areas_selected').removeClass('areas_default').siblings().addClass('areas_default').removeClass('areas_selected');
+    });
+
+    var lingyu_html;
+    var hd_id = GetQueryString('data_id');
+    var data = {};
+    $(".submit").on("click",function(){
+        var li = $(".areas_main li"); 
+        var count = $(".areas_selected").length; 
+        for(var j = 0 ;j < $(".enter_ip").length;j++){           
+            if($(".enter_ip").eq(j).val()==""){
+               $(".enter_ip").eq(j).focus();
+               tip_ct = "请填写完毕再提交";
+               tips.addtips(tip_ct);
+            }
+        };
+        // 关注领域选中状态
+        var li = $(".areas_main li");        
+        for(var i = 0;i < li.length ; i++){
+            if( li.eq(i).hasClass('areas_selected') ){               
+                 lingyu_html = li.eq(i).html();
+            }
+        };
+        if(count < 1){
+            tip_ct = "请选择关注领域";
+            tips.addtips(tip_ct);
+        }
+        else{
+            var t = $("#formID").serializeArray();
+            $.each(t, function(){
+                data[this.name] = this.value;
+            });
+            data['hd_id'] = hd_id;
+            data['lingyu'] = lingyu_html;
+            data['user_id'] = $("#userId").val();
+            $.ajax({
+                type:'post',
+                url:'/index.php/Mobile/Activity/enter',
+                data:data,
+                dataType:'json',
+                success:function(res) {
+                    if(res.result == 1){
+                        tip_ct = "活动报名 成功";
+                        tips.addtips(tip_ct);
+                    }
+                }
+            })
+        }
+    })
+</script>
 </html>

@@ -48,7 +48,7 @@
                     <div class="fl regist_tip_icon1"></div>
                     <p class="fl agree_tip2"><span>手机或密码错误</span></p>
                 </div>
-                <a href="__CONTROLLER__/forget_psw.html"><p class="fr forget_psw">忘记密码</p></a>
+               <a href="__CONTROLLER__/forget_psw.html"><p class="fr forget_psw">忘记密码</p></a>
             </div>
 
             <div class="login_btn">登&nbsp;录</div>
@@ -61,7 +61,7 @@
 <script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script>
 
-
+    var url_ref = document.referrer;
     var app = angular.module('login', []);
     app.controller('myLogin', function ($scope,$http) {
         $(".login_btn").on("click",function() {
@@ -83,7 +83,7 @@
             }).then(function successCallback(response) {
                 if (response.data.result == 1) {
                     tip_ct = "登录成功";
-                    tip_url = '/index.php/Index/index/index.html';
+                    tip_url = url_ref;
                     tips.addtips(tip_ct, tip_url);
                 } else {
                     $(".wrong_tip").show();

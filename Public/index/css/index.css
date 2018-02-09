@@ -2286,6 +2286,9 @@
 .sky_t{
 	margin-top: 20px;
 }
+.dem_close{
+	cursor: pointer;
+}
 .user_det_part{
 	width: 256px;
 	height: 158px;

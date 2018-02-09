@@ -21,8 +21,12 @@
     <div class="tec_info fl" style="height:280px;">
         <div class="operate" style="bottom:28px;">
             浏览&nbsp;&nbsp;<span>{{details.clicks}}</span>
-            <img class="operate_ml" src="{$Think.INDEX}/images/icon-collect.png" alt="">
-            <img  src="{$Think.INDEX}/images/icon-wechat.png" alt="">
+            <img id="collect" class="operate_ml" src="{$Think.INDEX}/images/icon-collect.png" alt="" ng-show="status == 1">
+            <img id="cancle" class="operate_ml" src="{$Think.INDEX}/images/icon-collect2.png" alt="" ng-show="status == 0">
+           <div class="bdsharebuttonbox fr">
+               <img class="iconwc" src="{$Think.INDEX}/images/icon-wechat.png" alt="">
+               <a class="bds_weixin" data-cmd="weixin"></a>
+            </div>
         </div>
         <p class="tec_title">{{details.title}}</p>
         <div class="clear">
@@ -39,8 +43,8 @@
                 <span class="active_det_span fl">{{details.cost}}</span>
             </p>
         </div>
-        <a href="__CONTROLLER__/activity_release.html" ng-show="status==1"><div class="act_apply">我要报名</div></a>
-        <a  ng-show="status==0"><div class="act_apply">活动已结束</div></a>
+        <a id="at_btn" ng-show="btnStatus==1"><div class="act_apply">我要报名</div></a>
+        <a ng-show="btnStatus==0"><div class="act_apply">活动已结束</div></a>
     </div>
 </div>
 
@@ -91,10 +95,10 @@
             <div class="act_ct"><img class="act_main_pic" ng-cloak ng-src="{{details.zzxs}}" alt=""></div>
         </div>
 
-        <div class="act_det_inp">
+<!--         <div class="act_det_inp">
             <textarea class="act_det_text"></textarea>
         </div>
-        <p class="inp_submit">提交</p>
+        <p class="inp_submit">提交</p> -->
     </div>
 
 
@@ -130,6 +134,83 @@
         };
     });
     app.controller("detailCtrl",function ($scope,$http) {
+        // 判断本技术是否已经收藏
+        $http({
+            method:'GET',
+            params:{data_id:data_id,channel:'hd'},
+            url:'/index.php/Mobile/Article/is_like'
+        }).then(function successCallback(response) {                
+                if(response.data.msg == "已收藏"){
+                    $scope.status = 0; 
+                }else{
+                    $scope.status = 1; 
+                }
+            }, function errorCallback(response) {                   
+            });
+
+            // 收藏
+            $("#collect").on("click",function(){
+                $http({
+                    method:'GET',                
+                    url:'/index.php/Mobile/Activity/like?hd_id='+data_id+'&action=1'
+                }).then(function successCallback(response) {  
+                      if(response.data.code=="402"){
+                            alert("请先登录");
+                            window.location.href = "/index.php/Index/Login/login";
+                      } else {
+                            $scope.status = 0;    
+                        }                                  
+                    }, function errorCallback(response) {                   
+                    });
+            });
+
+            // 取消收藏
+            $("#cancle").on("click",function(){
+                $http({
+                    method:'GET',                
+                    url:'/index.php/Mobile/Activity/like?hd_id='+data_id+'&action=1'
+                }).then(function successCallback(response) {                   
+                    if(response.data.code=="402"){
+                        alert("请先登录");
+                        window.location.href = "/index.php/Index/Login/login";
+                    } else {
+                          $scope.status = 1;    
+                    }
+                }, function errorCallback(response) {                   
+                    });
+            });
+
+            // 立即报名
+            $("#at_btn").on("click",function(){
+                 //判断是否登录             
+                $http({
+                    method:'GET',                
+                    url:'/api.php/user/check_login'
+                }).then(function successCallback(response) {                     
+                    if(response.data.code=="400" || response.data.result==0){
+                        alert("请先登录");
+                        window.location.href = "/index.php/Index/Login/login";
+                    } else {
+                         // 判断是否绑定手机号
+                         $http({
+                             method:'GET',                
+                             url:'/api.php/user/check_phone'
+                         }).then(function successCallback(response) {            
+                             // 已经绑定
+                             if(response.data.result==1){      
+                                window.location.href = '/index.php/Index/Activity/activity_release.html?data_id='+data_id;
+                             // 没有绑定
+                             }else{
+                                // 跳转到绑定手机号页面
+                                 // window.location.href="/index.php/Mobile/User/binding.html";
+                             }
+                         })
+                    }
+                }, function errorCallback(response) {});
+             });
+
+
+
         $http({
             method: "GET",
             params: {data_id: data_id},
@@ -139,14 +220,16 @@
             var startTime = $scope.details.formal_start_time;
             var changeTime = startTime.replace(/-/g, '/');
             if (Date.parse(new Date()) > Date.parse(changeTime)) {
-                $scope.status = 0;//已结束
+                $scope.btnStatus = 0;//已结束
                 // $scope.details['status']="0";//已结束
             } else {
-                $scope.status = 1;//未举办
+                $scope.btnStatus = 1;//未举办
                 // $scope.details['status']="1";//未举办
             }
         }, function errorCallback(response) {
         });
+
+
 
         //推荐技术
         var data = {

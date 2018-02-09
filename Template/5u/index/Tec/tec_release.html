@@ -140,10 +140,10 @@
                 </p>
                 <div class="advice_area fl">
                     <textarea id="content" class="advice_text" ng-model="text" ng-change="tolCount();" maxlength="200" placeholder="描述方案的基本原理，应用场景，实现结果等，请注意核心技术细节的保密"></textarea >
-                    <p class="advice_numlim">
+<!--                     <p class="advice_numlim">
                         <span class="advice_count" ng-cloak>{{count}}</span>
                         | 200字
-                    </p>
+                    </p> -->
                 </div>
             </div>
         </div>
@@ -244,7 +244,11 @@
             tip_url = "/index.php/Mobile";
             tips.addtips(tip_ct,tip_url);
         }
-    }
+    };
+
+    $(".dem_close").on("click",function(){
+        window.location.href = "/index.php/Index/User/user_tec.html";
+    });
 
 </script>
 </body>

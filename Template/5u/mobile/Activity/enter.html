@@ -15,7 +15,7 @@
 <body style="padding-top:60px;overflow-x:hidden">
 
 <!-- 使用my.css 注册页面样式 -->
-<input type="hidden" value="{$Think.session.userArr.user_id}">
+<input type="hidden" value="{$Think.session.userArr.user_id}" id="user_id">
 <div class="mask" style="display:none;"></div>
 <div class="identify_tip">
     <p>活动报名成功</p>
@@ -133,6 +133,7 @@
             });
             data['hd_id'] = hd_id;
             data['lingyu'] = lingyu_html;
+            data['user_id'] = $("#userId").val();
             $.ajax({
                 type:'post',
                 url:'/index.php/Mobile/Activity/enter',

@@ -20,7 +20,7 @@
 	<div class="alert_tip" style="display:none">
 		<div class="alert_top clear">
 			<span class="fl">提示</span>
-			<img class="fr" src="{$Think.INDEX}/images/issue-demand-close.png" alt="">
+			<img class="fr dem_close" src="{$Think.INDEX}/images/issue-demand-close.png" alt="">
 		</div>
 		<img class="success_img" src="{$Think.INDEX}/images/issue-demand-done.png" alt="">
 		<p class="success_tip">提交成功</p>	
@@ -48,10 +48,10 @@
                 </p>
                 <div class="advice_area fl">
                     <textarea class="advice_text" ng-model="text" ng-change="tolCount();" maxlength="200" placeholder="请输入目前主要的技术问题、需求场景、指标参数等" id="content"></textarea >
-                    <p class="advice_numlim">
+<!--                     <p class="advice_numlim">
                         <span class="advice_count" ng-cloak>{{count}}</span>
                         | 200字
-                    </p>
+                    </p> -->
                 </div>
             </div>
 
@@ -232,7 +232,10 @@
             tip_ct = "请完善资料在提交",
             tips.addtips(tip_ct);
          }
-    }
+    };
+    $(".dem_close").on("click",function(){
+        window.location.href = "/index.php/Index/User/user_demand.html";
+    }); 
 </script>
 </body>
 </html>

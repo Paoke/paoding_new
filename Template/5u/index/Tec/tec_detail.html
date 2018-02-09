@@ -16,14 +16,15 @@
 <!-- 导航结束 -->
 <div class="section clear" style="padding-bottom:30px;">
     <div class="fl">
-        <img class="tec_left_img" ng-src="{{lists.cover_url}}" alt="">
+        <img class="tec_left_img" ng-src="{{lists.lbxt}}" alt="">
     </div>
     <div class="tec_info fl">
         <p class="number">编号：{{lists.id}}</p>
         <div class="operate">
             发布于：<span class="operate_ml" ng-cloak>{{lists.create_time | formatDate}}</span>
             浏览&nbsp;&nbsp;<span>{{lists.clicks}}</span>
-            <img id="collect" class="operate_ml" src="{$Think.INDEX}/images/icon-collect.png" alt="">
+            <img id="collect" class="operate_ml" src="{$Think.INDEX}/images/icon-collect.png" alt="" ng-show="status == 1">
+            <img id="cancle" class="operate_ml" src="{$Think.INDEX}/images/icon-collect2.png" alt="" ng-show="status == 0">
             <div class="bdsharebuttonbox fr">
                 <img class="iconwc" src="{$Think.INDEX}/images/icon-wechat.png" alt="">
                 <a class="bds_weixin" data-cmd="weixin"></a>
@@ -169,7 +170,7 @@
     });
 
     app.controller("detail_tecCtrl",function ($scope,$http){
-
+        $scope.status = 1; 
         //技术详情
         $http({
             method:'GET',
@@ -208,17 +209,87 @@
 
         });
 
-        // 收藏/取消收藏
-        $("#collect").on("click",function(){
-            $("#collect").attr("src","{$Think.INDEX}/images/icon-collect2.png"); 
-        });
-    });
+        // 判断本技术是否已经收藏
+        $http({
+            method:'GET',
+            params:{data_id:data_id,channel:'js'},
+            url:'/index.php/Mobile/Article/is_like'
+        }).then(function successCallback(response) {                
+                if(response.data.msg == "已收藏"){
+                    $scope.status = 0; 
+                }else{
+                    $scope.status = 1; 
+                }
+            }, function errorCallback(response) {                   
+            });
 
+            // 收藏
+            $("#collect").on("click",function(){
+                $http({
+                    method:'GET',                
+                    url:'/index.php/Mobile/Article/like?channel=js&id='+data_id+'&action=1'
+                }).then(function successCallback(response) {  
+                      if(response.data.code=="402"){
+                            alert("请先登录");
+                            window.location.href = "/index.php/Index/Login/login";
+                      } else {
+                            $scope.status = 0;    
+                        }                                  
+                    }, function errorCallback(response) {                   
+                    });
+            });
+            // 取消收藏
+            $("#cancle").on("click",function(){
+                $http({
+                    method:'GET',                
+                    url:'/index.php/Mobile/Article/like?channel=js&id='+data_id+'&action=0'
+                }).then(function successCallback(response) {                   
+                    if(response.data.code=="402"){
+                        $(".mask").show();
+                        $(".alert").show();
+                        return false;
+                    } else {
+                          $scope.status = 1;    
+                    }
+                }, function errorCallback(response) {                   
+                    });
+            });
+            // 获取联系方式
+            $(".get_contack").on("click",function(){
+                //判断是否登录             
+               $http({
+                   method:'GET',                
+                   url:'/api.php/user/check_login'
+               }).then(function successCallback(response) {                     
+                   if(response.data.code=="400" || response.data.result==0){
+                       $(".mask").show();
+                       $(".alert").show();
+                       return false;               
+                   } else {
+                        // 判断是否绑定手机号
+                        $http({
+                            method:'GET',                
+                            url:'/api.php/user/check_phone'
+                        }).then(function successCallback(response) {                  
+                            // 已经绑定
+                            if(response.data.result==1){
+                                getContackWay();
+                            // 没有绑定
+                            }else{
+                                window.location.href="index.php/Index/User/user_binding.html";
+                            }
+                        })
+                   }
+               }, function errorCallback(response) {});
+            });
+        }); 
 
-    $(".get_contack").on("click",function() {
-        $(this).hide();
+    function getContackWay(){
+        $(".get_contack").hide();
         $(".contack").show();
-    });
+    }
+
+
 
 
 </script>

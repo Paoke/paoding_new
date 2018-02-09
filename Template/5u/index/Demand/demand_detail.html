@@ -24,7 +24,8 @@
             <div class="operate_dem">
                 发布于：<span class="operate_ml">{{detail.create_time | formatDate}}</span>
                 浏览&nbsp;&nbsp;<span>{{detail.clicks}}</span>
-                <img id="collect" class="operate_ml" src="{$Think.INDEX}/images/icon-collect.png" alt="">
+                <img id="collect" class="operate_ml" src="{$Think.INDEX}/images/icon-collect.png" alt="" ng-show="status == 1">
+                <img id="cancle" class="operate_ml" src="{$Think.INDEX}/images/icon-collect2.png" alt="" ng-show="status == 0">
                <div class="bdsharebuttonbox fr">
                    <img class="iconwc" src="{$Think.INDEX}/images/icon-wechat.png" alt="">
                    <a class="bds_weixin" data-cmd="weixin"></a>
@@ -37,22 +38,25 @@
                         <span class="tec_way">需求领域</span>
                         <span class="tec_ans">{{detail.cat_name}}</span>
                     </li>
-                    <li>
-                        <span class="tec_way">姓名</span>
-                        <span class="tec_ans">{{detail.lxrxm}}</span>
-                    </li>
-                    <li>
-                        <span class="tec_way">手机</span>
-                        <span class="tec_ans">{{detail.dhhm}}</span>
-                    </li>
-                    <li>
-                        <span class="tec_way">邮箱</span>
-                        <span class="tec_ans">{{detail.dzyx}}</span>
-                    </li>
-                    <li>
-                        <span class="tec_way">公司名</span>
-                        <span class="tec_ans">{{detail.gsm}}</span>
-                    </li>
+                    <p class="get_contack">获取联系方式</p>
+                    <div class="contack">
+                        <li>
+                            <span class="tec_way">姓名</span>
+                            <span class="tec_ans">{{detail.lxrxm}}</span>
+                        </li>
+                        <li>
+                            <span class="tec_way">手机</span>
+                            <span class="tec_ans">{{detail.dhhm}}</span>
+                        </li>
+                        <li>
+                            <span class="tec_way">邮箱</span>
+                            <span class="tec_ans">{{detail.dzyx}}</span>
+                        </li>
+                        <li>
+                            <span class="tec_way">公司名</span>
+                            <span class="tec_ans">{{detail.gsm}}</span>
+                        </li>
+                    </div>
                 </ul>
 
                 <ul class="tec_detail fl">
@@ -123,7 +127,7 @@
 
     //需求详情
     app.controller("detailCtrl",function ($scope,$http) {
-
+        $scope.status = 1; 
         //需求详情
         $http({
             method: 'GET',
@@ -163,11 +167,85 @@
         }, function errorCallback(response) {
         });
 
-        // 收藏/取消收藏
+        // 判断本技术是否已经收藏
+        $http({
+            method:'GET',
+            params:{data_id:data_id,channel:'xq'},
+            url:'/index.php/Mobile/Article/is_like'
+        }).then(function successCallback(response) {                
+                if(response.data.msg == "已收藏"){
+                    $scope.status = 0; 
+                }else{
+                    $scope.status = 1; 
+                }
+            }, function errorCallback(response) {                   
+            });
+
+        // 收藏
         $("#collect").on("click",function(){
-            $("#collect").attr("src","{$Think.INDEX}/images/icon-collect2.png"); 
+            $http({
+                method:'GET',                
+                url:'/index.php/Mobile/Article/like?channel=xq&id='+data_id+'&action=1'
+            }).then(function successCallback(response) {  
+                  if(response.data.code=="402"){
+                        alert("请先登录");
+                        window.location.href = "/index.php/Index/Login/login";
+                  } else {
+                        $scope.status = 0;    
+                    }                                  
+                }, function errorCallback(response) {                   
+                });
+        });
+
+        // 取消收藏
+        $("#cancle").on("click",function(){
+            $http({
+                method:'GET',                
+                url:'/index.php/Mobile/Article/like?channel=xq&id='+data_id+'&action=0'
+            }).then(function successCallback(response) {                   
+                if(response.data.code=="402"){
+                    alert("请先登录");
+                    window.location.href = "/index.php/Index/Login/login";
+                } else {
+                      $scope.status = 1;    
+                }
+            }, function errorCallback(response) {                   
+                });
+        });
+        // 获取联系方式
+        $(".get_contack").on("click",function(){
+            //判断是否登录             
+           $http({
+               method:'GET',                
+               url:'/api.php/user/check_login'
+           }).then(function successCallback(response) {                     
+               if(response.data.code=="400" || response.data.result==0){
+                   $(".mask").show();
+                   $(".alert").show();
+                   return false;               
+               } else {
+                    // 判断是否绑定手机号
+                    $http({
+                        method:'GET',                
+                        url:'/api.php/user/check_phone'
+                    }).then(function successCallback(response) {                  
+                        // 已经绑定
+                        if(response.data.result==1){
+                            getContackWay();
+                        // 没有绑定
+                        }else{
+                            window.location.href="index.php/Index/User/user_binding.html";
+                        }
+                    })
+               }
+           }, function errorCallback(response) {});
         });
     });
+
+    function getContackWay(){
+        $(".get_contack").hide();
+        $(".contack").show();
+    }
 
 
 </script>
