@@ -24,10 +24,12 @@
                     <li v-for="category in categoryData" v-text="category.cat_name" v-bind:id="category.id" @click="getDataByCategory(category.id)"></li>
                 </ul>
                 <div class="info_lists clear">
-                    <li class="article_listLi shadow fl" v-for="list in listData" @click="showDetail(list.link)">
-                        <img v-bind:src="list.cover_url" class="article_listLi_img">
-                        <h3 class="article_listLi_title twoline" v-text="list.title"></h3>
-                        <p class="article_listLi_tab" v-text="list.create_time"></p>
+                    <li class="article_listLi shadow fl" v-for="list in listData">
+                        <a v-bind:href="[list.link]" target="_block">
+                            <img v-bind:src="list.cover_url" class="article_listLi_img">
+                            <h3 class="article_listLi_title twoline" v-text="list.title"></h3>
+                            <p class="article_listLi_tab" v-text="list.create_time"></p>
+                        </a>
                     </li>
                 </div>
                 <div class="activity_listpage">

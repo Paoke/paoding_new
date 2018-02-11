@@ -68,7 +68,7 @@
     <!-- 技术列表 -->
     <div class="section">
         <div class="project_wrap clear" v-cloak>
-            <a @click="getDetail(list.id)" v-for="list in listData">
+            <a v-bind:href="['__CONTROLLER__/tec_detail?data_id='+list.id]" v-for="list in listData" target="_block">
                 <div class="tec_option shadow fl">
                     <img class="tec_img" v-bind:src="list.cover_url" alt="" width="256" height="190">
                     <p class="tec_list_tit">{{list.title}}</p>

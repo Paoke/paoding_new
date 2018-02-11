@@ -59,7 +59,7 @@
     <!-- 需求列表 -->
     <div class="section" v-cloak>
         <div class="demand_wrap2 clear" style="margin-left:-20px;">
-            <a @click="getDetail(list.id)" v-for="list in listData">
+            <a v-bind:href="['__CONTROLLER__/demand_detail?data_id='+list.id]" v-for="list in listData" target="_block">
                 <div class="demand_part2 shadow fl">
                     <p class="demand_status2">{{ list.hzxs }}</p>
                     <p class="demand_time2">{{ list.create_time }}</p>
