@@ -112,6 +112,7 @@
     $(".ass_tab li").on("click",function(){
         var index = $(this).index();
         $(".ass_body").eq(index).show().siblings(".ass_body").hide();
+        $(this).addClass('ass_active').siblings().removeClass('ass_active');
     })
 
     var map = new BMap.Map("allmap");

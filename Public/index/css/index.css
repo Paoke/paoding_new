@@ -2706,4 +2706,10 @@
 .form_inp::-webkit-input-placeholder {font-size: 16px; color:#ccc;font-family:"微软雅黑",Helvetica;}
 .advice_text::-webkit-input-placeholder {font-size: 16px; color:#ccc;font-family:"微软雅黑",Helvetica;}
 .price_div input::-webkit-input-placeholder {font-size: 16px; color:#ccc;font-family:"微软雅黑",Helvetica;}
+.act_logo_url{
+	width: 385px;
+}
+.act_det_click{
+	margin-right: 20px;
+}
 
