@@ -16,7 +16,7 @@ class IndexController extends BaseRestController
     {
         $module=$_GET['module'];
         $ad=M("Ad");
-        $info=$ad->where("pid=".$module)->field("ad_code")->select();
+        $info=$ad->where("pid=".$module)->field("ad_code")->order('orderby desc')->select();
         $returnArr = array("result" => 0, "msg" => "频道参数错误", "code" => 402, "data" => $info);
         json_return($returnArr);
     }
