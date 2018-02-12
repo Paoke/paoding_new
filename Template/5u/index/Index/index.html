@@ -495,7 +495,7 @@
             </div>
         </a>
         <p class="apply" ng-show="status==1">立即报名</p>
-        <p class="apply" ng-show="status==0">活动已结束</p>
+        <p class="apply" ng-show="status==0">了解详情</p>
     </div>
 
     <div class="part_rec r_box fl" ng-controller="newCtrl">
@@ -504,7 +504,7 @@
         <div class="industry_news" ng-repeat="new in news">
             <a href="{{new.link}}" target="_blank">
                 <div class="news_part clear">
-                    <p class="fl news_tit" ng-cloak>{{new.title}}</p>
+                    <p class="fl news_tit oneline" ng-cloak>{{new.title}}</p>
                     <p class="fr news_time" ng-cloak>{{new.create_time | formatDate}}</p>
                 </div>
             </a>
@@ -715,13 +715,13 @@
     app.controller("demandList",function ($scope,$http){
        //需求列表
         getByCategory(1,1);
-        getByCategory(3,2);
-        getByCategory(2,3);
-        getByCategory(5,4);
-        getByCategory(7,5);
-        getByCategory(8,6);
-        getByCategory(4,7);
-        getByCategory(6,8);
+        getByCategory(4,2);
+        getByCategory(3,3);
+        getByCategory(8,4);
+        getByCategory(5,5);
+        getByCategory(9,6);
+        getByCategory(6,7);
+        getByCategory(7,8);
         function getByCategory(category_id,num) {
             var data = {
                 "page": "1",

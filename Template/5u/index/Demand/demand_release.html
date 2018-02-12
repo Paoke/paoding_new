@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
     <!--<include file="./Template/5u/common/common.html" />   上线开启-百度统计-->
 </head>
-<style>
-    ::-webkit-input-placeholder {font-size: 16px; color:#ccc;font-family:"微软雅黑",Helvetica;}
-</style>
 <body id="release_tec">
 <!-- 提交成功提示 -->
 	<div class="mask" style="display:none"></div>
@@ -24,7 +21,7 @@
 		</div>
 		<img class="success_img" src="{$Think.INDEX}/images/issue-demand-done.png" alt="">
 		<p class="success_tip">提交成功</p>	
-		<p class="success_kep">您发布的需求在审核中，<br>请保持电话畅通</p>
+		<p class="success_kep">您发布的需求再审核中，<br>请保持电话畅通</p>
 	</div>
 
 <!-- 导航开始 -->
@@ -77,9 +74,9 @@
                 </p>
 
                 <div class="areas_main clear fl" id="csd">
-                    <li class="areas_default" style="margin-left:0;margin-top:0">电子信息</li>
-                    <li class="areas_default" style="margin-top:0">先进制造</li>
-                    <li class="areas_default" style="margin-top:0">新材料</li>
+                    <li class="areas_default" style="margin-left:0;margin-top:0">新品研发</li>
+                    <li class="areas_default" style="margin-top:0">技术攻克</li>
+                    <li class="areas_default" style="margin-top:0">技术创新</li>
                 </div>
             </div>
 
@@ -112,6 +109,9 @@
                     <input type="number" placeholder="最低价" oninput="if(value.length>4)value=value.slice(0,4)"> -
                     <input type="number" placeholder="最高价" oninput="if(value.length>4)value=value.slice(0,4)">
                 </div>
+                <p class="form_p fl">
+                    <span class="form_span fr">（万）</span>
+                </p>
             </div>
 
             <div class="form_part clear">

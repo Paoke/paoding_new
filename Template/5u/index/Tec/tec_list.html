@@ -36,23 +36,24 @@
 <!-- 技术列表 -->
 <div class="section">
     <div class="project_wrap clear">
-        <div class="tec_option fl" ng-repeat="tecList in tecLists">
-            <img class="tec_img" ng-src="{{tecList.cover_url}}" alt="" width="256" height="190">
-            <p class="tec_list_tit" ng-cloak>{{ tecList.title }}</p>
-            <div class="publish_time">
-                发布于
-                <span ng-cloak>{{tecList.create_time | formatDate}}</span>
+        <a href="__MODULE__/Tec/tec_detail.html?data_id={{tecList.id}}"  ng-repeat="tecList in tecLists">
+            <div class="tec_option fl">
+                <img class="tec_img" ng-src="{{tecList.cover_url}}" alt="" width="256" height="190">
+                <p class="tec_list_tit" ng-cloak>{{ tecList.title }}</p>
+                <div class="publish_time">
+                    发布于
+                    <span ng-cloak>{{tecList.create_time | formatDate}}</span>
+                </div>
+                <div class="clear">
+                    <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
+                    <span class="tec_type fl" ng-cloak>{{tecList.yyxy}}</span>
+                </div>
+                <div class="adhi_print">
+                    <span class="adhibition" ng-cloak>{{tecList.cat_name}}</span>
+                    <span class="print" ng-cloak>{{tecList.csd}}</span>
+                </div>
             </div>
-            <div class="clear">
-                <img class="tac_icon fl" src="{$Think.INDEX}/images/tech-icon-industry.jpg" alt="">
-                <span class="tec_type fl" ng-cloak>{{tecList.yyxy}}</span>
-            </div>
-            <div class="adhi_print">
-                <span class="adhibition" ng-cloak>{{tecList.cat_name}}</span>
-                <span class="print" ng-cloak>{{tecList.csd}}</span>
-            </div>
-        </div>
-
+        </a>
     </div>
 </div>
 <include file="./Template/5u/index/public/footer.html" />

@@ -126,7 +126,7 @@
             </div>
         </div>
 
-        <div class="fr">
+        <div class="fl">
             <div class="main_right">
                 <div class="recommend_tec">
                     <span>推荐技术</span>
@@ -254,6 +254,7 @@
                 }, function errorCallback(response) {                   
                     });
             });
+
             // 获取联系方式
             $(".get_contack").on("click",function(){
                 //判断是否登录             
@@ -262,9 +263,8 @@
                    url:'/api.php/user/check_login'
                }).then(function successCallback(response) {                     
                    if(response.data.code=="400" || response.data.result==0){
-                       $(".mask").show();
-                       $(".alert").show();
-                       return false;               
+                        alert("请先登录");
+                       window.location.href = "/index.php/Index/Login/login";              
                    } else {
                         // 判断是否绑定手机号
                         $http({
