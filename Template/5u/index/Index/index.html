@@ -714,18 +714,18 @@
 
     app.controller("demandList",function ($scope,$http){
        //需求列表
-        getByCategory(6,1);
-        getByCategory(4,2);
-        getByCategory(5,3);
-        getByCategory(1,4);
-        getByCategory(8,5);
-        getByCategory(3,6);
-        getByCategory(9,7);
-        getByCategory(7,8);
+        getByCategory(1,1);
+        getByCategory(3,2);
+        getByCategory(2,3);
+        getByCategory(5,4);
+        getByCategory(7,5);
+        getByCategory(8,6);
+        getByCategory(4,7);
+        getByCategory(6,8);
         function getByCategory(category_id,num) {
             var data = {
                 "page": "1",
-                "page_num": "4",
+                "page_num": "8",
                 "order_field": "create_time",
                 "order_by": "DESC",
                 "category_id": category_id,
@@ -908,7 +908,7 @@
         // loop:true,
         pagination : '.swiper-pagination',
         paginationClickable :true,
-        autoplay:2000,
+        autoplay:5000,
         observer:true,//修改swiper自己或子元素时，自动初始化swiper
         observeParents:true//修改swiper的父元素时，自动初始化swiper
     });
@@ -922,7 +922,7 @@
 
     var Swiper2 = new Swiper('#swiper_dem', {
         paginationClickable :true,
-        autoplay: 3000,
+        autoplay: 5000,
         observer:true,//修改swiper自己或子元素时，自动初始化swiper
         observeParents:true,//修改swiper的父元素时，自动初始化swiper
         onSlideChangeStart: function(){
@@ -934,7 +934,7 @@
 
     var Swiper3 = new Swiper('#swiper_tec', {
         paginationClickable :true,
-        autoplay: 3000,
+        autoplay: 5000,
         observer:true,//修改swiper自己或子元素时，自动初始化swiper
         observeParents:true,//修改swiper的父元素时，自动初始化swiper
         onSlideChangeStart: function(){

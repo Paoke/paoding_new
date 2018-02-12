@@ -197,7 +197,7 @@ input{-webkit-tap-highlight-color: rgba(0,0,0,0);outline: none;}
 }
 .selected-link {
 	width: 70px;
-	height: 58px;
+	height: 60px;
 	color: #ff971d;
 	background: #313131;
 }
@@ -366,7 +366,7 @@ input{-webkit-tap-highlight-color: rgba(0,0,0,0);outline: none;}
 /*侧边栏*/
 #sideBar{
 	position: fixed;
-	top: 50%;
+	top: 80%;
 	right: 10px;
 	z-index: 999;
 }
