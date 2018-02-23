@@ -304,9 +304,6 @@ input{-webkit-tap-highlight-color: rgba(0,0,0,0);outline: none;}
 	width: 332px;
 	display: block;
 	margin: 44px auto 0;
-	overflow: hidden;
-
-
 }
 .links li{
 	float: left;
@@ -392,12 +389,33 @@ input{-webkit-tap-highlight-color: rgba(0,0,0,0);outline: none;}
 	height: 97px;
 	background: url(../images/sideBar1.png);
 	background-size: 100%;
-
+}
+.Bar_phone2{
+	display: none;
+	position: absolute;
+	right: -38px;
+	top: -113px;
+	color: #ff971d;
+	padding-left: 10px;
+	font-size: 14px;
+	width: 130px;
+	height: 97px;
+	background: url(../images/sideBar2.png);
+	background-size: 100%;
+}
+#foot_phone{
+	position: relative;
 }
 .Bar_phone p{
 	text-align: left;
 	margin-top: 4px;
-
+}
+.Bar_phone2 p{
+	text-align: left;
+	margin-top: 4px;
+}
+.links li:hover{
+	color: #ff971d;
 }
 .Bar_icon img{
 	vertical-align: middle;

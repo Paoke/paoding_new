@@ -98,6 +98,14 @@ $("#show_phone").on("mouseleave",function() {
    $(".Bar_phone").hide();
 });
 
+// 底部导航
+$("#foot_phone").on("mouseenter",function() {
+   $(".Bar_phone2").show();
+});
+$("#foot_phone").on("mouseleave",function() {
+   $(".Bar_phone2").hide();
+});
+
 // 回到顶部
 $("#go_top").on("click",function(){
     $("body").animate({scrollTop: 0},400);
