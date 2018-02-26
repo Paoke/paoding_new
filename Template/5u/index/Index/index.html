@@ -636,6 +636,7 @@
 <script src='{$Think.INDEX}/js/common.js'></script>
 <script src="{$Think.INDEX}/js/swiper.min.js"></script>
 <script>
+
     var app = angular.module('index',['me-lazyload']);
     app.filter('formatDate',function(){
         return function(date){
@@ -928,6 +929,9 @@
         onSlideChangeStart: function(){
             var index = Swiper2.activeIndex;
             var num = index*86;
+            if(index==7){
+                num = 586;
+            };
             $('#slide_div1').css('left',''+num+'px');
         },
     });
@@ -940,6 +944,9 @@
         onSlideChangeStart: function(){
             var index = Swiper3.activeIndex;
             var num = index*86;
+            if(index==7){
+                num = 586;
+            };
             $('#slide_div2').css('left',''+num+'px');
         }
     });
