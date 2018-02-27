@@ -192,6 +192,9 @@ class ChannelLogic extends BaseRestLogic
         if($info['xhjj']){
             $info['xhjj'] = htmlspecialchars_decode($info['xhjj']);
         }
+        if($info['jtyq']){
+            $info['jtyq'] = htmlspecialchars_decode($info['jtyq']);
+        }
         return $info ? $info : null;
     }
 
