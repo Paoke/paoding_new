@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en" ng-app="detail">
+<head>
+    <meta charset="UTF-8">
+    <title>庖丁技术</title>
+    <meta name="description" content="庖丁科技众包服务平台携手国内外先进技术科研院所、顶级技术专家，以实现科技成果市场化为核心，为企业提供快速精准的需求匹配服务，从而实现企业以及科技资源的有效对接，帮助企业实现产业技术升级，助力先进技术完成产业化发展。" />
+    <meta name="keywords" content="庖丁众包、智能技术、机械制造、健康医疗、材料科学、能源环保、生产流程优化"/>
+    <link rel="preload" href="{$Think.INDEX}/css/index.css" as="style">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/common_new.css">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
+    <link rel="stylesheet" href="{$Think.INDEX}/css/swiper.css">
+</head>
+<body style="background:#f4f4f4;" ng-controller="detailCtrl" ng-cloak>
+<include file="./Template/5u/index/public/nav.html" />
+
+<div class="section">
+    <div class="our_nav clear">
+        <p class="fl"><a href="Foot-aboutPD.html">关于庖丁</a></p>
+        <p class="fl"><a href="Foot-contackUs.html">联系我们</a></p>
+        <p class="fl"><a href="Foot-joinUs.html" class="our_active">加入我们</a></p>
+        <p class="fl"><a href="Foot-serve.html">服务协议</a></p>
+    </div>
+    <div>
+        <img src="{$Think.INDEX}/images/foot-jrwm.png"/>
+    </div>
+    <div class="padding">
+        <p class="our_tit">公司简介</p>
+        <p class="tex_ind">广东庖丁技术开发股份有限公司是广东省首批省级科研众包培育平台，隶属于中创集团。主营科技众包，实现企业技术需求与创新资源的对接，为企业解决技术难题，实现技术升级；协助高校科研院所实现技术成果产业化。通过众包模式，发挥各散乱、闲置的创新资源，包括技术成果、人才、设备等，2017年作为高技术服务领域被认定为国家级高新技术企业。中创集团拥有“众创、众扶、众包、众筹、众智、众育”共“六众平台”，庖丁作为专业科技服务平台，引进集团各公司及外部资源，在技术需求匹配的基础上，引入投资孵化、产权申请等各类服务，通过创新要素的充分利用实现创新链条。
+            庖丁技术同时运营有黑科技电商平台——丁少黑科技，丁少黑科技以黑科技内容为核心，关注全球最前沿最酷炫的智能硬件产品资讯。</p>
+
+        <p class="our_tit3">我们能给你的：</p>
+        <p class="fuli">
+            1、提供具市场竞争力的薪资待遇，给予开拓的发展空间，创业公司的快速成长氛围；<br>
+            2、提供五险一金，节日福利，每年团队体检、定期旅游和团建活动；<br>
+            3、法定假期，每月发放餐补、交通补贴和通讯补贴。<br>
+            4、管培生实习期基础补贴本科1400/月+其他补贴，研究生2500/月+其他补贴。转正待遇面谈。
+        </p>
+        <p class="our_tit3">岗位招聘</p>
+        <div class="clear">
+            <div class="fl join">
+                <p class="join_way">{{cat[0].cat_name}}</p>
+
+                <p ng-repeat="demand1 in demands1"><a href="__CONTROLLER__/jobDetail.html?data_id={{demand1.id}}">{{demand1.zhiwei}}</a></p>
+
+            </div>
+            <div class="fl join">
+                <p class="join_way">{{cat[1].cat_name}}</p>
+                <p ng-repeat="demand2 in demands2"><a href="__CONTROLLER__/jobDetail.html?data_id={{demand2.id}}">{{demand2.zhiwei}}</a></p>
+            </div>
+            <div class="fl join">
+                <p class="join_way">{{cat[2].cat_name}}</p>
+                <p ng-repeat="demand3 in demands3"><a href="__CONTROLLER__/jobDetail.html?data_id={{demand3.id}}">{{demand3.zhiwei}}</a></p>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+<include file="./Template/5u/index/public/footer.html" />
+</body>
+<script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
+<script src="{$Think.INDEX}/js/common.js"></script>
+<script src="{$Think.MOBILE}/js/angular.min.js"></script>
+<script>
+    var app = angular.module("detail",[]);
+
+    app.controller("detailCtrl",function ($scope,$http) {
+        $http({
+            method: 'GET',
+            url: '/api.php/ChannelIndex/index/action/dataList/channel/xqyqx/type/2',
+        }).then(function successCallback(response) {
+            $scope.cat = response.data.data;
+        }, function errorCallback() {
+        });
+
+        getByCategory(1,1);
+        getByCategory(2,2);
+        getByCategory(4,3);
+
+        function getByCategory(category_id,num) {
+            var data = {
+                "page": "1",
+                "page_num": "50",
+                "order_field": "create_time",
+                "order_by": "DESC",
+                "category_id": category_id,
+                "tag_id": "0",
+            };
+
+            $http({
+                method: 'POST',
+                data: data,
+                url: '/api.php/ChannelIndex/index/action/dataList/channel/xqyqx/type/1',
+                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj) {
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    }
+                    return str.join("&");
+                }
+            }).then(function successCallback(response) {
+                switch (num)
+                {
+                    case 1:
+                        $scope.demands1 = response.data.data;
+                        break;
+                    case 2:
+                        $scope.demands2 = response.data.data;
+                        break;
+                    case 3:
+                        $scope.demands3 = response.data.data;
+                        break;
+                }
+            }, function errorCallback(response) {
+            });
+        }
+    });
+</script>
+</html>

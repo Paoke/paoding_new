@@ -15,20 +15,19 @@
 
 <div class="section">
     <div class="our_nav clear">
-        <p class="fl"><a href="" class="our_active">关于庖丁</a></p>
+        <p class="fl"><a href="__MODULE__/About/about.html">关于庖丁</a></p>
         <p class="fl"><a href="__MODULE__/About/contact.html">联系我们</a></p>
         <p class="fl"><a href="__MODULE__/About/job.html">加入我们</a></p>
-        <p class="fl"><a href="__MODULE__/About/service.html">服务协议</a></p>
+        <p class="fl"><a href="" class="our_active">服务协议</a></p>
     </div>
-    <div>
-        <img src="{$Think.INDEX}/images/foot-gypd.png"/>
-    </div>
-    <div class="padding" ng-bind-html="detail|trustHtml">
+    <div class="our_serve" ng-bind-html="detail|trustHtml">
+
     </div>
 </div>
 
 <include file="./Template/5u/index/public/footer.html" />
 </body>
+
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
 <script src="{$Think.INDEX}/js/common.js"></script>
 <script src="{$Think.MOBILE}/js/angular.min.js"></script>
@@ -42,9 +41,10 @@
     });
 
     app.controller("detailCtrl",function ($scope,$http) {
+        //需求详情
         $http({
             method: 'GET',
-            url: '/api.php/Paoding/getAboutUs',
+            url: '/api.php/Paoding/getFwxy',
         }).then(function successCallback(response) {
             $scope.detail = response.data.data;
         }, function errorCallback() {

@@ -17,4 +17,25 @@ class AboutController extends BaseController
         $this->display();
     }
 
+    public function contact()
+    {
+        $this->display();
+    }
+
+    public function service()
+    {
+        $this->display();
+    }
+
+    public function job()
+    {
+        $this->display();
+    }
+
+    public function jobDetail()
+    {
+        $this->display();
+    }
+
+
 }
