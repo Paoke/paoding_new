@@ -105,6 +105,9 @@ $("#foot_phone").on("mouseenter",function() {
 $("#foot_phone").on("mouseleave",function() {
    $(".Bar_phone2").hide();
 });
+$(".Login_close").on("click",function(){
+  $(".mask").show();
+})
 
 
 // 回到顶部
