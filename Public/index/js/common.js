@@ -105,24 +105,6 @@ $("#foot_phone").on("mouseenter",function() {
 $("#foot_phone").on("mouseleave",function() {
    $(".Bar_phone2").hide();
 });
-// 服务协议
-$("#li_serve").on("click",function(){
-  $("#serve").show();
-  $(".mask").show();
-})
-$("#serve_c").on("click",function(){
-  $("#serve").hide();
-  $(".mask").hide();
-})
-// 关于我们
-$("#aboutPD").on("click",function(){
-  $("#aboutUs").show();
-  $(".mask").show();
-})
-$("#about_c").on("click",function(){
-  $("#aboutUs").hide();
-  $(".mask").hide();
-})
 
 
 // 回到顶部

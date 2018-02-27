@@ -2713,3 +2713,174 @@
 	margin-right: 20px;
 }
 
+/*2.26 页脚 关于我们样式*/
+.pad{
+	width: 1200px;
+	background: #fff;
+	padding-bottom: 60px;
+}
+#allmap{
+	width: 1200px;
+	margin: 0 auto;
+}
+.our_nav{
+	height: 80px;
+	line-height: 80px;
+	padding-left: 100px;
+	font-size: 16px;
+
+	background: #fff;
+}
+
+.our_active{
+	color: #ff971d !important;
+}
+.our_nav a{
+	color: #999;
+	margin-right: 46px;
+	cursor: pointer;
+}
+.our_tit{
+	font-size: 20px;
+	color: #333;
+	margin: 0 0 20px;
+}
+.our_tit2{
+	font-size: 18px;
+	color: #333;
+	margin: 20px 0 10px;
+}
+.our_tit3{
+	font-size: 18px;
+	color: #333;
+	margin: 20px 0 0;
+}
+.padding{
+	background: #fff;
+	padding-top: 40px;
+	padding: 40px 100px 60px;
+}
+.tex_ind{
+	text-indent: 2em;
+	color: #666;
+	font-size: 16px;
+	line-height: 1.8;
+}
+.marg_t{
+	margin-top: 20px;
+	padding-left: 60px;
+}
+.our_company{
+	font-size: 16px;
+	color: #333;
+}
+.our_list{
+	font-size: 14px;
+	color: #666;
+	margin: 8px 0;
+}
+.our_list2{
+	font-size: 14px;
+	color: #333;
+	margin: 8px 0;
+}
+.tel_em{
+	color: #ff971d;
+	margin-right: 20px;
+}
+.our_serve{
+	background: #fff;
+	text-indent: 2em;
+	padding: 0 100px;
+	line-height: 1.8;
+	padding-bottom: 60px;
+}
+.fuli{
+	margin-top: 6px;
+	line-height: 1.8;
+}
+.join{
+	font-size: 16px;
+	color: #333;
+	width: 300px;
+}
+.join .join_way{
+	color: #333;
+}
+.join p{
+	margin-top: 10px;
+}
+.join a{
+	margin-top: 10px;
+	color: #ff971d;
+	position: relative;
+	margin-left: 18px;
+}
+
+.join a:before{
+	content: "";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #ff971d;
+	border-radius: 50%;
+	top: 5px;
+	left: -18px;
+}
+.join a:hover:before{
+	background: #ff971d;
+}
+.posit{
+	font-size: 26px;
+	color: #333;
+}
+.posi_det{
+	margin-top: 30px;
+	padding-left: 20px;
+	width: 650px;
+	height: 84px;
+	background: #f3f3f3;
+}
+.posi_box{
+	color: #999;
+	width: 204px;
+	margin-top: 13px;
+}
+.posi_box span{
+	color: #333;
+}
+.send_btn{
+	margin-right: 80px;
+	margin-top: 30px;
+	width: 210px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 4px;
+	background: #ff971d;
+	cursor: pointer;
+}
+.tel_email{
+	display: none;
+	width: 290px;
+	margin-top: 30px;
+	color: #ff971d;
+	font-size: 16px;
+	line-height: 1.5;
+}
+.send_btn2{
+	display: inline-block;
+	margin-top: 30px;
+	width: 210px;
+	height: 50px;
+	text-align: center;
+	border: 1px solid #ccc;
+	line-height: 50px;
+	color: #ccc;
+	font-size: 18px;
+	border-radius: 4px;
+	background: #fff;
+}
+
