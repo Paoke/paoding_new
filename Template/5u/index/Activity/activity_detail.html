@@ -155,8 +155,8 @@
                     url:'/index.php/Mobile/Activity/like?hd_id='+data_id+'&action=1'
                 }).then(function successCallback(response) {  
                       if(response.data.code=="402"){
-                            alert("请先登录");
-                            window.location.href = "/index.php/Index/Login/login";
+                         $(".login_boxs").show();
+                         $(".mask").show();
                       } else {
                             $scope.status = 0;    
                         }                                  

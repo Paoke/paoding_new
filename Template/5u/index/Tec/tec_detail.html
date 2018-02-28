@@ -86,7 +86,7 @@
 <div class="main_wrap">
     <div class="main clear">
         <div class="fl">
-            <div class="tab">
+            <div class="tab" style="margin-top:0">
                 <div class="title">
                     <a href="#tip1">
                         <li style="color:#1e1e1e">技术讲述<div class="sideDiv"></div></li>
@@ -263,8 +263,8 @@
                    url:'/api.php/user/check_login'
                }).then(function successCallback(response) {                     
                    if(response.data.code=="400" || response.data.result==0){
-                        alert("请先登录");
-                       window.location.href = "/index.php/Index/Login/login";              
+                       $(".login_boxs").show();
+                       $(".mask").show();            
                    } else {
                         // 判断是否绑定手机号
                         $http({
@@ -283,6 +283,14 @@
                }, function errorCallback(response) {});
             });
         }); 
+
+    window.onload = function(){
+      // onload事件在加载的时候判断url,如果包含show=1显示联系方式
+        var urlStr = location.href; 
+          if (urlStr.indexOf('show=1') > -1 && urlStr.indexOf('show=1')!='') { 
+             getContackWay();
+          };       
+    };
 
     function getContackWay(){
         $(".get_contack").hide();

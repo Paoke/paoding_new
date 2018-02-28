@@ -15,25 +15,24 @@
 <!-- 导航开始 -->
 <include file="./Template/5u/index/public/nav.html"/>
 
-<div class="login_box" style="height:380px">
+<div class="login_box">
     <div class="clear">
-        <a href="__MODULE__/Register/register.html">
-            <p class="log_top fl">
-                注册
+        <div class="clear">
+            <p class="log_top log_select fl">
+                  重设密码
             </p>
-        </a>
-        <a href="login.html">
-            <p class="log_top fl log_select">
-                重设密码
-            </p>
-        </a>
+           
+            <p class="log_top2 fl" style="margin-left:250px;">
+               密码想起了？ <a href="__MODULE__/Register/register.html">去登录</a>
+            </p>            
+        </div>
     </div>
 
     <div class="login_cl clear">
         <input class="log_input fl" type="text" placeholder="手机">
-        <div class="login_r fl clear">
+<!--         <div class="login_r fl clear">
             <img class="te_status fl" src="{$Think.INDEX}/images/login-right.png" alt="">
-        </div>
+        </div> -->
     </div>
 
     <div class="login_cl clear">
@@ -53,7 +52,7 @@
                     </div> -->
     </div>
 
-
+    <!-- <p class="wrong_refl">密码不能为空</p> -->
     <div class="reg_btn">确定</div>
 </div>
 </body>

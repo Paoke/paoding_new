@@ -17,26 +17,23 @@
 
 <form id="formID">
     <div class="login_box">
-    <div class="clear">
-        <a href="__MODULE__/Register/register">
+        <div class="clear">
             <p class="log_top log_select fl">
                 注册
             </p>
-        </a>
-        <a href="__MODULE__/Login/login">
-            <p class="log_top fl">
-                登&nbsp;录
-            </p>
-        </a>
-    </div>
+           
+            <p class="log_top2 fl">
+               已有账号? <a href="__MODULE__/Login/login">去登录</a>
+            </p>            
+        </div>
 
-    <div class="login_cl clear">
-        <input class="log_input fl" type="text" placeholder="手机号" id="mobile" name="mobile">
-<!--         <div class="login_r fl clear">
-            <img class="te_status fl" src="{$Think.INDEX}/images/login-right.png" alt="">
-            <p class="te_word fl">请输入正确的手机号</p>
-        </div> -->
-    </div>
+        <div class="login_cl clear">
+            <input class="log_input fl" type="text" placeholder="手机号" id="mobile" name="mobile">
+    <!--         <div class="login_r fl clear">
+                <img class="te_status fl" src="{$Think.INDEX}/images/login-right.png" alt="">
+                <p class="te_word fl">请输入正确的手机号</p>
+            </div> -->
+        </div>
 
     <div class="login_cl clear">
         <input class="msg_input fl" type="text" placeholder="短信验证码" name="code" id="code">
@@ -67,6 +64,7 @@
         <div class="fl regist_tip_icon2"></div>
         <p class="fl agree_tip"><span>我已阅读并同意</span><span>《用户注册协议》</span></p>
     </div>
+    <!-- <p class="wrong_refl">密码不能为空</p> -->
     <div class="reg_btn">注册</div>
 </div>
 </form>
@@ -190,17 +188,20 @@
             });
 
             if( data['password']=="" || data['code']=="" || data['nickname']=="" || data['mobile']=="" ){
-                alert("请完善信息再注册");
+                tip_ct = "请完善信息再注册";
+                tips.addtips(tip_ct);
                 return false;
             }
 
             if(!regPsw.test(data['password'])){
-                alert("密码不少于6位数");
+                tip_ct = "密码不少于6位数";
+                tips.addtips(tip_ct);
                 return false;
             }
 
             if(!regName.test(data['nickname'])){
-                alert("昵称只能输入中文和英文");
+                tip_ct = "昵称只能输入中文和英文";
+                tips.addtips(tip_ct);
                 return false;
             }
 
@@ -219,7 +220,8 @@
             }).then(function successCallback(response) {
 
                 if(response.data.result == '1'){
-                    alert('注册成功');
+                    tip_ct = "注册成功";
+                    tips.addtips(tip_ct);
                     window.location.href="/index.php/Index/Index/index.html";
                 }else{
                     alert(response.data.msg);

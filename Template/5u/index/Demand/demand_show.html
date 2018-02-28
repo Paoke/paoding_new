@@ -39,14 +39,14 @@
 <section id="template">
     <div class="section" style="margin-top:0">
         <div class="sub_class clear">
-            <p class="sub_p fl">技术类型：</p>
+            <p class="sub_p fl">需求类型：</p>
             <ul class="sub_list fr">
                 <li class="subnav_selected" @click="getfield(0)">全部</li>
                 <li v-for="tag in tagData" v-text="tag.tag_name" v-bind:id="tag.id" @click="getDataByTag(tag.id)"></li>
             </ul>
         </div>
         <div class="sub_class clear" style="border-top:none;">
-            <p class="sub_p fl" style="border-bottom:none;">技术领域：</p>
+            <p class="sub_p fl" style="border-bottom:none;">需求领域：</p>
             <ul class="sub_list fr">
                 <li class="subnav_selected" @click="getJump(0)">全部</li>
                 <li v-for="category in categoryData" v-text="category.cat_name" v-bind:id="category.id" @click="getDataByCategory(category.id)"></li>

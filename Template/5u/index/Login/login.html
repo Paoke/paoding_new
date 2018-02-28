@@ -14,47 +14,122 @@
 </head>
 <body class="login_bg" ng-controller="myLogin">
 <!-- 导航开始 -->
-<include file="./Template/5u/index/public/nav.html"/>
+<div class="nav_wrap">
+    <div class="nav">
+        <a href="/index.php/Pc/Index/index" class="head_logo"><img style="padding-top: 12px;" src="{$Think.INDEX}/images/icon-logo.png"/></a>
+        <ul class="navigation-list ul-reset" id="ul_a">
+            <li class="navigation-item ib" >
+                <a href="__MODULE__/Index/index.html" class='navigation-link' id="first">
+                    首页
+                </a>
+            </li>
+            <li class="navigation-item ib">
+                <a href="__MODULE__/Tec/tec_show.html" class='navigation-link'>
+                    技术
+                </a>
+            </li>
+            <li class="navigation-item ib">
+                <a href="__MODULE__/Demand/demand_show.html" class='navigation-link'>
+                    需求
+                </a>
+            </li>
+            <li class="navigation-item ib">
+                <a href="__MODULE__/Partner/partner_show.html" class='navigation-link'>
+                    机构
+                </a>
+            </li>
+            <li class="navigation-item ib">
+                <a href="__MODULE__/Activity/activity_show.html" class='navigation-link'>
+                    活动
+                </a>
+            </li>
+            <li class="navigation-item ib">
+                <a href="__MODULE__/News/news_index.html" class='navigation-link'>
+                    资讯
+                </a>
+            </li>
+        </ul>
 
-<div class="login_box" style="height:354px;">
+        <ul class="head_nav_right">
+            <li class="head_navLi head_searchLI">
+                <form action="/index.php/Pc/Index/search">
+                    <div class="head_search">
+                        <input class="head_input" type="text" name="keyword" id="" value="" placeholder="请输入您要搜索的内容"/>
+                    </div>
+                    <input class="head_searchImg" type="submit" name="" id="" value="" />
+                    <!-- <input type="hidden" name="__hash__" value="6666cd76f96956469e7be39d750cc7d9_72ed499d77763a6da7ba469131b0b843" /> -->
+                </form>
+            </li>
+            <li class="head_navLi">
+                <div id="wechatModal" class="wechat-modal">
+                    <img src="{$Think.INDEX}/images/icon-fbxq.png"/>
+                </div>
+                <a href="__MODULE__/Demand/demand_release.html" class="modal-wechat">发布需求</a>
+            </li>
+            <li class="head_navLi">
+                <div id="wechatModal" class="wechat-modal">
+                    <img src="{$Think.INDEX}/images/icon-fbjs.png"/>
+                </div>
+                <a href="__MODULE__/Tec/tec_release.html" class="modal-wechat">发布技术</a>
+            </li>
+            <if condition="session('userArr') neq null" >
+                <li id="user_dropdown">
+                    <div class="nav_head">
+                        <img src="{:session('headPic')}" alt="">
+                    </div>
+                    <ul class="nav_user">
+                        <a href="__MODULE__/User/user_demand.html"><li>我的需求</li></a>
+                        <a href="__MODULE__/User/user_tec.html"><li>我的技术</li></a>
+                        <a href="__MODULE__/User/user_msg.html"><li>我的消息</li></a>
+                        <a href="__MODULE__/User/user_collect.html"><li>我的收藏</li></a>
+                        <a href="__MODULE__/User/user_project.html"><li>对接项目</li></a>
+                        <a href="__MODULE__/User/user_info.html"><li>个人资料</li></a>
+                        <a id="logout"><li>退出登录</li></a>
+                    </ul>
+                </li>
+                <else />
+            <li class="head_navLi head_user">
+                <div id="wechatModal" class="wechat-modal">
+                    <img src="{$Think.INDEX}/images/icon-dl-jg.png"/>
+                </div>
+                <a href="__MODULE__/Login/login" class="head_login " style="color:#ff971d;">登录</a>
+            </li>
+            </if>
+        </ul>
+    </div>
+</div>
+
+<div class="login_box">
     <div class="clear">
-        <a href="__MODULE__/Register/register.html">
-            <p class="log_top fl">
-                注册
-            </p>
-        </a>
-        <a href="login.html">
-            <p class="log_top log_select fl">
-                登&nbsp;录
-            </p>
-        </a>
+        <p class="log_top log_select fl">
+            用户登录
+        </p>
+       
+        <p class="log_top2 fl" style="margin-left:250px;">
+           还没账号? <a href="__MODULE__/Register/register.html">马上注册</a>
+        </p>        
     </div>
 
     <form id="formID">
-        <div class="clear">
-        <div class="code_div fl">
-            <img class="code_pic" src="{$Think.INDEX}/images/login-wechat.png" alt="">
-            <p class="wechat_login" onclick="WeChatLogin();">微信登录</p>
-        </div>
+        <img class="code_pic" src="{$Think.INDEX}/images/login-wechat.png" alt=""  onclick="WeChatLogin()">
+        <div class="clear">            
+            <div class="login_part fl">
+                <input class="log_input" type="text" placeholder="手机" id="mobile" name="mobile">
 
-        <div class="login_part fl">
-            <p class="or">或</p>
-            <input class="log_input" type="text" placeholder="手机" id="mobile" name="mobile">
+                <input class="log_input mar_t" type="password" placeholder="密码" id="password" name="password">
 
-            <input class="log_input mar_t" type="password" placeholder="密码" id="password" name="password">
-
-            <div class="login_bottom clear">
-                <div class="wrong_tip">
-                    <div class="fl regist_tip_icon1"></div>
-                    <p class="fl agree_tip2"><span>手机或密码错误</span></p>
-                </div>
-               <a href="__CONTROLLER__/forget_psw.html"><p class="fr forget_psw">忘记密码</p></a>
+                <div class="login_bottom clear">
+                    <input type="checkbox" value="remember-me" v-model="rememberPassword" id="remember-password-checkbox" v-on:click="doRememberPassword($event)">  
+                    <label for="remember-password-checkbox">  
+                        记住密码
+                    </label> 
+                   <a href="__CONTROLLER__/forget_psw.html"><p class="fr forget_psw">找回密码</p></a>
+                </div> 
             </div>
-
-            <div class="login_btn">登&nbsp;录</div>
         </div>
-    </div>
     </form>
+    <!-- <p class="wrong_refl">密码不能为空</p> -->
+    <div class="reg_btn">登&nbsp;录</div>
 </div>
 </body>
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
@@ -64,7 +139,7 @@
     var url_ref = document.referrer;
     var app = angular.module('login', []);
     app.controller('myLogin', function ($scope,$http) {
-        $(".login_btn").on("click",function() {
+        $(".reg_btn").on("click",function() {
             var mobile = $("#mobile").val();
             var password=$("#password").val();
             var data={'mobile':mobile,'password':password};
@@ -83,7 +158,9 @@
             }).then(function successCallback(response) {
                 if (response.data.result == 1) {
                     tip_ct = "登录成功";
+                    // 拼接&show=1',传到上一页面，当URL中含有这个字段时显示联系方式
                     tip_url = url_ref;
+                    // tip_url = url_ref+'&show=1';
                     tips.addtips(tip_ct, tip_url);
                 } else {
                     $(".wrong_tip").show();

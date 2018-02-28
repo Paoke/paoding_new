@@ -99,15 +99,17 @@ $("#show_phone").on("mouseleave",function() {
 });
 
 // 底部导航
-$("#foot_phone").on("mouseenter",function() {
-   $(".Bar_phone2").show();
-});
-$("#foot_phone").on("mouseleave",function() {
-   $(".Bar_phone2").hide();
-});
+// $("#foot_phone").on("mouseenter",function() {
+//    $(".Bar_phone2").show();
+// });
+// $("#foot_phone").on("mouseleave",function() {
+//    $(".Bar_phone2").hide();
+// });
 $(".Login_close").on("click",function(){
-  $(".mask").show();
-})
+  $(".mask").hide();
+  $(".login_boxs").hide();
+});
+
 
 
 // 回到顶部
@@ -164,8 +166,7 @@ $("#logout").on("click",function() {
     $.ajax({
         url: '/api.php/User/logout',
         type: 'GET',
-    });
-    alert("退出成功");
+    });   
     window.location.href="/index.php/index/index/index.html";
 });
 
