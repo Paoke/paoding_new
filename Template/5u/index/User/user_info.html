@@ -28,8 +28,8 @@
             </div>
             <p class="user_name">{:session('nickName')}</p>
             <if condition="$Think.session.status eq 0">
-                <div class="user_sta">
-                    <img class="user_status" src="{$Think.INDEX}/images/my-apply.png" alt="">
+                <div class="user_sta" style="background:#1e1e1e;">
+                    <img class="user_status" src="{$Think.INDEX}/images/my-authenticated.png" alt="">
                     <span class="user_status_w">合格认证</span>
                 </div>
                 <elseif condition="$Think.session.status eq 1"/>

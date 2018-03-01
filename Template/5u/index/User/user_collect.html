@@ -72,6 +72,11 @@
 
         <!-- 技术 -->
         <div class="tab_colbody" style="display:block">
+            <!-- 空现象 -->
+            <div ng-show="tecStatus == 0" class="sky_div">
+                <img src="{$Think.INDEX}/images/my-empty.png" alt="">
+                <p>您目前没有任何技术收藏,<span><u><a href="/Index/Tec/tec_show.html">马上看项目...</a></u></span></p>
+            </div>
             <div class="col_option clear" ng-repeat="tecList in tecLists">
                 <div class="fl">
                     <img class="col_img" ng-src="{{tecList.cover_url}}" alt="">
@@ -96,6 +101,11 @@
 
         <!-- 需求 -->
         <div class="tab_colbody">
+            <!-- 空现象 -->
+            <div ng-show="DemStatus == 0" class="sky_div">
+                <img src="{$Think.INDEX}/images/my-empty.png" alt="">
+                <p>您目前没有任何需求收藏,<span><u><a href="/Index/Demand/demand_show.html">马上看项目...</a></u></span></p>
+            </div>
             <div class="col_dem" ng-repeat="demandList in demandLists">
                 <div class="clear">
                     <p class="dem_sta fl">{{demandList.hzxs}}</p>
@@ -107,6 +117,11 @@
 
         <!-- 活动 -->
         <div class="tab_colbody">
+            <!-- 空现象 -->
+            <div ng-show="ActStatus == 0" class="sky_div">
+                <img src="{$Think.INDEX}/images/my-empty.png" alt="">
+                <p>您目前没有任何活动收藏,<span><u><a href="/Index/Activity/activity_show.html">马上去看...</a></u></span></p>
+            </div>
             <div class="col_option clear" ng-repeat="activityList in activityLists">
                 <div class="fl">
                     <img class="col_img" ng-src="{{activityList.sponsor_logo_url}}" alt="">
@@ -135,6 +150,11 @@
 
         <!-- 单位 -->
         <div class="tab_colbody">
+            <!-- 空现象 -->
+            <div ng-show="ComStatus == 0" class="sky_div">
+                <img src="{$Think.INDEX}/images/my-empty.png" alt="">
+                <p>您目前没有任何单位收藏,<span><u><a href="/Index/Partner/partner_show.html">马上去看...</a></u></span></p>
+            </div>
             <div class="col_option clear" ng-repeat="assoList in assoLists">
                 <div class="fl">
                     <img class="coor_img" ng-src="{{assoList.cover_url}}" alt="">

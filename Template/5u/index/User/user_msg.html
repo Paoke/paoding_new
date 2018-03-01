@@ -49,12 +49,13 @@
     </div>
 
     <div class="user_detail fl" >
-        <div class="user_det_ct margL" style="border:none;height:960px;">
+        <div class="user_det_ct margL" style="border:none;height:auto;">
             <p class="get_msg">收到信息<span>(1)</span></p>
             <div class="msg_list">
                 <div class="msg_part clear" ng-repeat="msg in msgs">
                     <div class="msg_pic fl">
-                        <img src="{$Think.INDEX}/images/my-message1.png" alt="">
+                        <img src="{$Think.INDEX}/images/my-message1.png" alt="" id="notRead_icon">
+                        <img src="{$Think.INDEX}/images/my-message.png" alt="" style="display:none;" id="readed_icon">
                     </div>
                     <div class="msg_part_r fl">
                         <p class="sys_tip">系统提示：</p>
@@ -95,6 +96,13 @@
             }
         }).then(function successCallback(response) {
             $scope.msgs = response.data.data.info;
+        });
+
+
+        $(".msg_list").on("click",".readed",function(){
+            $(this).hide();
+            $(this).siblings('.msg_pic').find("#notRead_icon").hide();
+            $(this).siblings('.msg_pic').find("#readed_icon").show();
         });
     });
 </script>

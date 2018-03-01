@@ -79,7 +79,7 @@
             <div class="ec-sign">
 
                 <a href='__CONTROLLER__/activity_release.html?data_id={{list.id}}' class="sign-btn" title="立即报名" ng-show="list.status == 1">立即报名</a>
-                <a  class="sign-btn"  ng-show="list.status == 0">活动已结束</a>
+                <a  href='__CONTROLLER__/activity_detail.html?data_id={{list.id}}' class="sign-btn"  ng-show="list.status == 0" style="background:#ccc">了解详情</a>
             </div>
         </div>
     </div>
