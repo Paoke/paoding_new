@@ -699,7 +699,7 @@
 	margin: 40px auto 0;
 	text-align: center;
 	line-height: 50px;
-	background-color: #ccc;
+	background-color: #ff971d;
 	border-radius: 4px;
 	color: #fff;
 	font-size: 18px;
@@ -2919,3 +2919,53 @@
 	cursor: pointer;
 }
 
+.success{
+	width: 900px;
+	background: #fff;
+	margin: 40px auto 0;
+	padding-bottom: 40px;
+}
+.suc_tit{
+	background: #ff971d;
+	text-align: center;
+	line-height: 80px;
+	height: 80px;
+	font-size: 28px;
+	color: #fff;
+}
+.suc_mid{
+	text-align: center;
+	margin: 60px auto 0;
+	width: 472px;
+	border: 1px solid #efefef;
+	padding: 30px 0;
+}
+.cgt{
+	margin: 26px 0 20px;
+	font-size: 22px;
+	color: #1e1e1e;
+}
+.know_more{
+	font-size: 12px;
+	color: #999;
+	margin-top: 20px;
+}
+.success a{
+	display: inline-block;
+	width: 140px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color: #fff;
+	border-radius: 4px;
+	background: #ff971d;
+	font-size: 14px;
+}
+.suc_bot{
+	margin: 70px auto 0;
+	width: 472px;
+	text-align: center;
+}
+.go_act{
+	margin-left: 30px;
+}

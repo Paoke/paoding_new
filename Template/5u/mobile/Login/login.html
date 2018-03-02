@@ -77,7 +77,8 @@
             if(response.data.result==1){
                 tip_ct = "登录成功";
                 // 拼接&show=1',传到上一页面，当URL中含有这个字段时显示联系方式
-                tip_url = url_ref+'&show=1';
+                // tip_url = url_ref+'&show=1';
+                tip_url = url_ref;
                 tips.addtips(tip_ct,tip_url);
             }else{
                 tip_ct = "登录失败";                

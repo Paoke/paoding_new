@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{$Think.INDEX}/css/index.css">
     <!--<include file="./Template/5u/common/common.html" />   上线开启-百度统计-->
 </head>
-<body>
+<body style="background:#f4f4f4">
 <!-- 提交成功提示 -->
 	<div class="mask" style="display:none;"></div>
 	<div class="alert_tip" style="display:none;">
@@ -35,28 +35,28 @@
                 <p class="form_p_sh fl">
                     *<span class="form_span_short">姓名：</span>
                 </p>
-                <input type="text" class="form_inp fl" name="name" placeholder="请输入您的真实姓名">
+                <input type="text" class="form_inp fl" name="name" placeholder="请输入您的真实姓名" maxlength="20" onkeyup="value=value.replace(/[^\w\u4E00-\u9FA5]/g, '')">
             </div>
 
             <div class="form_part clear">
                 <p class="form_p_sh fl">
                     *<span class="form_span_short">手机：</span>
                 </p>
-                <input type="text" class="form_inp fl" name="mobile" placeholder="请输入您的手机号码">
+                <input type="text" class="form_inp fl" name="mobile" placeholder="请输入您的手机号码" id="mobile" maxlength="11">
             </div>
 
             <div class="form_part clear">
                 <p class="form_p_sh fl">
                     *<span class="form_span_short">公司：</span>
                 </p>
-                <input type="text" class="form_inp fl" name="company" placeholder="请输入公司名称">
+                <input type="text" class="form_inp fl" name="company" placeholder="请输入公司名称" maxlength="20">
             </div>
 
             <div class="form_part clear">
                 <p class="form_p_sh fl">
                     *<span class="form_span_short">职务：</span>
                 </p>
-                <input type="text" class="form_inp fl" name="job" placeholder="请输入您所在公司职务">
+                <input type="text" class="form_inp fl" name="job" placeholder="请输入您所在公司职务" maxlength="10">
             </div>
 
             <div class="form_part clear">
@@ -79,21 +79,21 @@
                 <p class="form_p fl">
                     *<span class="form_span">业务范围：</span>
                 </p>
-                <input type="text" class="form_inp fl" placeholder="请输入贵公司业务范围" name="ywfw">
+                <input type="text" class="form_inp fl" placeholder="请输入贵公司业务范围" name="ywfw" maxlength="200">
             </div>
 
             <div class="form_part clear">
                 <p class="form_p fl">
                     *<span class="form_span">研究方向：</span>
                 </p>
-                <input type="text" class="form_inp fl" placeholder="请输入您本人的研究方向" name="js">
+                <input type="text" class="form_inp fl" placeholder="请输入您本人的研究方向" name="js"  maxlength="200">
             </div>
 
             <div class="form_part clear">
                 <p class="form_p fl">
                     *<span class="form_span">对接需求：</span>
                 </p>
-                <input type="text" class="form_inp fl" placeholder="请输入您希望对接的技术或需求" name="xq">
+                <input type="text" class="form_inp fl" placeholder="请输入您希望对接的技术或需求" name="xq" maxlength="200">
             </div>
 
 <!--             <div class="form_part clear">
@@ -108,29 +108,71 @@
         </div>
     </div>
 </form>
+
+<!-- 报名成功 -->
+<div class="success" style="display:none">
+    <p class="suc_tit">活动报名成功</p>
+    <div class="suc_mid">
+        <img src="{$Think.INDEX}/images/pic-hdbmcg.png" alt="">
+        <p class="cgt">恭喜您，活动报名成功！</p>
+        <img src="{$Think.INDEX}/images/pic-ewm-bmcg.png" alt="">
+        <p class="know_more">了解更多技术需求信息，扫描二维码关注庖丁众包公众号获取</p>
+    </div>
+    <div class="suc_bot">
+        <a href="/Index/index.html">去首页</a>
+        <a href="/Index/Activity/activity_show.html" class="go_act">其他活动</a>
+    </div>
+
+</div>
 <!-- 页脚 -->
 <include file="./Template/5u/index/public/footer.html" />
 </body>
 <script src="{$Think.INDEX}/js/jquery-3.0.0.min.js"></script>
 <script src="{$Think.INDEX}/js/common.js"></script>
 <script>
-    $(".areas_default").on("click",function(){
-        $(this).addClass('areas_selected').removeClass('areas_default').siblings().addClass('areas_default').removeClass('areas_selected');
+    // $(".areas_default").on("click",function(){
+    //     $(this).addClass('areas_selected').removeClass('areas_default').siblings().addClass('areas_default').removeClass('areas_selected');
+    // });
+// 需求领域  限制可选3个
+    $(".areas_main li").on("click",function(){
+        var count = $(".areas_selected").length;
+        if(count==3){
+            $(this).addClass('areas_default').removeClass('areas_selected');
+            return false;
+        }
+        else if($(this).hasClass('areas_default')){
+            $(this).addClass('areas_selected').removeClass('areas_default');
+        }
+        else{
+            $(this).addClass('areas_default').removeClass('areas_selected');
+        }
     });
 
     var lingyu_html;
     var hd_id = GetQueryString('data_id');
     var data = {};
+
     $(".submit").on("click",function(){
+        var regTel = /^[1][3,4,5,7,8][0-9]{9}$/;
+        mobile = $('#mobile').val();
         var li = $(".areas_main li"); 
         var count = $(".areas_selected").length; 
-        for(var j = 0 ;j < $(".enter_ip").length;j++){           
-            if($(".enter_ip").eq(j).val()==""){
-               $(".enter_ip").eq(j).focus();
+        for(var j = 0 ;j < $(".form_inp").length;j++){           
+            if($(".form_inp").eq(j).val()==""){
+               $(".form_inp").eq(j).focus();
                tip_ct = "请填写完毕再提交";
                tips.addtips(tip_ct);
+               return false;
             }
         };
+
+        // 验证手机
+        if(!regTel.test(mobile)){
+         tip_ct = "请输入正确的手机号码";
+         tips.addtips(tip_ct);
+         return false;
+        }
+
         // 关注领域选中状态
         var li = $(".areas_main li");        
         for(var i = 0;i < li.length ; i++){
@@ -141,6 +183,7 @@
         if(count < 1){
             tip_ct = "请选择关注领域";
             tips.addtips(tip_ct);
+            return false;
         }
         else{
             var t = $("#formID").serializeArray();
@@ -157,8 +200,8 @@
                 dataType:'json',
                 success:function(res) {
                     if(res.result == 1){
-                        tip_ct = "活动报名 成功";
-                        tips.addtips(tip_ct);
+                       $("#formID").hide();
+                       $(".success").show();
                     }
                 }
             })
