@@ -40,7 +40,7 @@
             <div class="act_details_icon icon_time fl"></div>
             <div class="act_details_head_ct fr">
                 <p class="act_section_ct" ng-cloak>
-                    {{details.formal_start_time}}
+                    {{details.formal_start_time}}—{{details.formal_end_time}}
                 </p>
             </div>
         </div>
@@ -109,7 +109,7 @@
             <img class="return_icon" src="{$Think.MOBILE}/images/icon-common-return.png" alt="">
         </a>
         <img class="act_love_icon" src="{$Think.MOBILE}/images/icon-activity-collect-default.png" alt="">
-        <a class="act_det_btn" id="act_det_btn" ng-show="status == 1" href="/index.php/Mobile/Activity/enter?">
+        <a class="act_det_btn" id="act_det_btn" ng-show="status == 1">
             立即报名
         </a>
         <a class="act_det_btn" style="background:#999;" ng-show="status == 0">
@@ -180,7 +180,7 @@
                      }).then(function successCallback(response) {                  
                          // 已经绑定
                          if(response.data.result==1){      
-                            window.location.href = 'http://www.paoding.cc/index.php/Mobile/Activity/enter.html?data_id='+data_id;
+                            window.location.href = '/index.php/Mobile/Activity/enter.html?data_id='+data_id;
                          // 没有绑定
                          }else{
                              window.location.href="/index.php/Mobile/User/binding.html";
