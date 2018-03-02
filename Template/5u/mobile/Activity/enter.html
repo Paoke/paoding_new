@@ -139,6 +139,7 @@
 
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
+<script src='{$Think.MOBILE}/js/common.js'></script>
 <script>   
     var lingyu_html;
     var hd_id = GetQueryString('data_id');
@@ -180,7 +181,7 @@
                 data:data,
                 dataType:'json',
                 success:function(res) {
-                    if(res.result == 1){
+                    if(res.result == 1 || res.code == 402){
                         $(".identify_tip2").show();
                         $(".mask").show();
                         return false;
