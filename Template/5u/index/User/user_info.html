@@ -131,6 +131,14 @@
 <script src="{$Think.INDEX}/js/common.js"></script>
 <script src="{$Think.MOBILE}/js/angular.min.js"></script>
 <script>
+    var urlStr = location.href; 
+    console.log(urlStr);
+      if (urlStr.indexOf('authen') > -1 && urlStr.indexOf('authen')!='') {
+          $(".col_btn").click();
+      } else {  
+            return;
+      }
+ 
 
     var app = angular.module("user_info",[]);
     app.controller("infoCtrl",function ($scope,$http){
@@ -160,6 +168,7 @@
     $(".confirm").on("click",function(){
         tip_ct = "修改成功";
         tips.addtips(tip_ct);
-    })
+    });
+
 </script>
 </html>
