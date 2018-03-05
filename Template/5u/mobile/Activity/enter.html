@@ -174,7 +174,7 @@
             });
             data['hd_id'] = hd_id;
             data['lingyu'] = lingyu_html;
-            data['user_id'] = $("#userId").val();
+            data['user_id'] = $("#user_id").val();
             $.ajax({
                 type:'post',
                 url:'/index.php/Mobile/Activity/enter',
@@ -189,7 +189,6 @@
                 }
             })
         }
-
     })
 
     // 需求领域  限制可选3个
