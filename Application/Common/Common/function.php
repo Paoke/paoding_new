@@ -1004,7 +1004,7 @@ function wechat_notify_url(){
 function sendNotice($content,$userid)
 {
     if($userid==''){
-        $data['user_id']=$_SESSION['userId'];
+        $data['user_id']=$_SESSION["userArr"]["user_id"];
     }else{
         $data['user_id']=$userid;
     }

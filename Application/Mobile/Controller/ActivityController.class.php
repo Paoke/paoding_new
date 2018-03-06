@@ -114,6 +114,20 @@ class ActivityController extends BaseController
 
     }
 
+    //检测是否报名过
+    public function check_enter()
+    {
+        $hd_id=$_GET['data_id'];
+        $count = M('activity_order_hd')->where('hd_id=' . $hd_id .' and user_id='.$_SESSION["userArr"]["user_id"])->count();
+        if($count){
+            $returnArr = array("result" => 1, "msg" => "已报名", "code" => 200);
+        }else{
+            $returnArr = array("result" => 0, "msg" => "未报名", "code" => 402);
+        }
+        json_return($returnArr);
+    }
+
+
 
     /*
         * 数据列表
