@@ -45,11 +45,11 @@ class ActivityController extends BaseController
             $returnArr = array("result" => 0, "msg" => "请先登录", "code" => 402);
         } else {
             if ($action == '1') {
-                $data['user_id'] = $_SESSION['userId'];
+                $data['user_id'] = $_SESSION["userArr"]["user_id"];
                 $data['hd_id'] = $hd_id;
                 M('activity_user_relation_hd')->add($data);
             } else {
-                M('activity_user_relation_hd')->where('user_id=' . $_SESSION['userId'] . ' and hd_id=' . $hd_id)->delete();
+                M('activity_user_relation_hd')->where('user_id=' . $_SESSION["userArr"]["user_id"] . ' and hd_id=' . $hd_id)->delete();
             }
             $returnArr = array("result" => 1, "msg" => "操作成功", "code" => 200);
 
@@ -91,7 +91,7 @@ class ActivityController extends BaseController
                 $returnArr = array("result" => 0, "msg" => "请先登录", "code" => 402);
             } else {
                 $data = I('post.');
-                $data['user_id'] = $_SESSION['userId'];
+                $data['user_id'] = $_SESSION["userArr"]["user_id"];
                 $data['add_time'] = date("Y-m-d H:i:s");
                 $result = M('activity_order_hd')->add($data);
                 if ($result) {
