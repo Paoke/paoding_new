@@ -115,16 +115,33 @@
         <a class="act_det_btn" style="background:#999;" ng-show="status == 0">
             活动已结束
         </a>
+        <a class="act_det_btn" style="background:#999;"  ng-show="status == 2">
+            已报名
+        </a>
     </div>
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
 <script src="{$Think.MOBILE}/js/angular.min.js"></script>
 <script>
-    var action = 0;
+    var action = 0;   
     var data_id = GetQueryString('data_id');  
-
     var app = angular.module("detail",[]);
     app.controller("detailCtrl",function ($scope,$http){
+
+        // 判断是否已经报名       
+        $http({
+            method:'GET', 
+            params:{data_id:data_id},
+            url:'/index.php/Mobile/Activity/check_enter'
+        }).then(function successCallback(response) {                    
+                if (response.data.result == "1") {  //已报名
+                     $scope.status = 2;
+                } else {  
+                   $scope.status = 1;
+                }
+            }, function errorCallback(response) {                   
+            });
+
         $http({
             method:"GET",
             params:{data_id:data_id},
@@ -202,9 +219,9 @@
                   } else {
                        // 如果未收藏
                         if (action == 0) {                            
-                            $(".act_love_icon").attr("src","{$Think.MOBILE}/images/icon-activity-collect-default.png");                            
+                            $(".act_love_icon").attr("src","{$Think.MOBILE}/images/icon-activity-collect-default.png");
                         } else {
-                             $(".act_love_icon").attr("src","{$Think.MOBILE}/images/icon-activity-collect-active.png");                             
+                             $(".act_love_icon").attr("src","{$Think.MOBILE}/images/icon-activity-collect-active.png");
                         };
 
                   }
