@@ -40,7 +40,7 @@
             <div class="act_details_icon icon_time fl"></div>
             <div class="act_details_head_ct fr">
                 <p class="act_section_ct" ng-cloak>
-                    {{details.formal_start_time}}—{{details.formal_end_time}}
+                    {{details.formal_start_time | formatDate}} —— {{details.formal_end_time | formatDate}}
                 </p>
             </div>
         </div>
@@ -126,21 +126,13 @@
     var action = 0;   
     var data_id = GetQueryString('data_id');  
     var app = angular.module("detail",[]);
+    app.filter('formatDate',function(){
+        return function(date){
+            return date = date.substr(0,16);
+        };
+    });
     app.controller("detailCtrl",function ($scope,$http){
 
-        // 判断是否已经报名       
-        $http({
-            method:'GET', 
-            params:{data_id:data_id},
-            url:'/index.php/Mobile/Activity/check_enter'
-        }).then(function successCallback(response) {                    
-                if (response.data.result == "1") {  //已报名
-                     $scope.status = 2;
-                } else {  
-                   $scope.status = 1;
-                }
-            }, function errorCallback(response) {                   
-            });
 
         $http({
             method:"GET",
@@ -159,6 +151,24 @@
                 }
             }, function errorCallback(response) {
             });
+
+        // 判断活动是否已经结束
+        if( $scope.status == 0 ){
+            // 判断是否已经报名       
+            $http({
+                method:'GET', 
+                params:{data_id:data_id},
+                url:'/index.php/Mobile/Activity/check_enter'
+            }).then(function successCallback(response) {                    
+                    if (response.data.result == "1") {  //已报名
+                         $scope.status = 2;
+                    } else {  
+                       $scope.status = 0;
+                    }
+                }, function errorCallback(response) {                   
+                });
+        }
+
 
         // 判断本技术是否已经收藏
         $http({
@@ -249,5 +259,20 @@
             window.location.href='/index.php/Mobile/Activity/activity';
         };
         
+        //js方法返回值：2015-03-19
+        var formatDate = function (date) {  
+            var y = date.getFullYear();  
+            var m = date.getMonth() + 1;  
+            m = m < 10 ? '0' + m : m;  
+            var d = date.getDate();  
+            d = d < 10 ? ('0' + d) : d;  
+            return y + '-' + m + '-' + d;  
+        };  
+
+        // 日期截取:
+        var substrDate = function (date) {
+            var date = date.substr(0,10);
+            return date;
+        }
 </script>
 </html>
