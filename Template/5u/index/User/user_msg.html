@@ -54,14 +54,18 @@
             <div class="msg_list">
                 <div class="msg_part clear" ng-repeat="msg in msgs">
                     <div class="msg_pic fl">
-                        <img src="{$Think.INDEX}/images/my-message1.png" alt="" id="notRead_icon">
-                        <img src="{$Think.INDEX}/images/my-message.png" alt="" style="display:none;" id="readed_icon">
+                        <!-- 隐藏 -->
+                        <img src="{$Think.INDEX}/images/my-message1.png" alt="" id="notRead_icon" ng-hide="{{msg.status == 1}}">
+                        <!-- 显示 -->
+                        <img src="{$Think.INDEX}/images/my-message.png" alt="" id="readed_icon" ng-hide="{{msg.status == 0}}">
+                        <!-- visited == 1 已读 -->
                     </div>
                     <div class="msg_part_r fl">
                         <p class="sys_tip">系统提示：</p>
                         <p class="twoline msg_ct">{{msg.content}}</p>
                     </div>
-                    <input class="readed fr" type="button" value="我知道了">
+                     <!-- 隐藏 -->
+                    <input class="readed fr" type="button" value="我知道了" id="{{msg.id}}" ng-hide="{{msg.status == 1}}">
                 </div>
             </div>
         </div>
@@ -82,6 +86,7 @@
             order_by : 'ASC',
             get_page : true
         };
+
         $http({
             method: 'POST',
             data:data,
@@ -96,14 +101,27 @@
             }
         }).then(function successCallback(response) {
             $scope.msgs = response.data.data.info;
+            console.log( $scope.msgs);
+        });
+
+        $(".msg_list").on("click",".readed",function(event){
+            var tar = $(event.target).parent().index();          
+            id = $(this).attr("id");
+            $(".msg_part").eq(tar).find("input").hide();
+            $(".msg_part").eq(tar).find("#notRead_icon").attr("src","/Public/index/images/my-message.png");
+            $http({
+                method: 'GET',
+                url: '/api.php/User/user_news/action/data_detail.html?data_id='+id
+            }).then(function successCallback(response) { 
+
+                }, function errorCallback(response) {
+            });
+
         });
 
 
-        $(".msg_list").on("click",".readed",function(){
-            $(this).hide();
-            $(this).siblings('.msg_pic').find("#notRead_icon").hide();
-            $(this).siblings('.msg_pic').find("#readed_icon").show();
-        });
     });
+
+
 </script>
 </html>

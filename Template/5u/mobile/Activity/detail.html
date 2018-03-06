@@ -131,9 +131,9 @@
             return date = date.substr(0,16);
         };
     });
+
+
     app.controller("detailCtrl",function ($scope,$http){
-
-
         $http({
             method:"GET",
             params:{data_id:data_id},
