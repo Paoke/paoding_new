@@ -69,7 +69,7 @@ class ActivityController extends BaseController
             $info=M('activity_user_relation_hd')
                 ->table('5u_activity_user_relation_hd A')
                 ->join('5u_activity_hd B ON A.hd_id=B.id')
-                ->where('A.user_id='.$_SESSION['userId'])
+                ->where('A.user_id='.$_SESSION["userArr"]["user_id"])
                 ->select();
             if ($info) {
                 $returnArr = array("result" => 1, "msg" => "获取成功", "code" => 200, "data" => $info);
