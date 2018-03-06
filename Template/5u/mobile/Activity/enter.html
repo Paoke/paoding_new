@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="enter">
 <head>
     <meta charset="UTF-8">
     <title>活动报名</title>
@@ -50,7 +50,7 @@
         font-size: 32px;
     }
 </style>
-<body style="padding-top:60px;overflow-x:hidden">
+<body style="padding-top:60px;overflow-x:hidden" ng-controller="enterCtrl">
 
 <!-- 使用my.css 注册页面样式 -->
 <input type="hidden" value="{$Think.session.userArr.user_id}" id="user_id">
@@ -139,57 +139,69 @@
 
 </body>
 <script src='{$Think.MOBILE}/js/jquery-3.0.0.min.js'></script>
+<script src='{$Think.MOBILE}/js/angular.min.js'></script>
 <script src='{$Think.MOBILE}/js/common.js'></script>
 <script>   
     var lingyu_html;
     var hd_id = GetQueryString('data_id');
     var data = {};
-    $(".act_det_btn").on("click",function(){
-        var li = $(".areas_main li"); 
-        var count = $(".areas_selected").length; 
-        for(var j = 0 ;j < $(".enter_ip").length;j++){           
-            if($(".enter_ip").eq(j).val()==""){
-               $(".enter_ip").eq(j).focus();
-               tip_ct = "请填写完毕再提交";
-               tips.addtips(tip_ct);
-               return false;
+
+    var app = angular.module('enter',[]);
+    app.controller("enterCtrl",function ($scope,$http){
+
+        $(".act_det_btn").on("click",function(){
+            var li = $(".areas_main li"); 
+            var count = $(".areas_selected").length; 
+            for(var j = 0 ;j < $(".enter_ip").length;j++){           
+                if($(".enter_ip").eq(j).val()==""){
+                   $(".enter_ip").eq(j).focus();
+                   tip_ct = "请填写完毕再提交";
+                   tips.addtips(tip_ct);
+                   return false;
+                }
+            };
+            // 关注领域选中状态
+            var li = $(".areas_main li");        
+            for(var i = 0;i < li.length ; i++){
+                if( li.eq(i).hasClass('areas_selected') ){               
+                     lingyu_html = li.eq(i).html();
+                }
+            };
+            if(count < 1){
+                tip_ct = "请选择关注领域";
+                tips.addtips(tip_ct);
+                return false;
             }
-        };
-        // 关注领域选中状态
-        var li = $(".areas_main li");        
-        for(var i = 0;i < li.length ; i++){
-            if( li.eq(i).hasClass('areas_selected') ){               
-                 lingyu_html = li.eq(i).html();
-            }
-        };
-        if(count < 1){
-            tip_ct = "请选择关注领域";
-            tips.addtips(tip_ct);
-            return false;
-        }
-        else{
-            var t = $("#formID").serializeArray();
-            $.each(t, function(){
-                data[this.name] = this.value;
-            });
-            data['hd_id'] = hd_id;
-            data['lingyu'] = lingyu_html;
-            data['user_id'] = $("#user_id").val();
-            $.ajax({
-                type:'post',
-                url:'/index.php/Mobile/Activity/enter',
-                data:data,
-                dataType:'json',
-                success:function(res) {
-                    if(res.result == 1){
+            else{
+                var t = $("#formID").serializeArray();
+                $.each(t, function(){
+                    data[this.name] = this.value;
+                });
+                data['hd_id'] = hd_id;
+                data['lingyu'] = lingyu_html;
+                data['user_id'] = $("#user_id").val();
+
+               $http({
+                   method:"POST",
+                   data:data,
+                   url:"/index.php/Mobile/Activity/enter",
+                   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                   transformRequest: function(obj) {
+                       var str = [];
+                       for (var p in obj) {
+                           str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                       }
+                       return str.join("&");
+                   }
+               }).then(function successCallback(response) {   
                         $(".identify_tip2").show();
                         $(".mask").show();
-                        return false;
-                    }
-                }
-            })
-        }
-    })
+                   }, function errorCallback(response) {
+
+                   });
+
+            }
+        })
 
     // 需求领域  限制可选3个
     $(".areas_main li").on("click",function(){
@@ -209,5 +221,57 @@
     $(".close_tip2").on("click",function(){
         window.location.href = "/index.php/Mobile/Activity/activity";
     })
+
+})
+
+
+    // $(".act_det_btn").on("click",function(){
+    //     var li = $(".areas_main li"); 
+    //     var count = $(".areas_selected").length; 
+    //     for(var j = 0 ;j < $(".enter_ip").length;j++){           
+    //         if($(".enter_ip").eq(j).val()==""){
+    //            $(".enter_ip").eq(j).focus();
+    //            tip_ct = "请填写完毕再提交";
+    //            tips.addtips(tip_ct);
+    //            return false;
+    //         }
+    //     };
+    //     // 关注领域选中状态
+    //     var li = $(".areas_main li");        
+    //     for(var i = 0;i < li.length ; i++){
+    //         if( li.eq(i).hasClass('areas_selected') ){               
+    //              lingyu_html = li.eq(i).html();
+    //         }
+    //     };
+    //     if(count < 1){
+    //         tip_ct = "请选择关注领域";
+    //         tips.addtips(tip_ct);
+    //         return false;
+    //     }
+    //     else{
+    //         var t = $("#formID").serializeArray();
+    //         $.each(t, function(){
+    //             data[this.name] = this.value;
+    //         });
+    //         data['hd_id'] = hd_id;
+    //         data['lingyu'] = lingyu_html;
+    //         data['user_id'] = $("#user_id").val();
+    //         $.ajax({
+    //             type:'post',
+    //             url:'/index.php/Mobile/Activity/enter',
+    //             data:data,
+    //             dataType:'json',
+    //             success:function(res) {
+    //                 if(res.result == 1){
+    //                     $(".identify_tip2").show();
+    //                     $(".mask").show();
+    //                     return false;
+    //                 }
+    //             }
+    //         })
+    //     }
+    // })
+
+
 </script>
 </html>
