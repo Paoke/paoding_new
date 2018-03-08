@@ -105,7 +105,7 @@
     <div class="fl">
         <div class="main_right mr">
             <div class="recommend_tec">
-                <span>推荐技术</span>
+                <span>推荐活动</span>
                 <div class="div2"></div>
             </div>
 
@@ -231,10 +231,10 @@
 
 
 
-        //推荐技术
+        //推荐活动
         var data = {
             page:1,
-            page_num:2,
+            page_num:5,
             order_field:'create_time',
             category_id:0,
             tag_id:0,
@@ -243,7 +243,7 @@
         $http({
             method:"POST",
             data:data,
-            url:"/api.php/ChannelIndex/index/action/dataList/channel/js/type/1",
+            url:"/api.php/ChannelIndex/index/action/dataList/channel/hd/type/1",
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             transformRequest: function(obj) {
                 var str = [];
