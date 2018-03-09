@@ -38,16 +38,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="enter.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="enter.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Activity/enter.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="126" column="18" lean-forward="false" selection-start-line="113" selection-start-column="12" selection-end-line="126" selection-end-column="18" />
+            <state relative-caret-position="282">
+              <caret line="60" column="14" lean-forward="false" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
               <folding>
-                <marker date="1520593982672" expanded="false" signature="4173:4184" ph="..." />
-                <marker date="1520593982672" expanded="false" signature="4424:4435" ph="..." />
-                <marker date="1520593982672" expanded="false" signature="4674:4685" ph="..." />
-                <marker date="1520593982672" expanded="true" signature="9837:9846" ph="..." />
+                <marker date="1520594649643" expanded="false" signature="4170:4181" ph="..." />
+                <marker date="1520594649643" expanded="false" signature="4421:4432" ph="..." />
+                <marker date="1520594649643" expanded="false" signature="4671:4682" ph="..." />
+                <marker date="1520594649643" expanded="true" signature="9834:9843" ph="..." />
               </folding>
             </state>
           </provider>
@@ -76,18 +76,18 @@
       <file leaf-file-name="ActivityController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Mobile/Controller/ActivityController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
+            <state relative-caret-position="3402">
               <caret line="127" column="5" lean-forward="false" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Activity/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+            <state relative-caret-position="432">
+              <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
               <folding>
                 <marker date="1520594263319" expanded="true" signature="10872:10881" ph="..." />
               </folding>
@@ -221,8 +221,8 @@
         <option value="$PROJECT_DIR$/Template/5u/mobile/User/user_collect.html" />
         <option value="$PROJECT_DIR$/Application/Common/Common/function.php" />
         <option value="$PROJECT_DIR$/Application/Mobile/Controller/ActivityController.class.php" />
-        <option value="$PROJECT_DIR$/Template/5u/mobile/Activity/enter.html" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/Activity/detail.html" />
+        <option value="$PROJECT_DIR$/Template/5u/mobile/Activity/enter.html" />
       </list>
     </option>
   </component>
@@ -599,18 +599,18 @@
       <workItem from="1519954547570" duration="828000" />
       <workItem from="1520212962328" duration="13109000" />
       <workItem from="1520568276771" duration="2170000" />
-      <workItem from="1520593945394" duration="314000" />
+      <workItem from="1520593945394" duration="469000" />
+      <workItem from="1520594591670" duration="63000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="644564000" />
+    <option name="totallyTimeSpent" value="644782000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17857143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18017058" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1026,31 +1026,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Mobile/Controller/ActivityController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
+        <state relative-caret-position="3402">
           <caret line="127" column="5" lean-forward="false" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Activity/enter.html">
+    <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Activity/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="126" column="18" lean-forward="false" selection-start-line="113" selection-start-column="12" selection-end-line="126" selection-end-column="18" />
+        <state relative-caret-position="432">
+          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
           <folding>
-            <marker date="1520593982672" expanded="false" signature="4173:4184" ph="..." />
-            <marker date="1520593982672" expanded="false" signature="4424:4435" ph="..." />
-            <marker date="1520593982672" expanded="false" signature="4674:4685" ph="..." />
-            <marker date="1520593982672" expanded="true" signature="9837:9846" ph="..." />
+            <marker date="1520594263319" expanded="true" signature="10872:10881" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Activity/detail.html">
+    <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Activity/enter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+        <state relative-caret-position="282">
+          <caret line="60" column="14" lean-forward="false" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
           <folding>
-            <marker date="1520594263319" expanded="true" signature="10872:10881" ph="..." />
+            <marker date="1520594649643" expanded="false" signature="4170:4181" ph="..." />
+            <marker date="1520594649643" expanded="false" signature="4421:4432" ph="..." />
+            <marker date="1520594649643" expanded="false" signature="4671:4682" ph="..." />
+            <marker date="1520594649643" expanded="true" signature="9834:9843" ph="..." />
           </folding>
         </state>
       </provider>
