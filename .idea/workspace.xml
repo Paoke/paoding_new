@@ -86,10 +86,10 @@
       <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Activity/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+            <state relative-caret-position="108">
+              <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
               <folding>
-                <marker date="1520594060705" expanded="true" signature="10863:10872" ph="..." />
+                <marker date="1520594263319" expanded="true" signature="10872:10881" ph="..." />
               </folding>
             </state>
           </provider>
@@ -599,15 +599,15 @@
       <workItem from="1519954547570" duration="828000" />
       <workItem from="1520212962328" duration="13109000" />
       <workItem from="1520568276771" duration="2170000" />
-      <workItem from="1520593945394" duration="120000" />
+      <workItem from="1520593945394" duration="314000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="644370000" />
+    <option name="totallyTimeSpent" value="644564000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17857143" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1047,10 +1047,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Activity/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="58" lean-forward="false" selection-start-line="1" selection-start-column="58" selection-end-line="1" selection-end-column="58" />
+        <state relative-caret-position="108">
+          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
           <folding>
-            <marker date="1520594060705" expanded="true" signature="10863:10872" ph="..." />
+            <marker date="1520594263319" expanded="true" signature="10872:10881" ph="..." />
           </folding>
         </state>
       </provider>
