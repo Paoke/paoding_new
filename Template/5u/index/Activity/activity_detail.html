@@ -32,7 +32,7 @@
         <div class="clear">
             <p class="active_det clear">
                 <img class="active_det_icon fl" src="{$Think.INDEX}/images/activity--icon-time.png" alt="">
-                <span class="active_det_span">{{details.formal_start_time}}</span>
+                <span class="active_det_span"> {{details.formal_start_time | formatDate}} — {{details.formal_end_time | formatDate2}}</span>
             </p>
             <p class="active_det clear">
                 <img class="active_det_icon fl" src="{$Think.INDEX}/images/activity-icon-location.png" alt="">
@@ -131,6 +131,12 @@
     app.filter('formatDate',function(){
         return function(date){
             return date = date.substr(0,16);
+        };
+    });
+
+    app.filter('formatDate2',function(){
+        return function(date){
+            return date = date.substr(10,16);
         };
     });
     app.controller("detailCtrl",function ($scope,$http) {
