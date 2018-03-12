@@ -15,7 +15,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ActivityController.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ActivityController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Mobile/Controller/ActivityController.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="432">
@@ -25,11 +25,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActivityController.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ActivityController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/ActivityController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41399">
-              <caret line="1727" column="29" lean-forward="false" selection-start-line="1727" selection-start-column="29" selection-end-line="1727" selection-end-column="29" />
+            <state relative-caret-position="519">
+              <caret line="1733" column="102" lean-forward="false" selection-start-line="1733" selection-start-column="102" selection-end-line="1733" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -161,8 +161,8 @@
         <option value="$PROJECT_DIR$/Application/Mobile/Controller/ActivityController.class.php" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/Activity/enter.html" />
         <option value="$PROJECT_DIR$/Template/5u/mobile/Activity/detail.html" />
-        <option value="$PROJECT_DIR$/Application/Admin/Controller/ActivityController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Activity/activity_info.html" />
+        <option value="$PROJECT_DIR$/Application/Admin/Controller/ActivityController.class.php" />
       </list>
     </option>
   </component>
@@ -497,12 +497,12 @@
       <workItem from="1520568276771" duration="2170000" />
       <workItem from="1520593945394" duration="469000" />
       <workItem from="1520594591670" duration="63000" />
-      <workItem from="1520818803100" duration="3576000" />
+      <workItem from="1520818803100" duration="4197000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="648358000" />
+    <option name="totallyTimeSpent" value="648979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -949,18 +949,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/ActivityController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41399">
-          <caret line="1727" column="29" lean-forward="false" selection-start-line="1727" selection-start-column="29" selection-end-line="1727" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Mobile/Controller/ActivityController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="100" column="44" lean-forward="true" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/ActivityController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="1733" column="102" lean-forward="false" selection-start-line="1733" selection-start-column="102" selection-end-line="1733" selection-end-column="102" />
           <folding />
         </state>
       </provider>

@@ -1731,7 +1731,7 @@ class ActivityController extends BaseController
             array('js','希望对接的技术'),
             array('xq','希望对接的需求')
         );
-        $xlsData=M("activity_order_hd")->where('hd_id='.$hd_id)->field('name,mobile,company,job,lingyu,ywfw,js,xq')->select();
+        $xlsData=M("activity_order_hd")->where('hd_id='.$hd_id)->field('name,mobile,company,job,email,lingyu,ywfw,js,xq')->select();
         exportExcel($xlsName, $xlsCell, $xlsData);
     }
 }
