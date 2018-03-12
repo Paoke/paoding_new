@@ -14,10 +14,12 @@
 </head>
 <body ng-controller="actCtrl">
 <div class="activity_banner">
-    <div class="swiper-container">
+    <div class="swiper-container">       
         <div class="swiper-wrapper">
             <div class="swiper-slide" ng-repeat="banner in banners">
-                <img ng-src="{{banner.ad_code}}" alt="">
+                <a href="__CONTROLLER__/detail.html?data_id={{list.id}}" >
+                    <img ng-src="{{banner.ad_code}}" alt="">
+                </a>
             </div>
         </div>
         <div class="swiper-pagination"></div>

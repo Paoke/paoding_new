@@ -919,15 +919,15 @@
     var swiper_cop = new Swiper('#swiper_cop', {
         loop:true,
         pagination : '.swiper-pagination',
-        observer:true,//修改swiper自己或子元素时，自动初始化swiper
-        observeParents:true,//修改swiper的父元素时，自动初始化swiper
+        observer:true,
+        observeParents:true,
     });
 
     var Swiper2 = new Swiper('#swiper_dem', {
         paginationClickable :true,
         autoplay: 5000,
-        observer:true,//修改swiper自己或子元素时，自动初始化swiper
-        observeParents:true,//修改swiper的父元素时，自动初始化swiper
+        observer:true,
+        observeParents:true,
         onSlideChangeStart: function(){
             var index = Swiper2.activeIndex;
             var num = index*86;
@@ -941,8 +941,8 @@
     var Swiper3 = new Swiper('#swiper_tec', {
         paginationClickable :true,
         autoplay: 5000,
-        observer:true,//修改swiper自己或子元素时，自动初始化swiper
-        observeParents:true,//修改swiper的父元素时，自动初始化swiper
+        observer:true,
+        observeParents:true,
         onSlideChangeStart: function(){
             var index = Swiper3.activeIndex;
             var num = index*86;

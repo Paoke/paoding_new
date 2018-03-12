@@ -40,7 +40,7 @@
             <div class="act_details_icon icon_time fl"></div>
             <div class="act_details_head_ct fr">
                 <p class="act_section_ct" ng-cloak>
-                    {{details.formal_start_time | formatDate}} —— {{details.formal_end_time | formatDate}}
+                    {{details.formal_start_time | formatDate}} — {{details.formal_end_time | formatDate2}}
                 </p>
             </div>
         </div>
@@ -133,7 +133,11 @@
         };
     });
 
-
+    app.filter('formatDate2',function(){
+        return function(date){
+            return date = date.substr(10,16);
+        };
+    });
     app.controller("detailCtrl",function ($scope,$http){
         $http({
             method:"GET",
@@ -285,57 +289,77 @@
 
     var appid = '';  // 应用id,如果有可以填，没有就留空
 
-    wx.config({
-        debug: false,
-        appId: 'wx39b86beff8163056',
-        timestamp: '20180312101420',
-        nonceStr: '123456789',
-        signature: '${shakeMap.signature}',
-        jsApiList: [
-            'checkJsApi',
-            'onMenuShareTimeline',
-            'onMenuShareAppMessage'
-        ]
-    });
-    wx.ready(function () {
+    function shareFriend() {
 
-        var shareData = {
-            title: '${title}',
-            desc: '${description}',
-            link: '${url}',
-            imgUrl: '${headImgUrl}',
-            success: function (res) {
-                //alert('已分享');
-            },
-            cancel: function (res) {
-            }
-        };
+        WeixinJSBridge.invoke('sendAppMessage',{
 
-        wx.onMenuShareAppMessage({
-            title: '${title}',
-            desc: '${description}',
-            link: '${url}',
-            imgUrl: '${headImgUrl}',
-            trigger: function (res) {
-                //  alert('用户点击发送给朋友');
-            },
-            success: function (res) {
-                //alert('已分享');
-            },
-            cancel: function (res) {
-                //alert('已取消');
-            },
-            fail: function (res) {
-                alert(JSON.stringify(res));
-            }
+            "appid": appid,
+
+            "img_url": imgUrl,
+
+            "img_width": "200",
+
+            "img_height": "200",
+
+            "link": lineLink,
+
+            "desc": descContent,
+
+            "title": shareTitle
+
+        }, function(res) {
+
+            //_report('send_msg', res.err_msg);  // 这是回调函数，必须注释掉
+
+        })
+
+    }
+
+    function shareTimeline() {
+
+        WeixinJSBridge.invoke('shareTimeline',{
+
+            "img_url": imgUrl,
+
+            "img_width": "200",
+
+            "img_height": "200",
+
+            "link": lineLink,
+
+            "desc": descContent,
+
+            "title": shareTitle
+
+        }, function(res) {
+
+            //_report('timeline', res.err_msg); // 这是回调函数，必须注释掉
+
         });
 
-        wx.onMenuShareTimeline(shareData);
-    });
+    }
 
-    wx.error(function (res) {
-        alert("error: " + res.errMsg);
-    });
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+
+        // 发送给好友
+
+        WeixinJSBridge.on('menu:share:appmessage', function(argv){
+
+            shareFriend();
+
+        });
+
+        // 分享到朋友圈
+
+        WeixinJSBridge.on('menu:share:timeline', function(argv){
+
+            shareTimeline();
+
+        });
+
+
+
+    }, false);
 
 </script>
 </html>
