@@ -1725,6 +1725,7 @@ class ActivityController extends BaseController
             array('mobile','手机号码'),
             array('company','公司'),
             array('job','职务'),
+            array('email','邮箱'),
             array('lingyu','关注领域'),
             array('ywfw','业务范围'),
             array('js','希望对接的技术'),
