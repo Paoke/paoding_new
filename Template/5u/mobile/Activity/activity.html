@@ -17,8 +17,8 @@
     <div class="swiper-container">       
         <div class="swiper-wrapper">
             <div class="swiper-slide" ng-repeat="banner in banners">
-                <a href="__CONTROLLER__/detail.html?data_id={{list.id}}" >
-                    <img ng-src="{{banner.ad_code}}" alt="">
+                <a href="__CONTROLLER__/detail.html?data_id={{lists[0].id}}">
+                    <img ng-src="{{banner.ad_code}}" alt="" class="a_banner">
                 </a>
             </div>
         </div>
@@ -123,6 +123,8 @@
 <script src="{$Think.MOBILE}/js/angular.min.js"></script>
 <script src='{$Think.MOBILE}/js/swiper.min.js'></script>
 <script>
+    var hd_id = GetQueryString('data_id');
+
     // 轮播
     var mySwiper = new Swiper('.swiper-container', {
         pagination : '.swiper-pagination',
@@ -191,7 +193,7 @@
                 }                
             };
             $scope.lists = data;
-            // console.log( $scope.lists);
+            // console.log( $scope.lists[0]);
         },function errorCallback(){
 
         })

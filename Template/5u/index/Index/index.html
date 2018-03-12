@@ -20,7 +20,9 @@
     <div class="swiper-container" id="swiper1">
         <div class="swiper-wrapper">
             <div class="swiper-slide" ng-repeat="banner in banners" >
-                <img src="{{banner.ad_code}}" alt="">
+                <a href="{{banner.ad_link}}">
+                    <img src="{{banner.ad_code}}" alt="">
+                </a>
             </div>
         </div>
         <div class="swiper-pagination"></div>

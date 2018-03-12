@@ -136,7 +136,7 @@
 
     app.filter('formatDate2',function(){
         return function(date){
-            return date = date.substr(10,16);
+            return date = date.substring(16,10);
         };
     });
     app.controller("detailCtrl",function ($scope,$http) {
