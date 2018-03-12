@@ -70,7 +70,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Template/5u/mobile/Activity/detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="363">
@@ -78,6 +78,16 @@
               <folding>
                 <marker date="1520827671728" expanded="true" signature="12662:12671" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Api/Controller/IndexController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="18" column="64" lean-forward="false" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -167,7 +177,6 @@
         <option value="$PROJECT_DIR$/Template/5u/index/User/user_binging.html" />
         <option value="$PROJECT_DIR$/Application/Index/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/Template/5u/index/Tec/tec_theme.html" />
-        <option value="$PROJECT_DIR$/Application/Api/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/Template/5u/index/Index/index.html" />
         <option value="$PROJECT_DIR$/Application/Index/Controller/BaseController.class.php" />
         <option value="$PROJECT_DIR$/Application/Pc/Controller/BaseController.class.php" />
@@ -190,6 +199,7 @@
         <option value="$PROJECT_DIR$/Template/5u/mobile/Activity/detail.html" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Activity/activity_info.html" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/ActivityController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Api/Controller/IndexController.class.php" />
       </list>
     </option>
   </component>
@@ -327,7 +337,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
+              <option name="myItemId" value="Api" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -345,7 +355,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Admin" />
+              <option name="myItemId" value="Api" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -542,12 +552,12 @@
       <workItem from="1520568276771" duration="2170000" />
       <workItem from="1520593945394" duration="469000" />
       <workItem from="1520594591670" duration="63000" />
-      <workItem from="1520818803100" duration="5093000" />
+      <workItem from="1520818803100" duration="5815000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="649875000" />
+    <option name="totallyTimeSpent" value="650597000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -619,13 +629,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Application/Pc/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Common/Conf/constant.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1007,6 +1010,14 @@
           <folding>
             <marker date="1520827671728" expanded="true" signature="12662:12671" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Api/Controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="64" lean-forward="false" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
