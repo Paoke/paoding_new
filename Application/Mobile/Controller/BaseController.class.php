@@ -56,7 +56,7 @@ class BaseController extends Controller
     public function checkUrl()
     {
         //获取url
-        $url =  $_SERVER['PHP_SELF'];
+        $url =  $_SERVER['REQUEST_URI'];
         $_SESSION['intoUrl'] = $url;
 
         //获取站点名
