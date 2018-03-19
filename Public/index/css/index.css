@@ -1956,8 +1956,8 @@
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	margin-left: -350px;
-	margin-top: -310px;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
 	z-index: 999;
 	background: #fff;
 	box-shadow: 0 5px 12px rgba(0,0,0,.2);
@@ -2079,7 +2079,7 @@
 	font-size: 18px;
 	text-align: center;
 	color: #fff;
-	background: #ccc;
+	background: #ff971d;
 	margin-left: 80px;
 	margin-top: 30px;
 	margin-bottom: 30px;

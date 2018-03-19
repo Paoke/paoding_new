@@ -147,33 +147,33 @@
                 $scope.details = response.data.data;     
                  var startTime = $scope.details.formal_start_time;
                  var changeTime = startTime.replace(/-/g,'/');
+                 console.log(Date.parse(changeTime));
+                 console.log(Date.parse(new Date()));
                  if(Date.parse(new Date()) > Date.parse(changeTime)){   
                     $scope.status = 0;//已结束
                     // $scope.details['status']="0";//已结束
                 }else{
                     $scope.status = 1;//未举办
                     // $scope.details['status']="1";//未举办
+                };
+                // 判断活动是否已经结束                
+                if( $scope.status == 1 ){                  
+                    // 判断是否已经报名       
+                    $http({
+                        method:'GET', 
+                        params:{data_id:data_id},
+                        url:'/index.php/Mobile/Activity/check_enter'
+                    }).then(function successCallback(response) {                    
+                            if (response.data.result == "1") {  //已报名
+                                 $scope.status = 2;
+                            } else {  
+                               $scope.status = 1;
+                            }
+                        }, function errorCallback(response) {                   
+                        });
                 }
             }, function errorCallback(response) {
             });
-
-        // 判断活动是否已经结束
-        if( $scope.status == 0 ){
-            // 判断是否已经报名       
-            $http({
-                method:'GET', 
-                params:{data_id:data_id},
-                url:'/index.php/Mobile/Activity/check_enter'
-            }).then(function successCallback(response) {                    
-                    if (response.data.result == "1") {  //已报名
-                         $scope.status = 2;
-                    } else {  
-                       $scope.status = 0;
-                    }
-                }, function errorCallback(response) {                   
-                });
-        }
-
 
         // 判断本技术是否已经收藏
         $http({
@@ -219,7 +219,9 @@
                          }
                      })
                 }
-            }, function errorCallback(response) {});
+            }, function errorCallback(response) {
+
+            });
          });
         // 收藏/取消收藏
         $(".act_love_icon").on("click",function(){
@@ -241,10 +243,10 @@
 
                   }
                 }, function errorCallback(response) {
-                    console.log(response.data.msg);                   
+                                
                 });
             });
-        });
+        
 
         $(".findDemand").on("click",function(){
             $(".sorry").hide();
@@ -278,88 +280,10 @@
         var substrDate = function (date) {
             var date = date.substr(0,10);
             return date;
-        }
+        }  
 
-    var imgUrl = 'http://www.paoding.cc/Public/upload/temp/2018/03-09/5aa25053ae870.jpg';  // 分享后展示的一张图片
-    var lineLink = 'http://www.paoding.cc/index.php/Index/Activity/activity_detail.html?data_id=23'; // 点击分享后跳转的页面地址
+    })
 
-    var descContent = "时间：2018-03-29 09:00:00；地点：广州银行大厦7楼国际路演中心";  // 分享后的描述信息
-
-    var shareTitle = '首届中国新材料产业高峰论坛';  // 分享后的标题
-
-    var appid = '';  // 应用id,如果有可以填，没有就留空
-
-    function shareFriend() {
-
-        WeixinJSBridge.invoke('sendAppMessage',{
-
-            "appid": appid,
-
-            "img_url": imgUrl,
-
-            "img_width": "200",
-
-            "img_height": "200",
-
-            "link": lineLink,
-
-            "desc": descContent,
-
-            "title": shareTitle
-
-        }, function(res) {
-
-            //_report('send_msg', res.err_msg);  // 这是回调函数，必须注释掉
-
-        })
-
-    }
-
-    function shareTimeline() {
-
-        WeixinJSBridge.invoke('shareTimeline',{
-
-            "img_url": imgUrl,
-
-            "img_width": "200",
-
-            "img_height": "200",
-
-            "link": lineLink,
-
-            "desc": descContent,
-
-            "title": shareTitle
-
-        }, function(res) {
-
-            //_report('timeline', res.err_msg); // 这是回调函数，必须注释掉
-
-        });
-
-    }
-
-    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-
-        // 发送给好友
-
-        WeixinJSBridge.on('menu:share:appmessage', function(argv){
-
-            shareFriend();
-
-        });
-
-        // 分享到朋友圈
-
-        WeixinJSBridge.on('menu:share:timeline', function(argv){
-
-            shareTimeline();
-
-        });
-
-
-
-    }, false);
 
 </script>
 </html>
