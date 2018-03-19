@@ -203,22 +203,24 @@
                 if(response.data.code=="400" || response.data.result==0){
                     $(".mask").show();
                     $(".alert").show();
-                    return false;               
-                } else {
-                     // 判断是否绑定手机号
-                     $http({
-                         method:'GET',                
-                         url:'/api.php/user/check_phone'
-                     }).then(function successCallback(response) {                  
-                         // 已经绑定
-                         if(response.data.result==1){      
-                            window.location.href = '/index.php/Mobile/Activity/enter.html?data_id='+data_id;
-                         // 没有绑定
-                         }else{
-                             window.location.href="/index.php/Mobile/User/binding.html";
-                         }
-                     })
-                }
+                    return false;
+                }    
+                // 判断是否绑定手机号           
+                // else {
+                //      
+                //      $http({
+                //          method:'GET',                
+                //          url:'/api.php/user/check_phone'
+                //      }).then(function successCallback(response) {                  
+                //          // 已经绑定
+                //          if(response.data.result==1){      
+                //             window.location.href = '/index.php/Mobile/Activity/enter.html?data_id='+data_id;
+                //          // 没有绑定
+                //          }else{
+                //              window.location.href="/index.php/Mobile/User/binding.html";
+                //          }
+                //      })
+                // }
             }, function errorCallback(response) {
 
             });
