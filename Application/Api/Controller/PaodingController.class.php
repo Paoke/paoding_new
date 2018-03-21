@@ -20,6 +20,7 @@ class PaodingController extends BaseRestController
         $data = M("ArticleJs")->join("AS A LEFT JOIN __ARTICLE_ZTGL__ AS B ON A.sszt=B.id")
             ->join("LEFT JOIN __ARTICLE_CATEGORY_JS__ AS C ON A.category_id=C.id")
             ->field("B.title as t_name,C.cat_name,A.*")
+            ->order('A.create_time DESC')
             ->where($where,"A.$sszt")
             ->select();
         if($data){
