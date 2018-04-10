@@ -44,6 +44,7 @@
             </p>
         </div>
         <a id="at_btn" ng-show="btnStatus==1"><div class="act_apply">我要报名</div></a>
+        <a ng-show="btnStatus==2"><div class="act_apply">已报名</div></a>
         <a ng-show="btnStatus==0"><div class="act_apply">活动已结束</div></a>
     </div>
 </div>
@@ -174,7 +175,7 @@
             $("#cancle").on("click",function(){
                 $http({
                     method:'GET',                
-                    url:'/index.php/Mobile/Activity/like?hd_id='+data_id+'&action=1'
+                    url:'/index.php/Mobile/Activity/like?hd_id='+data_id+'&action=0'
                 }).then(function successCallback(response) {                   
                     if(response.data.code=="402"){
                         alert("请先登录");
@@ -231,6 +232,22 @@
             } else {
                 $scope.btnStatus = 1;//未举办
                 // $scope.details['status']="1";//未举办
+            }
+            // 判断活动是否已经结束
+            if( $scope.btnStatus == 1 ){
+                // 判断是否已经报名
+                $http({
+                    method:'GET',
+                    params:{data_id:data_id},
+                    url:'/index.php/Mobile/Activity/check_enter'
+                }).then(function successCallback(response) {
+                    if (response.data.result == "1") {  //已报名
+                        $scope.btnStatus = 2;
+                    } else {
+                        $scope.btnStatus = 1;
+                    }
+                }, function errorCallback(response) {
+                });
             }
         }, function errorCallback(response) {
         });
