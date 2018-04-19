@@ -61,48 +61,55 @@
             </div>
         </div>
     </div>
-
     <div class="act_details_main">
-        <div class="act_details_main_section clear">
-            <div class="act_details_icon icon_conference fl"></div>
-            <p class="act_section_tit fl">会议目的</p>
-        </div>
-        <p class="act_details_main_ct" ng-cloak>{{details.desc}}</p>
+    <div class="act_details_main_section clear">
+    <div class="act_details_icon icon_conference fl"></div>
+    <p class="act_section_tit fl">活动详情</p>
+    </div>
+    <p class="act_details_main_ct" ng-bind-html="details.content|trustHtml" ng-cloak=""></p>
     </div>
 
-    <div class="act_details_main">
-        <div class="act_details_main_section clear">
-            <div class="act_details_icon icon_conference fl"></div>
-            <p class="act_section_tit fl">会议内容</p>
-        </div>
-        <p class="act_details_main_ct" ng-cloak>
-            {{details.hynr}}
-        </p>
-    </div>
+    <!--<div class="act_details_main">-->
+        <!--<div class="act_details_main_section clear">-->
+            <!--<div class="act_details_icon icon_conference fl"></div>-->
+            <!--<p class="act_section_tit fl">会议目的</p>-->
+        <!--</div>-->
+        <!--<p class="act_details_main_ct" ng-cloak>{{details.desc}}</p>-->
+    <!--</div>-->
 
-    <div class="act_details_main">
-        <div class="act_details_main_section clear">
-            <div class="act_details_icon icon_conference fl"></div>
-            <p class="act_section_tit fl">参会嘉宾</p>
-        </div>
-        <img class="act_main_pic" ng-cloak ng-src="{{details.chjb}}" alt="">
-    </div>
+    <!--<div class="act_details_main">-->
+        <!--<div class="act_details_main_section clear">-->
+            <!--<div class="act_details_icon icon_conference fl"></div>-->
+            <!--<p class="act_section_tit fl">会议内容</p>-->
+        <!--</div>-->
+        <!--<p class="act_details_main_ct" ng-cloak>-->
+            <!--{{details.hynr}}-->
+        <!--</p>-->
+    <!--</div>-->
 
-    <div class="act_details_main">
-        <div class="act_details_main_section clear">
-            <div class="act_details_icon icon_conference fl"></div>
-            <p class="act_section_tit fl">会议流程</p>
-        </div>
-        <img class="act_main_pic" ng-cloak ng-src="{{details.hylc}}" alt="">
-    </div>
+    <!--<div class="act_details_main">-->
+        <!--<div class="act_details_main_section clear">-->
+            <!--<div class="act_details_icon icon_conference fl"></div>-->
+            <!--<p class="act_section_tit fl">参会嘉宾</p>-->
+        <!--</div>-->
+        <!--<img class="act_main_pic" ng-cloak ng-src="{{details.chjb}}" alt="">-->
+    <!--</div>-->
 
-    <div class="act_details_main">
-        <div class="act_details_main_section clear">
-            <div class="act_details_icon icon_conference fl"></div>
-            <p class="act_section_tit fl">组织形式</p>
-        </div>
-        <img class="act_main_pic" ng-cloak ng-src="{{details.zzxs}}" alt="">
-    </div>
+    <!--<div class="act_details_main">-->
+        <!--<div class="act_details_main_section clear">-->
+            <!--<div class="act_details_icon icon_conference fl"></div>-->
+            <!--<p class="act_section_tit fl">会议流程</p>-->
+        <!--</div>-->
+        <!--<img class="act_main_pic" ng-cloak ng-src="{{details.hylc}}" alt="">-->
+    <!--</div>-->
+
+    <!--<div class="act_details_main">-->
+        <!--<div class="act_details_main_section clear">-->
+            <!--<div class="act_details_icon icon_conference fl"></div>-->
+            <!--<p class="act_section_tit fl">组织形式</p>-->
+        <!--</div>-->
+        <!--<img class="act_main_pic" ng-cloak ng-src="{{details.zzxs}}" alt="">-->
+    <!--</div>-->
 
     <div class="sec_return" ng-cloak>
         <a href="/index.php/Mobile/Activity/activity">
@@ -168,6 +175,12 @@
     var action = 0;   
     var data_id = GetQueryString('data_id');  
     var app = angular.module("detail",[]);
+    app.filter('trustHtml',function ($sce){
+        return function(val) {
+            return $sce.trustAsHtml(val);
+        }
+    });
+
     app.filter('formatDate',function(){
         return function(date){
             return date = date.substr(0,16);
