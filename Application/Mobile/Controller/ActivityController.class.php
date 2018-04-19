@@ -190,6 +190,13 @@ class ActivityController extends BaseController
 //    }
     public function detail()
     {
+        $arrData=M("activity_hd")->where('id='.$_GET['data_id'])->field('id,title,cover_url,formal_start_time,address')->find();
+        $wechatList = M("WxUser")->select();
+        $wechatConf = $wechatList[0];
+        $jssdk = new \Org\Util\JSSDK($wechatConf["appid"], $wechatConf["appsecret"]);
+        $signPackage = $jssdk->GetSignPackage();
+        $this->assign('signPackage',$signPackage);
+        $this->assign('arrData',$arrData);
         $this->display();
     }
 
