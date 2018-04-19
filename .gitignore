@@ -1,2 +1,4 @@
 /Application/Runtime/Cache
 /Application/Runtime/Logs
+access_token.php
+jsapi_ticket.php

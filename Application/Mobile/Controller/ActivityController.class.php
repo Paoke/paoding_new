@@ -109,6 +109,8 @@ class ActivityController extends BaseController
             json_return($returnArr);
         } else {
             $this->checkReg();
+            $arrData=M('activity_order_hd')->where('user_id='.$_SESSION["userArr"]["user_id"])->find();
+            $this->assign('arrData',$arrData);
             $this->display();
         }
 
@@ -190,13 +192,13 @@ class ActivityController extends BaseController
 //    }
     public function detail()
     {
-        $arrData=M("activity_hd")->where('id='.$_GET['data_id'])->field('id,title,cover_url,formal_start_time,address')->find();
-        $wechatList = M("WxUser")->select();
-        $wechatConf = $wechatList[0];
-        $jssdk = new \Org\Util\JSSDK($wechatConf["appid"], $wechatConf["appsecret"]);
-        $signPackage = $jssdk->GetSignPackage();
-        $this->assign('signPackage',$signPackage);
-        $this->assign('arrData',$arrData);
+//        $arrData=M("activity_hd")->where('id='.$_GET['data_id'])->field('id,title,cover_url,formal_start_time,address')->find();
+//        $wechatList = M("WxUser")->select();
+//        $wechatConf = $wechatList[0];
+//        $jssdk = new \Org\Util\JSSDK($wechatConf["appid"], $wechatConf["appsecret"]);
+//        $signPackage = $jssdk->GetSignPackage();
+//        $this->assign('signPackage',$signPackage);
+//        $this->assign('arrData',$arrData);
         $this->display();
     }
 

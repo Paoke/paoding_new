@@ -73,31 +73,31 @@
         <div class="regist_input">
             <span class="star" style="color:red">*</span>
             <span class="regist_span">姓名</span>
-            <input class="enter_ip" type="text" placeholder="输入您的真实姓名" name="name">
+            <input class="enter_ip" type="text" placeholder="输入您的真实姓名" name="name" value="{$arrData['name']}">
         </div>
 
         <div class="regist_input">
             <span class="star" style="color:red">*</span>
             <span class="regist_span">手机</span>
-            <input class="enter_ip" type="number" placeholder="输入手机号码" name="mobile" oninput="if(this.value>11){this.value = this.value.substr(0,11)}">
+            <input class="enter_ip" type="number" placeholder="输入手机号码" name="mobile" oninput="if(this.value>11){this.value = this.value.substr(0,11)}" value="{$arrData['mobile']}">
         </div>
 
         <div class="regist_input">
             <span class="star" style="color:red">*</span>
             <span class="regist_span">邮箱</span>
-            <input class="enter_ip" type="text" placeholder="输入邮箱" name="email">
+            <input class="enter_ip" type="text" placeholder="输入邮箱" name="email" value="{$arrData['email']}">
         </div>
 
         <div class="regist_input">
             <span class="star" style="color:red">*</span>
             <span class="regist_span">公司</span>
-            <input class="enter_ip" type="text" placeholder="输入公司名称" name="company">
+            <input class="enter_ip" type="text" placeholder="输入公司名称" name="company" value="{$arrData['company']}">
         </div>
 
         <div class="regist_input">
             <span class="star" style="color:red">*</span>
             <span class="regist_span">职务</span>
-            <input class="enter_ip" type="text" placeholder="请输入您所在公司职务" name="job">
+            <input class="enter_ip" type="text" placeholder="请输入您所在公司职务" name="job" value="{$arrData['job']}">
         </div>
 
         <div class="regist_input" style="border:none">
@@ -117,20 +117,20 @@
             </div>
         </div>
 
-        <!--<div class="regist_input" style="border:none">-->
-            <!--<p class="regist_span">贵公司的业务范围</p>-->
-            <!--<input class="signUp_inp" type="text" placeholder="请输入贵公司的业务范围" maxlength="50" name="ywfw">-->
-        <!--</div>-->
+        <div class="regist_input" style="border:none">
+            <p class="regist_span">贵公司的业务范围</p>
+            <input class="signUp_inp" type="text" placeholder="请输入贵公司的业务范围" maxlength="50" name="ywfw">
+        </div>
 
-        <!--<div class="regist_input" style="border:none">-->
-            <!--<p class="regist_span">您希望对接的技术</p>-->
-            <!--<input class="signUp_inp" type="text" placeholder="请输入您希望对接的技术"  maxlength="50" name="js">-->
-        <!--</div>-->
+        <div class="regist_input" style="border:none">
+            <p class="regist_span">您希望对接的技术</p>
+            <input class="signUp_inp" type="text" placeholder="请输入您希望对接的技术"  maxlength="50" name="js">
+        </div>
 
-        <!--<div class="regist_input" style="border:none">-->
-            <!--<p class="regist_span">您希望对接的需求</p>-->
-            <!--<input class="signUp_inp" type="text" placeholder="请输入您希望对接的需求"  maxlength="50" name="xq">-->
-        <!--</div>-->
+        <div class="regist_input" style="border:none">
+            <p class="regist_span">您希望对接的需求</p>
+            <input class="signUp_inp" type="text" placeholder="请输入您希望对接的需求"  maxlength="50" name="xq">
+        </div>
     </div>
 </form>
 

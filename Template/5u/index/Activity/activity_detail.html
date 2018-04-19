@@ -52,49 +52,55 @@
 <div class="act_det clear">
     <div class="act_det_left fl">
         <div class="recommend_tec">
-            <span>推荐活动</span>
+            <span>活动详情</span>
             <div class="div2"></div>
         </div>
-
         <div class="act_det_part">
-            <p class="clear act_det_part_p">
-                <img class="fl mt" src="{$Think.INDEX}/images/icon-title-hdxq.png" alt="">
-                <span class="fl act_det_part_span">会议目的</span>
-            </p>
-            <div class="act_ct">{{details.desc}}</div>
+        <!--<p class="clear act_det_part_p">-->
+        <!--<img class="fl mt" src="{$Think.INDEX}/images/icon-title-hdxq.png" alt="">-->
+        <!--<span class="fl act_det_part_span">会议目的</span>-->
+        <!--</p>-->
+        <div class="act_ct" ng-bind-html="details.content|trustHtml"></div>
         </div>
+        <!--<div class="act_det_part">-->
+        <!--<p class="clear act_det_part_p">-->
+        <!--<img class="fl mt" src="{$Think.INDEX}/images/icon-title-hdxq.png" alt="">-->
+        <!--<span class="fl act_det_part_span">会议目的</span>-->
+        <!--</p>-->
+        <!--<div class="act_ct">{{details.desc}}</div>-->
+        <!--</div>-->
 
-        <div class="act_det_part">
-            <p class="clear act_det_part_p">
-                <img class="fl mt" src="{$Think.INDEX}/images/icon-title-hdxq.png" alt="">
-                <span class="fl act_det_part_span">会议内容</span>
-            </p>
-            <div class="act_ct">{{details.hynr}}</div>
-        </div>
+        <!--<div class="act_det_part">-->
+            <!--<p class="clear act_det_part_p">-->
+                <!--<img class="fl mt" src="{$Think.INDEX}/images/icon-title-hdxq.png" alt="">-->
+                <!--<span class="fl act_det_part_span">会议内容</span>-->
+            <!--</p>-->
+            <!--<div class="act_ct">{{details.hynr}}</div>-->
+        <!--</div>-->
 
-        <div class="act_det_part">
-            <p class="clear act_det_part_p">
-                <img class="fl mt" src="{$Think.INDEX}/images/icon-title-hdxq.png" alt="">
-                <span class="fl act_det_part_span">会议嘉宾</span>
-            </p>
-            <div class="act_ct"><img class="act_main_pic" ng-cloak ng-src="{{details.chjb}}" alt=""></div>
-        </div>
+        <!--<div class="act_det_part">-->
+            <!--<p class="clear act_det_part_p">-->
+                <!--<img class="fl mt" src="{$Think.INDEX}/images/icon-title-hdxq.png" alt="">-->
+                <!--<span class="fl act_det_part_span">会议嘉宾</span>-->
+            <!--</p>-->
+            <!--<div class="act_ct"><img class="act_main_pic" ng-cloak ng-src="{{details.chjb}}" alt=""></div>-->
+        <!--</div>-->
 
-        <div class="act_det_part">
-            <p class="clear act_det_part_p">
-                <img class="fl mt" src="{$Think.INDEX}/images/icon-title-hdxq.png" alt="">
-                <span class="fl act_det_part_span">会议流程</span>
-            </p>
-            <div class="act_ct"><img class="act_main_pic" ng-cloak ng-src="{{details.hylc}}" alt=""></div>
-        </div>
+        <!--<div class="act_det_part">-->
+            <!--<p class="clear act_det_part_p">-->
+                <!--<img class="fl mt" src="{$Think.INDEX}/images/icon-title-hdxq.png" alt="">-->
+                <!--<span class="fl act_det_part_span">会议流程</span>-->
+            <!--</p>-->
+            <!--<div class="act_ct"><img class="act_main_pic" ng-cloak ng-src="{{details.hylc}}" alt=""></div>-->
+        <!--</div>-->
 
-        <div class="act_det_part">
-            <p class="clear act_det_part_p">
-                <img class="fl mt" src="{$Think.INDEX}/images/icon-title-hdxq.png" alt="">
-                <span class="fl act_det_part_span">组织形式</span>
-            </p>
-            <div class="act_ct"><img class="act_main_pic" ng-cloak ng-src="{{details.zzxs}}" alt=""></div>
-        </div>
+        <!--<div class="act_det_part">-->
+            <!--<p class="clear act_det_part_p">-->
+                <!--<img class="fl mt" src="{$Think.INDEX}/images/icon-title-hdxq.png" alt="">-->
+                <!--<span class="fl act_det_part_span">组织形式</span>-->
+            <!--</p>-->
+            <!--<div class="act_ct"><img class="act_main_pic" ng-cloak ng-src="{{details.zzxs}}" alt=""></div>-->
+        <!--</div>-->
 
 <!--         <div class="act_det_inp">
             <textarea class="act_det_text"></textarea>
@@ -129,6 +135,11 @@
     var data_id = GetQueryString('data_id');
 
     var app = angular.module("detail",[]);
+    app.filter('trustHtml',function ($sce){
+        return function(val) {
+            return $sce.trustAsHtml(val);
+        }
+    });
     app.filter('formatDate',function(){
         return function(date){
             return date = date.substr(0,16);
